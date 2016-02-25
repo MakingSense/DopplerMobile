@@ -1,0 +1,11 @@
+platform :ios, "9.2"
+use_frameworks!
+
+target 'DopplerMobile' do
+
+end
+
+target 'DopplerMobileTests' do
+
+end
+
