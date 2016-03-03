@@ -33,30 +33,47 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        </variation>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="center" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="f9M-C0-wZr">
+                            <stackView opaque="NO" contentMode="center" misplaced="YES" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="f9M-C0-wZr">
                                 <rect key="frame" x="20" y="198" width="560" height="180"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="W4q-Hg-l3i">
                                         <rect key="frame" x="35" y="0.0" width="490" height="45"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="ccj-fE-XMX"/>
+                                            <constraint firstAttribute="height" constant="45" id="ccj-fE-XMX">
+                                                <variation key="widthClass=compact" constant="44"/>
+                                                <variation key="heightClass=compact-widthClass=regular" constant="45"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                                            </constraint>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        </variation>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Kds-bg-g9r">
                                         <rect key="frame" x="35" y="65" width="490" height="45"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        </variation>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Uo-Qc-q3G">
                                         <rect key="frame" x="100" y="130" width="360" height="50"/>
                                         <color key="backgroundColor" red="0.14901960784313725" green="0.61568627450980395" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="XDR-LG-FBh"/>
+                                            <constraint firstAttribute="height" constant="50" id="XDR-LG-FBh">
+                                                <variation key="widthClass=compact" constant="44"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                                            </constraint>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <state key="normal" title="Login">
@@ -69,10 +86,14 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailingMargin" secondItem="5Uo-Qc-q3G" secondAttribute="trailing" constant="100" id="539-Rg-olv"/>
-                                    <constraint firstItem="5Uo-Qc-q3G" firstAttribute="leading" secondItem="f9M-C0-wZr" secondAttribute="leadingMargin" constant="100" id="8xg-Ii-kBZ"/>
+                                    <constraint firstItem="5Uo-Qc-q3G" firstAttribute="leading" secondItem="f9M-C0-wZr" secondAttribute="leadingMargin" constant="100" id="8xg-Ii-kBZ">
+                                        <variation key="heightClass=compact-widthClass=regular" constant="100"/>
+                                    </constraint>
                                     <constraint firstItem="W4q-Hg-l3i" firstAttribute="height" secondItem="Kds-bg-g9r" secondAttribute="height" id="X1N-2B-dQo"/>
                                     <constraint firstItem="Kds-bg-g9r" firstAttribute="leading" secondItem="W4q-Hg-l3i" secondAttribute="leading" id="YUf-np-1xU"/>
-                                    <constraint firstItem="W4q-Hg-l3i" firstAttribute="leading" secondItem="f9M-C0-wZr" secondAttribute="leading" constant="35" id="iQi-TW-YqN"/>
+                                    <constraint firstItem="W4q-Hg-l3i" firstAttribute="leading" secondItem="f9M-C0-wZr" secondAttribute="leading" constant="35" id="iQi-TW-YqN">
+                                        <variation key="heightClass=compact-widthClass=regular" constant="55"/>
+                                    </constraint>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -82,8 +103,14 @@
                             <constraint firstItem="Rh9-PW-Td8" firstAttribute="leading" secondItem="f9M-C0-wZr" secondAttribute="leading" id="3Fp-vZ-QeY"/>
                             <constraint firstItem="f9M-C0-wZr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4LQ-gH-gUd"/>
                             <constraint firstItem="Rh9-PW-Td8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="150" id="9rP-ye-hQP"/>
-                            <constraint firstItem="Rh9-PW-Td8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="CdH-yN-ZOu"/>
-                            <constraint firstItem="f9M-C0-wZr" firstAttribute="top" secondItem="Rh9-PW-Td8" secondAttribute="bottom" constant="50" id="cwy-L3-t39"/>
+                            <constraint firstItem="Rh9-PW-Td8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="CdH-yN-ZOu">
+                                <variation key="heightClass=compact" constant="2"/>
+                                <variation key="heightClass=regular" constant="150"/>
+                                <variation key="widthClass=compact" constant="2"/>
+                                <variation key="widthClass=regular" constant="20"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                            </constraint>
+                            <constraint firstItem="f9M-C0-wZr" firstAttribute="top" secondItem="Rh9-PW-Td8" secondAttribute="bottom" constant="20" id="cwy-L3-t39"/>
                             <constraint firstItem="Rh9-PW-Td8" firstAttribute="trailing" secondItem="f9M-C0-wZr" secondAttribute="trailing" id="n2L-Jx-WgR"/>
                             <constraint firstItem="f9M-C0-wZr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="200" id="vfC-xU-Pni"/>
                         </constraints>
