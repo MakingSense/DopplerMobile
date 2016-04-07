@@ -26,6 +26,8 @@ namespace DopplerMobile.Android
 		
 		public static void UpdateIdValues()
 		{
+			global::DopplerMobile.Android.Infrastructure.Resource.String.ApplicationName = global::DopplerMobile.Android.Resource.String.ApplicationName;
+			global::DopplerMobile.Android.Infrastructure.Resource.String.Hello = global::DopplerMobile.Android.Resource.String.Hello;
 		}
 		
 		public partial class Attribute

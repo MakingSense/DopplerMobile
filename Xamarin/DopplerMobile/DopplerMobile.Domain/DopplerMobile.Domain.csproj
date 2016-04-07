@@ -35,8 +35,13 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
+    <ProjectReference Include="..\DopplerMobile.Infrastructure\DopplerMobile.Infrastructure.csproj">
+      <Project>{56224E3C-56C3-406D-8BB8-A5362BE49A40}</Project>
+      <Name>DopplerMobile.Infrastructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClickCountingService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
