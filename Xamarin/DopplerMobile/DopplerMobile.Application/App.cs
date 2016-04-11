@@ -11,7 +11,7 @@ namespace DopplerMobile.Application
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterAppStart<ViewModels.FirstViewModel>();
+            RegisterAppStart<ViewModels.LoginViewModel>();
         }
     }
 }

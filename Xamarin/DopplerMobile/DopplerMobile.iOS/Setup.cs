@@ -20,7 +20,7 @@ namespace DopplerMobile.iOS
 
         protected override IMvxApplication CreateApp()
         {
-            return new Core.App();
+            return new DopplerMobile.Application.App();
         }
         
         protected override IMvxTrace CreateDebugTrace()

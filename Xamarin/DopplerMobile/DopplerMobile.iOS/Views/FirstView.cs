@@ -1,5 +1,6 @@
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.iOS.Views;
+using DopplerMobile;
 
 namespace DopplerMobile.iOS.Views
 {
@@ -13,7 +14,7 @@ namespace DopplerMobile.iOS.Views
         {
             base.ViewDidLoad();
 
-            var set = this.CreateBindingSet<FirstView, Core.ViewModels.FirstViewModel>();
+            var set = this.CreateBindingSet<FirstView, DopplerMobile.Application.ViewModels.FirstViewModel>();
             set.Bind(Label).To(vm => vm.Hello);
             set.Bind(TextField).To(vm => vm.Hello);
             set.Apply();
