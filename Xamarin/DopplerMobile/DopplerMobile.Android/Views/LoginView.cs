@@ -14,10 +14,12 @@ namespace DopplerMobile.Android.Views
     )]
     public class LoginView : MvxActivity
     {
-        protected override void OnCreate (Bundle bundle)
+        LoginViewModel vm = new LoginViewModel();
+        protected override async void OnCreate (Bundle bundle)
         {
             base.OnCreate (bundle);
             SetContentView ( Resource.Layout.LoginView );
+            var mauro = await vm.CallRestApiWithModernHttpClient();
         }
     }
 }

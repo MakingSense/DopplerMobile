@@ -3,6 +3,9 @@ using DopplerMobile.Domain;
 using MvvmCross.Core.ViewModels;
 using DopplerMobile.Infrastructure;
 using MvvmCross.Platform;
+using System.Threading.Tasks;
+using System.Net.Http;
+using ModernHttpClient;
 
 namespace DopplerMobile.Application.ViewModels
 {
@@ -54,6 +57,13 @@ namespace DopplerMobile.Application.ViewModels
             {
                 return new MvxCommand(() => ShowViewModel<FirstViewModel>());
             }
+        }
+
+        public async Task<string> CallRestApiWithModernHttpClient()
+        {
+            //Example getting information from a webService using the CrossPlatform Rest Client.
+           var response = await RestClient.Instance.GetPlayList("17ecae4040e171a5cf25dd0f1ee47f7e");
+           return response;
         }
     }
 }
