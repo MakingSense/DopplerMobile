@@ -1,81 +1,73 @@
-﻿using System;//CR-mvazquez: remove unused namespace
-using DopplerMobile.Domain;//CR-mvazquez: remove unused namespace
-using MvvmCross.Core.ViewModels;
+﻿using MvvmCross.Core.ViewModels;
 using DopplerMobile.Infrastructure;
-using MvvmCross.Platform;//CR-mvazquez: remove unused namespace
 using System.Threading.Tasks;
-using System.Net.Http;//CR-mvazquez: remove unused namespace
-using ModernHttpClient;//CR-mvazquez: remove unused namespace
+using DopplerMobile.Domain.Services.Interfaces;
 
 namespace DopplerMobile.Application.ViewModels
 {
     public class LoginViewModel : MvxViewModel
     {
-        public LoginViewModel()
+        public LoginViewModel(ILoginService service)
         {
-            this.Username = "TestUser";//CR-mvazquez: Avoud using 'this.' when is not needed
-            this.Password = "YouCantSeeMe";//CR-mvazquez: Avoud using 'this.' when is not needed
-            this.IsLoading = false;//CR-mvazquez: Avoud using 'this.' when is not needed
+            _loginService = service;
+            LoginCommand = new MvxCommand(LoginCommandExecute, LoginCommandCanExecute);
         }
 
+        #region Instance Data
 
-        //CR-mvazquez: When working with MVVM, ViewModels tend to be full of notifiable properties, so to improve readability define them like this:
-        //
-        //public string Property
-        //{
-        //    get { return _backingField; }
-        //    set { SetProperty(ref _backingField, value); }
-        //}
-        //private string _backingField;
-        //
-        // This way backing field is tied to the property, but below it, this will allow to add a ///Summary tag without separating the property from the backing field
-        private string _username;
+        private readonly ILoginService _loginService;
+
+        #endregion
+
+        #region Public Properties
 
         public string Username
         {
             get { return _username; }
-            set
-            {
-                SetProperty(ref _username, value);
-            }
+            set { SetProperty(ref _username, value); LoginCommand.RaiseCanExecuteChanged(); }
         }
-
-        private string _password;
+        private string _username;
 
         public string Password
         {
             get { return _password; }
-            set
-            {
-                SetProperty(ref _password, value);
-            }
+            set { SetProperty(ref _password, value); LoginCommand.RaiseCanExecuteChanged(); }
         }
-
-        private bool _isLoading = false;
+        private string _password;
 
         public bool IsLoading
         {
             get { return _isLoading; }
-            set
-            {
-                SetProperty(ref _isLoading, value);
-            }
+            set { SetProperty(ref _isLoading, value); }
+        }
+        private bool _isLoading;
+
+        public IMvxCommand LoginCommand { get; }
+
+        #endregion
+
+        #region Private Methods
+
+        private bool LoginCommandCanExecute()
+        {
+            //Username or Password must be completed before executing LoginCommand
+            return !string.IsNullOrEmpty(Username) && !string.IsNullOrEmpty(Password);
         }
 
-        //CR-mvazquez: Is there a reason for this property to be virtual?
-        //CR-mvazquez: This property will create a new Command each time, so there's no chance to handle events like CanExecute or RaiseCanExecuteChanged from the ViewModel. You should create the MvxCommand in the constructor
-        public virtual IMvxCommand LoginCommand
+        private void LoginCommandExecute()
         {
-            get
-            {
-                return new MvxCommand(() => ShowViewModel<FirstViewModel>());
-            }
+            if (_loginService.Login(Username, Password))
+                ShowViewModel<FirstViewModel>();
+            //else - show some error message
         }
 
-        public async Task<string> CallRestApiWithModernHttpClient()
+        #endregion
+
+        public Task<string> CallRestApiWithModernHttpClient()
         {
+            //TODO: Review async/await handling
             //Example getting information from a webService using the CrossPlatform Rest Client.
-            var response = await RestClient.Instance.GetPlayList("17ecae4040e171a5cf25dd0f1ee47f7e");
+            var response = RestClient.Instance.GetPlayList("17ecae4040e171a5cf25dd0f1ee47f7e");
             return response;
         }
     }
