@@ -1,21 +1,21 @@
 ﻿using MvvmCross.Core.ViewModels;
-using DopplerMobile.Infrastructure;
-using System.Threading.Tasks;
 using DopplerMobile.Domain.Services.Interfaces;
 
 namespace DopplerMobile.Application.ViewModels
 {
     public class LoginViewModel : MvxViewModel
     {
-        public LoginViewModel(ILoginService service)
+        public LoginViewModel(ILoginService service, IPlaylistService playlistService)
         {
             _loginService = service;
+            _playlistService = playlistService;
             LoginCommand = new MvxCommand(LoginCommandExecute, LoginCommandCanExecute);
         }
 
         #region Instance Data
 
         private readonly ILoginService _loginService;
+        private readonly IPlaylistService _playlistService;
 
         #endregion
 
@@ -57,18 +57,19 @@ namespace DopplerMobile.Application.ViewModels
         private void LoginCommandExecute()
         {
             if (_loginService.Login(Username, Password))
+                RetrieveUserInformation();
+            //else - show some error message saraza
+        }
+
+        private void RetrieveUserInformation()
+        {
+            _playlistService.GetPlaylist("17ecae4040e171a5cf25dd0f1ee47f7e", response =>
+            {
+                //response contains playlist
                 ShowViewModel<FirstViewModel>();
-            //else - show some error message
+            });
         }
 
         #endregion
-
-        public Task<string> CallRestApiWithModernHttpClient()
-        {
-            //TODO: Review async/await handling
-            //Example getting information from a webService using the CrossPlatform Rest Client.
-            var response = RestClient.Instance.GetPlayList("17ecae4040e171a5cf25dd0f1ee47f7e");
-            return response;
-        }
     }
 }
