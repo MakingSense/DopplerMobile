@@ -1,4 +1,7 @@
-using MvvmCross.Platform.IoC;
+using DopplerMobile.Application.ViewModels;
+using DopplerMobile.Domain.Services;
+using DopplerMobile.Domain.Services.Interfaces;
+using MvvmCross.Platform;
 
 namespace DopplerMobile.Application
 {
@@ -6,12 +9,11 @@ namespace DopplerMobile.Application
     {
         public override void Initialize()
         {
-            CreatableTypes()
-                .EndingWith("Service")
-                .AsInterfaces()
-                .RegisterAsLazySingleton();
+            //TODO: Review, alternative to static container
 
-            RegisterAppStart<ViewModels.LoginViewModel>();
+            Mvx.RegisterSingleton<ILoginService>(new LoginService());
+            Mvx.RegisterType<LoginViewModel, LoginViewModel>();
+            RegisterAppStart<LoginViewModel>();
         }
     }
 }
