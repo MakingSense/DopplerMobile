@@ -36,7 +36,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="IServiceEndpoint.cs" />
+    <Compile Include="ISoundCloudAPI.cs" />
     <Compile Include="RestClient.cs" />
     <Compile Include="ILocalSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

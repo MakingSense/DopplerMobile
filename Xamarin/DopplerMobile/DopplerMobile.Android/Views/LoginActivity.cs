@@ -14,7 +14,6 @@ namespace DopplerMobile.Android.Views
         {
             base.OnViewModelSet();
             SetContentView(Resource.Layout.LoginView);
-            ViewModel.CallRestApiWithModernHttpClient();
         }
     }
 }
