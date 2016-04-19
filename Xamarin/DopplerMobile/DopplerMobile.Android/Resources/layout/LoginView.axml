@@ -2,17 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    style="@style/MatchWidthMatchHeight"
     android:scrollbars="vertical"
     android:overScrollMode="ifContentScrolls"
     android:background="@color/dark_gray">
     <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/MatchWidthWrapHeight"
         android:layout_weight="2">
         <ImageView
-            android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
             android:src="@drawable/icon"
@@ -20,27 +17,22 @@
             android:scaleType="fitCenter" />
     </FrameLayout>
     <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView1"
+        style="@style/MatchWidthWrapHeight"
         android:layout_marginLeft="@dimen/element_margin_medium"
         android:layout_marginRight="@dimen/element_margin_medium"
         android:layout_marginBottom="@dimen/element_margin_medium"
-        android:text="Login on Droppler Mobile"
+        android:text="@string/LoginText"
         android:textColor="@color/white"
         android:gravity="center" />
     <android.support.design.widget.TextInputLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/WrapWidthWrapHeight"
         android:maxWidth="400dp"
         android:minWidth="400dp"
         android:layout_marginLeft="@dimen/element_margin_medium"
         android:layout_marginRight="@dimen/element_margin_medium"
         android:layout_gravity="center_horizontal">
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/TbxUsername"
+            style="@style/MatchWidthWrapHeight"
             local:MvxBind="Text Username"
             android:layout_gravity="center_vertical"
             android:inputType="textNoSuggestions"
@@ -51,8 +43,7 @@
             android:imeOptions="actionNext" />
     </android.support.design.widget.TextInputLayout>
     <android.support.design.widget.TextInputLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/WrapWidthWrapHeight"
         android:maxWidth="400dp"
         android:minWidth="400dp"
         android:layout_marginTop="@dimen/element_margin_large"
@@ -61,9 +52,7 @@
         android:layout_gravity="center_horizontal">
         <EditText
             android:inputType="textPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/TbxPassword"
+            style="@style/MatchWidthWrapHeight"
             local:MvxBind="Text Password"
             android:layout_gravity="center_vertical"
             android:textColor="@color/white"
@@ -72,12 +61,10 @@
             android:imeOptions="actionGo" />
     </android.support.design.widget.TextInputLayout>
     <ProgressBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/WrapWidthWrapHeight"
         android:layout_gravity="center"
         android:gravity="center"
         local:MvxBind="Visibility Visibility(IsLoading)"
-        android:id="@+id/progressBar1"
         android:layout_marginTop="@dimen/element_margin_large"
         android:layout_marginBottom="@dimen/element_margin_large" />
     <FrameLayout
@@ -85,8 +72,7 @@
         android:layout_height="0dp"
         android:layout_weight="2" />
     <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/WrapWidthWrapHeight"
         android:background="@color/colorPrimary"
         android:layout_gravity="center_horizontal">
         <Button
@@ -94,13 +80,12 @@
             android:layout_height="@dimen/button_login_height"
             android:maxWidth="400dp"
             android:minWidth="400dp"
-            android:id="@+id/BtnLogin"
             local:MvxBind="Click LoginCommand"
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="@dimen/text_large"
             android:background="?android:attr/selectableItemBackground"
             android:layout_gravity="center_horizontal"
-            android:text="Login" />
+            android:text="@string/LoginButton" />
     </FrameLayout>
 </LinearLayout>
