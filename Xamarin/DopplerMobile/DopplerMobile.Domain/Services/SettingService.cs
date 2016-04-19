@@ -13,6 +13,7 @@ namespace DopplerMobile.Domain.Services
         {
             _localSettings = localSettings;
         }
+
         private readonly ILocalSettings _localSettings;
 
         public string Get(string key)
@@ -25,5 +26,6 @@ namespace DopplerMobile.Domain.Services
         {
             _localSettings.AddOrUpdateValue(key, value);
         }
-     }
+    }
 }
+

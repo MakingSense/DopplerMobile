@@ -4,7 +4,7 @@ using MvvmCross.Core.ViewModels;
 
 namespace DopplerMobile.Application
 {
-    public class DopplerAppStart: MvxNavigatingObject, IMvxAppStart
+    public class DopplerAppStart : MvxNavigatingObject, IMvxAppStart
     {
         public DopplerAppStart(SettingService settingService)
         {

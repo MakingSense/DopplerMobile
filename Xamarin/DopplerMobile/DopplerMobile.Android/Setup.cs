@@ -1,10 +1,10 @@
 using Android.Content;
+using DopplerMobile.Android.Infrastructure;
 using MvvmCross.Droid.Platform;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform.Platform;
 using MvvmCross.Platform;
 using DopplerMobile.Infrastructure;
-using DopplerMobile.Android.Infrastructure;
 
 namespace DopplerMobile.Android
 {

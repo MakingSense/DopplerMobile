@@ -63,9 +63,8 @@ namespace DopplerMobile.Application.ViewModels
             {
                 _settingService.Set(SettingService.LoggedUserKey, Username);
                 RetrieveUserInformation();
+
             }
-               
-            //TODO: else - show some error message
         }
 
         private void RetrieveUserInformation()
@@ -77,6 +76,7 @@ namespace DopplerMobile.Application.ViewModels
                 ShowViewModel<MainViewModel>();
             });
         }
+
         #endregion
     }
 }

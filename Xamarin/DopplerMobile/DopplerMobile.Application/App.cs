@@ -1,4 +1,3 @@
-using DopplerMobile.Domain;
 using DopplerMobile.Domain.Services;
 using DopplerMobile.Domain.Services.Interfaces;
 using DopplerMobile.Infrastructure;
