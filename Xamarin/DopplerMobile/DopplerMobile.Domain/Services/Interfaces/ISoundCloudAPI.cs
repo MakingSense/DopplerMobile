@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Refit;
 
-namespace DopplerMobile.Infrastructure
+namespace DopplerMobile.Domain.Services.Interfaces
 {
     [Headers("Accept: application/json")]
     public interface ISoundCloudApi

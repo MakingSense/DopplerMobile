@@ -1,19 +1,22 @@
 ﻿using MvvmCross.Core.ViewModels;
 using DopplerMobile.Domain.Services.Interfaces;
+using DopplerMobile.Domain;
 
 namespace DopplerMobile.Application.ViewModels
 {
     public class LoginViewModel : MvxViewModel
     {
-        public LoginViewModel(ILoginService service, IPlaylistService playlistService)
+        public LoginViewModel(ILoginService service, IPlaylistService playlistService, SettingService settingService)
         {
             _loginService = service;
             _playlistService = playlistService;
+            _settingService = settingService;
             LoginCommand = new MvxCommand(LoginCommandExecute, LoginCommandCanExecute);
         }
 
         #region Instance Data
 
+        private readonly SettingService _settingService;
         private readonly ILoginService _loginService;
         private readonly IPlaylistService _playlistService;
 
@@ -57,8 +60,12 @@ namespace DopplerMobile.Application.ViewModels
         private void LoginCommandExecute()
         {
             if (_loginService.Login(Username, Password))
+            {
+                _settingService.Set(SettingService.LoggedUserKey, Username);
                 RetrieveUserInformation();
-            //else - show some error message saraza
+            }
+               
+            //TODO: else - show some error message
         }
 
         private void RetrieveUserInformation()
@@ -66,10 +73,10 @@ namespace DopplerMobile.Application.ViewModels
             _playlistService.GetPlaylist("17ecae4040e171a5cf25dd0f1ee47f7e", response =>
             {
                 //response contains playlist
-                ShowViewModel<FirstViewModel>();
+                //TODO: remove this call. Now we only navigate to MainViewModel when we get the PlayList.
+                ShowViewModel<MainViewModel>();
             });
         }
-
         #endregion
     }
 }

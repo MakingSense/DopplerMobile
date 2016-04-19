@@ -2,4 +2,9 @@
 <resources>
     <string name="Hello">Hello World, Click Me!</string>
     <string name="ApplicationName">DopplerMobile.Android</string>
+
+  <!--Login Screen-->
+  <string name="LoginText">Login on Droppler Mobile</string>
+  <string name="LoginButton">Login</string>
+  
 </resources>
