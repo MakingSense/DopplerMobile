@@ -1,6 +1,7 @@
 ﻿using System;
 using DopplerMobile.Domain.Services.Interfaces;
 using DopplerMobile.Infrastructure;
+using Plugin.Connectivity;
 
 namespace DopplerMobile.Domain.Services
 {
@@ -15,7 +16,11 @@ namespace DopplerMobile.Domain.Services
 
         public void GetPlaylist(string clientId, Action<string> callback)
         {
-            callback(_restClient.Api.GetPlayList(clientId).Result);
+            //Simple cross platform plugin to check connection status of mobile device, 
+            //avoiding make rest calls without connection.
+            if (CrossConnectivity.Current.IsConnected) { 
+                callback(_restClient.Api.GetPlayList(clientId).Result);
+            }
         }
     }
 }
