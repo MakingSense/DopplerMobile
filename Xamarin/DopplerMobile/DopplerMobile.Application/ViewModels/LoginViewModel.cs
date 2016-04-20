@@ -14,7 +14,7 @@ namespace DopplerMobile.Application.ViewModels
             LoginCommand = new MvxCommand(LoginCommandExecute, LoginCommandCanExecute);
 
             //If the user is already logged, navigate directly to the main screen.
-            if (!string.IsNullOrEmpty(_settingService.GetUserLogged()))
+            if (!string.IsNullOrEmpty(_settingService.Get(SettingService.LoggedUserKey)))
             {
                 GoToFirstViewModel();
             }
@@ -66,7 +66,11 @@ namespace DopplerMobile.Application.ViewModels
         private void LoginCommandExecute()
         {
             if (_loginService.Login(Username, Password))
+            {
+                _settingService.Set(SettingService.LoggedUserKey, Username);
                 RetrieveUserInformation();
+            }
+               
             //TODO: else - show some error message
         }
 
@@ -75,7 +79,6 @@ namespace DopplerMobile.Application.ViewModels
             _playlistService.GetPlaylist("17ecae4040e171a5cf25dd0f1ee47f7e", response =>
             {
                 //response contains playlist
-                _settingService.SetUserLogged(Username);
                 GoToFirstViewModel();
             });
         }

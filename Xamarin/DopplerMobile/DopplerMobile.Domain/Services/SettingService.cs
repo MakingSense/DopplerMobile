@@ -7,7 +7,7 @@ namespace DopplerMobile.Domain
     /// </summary>
     public class SettingService
     {
-        private const string UserLoggedKey = "UserLogged";
+        public const string LoggedUserKey = "LoggedUser";
 
         public SettingService(ILocalSettings localSettings)
         {
@@ -15,17 +15,15 @@ namespace DopplerMobile.Domain
         }
         private readonly ILocalSettings _localSettings;
 
-        public string GetUserLogged()
+        public string Get(string key)
         {
-            var userName = _localSettings.GetValueOrDefault(UserLoggedKey);
+            var userName = _localSettings.GetValueOrDefault(key);
             return string.IsNullOrEmpty(userName) ? "" : userName;
         }
 
-        public void SetUserLogged(string userName)
+        public void Set(string key, string value)
         {
-            _localSettings.AddOrUpdateValue(UserLoggedKey, userName);
+            _localSettings.AddOrUpdateValue(key, value);
         }
-
-        //TODO: Add Methods to use platform-specific Settings.
-    }
+     }
 }
