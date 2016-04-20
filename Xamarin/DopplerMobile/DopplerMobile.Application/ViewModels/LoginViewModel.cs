@@ -12,12 +12,6 @@ namespace DopplerMobile.Application.ViewModels
             _playlistService = playlistService;
             _settingService = settingService;
             LoginCommand = new MvxCommand(LoginCommandExecute, LoginCommandCanExecute);
-
-            //If the user is already logged, navigate directly to the main screen.
-            if (!string.IsNullOrEmpty(_settingService.Get(SettingService.LoggedUserKey)))
-            {
-                GoToFirstViewModel();
-            }
         }
 
         #region Instance Data
@@ -79,15 +73,10 @@ namespace DopplerMobile.Application.ViewModels
             _playlistService.GetPlaylist("17ecae4040e171a5cf25dd0f1ee47f7e", response =>
             {
                 //response contains playlist
-                GoToFirstViewModel();
+                //TODO: remove this call. Now we only navigate to MainViewModel when we get the PlayList.
+                ShowViewModel<MainViewModel>();
             });
         }
-
-        private void GoToFirstViewModel()
-        {
-                ShowViewModel<FirstViewModel>();
-        }
-
         #endregion
     }
 }

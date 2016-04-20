@@ -3928,10 +3928,10 @@ namespace DopplerMobile.Android
 			public const int design_navigation_menu_item = 2130903075;
 			
 			// aapt resource value: 0x7f030024
-			public const int FirstView = 2130903076;
+			public const int LoginView = 2130903076;
 			
 			// aapt resource value: 0x7f030025
-			public const int LoginView = 2130903077;
+			public const int MainView = 2130903077;
 			
 			// aapt resource value: 0x7f030026
 			public const int notification_media_action = 2130903078;
