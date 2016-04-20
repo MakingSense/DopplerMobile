@@ -75,7 +75,7 @@ namespace DopplerMobile.Application.ViewModels
             _playlistService.GetPlaylist("17ecae4040e171a5cf25dd0f1ee47f7e", response =>
             {
                 //response contains playlist
-                _clickCountingService.SetUserLogged(Username);
+                _settingService.SetUserLogged(Username);
                 GoToFirstViewModel();
             });
         }
