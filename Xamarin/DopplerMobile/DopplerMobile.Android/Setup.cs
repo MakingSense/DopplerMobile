@@ -17,7 +17,7 @@ namespace DopplerMobile.Android
 
         protected override IMvxApplication CreateApp()
         {
-            Mvx.RegisterSingleton<ILocalSettings>(new AndroidLocalSettings(ApplicationContext));
+            Mvx.RegisterSingleton<SettingService>(new SettingService(new AndroidLocalSettings(ApplicationContext)));
             return new Application.App();
         }
 

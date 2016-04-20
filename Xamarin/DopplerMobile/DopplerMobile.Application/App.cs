@@ -12,8 +12,6 @@ namespace DopplerMobile.Application
         public override void Initialize()
         {
             //TODO: Review, alternative to static container
-
-            Mvx.RegisterSingleton<SettingService>(new SettingService(Mvx.Resolve<ILocalSettings>()));
             Mvx.RegisterSingleton<ILoginService>(new LoginService());
             Mvx.RegisterSingleton<IPlaylistService>(new SoundCloudService(new RestClient<ISoundCloudApi>("https://api.soundcloud.com")));
             Mvx.RegisterType<LoginViewModel, LoginViewModel>();
