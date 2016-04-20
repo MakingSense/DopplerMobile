@@ -6,7 +6,8 @@ namespace DopplerMobile.Android.Views
 {
     [Activity(
         Label = "View for LoginViewModel",
-        Theme = "@style/AppTheme.Login"
+        Theme = "@style/AppTheme.Login",
+        NoHistory = true
     )]
     public class LoginActivity : MvxActivity<LoginViewModel>
     {

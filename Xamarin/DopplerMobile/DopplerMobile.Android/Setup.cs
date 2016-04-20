@@ -2,6 +2,10 @@ using Android.Content;
 using MvvmCross.Droid.Platform;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform.Platform;
+using MvvmCross.Platform;
+using DopplerMobile.Infrastructure;
+using DopplerMobile.Domain;
+using DopplerMobile.Android.Infrastructure;
 
 namespace DopplerMobile.Android
 {
@@ -13,6 +17,7 @@ namespace DopplerMobile.Android
 
         protected override IMvxApplication CreateApp()
         {
+            Mvx.RegisterSingleton<ILocalSettings>(new AndroidLocalSettings(ApplicationContext));
             return new Application.App();
         }
 

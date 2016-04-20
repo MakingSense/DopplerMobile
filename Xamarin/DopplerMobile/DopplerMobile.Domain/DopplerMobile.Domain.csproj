@@ -43,7 +43,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClickCountingService.cs" />
+    <Compile Include="Services\SettingService.cs" />
     <Compile Include="Services\Interfaces\ILoginService.cs" />
     <Compile Include="Services\Interfaces\IPlaylistService.cs" />
     <Compile Include="Services\Interfaces\ISoundCloudAPI.cs" />

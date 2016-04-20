@@ -1,19 +1,28 @@
 ﻿using MvvmCross.Core.ViewModels;
 using DopplerMobile.Domain.Services.Interfaces;
+using DopplerMobile.Domain;
 
 namespace DopplerMobile.Application.ViewModels
 {
     public class LoginViewModel : MvxViewModel
     {
-        public LoginViewModel(ILoginService service, IPlaylistService playlistService)
+        public LoginViewModel(ILoginService service, IPlaylistService playlistService, SettingService settingService)
         {
             _loginService = service;
             _playlistService = playlistService;
+            _settingService = settingService;
             LoginCommand = new MvxCommand(LoginCommandExecute, LoginCommandCanExecute);
+
+            //If the user is already logged, navigate directly to the main screen.
+            if (!string.IsNullOrEmpty(_settingService.GetUserLogged()))
+            {
+                GoToFirstViewModel();
+            }
         }
 
         #region Instance Data
 
+        private readonly SettingService _settingService;
         private readonly ILoginService _loginService;
         private readonly IPlaylistService _playlistService;
 
@@ -58,7 +67,7 @@ namespace DopplerMobile.Application.ViewModels
         {
             if (_loginService.Login(Username, Password))
                 RetrieveUserInformation();
-            //else - show some error message saraza
+            //TODO: else - show some error message
         }
 
         private void RetrieveUserInformation()
@@ -66,8 +75,14 @@ namespace DopplerMobile.Application.ViewModels
             _playlistService.GetPlaylist("17ecae4040e171a5cf25dd0f1ee47f7e", response =>
             {
                 //response contains playlist
-                ShowViewModel<FirstViewModel>();
+                _clickCountingService.SetUserLogged(Username);
+                GoToFirstViewModel();
             });
+        }
+
+        private void GoToFirstViewModel()
+        {
+                ShowViewModel<FirstViewModel>();
         }
 
         #endregion
