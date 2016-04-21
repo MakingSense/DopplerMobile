@@ -1,12 +1,13 @@
 ﻿using MvvmCross.Core.ViewModels;
 using DopplerMobile.Domain.Services.Interfaces;
-using DopplerMobile.Domain.Services;
+using Plugin.Settings.Abstractions;
+using DopplerMobile.Application.Helpers;
 
 namespace DopplerMobile.Application.ViewModels
 {
     public class LoginViewModel : MvxViewModel
     {
-        public LoginViewModel(ILoginService service, IPlaylistService playlistService, SettingService settingService)
+        public LoginViewModel(ILoginService service, IPlaylistService playlistService, ISettings settingService)
         {
             _loginService = service;
             _playlistService = playlistService;
@@ -16,7 +17,7 @@ namespace DopplerMobile.Application.ViewModels
 
         #region Instance Data
 
-        private readonly SettingService _settingService;
+        private readonly ISettings _settingService;
         private readonly ILoginService _loginService;
         private readonly IPlaylistService _playlistService;
 
@@ -61,9 +62,8 @@ namespace DopplerMobile.Application.ViewModels
         {
             if (_loginService.Login(Username, Password))
             {
-                _settingService.Set(SettingService.LoggedUserKey, Username);
+                _settingService.AddOrUpdateValue(Settings.LoggedUserKey, Username);
                 RetrieveUserInformation();
-
             }
         }
 

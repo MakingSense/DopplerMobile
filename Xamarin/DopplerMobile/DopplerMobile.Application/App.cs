@@ -4,6 +4,9 @@ using DopplerMobile.Infrastructure;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
 using Plugin.Connectivity;
+using Plugin.Connectivity.Abstractions;
+using Plugin.Settings;
+using Plugin.Settings.Abstractions;
 
 namespace DopplerMobile.Application
 {
@@ -12,16 +15,20 @@ namespace DopplerMobile.Application
         public override void Initialize()
         {
             //Infrastructure
-            Mvx.RegisterSingleton(CrossConnectivity.Current);
-            Mvx.RegisterSingleton(new RestClient<ISoundCloudApi>("https://api.soundcloud.com"));
+            // Every time someone needs an IFoo they will get the same one
+            // but we don't create it until someone asks for it
+            Mvx.RegisterSingleton<IConnectivity>(() => CrossConnectivity.Current);
+            Mvx.RegisterSingleton<ISettings>(() => CrossSettings.Current);
+            Mvx.RegisterSingleton<RestClient<ISoundCloudApi>>(() => new RestClient<ISoundCloudApi>("https://api.soundcloud.com"));
 
             //Services
-            Mvx.ConstructAndRegisterSingleton<IPlaylistService, SoundCloudService>();
-            Mvx.ConstructAndRegisterSingleton<ILoginService, LoginService>();
-            Mvx.ConstructAndRegisterSingleton<SettingService, SettingService>();
+            // An instance will be created only when it is first requested, 
+            // and all constructor dependencies will be automatically resolved and filled 
+            Mvx.LazyConstructAndRegisterSingleton<IPlaylistService, SoundCloudService>();
+            Mvx.LazyConstructAndRegisterSingleton<ILoginService, LoginService>();
 
             //Application
-            Mvx.ConstructAndRegisterSingleton<IMvxAppStart, DopplerAppStart>();
+            Mvx.LazyConstructAndRegisterSingleton<IMvxAppStart, DopplerAppStart>();
         }
     }
 }
