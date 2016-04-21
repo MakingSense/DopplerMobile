@@ -1,6 +1,6 @@
 ﻿using MvvmCross.Core.ViewModels;
 using DopplerMobile.Domain.Services.Interfaces;
-using DopplerMobile.Domain;
+using DopplerMobile.Domain.Services;
 
 namespace DopplerMobile.Application.ViewModels
 {

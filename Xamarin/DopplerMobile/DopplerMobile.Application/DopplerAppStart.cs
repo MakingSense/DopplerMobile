@@ -1,32 +1,33 @@
 ﻿using DopplerMobile.Application.ViewModels;
-using DopplerMobile.Domain;
+using DopplerMobile.Domain.Services;
 using MvvmCross.Core.ViewModels;
 
-public class DopplerAppStart
-     : MvxNavigatingObject
-     , IMvxAppStart
+namespace DopplerMobile.Application
 {
-    public DopplerAppStart(SettingService settingService)
+    public class DopplerAppStart: MvxNavigatingObject, IMvxAppStart
     {
-        _settingService = settingService;
-    }
-
-    #region Instance Data
-
-    private readonly SettingService _settingService;
-
-    #endregion
-
-    public void Start(object hint = null)
-    {
-        //If the user is already logged, navigate directly to the main screen.
-        if (!string.IsNullOrEmpty(_settingService.Get(SettingService.LoggedUserKey)))
+        public DopplerAppStart(SettingService settingService)
         {
-            ShowViewModel<MainViewModel>();
+            _settingService = settingService;
         }
-        else
+
+        #region Instance Data
+
+        private readonly SettingService _settingService;
+
+        #endregion
+
+        public void Start(object hint = null)
         {
-            ShowViewModel<LoginViewModel>();
+            //If the user is already logged, navigate directly to the main screen.
+            if (!string.IsNullOrEmpty(_settingService.Get(SettingService.LoggedUserKey)))
+            {
+                ShowViewModel<MainViewModel>();
+            }
+            else
+            {
+                ShowViewModel<LoginViewModel>();
+            }
         }
     }
 }

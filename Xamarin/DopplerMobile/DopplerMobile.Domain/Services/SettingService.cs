@@ -1,6 +1,6 @@
 ﻿using DopplerMobile.Infrastructure;
 
-namespace DopplerMobile.Domain
+namespace DopplerMobile.Domain.Services
 {
     /// <summary>
     /// This is a domain service example to show how to deal with platform-specific features through DI
