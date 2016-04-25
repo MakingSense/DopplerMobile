@@ -60,10 +60,15 @@ namespace DopplerMobile.Application.ViewModels
 
         private void LoginCommandExecute()
         {
+            IsLoading = true;
             if (_loginService.Login(Username, Password))
             {
                 _settingService.AddOrUpdateValue(Settings.LoggedUserKey, Username);
                 RetrieveUserInformation();
+            }
+            else
+            {
+                IsLoading = false;
             }
         }
 
