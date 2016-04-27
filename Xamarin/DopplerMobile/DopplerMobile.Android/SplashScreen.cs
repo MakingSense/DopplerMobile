@@ -14,7 +14,7 @@ namespace DopplerMobile.Android
     public class SplashScreen : MvxSplashScreenActivity
     {
         public SplashScreen()
-            : base(Resource.Layout.SplashScreen)
+            : base(Resource.Layout.activity_splash_screen)
         {
         }
     }
