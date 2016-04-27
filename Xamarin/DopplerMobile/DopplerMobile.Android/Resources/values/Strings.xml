@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Hello">Hello World, Click Me!</string>
-    <string name="ApplicationName">DopplerMobile.Android</string>
+  <string name="hello">Hello World, Click Me!</string>
+  <string name="application_name">DopplerMobile.Android</string>
+  <string name="application_description">Email Marketing</string>
 
   <!--Login Screen-->
-  <string name="LoginText">Login on Droppler Mobile</string>
-  <string name="LoginButton">Login</string>
+  <string name="login_text">Login on Droppler Mobile</string>
+  <string name="login_button">Login</string>
+
+  <!--Navigation Drawer Items-->
+  <string name="menu_home">Home</string>
+  <string name="menu_second">Second Activity</string>
+  <string name="menu_view_pager">ViewPager</string>
+  <string name="menu_settings">Setting</string>
+  <string name="drawer_open">Open navigation drawer</string>
+  <string name="drawer_close">Close navigation drawer</string>
   
+  <!--Main Screen-->
+  <string name="main_screen_text">Doppler Main Screen!</string>
+
 </resources>

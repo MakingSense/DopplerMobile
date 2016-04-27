@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:local="http://schemas.android.com/apk/res-auto">
+
+  <group android:id="@+id/nav_items">
+    <item
+        android:id="@+id/nav_home"
+        android:title="@string/menu_home" />
+    <item
+        android:id="@+id/nav_second"
+        android:title="@string/menu_second" />
+  </group>
+
+  <!--TODO: Agregar las opciones disponibles dentro del menu-->
+  <item android:title="Appication Features">
+    <menu>
+      <item
+          android:id="@+id/nav_viewpager"
+          android:title="@string/menu_view_pager" />
+    </menu>
+  </item>
+
+  <group android:id="@+id/nav_footer">
+    <item
+        android:id="@+id/nav_settings"
+        android:title="@string/menu_settings" />
+  </group>
+
+</menu>

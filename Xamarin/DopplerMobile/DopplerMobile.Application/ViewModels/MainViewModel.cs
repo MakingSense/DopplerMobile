@@ -11,5 +11,10 @@ namespace DopplerMobile.Application.ViewModels
             get { return _hello;}
             set { SetProperty (ref _hello, value); }
         }
+
+        public void ShowMenu()
+        {
+            ShowViewModel<MenuViewModel>();
+        }
     }
 }

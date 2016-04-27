@@ -5,13 +5,13 @@ using DopplerMobile.Application.ViewModels;
 
 namespace DopplerMobile.Android.Views
 {
-    [Activity(Label = "View for MainViewModel")]
-    public class MainActivity : MvxActivity<MainViewModel>
+    [Activity(Label = "View for SecondViewModel")]
+    class SecondActivity : MvxActivity<SecondViewModel>
     {
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            SetContentView(Resource.Layout.MainView);
+            SetContentView(Resource.Layout.activity_second);
         }
     }
 }
