@@ -78,7 +78,7 @@ namespace DopplerMobile.Application.ViewModels
             {
                 //response contains playlist
                 //TODO: remove this call. Now we only navigate to MainViewModel when we get the PlayList.
-                ShowViewModel<MainViewModel>();
+                ShowViewModel<HomeViewModel>();
             });
         }
 
