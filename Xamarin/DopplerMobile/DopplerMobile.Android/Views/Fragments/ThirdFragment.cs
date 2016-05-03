@@ -1,13 +1,13 @@
 using Android.OS;
-using Android.Views;
-using MvvmCross.Binding.Droid.BindingContext;
 using Android.Runtime;
-using MvvmCross.Droid.Support.V4;
+using Android.Views;
 using DopplerMobile.Application.ViewModels;
+using MvvmCross.Binding.Droid.BindingContext;
+using MvvmCross.Droid.Support.V7.Fragging.Fragments;
 
-namespace DopplerMobile.Android.Views
+namespace DopplerMobile.Android.Views.Fragments
 {
-    [Register("dopplerMobile.android.views.ThirdFragment")]
+    [Register("dopplermobile.android.views.fragments.ThirdFragment")]
     public class ThirdFragment : MvxFragment<ThirdViewModel>
     {
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)

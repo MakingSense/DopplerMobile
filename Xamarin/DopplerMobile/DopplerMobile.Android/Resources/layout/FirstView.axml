@@ -9,10 +9,10 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textSize="40dp"
-        local:MvxBind="Text Name" />
+        local:MvxBind="Text Title" />
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textSize="40dp"
-        local:MvxBind="Text Name" />
+        local:MvxBind="Text Title" />
 </LinearLayout>
