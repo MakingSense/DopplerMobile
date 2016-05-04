@@ -3,7 +3,7 @@ using Android.Runtime;
 using Android.Views;
 using DopplerMobile.Application.ViewModels;
 using MvvmCross.Binding.Droid.BindingContext;
-using MvvmCross.Droid.Support.V7.Fragging.Fragments;
+using MvvmCross.Droid.Support.V4;
 
 namespace DopplerMobile.Android.Views.Fragments
 {

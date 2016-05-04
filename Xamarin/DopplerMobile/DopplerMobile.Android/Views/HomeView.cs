@@ -7,7 +7,6 @@ using Android.Support.V4.View;
 using DopplerMobile.Android.Converters;
 using DopplerMobile.Application.ViewModels;
 using MvvmCross.Droid.Support.V4;
-using MvvmCross.Droid.Support.V7.Fragging;
 
 namespace DopplerMobile.Android.Views
 {
