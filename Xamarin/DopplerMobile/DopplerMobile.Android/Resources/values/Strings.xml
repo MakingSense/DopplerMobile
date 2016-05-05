@@ -6,5 +6,9 @@
   <!--Login Screen-->
   <string name="LoginText">Login on Droppler Mobile</string>
   <string name="LoginButton">Login</string>
-  
+
+  <!--OnBoarding Screen-->
+  <string name="OnBoardingButtonSkip">SKIP</string>
+  <string name="OnBoardingButtonNext">NEXT</string>
+  <string name="OnBoardingPageOneText">Follow on real time the success of your campaigns</string>
 </resources>
