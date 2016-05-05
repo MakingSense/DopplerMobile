@@ -6,6 +6,7 @@
   <!--Login Screen-->
   <string name="LoginName">USERNAME</string>
   <string name="LoginPassword">PASSWORD</string>
+  <string name="LoginForgotPassword">FORGOT YOUR PASSWORD?</string>
   <string name="LoginButton">LOGIN</string>
   
 </resources>

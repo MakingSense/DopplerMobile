@@ -1612,6 +1612,9 @@ namespace DopplerMobile.Android
 			// aapt resource value: 0x7f050047
 			public const int disabled_alpha_material_light = 2131034183;
 			
+			// aapt resource value: 0x7f050078
+			public const int element_margin_extra_huge = 2131034232;
+			
 			// aapt resource value: 0x7f050077
 			public const int element_margin_huge = 2131034231;
 			
@@ -1675,26 +1678,26 @@ namespace DopplerMobile.Android
 			// aapt resource value: 0x7f05004d
 			public const int notification_subtext_size = 2131034189;
 			
+			// aapt resource value: 0x7f05007e
+			public const int text_huge = 2131034238;
+			
 			// aapt resource value: 0x7f05007d
-			public const int text_huge = 2131034237;
+			public const int text_large = 2131034237;
 			
 			// aapt resource value: 0x7f05007c
-			public const int text_large = 2131034236;
+			public const int text_medium = 2131034236;
 			
 			// aapt resource value: 0x7f05007b
-			public const int text_medium = 2131034235;
-			
-			// aapt resource value: 0x7f05007a
-			public const int text_small = 2131034234;
-			
-			// aapt resource value: 0x7f050078
-			public const int text_tinier = 2131034232;
+			public const int text_small = 2131034235;
 			
 			// aapt resource value: 0x7f050079
-			public const int text_tiny = 2131034233;
+			public const int text_tinier = 2131034233;
 			
-			// aapt resource value: 0x7f05007e
-			public const int text_very_huge = 2131034238;
+			// aapt resource value: 0x7f05007a
+			public const int text_tiny = 2131034234;
+			
+			// aapt resource value: 0x7f05007f
+			public const int text_very_huge = 2131034239;
 			
 			static Dimension()
 			{
@@ -2589,8 +2592,11 @@ namespace DopplerMobile.Android
 			// aapt resource value: 0x7f070017
 			public const int Hello = 2131165207;
 			
+			// aapt resource value: 0x7f07001c
+			public const int LoginButton = 2131165212;
+			
 			// aapt resource value: 0x7f07001b
-			public const int LoginButton = 2131165211;
+			public const int LoginForgotPassword = 2131165211;
 			
 			// aapt resource value: 0x7f070019
 			public const int LoginName = 2131165209;

@@ -11,18 +11,11 @@
         android:src="@drawable/logo"
         android:layout_gravity="center"
         android:scaleType="fitCenter" />
-    <TextView
-        style="@style/MatchWidthWrapHeight"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="@dimen/element_margin_medium"
-        android:layout_marginBottom="@dimen/element_margin_tiny"
-        android:text="@string/LoginName"
-        android:textSize="@dimen/text_tinier"
-        android:textColor="@color/black" />
     <android.support.design.widget.TextInputLayout
         style="@style/WrapWidthWrapHeight"
-        android:maxWidth="500dp"
-        android:minWidth="500dp"
+        android:maxWidth="400dp"
+        android:minWidth="400dp"
+        android:layout_marginTop="100dp"
         android:layout_marginLeft="@dimen/element_margin_medium"
         android:layout_marginRight="@dimen/element_margin_medium"
         android:layout_gravity="center_horizontal">
@@ -32,23 +25,17 @@
             android:layout_gravity="center_vertical"
             android:inputType="textNoSuggestions"
             android:textColorHint="@color/colorPrimary"
-            android:textColor="@color/black"
+            android:textColor="@color/colorAccent"
+            android:hint="@string/LoginName"
             android:textColorHighlight="@color/black"
-            android:textSize="@dimen/text_medium"
+            android:textSize="@dimen/text_tiny"
             android:imeOptions="actionNext" />
     </android.support.design.widget.TextInputLayout>
-    <TextView
-        style="@style/MatchWidthWrapHeight"
-        android:layout_marginTop="@dimen/element_margin_large"
-        android:layout_marginLeft="@dimen/element_margin_medium"
-        android:layout_marginBottom="@dimen/element_margin_tiny"
-        android:text="@string/LoginPassword"
-        android:textSize="@dimen/text_tinier"
-        android:textColor="@color/black" />
     <android.support.design.widget.TextInputLayout
         style="@style/WrapWidthWrapHeight"
         android:maxWidth="400dp"
         android:minWidth="400dp"
+        android:layout_marginTop="@dimen/element_margin_large"
         android:layout_marginLeft="@dimen/element_margin_medium"
         android:layout_marginRight="@dimen/element_margin_medium"
         android:layout_gravity="center_horizontal">
@@ -57,9 +44,10 @@
             style="@style/MatchWidthWrapHeight"
             local:MvxBind="Text Password"
             android:layout_gravity="center_vertical"
-            android:textColor="@color/white"
+            android:textColor="@color/colorAccent"
+            android:hint="@string/LoginPassword"
             android:textColorHint="@color/colorPrimary"
-            android:textSize="@dimen/text_medium"
+            android:textSize="@dimen/text_tiny"
             android:imeOptions="actionGo" />
     </android.support.design.widget.TextInputLayout>
     <ProgressBar
@@ -72,6 +60,7 @@
     <FrameLayout
         style="@style/WrapWidthWrapHeight"
         android:background="@color/colorPrimary"
+        android:layout_marginTop="@dimen/element_margin_extra_huge"
         android:layout_marginLeft="@dimen/element_margin_medium"
         android:layout_marginRight="@dimen/element_margin_medium"
         android:layout_gravity="center_horizontal">
@@ -84,16 +73,15 @@
             local:MvxBind="Click LoginCommand"
             android:gravity="center"
             android:textColor="@color/white"
-            android:textSize="@dimen/text_large"
+            android:textSize="@dimen/text_medium"
             android:background="?android:attr/selectableItemBackground"
             android:text="@string/LoginButton" />
     </FrameLayout>
     <TextView
         style="@style/MatchWidthWrapHeight"
-        android:layout_marginTop="@dimen/element_margin_large"
-        android:layout_marginLeft="@dimen/element_margin_medium"
-        android:layout_marginBottom="@dimen/element_margin_tiny"
-        android:text="@string/LoginPassword"
+        android:layout_marginTop="@dimen/element_margin_extra_huge"
+        android:text="@string/LoginForgotPassword"
         android:textSize="@dimen/text_tinier"
-        android:textColor="@color/black" />
+        android:gravity="center"
+        android:textColor="@color/colorPrimary" />
 </LinearLayout>
