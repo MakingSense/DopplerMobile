@@ -1666,9 +1666,6 @@ namespace DopplerMobile.Android
 			// aapt resource value: 0x7f05006b
 			public const int margin_tiny = 2131034219;
 			
-			// aapt resource value: 0x7f050078
-			public const int navigation_drawer_width = 2131034232;
-			
 			// aapt resource value: 0x7f05004b
 			public const int notification_large_icon_height = 2131034187;
 			
@@ -1678,26 +1675,26 @@ namespace DopplerMobile.Android
 			// aapt resource value: 0x7f05004d
 			public const int notification_subtext_size = 2131034189;
 			
-			// aapt resource value: 0x7f05007e
-			public const int text_huge = 2131034238;
-			
 			// aapt resource value: 0x7f05007d
-			public const int text_large = 2131034237;
+			public const int text_huge = 2131034237;
 			
 			// aapt resource value: 0x7f05007c
-			public const int text_medium = 2131034236;
+			public const int text_large = 2131034236;
 			
 			// aapt resource value: 0x7f05007b
-			public const int text_small = 2131034235;
-			
-			// aapt resource value: 0x7f050079
-			public const int text_tinier = 2131034233;
+			public const int text_medium = 2131034235;
 			
 			// aapt resource value: 0x7f05007a
-			public const int text_tiny = 2131034234;
+			public const int text_small = 2131034234;
 			
-			// aapt resource value: 0x7f05007f
-			public const int text_very_huge = 2131034239;
+			// aapt resource value: 0x7f050078
+			public const int text_tinier = 2131034232;
+			
+			// aapt resource value: 0x7f050079
+			public const int text_tiny = 2131034233;
+			
+			// aapt resource value: 0x7f05007e
+			public const int text_very_huge = 2131034238;
 			
 			static Dimension()
 			{
@@ -1946,11 +1943,14 @@ namespace DopplerMobile.Android
 			// aapt resource value: 0x7f02004d
 			public const int Icon = 2130837581;
 			
-			// aapt resource value: 0x7f02004f
-			public const int notification_template_icon_bg = 2130837583;
-			
 			// aapt resource value: 0x7f02004e
-			public const int splash = 2130837582;
+			public const int logo = 2130837582;
+			
+			// aapt resource value: 0x7f020050
+			public const int notification_template_icon_bg = 2130837584;
+			
+			// aapt resource value: 0x7f02004f
+			public const int splash = 2130837583;
 			
 			static Drawable()
 			{
@@ -2589,11 +2589,14 @@ namespace DopplerMobile.Android
 			// aapt resource value: 0x7f070017
 			public const int Hello = 2131165207;
 			
-			// aapt resource value: 0x7f07001a
-			public const int LoginButton = 2131165210;
+			// aapt resource value: 0x7f07001b
+			public const int LoginButton = 2131165211;
 			
 			// aapt resource value: 0x7f070019
-			public const int LoginText = 2131165209;
+			public const int LoginName = 2131165209;
+			
+			// aapt resource value: 0x7f07001a
+			public const int LoginPassword = 2131165210;
 			
 			// aapt resource value: 0x7f070000
 			public const int abc_action_bar_home_description = 2131165184;

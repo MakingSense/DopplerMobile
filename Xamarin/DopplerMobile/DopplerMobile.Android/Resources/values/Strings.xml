@@ -4,7 +4,8 @@
     <string name="ApplicationName">DopplerMobile.Android</string>
 
   <!--Login Screen-->
-  <string name="LoginText">Login on Droppler Mobile</string>
-  <string name="LoginButton">Login</string>
+  <string name="LoginName">USERNAME</string>
+  <string name="LoginPassword">PASSWORD</string>
+  <string name="LoginButton">LOGIN</string>
   
 </resources>

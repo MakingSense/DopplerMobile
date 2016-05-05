@@ -20,8 +20,6 @@
     <dimen name="element_margin_large">20dp</dimen>
     <dimen name="element_margin_huge">25dp</dimen>
 
-    <dimen name="navigation_drawer_width">290dp</dimen>
-
     <!-- font definitions -->
 
     <dimen name="text_tinier">11sp</dimen>
