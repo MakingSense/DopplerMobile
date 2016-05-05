@@ -10,7 +10,7 @@
 
     <!-- Semantic definitions -->
 
-    <dimen name="button_login_height">60dp</dimen>
+    <dimen name="button_login_height">40dp</dimen>
 
     <dimen name="element_margin_smallest">1dp</dimen>
     <dimen name="element_margin_tinier">3dp</dimen>
@@ -19,8 +19,7 @@
     <dimen name="element_margin_medium">15dp</dimen>
     <dimen name="element_margin_large">20dp</dimen>
     <dimen name="element_margin_huge">25dp</dimen>
-
-    <dimen name="navigation_drawer_width">290dp</dimen>
+    <dimen name="element_margin_extra_huge">40dp</dimen> 
 
     <!-- font definitions -->
 

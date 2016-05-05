@@ -3,7 +3,7 @@ using Android.OS;
 using MvvmCross.Droid.Views;
 using DopplerMobile.Application.ViewModels;
 
-namespace DopplerMobile.Android.Views
+namespace DopplerMobile.Android.Views.Activities
 {
     [Activity(Label = "View for MainViewModel")]
     public class MainActivity : MvxActivity<MainViewModel>
@@ -11,7 +11,7 @@ namespace DopplerMobile.Android.Views
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            SetContentView(Resource.Layout.MainView);
+            SetContentView(Resource.Layout.main_view);
         }
     }
 }

@@ -4,7 +4,7 @@
     <string name="ApplicationName">DopplerMobile.Android</string>
 
   <!--Login Screen-->
-  <string name="LoginText">Login on Droppler Mobile</string>
-  <string name="LoginButton">Login</string>
-  
+
+  <string name="OnBoardingPageTwoText">Page Two - Onboarding Screen</string>
+  <string name="OnBoardingPageThreeText">Page Three - Onboarding Screen</string>
 </resources>

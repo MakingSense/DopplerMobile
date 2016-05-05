@@ -2,7 +2,7 @@
 using MvvmCross.Droid.Views;
 using DopplerMobile.Application.ViewModels;
 
-namespace DopplerMobile.Android.Views
+namespace DopplerMobile.Android.Views.Activities
 {
     [Activity(
         Label = "View for LoginViewModel",
@@ -14,7 +14,7 @@ namespace DopplerMobile.Android.Views
         protected override void OnViewModelSet()
         {
             base.OnViewModelSet();
-            SetContentView(Resource.Layout.LoginView);
+            SetContentView(Resource.Layout.login_view);
         }
     }
 }

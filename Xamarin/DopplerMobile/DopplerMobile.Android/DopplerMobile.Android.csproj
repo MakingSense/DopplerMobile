@@ -157,33 +157,31 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="SplashScreen.cs" />
-    <Compile Include="Views\Fragments\FirstFragment.cs" />
-    <Compile Include="Views\HomeView.cs" />
-    <Compile Include="Views\MainActivity.cs" />
-    <Compile Include="Views\LoginActivity.cs" />
-    <Compile Include="Views\Fragments\SecondFragment.cs" />
-    <Compile Include="Converters\SectionToFragmentConverter.cs" />
+    <Compile Include="Views\Fragments\OnboardingtPageFragment.cs" />
+    <Compile Include="Adapters\MvvmFriendlyPageAdapter.cs" />
+    <Compile Include="Views\Activities\OnboardingActivity.cs" />
+    <Compile Include="Views\Activities\MainActivity.cs" />
+    <Compile Include="Views\Activities\LoginActivity.cs" />
     <Compile Include="Converters\SimpleConverter.cs" />
-    <Compile Include="Views\Fragments\ThirdFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="GettingStarted.Xamarin" />
-    <AndroidResource Include="Resources\layout\MainView.axml" />
-    <AndroidResource Include="Resources\layout\LoginView.axml">
+    <AndroidResource Include="Resources\layout\main_view.axml" />
+    <AndroidResource Include="Resources\layout\login_view.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\FirstView.axml" />
-    <AndroidResource Include="Resources\layout\HomeView.axml" />
-    <AndroidResource Include="Resources\layout\SecondView.axml" />
-    <AndroidResource Include="Resources\layout\ThirdView.axml" />
-    <AndroidResource Include="Resources\layout\SplashScreen.axml" />
+    <AndroidResource Include="Resources\layout\onboarding_page_view.axml" />
+    <AndroidResource Include="Resources\layout\onboarding_container_view.axml" />
+    <AndroidResource Include="Resources\layout\splash_screen_view.axml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\values\strings.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Icon.png" />
+    <AndroidResource Include="Resources\drawable\icon.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -227,7 +225,13 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\values\SplashStyle.xml" />
+    <AndroidResource Include="Resources\values\splash_style.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\onboarding_clock.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\refit.2.4.1\build\portable-net45+netcore45+wp8+wpa81+monoandroid+xamarin.ios10\refit.targets" Condition="Exists('..\packages\refit.2.4.1\build\portable-net45+netcore45+wp8+wpa81+monoandroid+xamarin.ios10\refit.targets')" />

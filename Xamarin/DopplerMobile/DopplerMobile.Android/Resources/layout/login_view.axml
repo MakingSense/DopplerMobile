@@ -5,29 +5,17 @@
     style="@style/MatchWidthMatchHeight"
     android:scrollbars="vertical"
     android:overScrollMode="ifContentScrolls"
-    android:background="@color/dark_gray">
-    <FrameLayout
-        style="@style/MatchWidthWrapHeight"
-        android:layout_weight="2">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:src="@drawable/icon"
-            android:layout_gravity="center"
-            android:scaleType="fitCenter" />
-    </FrameLayout>
-    <TextView
-        style="@style/MatchWidthWrapHeight"
-        android:layout_marginLeft="@dimen/element_margin_medium"
-        android:layout_marginRight="@dimen/element_margin_medium"
-        android:layout_marginBottom="@dimen/element_margin_medium"
-        android:text="@string/LoginText"
-        android:textColor="@color/white"
-        android:gravity="center" />
+    android:background="@color/white">
+    <ImageView
+        style="@style/WrapWidthWrapHeight"
+        android:src="@drawable/logo"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter" />
     <android.support.design.widget.TextInputLayout
         style="@style/WrapWidthWrapHeight"
         android:maxWidth="400dp"
         android:minWidth="400dp"
+        android:layout_marginTop="100dp"
         android:layout_marginLeft="@dimen/element_margin_medium"
         android:layout_marginRight="@dimen/element_margin_medium"
         android:layout_gravity="center_horizontal">
@@ -37,9 +25,10 @@
             android:layout_gravity="center_vertical"
             android:inputType="textNoSuggestions"
             android:textColorHint="@color/colorPrimary"
-            android:textColor="@color/white"
-            android:textColorHighlight="@color/white"
-            android:textSize="@dimen/text_medium"
+            android:textColor="@color/colorAccent"
+            android:hint="@string/LoginName"
+            android:textColorHighlight="@color/black"
+            android:textSize="@dimen/text_tiny"
             android:imeOptions="actionNext" />
     </android.support.design.widget.TextInputLayout>
     <android.support.design.widget.TextInputLayout
@@ -55,9 +44,10 @@
             style="@style/MatchWidthWrapHeight"
             local:MvxBind="Text Password"
             android:layout_gravity="center_vertical"
-            android:textColor="@color/white"
+            android:textColor="@color/colorAccent"
+            android:hint="@string/LoginPassword"
             android:textColorHint="@color/colorPrimary"
-            android:textSize="@dimen/text_medium"
+            android:textSize="@dimen/text_tiny"
             android:imeOptions="actionGo" />
     </android.support.design.widget.TextInputLayout>
     <ProgressBar
@@ -68,24 +58,30 @@
         android:layout_marginTop="@dimen/element_margin_large"
         android:layout_marginBottom="@dimen/element_margin_large" />
     <FrameLayout
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2" />
-    <FrameLayout
         style="@style/WrapWidthWrapHeight"
         android:background="@color/colorPrimary"
+        android:layout_marginTop="@dimen/element_margin_extra_huge"
+        android:layout_marginLeft="@dimen/element_margin_medium"
+        android:layout_marginRight="@dimen/element_margin_medium"
         android:layout_gravity="center_horizontal">
         <Button
             android:layout_width="wrap_content"
             android:layout_height="@dimen/button_login_height"
             android:maxWidth="400dp"
             android:minWidth="400dp"
+            android:layout_gravity="center_horizontal"
             local:MvxBind="Click LoginCommand"
             android:gravity="center"
             android:textColor="@color/white"
-            android:textSize="@dimen/text_large"
+            android:textSize="@dimen/text_medium"
             android:background="?android:attr/selectableItemBackground"
-            android:layout_gravity="center_horizontal"
             android:text="@string/LoginButton" />
     </FrameLayout>
+    <TextView
+        style="@style/MatchWidthWrapHeight"
+        android:layout_marginTop="@dimen/element_margin_extra_huge"
+        android:text="@string/LoginForgotPassword"
+        android:textSize="@dimen/text_tinier"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary" />
 </LinearLayout>

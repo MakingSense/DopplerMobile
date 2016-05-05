@@ -23,7 +23,7 @@ namespace DopplerMobile.Application
             //If the user is already logged, navigate directly to the main screen.
             if (!string.IsNullOrEmpty(_settingService.GetValueOrDefault<string>(Settings.LoggedUserKey)))
             {
-                ShowViewModel<HomeViewModel>();
+                ShowViewModel<OnboardingViewModel>();
             }
             else
             {
