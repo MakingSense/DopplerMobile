@@ -11,7 +11,7 @@ namespace DopplerMobile.Android.Views
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            SetContentView(Resource.Layout.MainView);
+            SetContentView(Resource.Layout.main_view);
         }
     }
 }

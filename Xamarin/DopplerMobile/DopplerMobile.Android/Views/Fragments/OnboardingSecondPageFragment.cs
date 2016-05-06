@@ -7,13 +7,13 @@ using MvvmCross.Droid.Support.V4;
 
 namespace DopplerMobile.Android.Views.Fragments
 {
-    [Register("dopplermobile.android.views.fragments.FirstFragment")]
-    public class FirstFragment : MvxFragment<FirstViewModel>
+    [Register("dopplermobile.android.views.fragments.OnboardingSecondPageFragment")]
+    public class OnboardingSecondPageFragment : MvxFragment<OnboardingSecondPageViewModel>
     {
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             base.OnCreateView(inflater, container, savedInstanceState);
-            return this.BindingInflate(Resource.Layout.FirstView, null);
+            return this.BindingInflate(Resource.Layout.onboarding_second_page_view, null);
         }
     }
 }

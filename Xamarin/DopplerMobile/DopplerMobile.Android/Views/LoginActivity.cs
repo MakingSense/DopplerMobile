@@ -14,7 +14,7 @@ namespace DopplerMobile.Android.Views
         protected override void OnViewModelSet()
         {
             base.OnViewModelSet();
-            SetContentView(Resource.Layout.LoginView);
+            SetContentView(Resource.Layout.login_view);
         }
     }
 }

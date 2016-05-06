@@ -10,25 +10,25 @@ using MvvmCross.Droid.Support.V4;
 
 namespace DopplerMobile.Android.Views
 {
-    [Activity(Label = "View for HomeView")]
-    public class HomeView : MvvmCross.Droid.Support.V4.MvxFragmentActivity<HomeViewModel>
+    [Activity(Label = "View for onboarding_container_view")]
+    public class OnboardingActivity : MvxFragmentActivity<OnboardingViewModel>
     {
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            SetContentView(Resource.Layout.HomeView);
+            SetContentView(Resource.Layout.onboarding_container_view);
 
             var viewPager = FindViewById<ViewPager>(Resource.Id.viewPager);
             if (viewPager == null)
-                throw new NullReferenceException($"HomeView expects a viewPager with id {Resource.Id.viewPager}");
+                throw new NullReferenceException($"OnboardingActivity expects a viewPager with id {Resource.Id.viewPager}");
             InitializeViewPager(viewPager);
         }
 
         private void InitializeViewPager(ViewPager viewPager)
         {
-            var converter = new SectionToFragmentConverter();
+            var converter = new OnboardingPagesToFragmentConverter();
             var fragments = new List<MvxFragmentPagerAdapter.FragmentInfo>();
-            foreach (var section in ViewModel.Sections)
+            foreach (var section in ViewModel.Pages)
             {
                 var fragmentType = converter.Convert(section);
                 var viewModelAttachedToFragment = fragmentType.BaseType?.GenericTypeArguments.FirstOrDefault();
@@ -40,7 +40,7 @@ namespace DopplerMobile.Android.Views
 
                 if (viewModelAttachedToFragment == null)
                     throw new InvalidOperationException(@"ViewPager fragments should have an attached ViewModel");
-                fragments.Add(new MvxFragmentPagerAdapter.FragmentInfo(section.Title, fragmentType, viewModelAttachedToFragment));
+                fragments.Add(new MvxFragmentPagerAdapter.FragmentInfo(section.PageTitle, fragmentType, viewModelAttachedToFragment));
             }
             viewPager.Adapter = new MvxFragmentPagerAdapter(this, SupportFragmentManager, fragments);
         }
