@@ -8,5 +8,13 @@
   <string name="LoginPassword">PASSWORD</string>
   <string name="LoginForgotPassword">FORGOT YOUR PASSWORD?</string>
   <string name="LoginButton">LOGIN</string>
-  
+
+  <!--OnBoarding Screen-->
+  <string name="OnBoardingButtonSkip">SKIP</string>
+  <string name="OnBoardingButtonNext">NEXT</string>
+  <string name="OnBoardingButtonBack">BACK</string>
+  <string name="OnBoardingButtonFinish">FINISH</string>
+  <string name="OnBoardingPageOneText">Follow on real time the success of your campaigns</string>
+  <string name="OnBoardingPageTwoText">Page Two - Onboarding Screen</string>
+  <string name="OnBoardingPageThreeText">Page Tree - Onboarding Screen</string>
 </resources>

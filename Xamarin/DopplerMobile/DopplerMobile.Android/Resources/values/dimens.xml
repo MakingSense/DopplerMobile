@@ -19,7 +19,7 @@
     <dimen name="element_margin_medium">15dp</dimen>
     <dimen name="element_margin_large">20dp</dimen>
     <dimen name="element_margin_huge">25dp</dimen>
-    <dimen name="element_margin_extra_huge">35dp</dimen>
+    <dimen name="element_margin_extra_huge">40dp</dimen> 
 
     <!-- font definitions -->
 

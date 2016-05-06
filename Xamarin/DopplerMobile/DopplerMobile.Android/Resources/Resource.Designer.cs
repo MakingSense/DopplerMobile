@@ -1944,16 +1944,19 @@ namespace DopplerMobile.Android
 			public const int design_snackbar_background = 2130837580;
 			
 			// aapt resource value: 0x7f02004d
-			public const int Icon = 2130837581;
+			public const int icon = 2130837581;
 			
 			// aapt resource value: 0x7f02004e
 			public const int logo = 2130837582;
 			
-			// aapt resource value: 0x7f020050
-			public const int notification_template_icon_bg = 2130837584;
+			// aapt resource value: 0x7f020051
+			public const int notification_template_icon_bg = 2130837585;
 			
 			// aapt resource value: 0x7f02004f
-			public const int splash = 2130837583;
+			public const int onboarding_clock = 2130837583;
+			
+			// aapt resource value: 0x7f020050
+			public const int splash = 2130837584;
 			
 			static Drawable()
 			{
@@ -2604,6 +2607,27 @@ namespace DopplerMobile.Android
 			// aapt resource value: 0x7f07001a
 			public const int LoginPassword = 2131165210;
 			
+			// aapt resource value: 0x7f07001f
+			public const int OnBoardingButtonBack = 2131165215;
+			
+			// aapt resource value: 0x7f070020
+			public const int OnBoardingButtonFinish = 2131165216;
+			
+			// aapt resource value: 0x7f07001e
+			public const int OnBoardingButtonNext = 2131165214;
+			
+			// aapt resource value: 0x7f07001d
+			public const int OnBoardingButtonSkip = 2131165213;
+			
+			// aapt resource value: 0x7f070021
+			public const int OnBoardingPageOneText = 2131165217;
+			
+			// aapt resource value: 0x7f070023
+			public const int OnBoardingPageThreeText = 2131165219;
+			
+			// aapt resource value: 0x7f070022
+			public const int OnBoardingPageTwoText = 2131165218;
+			
 			// aapt resource value: 0x7f070000
 			public const int abc_action_bar_home_description = 2131165184;
 			
@@ -3150,6 +3174,9 @@ namespace DopplerMobile.Android
 			
 			// aapt resource value: 0x7f090160
 			public const int MatchWidthWrapHeight = 2131296608;
+			
+			// aapt resource value: 0x7f090161
+			public const int OnBoardingButton = 2131296609;
 			
 			// aapt resource value: 0x7f090017
 			public const int Platform_AppCompat = 2131296279;
