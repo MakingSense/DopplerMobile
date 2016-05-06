@@ -2,17 +2,52 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="#800000">
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="40dp"
-        local:MvxBind="Text Title" />
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="40dp"
-        local:MvxBind="Text Title" />
+    style="@style/MatchWidthMatchHeight"
+    android:scrollbars="vertical"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageView
+            style="@style/WrapWidthWrapHeight"
+            android:src="@drawable/onboarding_clock"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/element_margin_large"
+            android:layout_marginBottom="@dimen/element_margin_large"
+            android:scaleType="fitCenter" />
+        <TextView
+            style="@style/MatchWidthWrapHeight"
+            android:layout_marginTop="@dimen/element_margin_large"
+            android:layout_marginBottom="@dimen/element_margin_large"
+            android:layout_marginLeft="@dimen/element_margin_extra_huge"
+            android:layout_marginRight="@dimen/element_margin_extra_huge"
+            android:text="@string/OnBoardingPageTwoText"
+            android:textSize="@dimen/text_medium"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary" />
+    </LinearLayout>
+    <LinearLayout
+        style="@style/MatchWidthWrapHeight"
+        android:layout_marginTop="@dimen/element_margin_extra_huge"
+        android:layout_marginLeft="@dimen/element_margin_medium"
+        android:layout_marginRight="@dimen/element_margin_medium"
+        android:layout_marginBottom="@dimen/element_margin_medium"
+        android:padding="6dp"
+        android:layout_gravity="center_horizontal">
+        <Button
+            style="@style/OnBoardingButton"
+            local:MvxBind="Click SkipCommand"
+            android:text="@string/OnBoardingButtonSkip" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary" />
+        <Button
+            style="@style/OnBoardingButton"
+            local:MvxBind="Click NextCommand"
+            android:text="@string/OnBoardingButtonNext" />
+    </LinearLayout>
 </LinearLayout>

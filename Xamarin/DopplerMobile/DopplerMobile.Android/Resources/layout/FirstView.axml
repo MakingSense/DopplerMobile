@@ -41,6 +41,10 @@
             style="@style/OnBoardingButton"
             local:MvxBind="Click SkipCommand"
             android:text="@string/OnBoardingButtonSkip" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary" />
         <Button
             style="@style/OnBoardingButton"
             local:MvxBind="Click NextCommand"
