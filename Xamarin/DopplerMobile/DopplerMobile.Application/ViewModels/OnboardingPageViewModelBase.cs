@@ -1,3 +1,4 @@
+using System;
 using MvvmCross.Core.ViewModels;
 
 namespace DopplerMobile.Application.ViewModels
@@ -16,7 +17,12 @@ namespace DopplerMobile.Application.ViewModels
             PageTitle = pageTitle;
             PageId = pageId;
             SkipCommand = new MvxCommand(SkipCommandExecute);
+            NextPageCommand = new MvxCommand(NextPageCommandExecute);
+            PreviousPageCommand = new MvxCommand(PreviousPageCommandExecute);
         }
+
+        protected abstract void GoToNextPage();
+        protected abstract void GoToPreviousPage();
 
         #region Public Properties
 
@@ -31,6 +37,8 @@ namespace DopplerMobile.Application.ViewModels
         public OnboardingPage PageId { get; }
         
         public IMvxCommand SkipCommand { get; }
+        public MvxCommand NextPageCommand { get; }
+        public MvxCommand PreviousPageCommand { get; }
 
         #endregion
 
@@ -39,6 +47,16 @@ namespace DopplerMobile.Application.ViewModels
         private void SkipCommandExecute()
         {
             ShowViewModel<MainViewModel>();
+        }
+
+        private void PreviousPageCommandExecute()
+        {
+            GoToNextPage();
+        }
+
+        private void NextPageCommandExecute()
+        {
+            GoToPreviousPage();
         }
 
         #endregion

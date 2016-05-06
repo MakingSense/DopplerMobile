@@ -47,7 +47,7 @@
             android:background="@color/colorPrimary" />
         <Button
             style="@style/OnBoardingButton"
-            local:MvxBind="Click FinishCommand"
-            android:text="@string/OnBoardingButtonFinish" />
+            local:MvxBind="Click NextPageCommand"
+            android:text="@string/OnBoardingButtonNext" />
     </LinearLayout>
 </LinearLayout>

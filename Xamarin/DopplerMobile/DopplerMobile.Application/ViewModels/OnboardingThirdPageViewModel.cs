@@ -1,4 +1,3 @@
-
 namespace DopplerMobile.Application.ViewModels
 {
     public class OnboardingThirdPageViewModel : OnboardingPageViewModelBase
@@ -6,6 +5,16 @@ namespace DopplerMobile.Application.ViewModels
         public OnboardingThirdPageViewModel()
             : base("OnboardingThirdPageViewModel", OnboardingPage.Third)
         {
+        }
+
+        protected override void GoToNextPage()
+        {
+            ShowViewModel<MainViewModel>();
+        }
+
+        protected override void GoToPreviousPage()
+        {
+            ShowViewModel<OnboardingSecondPageViewModel>();
         }
     }
 }

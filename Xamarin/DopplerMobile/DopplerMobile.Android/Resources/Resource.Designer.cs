@@ -2610,23 +2610,20 @@ namespace DopplerMobile.Android
 			// aapt resource value: 0x7f07001f
 			public const int OnBoardingButtonBack = 2131165215;
 			
-			// aapt resource value: 0x7f070020
-			public const int OnBoardingButtonFinish = 2131165216;
-			
 			// aapt resource value: 0x7f07001e
 			public const int OnBoardingButtonNext = 2131165214;
 			
 			// aapt resource value: 0x7f07001d
 			public const int OnBoardingButtonSkip = 2131165213;
 			
-			// aapt resource value: 0x7f070021
-			public const int OnBoardingPageOneText = 2131165217;
-			
-			// aapt resource value: 0x7f070023
-			public const int OnBoardingPageThreeText = 2131165219;
+			// aapt resource value: 0x7f070020
+			public const int OnBoardingPageOneText = 2131165216;
 			
 			// aapt resource value: 0x7f070022
-			public const int OnBoardingPageTwoText = 2131165218;
+			public const int OnBoardingPageThreeText = 2131165218;
+			
+			// aapt resource value: 0x7f070021
+			public const int OnBoardingPageTwoText = 2131165217;
 			
 			// aapt resource value: 0x7f070000
 			public const int abc_action_bar_home_description = 2131165184;
