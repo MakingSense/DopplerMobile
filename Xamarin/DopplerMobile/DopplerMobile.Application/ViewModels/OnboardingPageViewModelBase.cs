@@ -51,12 +51,12 @@ namespace DopplerMobile.Application.ViewModels
 
         private void PreviousPageCommandExecute()
         {
-            GoToNextPage();
+            GoToPreviousPage();
         }
 
         private void NextPageCommandExecute()
         {
-            GoToPreviousPage();
+            GoToNextPage();
         }
 
         #endregion
