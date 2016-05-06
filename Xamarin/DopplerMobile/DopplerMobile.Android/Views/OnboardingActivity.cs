@@ -10,7 +10,7 @@ using MvvmCross.Droid.Support.V4;
 
 namespace DopplerMobile.Android.Views
 {
-    [Activity(Label = "View for onboarding_container_view")]
+    [Activity(Label = "View for onboarding_container_view", NoHistory = true)]
     public class OnboardingActivity : MvxFragmentActivity<OnboardingViewModel>
     {
         protected override void OnCreate(Bundle bundle)

@@ -15,7 +15,10 @@ namespace DopplerMobile.Application.ViewModels
         {
             PageTitle = pageTitle;
             PageId = pageId;
+            SkipCommand = new MvxCommand(SkipCommandExecute);
         }
+
+        #region Public Properties
 
         /// <summary>
         /// Page's title
@@ -26,5 +29,18 @@ namespace DopplerMobile.Application.ViewModels
         /// Page's Id
         /// </summary>
         public OnboardingPage PageId { get; }
+        
+        public IMvxCommand SkipCommand { get; }
+
+        #endregion
+
+        #region Private Methods
+
+        private void SkipCommandExecute()
+        {
+            ShowViewModel<MainViewModel>();
+        }
+
+        #endregion
     }
 }
