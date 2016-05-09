@@ -2,8 +2,10 @@
 {
     public class OnboardingFirstPageViewModel : OnboardingPageViewModelBase
     {
-        public OnboardingFirstPageViewModel()
-            : base("OnboardingFirstPageViewModel", OnboardingPage.First)
+        private OnboardingViewModel onboardingViewModel;
+
+        public OnboardingFirstPageViewModel(OnboardingViewModel onboardingViewModel)
+            : base("OnboardingFirstPageViewModel", OnboardingPage.First, onboardingViewModel)
         {
         }
 

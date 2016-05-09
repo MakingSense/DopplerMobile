@@ -5,8 +5,8 @@ namespace DopplerMobile.Application.ViewModels
 {
     public class OnboardingSecondPageViewModel : OnboardingPageViewModelBase
     {
-        public OnboardingSecondPageViewModel()
-           : base("OnboardingSecondPageViewModel", OnboardingPage.Second)
+        public OnboardingSecondPageViewModel(OnboardingViewModel onboardingViewModel)
+           : base("OnboardingSecondPageViewModel", OnboardingPage.Second, onboardingViewModel)
         {
         }
 

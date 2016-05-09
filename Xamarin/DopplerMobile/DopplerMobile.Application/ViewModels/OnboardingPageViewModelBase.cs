@@ -12,8 +12,9 @@ namespace DopplerMobile.Application.ViewModels
 
     public abstract class OnboardingPageViewModelBase : MvxViewModel
     {
-        protected OnboardingPageViewModelBase(string pageTitle, OnboardingPage pageId)
+        protected OnboardingPageViewModelBase(string pageTitle, OnboardingPage pageId, OnboardingViewModel pager)
         {
+            Pager = pager;
             PageTitle = pageTitle;
             PageId = pageId;
             SkipCommand = new MvxCommand(SkipCommandExecute);
@@ -25,6 +26,11 @@ namespace DopplerMobile.Application.ViewModels
         protected abstract void GoToPreviousPage();
 
         #region Public Properties
+
+        /// <summary>
+        /// Pager reference.
+        /// </summary>
+        public OnboardingViewModel Pager { get; }
 
         /// <summary>
         /// Page's title
@@ -56,7 +62,8 @@ namespace DopplerMobile.Application.ViewModels
 
         private void NextPageCommandExecute()
         {
-            GoToNextPage();
+            Pager.CurrentPage = OnboardingPage.Third;
+            //OnboardingViewModel.Instance.CurrentPage = OnboardingPage.Third;
         }
 
         #endregion
