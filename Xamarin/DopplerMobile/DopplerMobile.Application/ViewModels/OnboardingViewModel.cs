@@ -27,7 +27,7 @@ namespace DopplerMobile.Application.ViewModels
         public OnboardingPage CurrentPage
         {
             get { return _currentPage; }
-            set { _currentPage = value; RaisePropertyChanged(() => CurrentPage); }
+            set { _currentPage = value; RaisePropertyChanged(); }
         }
         private OnboardingPage _currentPage;
     }
