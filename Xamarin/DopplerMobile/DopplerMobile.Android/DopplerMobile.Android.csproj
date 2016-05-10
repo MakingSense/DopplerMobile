@@ -157,14 +157,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="SplashScreen.cs" />
-    <Compile Include="Views\Fragments\OnboardingFirstPageFragment.cs" />
+    <Compile Include="Views\Fragments\OnboardingtPageFragment.cs" />
+    <Compile Include="Views\MvvmFriendlyPageAdapter.cs" />
     <Compile Include="Views\OnboardingActivity.cs" />
     <Compile Include="Views\MainActivity.cs" />
     <Compile Include="Views\LoginActivity.cs" />
-    <Compile Include="Views\Fragments\OnboardingSecondPageFragment.cs" />
-    <Compile Include="Converters\OnboardingPagesToFragmentConverter.cs" />
     <Compile Include="Converters\SimpleConverter.cs" />
-    <Compile Include="Views\Fragments\OnboardingThirdPageFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -173,10 +171,8 @@
     <AndroidResource Include="Resources\layout\login_view.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\onboarding_first_page_view.axml" />
+    <AndroidResource Include="Resources\layout\onboarding_page_view.axml" />
     <AndroidResource Include="Resources\layout\onboarding_container_view.axml" />
-    <AndroidResource Include="Resources\layout\onboarding_second_page_view.axml" />
-    <AndroidResource Include="Resources\layout\onboarding_third_page_view.axml" />
     <AndroidResource Include="Resources\layout\splash_screen_view.axml" />
   </ItemGroup>
   <ItemGroup>

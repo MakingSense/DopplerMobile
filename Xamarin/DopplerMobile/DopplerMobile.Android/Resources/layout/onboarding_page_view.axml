@@ -24,7 +24,7 @@
             android:layout_marginBottom="@dimen/element_margin_large"
             android:layout_marginLeft="@dimen/element_margin_extra_huge"
             android:layout_marginRight="@dimen/element_margin_extra_huge"
-            android:text="@string/OnBoardingPageOneText"
+            local:MvxBind="Text Title"
             android:textSize="@dimen/text_medium"
             android:gravity="center"
             android:textColor="@color/colorPrimary" />
@@ -47,7 +47,7 @@
             android:background="@color/colorPrimary" />
         <Button
             style="@style/OnBoardingButton"
-            local:MvxBind="Click NextPageCommand"
+            local:MvxBind="Click ParentViewModel.NextCommand"
             android:text="@string/OnBoardingButtonNext" />
     </LinearLayout>
 </LinearLayout>

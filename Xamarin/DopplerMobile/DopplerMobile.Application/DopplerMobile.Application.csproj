@@ -37,13 +37,10 @@
     <Compile Include="App.cs" />
     <Compile Include="DopplerAppStart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\OnboardingFirstPageViewModel.cs" />
-    <Compile Include="ViewModels\OnboardingPageViewModelBase.cs" />
+    <Compile Include="ViewModels\OnboardingPageViewModel.cs" />
     <Compile Include="ViewModels\OnboardingViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
-    <Compile Include="ViewModels\OnboardingSecondPageViewModel.cs" />
-    <Compile Include="ViewModels\OnboardingThirdPageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ModernHttpClient, Version=2.4.2.0, Culture=neutral, processorArchitecture=MSIL">
