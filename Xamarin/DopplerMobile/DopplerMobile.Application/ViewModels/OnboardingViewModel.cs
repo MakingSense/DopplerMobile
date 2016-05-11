@@ -11,6 +11,7 @@ namespace DopplerMobile.Application.ViewModels
         {
             Pages = new List<OnboardingPageViewModel>
             {
+                //TODO: Use shared string resources.
                 new OnboardingPageViewModel(this, "saraza"),
                 new OnboardingPageViewModel(this, "saraza2"),
                 new OnboardingPageViewModel(this, "saraza3"),
@@ -37,6 +38,7 @@ namespace DopplerMobile.Application.ViewModels
 
         #region Private Methods
 
+        //TODO: Fix swipe bug. The CurrentPage does not refresh with the swipe action.
         private void NextCommandExecute()
         {
             if (CurrentPage < Pages.Count())
