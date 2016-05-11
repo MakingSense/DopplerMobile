@@ -39,7 +39,7 @@
         android:layout_gravity="center_horizontal">
         <Button
             style="@style/OnBoardingButton"
-            local:MvxBind="Click SkipCommand"
+            local:MvxBind="Click ParentViewModel.SkipCommand"
             android:text="@string/OnBoardingButtonSkip" />
         <View
             android:layout_width="1dp"

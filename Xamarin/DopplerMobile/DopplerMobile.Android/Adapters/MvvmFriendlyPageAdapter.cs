@@ -1,26 +1,18 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Android.Content;
-using Android.Runtime;
 using Android.Support.V4.App;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Core.Views;
 using MvvmCross.Droid.Support.V4;
 
-namespace DopplerMobile.Android.Views
+namespace DopplerMobile.Android.Adapters
 {
     /// <summary>
-    /// MvxFragmentPagerAdapter class sucks, this subclass handles fragment creation from a list of viewmodels.
+    /// MvvmFriendlyPageAdapter handles fragment creation from a list of viewmodels.
     /// </summary>
     public class MvvmFriendlyPageAdapter : MvxFragmentPagerAdapter
     {
-        public MvvmFriendlyPageAdapter(IntPtr javaReference, JniHandleOwnership transfer)
-            : base(javaReference, transfer)
-        {
-            throw new InvalidOperationException("Fuck it, I didn't override this constructor");
-        }
-
         public MvvmFriendlyPageAdapter(Context context, FragmentManager fragmentManager, IEnumerable<FragmentInfo> fragments, IEnumerable<MvxViewModel> viewModels)
             : base(context, fragmentManager, fragments)
         {

@@ -158,10 +158,10 @@
     <Compile Include="Setup.cs" />
     <Compile Include="SplashScreen.cs" />
     <Compile Include="Views\Fragments\OnboardingtPageFragment.cs" />
-    <Compile Include="Views\MvvmFriendlyPageAdapter.cs" />
-    <Compile Include="Views\OnboardingActivity.cs" />
-    <Compile Include="Views\MainActivity.cs" />
-    <Compile Include="Views\LoginActivity.cs" />
+    <Compile Include="Adapters\MvvmFriendlyPageAdapter.cs" />
+    <Compile Include="Views\Activities\OnboardingActivity.cs" />
+    <Compile Include="Views\Activities\MainActivity.cs" />
+    <Compile Include="Views\Activities\LoginActivity.cs" />
     <Compile Include="Converters\SimpleConverter.cs" />
   </ItemGroup>
   <ItemGroup>

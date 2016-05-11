@@ -15,7 +15,8 @@ namespace DopplerMobile.Application.ViewModels
                 new OnboardingPageViewModel(this, "saraza2"),
                 new OnboardingPageViewModel(this, "saraza3"),
             };
-            NextCommand = new MvxCommand(NextCommandExecute, NextCommandCanExecute);
+            NextCommand = new MvxCommand(NextCommandExecute);
+            SkipCommand = new MvxCommand(SkipCommandExecute);
         }
 
         #region Public Properties
@@ -27,22 +28,26 @@ namespace DopplerMobile.Application.ViewModels
             get { return _currentPage; }
             set { _currentPage = value; RaisePropertyChanged(); }
         }
-        private int _currentPage;
+        private int _currentPage = 1;
 
         public ICommand NextCommand { get; }
+        public ICommand SkipCommand { get; }
 
         #endregion
 
         #region Private Methods
 
-        private bool NextCommandCanExecute()
-        {
-            return CurrentPage < Pages.Count();
-        }
-
         private void NextCommandExecute()
         {
-            CurrentPage++;
+            if (CurrentPage < Pages.Count())
+                CurrentPage++;
+            else
+                SkipCommandExecute();
+        }
+
+        private void SkipCommandExecute()
+        {
+            ShowViewModel<MainViewModel>();
         }
 
         #endregion

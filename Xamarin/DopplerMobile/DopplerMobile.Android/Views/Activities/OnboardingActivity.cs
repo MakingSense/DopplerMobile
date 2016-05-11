@@ -6,8 +6,9 @@ using Android.Support.V4.View;
 using DopplerMobile.Android.Views.Fragments;
 using DopplerMobile.Application.ViewModels;
 using MvvmCross.Droid.Support.V4;
+using DopplerMobile.Android.Adapters;
 
-namespace DopplerMobile.Android.Views
+namespace DopplerMobile.Android.Views.Activities
 {
     [Activity(Label = "View for onboarding_container_view", NoHistory = true)]
     public class OnboardingActivity : MvxFragmentActivity<OnboardingViewModel>

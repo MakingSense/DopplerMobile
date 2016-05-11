@@ -3,7 +3,7 @@ using Android.OS;
 using MvvmCross.Droid.Views;
 using DopplerMobile.Application.ViewModels;
 
-namespace DopplerMobile.Android.Views
+namespace DopplerMobile.Android.Views.Activities
 {
     [Activity(Label = "View for MainViewModel")]
     public class MainActivity : MvxActivity<MainViewModel>
