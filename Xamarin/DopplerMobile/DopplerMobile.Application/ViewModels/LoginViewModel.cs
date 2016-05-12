@@ -5,7 +5,7 @@ using DopplerMobile.Application.Helpers;
 
 namespace DopplerMobile.Application.ViewModels
 {
-    public class LoginViewModel : MvxViewModel
+    public class LoginViewModel : DopplerMvxViewModel
     {
         public LoginViewModel(ILoginService service, IPlaylistService playlistService, ISettings settingService)
         {

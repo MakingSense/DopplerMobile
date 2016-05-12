@@ -39,15 +39,13 @@
         android:layout_gravity="center_horizontal">
         <Button
             style="@style/OnBoardingButton"
-            local:MvxBind="Click ParentViewModel.SkipCommand"
-            android:text="@string/OnBoardingButtonSkip" />
+            local:MvxBind="Click ParentViewModel.SkipCommand; Text [OnboardingButtonSkipText]" />
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
             android:background="@color/colorPrimary" />
         <Button
             style="@style/OnBoardingButton"
-            local:MvxBind="Click ParentViewModel.NextCommand"
-            android:text="@string/OnBoardingButtonNext" />
+            local:MvxBind="Click ParentViewModel.NextCommand; Text [OnboardingButtonNextText]" />
     </LinearLayout>
 </LinearLayout>

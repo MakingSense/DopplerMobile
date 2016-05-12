@@ -160,6 +160,10 @@
       <Project>{4fe767b0-70d0-47fd-bd46-b94f04198de5}</Project>
       <Name>DopplerMobile.Application</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DopplerMobile.Resources\DopplerMobile.Resources.csproj">
+      <Project>{2a9cded1-c4b8-4e4c-a5d5-393af7bcca4f}</Project>
+      <Name>DopplerMobile.Resources</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

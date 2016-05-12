@@ -70,17 +70,16 @@
             android:maxWidth="400dp"
             android:minWidth="400dp"
             android:layout_gravity="center_horizontal"
-            local:MvxBind="Click LoginCommand"
+            local:MvxBind="Click LoginCommand; Text [LoginButtonText]"
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="@dimen/text_medium"
-            android:background="?android:attr/selectableItemBackground"
-            android:text="@string/LoginButton" />
+            android:background="?android:attr/selectableItemBackground" />
     </FrameLayout>
     <TextView
         style="@style/MatchWidthWrapHeight"
         android:layout_marginTop="@dimen/element_margin_extra_huge"
-        android:text="@string/LoginForgotPassword"
+        local:MvxBind="Text [LoginForgotPasswordText]"
         android:textSize="@dimen/text_tinier"
         android:gravity="center"
         android:textColor="@color/colorPrimary" />
