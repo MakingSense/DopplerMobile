@@ -129,6 +129,12 @@
   <data name="LoginForgotPasswordText" xml:space="preserve">
     <value>¿OLVIDASTE TU CONTRASEÑA?</value>
   </data>
+  <data name="LoginNameText" xml:space="preserve">
+    <value>USUARIO</value>
+  </data>
+  <data name="LoginPasswordText" xml:space="preserve">
+    <value>CONTRASEÑA</value>
+  </data>
   <data name="MvvmCrossText" xml:space="preserve">
     <value>MvvmCross</value>
   </data>

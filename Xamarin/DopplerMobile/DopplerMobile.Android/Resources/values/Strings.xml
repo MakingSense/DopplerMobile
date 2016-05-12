@@ -1,9 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="ApplicationName">DopplerMobile.Android</string>
-
-  <!--TODO: Check the best way to replace the hint text-->
-  <string name="LoginName">USERNAME</string>
-  <string name="LoginPassword">PASSWORD</string>
-
 </resources>

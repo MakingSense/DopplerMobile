@@ -98,6 +98,24 @@ namespace DopplerMobile.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to USUARIO.
+        /// </summary>
+        public static string LoginNameText {
+            get {
+                return ResourceManager.GetString("LoginNameText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CONTRASEÑA.
+        /// </summary>
+        public static string LoginPasswordText {
+            get {
+                return ResourceManager.GetString("LoginPasswordText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to MvvmCross.
         /// </summary>
         public static string MvvmCrossText {

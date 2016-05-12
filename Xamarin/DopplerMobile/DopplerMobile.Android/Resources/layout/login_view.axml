@@ -21,12 +21,11 @@
         android:layout_gravity="center_horizontal">
         <EditText
             style="@style/MatchWidthWrapHeight"
-            local:MvxBind="Text Username"
+            local:MvxBind="Text Username; Hint [LoginNameText]"
             android:layout_gravity="center_vertical"
             android:inputType="textNoSuggestions"
             android:textColorHint="@color/colorPrimary"
             android:textColor="@color/colorAccent"
-            android:hint="@string/LoginName"
             android:textColorHighlight="@color/black"
             android:textSize="@dimen/text_tiny"
             android:imeOptions="actionNext" />
@@ -42,10 +41,9 @@
         <EditText
             android:inputType="textPassword"
             style="@style/MatchWidthWrapHeight"
-            local:MvxBind="Text Password"
+            local:MvxBind="Text Password; Hint [LoginPasswordText]"
             android:layout_gravity="center_vertical"
             android:textColor="@color/colorAccent"
-            android:hint="@string/LoginPassword"
             android:textColorHint="@color/colorPrimary"
             android:textSize="@dimen/text_tiny"
             android:imeOptions="actionGo" />

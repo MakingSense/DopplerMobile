@@ -129,6 +129,12 @@
   <data name="LoginForgotPasswordText" xml:space="preserve">
     <value>FORGOT YOUR PASSWORD?</value>
   </data>
+  <data name="LoginNameText" xml:space="preserve">
+    <value>USERNAME</value>
+  </data>
+  <data name="LoginPasswordText" xml:space="preserve">
+    <value>PASSWORD</value>
+  </data>
   <data name="OnboardingButtonNextText" xml:space="preserve">
     <value>NEXT</value>
   </data>
