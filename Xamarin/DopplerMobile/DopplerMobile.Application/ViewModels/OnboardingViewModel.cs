@@ -29,7 +29,7 @@ namespace DopplerMobile.Application.ViewModels
             get { return _currentPage; }
             set { _currentPage = value; RaisePropertyChanged(); }
         }
-        private int _currentPage = 1;
+        private int _currentPage;
 
         public ICommand NextCommand { get; }
         public ICommand SkipCommand { get; }
@@ -41,7 +41,7 @@ namespace DopplerMobile.Application.ViewModels
         //TODO: Fix swipe bug. The CurrentPage does not refresh with the swipe action.
         private void NextCommandExecute()
         {
-            if (CurrentPage < Pages.Count())
+            if (CurrentPage < Pages.Count() - 1)
                 CurrentPage++;
             else
                 SkipCommandExecute();
