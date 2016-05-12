@@ -2586,21 +2586,6 @@ namespace DopplerMobile.Android
 			// aapt resource value: 0x7f070017
 			public const int Hello = 2131165207;
 			
-			// aapt resource value: 0x7f07001c
-			public const int LoginButton = 2131165212;
-			
-			// aapt resource value: 0x7f07001b
-			public const int LoginForgotPassword = 2131165211;
-			
-			// aapt resource value: 0x7f070019
-			public const int LoginName = 2131165209;
-			
-			// aapt resource value: 0x7f07001a
-			public const int LoginPassword = 2131165210;
-			
-			// aapt resource value: 0x7f070021
-			public const int OnBoardingPageTwoText = 2131165217;
-			
 			// aapt resource value: 0x7f070000
 			public const int abc_action_bar_home_description = 2131165184;
 			

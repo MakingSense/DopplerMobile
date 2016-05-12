@@ -37,6 +37,7 @@
     <Compile Include="App.cs" />
     <Compile Include="DopplerAppStart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\DopplerMvxViewModel.cs" />
     <Compile Include="ViewModels\OnboardingPageViewModel.cs" />
     <Compile Include="ViewModels\OnboardingViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
@@ -92,6 +93,10 @@
     <ProjectReference Include="..\DopplerMobile.Infrastructure\DopplerMobile.Infrastructure.csproj">
       <Project>{56224e3c-56c3-406d-8bb8-a5362be49a40}</Project>
       <Name>DopplerMobile.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DopplerMobile.Resources\DopplerMobile.Resources.csproj">
+      <Project>{2a9cded1-c4b8-4e4c-a5d5-393af7bcca4f}</Project>
+      <Name>DopplerMobile.Resources</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

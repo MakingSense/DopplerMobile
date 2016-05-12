@@ -207,6 +207,10 @@
       <Project>{56224e3c-56c3-406d-8bb8-a5362be49a40}</Project>
       <Name>DopplerMobile.Infrastructure</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DopplerMobile.Resources\DopplerMobile.Resources.csproj">
+      <Project>{2a9cded1-c4b8-4e4c-a5d5-393af7bcca4f}</Project>
+      <Name>DopplerMobile.Resources</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\splash.png" />

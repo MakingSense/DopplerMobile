@@ -21,12 +21,11 @@
         android:layout_gravity="center_horizontal">
         <EditText
             style="@style/MatchWidthWrapHeight"
-            local:MvxBind="Text Username"
+            local:MvxBind="Text Username; Hint [LoginNameText]"
             android:layout_gravity="center_vertical"
             android:inputType="textNoSuggestions"
             android:textColorHint="@color/colorPrimary"
             android:textColor="@color/colorAccent"
-            android:hint="@string/LoginName"
             android:textColorHighlight="@color/black"
             android:textSize="@dimen/text_tiny"
             android:imeOptions="actionNext" />
@@ -42,10 +41,9 @@
         <EditText
             android:inputType="textPassword"
             style="@style/MatchWidthWrapHeight"
-            local:MvxBind="Text Password"
+            local:MvxBind="Text Password; Hint [LoginPasswordText]"
             android:layout_gravity="center_vertical"
             android:textColor="@color/colorAccent"
-            android:hint="@string/LoginPassword"
             android:textColorHint="@color/colorPrimary"
             android:textSize="@dimen/text_tiny"
             android:imeOptions="actionGo" />
@@ -70,17 +68,16 @@
             android:maxWidth="400dp"
             android:minWidth="400dp"
             android:layout_gravity="center_horizontal"
-            local:MvxBind="Click LoginCommand"
+            local:MvxBind="Click LoginCommand; Text [LoginButtonText]"
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="@dimen/text_medium"
-            android:background="?android:attr/selectableItemBackground"
-            android:text="@string/LoginButton" />
+            android:background="?android:attr/selectableItemBackground" />
     </FrameLayout>
     <TextView
         style="@style/MatchWidthWrapHeight"
         android:layout_marginTop="@dimen/element_margin_extra_huge"
-        android:text="@string/LoginForgotPassword"
+        local:MvxBind="Text [LoginForgotPasswordText]"
         android:textSize="@dimen/text_tinier"
         android:gravity="center"
         android:textColor="@color/colorPrimary" />
