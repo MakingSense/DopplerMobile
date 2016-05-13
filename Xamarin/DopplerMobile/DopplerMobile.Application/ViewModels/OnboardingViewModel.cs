@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using System.Windows.Input;
 using MvvmCross.Binding.ExtensionMethods;
 using MvvmCross.Core.ViewModels;
-using DopplerMobile.Resources;
 
 namespace DopplerMobile.Application.ViewModels
 {
@@ -12,9 +11,10 @@ namespace DopplerMobile.Application.ViewModels
         {
             Pages = new List<OnboardingPageViewModel>
             {
-                new OnboardingPageViewModel(this, Strings.OnboardingTitlePageOneText),
-                new OnboardingPageViewModel(this, Strings.OnboardingTitlePageTwoText),
-                new OnboardingPageViewModel(this, Strings.OnboardingTitlePageThreeText),
+                //TODO: Temporal comments. Choice the best viewPager approach.
+                //new OnboardingPageViewModel(this, Strings.OnboardingTitlePageOneText),
+                //new OnboardingPageViewModel(this, Strings.OnboardingTitlePageTwoText),
+                //new OnboardingPageViewModel(this, Strings.OnboardingTitlePageThreeText),
             };
             NextCommand = new MvxCommand(NextCommandExecute);
             SkipCommand = new MvxCommand(SkipCommandExecute);

@@ -4,7 +4,7 @@ namespace DopplerMobile.Application.ViewModels
 {
     public class OnboardingPageViewModel : DopplerMvxViewModel
     {
-        public OnboardingPageViewModel(OnboardingViewModel parentViewModel, string title)
+        public OnboardingPageViewModel(OnboardingNewViewModel parentViewModel, string title)
         {
             ParentViewModel = parentViewModel;
             Title = title;
@@ -17,7 +17,7 @@ namespace DopplerMobile.Application.ViewModels
         /// </summary>
         public string Title { get; }
 
-        public OnboardingViewModel ParentViewModel { get; }
+        public OnboardingNewViewModel ParentViewModel { get; }
 
         #endregion
     }
