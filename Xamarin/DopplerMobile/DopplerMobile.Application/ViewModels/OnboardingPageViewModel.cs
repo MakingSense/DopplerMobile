@@ -2,7 +2,7 @@ using MvvmCross.Core.ViewModels;
 
 namespace DopplerMobile.Application.ViewModels
 {
-    public class OnboardingPageViewModel : DopplerMvxViewModel
+    public class OnboardingPageViewModel : DopplerBaseMvxViewModel
     {
         public OnboardingPageViewModel(OnboardingViewModel parentViewModel, string title)
         {

@@ -3,7 +3,7 @@ using MvvmCross.Core.ViewModels;
 
 namespace DopplerMobile.Application.ViewModels
 {
-    public class MainViewModel : DopplerMvxViewModel
+    public class MainViewModel : DopplerBaseMvxViewModel
     {
         private string _hello = Strings.MvvmCrossText;
         public string Hello

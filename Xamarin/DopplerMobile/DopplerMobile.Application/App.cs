@@ -15,7 +15,7 @@ namespace DopplerMobile.Application
         public override void Initialize()
         {
             //Infrastructure
-            // Every time someone needs an IFoo they will get the same one
+            // Every time someone needs an IConnectivity or ISettings they will get the same one
             // but we don't create it until someone asks for it
             Mvx.RegisterSingleton<IConnectivity>(() => CrossConnectivity.Current);
             Mvx.RegisterSingleton<ISettings>(() => CrossSettings.Current);

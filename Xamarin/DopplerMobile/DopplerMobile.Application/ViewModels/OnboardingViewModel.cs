@@ -1,28 +1,35 @@
-using System.Collections.Generic;
-using System.Windows.Input;
-using MvvmCross.Binding.ExtensionMethods;
+﻿using DopplerMobile.Resources;
 using MvvmCross.Core.ViewModels;
-using DopplerMobile.Resources;
+using MvvmCross.Platform.Platform;
+using System.Collections.ObjectModel;
+using System.Windows.Input;
 
 namespace DopplerMobile.Application.ViewModels
 {
-    public class OnboardingViewModel : DopplerMvxViewModel
+    public class OnboardingViewModel : DopplerBaseMvxViewModel
     {
         public OnboardingViewModel()
         {
-            Pages = new List<OnboardingPageViewModel>
+            Items = new ObservableCollection<OnboardingPageViewModel>()
             {
                 new OnboardingPageViewModel(this, Strings.OnboardingTitlePageOneText),
                 new OnboardingPageViewModel(this, Strings.OnboardingTitlePageTwoText),
                 new OnboardingPageViewModel(this, Strings.OnboardingTitlePageThreeText),
             };
+
             NextCommand = new MvxCommand(NextCommandExecute);
             SkipCommand = new MvxCommand(SkipCommandExecute);
+            _switchToPage = 0;
         }
 
         #region Public Properties
 
-        public IEnumerable<OnboardingPageViewModel> Pages { get; }
+        public ObservableCollection<OnboardingPageViewModel> Items
+        {
+            get { return _items; }
+            set { _items = value; RaisePropertyChanged(); }
+        }
+        private ObservableCollection<OnboardingPageViewModel> _items;
 
         public int CurrentPage
         {
@@ -31,18 +38,39 @@ namespace DopplerMobile.Application.ViewModels
         }
         private int _currentPage;
 
+        //Commands
         public ICommand NextCommand { get; }
         public ICommand SkipCommand { get; }
+        public ICommand ItemPageChangedCommand
+        {
+            get { return new MvxCommand<OnboardingPageViewModel>(ShowItemPageChanged); }
+        }
+        public ICommand PageChangedCommand
+        {
+            get { return new MvxCommand<int>(ShowPageChanged); }
+        }
 
         #endregion
 
         #region Private Methods
+        private static int _switchToPage;
 
-        //TODO: Fix swipe bug. The CurrentPage does not refresh with the swipe action.
+        //TODO: Chech if this method is necessary
+        private static void ShowItemPageChanged(OnboardingPageViewModel toPage)
+        {
+            MvxTrace.TaggedTrace("SimpleListViewModel", "Page changed to {0}", toPage.Title);
+        }
+
+        private static void ShowPageChanged(int toPage)
+        {
+            MvxTrace.TaggedTrace("SimpleListViewModel", "Page changed to {0}", toPage);
+            _switchToPage = toPage;
+        }
+
         private void NextCommandExecute()
         {
-            if (CurrentPage < Pages.Count() - 1)
-                CurrentPage++;
+            if (_switchToPage + 1 < Items.Count)
+                CurrentPage = _switchToPage + 1;
             else
                 SkipCommandExecute();
         }
@@ -55,3 +83,4 @@ namespace DopplerMobile.Application.ViewModels
         #endregion
     }
 }
+
