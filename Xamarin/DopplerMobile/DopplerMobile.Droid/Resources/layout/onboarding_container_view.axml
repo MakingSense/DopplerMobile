@@ -4,9 +4,10 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewPager"
+    <BindableViewPager
+        android:id="@+id/viewPagerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        local:MvxBind="CurrentItem CurrentPage" />
+        local:MvxItemTemplate="@layout/onboarding_page_view"
+        local:MvxBind="ItemsSource Items; ItemPageSelected ItemPageChangedCommand; PageSelected PageChangedCommand; CurrentItem CurrentPage" />
 </LinearLayout>

@@ -2350,10 +2350,7 @@ namespace DopplerMobile.Droid
 			public const int useLogo = 2131099670;
 			
 			// aapt resource value: 0x7f060081
-			public const int viewPager = 2131099777;
-			
-			// aapt resource value: 0x7f060082
-			public const int viewPagerView = 2131099778;
+			public const int viewPagerView = 2131099777;
 			
 			// aapt resource value: 0x7f06000a
 			public const int view_offset_helper = 2131099658;
@@ -2556,25 +2553,22 @@ namespace DopplerMobile.Droid
 			public const int onboarding_container_view = 2130903087;
 			
 			// aapt resource value: 0x7f030030
-			public const int onboarding_container_view_new = 2130903088;
+			public const int onboarding_page_view = 2130903088;
 			
 			// aapt resource value: 0x7f030031
-			public const int onboarding_page_view = 2130903089;
+			public const int select_dialog_item_material = 2130903089;
 			
 			// aapt resource value: 0x7f030032
-			public const int select_dialog_item_material = 2130903090;
+			public const int select_dialog_multichoice_material = 2130903090;
 			
 			// aapt resource value: 0x7f030033
-			public const int select_dialog_multichoice_material = 2130903091;
+			public const int select_dialog_singlechoice_material = 2130903091;
 			
 			// aapt resource value: 0x7f030034
-			public const int select_dialog_singlechoice_material = 2130903092;
+			public const int splash_screen_view = 2130903092;
 			
 			// aapt resource value: 0x7f030035
-			public const int splash_screen_view = 2130903093;
-			
-			// aapt resource value: 0x7f030036
-			public const int support_simple_spinner_dropdown_item = 2130903094;
+			public const int support_simple_spinner_dropdown_item = 2130903093;
 			
 			static Layout()
 			{

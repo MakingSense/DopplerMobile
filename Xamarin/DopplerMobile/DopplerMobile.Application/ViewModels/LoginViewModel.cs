@@ -5,7 +5,7 @@ using DopplerMobile.Application.Helpers;
 
 namespace DopplerMobile.Application.ViewModels
 {
-    public class LoginViewModel : DopplerMvxViewModel
+    public class LoginViewModel : DopplerBaseMvxViewModel
     {
         public LoginViewModel(ILoginService service, IPlaylistService playlistService, ISettings settingService)
         {
@@ -78,7 +78,7 @@ namespace DopplerMobile.Application.ViewModels
             {
                 //response contains playlist
                 //TODO: remove this call. Now we only navigate to MainViewModel when we get the PlayList.
-                ShowViewModel<OnboardingNewViewModel>();
+                ShowViewModel<OnboardingViewModel>();
             });
         }
 
