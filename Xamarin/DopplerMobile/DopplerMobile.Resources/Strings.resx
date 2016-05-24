@@ -123,6 +123,12 @@
   <data name="HelloText" xml:space="preserve">
     <value>Hola Doppler Mobile</value>
   </data>
+  <data name="LastestCampaignsText" xml:space="preserve">
+    <value>ÚLTIMAS CAMPAÑAS</value>
+  </data>
+  <data name="LastScheduledCampaignsText" xml:space="preserve">
+    <value>ÚLTIMAS CAMPAÑAS PROGRAMADAS</value>
+  </data>
   <data name="LoginButtonText" xml:space="preserve">
     <value>INICIAR SESIÓN</value>
   </data>
@@ -152,5 +158,11 @@
   </data>
   <data name="OnboardingTitlePageTwoText" xml:space="preserve">
     <value>Título Página Dos</value>
+  </data>
+  <data name="ReportsLastSentCampaignsText" xml:space="preserve">
+    <value>INFORMES DE LAS ÚLTIMAS CAMPAÑAS</value>
+  </data>
+  <data name="SeeMoreText" xml:space="preserve">
+    <value>VER MÁS</value>
   </data>
 </root>

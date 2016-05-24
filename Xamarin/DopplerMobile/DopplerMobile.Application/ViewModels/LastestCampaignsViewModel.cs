@@ -1,12 +1,12 @@
-using DopplerMobile.Domain.Models;
+﻿using DopplerMobile.Domain.Models;
 using MvvmCross.Core.ViewModels;
 using System.Collections.Generic;
 
 namespace DopplerMobile.Application.ViewModels
 {
-    public class MainViewModel : DopplerBaseMvxViewModel
+    public class LastestCampaignsViewModel : DopplerBaseMvxViewModel
     {
-        public MainViewModel()
+        public LastestCampaignsViewModel()
         {
             ListItems = new List<Campaign>
                 {
@@ -14,9 +14,14 @@ namespace DopplerMobile.Application.ViewModels
                     new Campaign("Febraury Newsletter", "01/05/2015 to 1 suscriber", "60% OPEN"),
                     new Campaign("March Newsletter", "01/05/2015 to 2 suscriber", "35% OPEN"),
                     new Campaign("June Newsletter", "07/05/2015 to 1 suscriber", "20% OPEN"),
+                    new Campaign("July Newsletter", "01/05/2015 to 5 suscriber", "10% OPEN"),
+                    new Campaign("Febraury Newsletter", "01/05/2015 to 1 suscriber", "60% OPEN"),
+                    new Campaign("March Newsletter", "01/05/2015 to 2 suscriber", "35% OPEN"),
+                    new Campaign("June Newsletter", "07/05/2015 to 1 suscriber", "20% OPEN"),
+                    new Campaign("July Newsletter", "01/05/2015 to 5 suscriber", "10% OPEN"),
+                    new Campaign("Febraury Newsletter", "01/05/2015 to 1 suscriber", "60% OPEN"),
+                    new Campaign("March Newsletter", "01/05/2015 to 2 suscriber", "35% OPEN"),
                 };
-            SeeMoreLastSentCampeingsCommand = new MvxCommand(ShowLastSentCampeingsCommandExecute);
-            SeeMoreScheduledCampeingsCommand = new MvxCommand(ShowScheduledCampeingsCommandExecute);
         }
 
         #region Public Properties
@@ -33,9 +38,6 @@ namespace DopplerMobile.Application.ViewModels
         }
         private IMvxCommand _itemSelectedCommand;
 
-        public IMvxCommand SeeMoreScheduledCampeingsCommand { get; }
-        public IMvxCommand SeeMoreLastSentCampeingsCommand { get; }
-
         #endregion
 
         #region Private Methods
@@ -43,16 +45,6 @@ namespace DopplerMobile.Application.ViewModels
         private void DoSelectItem(Campaign item)
         {
             ShowViewModel<CampaignDetailViewModel>(item);
-        }
-
-        private void ShowLastSentCampeingsCommandExecute()
-        {
-            ShowViewModel<LastestCampaignsViewModel>();
-        }
-
-        private void ShowScheduledCampeingsCommandExecute()
-        {
-            ShowViewModel<LastScheduledCampaignsViewModel>();
         }
         #endregion
     }

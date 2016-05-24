@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bg_gray"
+    style="@style/MatchWidthMatchHeight">
+    <TextView
+        style="@style/MatchWidthWrapHeight"
+        android:layout_marginLeft="@dimen/element_margin_huge"
+        android:layout_marginRight="@dimen/element_margin_huge"
+        android:layout_marginBottom="@dimen/element_margin_huge"
+        android:layout_marginTop="@dimen/element_margin_huge"
+        android:textColor="@color/text_gray"
+        android:layout_gravity="center_horizontal"
+        android:textSize="25sp"
+        local:MvxBind="Text [LastestCampaignsText]" />
+    <MvxListView
+        style="@style/MatchWidthMatchHeight"
+        android:layout_marginLeft="@dimen/element_margin_huge"
+        android:layout_marginRight="@dimen/element_margin_huge"
+        android:layout_marginBottom="25dp"
+        android:divider="@color/text_gray"
+        android:dividerHeight="1dp"
+        local:MvxItemTemplate="@layout/lastest_campaigns_item_view"
+        android:isScrollContainer="false"
+        local:MvxBind="ItemsSource ListItems; ItemClick ItemSelectedCommand" />
+</LinearLayout>

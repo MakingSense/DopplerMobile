@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    style="@style/MatchWidthMatchHeight">
+    <TextView
+        style="@style/WrapWidthWrapHeight"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        android:textColor="@color/colorAccent"
+        local:MvxBind="Text CampaignItem.Title" />
+    <TextView
+        style="@style/MatchWidthWrapHeight"
+        android:textSize="@dimen/text_large"
+        android:paddingBottom="6dp"
+        android:textColor="@color/text_gray"
+        local:MvxBind="Text CampaignItem.Detail" />
+    <TextView
+        style="@style/MatchWidthWrapHeight"
+        android:paddingBottom="6dp"
+        android:textSize="@dimen/text_very_huge"
+        android:textColor="@color/colorAccent"
+        local:MvxBind="Text CampaignItem.Percent"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+</LinearLayout>

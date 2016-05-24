@@ -10,6 +10,7 @@ namespace DopplerMobile.Droid.Adapters
 {
     /// <summary>
     /// MvvmFriendlyPageAdapter handles fragment creation from a list of viewmodels.
+    /// TODO: Remove this class, it is no longer used because it was replaced by BindableViewPager.
     /// </summary>
     public class MvvmFriendlyPageAdapter : MvxFragmentPagerAdapter
     {

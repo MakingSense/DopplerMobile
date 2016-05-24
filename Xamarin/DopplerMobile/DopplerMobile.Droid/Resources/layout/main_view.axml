@@ -2,21 +2,104 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="40dp"
-        local:MvxBind="Text Hello" />
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="40dp"
-        local:MvxBind="Text Hello" />
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="40dp"
-        local:MvxBind="Text [HelloText]" />
+    style="@style/MatchWidthMatchHeight"
+    android:weightSum="2">
+    <RelativeLayout
+        android:orientation="vertical"
+        style="@style/MatchWidthMatchHeight"
+        android:layout_weight="1"
+        android:background="@color/bg_gray">
+        <TextView
+            android:id="@+id/title"
+            style="@style/MatchWidthWrapHeight"
+            android:layout_marginLeft="@dimen/element_margin_huge"
+            android:layout_marginRight="@dimen/element_margin_huge"
+            android:layout_marginBottom="@dimen/element_margin_huge"
+            android:layout_marginTop="@dimen/element_margin_huge"
+            android:textColor="@color/text_gray"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentTop="true"
+            android:textSize="25sp"
+            local:MvxBind="Text [ReportsLastSentCampaignsText]" />
+        <MvxListView
+            style="@style/MatchWidthMatchHeight"
+            android:layout_marginLeft="@dimen/element_margin_huge"
+            android:layout_marginRight="@dimen/element_margin_huge"
+            android:layout_marginBottom="50dp"
+            android:divider="@color/text_gray"
+            android:layout_below="@+id/title"
+            android:dividerHeight="1dp"
+            local:MvxItemTemplate="@layout/lastest_campaigns_item_view"
+            android:isScrollContainer="false"
+            local:MvxBind="ItemsSource ListItems; ItemClick ItemSelectedCommand" />
+        <LinearLayout
+            android:orientation="vertical"
+            style="@style/MatchWidthWrapHeight"
+            android:paddingBottom="@dimen/element_margin_tiny"
+            local:MvxBind="Click SeeMoreLastSentCampeingsCommand"
+            android:layout_alignParentBottom="true">
+            <TextView
+                style="@style/MatchWidthWrapHeight"
+                android:layout_marginTop="@dimen/element_margin_tiny"
+                android:textColor="@color/text_gray"
+                android:gravity="center"
+                android:textSize="@dimen/text_tiny"
+                local:MvxBind="Text [SeeMoreText]"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:src="@drawable/ic_expand_more"
+                style="@style/WrapWidthWrapHeight"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:orientation="vertical"
+        style="@style/MatchWidthMatchHeight"
+        android:layout_weight="1"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/title"
+            style="@style/MatchWidthWrapHeight"
+            android:layout_marginLeft="@dimen/element_margin_huge"
+            android:layout_marginRight="@dimen/element_margin_huge"
+            android:layout_marginBottom="@dimen/element_margin_huge"
+            android:layout_marginTop="@dimen/element_margin_huge"
+            android:textColor="@color/text_gray"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentTop="true"
+            android:textSize="25sp"
+            local:MvxBind="Text [LastScheduledCampaignsText]" />
+        <MvxListView
+            style="@style/MatchWidthMatchHeight"
+            android:layout_marginLeft="@dimen/element_margin_huge"
+            android:layout_marginRight="@dimen/element_margin_huge"
+            android:layout_marginBottom="50dp"
+            android:divider="@color/text_gray"
+            android:layout_below="@+id/title"
+            android:dividerHeight="1dp"
+            local:MvxItemTemplate="@layout/last_scheduled_campaigns_item_view"
+            android:isScrollContainer="false"
+            local:MvxBind="ItemsSource ListItems; ItemClick ItemSelectedCommand" />
+        <LinearLayout
+            android:orientation="vertical"
+            style="@style/MatchWidthWrapHeight"
+            local:MvxBind="Click SeeMoreScheduledCampeingsCommand"
+            android:paddingBottom="@dimen/element_margin_tiny"
+            android:layout_alignParentBottom="true">
+            <TextView
+                style="@style/MatchWidthWrapHeight"
+                android:layout_marginTop="@dimen/element_margin_tiny"
+                android:textColor="@color/text_gray"
+                android:gravity="center"
+                android:textSize="@dimen/text_tiny"
+                local:MvxBind="Text [SeeMoreText]"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:src="@drawable/ic_expand_more"
+                style="@style/WrapWidthWrapHeight"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
+    </RelativeLayout>
 </LinearLayout>

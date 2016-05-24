@@ -123,6 +123,12 @@
   <data name="HelloText" xml:space="preserve">
     <value>Hello Doppler Mobile</value>
   </data>
+  <data name="LastestCampaignsText" xml:space="preserve">
+    <value>LASTEST CAMPAIGNS</value>
+  </data>
+  <data name="LastScheduledCampaignsText" xml:space="preserve">
+    <value>LAST SCHEDULED CAMPAIGNS</value>
+  </data>
   <data name="LoginButtonText" xml:space="preserve">
     <value>LOGIN</value>
   </data>
@@ -149,5 +155,11 @@
   </data>
   <data name="OnboardingTitlePageTwoText" xml:space="preserve">
     <value>Title Page Two</value>
+  </data>
+  <data name="ReportsLastSentCampaignsText" xml:space="preserve">
+    <value>REPORTS LAST SENT CAMPAIGNS</value>
+  </data>
+  <data name="SeeMoreText" xml:space="preserve">
+    <value>SEE MORE</value>
   </data>
 </root>

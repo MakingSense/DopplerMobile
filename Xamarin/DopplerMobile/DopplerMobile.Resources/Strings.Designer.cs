@@ -80,6 +80,24 @@ namespace DopplerMobile.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ÚLTIMAS CAMPAÑAS.
+        /// </summary>
+        public static string LastestCampaignsText {
+            get {
+                return ResourceManager.GetString("LastestCampaignsText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ÚLTIMAS CAMPAÑAS PROGRAMADAS.
+        /// </summary>
+        public static string LastScheduledCampaignsText {
+            get {
+                return ResourceManager.GetString("LastScheduledCampaignsText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to INICIAR SESIÓN.
         /// </summary>
         public static string LoginButtonText {
@@ -166,6 +184,24 @@ namespace DopplerMobile.Resources {
         public static string OnboardingTitlePageTwoText {
             get {
                 return ResourceManager.GetString("OnboardingTitlePageTwoText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to INFORMES DE LAS ÚLTIMAS CAMPAÑAS.
+        /// </summary>
+        public static string ReportsLastSentCampaignsText {
+            get {
+                return ResourceManager.GetString("ReportsLastSentCampaignsText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to VER MÁS.
+        /// </summary>
+        public static string SeeMoreText {
+            get {
+                return ResourceManager.GetString("SeeMoreText", resourceCulture);
             }
         }
     }
