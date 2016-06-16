@@ -10,10 +10,21 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.navigationItem.hidesBackButton = true;
-    }
+    //MARK: Properties
 
+    @IBOutlet weak var username: UITextField!
+
+    @IBOutlet weak var password: UITextField!
+    
+    
+    //MARK: Actions
+    
+    @IBAction func Login(sender: AnyObject) {
+        //TODO: pending implementation
+    }
+    
+    @IBAction func ForgotPassword(sender: AnyObject) {
+        //TODO: pending implementation
+    }
 }
 
