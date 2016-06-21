@@ -13,9 +13,9 @@ class LoginViewController: UIViewController
 
     //MARK: Properties
 
-    @IBOutlet weak var usernameTextField: UITextField!
-    
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var txtUsername: UITextField!
+
+    @IBOutlet weak var txtPassword: UITextField!
     
     
     //MARK: Login Button's Actions

@@ -141,10 +141,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="Password" destination="9Ot-CN-jog" id="Hno-nf-3gX"/>
-                        <outlet property="Username" destination="G9Y-8X-f5v" id="DjU-MO-CTa"/>
-                        <outlet property="passwordTextField" destination="9Ot-CN-jog" id="7Z2-5g-G9K"/>
-                        <outlet property="usernameTextField" destination="G9Y-8X-f5v" id="f05-jx-rVt"/>
+                        <outlet property="txtPassword" destination="9Ot-CN-jog" id="UWT-eh-xwB"/>
+                        <outlet property="txtUsername" destination="G9Y-8X-f5v" id="byY-Qb-ABY"/>                        
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HJO-Su-x4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
