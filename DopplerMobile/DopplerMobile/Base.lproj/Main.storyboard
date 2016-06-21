@@ -88,7 +88,7 @@
                                         </constraints>
                                         <state key="normal" title="LOGIN"/>
                                         <connections>
-                                            <action selector="Login:" destination="LXw-vR-mTg" eventType="touchUpInside" id="I6D-R2-ckq"/>
+                                            <action selector="Login:" destination="LXw-vR-mTg" eventType="touchUpInside" id="S4r-Tn-rpK"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgd-t9-dYZ">
@@ -98,7 +98,7 @@
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="ForgotPassword:" destination="LXw-vR-mTg" eventType="touchUpInside" id="CQH-jx-qnD"/>
+                                            <action selector="ForgotPassword:" destination="LXw-vR-mTg" eventType="touchUpInside" id="MM0-YF-mvT"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -143,6 +143,8 @@
                     <connections>
                         <outlet property="Password" destination="9Ot-CN-jog" id="Hno-nf-3gX"/>
                         <outlet property="Username" destination="G9Y-8X-f5v" id="DjU-MO-CTa"/>
+                        <outlet property="passwordTextField" destination="9Ot-CN-jog" id="7Z2-5g-G9K"/>
+                        <outlet property="usernameTextField" destination="G9Y-8X-f5v" id="f05-jx-rVt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HJO-Su-x4g" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -8,22 +8,29 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController
+{
 
     //MARK: Properties
 
-    @IBOutlet weak var username: UITextField!
-
-    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var usernameTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField!
     
     
-    //MARK: Actions
+    //MARK: Login Button's Actions
     
-    @IBAction func Login(sender: AnyObject) {
+  
+    @IBAction func Login(sender: UIButton)
+    {
         //TODO: pending implementation
     }
     
-    @IBAction func ForgotPassword(sender: AnyObject) {
+    
+    //MARK: Forgot Password Button's Actions
+    
+    @IBAction func ForgotPassword(sender: UIButton)
+    {
         //TODO: pending implementation
     }
 }
