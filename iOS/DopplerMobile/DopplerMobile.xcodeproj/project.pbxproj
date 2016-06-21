@@ -77,11 +77,10 @@
 		2425145E1C7E45CD00785AE6 /* DopplerMobile */ = {
 			isa = PBXGroup;
 			children = (
-				2425145F1C7E45CD00785AE6 /* AppDelegate.swift */,
-				242514611C7E45CD00785AE6 /* ViewController.swift */,
-				242514631C7E45CD00785AE6 /* Main.storyboard */,
-				242514661C7E45CD00785AE6 /* Assets.xcassets */,
-				242514681C7E45CD00785AE6 /* LaunchScreen.storyboard */,
+				2479A3C81D19C25100C134FB /* Interface */,
+				2479A3CB1D19C40200C134FB /* Application */,
+				2479A3CD1D19C50F00C134FB /* Domain */,
+				2479A3D01D19C54A00C134FB /* Infrastructure */,
 				2425146B1C7E45CD00785AE6 /* Info.plist */,
 			);
 			path = DopplerMobile;
@@ -94,6 +93,79 @@
 				242514761C7E45CD00785AE6 /* Info.plist */,
 			);
 			path = DopplerMobileTests;
+			sourceTree = "<group>";
+		};
+		2479A3C81D19C25100C134FB /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				2479A3C91D19C25B00C134FB /* Views */,
+				2479A3CA1D19C26700C134FB /* ViewControllers */,
+			);
+			name = Interface;
+			sourceTree = "<group>";
+		};
+		2479A3C91D19C25B00C134FB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				242514631C7E45CD00785AE6 /* Main.storyboard */,
+				242514681C7E45CD00785AE6 /* LaunchScreen.storyboard */,
+				242514661C7E45CD00785AE6 /* Assets.xcassets */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		2479A3CA1D19C26700C134FB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				242514611C7E45CD00785AE6 /* ViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2479A3CB1D19C40200C134FB /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				2425145F1C7E45CD00785AE6 /* AppDelegate.swift */,
+				2479A3CC1D19C41C00C134FB /* ViewModels */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		2479A3CC1D19C41C00C134FB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		2479A3CD1D19C50F00C134FB /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				2479A3CF1D19C54300C134FB /* Services */,
+				2479A3CE1D19C52F00C134FB /* Models */,
+			);
+			name = Domain;
+			sourceTree = "<group>";
+		};
+		2479A3CE1D19C52F00C134FB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		2479A3CF1D19C54300C134FB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		2479A3D01D19C54A00C134FB /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Infrastructure;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,6 +460,7 @@
 				2425147B1C7E45CD00785AE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2425147C1C7E45CD00785AE6 /* Build configuration list for PBXNativeTarget "DopplerMobileTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +469,7 @@
 				2425147E1C7E45CD00785AE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
