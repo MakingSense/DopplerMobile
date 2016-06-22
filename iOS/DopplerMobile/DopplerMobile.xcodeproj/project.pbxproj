@@ -13,6 +13,10 @@
 		2411987B1D1B134100330D87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 241198731D1B134100330D87 /* Assets.xcassets */; };
 		2411987C1D1B134100330D87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 241198741D1B134100330D87 /* LaunchScreen.storyboard */; };
 		2411987D1D1B134100330D87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 241198761D1B134100330D87 /* Main.storyboard */; };
+		2411987F1D1B162E00330D87 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 2411987E1D1B162E00330D87 /* File */; };
+		241198811D1B163800330D87 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 241198801D1B163800330D87 /* File */; };
+		241198831D1B164100330D87 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 241198821D1B164100330D87 /* File */; };
+		241198851D1B164A00330D87 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 241198841D1B164A00330D87 /* File */; };
 		242514751C7E45CD00785AE6 /* DopplerMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242514741C7E45CD00785AE6 /* DopplerMobileTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +37,10 @@
 		241198731D1B134100330D87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		241198751D1B134100330D87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		241198771D1B134100330D87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2411987E1D1B162E00330D87 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
+		241198801D1B163800330D87 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
+		241198821D1B164100330D87 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
+		241198841D1B164A00330D87 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
 		2425145C1C7E45CD00785AE6 /* DopplerMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DopplerMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		242514701C7E45CD00785AE6 /* DopplerMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DopplerMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		242514741C7E45CD00785AE6 /* DopplerMobileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DopplerMobileTests.swift; sourceTree = "<group>"; };
@@ -81,6 +89,7 @@
 		241198691D1B134100330D87 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				2411987E1D1B162E00330D87 /* File */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -97,6 +106,7 @@
 		2411986B1D1B134100330D87 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				241198801D1B163800330D87 /* File */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -104,6 +114,7 @@
 		2411986C1D1B134100330D87 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				241198821D1B164100330D87 /* File */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -111,6 +122,7 @@
 		2411986E1D1B134100330D87 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				241198841D1B164A00330D87 /* File */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -252,8 +264,12 @@
 			files = (
 				2411987C1D1B134100330D87 /* LaunchScreen.storyboard in Resources */,
 				2411987B1D1B134100330D87 /* Assets.xcassets in Resources */,
+				241198831D1B164100330D87 /* File in Resources */,
+				241198811D1B163800330D87 /* File in Resources */,
+				241198851D1B164A00330D87 /* File in Resources */,
 				241198791D1B134100330D87 /* Info.plist in Resources */,
 				2411987D1D1B134100330D87 /* Main.storyboard in Resources */,
+				2411987F1D1B162E00330D87 /* File in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
