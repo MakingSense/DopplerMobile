@@ -10,20 +10,24 @@ import UIKit
 
 class LoginViewController: UIViewController
 {
-
     //MARK: Properties
+    var loginViewModel: LoginViewModel!
 
     @IBOutlet weak var txtUsername: UITextField!
 
     @IBOutlet weak var txtPassword: UITextField!
     
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        loginViewModel = LoginViewModel()
+    }
     
     //MARK: Login Button's Actions
-    
   
     @IBAction func Login(sender: UIButton)
     {
-        //TODO: pending implementation
+        loginViewModel.login(txtUsername.text!, password: txtPassword.text!)
     }
     
     
@@ -32,6 +36,7 @@ class LoginViewController: UIViewController
     @IBAction func ForgotPassword(sender: UIButton)
     {
         //TODO: pending implementation
+        UIApplication.sharedApplication().openURL(NSURL(string:"https://app2.fromdoppler.com/")!)
     }
 }
 
