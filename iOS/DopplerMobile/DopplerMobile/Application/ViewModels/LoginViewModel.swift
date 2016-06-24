@@ -10,8 +10,10 @@ import Foundation
 
 class LoginViewModel
 {
-    var username:String?
-    var password:String?
+    var username: String?
+    var password: String?
+    
+    weak var delegate: LoginViewControllerDelegate?
 
     init()
     {
@@ -19,17 +21,35 @@ class LoginViewModel
         password = nil
     }
     
-    func login(username:String, password:String)
+    func login(username: String, password: String)
     {
-        validateInput(username, password: password)
-        self.username = username
-        self.password = password
-        //TODO:call service
+        if validateInput(username, password: password)
+        {
+            self.username = username
+            self.password = password
+            //TODO:call service
+            var loginSucceded = true
+            if loginSucceded
+            {
+                delegate?.loginSucceded(self)
+            }
+        }        
     }
     
-    private func validateInput(username: String, password:String)
+    private func validateInput(username: String, password: String)-> Bool
     {
-        //TODO: validate input
-        //TODO: call delegate if errors
+        if (username == "")
+        {
+            delegate?.usernameValidationFailed(self)
+            return false
+        }
+        
+        if (password == "")
+        {
+            delegate?.passwordValidationFailed(self)
+            return false
+        }
+        
+        return true
     }
 }
