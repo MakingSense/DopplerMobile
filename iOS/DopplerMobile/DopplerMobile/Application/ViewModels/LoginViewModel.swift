@@ -14,7 +14,7 @@ class LoginViewModel
     var password: String?
     
     weak var delegate: LoginViewControllerDelegate?
-
+    
     init()
     {
         username = nil
@@ -31,22 +31,22 @@ class LoginViewModel
             var loginSucceded = true
             if loginSucceded
             {
-                delegate?.loginSucceded(self)
+                delegate?.loginSucceded()
             }
-        }        
+        }
     }
     
     private func validateInput(username: String, password: String)-> Bool
     {
         if (username == "")
         {
-            delegate?.usernameValidationFailed(self)
+            delegate?.usernameValidationFailed()
             return false
         }
         
         if (password == "")
         {
-            delegate?.passwordValidationFailed(self)
+            delegate?.passwordValidationFailed()
             return false
         }
         

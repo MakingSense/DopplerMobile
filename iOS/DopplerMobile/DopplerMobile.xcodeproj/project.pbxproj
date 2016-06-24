@@ -17,6 +17,7 @@
 		242514751C7E45CD00785AE6 /* DopplerMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242514741C7E45CD00785AE6 /* DopplerMobileTests.swift */; };
 		24F0FB6F1D1B2D5C00360346 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F0FB6E1D1B2D5C00360346 /* User.swift */; };
 		24F0FB731D1C109E00360346 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F0FB721D1C109E00360346 /* LoginViewModel.swift */; };
+		24F0FB761D1D6C4200360346 /* LoginViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F0FB751D1D6C4200360346 /* LoginViewControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		242514761C7E45CD00785AE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24F0FB6E1D1B2D5C00360346 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		24F0FB721D1C109E00360346 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		24F0FB751D1D6C4200360346 /* LoginViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		2411986F1D1B134100330D87 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				24F0FB741D1D6C1800360346 /* Protocols */,
 				241198701D1B134100330D87 /* ViewControllers */,
 				241198721D1B134100330D87 /* Views */,
 			);
@@ -178,6 +181,14 @@
 				242514761C7E45CD00785AE6 /* Info.plist */,
 			);
 			path = DopplerMobileTests;
+			sourceTree = "<group>";
+		};
+		24F0FB741D1D6C1800360346 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				24F0FB751D1D6C4200360346 /* LoginViewControllerDelegate.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +296,7 @@
 			files = (
 				24F0FB731D1C109E00360346 /* LoginViewModel.swift in Sources */,
 				2411987A1D1B134100330D87 /* LoginViewController.swift in Sources */,
+				24F0FB761D1D6C4200360346 /* LoginViewControllerDelegate.swift in Sources */,
 				241198781D1B134100330D87 /* AppDelegate.swift in Sources */,
 				24F0FB6F1D1B2D5C00360346 /* User.swift in Sources */,
 			);
