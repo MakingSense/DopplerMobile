@@ -12,7 +12,7 @@ class LoginViewController: UIViewController, LoginViewControllerDelegate
 {
     //MARK: Properties
     
-    var loginViewModel: LoginViewModel!
+    private var loginViewModel: LoginViewModel!
 
     @IBOutlet weak var txtUsername: UITextField!
 
