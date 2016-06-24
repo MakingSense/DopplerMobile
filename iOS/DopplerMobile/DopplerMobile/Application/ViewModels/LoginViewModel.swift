@@ -27,8 +27,8 @@ class LoginViewModel
         {
             self.username = username
             self.password = password
-            //TODO:call service
-            var loginSucceded = true
+            let loginService = LoginService()
+            let loginSucceded = loginService.Login(username, password: password)
             if loginSucceded
             {
                 delegate?.loginSucceded()
