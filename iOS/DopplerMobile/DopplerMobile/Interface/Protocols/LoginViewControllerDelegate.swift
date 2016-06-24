@@ -10,9 +10,9 @@ import Foundation
 
 protocol LoginViewControllerDelegate: class
 {
-    func usernameValidationFailed(sender: LoginViewModel)
+    func usernameValidationFailed()
     
-    func passwordValidationFailed(sender: LoginViewModel)
+    func passwordValidationFailed()
     
-    func loginSucceded(sender: LoginViewModel)
+    func loginSucceded()
 }

@@ -36,17 +36,17 @@ class LoginViewController: UIViewController, LoginViewControllerDelegate
     
     //MARK: Delegate's Actions
     
-    func usernameValidationFailed(sender: LoginViewModel)
+    func usernameValidationFailed()
     {
         lblUsernameLine.backgroundColor = UIColor.redColor()
     }
     
-    func passwordValidationFailed(sender: LoginViewModel)
+    func passwordValidationFailed()
     {
         lblPasswordLine.backgroundColor = UIColor.redColor()
     }
     
-    func loginSucceded(sender: LoginViewModel)
+    func loginSucceded()
     {
         //TODO: show welcome view
         btnLogin.backgroundColor = UIColor.greenColor()
