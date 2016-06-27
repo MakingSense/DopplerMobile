@@ -8,11 +8,13 @@
 
 import Foundation
 
-protocol LoginViewControllerDelegate: class
+protocol LoginViewModelDelegate: class
 {
     func usernameValidationFailed()
     
     func passwordValidationFailed()
     
     func loginSucceded()
+    
+    func loginFailed()
 }

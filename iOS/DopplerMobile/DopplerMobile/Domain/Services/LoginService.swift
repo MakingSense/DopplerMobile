@@ -12,6 +12,7 @@ class LoginService
 {
     func Login(username: String, password: String)-> Bool
     {
+        //TODO: will be implemented on DM-52
         //var user = User(username: username, password: password)
         return true
     }

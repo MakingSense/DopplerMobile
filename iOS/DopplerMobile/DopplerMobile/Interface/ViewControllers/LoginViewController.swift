@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, LoginViewControllerDelegate
+class LoginViewController: UIViewController, LoginViewModelDelegate
 {
     //MARK: Properties
     
@@ -30,7 +30,7 @@ class LoginViewController: UIViewController, LoginViewControllerDelegate
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        loginViewModel = LoginViewModel()
+        loginViewModel = LoginViewModel(loginService: LoginService())
         loginViewModel.delegate = self
     }
     
@@ -48,8 +48,13 @@ class LoginViewController: UIViewController, LoginViewControllerDelegate
     
     func loginSucceded()
     {
-        //TODO: show welcome view
+        //TODO: DM-55 show welcome view
         btnLogin.backgroundColor = UIColor.greenColor()
+    }
+    
+    func loginFailed() {
+        //TODO: DM-52 service implementation fail scenarios
+        btnLogin.backgroundColor = UIColor.redColor()
     }
     
     //MARK: Login Button's Actions
@@ -57,7 +62,12 @@ class LoginViewController: UIViewController, LoginViewControllerDelegate
     @IBAction func Login(sender: UIButton)
     {
         sender.enabled = false
-        loginViewModel.login(txtUsername.text!, password: txtPassword.text!)
+        loginViewModel.username = txtUsername.text!
+        loginViewModel.password = txtPassword.text!
+        if loginViewModel.validateInput()
+        {
+            loginViewModel.login()
+        }
     }
     
     //MARK: Username Input's Actions

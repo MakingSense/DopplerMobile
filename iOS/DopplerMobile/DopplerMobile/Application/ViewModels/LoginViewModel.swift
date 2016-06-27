@@ -8,43 +8,45 @@
 
 import Foundation
 
-class LoginViewModel
+public class LoginViewModel
 {
-    var username: String?
-    var password: String?
+    public var username: String?
+    public var password: String?
     
-    weak var delegate: LoginViewControllerDelegate?
+    var loginService: LoginService
     
-    init()
+    weak var delegate: LoginViewModelDelegate?
+    
+    init(loginService: LoginService)
     {
+        self.loginService = loginService
         username = nil
         password = nil
     }
     
-    func login(username: String, password: String)
+    func login()
     {
-        if validateInput(username, password: password)
+        let loginSucceded = loginService.Login(self.username!, password: self.password!)
+        if loginSucceded
         {
-            self.username = username
-            self.password = password
-            let loginService = LoginService()
-            let loginSucceded = loginService.Login(username, password: password)
-            if loginSucceded
-            {
-                delegate?.loginSucceded()
-            }
+            delegate?.loginSucceded()
         }
+        else
+        {
+            delegate?.loginFailed()
+        }
+        
     }
     
-    private func validateInput(username: String, password: String)-> Bool
+    func validateInput()-> Bool
     {
-        if (username == "")
+        if (self.username == "" || self.username == nil)
         {
             delegate?.usernameValidationFailed()
             return false
         }
         
-        if (password == "")
+        if (self.password == "" || self.password == nil)
         {
             delegate?.passwordValidationFailed()
             return false
