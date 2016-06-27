@@ -55,6 +55,7 @@ class LoginViewController: UIViewController, LoginViewModelDelegate
     func loginFailed() {
         //TODO: DM-52 service implementation fail scenarios
         btnLogin.backgroundColor = UIColor.redColor()
+        btnLogin.enabled = true
     }
     
     //MARK: Login Button's Actions
