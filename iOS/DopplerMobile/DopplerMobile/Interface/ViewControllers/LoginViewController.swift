@@ -19,8 +19,10 @@ class LoginViewController: UIViewController, LoginViewModelDelegate
     @IBOutlet weak var txtPassword: UITextField!
     
     @IBOutlet weak var lblUsernameLine: UILabel!
-    
+  
     @IBOutlet weak var lblPasswordLine: UILabel!
+    
+    @IBOutlet weak var lblErrorMessage: UILabel!
     
     @IBOutlet weak var btnLogin: UIButton!
     
@@ -39,23 +41,26 @@ class LoginViewController: UIViewController, LoginViewModelDelegate
     func usernameValidationFailed()
     {
         lblUsernameLine.backgroundColor = UIColor.redColor()
+        lblErrorMessage.text = "Username required"
     }
     
     func passwordValidationFailed()
     {
         lblPasswordLine.backgroundColor = UIColor.redColor()
+        lblErrorMessage.text = "Password required"
     }
     
     func loginSucceded()
     {
         //TODO: DM-55 show welcome view
         btnLogin.backgroundColor = UIColor.greenColor()
+        lblErrorMessage.text = ""
     }
     
     func loginFailed() {
         //TODO: DM-52 service implementation fail scenarios
-        btnLogin.backgroundColor = UIColor.redColor()
         btnLogin.enabled = true
+        lblErrorMessage.text = "An error ocurred. Please, try again later"
     }
     
     //MARK: Login Button's Actions
@@ -77,6 +82,7 @@ class LoginViewController: UIViewController, LoginViewModelDelegate
     {
         lblUsernameLine.backgroundColor = UIColor.lightGrayColor()
         btnLogin.enabled = true
+        lblErrorMessage.text = ""
     }
     
     //MARK: Password Input's Actions
@@ -85,6 +91,7 @@ class LoginViewController: UIViewController, LoginViewModelDelegate
     {
         lblPasswordLine.backgroundColor = UIColor.lightGrayColor()
         btnLogin.enabled = true
+        lblErrorMessage.text = ""
     }
     
     //MARK: Forgot Password Button's Actions
