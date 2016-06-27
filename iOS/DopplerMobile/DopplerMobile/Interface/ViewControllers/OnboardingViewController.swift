@@ -8,113 +8,84 @@
 
 import UIKit
 
-class OnboardingViewController: UIPageViewController, UIPageViewControllerDataSource, OnboardingContentViewControllerDelegate
+class OnboardingViewController: UIPageViewController, OnboardingContentViewControllerDelegate
 {
-    var titles: NSArray = NSArray()
-    var currentContentViewController: OnboardingContentViewController?
-    var arrayOfContent: [OnboardingContentViewController] = [OnboardingContentViewController]()
-
+    var viewModel : OnboardingViewModel?
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
 
-        //TODO: Add proper content here.
-        titles = ["One", "Two", "Three"];
-
-        dataSource = self
-
-        setupContent()
-    }
-
-    // MARK: UIPageViewControllerDataSource
-    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController?
-    {
-        let pageContent: OnboardingContentViewController = viewController as! OnboardingContentViewController
-
-        var index = pageContent.index
-
-        if ((index == 0) || (index == NSNotFound))
+        let directions: [UISwipeGestureRecognizerDirection] = [.Left, .Right]
+        for direction in directions
         {
-            return nil
+            //TODO: Replace with #selector(OnboardingViewController.handleSwipes(_:)))
+            let gesture = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))//#selector(OnboardingViewController.handleSwipes(_:)))
+            gesture.direction = direction
+            view.addGestureRecognizer(gesture)
         }
 
-        index -= 1;
-
-        return getViewControllerAtIndex(index)
+        setupViewModel()
     }
 
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController?
+    func handleSwipes(sender:UISwipeGestureRecognizer)
     {
-        next(viewController)
+        var direction : UIPageViewControllerNavigationDirection?
+        var viewModel : OnboardingContentViewModel?
 
-        return self.currentContentViewController
-    }
-
-    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int
-    {
-        return self.titles.count
-    }
-
-    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int
-    {
-        return 0
-    }
-
-
-    // MARK: Other Methods
-    func getViewControllerAtIndex(index: Int) -> OnboardingContentViewController
-    {
-        return self.arrayOfContent[index] as! OnboardingContentViewController
-    }
-
-    func setupContent()
-    {
-        //Add all the VCs
-        for index in 0...2
+        switch sender.direction.rawValue
         {
-            var vc = self.storyboard?.instantiateViewControllerWithIdentifier("OnboardingContentViewController") as? OnboardingContentViewController
-            vc?.setupView("\(titles[index])", index: index)
-            vc?.delegate = self
-            self.arrayOfContent.append(vc!)
+        case 1:
+            viewModel = self.viewModel!.previous()
+            direction = UIPageViewControllerNavigationDirection.Reverse
+        case 2:
+            viewModel = self.viewModel!.next()
+            direction = UIPageViewControllerNavigationDirection.Forward
+        default: () //Do nothing!
         }
 
-        //setViewControllers need an array with just one element, so we prepare one.
-        var array = [arrayOfContent[0]]
+        if(viewModel != nil)
+        {
+            presentViewControllerFromViewModel(createViewControllerFromViewModel(viewModel!), direction: direction!)
+        }
 
-        //set the current vc for later.
-        self.currentContentViewController = arrayOfContent[0] as OnboardingContentViewController
-
-        self.setViewControllers(array, direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
     }
 
-    //This should probably be removed later with VM
-    func next(viewController: UIViewController)
+    func presentViewControllerFromViewModel(viewController: UIViewController, direction: UIPageViewControllerNavigationDirection)
     {
-        let content: OnboardingContentViewController = viewController as! OnboardingContentViewController
+        self.setViewControllers([viewController], direction: direction, animated: true, completion: nil)
+    }
 
-        var index = content.index
-        if(index != NSNotFound)
-        {
-            index += 1
-            if(index < titles.count)
-            {
-                self.currentContentViewController = getViewControllerAtIndex(index)
-            }
-        }
+    func createViewControllerFromViewModel(viewModel: OnboardingContentViewModel) -> UIViewController
+    {
+        let viewController:OnboardingContentViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("OnboardingContentViewController") as! OnboardingContentViewController
+
+        viewController.viewModel = viewModel
+
+        viewController.delegate = self
+        
+        return viewController
+    }
+
+    func setupViewModel()
+    {
+        self.viewModel = OnboardingViewModel()
+
+        let firstViewModel = self.viewModel?.pages[(self.viewModel?.currentIndex)!]
+        
+        presentViewControllerFromViewModel(createViewControllerFromViewModel(firstViewModel!), direction: UIPageViewControllerNavigationDirection.Forward)
     }
 
     // MARK: OnboardingContentViewControllerDelegate
     func nextTouched()
     {
-        next(self.currentContentViewController!)
+        let viewModel = self.viewModel?.next()
+        if(viewModel != nil)
+        {
+            let viewController = createViewControllerFromViewModel(viewModel!)
 
-        //setViewControllers need an array with just one element, so we prepare one.
-        var array = [UIViewController]()
-
-        array.append(self.currentContentViewController!)
-
-        self.setViewControllers(array, direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
+            presentViewControllerFromViewModel(viewController, direction: UIPageViewControllerNavigationDirection.Forward)
+        }
     }
 
     func skipTouched()
