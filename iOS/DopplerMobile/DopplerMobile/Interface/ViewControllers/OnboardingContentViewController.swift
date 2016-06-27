@@ -15,46 +15,18 @@ protocol OnboardingContentViewControllerDelegate: class
     func skipTouched()
 }
 
-public class OnboardingContentViewController: UIViewController
+class OnboardingContentViewController: UIViewController
 {
     @IBOutlet weak var txtContent: UILabel!
 
-    var index: Int = 0
-    var hasLazyLoading: Bool?
-    var lazyContent: String?
-    var lazyIndex: Int?
+    var viewModel : OnboardingContentViewModel?
+
     weak var delegate: OnboardingContentViewControllerDelegate?
 
-    override public func viewDidLoad()
+    override func viewDidLoad()
     {
         super.viewDidLoad()
-
-        if(hasLazyLoading!)
-        {
-            lazySetupView()
-        }
-    }
-
-
-    public func setupView(content: String, index: Int)
-    {
-        if(txtContent != nil)
-        {
-            txtContent.text = content
-            self.index = index //Not sure if we should use caps for parameters or if using self like in this case it's OK. [Mugu]
-        }
-        else
-        {
-            lazyContent = content;
-            lazyIndex = index;
-            hasLazyLoading = true;
-        }
-    }
-
-    func lazySetupView()
-    {
-        txtContent.text = lazyContent
-        index = lazyIndex!
+        txtContent.text = self.viewModel!.content
     }
 
     @IBAction func SkipButtonTouched(sender: UIButton)
