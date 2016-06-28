@@ -38,6 +38,17 @@
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G9Y-8X-f5v" userLabel="Username Text Field">
+                                        <rect key="frame" x="20" y="201" width="520" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="AcQ-cd-OqZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="txtUsernameEditingChanged:" destination="LXw-vR-mTg" eventType="editingChanged" id="8c6-xY-CST"/>
+                                        </connections>
+                                    </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CL5-OU-IvG" userLabel="Username line">
                                         <rect key="frame" x="20" y="231" width="520" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -61,6 +72,9 @@
                                         <rect key="frame" x="20" y="265" width="520" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <connections>
+                                            <action selector="txtPasswordEditingChanged:" destination="LXw-vR-mTg" eventType="editingChanged" id="Ri2-CP-D9K"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6r9-ox-imG" userLabel="Password line">
                                         <rect key="frame" x="20" y="295" width="520" height="1"/>
@@ -72,6 +86,16 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgd-t9-dYZ">
+                                        <rect key="frame" x="20" y="459" width="520" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <state key="normal" title="FORGOT YOUR PASSWORD?">
+                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="ForgotPassword:" destination="LXw-vR-mTg" eventType="touchUpInside" id="MM0-YF-mvT"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAc-ZA-1Hr" userLabel="Login Button">
                                         <rect key="frame" x="20" y="356" width="520" height="60"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -83,24 +107,12 @@
                                             <action selector="Login:" destination="LXw-vR-mTg" eventType="touchUpInside" id="S4r-Tn-rpK"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgd-t9-dYZ">
-                                        <rect key="frame" x="20" y="459" width="520" height="26"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <state key="normal" title="FORGOT YOUR PASSWORD?">
-                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="ForgotPassword:" destination="LXw-vR-mTg" eventType="touchUpInside" id="MM0-YF-mvT"/>
-                                        </connections>
-                                    </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G9Y-8X-f5v" userLabel="Username Text Field">
-                                        <rect key="frame" x="20" y="201" width="520" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="AcQ-cd-OqZ"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VuR-Py-zOB" userLabel="Error Message">
+                                        <rect key="frame" x="20" y="498" width="520" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -110,6 +122,7 @@
                                     <constraint firstItem="Xgd-t9-dYZ" firstAttribute="top" secondItem="AAc-ZA-1Hr" secondAttribute="bottom" multiplier="1.1" constant="1" id="60i-oQ-Bez"/>
                                     <constraint firstItem="uwB-SC-h2a" firstAttribute="top" secondItem="CL5-OU-IvG" secondAttribute="bottom" multiplier="1.05" constant="1" id="As0-IQ-a1E"/>
                                     <constraint firstItem="CL5-OU-IvG" firstAttribute="leading" secondItem="G9Y-8X-f5v" secondAttribute="leading" id="Edw-gJ-xbH"/>
+                                    <constraint firstItem="VuR-Py-zOB" firstAttribute="top" secondItem="Xgd-t9-dYZ" secondAttribute="bottom" multiplier="1.025" constant="1" id="Epd-ll-1So"/>
                                     <constraint firstItem="AAc-ZA-1Hr" firstAttribute="top" secondItem="6r9-ox-imG" secondAttribute="bottom" multiplier="1.2" constant="1" id="FNi-xW-at7"/>
                                     <constraint firstItem="AKM-dH-1xD" firstAttribute="centerX" secondItem="DJ2-91-Qsg" secondAttribute="centerX" id="JXe-ug-fzY"/>
                                     <constraint firstItem="CL5-OU-IvG" firstAttribute="top" secondItem="G9Y-8X-f5v" secondAttribute="bottom" id="KmC-u8-qUT"/>
@@ -118,10 +131,12 @@
                                     <constraint firstItem="6r9-ox-imG" firstAttribute="top" secondItem="9Ot-CN-jog" secondAttribute="bottom" id="QKD-AM-mt1"/>
                                     <constraint firstItem="CL5-OU-IvG" firstAttribute="trailing" secondItem="G9Y-8X-f5v" secondAttribute="trailing" id="RaG-IB-OAP"/>
                                     <constraint firstItem="AKM-dH-1xD" firstAttribute="top" secondItem="DJ2-91-Qsg" secondAttribute="top" id="RqU-aO-YcG"/>
+                                    <constraint firstItem="VuR-Py-zOB" firstAttribute="leading" secondItem="Xgd-t9-dYZ" secondAttribute="leading" id="SSP-VI-PAC"/>
                                     <constraint firstItem="9Ot-CN-jog" firstAttribute="leading" secondItem="uwB-SC-h2a" secondAttribute="leading" id="UcH-c9-Xsc"/>
                                     <constraint firstItem="Xgd-t9-dYZ" firstAttribute="trailing" secondItem="AAc-ZA-1Hr" secondAttribute="trailing" id="UfU-Fo-j1C"/>
                                     <constraint firstItem="uwB-SC-h2a" firstAttribute="leading" secondItem="CL5-OU-IvG" secondAttribute="leading" id="UfV-7w-9YH"/>
                                     <constraint firstItem="WW9-7y-fyP" firstAttribute="leading" secondItem="DJ2-91-Qsg" secondAttribute="leading" constant="20" id="ge4-A8-JeW"/>
+                                    <constraint firstItem="VuR-Py-zOB" firstAttribute="width" secondItem="Xgd-t9-dYZ" secondAttribute="width" id="gmb-ZR-TJx"/>
                                     <constraint firstItem="6r9-ox-imG" firstAttribute="leading" secondItem="9Ot-CN-jog" secondAttribute="leading" id="jIh-3q-MoZ"/>
                                     <constraint firstItem="G9Y-8X-f5v" firstAttribute="top" secondItem="WW9-7y-fyP" secondAttribute="bottom" id="lHW-wr-6G9"/>
                                     <constraint firstItem="AAc-ZA-1Hr" firstAttribute="leading" secondItem="9Ot-CN-jog" secondAttribute="leading" id="rR7-rE-adP"/>
@@ -141,6 +156,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnLogin" destination="AAc-ZA-1Hr" id="fuV-Jf-LhQ"/>
+                        <outlet property="lblErrorMessage" destination="VuR-Py-zOB" id="N77-SC-AfP"/>
+                        <outlet property="lblPasswordLine" destination="6r9-ox-imG" id="EyD-4n-TMw"/>
+                        <outlet property="lblUsernameLine" destination="CL5-OU-IvG" id="2Le-d5-2D2"/>
                         <outlet property="txtPassword" destination="9Ot-CN-jog" id="UWT-eh-xwB"/>
                         <outlet property="txtUsername" destination="G9Y-8X-f5v" id="byY-Qb-ABY"/>
                     </connections>
