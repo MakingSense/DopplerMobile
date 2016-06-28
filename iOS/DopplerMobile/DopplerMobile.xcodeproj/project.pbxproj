@@ -14,10 +14,29 @@
 		2411987C1D1B134100330D87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 241198741D1B134100330D87 /* LaunchScreen.storyboard */; };
 		2411987D1D1B134100330D87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 241198761D1B134100330D87 /* Main.storyboard */; };
 		2411987F1D1B162E00330D87 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 2411987E1D1B162E00330D87 /* File */; };
-		241198811D1B163800330D87 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 241198801D1B163800330D87 /* File */; };
 		241198831D1B164100330D87 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 241198821D1B164100330D87 /* File */; };
-		241198851D1B164A00330D87 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 241198841D1B164A00330D87 /* File */; };
 		242514751C7E45CD00785AE6 /* DopplerMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242514741C7E45CD00785AE6 /* DopplerMobileTests.swift */; };
+		A83377C61D22CCBF00A25677 /* DopplerMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A83377C41D22CCBF00A25677 /* DopplerMobile.xcdatamodeld */; };
+		A83377C91D22CD6E00A25677 /* DMLogin+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83377C71D22CD6E00A25677 /* DMLogin+CoreDataProperties.swift */; };
+		A83377CA1D22CD6E00A25677 /* DMLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83377C81D22CD6E00A25677 /* DMLogin.swift */; };
+		A83377CE1D22D58700A25677 /* DMLoginPostProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83377CD1D22D58700A25677 /* DMLoginPostProcessor.swift */; };
+		A83377D01D22D64E00A25677 /* DMLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83377CF1D22D64E00A25677 /* DMLoginRequest.swift */; };
+		A8CD13E01D21AA5800673653 /* MSEntityBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13821D21AA5800673653 /* MSEntityBase.swift */; };
+		A8CD140D1D21AA5800673653 /* MSRestClientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13D01D21AA5800673653 /* MSRestClientManager.swift */; };
+		A8CD140E1D21AA5800673653 /* MSRestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13D11D21AA5800673653 /* MSRestConfiguration.swift */; };
+		A8CD140F1D21AA5800673653 /* MSMainProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13D31D21AA5800673653 /* MSMainProcessor.swift */; };
+		A8CD14101D21AA5800673653 /* MSProcessorBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13D41D21AA5800673653 /* MSProcessorBase.swift */; };
+		A8CD14111D21AA5800673653 /* MSRestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13D61D21AA5800673653 /* MSRestConstants.swift */; };
+		A8CD14121D21AA5800673653 /* MSRequestCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13D81D21AA5800673653 /* MSRequestCallback.swift */; };
+		A8CD14131D21AA5800673653 /* MSRequestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13D91D21AA5800673653 /* MSRequestConfiguration.swift */; };
+		A8CD14141D21AA5800673653 /* MSRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13DA1D21AA5800673653 /* MSRequestProtocol.swift */; };
+		A8CD14151D21AA5800673653 /* MSResponseMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13DC1D21AA5800673653 /* MSResponseMessage.swift */; };
+		A8CD14161D21AA5800673653 /* MSRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13DE1D21AA5800673653 /* MSRequestService.swift */; };
+		A8CD14171D21AA5800673653 /* MSRequestServiceInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13DF1D21AA5800673653 /* MSRequestServiceInformation.swift */; };
+		A8CD14211D21AACD00673653 /* MSTRestLayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD14191D21AACD00673653 /* MSTRestLayerManager.swift */; };
+		A8CD14221D21AACD00673653 /* MSTServiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD141A1D21AACD00673653 /* MSTServiceHelper.swift */; };
+		A8CD14271D21B77200673653 /* MSTMethodsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD14261D21B77200673653 /* MSTMethodsRequest.swift */; };
+		FCD72D6CA04F856DFE4E4277 /* Pods_DopplerMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3740F516FC4DC93032E5650B /* Pods_DopplerMobile.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,13 +57,35 @@
 		241198751D1B134100330D87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		241198771D1B134100330D87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2411987E1D1B162E00330D87 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
-		241198801D1B163800330D87 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
 		241198821D1B164100330D87 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
-		241198841D1B164A00330D87 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
 		2425145C1C7E45CD00785AE6 /* DopplerMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DopplerMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		242514701C7E45CD00785AE6 /* DopplerMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DopplerMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		242514741C7E45CD00785AE6 /* DopplerMobileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DopplerMobileTests.swift; sourceTree = "<group>"; };
 		242514761C7E45CD00785AE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3740F516FC4DC93032E5650B /* Pods_DopplerMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DopplerMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9048850D5C1B170CE0E787B3 /* Pods-DopplerMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DopplerMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DopplerMobile/Pods-DopplerMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		A0671CC02C7AAD9AB5466E82 /* Pods-DopplerMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DopplerMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-DopplerMobile/Pods-DopplerMobile.release.xcconfig"; sourceTree = "<group>"; };
+		A83377C51D22CCBF00A25677 /* DopplerMobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DopplerMobile.xcdatamodel; sourceTree = "<group>"; };
+		A83377C71D22CD6E00A25677 /* DMLogin+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DMLogin+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A83377C81D22CD6E00A25677 /* DMLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMLogin.swift; sourceTree = "<group>"; };
+		A83377CC1D22D3F500A25677 /* DopplerMobile-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DopplerMobile-Bridging-Header.h"; sourceTree = "<group>"; };
+		A83377CD1D22D58700A25677 /* DMLoginPostProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMLoginPostProcessor.swift; sourceTree = "<group>"; };
+		A83377CF1D22D64E00A25677 /* DMLoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMLoginRequest.swift; sourceTree = "<group>"; };
+		A8CD13821D21AA5800673653 /* MSEntityBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSEntityBase.swift; sourceTree = "<group>"; };
+		A8CD13D01D21AA5800673653 /* MSRestClientManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSRestClientManager.swift; sourceTree = "<group>"; };
+		A8CD13D11D21AA5800673653 /* MSRestConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSRestConfiguration.swift; sourceTree = "<group>"; };
+		A8CD13D31D21AA5800673653 /* MSMainProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSMainProcessor.swift; sourceTree = "<group>"; };
+		A8CD13D41D21AA5800673653 /* MSProcessorBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSProcessorBase.swift; sourceTree = "<group>"; };
+		A8CD13D61D21AA5800673653 /* MSRestConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSRestConstants.swift; sourceTree = "<group>"; };
+		A8CD13D81D21AA5800673653 /* MSRequestCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSRequestCallback.swift; sourceTree = "<group>"; };
+		A8CD13D91D21AA5800673653 /* MSRequestConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSRequestConfiguration.swift; sourceTree = "<group>"; };
+		A8CD13DA1D21AA5800673653 /* MSRequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSRequestProtocol.swift; sourceTree = "<group>"; };
+		A8CD13DC1D21AA5800673653 /* MSResponseMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSResponseMessage.swift; sourceTree = "<group>"; };
+		A8CD13DE1D21AA5800673653 /* MSRequestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSRequestService.swift; sourceTree = "<group>"; };
+		A8CD13DF1D21AA5800673653 /* MSRequestServiceInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSRequestServiceInformation.swift; sourceTree = "<group>"; };
+		A8CD14191D21AACD00673653 /* MSTRestLayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSTRestLayerManager.swift; sourceTree = "<group>"; };
+		A8CD141A1D21AACD00673653 /* MSTServiceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSTServiceHelper.swift; sourceTree = "<group>"; };
+		A8CD14261D21B77200673653 /* MSTMethodsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSTMethodsRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCD72D6CA04F856DFE4E4277 /* Pods_DopplerMobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +107,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20861F86C4051714A98CD2CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3740F516FC4DC93032E5650B /* Pods_DopplerMobile.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		241198661D1B134100330D87 /* DopplerMobile */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +122,7 @@
 				241198671D1B134100330D87 /* Application */,
 				2411986A1D1B134100330D87 /* Domain */,
 				2411986E1D1B134100330D87 /* Infrastructure */,
+				A8CD13801D21AA5800673653 /* Infrastructure-MSKit */,
 				2411986D1D1B134100330D87 /* Info.plist */,
 			);
 			path = DopplerMobile;
@@ -80,6 +131,7 @@
 		241198671D1B134100330D87 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				A83377CC1D22D3F500A25677 /* DopplerMobile-Bridging-Header.h */,
 				241198681D1B134100330D87 /* AppDelegate.swift */,
 				241198691D1B134100330D87 /* ViewModels */,
 			);
@@ -106,7 +158,9 @@
 		2411986B1D1B134100330D87 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				241198801D1B163800330D87 /* File */,
+				A83377C71D22CD6E00A25677 /* DMLogin+CoreDataProperties.swift */,
+				A83377C81D22CD6E00A25677 /* DMLogin.swift */,
+				A83377C41D22CCBF00A25677 /* DopplerMobile.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -122,7 +176,10 @@
 		2411986E1D1B134100330D87 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
-				241198841D1B164A00330D87 /* File */,
+				A8CD141A1D21AACD00673653 /* MSTServiceHelper.swift */,
+				A8CD14191D21AACD00673653 /* MSTRestLayerManager.swift */,
+				A8CD141B1D21AACD00673653 /* Processor */,
+				A8CD141D1D21AACD00673653 /* Requests */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -160,6 +217,8 @@
 				241198661D1B134100330D87 /* DopplerMobile */,
 				242514731C7E45CD00785AE6 /* DopplerMobileTests */,
 				2425145D1C7E45CD00785AE6 /* Products */,
+				6E4506A8FDFE10A8F39BE180 /* Pods */,
+				20861F86C4051714A98CD2CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,6 +240,99 @@
 			path = DopplerMobileTests;
 			sourceTree = "<group>";
 		};
+		6E4506A8FDFE10A8F39BE180 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9048850D5C1B170CE0E787B3 /* Pods-DopplerMobile.debug.xcconfig */,
+				A0671CC02C7AAD9AB5466E82 /* Pods-DopplerMobile.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A8CD13801D21AA5800673653 /* Infrastructure-MSKit */ = {
+			isa = PBXGroup;
+			children = (
+				A8CD13D01D21AA5800673653 /* MSRestClientManager.swift */,
+				A8CD13D11D21AA5800673653 /* MSRestConfiguration.swift */,
+				A8CD13DD1D21AA5800673653 /* Service */,
+				A8CD13D21D21AA5800673653 /* Processor */,
+				A8CD13D51D21AA5800673653 /* Rest */,
+				A8CD13811D21AA5800673653 /* Data */,
+			);
+			path = "Infrastructure-MSKit";
+			sourceTree = "<group>";
+		};
+		A8CD13811D21AA5800673653 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A8CD13821D21AA5800673653 /* MSEntityBase.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A8CD13D21D21AA5800673653 /* Processor */ = {
+			isa = PBXGroup;
+			children = (
+				A8CD13D31D21AA5800673653 /* MSMainProcessor.swift */,
+				A8CD13D41D21AA5800673653 /* MSProcessorBase.swift */,
+			);
+			path = Processor;
+			sourceTree = "<group>";
+		};
+		A8CD13D51D21AA5800673653 /* Rest */ = {
+			isa = PBXGroup;
+			children = (
+				A8CD13D61D21AA5800673653 /* MSRestConstants.swift */,
+				A8CD13D71D21AA5800673653 /* Request */,
+				A8CD13DB1D21AA5800673653 /* Response */,
+			);
+			path = Rest;
+			sourceTree = "<group>";
+		};
+		A8CD13D71D21AA5800673653 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				A8CD13D81D21AA5800673653 /* MSRequestCallback.swift */,
+				A8CD13D91D21AA5800673653 /* MSRequestConfiguration.swift */,
+				A8CD13DA1D21AA5800673653 /* MSRequestProtocol.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		A8CD13DB1D21AA5800673653 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				A8CD13DC1D21AA5800673653 /* MSResponseMessage.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		A8CD13DD1D21AA5800673653 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A8CD13DE1D21AA5800673653 /* MSRequestService.swift */,
+				A8CD13DF1D21AA5800673653 /* MSRequestServiceInformation.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		A8CD141B1D21AACD00673653 /* Processor */ = {
+			isa = PBXGroup;
+			children = (
+				A83377CD1D22D58700A25677 /* DMLoginPostProcessor.swift */,
+			);
+			path = Processor;
+			sourceTree = "<group>";
+		};
+		A8CD141D1D21AACD00673653 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				A8CD14261D21B77200673653 /* MSTMethodsRequest.swift */,
+				A83377CF1D22D64E00A25677 /* DMLoginRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -188,9 +340,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 242514791C7E45CD00785AE6 /* Build configuration list for PBXNativeTarget "DopplerMobile" */;
 			buildPhases = (
+				B1F37C267A274FC6E006F6B2 /* Check Pods Manifest.lock */,
 				242514581C7E45CD00785AE6 /* Sources */,
 				242514591C7E45CD00785AE6 /* Frameworks */,
 				2425145A1C7E45CD00785AE6 /* Resources */,
+				F2D97D5BE12B85BC14942E6D /* Embed Pods Frameworks */,
+				D79F4DA52690753D34F5473C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,8 +420,6 @@
 				2411987C1D1B134100330D87 /* LaunchScreen.storyboard in Resources */,
 				2411987B1D1B134100330D87 /* Assets.xcassets in Resources */,
 				241198831D1B164100330D87 /* File in Resources */,
-				241198811D1B163800330D87 /* File in Resources */,
-				241198851D1B164A00330D87 /* File in Resources */,
 				241198791D1B134100330D87 /* Info.plist in Resources */,
 				2411987D1D1B134100330D87 /* Main.storyboard in Resources */,
 				2411987F1D1B162E00330D87 /* File in Resources */,
@@ -282,13 +435,81 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B1F37C267A274FC6E006F6B2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D79F4DA52690753D34F5473C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DopplerMobile/Pods-DopplerMobile-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2D97D5BE12B85BC14942E6D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DopplerMobile/Pods-DopplerMobile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		242514581C7E45CD00785AE6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8CD14111D21AA5800673653 /* MSRestConstants.swift in Sources */,
+				A8CD14171D21AA5800673653 /* MSRequestServiceInformation.swift in Sources */,
+				A8CD14211D21AACD00673653 /* MSTRestLayerManager.swift in Sources */,
+				A83377CE1D22D58700A25677 /* DMLoginPostProcessor.swift in Sources */,
+				A8CD13E01D21AA5800673653 /* MSEntityBase.swift in Sources */,
+				A8CD14141D21AA5800673653 /* MSRequestProtocol.swift in Sources */,
+				A8CD14151D21AA5800673653 /* MSResponseMessage.swift in Sources */,
+				A8CD14271D21B77200673653 /* MSTMethodsRequest.swift in Sources */,
+				A8CD140D1D21AA5800673653 /* MSRestClientManager.swift in Sources */,
+				A8CD140E1D21AA5800673653 /* MSRestConfiguration.swift in Sources */,
+				A8CD14161D21AA5800673653 /* MSRequestService.swift in Sources */,
+				A8CD14131D21AA5800673653 /* MSRequestConfiguration.swift in Sources */,
+				A8CD14121D21AA5800673653 /* MSRequestCallback.swift in Sources */,
+				A8CD140F1D21AA5800673653 /* MSMainProcessor.swift in Sources */,
+				A83377C61D22CCBF00A25677 /* DopplerMobile.xcdatamodeld in Sources */,
+				A83377D01D22D64E00A25677 /* DMLoginRequest.swift in Sources */,
 				2411987A1D1B134100330D87 /* LoginViewController.swift in Sources */,
+				A83377C91D22CD6E00A25677 /* DMLogin+CoreDataProperties.swift in Sources */,
+				A8CD14101D21AA5800673653 /* MSProcessorBase.swift in Sources */,
 				241198781D1B134100330D87 /* AppDelegate.swift in Sources */,
+				A8CD14221D21AACD00673653 /* MSTServiceHelper.swift in Sources */,
+				A83377CA1D22CD6E00A25677 /* DMLogin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,21 +636,25 @@
 		};
 		2425147A1C7E45CD00785AE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9048850D5C1B170CE0E787B3 /* Pods-DopplerMobile.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = DopplerMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.makingsense.DopplerMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DopplerMobile/Application/DopplerMobile-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		2425147B1C7E45CD00785AE6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0671CC02C7AAD9AB5466E82 /* Pods-DopplerMobile.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = DopplerMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.makingsense.DopplerMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DopplerMobile/Application/DopplerMobile-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -488,6 +713,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A83377C41D22CCBF00A25677 /* DopplerMobile.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A83377C51D22CCBF00A25677 /* DopplerMobile.xcdatamodel */,
+			);
+			currentVersion = A83377C51D22CCBF00A25677 /* DopplerMobile.xcdatamodel */;
+			path = DopplerMobile.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 242514541C7E45CD00785AE6 /* Project object */;
 }
