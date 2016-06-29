@@ -32,7 +32,7 @@ class LoginViewController: UIViewController, LoginViewModelDelegate
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        loginViewModel = LoginViewModel(loginService: LoginService())
+        loginViewModel = LoginViewModel(loginService: LoginService(restClient: RESTClient()))
         loginViewModel.delegate = self
     }
     

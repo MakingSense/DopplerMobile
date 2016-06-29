@@ -8,11 +8,19 @@
 
 import Foundation
 
-class LoginService
+public class LoginService
 {
+    var restClient: RESTClient
+    
+    init(restClient: RESTClient)
+    {
+        self.restClient = restClient
+    }
+    
     func Login(username: String, password: String)-> Bool
     {
         //TODO: will be implemented on DM-52
-        return true
+        let result = restClient.Login(username, password: password)
+        return result
     }
 }

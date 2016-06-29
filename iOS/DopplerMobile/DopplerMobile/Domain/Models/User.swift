@@ -8,10 +8,16 @@
 
 import Foundation
 
-class User
+public class User
 {
-    var username: String
-    var token: String
+    public var username: String
+    public var token: String
+    
+    init()
+    {
+        self.username = ""
+        self.token = ""
+    }
     
     init(username: String, token: String)
     {
