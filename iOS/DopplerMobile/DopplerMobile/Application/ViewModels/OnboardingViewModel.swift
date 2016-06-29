@@ -18,6 +18,8 @@ public class OnboardingViewModel
     {
         //TODO: Get actual content from a localization solution.
         addTestContent()
+
+        self.currentIndex = 0
     }
 
     func next() -> OnboardingContentViewModel?

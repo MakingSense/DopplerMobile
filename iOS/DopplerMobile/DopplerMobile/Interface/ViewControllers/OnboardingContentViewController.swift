@@ -23,38 +23,49 @@ public class OnboardingContentViewController: UIViewController
     var hasLazyLoading: Bool?
     var lazyContent: String?
     var lazyIndex: Int?
+    var viewModel : OnboardingContentViewModel
     weak var delegate: OnboardingContentViewControllerDelegate?
 
     override public func viewDidLoad()
     {
         super.viewDidLoad()
 
-        if(hasLazyLoading!)
-        {
-            lazySetupView()
-        }
+
+    }
+
+    override public func viewDidAppear(animated: Bool)
+    {
+        super.viewDidAppear(animated)
+        txtContent.text = self.viewModel.content
     }
 
 
-    public func setupView(content: String, index: Int)
-    {
-        if(txtContent != nil)
-        {
-            txtContent.text = content
-            self.index = index //Not sure if we should use caps for parameters or if using self like in this case it's OK. [Mugu]
-        }
-        else
-        {
-            lazyContent = content;
-            lazyIndex = index;
-            hasLazyLoading = true;
-        }
-    }
+//    public func setupView(content: String, index: Int)
+//    {
+//        if(txtContent != nil)
+//        {
+//            txtContent.text = content
+//            self.index = index //Not sure if we should use caps for parameters or if using self like in this case it's OK. [Mugu]
+//        }
+//        else
+//        {
+//            lazyContent = content;
+//            lazyIndex = index;
+//            hasLazyLoading = true;
+//        }
+//    }
 
-    func lazySetupView()
+
+    public init(viewModel: OnboardingContentViewModel, nibName: String)
     {
-        txtContent.text = lazyContent
-        index = lazyIndex!
+        self.viewModel = viewModel
+
+        super.init(nibName: nibName, bundle: nil)
+    }
+    
+    required public init?(coder aDecoder: NSCoder)
+    {
+        fatalError("init(coder:) has not been implemented")
     }
 
     @IBAction func SkipButtonTouched(sender: UIButton)
