@@ -13,6 +13,8 @@ public class LoginViewModel
     public var username: String?
     public var password: String?
     
+    public var loginCommand: Command!
+    
     var loginService: LoginService
     
     weak var delegate: LoginViewModelDelegate?
@@ -20,11 +22,14 @@ public class LoginViewModel
     init(loginService: LoginService)
     {
         self.loginService = loginService
-        username = nil
-        password = nil
+        self.username = nil
+        self.password = nil
+        self.loginCommand = DelegateCommand(execute: loginCommandExecute , canExecute: loginCommandCanExecute)
     }
     
-    func login()
+    //MARK: Commands
+    
+    private func loginCommandExecute()
     {
         let loginSucceded = loginService.Login(self.username!, password: self.password!)
         if loginSucceded
@@ -35,10 +40,9 @@ public class LoginViewModel
         {
             delegate?.loginFailed()
         }
-        
     }
     
-    func validateInput()-> Bool
+    private func loginCommandCanExecute()-> Bool
     {
         if (self.username == "" || self.username == nil)
         {

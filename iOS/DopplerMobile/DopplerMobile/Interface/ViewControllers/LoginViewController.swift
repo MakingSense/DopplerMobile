@@ -70,9 +70,9 @@ class LoginViewController: UIViewController, LoginViewModelDelegate
         sender.enabled = false
         loginViewModel.username = txtUsername.text!
         loginViewModel.password = txtPassword.text!
-        if loginViewModel.validateInput()
+        if loginViewModel.loginCommand.canExecute()
         {
-            loginViewModel.login()
+            loginViewModel.loginCommand.execute()
         }
     }
     
