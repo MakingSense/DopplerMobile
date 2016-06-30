@@ -14,27 +14,39 @@ public class OnboardingViewModel
     var content : [OnboardingContentViewModel] = []
     var currentIndex : Int = 0
 
-    func setupOnboardingContent()
+    func setupOnboardingContent() -> OnboardingContentViewModel?
     {
         //TODO: Get actual content from a localization solution.
         addTestContent()
 
         self.currentIndex = 0
+
+        return self.content[self.currentIndex]
     }
 
+    //TODO: Work a solution to not increment the index or repeat values when not necessary.
     func next() -> OnboardingContentViewModel?
     {
-        var contentToReturn : OnboardingContentViewModel?
-        
-        if(content.count > self.currentIndex)
+        if(content.count - 1 <= self.currentIndex)
         {
-            self.currentIndex += 1
-            contentToReturn = self.content[self.currentIndex]
-            
+            return nil
         }
-        //maybe we should handle the else? with an error or something [Mugu]
-        
-        return contentToReturn
+
+        self.currentIndex += 1
+
+        return self.content[self.currentIndex]
+    }
+
+    func previous() -> OnboardingContentViewModel?
+    {
+        if(self.currentIndex <= 0)
+        {
+            return nil
+        }
+
+        self.currentIndex -= 1
+
+        return self.content[self.currentIndex]
     }
 
     func skip()
