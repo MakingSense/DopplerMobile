@@ -52,9 +52,8 @@ class LoginViewController: UIViewController, LoginViewModelDelegate
     
     func loginSucceded()
     {
-        //TODO: DM-55 show welcome view
-        btnLogin.backgroundColor = UIColor.greenColor()
         lblErrorMessage.text = ""
+        performSegueWithIdentifier("loggedInSegue", sender:self)
     }
     
     func loginFailed() {

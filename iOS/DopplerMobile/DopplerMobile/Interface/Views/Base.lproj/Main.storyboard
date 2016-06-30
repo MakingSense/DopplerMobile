@@ -162,6 +162,7 @@
                         <outlet property="lblUsernameLine" destination="CL5-OU-IvG" id="2Le-d5-2D2"/>
                         <outlet property="txtPassword" destination="9Ot-CN-jog" id="UWT-eh-xwB"/>
                         <outlet property="txtUsername" destination="G9Y-8X-f5v" id="byY-Qb-ABY"/>
+                        <segue destination="lKc-qX-XHr" kind="show" identifier="loggedInSegue" id="3Ft-ew-gb8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HJO-Su-x4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
