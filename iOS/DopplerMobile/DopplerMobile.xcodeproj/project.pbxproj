@@ -22,7 +22,7 @@
 		24FD44B01D245DC3003E35A4 /* SimpleCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD44AF1D245DC3003E35A4 /* SimpleCommand.swift */; };
 		9CB9DEFA1D1B1E1100DAED48 /* OnboardingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB9DEF91D1B1E1100DAED48 /* OnboardingContentViewController.swift */; };
 		9CB9DEFC1D1C150100DAED48 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB9DEFB1D1C150100DAED48 /* OnboardingViewController.swift */; };
-		A8EF46D61D26B7B6000882A3 /* MSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EF46D51D26B7B6000882A3 /* MSButton.swift */; };
+		A8EF46D91D26C218000882A3 /* MSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EF46D81D26C218000882A3 /* MSButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +55,7 @@
 		24FD44AF1D245DC3003E35A4 /* SimpleCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCommand.swift; sourceTree = "<group>"; };
 		9CB9DEF91D1B1E1100DAED48 /* OnboardingContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewController.swift; sourceTree = "<group>"; };
 		9CB9DEFB1D1C150100DAED48 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
-		A8EF46D51D26B7B6000882A3 /* MSButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSButton.swift; sourceTree = "<group>"; };
+		A8EF46D81D26C218000882A3 /* MSButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +133,6 @@
 		2411986E1D1B134100330D87 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
-				A8EF46D51D26B7B6000882A3 /* MSButton.swift */,
 				241198841D1B164A00330D87 /* File */,
 				24FD44A81D244E12003E35A4 /* Command.swift */,
 				24FD44AF1D245DC3003E35A4 /* SimpleCommand.swift */,
@@ -175,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				241198661D1B134100330D87 /* DopplerMobile */,
+				A8EF46D71D26C1DC000882A3 /* MSComponents */,
 				242514731C7E45CD00785AE6 /* DopplerMobileTests */,
 				2425145D1C7E45CD00785AE6 /* Products */,
 			);
@@ -204,6 +204,15 @@
 				24FD44A21D22EBCB003E35A4 /* LoginViewModelDelegate.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A8EF46D71D26C1DC000882A3 /* MSComponents */ = {
+			isa = PBXGroup;
+			children = (
+				A8EF46D81D26C218000882A3 /* MSButton.swift */,
+			);
+			name = MSComponents;
+			path = DopplerMobile/MSComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,7 +326,7 @@
 				24FD44B01D245DC3003E35A4 /* SimpleCommand.swift in Sources */,
 				24F0FB6F1D1B2D5C00360346 /* User.swift in Sources */,
 				9CB9DEFC1D1C150100DAED48 /* OnboardingViewController.swift in Sources */,
-				A8EF46D61D26B7B6000882A3 /* MSButton.swift in Sources */,
+				A8EF46D91D26C218000882A3 /* MSButton.swift in Sources */,
 				24FD44A71D244A80003E35A4 /* LoginService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

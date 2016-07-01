@@ -10,15 +10,8 @@ public class SimpleCommand : Command
 {
     public var delegate: CommandDelegate?
     {
-        set
-        {
-            self.delegate = newValue
-        }
-        
-        get
-        {
-            return self.delegate
-        }
+        set { self.delegate = newValue }
+        get { return self.delegate }
     }
     
     private var canExecuteMethod: () -> Bool
@@ -29,7 +22,7 @@ public class SimpleCommand : Command
     {
         self.executeMethod = execute;
         self.canExecuteMethod = canExecute;
-        self._canExecute = false
+        self._canExecute = self.canExecuteMethod()
     }
     
     convenience init(execute: () -> ())
@@ -39,7 +32,6 @@ public class SimpleCommand : Command
     
     public func canExecute() -> Bool
     {
-        self._canExecute = self.canExecuteMethod()
         return self._canExecute
     }
     
@@ -51,7 +43,7 @@ public class SimpleCommand : Command
     public func raiseCanExecuteChanged()
     {
         let canExecuteOld = self._canExecute
-        self.canExecute()
+        self._canExecute = self.canExecuteMethod()
         if (self._canExecute != canExecuteOld)
         {
             self.delegate?.canExecuteChanged(self._canExecute)
