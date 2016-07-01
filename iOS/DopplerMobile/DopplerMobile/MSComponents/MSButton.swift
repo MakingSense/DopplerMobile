@@ -21,11 +21,7 @@ public class MSButton: UIButton, CommandDelegate
                 self.command!.delegate = self
             }            
         }
-        
-        get
-        {
-            return self.command
-        }
+        get { return self.command }
     }
     
     override public func touchesBegan(touches: Set<UITouch>?, withEvent event: UIEvent?)
