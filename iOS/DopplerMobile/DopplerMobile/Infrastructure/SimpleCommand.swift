@@ -6,26 +6,30 @@
 //  Copyright © 2016 Making Sense. All rights reserved.
 //
 
-import Foundation
-
 public class SimpleCommand : Command
 {
-    public var delegate: CommandDelegate? {
-        set {
+    public var delegate: CommandDelegate?
+    {
+        set
+        {
             self.delegate = newValue
         }
-        get {
+        
+        get
+        {
             return self.delegate
         }
     }
     
-    private var canExecuteMethod : () -> Bool
-    private var executeMethod : () -> ()
+    private var canExecuteMethod: () -> Bool
+    private var executeMethod: () -> ()
+    private var _canExecute: Bool
     
     init(execute: () -> (), canExecute: () -> Bool)
     {
         self.executeMethod = execute;
         self.canExecuteMethod = canExecute;
+        self._canExecute = false
     }
     
     convenience init(execute: () -> ())
@@ -35,7 +39,8 @@ public class SimpleCommand : Command
     
     public func canExecute() -> Bool
     {
-        return self.canExecuteMethod()
+        self._canExecute = self.canExecuteMethod()
+        return self._canExecute
     }
     
     public func execute()
@@ -45,6 +50,11 @@ public class SimpleCommand : Command
     
     public func raiseCanExecuteChanged()
     {
-        self.delegate?.canExecuteChanged(self.canExecute())
+        let canExecuteOld = self._canExecute
+        self.canExecute()
+        if (self._canExecute != canExecuteOld)
+        {
+            self.delegate?.canExecuteChanged(self._canExecute)
+        }
     }
 }

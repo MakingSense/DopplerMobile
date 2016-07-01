@@ -6,8 +6,6 @@
 //  Copyright © 2016 Making Sense. All rights reserved.
 //
 
-import Foundation
-
 public protocol CommandDelegate
 {
     func canExecuteChanged(canExecute: Bool)
@@ -15,7 +13,7 @@ public protocol CommandDelegate
 
 public protocol Command
 {
-    var delegate: CommandDelegate? {get set}
+    var delegate: CommandDelegate? { get set }
     
     func canExecute() -> Bool
     

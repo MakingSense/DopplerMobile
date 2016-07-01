@@ -6,13 +6,14 @@
 //  Copyright © 2016 Making Sense. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 public class MSButton: UIButton, CommandDelegate
 {
-    var command : Command? {
-        set {
+    var command : Command?
+    {
+        set
+        {
             self.command = newValue
             if (self.command != nil)
             {
@@ -20,26 +21,19 @@ public class MSButton: UIButton, CommandDelegate
                 self.command!.delegate = self
             }            
         }
-        get {
+        
+        get
+        {
             return self.command
         }
     }
     
-    public func canExecute() -> Bool
-    {
-        return self.command == nil ? true : self.command!.canExecute()
-    }
-    
-    public func execute()
+    override public func touchesBegan(touches: Set<UITouch>?, withEvent event: UIEvent?)
     {
         self.command?.execute()
+        super.touchesBegan(touches!, withEvent:event)
     }
     
-    public func getEnable() -> Bool
-    {
-        return self.command == nil ? self.enabled : self.command!.canExecute()
-    }
- 
     public func canExecuteChanged(canExecute: Bool)
     {
         self.enabled = canExecute
