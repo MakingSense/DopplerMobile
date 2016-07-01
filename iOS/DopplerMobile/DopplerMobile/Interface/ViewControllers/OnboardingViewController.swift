@@ -24,47 +24,29 @@ class OnboardingViewController: UIPageViewController, UIPageViewControllerDataSo
     // MARK: UIPageViewControllerDataSource
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController?
     {
-        let vm = previous()
-        if(vm != nil)
-        {
-            return createViewControllerFromViewModel(vm!)
-        }
-
-        return nil
+        let viewModel = previous()
+        return viewModel != nil ? createViewControllerFromViewModel(viewModel!) : nil
     }
 
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController?
     {
-        let vm = next()
-        if(vm != nil)
-        {
-            let vcs : [UIViewController] = self.viewControllers!
-
-            return createViewControllerFromViewModel(vm!)
-        }
-
-
-
-        return nil
+        let viewModel = next()
+        return viewModel != nil ? createViewControllerFromViewModel(viewModel!) : nil
     }
 
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int
     {
-        return (self.viewModel?.content.count)!
+        return self.viewModel!.pages.count
     }
 
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int
     {
-        return (self.viewModel?.currentIndex)!
+        return self.viewModel!.currentIndex
     }
 
     func presentViewControllerFromViewModel(viewController: UIViewController)
     {
-        var array : [UIViewController] = []
-
-        array.append(viewController)
-
-        self.setViewControllers(array, direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
+        self.setViewControllers([viewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
     }
 
     func createViewControllerFromViewModel(viewModel: OnboardingContentViewModel) -> UIViewController
@@ -75,7 +57,7 @@ class OnboardingViewController: UIPageViewController, UIPageViewControllerDataSo
 
         viewController.delegate = self
         
-        return (viewController as UIViewController?)!
+        return viewController
     }
 
 
@@ -102,12 +84,12 @@ class OnboardingViewController: UIPageViewController, UIPageViewControllerDataSo
     // MARK: OnboardingContentViewControllerDelegate
     func nextTouched()
     {
-        let vm = next()
-        if(vm != nil)
+        let viewModel = next()
+        if(viewModel != nil)
         {
-            let vc = createViewControllerFromViewModel(vm!)
+            let viewController = createViewControllerFromViewModel(viewModel!)
 
-            presentViewControllerFromViewModel(vc)
+            presentViewControllerFromViewModel(viewController)
         }
     }
 

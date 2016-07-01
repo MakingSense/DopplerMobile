@@ -11,7 +11,7 @@ import Foundation
 public class OnboardingViewModel
 {
     //As content is an array of strings I tried to use a plural name but "contents" just plain sucks. I left content.
-    var content : [OnboardingContentViewModel] = []
+    var pages : [OnboardingContentViewModel] = []
     var currentIndex : Int = 0
 
     func setupOnboardingContent() -> OnboardingContentViewModel?
@@ -21,20 +21,20 @@ public class OnboardingViewModel
 
         self.currentIndex = 0
 
-        return self.content[self.currentIndex]
+        return self.pages[self.currentIndex]
     }
 
     //TODO: Work a solution to not increment the index or repeat values when not necessary.
     func next() -> OnboardingContentViewModel?
     {
-        if(content.count - 1 <= self.currentIndex)
+        if(pages.count - 1 <= self.currentIndex)
         {
             return nil
         }
 
         self.currentIndex += 1
 
-        return self.content[self.currentIndex]
+        return self.pages[self.currentIndex]
     }
 
     func previous() -> OnboardingContentViewModel?
@@ -46,7 +46,7 @@ public class OnboardingViewModel
 
         self.currentIndex -= 1
 
-        return self.content[self.currentIndex]
+        return self.pages[self.currentIndex]
     }
 
     func skip()
@@ -63,7 +63,7 @@ public class OnboardingViewModel
         {
             let newContent = OnboardingContentViewModel()
             newContent.setup(string)
-            self.content.append(newContent)
+            self.pages.append(newContent)
         }
     }
 }

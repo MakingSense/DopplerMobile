@@ -15,7 +15,7 @@ protocol OnboardingContentViewControllerDelegate: class
     func skipTouched()
 }
 
-public class OnboardingContentViewController: UIViewController
+class OnboardingContentViewController: UIViewController
 {
     @IBOutlet weak var txtContent: UILabel!
 
@@ -26,25 +26,25 @@ public class OnboardingContentViewController: UIViewController
     var viewModel : OnboardingContentViewModel?
     weak var delegate: OnboardingContentViewControllerDelegate?
 
-    override public func viewDidLoad()
+    override func viewDidLoad()
     {
         super.viewDidLoad()
         txtContent.text = self.viewModel!.content
     }
 
-    public init(viewModel: OnboardingContentViewModel)
+    init(viewModel: OnboardingContentViewModel)
     {
         self.viewModel = viewModel
 
         super.init(nibName: nil, bundle: nil)
     }
 
-    required public init?(coder aDecoder: NSCoder)
+    required init?(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
     }
 
-    public func setupViewModel(viewModel: OnboardingContentViewModel)
+    func setupViewModel(viewModel: OnboardingContentViewModel)
     {
         self.viewModel = viewModel
     }
