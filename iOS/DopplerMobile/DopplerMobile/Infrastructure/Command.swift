@@ -8,10 +8,19 @@
 
 import Foundation
 
+public protocol CommandDelegate
+{
+    func canExecuteChanged(canExecute: Bool)
+}
+
 public protocol Command
 {
-    func canExecute()-> Bool
+    var delegate: CommandDelegate? {get set}
+    
+    func canExecute() -> Bool
     
     func execute()
+    
+    func raiseCanExecuteChanged()
 }
 

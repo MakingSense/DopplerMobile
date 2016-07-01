@@ -1,5 +1,5 @@
 //
-//  DelegateCommand.swift
+//  SimpleCommand.swift
 //  DopplerMobile
 //
 //  Created by Julian Waimann on 6/29/16.
@@ -8,8 +8,17 @@
 
 import Foundation
 
-public class DelegateCommand : Command
+public class SimpleCommand : Command
 {
+    public var delegate: CommandDelegate? {
+        set {
+            self.delegate = newValue
+        }
+        get {
+            return self.delegate
+        }
+    }
+    
     private var canExecuteMethod : () -> Bool
     private var executeMethod : () -> ()
     
@@ -32,5 +41,10 @@ public class DelegateCommand : Command
     public func execute()
     {
         self.executeMethod()
+    }
+    
+    public func raiseCanExecuteChanged()
+    {
+        self.delegate?.canExecuteChanged(self.canExecute())
     }
 }
