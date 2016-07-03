@@ -31,7 +31,7 @@ class DMLoginRequest: MSRequestProtocol
     
     func getParameterEncoding() -> AFHTTPClientParameterEncoding
     {
-        return AFPropertyListParameterEncoding
+        return AFJSONParameterEncoding
     }
     
     func getRelativePath() -> String
@@ -41,7 +41,7 @@ class DMLoginRequest: MSRequestProtocol
     
     func GetParams() -> [NSObject:AnyObject]?
     {
-        return [NSObject:AnyObject]()
+        return parameters
     }
     
     func getSuccessCallback() -> ((AFHTTPRequestOperation!, AnyObject!) -> Void)

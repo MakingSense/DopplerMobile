@@ -8,20 +8,21 @@
 
 import Foundation
 
-public class LoginViewModel
+public class LoginViewModel : DMLoginServiceDelegate
 {
     public var username: String?
     public var password: String?
     
     public var loginCommand: Command!
     
-    var loginService: LoginService
+    var loginService: DMLoginServiceProtocol
     
     weak var delegate: LoginViewModelDelegate?
     
-    init(loginService: LoginService)
+    init(loginService: DMLoginServiceProtocol)
     {
         self.loginService = loginService
+        self.loginService.delegate = self
         self.username = nil
         self.password = nil
         self.loginCommand = DelegateCommand(execute: loginCommandExecute , canExecute: loginCommandCanExecute)
@@ -31,15 +32,7 @@ public class LoginViewModel
     
     private func loginCommandExecute()
     {
-        let loginSucceded = loginService.Login(self.username!, password: self.password!)
-        if loginSucceded
-        {
-            delegate?.loginSucceded()
-        }
-        else
-        {
-            delegate?.loginFailed()
-        }
+        loginService.login(self.username!, password: self.password!)
     }
     
     private func loginCommandCanExecute()-> Bool
@@ -57,5 +50,22 @@ public class LoginViewModel
         }
         
         return true
+    }
+    
+    //MARK: Login Service Delegate method's
+    
+    func loginServiceWillBeginLogin()
+    {
+        self.delegate?.viewModelWillBeginLogin()
+    }
+    
+    func loginServiceDidFinishLogin()
+    {
+        self.delegate?.viewModelDidFinishLogin()
+    }
+    
+    func loginServiceDidFinishLoginWithError(title: String, description: String)
+    {
+        self.delegate?.viewModelDidFinishLoginWithError(title, description: description)
     }
 }

@@ -6,6 +6,8 @@
 //  Copyright © 2016 Lucas Pelizza. All rights reserved.
 //
 
+import Foundation
+
 class DMServiceHelper : DMServiceHelperProtocol
 {
 
@@ -15,7 +17,7 @@ class DMServiceHelper : DMServiceHelperProtocol
     //initialize the service with this is the only way for turn on the notification
     private let service = MSRequestService()
 
-    func login(username: String, password: String)
+    func login(username: String, password: String, callback: (success:Bool, error:NSError?) -> Void)
     {
         let params : [String:AnyObject] = [ "username" : username,
                                             "password" : password
@@ -23,8 +25,8 @@ class DMServiceHelper : DMServiceHelperProtocol
         
         let req = MSRequestData(method: MSTMethodsRequest.Login.rawValue, parameters: params, callback: {
             (success: Bool, error: NSError?) in
-            //TODO: execute something
             //TODO: we need to notify the resolution of the post
+            callback(success: success, error: error)
         })
         
         NSNotificationCenter.defaultCenter().postNotificationName(MSRequestService.RequestServiceNotificationKey, object: req)

@@ -32,7 +32,12 @@ class LoginViewController: UIViewController, LoginViewModelDelegate
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        loginViewModel = LoginViewModel(loginService: LoginService())
+        
+        //TODO: this is AWFUL!! WE NEED TO CHANGE IT!!!
+        let appDel = UIApplication.sharedApplication().delegate! as! AppDelegate
+        
+        // Call a method on the CustomController property of the AppDelegate
+        loginViewModel = LoginViewModel(loginService: appDel.container.resolve(DMLoginServiceProtocol.self)!)
         loginViewModel.delegate = self
     }
     
@@ -50,16 +55,23 @@ class LoginViewController: UIViewController, LoginViewModelDelegate
         lblErrorMessage.text = "Password required"
     }
     
-    func loginSucceded()
+    func viewModelWillBeginLogin()
+    {
+        //TODO: need to show a activity
+    }
+    
+    func viewModelDidFinishLogin()
     {
         lblErrorMessage.text = ""
         performSegueWithIdentifier("loggedInSegue", sender:self)
     }
     
-    func loginFailed() {
+    func viewModelDidFinishLoginWithError(title: String, description: String)
+    {
+        //TODO: maybe it could show an Alert with the Title and description
         //TODO: DM-52 service implementation fail scenarios
         btnLogin.enabled = true
-        lblErrorMessage.text = "An error ocurred. Please, try again later"
+        lblErrorMessage.text = description
     }
     
     //MARK: Login Button's Actions

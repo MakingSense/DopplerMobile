@@ -14,7 +14,9 @@ protocol LoginViewModelDelegate: class
     
     func passwordValidationFailed()
     
-    func loginSucceded()
+    func viewModelWillBeginLogin()
+
+    func viewModelDidFinishLogin()
     
-    func loginFailed()
+    func viewModelDidFinishLoginWithError(title: String, description: String)
 }

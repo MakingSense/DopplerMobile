@@ -25,7 +25,8 @@ class DMLoginPostProcessor: MSProcessorBase
     override func saveObject(object: MSEntityBase)
     {
         DMLogin.createWithEntity(object as! DMLogin)
-        NSNotificationCenter.defaultCenter().postNotificationName(self.getNotificationKey(), object: nil)
+        //TODO: this class does not need the Notification
+        //NSNotificationCenter.defaultCenter().postNotificationName(self.getNotificationKey(), object: nil)
     }
     
     //TODO: We need to remove this from here and put on the MSProcessorBase
