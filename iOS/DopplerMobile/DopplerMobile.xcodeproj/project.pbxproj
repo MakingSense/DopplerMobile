@@ -13,14 +13,15 @@
 		2411987B1D1B134100330D87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 241198731D1B134100330D87 /* Assets.xcassets */; };
 		2411987C1D1B134100330D87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 241198741D1B134100330D87 /* LaunchScreen.storyboard */; };
 		2411987D1D1B134100330D87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 241198761D1B134100330D87 /* Main.storyboard */; };
-		2411987F1D1B162E00330D87 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 2411987E1D1B162E00330D87 /* File */; };
-		241198831D1B164100330D87 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 241198821D1B164100330D87 /* File */; };
 		242514751C7E45CD00785AE6 /* DopplerMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242514741C7E45CD00785AE6 /* DopplerMobileTests.swift */; };
 		A83377C61D22CCBF00A25677 /* DopplerMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A83377C41D22CCBF00A25677 /* DopplerMobile.xcdatamodeld */; };
 		A83377C91D22CD6E00A25677 /* DMLogin+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83377C71D22CD6E00A25677 /* DMLogin+CoreDataProperties.swift */; };
 		A83377CA1D22CD6E00A25677 /* DMLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83377C81D22CD6E00A25677 /* DMLogin.swift */; };
 		A83377CE1D22D58700A25677 /* DMLoginPostProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83377CD1D22D58700A25677 /* DMLoginPostProcessor.swift */; };
 		A83377D01D22D64E00A25677 /* DMLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83377CF1D22D64E00A25677 /* DMLoginRequest.swift */; };
+		A8817C251D29636000C9BF9E /* DMLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8817C241D29636000C9BF9E /* DMLoginService.swift */; };
+		A8817C291D2967A100C9BF9E /* DMLoginServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8817C281D2967A100C9BF9E /* DMLoginServiceProtocol.swift */; };
+		A8817C2B1D296A5300C9BF9E /* DMServiceHelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8817C2A1D296A5300C9BF9E /* DMServiceHelperProtocol.swift */; };
 		A8CD13E01D21AA5800673653 /* MSEntityBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13821D21AA5800673653 /* MSEntityBase.swift */; };
 		A8CD140D1D21AA5800673653 /* MSRestClientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13D01D21AA5800673653 /* MSRestClientManager.swift */; };
 		A8CD140E1D21AA5800673653 /* MSRestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13D11D21AA5800673653 /* MSRestConfiguration.swift */; };
@@ -33,8 +34,8 @@
 		A8CD14151D21AA5800673653 /* MSResponseMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13DC1D21AA5800673653 /* MSResponseMessage.swift */; };
 		A8CD14161D21AA5800673653 /* MSRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13DE1D21AA5800673653 /* MSRequestService.swift */; };
 		A8CD14171D21AA5800673653 /* MSRequestServiceInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13DF1D21AA5800673653 /* MSRequestServiceInformation.swift */; };
-		A8CD14211D21AACD00673653 /* MSTRestLayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD14191D21AACD00673653 /* MSTRestLayerManager.swift */; };
-		A8CD14221D21AACD00673653 /* MSTServiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD141A1D21AACD00673653 /* MSTServiceHelper.swift */; };
+		A8CD14211D21AACD00673653 /* DMRestLayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD14191D21AACD00673653 /* DMRestLayerManager.swift */; };
+		A8CD14221D21AACD00673653 /* DMServiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD141A1D21AACD00673653 /* DMServiceHelper.swift */; };
 		A8CD14271D21B77200673653 /* MSTMethodsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD14261D21B77200673653 /* MSTMethodsRequest.swift */; };
 		FCD72D6CA04F856DFE4E4277 /* Pods_DopplerMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3740F516FC4DC93032E5650B /* Pods_DopplerMobile.framework */; };
 /* End PBXBuildFile section */
@@ -56,8 +57,6 @@
 		241198731D1B134100330D87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		241198751D1B134100330D87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		241198771D1B134100330D87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2411987E1D1B162E00330D87 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
-		241198821D1B164100330D87 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
 		2425145C1C7E45CD00785AE6 /* DopplerMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DopplerMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		242514701C7E45CD00785AE6 /* DopplerMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DopplerMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		242514741C7E45CD00785AE6 /* DopplerMobileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DopplerMobileTests.swift; sourceTree = "<group>"; };
@@ -71,6 +70,9 @@
 		A83377CC1D22D3F500A25677 /* DopplerMobile-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DopplerMobile-Bridging-Header.h"; sourceTree = "<group>"; };
 		A83377CD1D22D58700A25677 /* DMLoginPostProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMLoginPostProcessor.swift; sourceTree = "<group>"; };
 		A83377CF1D22D64E00A25677 /* DMLoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMLoginRequest.swift; sourceTree = "<group>"; };
+		A8817C241D29636000C9BF9E /* DMLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMLoginService.swift; sourceTree = "<group>"; };
+		A8817C281D2967A100C9BF9E /* DMLoginServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMLoginServiceProtocol.swift; sourceTree = "<group>"; };
+		A8817C2A1D296A5300C9BF9E /* DMServiceHelperProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMServiceHelperProtocol.swift; sourceTree = "<group>"; };
 		A8CD13821D21AA5800673653 /* MSEntityBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSEntityBase.swift; sourceTree = "<group>"; };
 		A8CD13D01D21AA5800673653 /* MSRestClientManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSRestClientManager.swift; sourceTree = "<group>"; };
 		A8CD13D11D21AA5800673653 /* MSRestConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSRestConfiguration.swift; sourceTree = "<group>"; };
@@ -83,8 +85,8 @@
 		A8CD13DC1D21AA5800673653 /* MSResponseMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSResponseMessage.swift; sourceTree = "<group>"; };
 		A8CD13DE1D21AA5800673653 /* MSRequestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSRequestService.swift; sourceTree = "<group>"; };
 		A8CD13DF1D21AA5800673653 /* MSRequestServiceInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSRequestServiceInformation.swift; sourceTree = "<group>"; };
-		A8CD14191D21AACD00673653 /* MSTRestLayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSTRestLayerManager.swift; sourceTree = "<group>"; };
-		A8CD141A1D21AACD00673653 /* MSTServiceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSTServiceHelper.swift; sourceTree = "<group>"; };
+		A8CD14191D21AACD00673653 /* DMRestLayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMRestLayerManager.swift; sourceTree = "<group>"; };
+		A8CD141A1D21AACD00673653 /* DMServiceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMServiceHelper.swift; sourceTree = "<group>"; };
 		A8CD14261D21B77200673653 /* MSTMethodsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSTMethodsRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,7 +143,6 @@
 		241198691D1B134100330D87 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				2411987E1D1B162E00330D87 /* File */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -168,7 +169,8 @@
 		2411986C1D1B134100330D87 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				241198821D1B164100330D87 /* File */,
+				A8817C241D29636000C9BF9E /* DMLoginService.swift */,
+				A8817C281D2967A100C9BF9E /* DMLoginServiceProtocol.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -176,8 +178,9 @@
 		2411986E1D1B134100330D87 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
-				A8CD141A1D21AACD00673653 /* MSTServiceHelper.swift */,
-				A8CD14191D21AACD00673653 /* MSTRestLayerManager.swift */,
+				A8CD141A1D21AACD00673653 /* DMServiceHelper.swift */,
+				A8817C2A1D296A5300C9BF9E /* DMServiceHelperProtocol.swift */,
+				A8CD14191D21AACD00673653 /* DMRestLayerManager.swift */,
 				A8CD141B1D21AACD00673653 /* Processor */,
 				A8CD141D1D21AACD00673653 /* Requests */,
 			);
@@ -419,10 +422,8 @@
 			files = (
 				2411987C1D1B134100330D87 /* LaunchScreen.storyboard in Resources */,
 				2411987B1D1B134100330D87 /* Assets.xcassets in Resources */,
-				241198831D1B164100330D87 /* File in Resources */,
 				241198791D1B134100330D87 /* Info.plist in Resources */,
 				2411987D1D1B134100330D87 /* Main.storyboard in Resources */,
-				2411987F1D1B162E00330D87 /* File in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,8 +491,10 @@
 			files = (
 				A8CD14111D21AA5800673653 /* MSRestConstants.swift in Sources */,
 				A8CD14171D21AA5800673653 /* MSRequestServiceInformation.swift in Sources */,
-				A8CD14211D21AACD00673653 /* MSTRestLayerManager.swift in Sources */,
+				A8CD14211D21AACD00673653 /* DMRestLayerManager.swift in Sources */,
+				A8817C2B1D296A5300C9BF9E /* DMServiceHelperProtocol.swift in Sources */,
 				A83377CE1D22D58700A25677 /* DMLoginPostProcessor.swift in Sources */,
+				A8817C251D29636000C9BF9E /* DMLoginService.swift in Sources */,
 				A8CD13E01D21AA5800673653 /* MSEntityBase.swift in Sources */,
 				A8CD14141D21AA5800673653 /* MSRequestProtocol.swift in Sources */,
 				A8CD14151D21AA5800673653 /* MSResponseMessage.swift in Sources */,
@@ -499,6 +502,7 @@
 				A8CD140D1D21AA5800673653 /* MSRestClientManager.swift in Sources */,
 				A8CD140E1D21AA5800673653 /* MSRestConfiguration.swift in Sources */,
 				A8CD14161D21AA5800673653 /* MSRequestService.swift in Sources */,
+				A8817C291D2967A100C9BF9E /* DMLoginServiceProtocol.swift in Sources */,
 				A8CD14131D21AA5800673653 /* MSRequestConfiguration.swift in Sources */,
 				A8CD14121D21AA5800673653 /* MSRequestCallback.swift in Sources */,
 				A8CD140F1D21AA5800673653 /* MSMainProcessor.swift in Sources */,
@@ -508,7 +512,7 @@
 				A83377C91D22CD6E00A25677 /* DMLogin+CoreDataProperties.swift in Sources */,
 				A8CD14101D21AA5800673653 /* MSProcessorBase.swift in Sources */,
 				241198781D1B134100330D87 /* AppDelegate.swift in Sources */,
-				A8CD14221D21AACD00673653 /* MSTServiceHelper.swift in Sources */,
+				A8CD14221D21AACD00673653 /* DMServiceHelper.swift in Sources */,
 				A83377CA1D22CD6E00A25677 /* DMLogin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,14 +19,7 @@ class DMLoginPostProcessor: MSProcessorBase
     
     func saveArrayObject(objectArray: [MSEntityBase])
     {
-        
-        //TODO: this methods not applay to this Model
-
-//        for post in objectArray as! [DPLogin]
-//        {
-//            DPLogin.createWithEntity(post)
-//        }
-//        NSNotificationCenter.defaultCenter().postNotificationName(MSTConstants.NotificationKey.kPostHaveNewData, object: nil)
+        //this methods not applay to this Model
     }
     
     func saveObject(object: MSEntityBase)
@@ -44,11 +37,11 @@ class DMLoginPostProcessor: MSProcessorBase
     
     override func getNotificationKey() -> String
     {
-        return ""
+        return self.getEntityName() + "NotificationsUpdate"
     }
     
     override func getEntityName() -> String
     {
-        return ""
+        return NSStringFromClass(self.dynamicType)
     }
 }

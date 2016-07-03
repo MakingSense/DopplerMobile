@@ -9,5 +9,4 @@
 enum MSTMethodsRequest: Int
 {
     case Login = 1
-    case CreatePost = 2
 }
