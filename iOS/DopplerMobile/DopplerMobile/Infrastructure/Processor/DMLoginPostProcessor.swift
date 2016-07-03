@@ -22,14 +22,14 @@ class DMLoginPostProcessor: MSProcessorBase
         //this methods not applay to this Model
     }
     
-    func saveObject(object: MSEntityBase)
+    override func saveObject(object: MSEntityBase)
     {
         DMLogin.createWithEntity(object as! DMLogin)
         NSNotificationCenter.defaultCenter().postNotificationName(self.getNotificationKey(), object: nil)
     }
     
     //TODO: We need to remove this from here and put on the MSProcessorBase
-    func parseObject(json: JSON) -> MSEntityBase
+    override func parseObject(json: JSON) -> MSEntityBase
     {
         return Mapper<DMLogin>().map(String(json))!
     }

@@ -30,13 +30,13 @@ class MSProcessorBase
     
     private func handleObject(response: JSON)
     {
-//        let responseData = parseObject(response)
-//        self.saveObject(responseData)
+        let responseData = parseObject(response)
+        self.saveObject(responseData)
     }
     
     private func handleArray(response: JSON)
     {
-        let responseObjectArray = parseArray(response)
+//        let responseObjectArray = parseArray(response)
 //        self.saveArrayObject(responseObjectArray)
     }
     
@@ -49,19 +49,18 @@ class MSProcessorBase
         }
         return entityListToReturn
     }
-    
-    func parseObject(json: [[String : AnyObject]])
-    {
-//        Sync.changes(json, inEntityNamed: self.getEntityName(), dataStack: self.dataStack, completion: { error in
-//            if (!error)
-//            {
-//                launch notification with self.getNotificationKey()
-//            }
-//        })
-
-    }
 
 //MARK: - Abstract Methods
+    
+    func saveObject(object: MSEntityBase)
+    {
+       preconditionFailure("Should be overriden")
+    }
+    
+    func parseObject(json: JSON) -> MSEntityBase
+    {
+        preconditionFailure("Should be overriden")
+    }
     
     class func Create() -> MSProcessorBase
     {

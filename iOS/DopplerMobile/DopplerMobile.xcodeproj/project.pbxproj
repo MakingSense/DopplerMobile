@@ -8,36 +8,42 @@
 
 /* Begin PBXBuildFile section */
 		241198781D1B134100330D87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241198681D1B134100330D87 /* AppDelegate.swift */; };
-		241198791D1B134100330D87 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2411986D1D1B134100330D87 /* Info.plist */; };
 		2411987A1D1B134100330D87 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241198711D1B134100330D87 /* LoginViewController.swift */; };
 		2411987B1D1B134100330D87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 241198731D1B134100330D87 /* Assets.xcassets */; };
 		2411987C1D1B134100330D87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 241198741D1B134100330D87 /* LaunchScreen.storyboard */; };
 		2411987D1D1B134100330D87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 241198761D1B134100330D87 /* Main.storyboard */; };
 		242514751C7E45CD00785AE6 /* DopplerMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242514741C7E45CD00785AE6 /* DopplerMobileTests.swift */; };
-		A83377C61D22CCBF00A25677 /* DopplerMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A83377C41D22CCBF00A25677 /* DopplerMobile.xcdatamodeld */; };
-		A83377C91D22CD6E00A25677 /* DMLogin+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83377C71D22CD6E00A25677 /* DMLogin+CoreDataProperties.swift */; };
-		A83377CA1D22CD6E00A25677 /* DMLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83377C81D22CD6E00A25677 /* DMLogin.swift */; };
-		A83377CE1D22D58700A25677 /* DMLoginPostProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83377CD1D22D58700A25677 /* DMLoginPostProcessor.swift */; };
-		A83377D01D22D64E00A25677 /* DMLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83377CF1D22D64E00A25677 /* DMLoginRequest.swift */; };
-		A8817C251D29636000C9BF9E /* DMLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8817C241D29636000C9BF9E /* DMLoginService.swift */; };
-		A8817C291D2967A100C9BF9E /* DMLoginServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8817C281D2967A100C9BF9E /* DMLoginServiceProtocol.swift */; };
-		A8817C2B1D296A5300C9BF9E /* DMServiceHelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8817C2A1D296A5300C9BF9E /* DMServiceHelperProtocol.swift */; };
-		A8CD13E01D21AA5800673653 /* MSEntityBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13821D21AA5800673653 /* MSEntityBase.swift */; };
-		A8CD140D1D21AA5800673653 /* MSRestClientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13D01D21AA5800673653 /* MSRestClientManager.swift */; };
-		A8CD140E1D21AA5800673653 /* MSRestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13D11D21AA5800673653 /* MSRestConfiguration.swift */; };
-		A8CD140F1D21AA5800673653 /* MSMainProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13D31D21AA5800673653 /* MSMainProcessor.swift */; };
-		A8CD14101D21AA5800673653 /* MSProcessorBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13D41D21AA5800673653 /* MSProcessorBase.swift */; };
-		A8CD14111D21AA5800673653 /* MSRestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13D61D21AA5800673653 /* MSRestConstants.swift */; };
-		A8CD14121D21AA5800673653 /* MSRequestCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13D81D21AA5800673653 /* MSRequestCallback.swift */; };
-		A8CD14131D21AA5800673653 /* MSRequestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13D91D21AA5800673653 /* MSRequestConfiguration.swift */; };
-		A8CD14141D21AA5800673653 /* MSRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13DA1D21AA5800673653 /* MSRequestProtocol.swift */; };
-		A8CD14151D21AA5800673653 /* MSResponseMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13DC1D21AA5800673653 /* MSResponseMessage.swift */; };
-		A8CD14161D21AA5800673653 /* MSRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13DE1D21AA5800673653 /* MSRequestService.swift */; };
-		A8CD14171D21AA5800673653 /* MSRequestServiceInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13DF1D21AA5800673653 /* MSRequestServiceInformation.swift */; };
-		A8CD14211D21AACD00673653 /* DMRestLayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD14191D21AACD00673653 /* DMRestLayerManager.swift */; };
-		A8CD14221D21AACD00673653 /* DMServiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD141A1D21AACD00673653 /* DMServiceHelper.swift */; };
-		A8CD14271D21B77200673653 /* MSTMethodsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD14261D21B77200673653 /* MSTMethodsRequest.swift */; };
-		FCD72D6CA04F856DFE4E4277 /* Pods_DopplerMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3740F516FC4DC93032E5650B /* Pods_DopplerMobile.framework */; };
+		24F0FB6F1D1B2D5C00360346 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F0FB6E1D1B2D5C00360346 /* User.swift */; };
+		24F0FB731D1C109E00360346 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F0FB721D1C109E00360346 /* LoginViewModel.swift */; };
+		24FD44A31D22EBCB003E35A4 /* LoginViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD44A21D22EBCB003E35A4 /* LoginViewModelDelegate.swift */; };
+		24FD44A91D244E12003E35A4 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD44A81D244E12003E35A4 /* Command.swift */; };
+		24FD44B01D245DC3003E35A4 /* DelegateCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD44AF1D245DC3003E35A4 /* DelegateCommand.swift */; };
+		9CB9DEFA1D1B1E1100DAED48 /* OnboardingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB9DEF91D1B1E1100DAED48 /* OnboardingContentViewController.swift */; };
+		9CB9DEFC1D1C150100DAED48 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB9DEFB1D1C150100DAED48 /* OnboardingViewController.swift */; };
+		A8D8250B1D29A57400EA276F /* MSEntityBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D824AD1D29A57400EA276F /* MSEntityBase.swift */; };
+		A8D825381D29A57400EA276F /* MSRestClientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D824FB1D29A57400EA276F /* MSRestClientManager.swift */; };
+		A8D825391D29A57400EA276F /* MSRestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D824FC1D29A57400EA276F /* MSRestConfiguration.swift */; };
+		A8D8253A1D29A57400EA276F /* MSMainProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D824FE1D29A57400EA276F /* MSMainProcessor.swift */; };
+		A8D8253B1D29A57400EA276F /* MSProcessorBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D824FF1D29A57400EA276F /* MSProcessorBase.swift */; };
+		A8D8253C1D29A57400EA276F /* MSRestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D825011D29A57400EA276F /* MSRestConstants.swift */; };
+		A8D8253D1D29A57400EA276F /* MSRequestCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D825031D29A57400EA276F /* MSRequestCallback.swift */; };
+		A8D8253E1D29A57400EA276F /* MSRequestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D825041D29A57400EA276F /* MSRequestConfiguration.swift */; };
+		A8D8253F1D29A57400EA276F /* MSRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D825051D29A57400EA276F /* MSRequestProtocol.swift */; };
+		A8D825401D29A57400EA276F /* MSResponseMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D825071D29A57400EA276F /* MSResponseMessage.swift */; };
+		A8D825411D29A57400EA276F /* MSRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D825091D29A57400EA276F /* MSRequestService.swift */; };
+		A8D825421D29A57400EA276F /* MSRequestServiceInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D8250A1D29A57400EA276F /* MSRequestServiceInformation.swift */; };
+		A8D825471D29A58B00EA276F /* DMLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D825431D29A58B00EA276F /* DMLogin.swift */; };
+		A8D825481D29A58B00EA276F /* DMLogin+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D825441D29A58B00EA276F /* DMLogin+CoreDataProperties.swift */; };
+		A8D825491D29A58B00EA276F /* DopplerMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A8D825451D29A58B00EA276F /* DopplerMobile.xcdatamodeld */; };
+		A8D8254C1D29A5D300EA276F /* DMLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D8254A1D29A5D300EA276F /* DMLoginService.swift */; };
+		A8D8254D1D29A5D300EA276F /* DMLoginServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D8254B1D29A5D300EA276F /* DMLoginServiceProtocol.swift */; };
+		A8D825561D29A5ED00EA276F /* DMRestLayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D8254E1D29A5ED00EA276F /* DMRestLayerManager.swift */; };
+		A8D825571D29A5ED00EA276F /* DMServiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D8254F1D29A5ED00EA276F /* DMServiceHelper.swift */; };
+		A8D825581D29A5ED00EA276F /* DMServiceHelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D825501D29A5ED00EA276F /* DMServiceHelperProtocol.swift */; };
+		A8D825591D29A5ED00EA276F /* DMLoginPostProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D825521D29A5ED00EA276F /* DMLoginPostProcessor.swift */; };
+		A8D8255A1D29A5ED00EA276F /* DMLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D825541D29A5ED00EA276F /* DMLoginRequest.swift */; };
+		A8D8255B1D29A5ED00EA276F /* MSTMethodsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D825551D29A5ED00EA276F /* MSTMethodsRequest.swift */; };
+		BC112F576A66D686F9935253 /* Pods_DopplerMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8ECE2CFB793AC6B632C9141 /* Pods_DopplerMobile.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,33 +67,39 @@
 		242514701C7E45CD00785AE6 /* DopplerMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DopplerMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		242514741C7E45CD00785AE6 /* DopplerMobileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DopplerMobileTests.swift; sourceTree = "<group>"; };
 		242514761C7E45CD00785AE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3740F516FC4DC93032E5650B /* Pods_DopplerMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DopplerMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9048850D5C1B170CE0E787B3 /* Pods-DopplerMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DopplerMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DopplerMobile/Pods-DopplerMobile.debug.xcconfig"; sourceTree = "<group>"; };
-		A0671CC02C7AAD9AB5466E82 /* Pods-DopplerMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DopplerMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-DopplerMobile/Pods-DopplerMobile.release.xcconfig"; sourceTree = "<group>"; };
-		A83377C51D22CCBF00A25677 /* DopplerMobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DopplerMobile.xcdatamodel; sourceTree = "<group>"; };
-		A83377C71D22CD6E00A25677 /* DMLogin+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DMLogin+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		A83377C81D22CD6E00A25677 /* DMLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMLogin.swift; sourceTree = "<group>"; };
-		A83377CC1D22D3F500A25677 /* DopplerMobile-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DopplerMobile-Bridging-Header.h"; sourceTree = "<group>"; };
-		A83377CD1D22D58700A25677 /* DMLoginPostProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMLoginPostProcessor.swift; sourceTree = "<group>"; };
-		A83377CF1D22D64E00A25677 /* DMLoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMLoginRequest.swift; sourceTree = "<group>"; };
-		A8817C241D29636000C9BF9E /* DMLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMLoginService.swift; sourceTree = "<group>"; };
-		A8817C281D2967A100C9BF9E /* DMLoginServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMLoginServiceProtocol.swift; sourceTree = "<group>"; };
-		A8817C2A1D296A5300C9BF9E /* DMServiceHelperProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMServiceHelperProtocol.swift; sourceTree = "<group>"; };
-		A8CD13821D21AA5800673653 /* MSEntityBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSEntityBase.swift; sourceTree = "<group>"; };
-		A8CD13D01D21AA5800673653 /* MSRestClientManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSRestClientManager.swift; sourceTree = "<group>"; };
-		A8CD13D11D21AA5800673653 /* MSRestConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSRestConfiguration.swift; sourceTree = "<group>"; };
-		A8CD13D31D21AA5800673653 /* MSMainProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSMainProcessor.swift; sourceTree = "<group>"; };
-		A8CD13D41D21AA5800673653 /* MSProcessorBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSProcessorBase.swift; sourceTree = "<group>"; };
-		A8CD13D61D21AA5800673653 /* MSRestConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSRestConstants.swift; sourceTree = "<group>"; };
-		A8CD13D81D21AA5800673653 /* MSRequestCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSRequestCallback.swift; sourceTree = "<group>"; };
-		A8CD13D91D21AA5800673653 /* MSRequestConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSRequestConfiguration.swift; sourceTree = "<group>"; };
-		A8CD13DA1D21AA5800673653 /* MSRequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSRequestProtocol.swift; sourceTree = "<group>"; };
-		A8CD13DC1D21AA5800673653 /* MSResponseMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSResponseMessage.swift; sourceTree = "<group>"; };
-		A8CD13DE1D21AA5800673653 /* MSRequestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSRequestService.swift; sourceTree = "<group>"; };
-		A8CD13DF1D21AA5800673653 /* MSRequestServiceInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSRequestServiceInformation.swift; sourceTree = "<group>"; };
-		A8CD14191D21AACD00673653 /* DMRestLayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMRestLayerManager.swift; sourceTree = "<group>"; };
-		A8CD141A1D21AACD00673653 /* DMServiceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMServiceHelper.swift; sourceTree = "<group>"; };
-		A8CD14261D21B77200673653 /* MSTMethodsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSTMethodsRequest.swift; sourceTree = "<group>"; };
+		24F0FB6E1D1B2D5C00360346 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		24F0FB721D1C109E00360346 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		24FD44A21D22EBCB003E35A4 /* LoginViewModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModelDelegate.swift; sourceTree = "<group>"; };
+		24FD44A81D244E12003E35A4 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		24FD44AF1D245DC3003E35A4 /* DelegateCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateCommand.swift; sourceTree = "<group>"; };
+		502FBD953E2C68FACB1EAF87 /* Pods-DopplerMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DopplerMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-DopplerMobile/Pods-DopplerMobile.release.xcconfig"; sourceTree = "<group>"; };
+		6197A56F8FF8AC19008A76A2 /* Pods-DopplerMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DopplerMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DopplerMobile/Pods-DopplerMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		9CB9DEF91D1B1E1100DAED48 /* OnboardingContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewController.swift; sourceTree = "<group>"; };
+		9CB9DEFB1D1C150100DAED48 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		A8D824AD1D29A57400EA276F /* MSEntityBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSEntityBase.swift; sourceTree = "<group>"; };
+		A8D824FB1D29A57400EA276F /* MSRestClientManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSRestClientManager.swift; sourceTree = "<group>"; };
+		A8D824FC1D29A57400EA276F /* MSRestConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSRestConfiguration.swift; sourceTree = "<group>"; };
+		A8D824FE1D29A57400EA276F /* MSMainProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSMainProcessor.swift; sourceTree = "<group>"; };
+		A8D824FF1D29A57400EA276F /* MSProcessorBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSProcessorBase.swift; sourceTree = "<group>"; };
+		A8D825011D29A57400EA276F /* MSRestConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSRestConstants.swift; sourceTree = "<group>"; };
+		A8D825031D29A57400EA276F /* MSRequestCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSRequestCallback.swift; sourceTree = "<group>"; };
+		A8D825041D29A57400EA276F /* MSRequestConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSRequestConfiguration.swift; sourceTree = "<group>"; };
+		A8D825051D29A57400EA276F /* MSRequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSRequestProtocol.swift; sourceTree = "<group>"; };
+		A8D825071D29A57400EA276F /* MSResponseMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSResponseMessage.swift; sourceTree = "<group>"; };
+		A8D825091D29A57400EA276F /* MSRequestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSRequestService.swift; sourceTree = "<group>"; };
+		A8D8250A1D29A57400EA276F /* MSRequestServiceInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSRequestServiceInformation.swift; sourceTree = "<group>"; };
+		A8D825431D29A58B00EA276F /* DMLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMLogin.swift; sourceTree = "<group>"; };
+		A8D825441D29A58B00EA276F /* DMLogin+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DMLogin+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A8D825461D29A58B00EA276F /* DopplerMobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DopplerMobile.xcdatamodel; sourceTree = "<group>"; };
+		A8D8254A1D29A5D300EA276F /* DMLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMLoginService.swift; sourceTree = "<group>"; };
+		A8D8254B1D29A5D300EA276F /* DMLoginServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMLoginServiceProtocol.swift; sourceTree = "<group>"; };
+		A8D8254E1D29A5ED00EA276F /* DMRestLayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMRestLayerManager.swift; sourceTree = "<group>"; };
+		A8D8254F1D29A5ED00EA276F /* DMServiceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMServiceHelper.swift; sourceTree = "<group>"; };
+		A8D825501D29A5ED00EA276F /* DMServiceHelperProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMServiceHelperProtocol.swift; sourceTree = "<group>"; };
+		A8D825521D29A5ED00EA276F /* DMLoginPostProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMLoginPostProcessor.swift; sourceTree = "<group>"; };
+		A8D825541D29A5ED00EA276F /* DMLoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMLoginRequest.swift; sourceTree = "<group>"; };
+		A8D825551D29A5ED00EA276F /* MSTMethodsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSTMethodsRequest.swift; sourceTree = "<group>"; };
+		D8ECE2CFB793AC6B632C9141 /* Pods_DopplerMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DopplerMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCD72D6CA04F856DFE4E4277 /* Pods_DopplerMobile.framework in Frameworks */,
+				BC112F576A66D686F9935253 /* Pods_DopplerMobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,14 +121,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		20861F86C4051714A98CD2CB /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3740F516FC4DC93032E5650B /* Pods_DopplerMobile.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		241198661D1B134100330D87 /* DopplerMobile */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,7 +128,7 @@
 				241198671D1B134100330D87 /* Application */,
 				2411986A1D1B134100330D87 /* Domain */,
 				2411986E1D1B134100330D87 /* Infrastructure */,
-				A8CD13801D21AA5800673653 /* Infrastructure-MSKit */,
+				A8D824AB1D29A57400EA276F /* Infrastructure-MSKit */,
 				2411986D1D1B134100330D87 /* Info.plist */,
 			);
 			path = DopplerMobile;
@@ -133,7 +137,6 @@
 		241198671D1B134100330D87 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				A83377CC1D22D3F500A25677 /* DopplerMobile-Bridging-Header.h */,
 				241198681D1B134100330D87 /* AppDelegate.swift */,
 				241198691D1B134100330D87 /* ViewModels */,
 			);
@@ -143,6 +146,7 @@
 		241198691D1B134100330D87 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				24F0FB721D1C109E00360346 /* LoginViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -159,9 +163,10 @@
 		2411986B1D1B134100330D87 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A83377C71D22CD6E00A25677 /* DMLogin+CoreDataProperties.swift */,
-				A83377C81D22CD6E00A25677 /* DMLogin.swift */,
-				A83377C41D22CCBF00A25677 /* DopplerMobile.xcdatamodeld */,
+				A8D825431D29A58B00EA276F /* DMLogin.swift */,
+				A8D825441D29A58B00EA276F /* DMLogin+CoreDataProperties.swift */,
+				A8D825451D29A58B00EA276F /* DopplerMobile.xcdatamodeld */,
+				24F0FB6E1D1B2D5C00360346 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -169,8 +174,8 @@
 		2411986C1D1B134100330D87 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				A8817C241D29636000C9BF9E /* DMLoginService.swift */,
-				A8817C281D2967A100C9BF9E /* DMLoginServiceProtocol.swift */,
+				A8D8254A1D29A5D300EA276F /* DMLoginService.swift */,
+				A8D8254B1D29A5D300EA276F /* DMLoginServiceProtocol.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -178,11 +183,13 @@
 		2411986E1D1B134100330D87 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
-				A8CD141A1D21AACD00673653 /* DMServiceHelper.swift */,
-				A8817C2A1D296A5300C9BF9E /* DMServiceHelperProtocol.swift */,
-				A8CD14191D21AACD00673653 /* DMRestLayerManager.swift */,
-				A8CD141B1D21AACD00673653 /* Processor */,
-				A8CD141D1D21AACD00673653 /* Requests */,
+				A8D8254E1D29A5ED00EA276F /* DMRestLayerManager.swift */,
+				A8D8254F1D29A5ED00EA276F /* DMServiceHelper.swift */,
+				A8D825501D29A5ED00EA276F /* DMServiceHelperProtocol.swift */,
+				A8D825511D29A5ED00EA276F /* Processor */,
+				A8D825531D29A5ED00EA276F /* Requests */,
+				24FD44A81D244E12003E35A4 /* Command.swift */,
+				24FD44AF1D245DC3003E35A4 /* DelegateCommand.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -190,6 +197,7 @@
 		2411986F1D1B134100330D87 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				24F0FB741D1D6C1800360346 /* Protocols */,
 				241198701D1B134100330D87 /* ViewControllers */,
 				241198721D1B134100330D87 /* Views */,
 			);
@@ -200,6 +208,8 @@
 			isa = PBXGroup;
 			children = (
 				241198711D1B134100330D87 /* LoginViewController.swift */,
+				9CB9DEF91D1B1E1100DAED48 /* OnboardingContentViewController.swift */,
+				9CB9DEFB1D1C150100DAED48 /* OnboardingViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -220,8 +230,8 @@
 				241198661D1B134100330D87 /* DopplerMobile */,
 				242514731C7E45CD00785AE6 /* DopplerMobileTests */,
 				2425145D1C7E45CD00785AE6 /* Products */,
-				6E4506A8FDFE10A8F39BE180 /* Pods */,
-				20861F86C4051714A98CD2CB /* Frameworks */,
+				5254F50A79E0A1234C429088 /* Pods */,
+				6D29BA0DE57132FD5175302E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -243,95 +253,111 @@
 			path = DopplerMobileTests;
 			sourceTree = "<group>";
 		};
-		6E4506A8FDFE10A8F39BE180 /* Pods */ = {
+		24F0FB741D1D6C1800360346 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				9048850D5C1B170CE0E787B3 /* Pods-DopplerMobile.debug.xcconfig */,
-				A0671CC02C7AAD9AB5466E82 /* Pods-DopplerMobile.release.xcconfig */,
+				24FD44A21D22EBCB003E35A4 /* LoginViewModelDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5254F50A79E0A1234C429088 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6197A56F8FF8AC19008A76A2 /* Pods-DopplerMobile.debug.xcconfig */,
+				502FBD953E2C68FACB1EAF87 /* Pods-DopplerMobile.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		A8CD13801D21AA5800673653 /* Infrastructure-MSKit */ = {
+		6D29BA0DE57132FD5175302E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A8CD13D01D21AA5800673653 /* MSRestClientManager.swift */,
-				A8CD13D11D21AA5800673653 /* MSRestConfiguration.swift */,
-				A8CD13DD1D21AA5800673653 /* Service */,
-				A8CD13D21D21AA5800673653 /* Processor */,
-				A8CD13D51D21AA5800673653 /* Rest */,
-				A8CD13811D21AA5800673653 /* Data */,
+				D8ECE2CFB793AC6B632C9141 /* Pods_DopplerMobile.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A8D824AB1D29A57400EA276F /* Infrastructure-MSKit */ = {
+			isa = PBXGroup;
+			children = (
+				A8D824FB1D29A57400EA276F /* MSRestClientManager.swift */,
+				A8D824FC1D29A57400EA276F /* MSRestConfiguration.swift */,
+				A8D825081D29A57400EA276F /* Service */,
+				A8D824FD1D29A57400EA276F /* Processor */,
+				A8D825001D29A57400EA276F /* Rest */,
+				A8D824AC1D29A57400EA276F /* Data */,
 			);
 			path = "Infrastructure-MSKit";
 			sourceTree = "<group>";
 		};
-		A8CD13811D21AA5800673653 /* Data */ = {
+		A8D824AC1D29A57400EA276F /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				A8CD13821D21AA5800673653 /* MSEntityBase.swift */,
+				A8D824AD1D29A57400EA276F /* MSEntityBase.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
 		};
-		A8CD13D21D21AA5800673653 /* Processor */ = {
+		A8D824FD1D29A57400EA276F /* Processor */ = {
 			isa = PBXGroup;
 			children = (
-				A8CD13D31D21AA5800673653 /* MSMainProcessor.swift */,
-				A8CD13D41D21AA5800673653 /* MSProcessorBase.swift */,
+				A8D824FE1D29A57400EA276F /* MSMainProcessor.swift */,
+				A8D824FF1D29A57400EA276F /* MSProcessorBase.swift */,
 			);
 			path = Processor;
 			sourceTree = "<group>";
 		};
-		A8CD13D51D21AA5800673653 /* Rest */ = {
+		A8D825001D29A57400EA276F /* Rest */ = {
 			isa = PBXGroup;
 			children = (
-				A8CD13D61D21AA5800673653 /* MSRestConstants.swift */,
-				A8CD13D71D21AA5800673653 /* Request */,
-				A8CD13DB1D21AA5800673653 /* Response */,
+				A8D825011D29A57400EA276F /* MSRestConstants.swift */,
+				A8D825021D29A57400EA276F /* Request */,
+				A8D825061D29A57400EA276F /* Response */,
 			);
 			path = Rest;
 			sourceTree = "<group>";
 		};
-		A8CD13D71D21AA5800673653 /* Request */ = {
+		A8D825021D29A57400EA276F /* Request */ = {
 			isa = PBXGroup;
 			children = (
-				A8CD13D81D21AA5800673653 /* MSRequestCallback.swift */,
-				A8CD13D91D21AA5800673653 /* MSRequestConfiguration.swift */,
-				A8CD13DA1D21AA5800673653 /* MSRequestProtocol.swift */,
+				A8D825031D29A57400EA276F /* MSRequestCallback.swift */,
+				A8D825041D29A57400EA276F /* MSRequestConfiguration.swift */,
+				A8D825051D29A57400EA276F /* MSRequestProtocol.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
 		};
-		A8CD13DB1D21AA5800673653 /* Response */ = {
+		A8D825061D29A57400EA276F /* Response */ = {
 			isa = PBXGroup;
 			children = (
-				A8CD13DC1D21AA5800673653 /* MSResponseMessage.swift */,
+				A8D825071D29A57400EA276F /* MSResponseMessage.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
 		};
-		A8CD13DD1D21AA5800673653 /* Service */ = {
+		A8D825081D29A57400EA276F /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				A8CD13DE1D21AA5800673653 /* MSRequestService.swift */,
-				A8CD13DF1D21AA5800673653 /* MSRequestServiceInformation.swift */,
+				A8D825091D29A57400EA276F /* MSRequestService.swift */,
+				A8D8250A1D29A57400EA276F /* MSRequestServiceInformation.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
 		};
-		A8CD141B1D21AACD00673653 /* Processor */ = {
+		A8D825511D29A5ED00EA276F /* Processor */ = {
 			isa = PBXGroup;
 			children = (
-				A83377CD1D22D58700A25677 /* DMLoginPostProcessor.swift */,
+				A8D825521D29A5ED00EA276F /* DMLoginPostProcessor.swift */,
 			);
 			path = Processor;
 			sourceTree = "<group>";
 		};
-		A8CD141D1D21AACD00673653 /* Requests */ = {
+		A8D825531D29A5ED00EA276F /* Requests */ = {
 			isa = PBXGroup;
 			children = (
-				A8CD14261D21B77200673653 /* MSTMethodsRequest.swift */,
-				A83377CF1D22D64E00A25677 /* DMLoginRequest.swift */,
+				A8D825541D29A5ED00EA276F /* DMLoginRequest.swift */,
+				A8D825551D29A5ED00EA276F /* MSTMethodsRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -343,12 +369,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 242514791C7E45CD00785AE6 /* Build configuration list for PBXNativeTarget "DopplerMobile" */;
 			buildPhases = (
-				B1F37C267A274FC6E006F6B2 /* Check Pods Manifest.lock */,
+				973695748E5A9ADDD94EE884 /* Check Pods Manifest.lock */,
 				242514581C7E45CD00785AE6 /* Sources */,
 				242514591C7E45CD00785AE6 /* Frameworks */,
 				2425145A1C7E45CD00785AE6 /* Resources */,
-				F2D97D5BE12B85BC14942E6D /* Embed Pods Frameworks */,
-				D79F4DA52690753D34F5473C /* Copy Pods Resources */,
+				E8FA1AF3A44088E93EE3EA25 /* Embed Pods Frameworks */,
+				17B25EB0D73146BEC00DFFE8 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -422,7 +448,6 @@
 			files = (
 				2411987C1D1B134100330D87 /* LaunchScreen.storyboard in Resources */,
 				2411987B1D1B134100330D87 /* Assets.xcassets in Resources */,
-				241198791D1B134100330D87 /* Info.plist in Resources */,
 				2411987D1D1B134100330D87 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,22 +462,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B1F37C267A274FC6E006F6B2 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		D79F4DA52690753D34F5473C /* Copy Pods Resources */ = {
+		17B25EB0D73146BEC00DFFE8 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -467,7 +477,22 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DopplerMobile/Pods-DopplerMobile-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F2D97D5BE12B85BC14942E6D /* Embed Pods Frameworks */ = {
+		973695748E5A9ADDD94EE884 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E8FA1AF3A44088E93EE3EA25 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -489,31 +514,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8CD14111D21AA5800673653 /* MSRestConstants.swift in Sources */,
-				A8CD14171D21AA5800673653 /* MSRequestServiceInformation.swift in Sources */,
-				A8CD14211D21AACD00673653 /* DMRestLayerManager.swift in Sources */,
-				A8817C2B1D296A5300C9BF9E /* DMServiceHelperProtocol.swift in Sources */,
-				A83377CE1D22D58700A25677 /* DMLoginPostProcessor.swift in Sources */,
-				A8817C251D29636000C9BF9E /* DMLoginService.swift in Sources */,
-				A8CD13E01D21AA5800673653 /* MSEntityBase.swift in Sources */,
-				A8CD14141D21AA5800673653 /* MSRequestProtocol.swift in Sources */,
-				A8CD14151D21AA5800673653 /* MSResponseMessage.swift in Sources */,
-				A8CD14271D21B77200673653 /* MSTMethodsRequest.swift in Sources */,
-				A8CD140D1D21AA5800673653 /* MSRestClientManager.swift in Sources */,
-				A8CD140E1D21AA5800673653 /* MSRestConfiguration.swift in Sources */,
-				A8CD14161D21AA5800673653 /* MSRequestService.swift in Sources */,
-				A8817C291D2967A100C9BF9E /* DMLoginServiceProtocol.swift in Sources */,
-				A8CD14131D21AA5800673653 /* MSRequestConfiguration.swift in Sources */,
-				A8CD14121D21AA5800673653 /* MSRequestCallback.swift in Sources */,
-				A8CD140F1D21AA5800673653 /* MSMainProcessor.swift in Sources */,
-				A83377C61D22CCBF00A25677 /* DopplerMobile.xcdatamodeld in Sources */,
-				A83377D01D22D64E00A25677 /* DMLoginRequest.swift in Sources */,
+				24F0FB731D1C109E00360346 /* LoginViewModel.swift in Sources */,
+				A8D8250B1D29A57400EA276F /* MSEntityBase.swift in Sources */,
 				2411987A1D1B134100330D87 /* LoginViewController.swift in Sources */,
-				A83377C91D22CD6E00A25677 /* DMLogin+CoreDataProperties.swift in Sources */,
-				A8CD14101D21AA5800673653 /* MSProcessorBase.swift in Sources */,
+				9CB9DEFA1D1B1E1100DAED48 /* OnboardingContentViewController.swift in Sources */,
+				A8D8253F1D29A57400EA276F /* MSRequestProtocol.swift in Sources */,
 				241198781D1B134100330D87 /* AppDelegate.swift in Sources */,
-				A8CD14221D21AACD00673653 /* DMServiceHelper.swift in Sources */,
-				A83377CA1D22CD6E00A25677 /* DMLogin.swift in Sources */,
+				A8D8254D1D29A5D300EA276F /* DMLoginServiceProtocol.swift in Sources */,
+				A8D825491D29A58B00EA276F /* DopplerMobile.xcdatamodeld in Sources */,
+				A8D825481D29A58B00EA276F /* DMLogin+CoreDataProperties.swift in Sources */,
+				A8D8254C1D29A5D300EA276F /* DMLoginService.swift in Sources */,
+				A8D8255A1D29A5ED00EA276F /* DMLoginRequest.swift in Sources */,
+				A8D825421D29A57400EA276F /* MSRequestServiceInformation.swift in Sources */,
+				A8D825391D29A57400EA276F /* MSRestConfiguration.swift in Sources */,
+				24FD44A31D22EBCB003E35A4 /* LoginViewModelDelegate.swift in Sources */,
+				A8D825381D29A57400EA276F /* MSRestClientManager.swift in Sources */,
+				A8D8253B1D29A57400EA276F /* MSProcessorBase.swift in Sources */,
+				24FD44A91D244E12003E35A4 /* Command.swift in Sources */,
+				A8D825401D29A57400EA276F /* MSResponseMessage.swift in Sources */,
+				A8D8253D1D29A57400EA276F /* MSRequestCallback.swift in Sources */,
+				A8D8253A1D29A57400EA276F /* MSMainProcessor.swift in Sources */,
+				A8D825411D29A57400EA276F /* MSRequestService.swift in Sources */,
+				A8D8253E1D29A57400EA276F /* MSRequestConfiguration.swift in Sources */,
+				A8D825581D29A5ED00EA276F /* DMServiceHelperProtocol.swift in Sources */,
+				24FD44B01D245DC3003E35A4 /* DelegateCommand.swift in Sources */,
+				24F0FB6F1D1B2D5C00360346 /* User.swift in Sources */,
+				A8D825471D29A58B00EA276F /* DMLogin.swift in Sources */,
+				A8D825561D29A5ED00EA276F /* DMRestLayerManager.swift in Sources */,
+				A8D825591D29A5ED00EA276F /* DMLoginPostProcessor.swift in Sources */,
+				9CB9DEFC1D1C150100DAED48 /* OnboardingViewController.swift in Sources */,
+				A8D825571D29A5ED00EA276F /* DMServiceHelper.swift in Sources */,
+				A8D8255B1D29A5ED00EA276F /* MSTMethodsRequest.swift in Sources */,
+				A8D8253C1D29A57400EA276F /* MSRestConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,25 +672,23 @@
 		};
 		2425147A1C7E45CD00785AE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9048850D5C1B170CE0E787B3 /* Pods-DopplerMobile.debug.xcconfig */;
+			baseConfigurationReference = 6197A56F8FF8AC19008A76A2 /* Pods-DopplerMobile.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = DopplerMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.makingsense.DopplerMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "DopplerMobile/Application/DopplerMobile-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		2425147B1C7E45CD00785AE6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A0671CC02C7AAD9AB5466E82 /* Pods-DopplerMobile.release.xcconfig */;
+			baseConfigurationReference = 502FBD953E2C68FACB1EAF87 /* Pods-DopplerMobile.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = DopplerMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.makingsense.DopplerMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "DopplerMobile/Application/DopplerMobile-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -719,12 +749,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		A83377C41D22CCBF00A25677 /* DopplerMobile.xcdatamodeld */ = {
+		A8D825451D29A58B00EA276F /* DopplerMobile.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				A83377C51D22CCBF00A25677 /* DopplerMobile.xcdatamodel */,
+				A8D825461D29A58B00EA276F /* DopplerMobile.xcdatamodel */,
 			);
-			currentVersion = A83377C51D22CCBF00A25677 /* DopplerMobile.xcdatamodel */;
+			currentVersion = A8D825461D29A58B00EA276F /* DopplerMobile.xcdatamodel */;
 			path = DopplerMobile.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
