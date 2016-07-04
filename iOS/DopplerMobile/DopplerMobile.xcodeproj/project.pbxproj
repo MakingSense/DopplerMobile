@@ -17,9 +17,10 @@
 		24F0FB731D1C109E00360346 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F0FB721D1C109E00360346 /* LoginViewModel.swift */; };
 		24FD44A31D22EBCB003E35A4 /* LoginViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD44A21D22EBCB003E35A4 /* LoginViewModelDelegate.swift */; };
 		24FD44A91D244E12003E35A4 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD44A81D244E12003E35A4 /* Command.swift */; };
-		24FD44B01D245DC3003E35A4 /* DelegateCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD44AF1D245DC3003E35A4 /* DelegateCommand.swift */; };
 		9CB9DEFA1D1B1E1100DAED48 /* OnboardingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB9DEF91D1B1E1100DAED48 /* OnboardingContentViewController.swift */; };
 		9CB9DEFC1D1C150100DAED48 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB9DEFB1D1C150100DAED48 /* OnboardingViewController.swift */; };
+		A8C456CF1D2AA33A00533122 /* SimpleCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C456CE1D2AA33A00533122 /* SimpleCommand.swift */; };
+		A8C456D21D2AA35000533122 /* MSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C456D11D2AA35000533122 /* MSButton.swift */; };
 		A8D8250B1D29A57400EA276F /* MSEntityBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D824AD1D29A57400EA276F /* MSEntityBase.swift */; };
 		A8D825381D29A57400EA276F /* MSRestClientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D824FB1D29A57400EA276F /* MSRestClientManager.swift */; };
 		A8D825391D29A57400EA276F /* MSRestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D824FC1D29A57400EA276F /* MSRestConfiguration.swift */; };
@@ -71,11 +72,12 @@
 		24F0FB721D1C109E00360346 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		24FD44A21D22EBCB003E35A4 /* LoginViewModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModelDelegate.swift; sourceTree = "<group>"; };
 		24FD44A81D244E12003E35A4 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
-		24FD44AF1D245DC3003E35A4 /* DelegateCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateCommand.swift; sourceTree = "<group>"; };
 		502FBD953E2C68FACB1EAF87 /* Pods-DopplerMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DopplerMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-DopplerMobile/Pods-DopplerMobile.release.xcconfig"; sourceTree = "<group>"; };
 		6197A56F8FF8AC19008A76A2 /* Pods-DopplerMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DopplerMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DopplerMobile/Pods-DopplerMobile.debug.xcconfig"; sourceTree = "<group>"; };
 		9CB9DEF91D1B1E1100DAED48 /* OnboardingContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewController.swift; sourceTree = "<group>"; };
 		9CB9DEFB1D1C150100DAED48 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		A8C456CE1D2AA33A00533122 /* SimpleCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCommand.swift; sourceTree = "<group>"; };
+		A8C456D11D2AA35000533122 /* MSButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSButton.swift; sourceTree = "<group>"; };
 		A8D824AD1D29A57400EA276F /* MSEntityBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSEntityBase.swift; sourceTree = "<group>"; };
 		A8D824FB1D29A57400EA276F /* MSRestClientManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSRestClientManager.swift; sourceTree = "<group>"; };
 		A8D824FC1D29A57400EA276F /* MSRestConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSRestConfiguration.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				2411986A1D1B134100330D87 /* Domain */,
 				2411986E1D1B134100330D87 /* Infrastructure */,
 				A8D824AB1D29A57400EA276F /* Infrastructure-MSKit */,
+				A8C456D01D2AA35000533122 /* MSComponents */,
 				2411986D1D1B134100330D87 /* Info.plist */,
 			);
 			path = DopplerMobile;
@@ -189,7 +192,7 @@
 				A8D825511D29A5ED00EA276F /* Processor */,
 				A8D825531D29A5ED00EA276F /* Requests */,
 				24FD44A81D244E12003E35A4 /* Command.swift */,
-				24FD44AF1D245DC3003E35A4 /* DelegateCommand.swift */,
+				A8C456CE1D2AA33A00533122 /* SimpleCommand.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -276,6 +279,14 @@
 				D8ECE2CFB793AC6B632C9141 /* Pods_DopplerMobile.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A8C456D01D2AA35000533122 /* MSComponents */ = {
+			isa = PBXGroup;
+			children = (
+				A8C456D11D2AA35000533122 /* MSButton.swift */,
+			);
+			path = MSComponents;
 			sourceTree = "<group>";
 		};
 		A8D824AB1D29A57400EA276F /* Infrastructure-MSKit */ = {
@@ -537,7 +548,7 @@
 				A8D825411D29A57400EA276F /* MSRequestService.swift in Sources */,
 				A8D8253E1D29A57400EA276F /* MSRequestConfiguration.swift in Sources */,
 				A8D825581D29A5ED00EA276F /* DMServiceHelperProtocol.swift in Sources */,
-				24FD44B01D245DC3003E35A4 /* DelegateCommand.swift in Sources */,
+				A8C456CF1D2AA33A00533122 /* SimpleCommand.swift in Sources */,
 				24F0FB6F1D1B2D5C00360346 /* User.swift in Sources */,
 				A8D825471D29A58B00EA276F /* DMLogin.swift in Sources */,
 				A8D825561D29A5ED00EA276F /* DMRestLayerManager.swift in Sources */,
@@ -545,6 +556,7 @@
 				9CB9DEFC1D1C150100DAED48 /* OnboardingViewController.swift in Sources */,
 				A8D825571D29A5ED00EA276F /* DMServiceHelper.swift in Sources */,
 				A8D8255B1D29A5ED00EA276F /* MSTMethodsRequest.swift in Sources */,
+				A8C456D21D2AA35000533122 /* MSButton.swift in Sources */,
 				A8D8253C1D29A57400EA276F /* MSRestConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

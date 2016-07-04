@@ -25,7 +25,7 @@ public class LoginViewModel : DMLoginServiceDelegate
         self.loginService.delegate = self
         self.username = nil
         self.password = nil
-        self.loginCommand = DelegateCommand(execute: loginCommandExecute , canExecute: loginCommandCanExecute)
+        self.loginCommand = SimpleCommand(execute: loginCommandExecute , canExecute: loginCommandCanExecute)
     }
     
     //MARK: Commands
