@@ -13,6 +13,7 @@ class LoginViewController: UIViewController, LoginViewModelDelegate
     //MARK: Properties
     
     private var loginViewModel: LoginViewModel!
+    private var loginService: ILoginService!
 
     @IBOutlet weak var txtUsername: UITextField!
 
@@ -32,7 +33,7 @@ class LoginViewController: UIViewController, LoginViewModelDelegate
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        loginViewModel = LoginViewModel(loginService: LoginService(restClient: RESTClient()))
+        loginViewModel = LoginViewModel(loginService: self.loginService)
         loginViewModel.delegate = self
     }
     

@@ -2,7 +2,7 @@ platform :ios, "9.2"
 use_frameworks!
 
 target 'DopplerMobile' do
-
+    pod 'Typhoon'
 end
 
 target 'DopplerMobileTests' do

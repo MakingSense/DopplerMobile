@@ -8,13 +8,19 @@
 
 import Foundation
 
-public class LoginService
+protocol ILoginService
+{
+    func Login(username: String, password: String)-> Bool
+}
+
+public class LoginService: ILoginService
 {
     var restClient: RESTClient
     
-    init(restClient: RESTClient)
+    ///init(restClient: RESTClient)
+    init()
     {
-        self.restClient = restClient
+        self.restClient = RESTClient()
     }
     
     func Login(username: String, password: String)-> Bool

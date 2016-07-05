@@ -13,11 +13,11 @@ public class LoginViewModel
     public var username: String?
     public var password: String?
     
-    var loginService: LoginService
+    var loginService: ILoginService
     
     weak var delegate: LoginViewModelDelegate?
     
-    init(loginService: LoginService)
+    init(loginService: ILoginService)
     {
         self.loginService = loginService
         username = nil

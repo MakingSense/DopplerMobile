@@ -18,6 +18,8 @@
 		24F0FB731D1C109E00360346 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F0FB721D1C109E00360346 /* LoginViewModel.swift */; };
 		24FD44A31D22EBCB003E35A4 /* LoginViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD44A21D22EBCB003E35A4 /* LoginViewModelDelegate.swift */; };
 		24FD44A51D22F930003E35A4 /* RESTClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD44A41D22F930003E35A4 /* RESTClient.swift */; };
+		24FD44B21D2C4012003E35A4 /* ApplicationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD44B11D2C4012003E35A4 /* ApplicationAssembly.swift */; };
+		E07CC6305FC9BD933AA17E06 /* Pods_DopplerMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6B31068560031D834C8445 /* Pods_DopplerMobile.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,10 @@
 		24F0FB721D1C109E00360346 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		24FD44A21D22EBCB003E35A4 /* LoginViewModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModelDelegate.swift; sourceTree = "<group>"; };
 		24FD44A41D22F930003E35A4 /* RESTClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTClient.swift; sourceTree = "<group>"; };
+		24FD44B11D2C4012003E35A4 /* ApplicationAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationAssembly.swift; sourceTree = "<group>"; };
+		3C6B31068560031D834C8445 /* Pods_DopplerMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DopplerMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		763AC4EC4E9B4C21747FC3DD /* Pods-DopplerMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DopplerMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DopplerMobile/Pods-DopplerMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		9266E2A10D94A57480005419 /* Pods-DopplerMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DopplerMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-DopplerMobile/Pods-DopplerMobile.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E07CC6305FC9BD933AA17E06 /* Pods_DopplerMobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				241198681D1B134100330D87 /* AppDelegate.swift */,
+				24FD44B11D2C4012003E35A4 /* ApplicationAssembly.swift */,
 				241198691D1B134100330D87 /* ViewModels */,
 			);
 			path = Application;
@@ -162,6 +170,8 @@
 				241198661D1B134100330D87 /* DopplerMobile */,
 				242514731C7E45CD00785AE6 /* DopplerMobileTests */,
 				2425145D1C7E45CD00785AE6 /* Products */,
+				BE21E011C0B13D9A2BAD7AF0 /* Pods */,
+				AD4DFAEFD5BA41F9D77E0988 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -191,6 +201,23 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		AD4DFAEFD5BA41F9D77E0988 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C6B31068560031D834C8445 /* Pods_DopplerMobile.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE21E011C0B13D9A2BAD7AF0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				763AC4EC4E9B4C21747FC3DD /* Pods-DopplerMobile.debug.xcconfig */,
+				9266E2A10D94A57480005419 /* Pods-DopplerMobile.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -198,9 +225,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 242514791C7E45CD00785AE6 /* Build configuration list for PBXNativeTarget "DopplerMobile" */;
 			buildPhases = (
+				2F24530B6637C697966BBC0E /* Check Pods Manifest.lock */,
 				242514581C7E45CD00785AE6 /* Sources */,
 				242514591C7E45CD00785AE6 /* Frameworks */,
 				2425145A1C7E45CD00785AE6 /* Resources */,
+				E56D911AE224ABE5C9EC35B6 /* Embed Pods Frameworks */,
+				98077488ED6A8C8641EB1492 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -287,11 +317,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2F24530B6637C697966BBC0E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		98077488ED6A8C8641EB1492 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DopplerMobile/Pods-DopplerMobile-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E56D911AE224ABE5C9EC35B6 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DopplerMobile/Pods-DopplerMobile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		242514581C7E45CD00785AE6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24FD44B21D2C4012003E35A4 /* ApplicationAssembly.swift in Sources */,
 				24F0FB731D1C109E00360346 /* LoginViewModel.swift in Sources */,
 				241A7E4B1D1DD309004B4B06 /* LoginService.swift in Sources */,
 				24FD44A51D22F930003E35A4 /* RESTClient.swift in Sources */,
@@ -425,6 +504,7 @@
 		};
 		2425147A1C7E45CD00785AE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 763AC4EC4E9B4C21747FC3DD /* Pods-DopplerMobile.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = DopplerMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -435,6 +515,7 @@
 		};
 		2425147B1C7E45CD00785AE6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9266E2A10D94A57480005419 /* Pods-DopplerMobile.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = DopplerMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
