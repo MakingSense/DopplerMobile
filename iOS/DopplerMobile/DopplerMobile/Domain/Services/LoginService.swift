@@ -8,22 +8,23 @@
 
 import Foundation
 
-protocol ILoginService
+@objc
+public protocol ILoginService
 {
     func Login(username: String, password: String)-> Bool
 }
 
-public class LoginService: ILoginService
+public class LoginService: NSObject, ILoginService
 {
     var restClient: RESTClient
     
     ///init(restClient: RESTClient)
-    init()
+    override init()
     {
         self.restClient = RESTClient()
     }
     
-    func Login(username: String, password: String)-> Bool
+    public func Login(username: String, password: String)-> Bool
     {
         //TODO: will be implemented on DM-52
         let result = restClient.Login(username, password: password)

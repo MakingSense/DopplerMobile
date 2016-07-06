@@ -15,8 +15,8 @@ public class ApplicationAssembly: TyphoonAssembly {
         return TyphoonDefinition.withClass(AppDelegate.self) {
             (definition) in
             
-            definition.injectProperty("loginService", with: self.loginService())
-            definition.injectProperty("loginViewController", with: self.rootViewController())
+            definition.injectProperty("loginService")
+            definition.injectProperty("loginViewController")
         }
     }
     
@@ -28,7 +28,7 @@ public class ApplicationAssembly: TyphoonAssembly {
         return TyphoonDefinition.withClass(LoginViewController.self) {
             (definition) in
             
-            definition.injectProperty("loginService", with : self.loginService())
+            definition.injectProperty("loginService")
             
             definition.scope = TyphoonScope.Singleton
         }

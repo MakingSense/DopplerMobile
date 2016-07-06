@@ -12,9 +12,17 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var rootViewController: LoginViewController?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        //TODO: check if we can resolve controller instance from here to avoid Service Locator
+        //let frame = UIScreen.mainScreen().bounds
+        //window = UIWindow(frame: frame)
+        
+        //let assembly = ApplicationAssembly().activate()
+        //window!.rootViewController = assembly.rootViewController() as! UIViewController//initialViewController
+        //window!.makeKeyAndVisible()
         // Override point for customization after application launch.
         return true
     }

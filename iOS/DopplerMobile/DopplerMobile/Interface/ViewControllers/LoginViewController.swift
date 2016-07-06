@@ -8,12 +8,12 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, LoginViewModelDelegate
+public class LoginViewController: UIViewController, LoginViewModelDelegate
 {
     //MARK: Properties
     
     private var loginViewModel: LoginViewModel!
-    private var loginService: ILoginService!
+    public var loginService : ILoginService!
 
     @IBOutlet weak var txtUsername: UITextField!
 
@@ -30,9 +30,11 @@ class LoginViewController: UIViewController, LoginViewModelDelegate
     
     //MARK: Login View's Actions
     
-    override func viewDidLoad()
+    override public func viewDidLoad()
     {
         super.viewDidLoad()
+        let assembly = ApplicationAssembly().activate()
+        self.loginService = assembly.loginService() as! LoginService
         loginViewModel = LoginViewModel(loginService: self.loginService)
         loginViewModel.delegate = self
     }
