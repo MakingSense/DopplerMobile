@@ -26,8 +26,8 @@ class DMLoginService : DMLoginServiceProtocol
     func login(username: String, password: String)
     {
         self.delegate?.loginServiceWillBeginLogin()
-        self.serviceHelper.login(username, password: password, callback: {
-            (success: Bool, error: NSError?) in
+        self.serviceHelper.login(username, password: password, callback:
+        { (success: Bool, error: NSError?) in
             if (success)
             {
                 self.delegate?.loginServiceDidFinishLogin()
@@ -37,6 +37,5 @@ class DMLoginService : DMLoginServiceProtocol
                 self.delegate?.loginServiceDidFinishLoginWithError("Authentication error", description: "Authentication credentials are invalid")
             }
         })
-
     }
 }

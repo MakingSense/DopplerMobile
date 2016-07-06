@@ -12,9 +12,6 @@ import SwiftyJSON
 
 class MSProcessorBase
 {
-
-    required init() {}
-    
     func handleResponse(response: AnyObject)
     {
         let json = JSON(data: response as! NSData)

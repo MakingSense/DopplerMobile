@@ -16,6 +16,5 @@ protocol DMLoginServiceDelegate
 protocol DMLoginServiceProtocol
 {
     var delegate : DMLoginServiceDelegate? { get set }
-    init(serviceHelper: DMServiceHelperProtocol)
     func login(username: String, password: String)
 }

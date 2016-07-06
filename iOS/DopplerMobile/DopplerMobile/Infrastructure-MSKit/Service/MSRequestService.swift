@@ -21,7 +21,7 @@ class MSRequestService
         var restManager: MSRestClientManager
         do {
             restManager = try MSRestClientManager.getInstance()
-            self.restConfiguration = restManager.getConfiguration()
+            self.restConfiguration = restManager.configuration
             self.mainProcessor = MSMainProcessor(configuration: restConfiguration!, restManager: restManager)
         }
         catch

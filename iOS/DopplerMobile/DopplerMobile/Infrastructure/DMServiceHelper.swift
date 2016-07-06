@@ -31,10 +31,4 @@ class DMServiceHelper : DMServiceHelperProtocol
         
         NSNotificationCenter.defaultCenter().postNotificationName(MSRequestService.RequestServiceNotificationKey, object: req)
     }
-
-    func getCampains()
-    {
-        
-    }
-
 }
