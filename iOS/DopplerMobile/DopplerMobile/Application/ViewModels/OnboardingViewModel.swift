@@ -25,8 +25,8 @@ class OnboardingViewModel
     {
         if((self.currentNode?.next) != nil)
         {
-            self.currentViewModel = self.currentNode?.next!.value
-            self.currentNode = self.currentNode?.next
+            self.currentViewModel = self.currentNode!.next!.value
+            self.currentNode = self.currentNode!.next
 
             return self.currentViewModel
         }
@@ -40,8 +40,8 @@ class OnboardingViewModel
     {
         if((self.currentNode?.previous) != nil)
         {
-            self.currentViewModel = self.currentNode?.previous!.value
-            self.currentNode = self.currentNode?.previous
+            self.currentViewModel = self.currentNode!.previous!.value
+            self.currentNode = self.currentNode!.previous
 
             return self.currentViewModel
         }
