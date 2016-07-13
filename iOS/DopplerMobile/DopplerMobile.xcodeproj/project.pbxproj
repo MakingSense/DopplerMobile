@@ -20,6 +20,9 @@
 		24FD44A71D244A80003E35A4 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD44A61D244A80003E35A4 /* LoginService.swift */; };
 		24FD44A91D244E12003E35A4 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD44A81D244E12003E35A4 /* Command.swift */; };
 		24FD44B01D245DC3003E35A4 /* SimpleCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD44AF1D245DC3003E35A4 /* SimpleCommand.swift */; };
+		2BC6EF4F1D370A88009F5A0B /* ScheduledCampaignsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC6EF4E1D370A88009F5A0B /* ScheduledCampaignsViewController.swift */; };
+		2BC6EF511D370B5F009F5A0B /* CampaignsReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC6EF501D370B5F009F5A0B /* CampaignsReportViewController.swift */; };
+		2BC6EF531D370B7A009F5A0B /* CampaignsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC6EF521D370B7A009F5A0B /* CampaignsListViewController.swift */; };
 		9CB9DEFA1D1B1E1100DAED48 /* OnboardingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB9DEF91D1B1E1100DAED48 /* OnboardingContentViewController.swift */; };
 		9CB9DEFC1D1C150100DAED48 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB9DEFB1D1C150100DAED48 /* OnboardingViewController.swift */; };
 		A8EF46D91D26C218000882A3 /* MSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EF46D81D26C218000882A3 /* MSButton.swift */; };
@@ -53,6 +56,9 @@
 		24FD44A61D244A80003E35A4 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		24FD44A81D244E12003E35A4 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		24FD44AF1D245DC3003E35A4 /* SimpleCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCommand.swift; sourceTree = "<group>"; };
+		2BC6EF4E1D370A88009F5A0B /* ScheduledCampaignsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledCampaignsViewController.swift; sourceTree = "<group>"; };
+		2BC6EF501D370B5F009F5A0B /* CampaignsReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignsReportViewController.swift; sourceTree = "<group>"; };
+		2BC6EF521D370B7A009F5A0B /* CampaignsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignsListViewController.swift; sourceTree = "<group>"; };
 		9CB9DEF91D1B1E1100DAED48 /* OnboardingContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewController.swift; sourceTree = "<group>"; };
 		9CB9DEFB1D1C150100DAED48 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		A8EF46D81D26C218000882A3 /* MSButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSButton.swift; sourceTree = "<group>"; };
@@ -156,6 +162,9 @@
 				241198711D1B134100330D87 /* LoginViewController.swift */,
 				9CB9DEF91D1B1E1100DAED48 /* OnboardingContentViewController.swift */,
 				9CB9DEFB1D1C150100DAED48 /* OnboardingViewController.swift */,
+				2BC6EF4E1D370A88009F5A0B /* ScheduledCampaignsViewController.swift */,
+				2BC6EF501D370B5F009F5A0B /* CampaignsReportViewController.swift */,
+				2BC6EF521D370B7A009F5A0B /* CampaignsListViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -327,7 +336,10 @@
 				24F0FB6F1D1B2D5C00360346 /* User.swift in Sources */,
 				9CB9DEFC1D1C150100DAED48 /* OnboardingViewController.swift in Sources */,
 				A8EF46D91D26C218000882A3 /* MSButton.swift in Sources */,
+				2BC6EF531D370B7A009F5A0B /* CampaignsListViewController.swift in Sources */,
 				24FD44A71D244A80003E35A4 /* LoginService.swift in Sources */,
+				2BC6EF511D370B5F009F5A0B /* CampaignsReportViewController.swift in Sources */,
+				2BC6EF4F1D370A88009F5A0B /* ScheduledCampaignsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

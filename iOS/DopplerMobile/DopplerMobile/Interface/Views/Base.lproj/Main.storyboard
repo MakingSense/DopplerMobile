@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LXw-vR-mTg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Hll-nm-Y3T">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -307,9 +307,116 @@
             </objects>
             <point key="canvasLocation" x="1534" y="450"/>
         </scene>
+        <!--View Controller Screen Two-->
+        <scene sceneID="3YO-NS-nUy">
+            <objects>
+                <viewController title="View Controller Screen Two" id="fLh-5y-0jE" customClass="ScheduledCampaignsViewController" customModule="DopplerMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WWT-B2-ppX"/>
+                        <viewControllerLayoutGuide type="bottom" id="6vg-bL-VYY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mJT-DA-mqJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="View Two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mt9-UP-USb">
+                                <rect key="frame" x="20" y="28" width="80" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.73755286818217303" green="1" blue="0.68151802439236164" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="2" title="PROGRAMADAS" image="Scheduled-Disabled" selectedImage="Scheduled" id="Sat-Kp-Ag1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ECG-BY-W5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2300" y="1132"/>
+        </scene>
+        <!--View Controller Screen Three-->
+        <scene sceneID="d21-Wb-XFM">
+            <objects>
+                <viewController title="View Controller Screen Three" id="fNm-3A-UAG" customClass="CampaignsListViewController" customModule="DopplerMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ugz-pj-DhX"/>
+                        <viewControllerLayoutGuide type="bottom" id="vXs-1G-Wvq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wlz-Pk-XNG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="View Three" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaW-0P-e81">
+                                <rect key="frame" x="20" y="28" width="92" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.49073063216930679" green="0.74199344029685066" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="3" title="LISTAS" image="Lists-Disabled" selectedImage="Lists" id="F20-0z-zvo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aqO-E9-4h7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2300" y="1845"/>
+        </scene>
+        <!--View Controller Screen One-->
+        <scene sceneID="9d5-ch-NL4">
+            <objects>
+                <viewController title="View Controller Screen One" id="OiR-45-r1m" customClass="CampaignsReportViewController" customModule="DopplerMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BKK-vB-qGw"/>
+                        <viewControllerLayoutGuide type="bottom" id="tOx-ZC-fUX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Uk-0d-As8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="View One" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSI-bx-352">
+                                <rect key="frame" x="20" y="28" width="76" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="1" title="REPORTES" image="Metrics-Summary-Disabled" selectedImage="Metrics-Summary" id="hQt-Zn-i6w"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yWl-gp-Tfe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2300" y="450"/>
+        </scene>
+        <!--Dashboard Tab Menu View Controller-->
+        <scene sceneID="YAE-lA-bv8">
+            <objects>
+                <tabBarController title="Dashboard Tab Menu View Controller" id="Hll-nm-Y3T" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="5bL-dE-hVH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="OiR-45-r1m" kind="relationship" relationship="viewControllers" id="HQF-MF-WsQ"/>
+                        <segue destination="fLh-5y-0jE" kind="relationship" relationship="viewControllers" id="E0P-nB-Pba"/>
+                        <segue destination="fNm-3A-UAG" kind="relationship" relationship="viewControllers" id="7kD-Wi-kaM"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wS6-aI-SiW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1534" y="1132"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Doppler-Logo" width="63" height="25"/>
+        <image name="Lists" width="17" height="21"/>
+        <image name="Lists-Disabled" width="20" height="25"/>
+        <image name="Metrics-Summary" width="20" height="25"/>
+        <image name="Metrics-Summary-Disabled" width="20" height="25"/>
         <image name="Onboarding-Watch" width="93" height="95"/>
+        <image name="Scheduled" width="22" height="25"/>
+        <image name="Scheduled-Disabled" width="22" height="25"/>
     </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
