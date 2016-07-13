@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OnboardingViewController: UIPageViewController, UIPageViewControllerDataSource, OnboardingContentViewControllerDelegate
+class OnboardingViewController: UIPageViewController, OnboardingContentViewControllerDelegate
 {
     var viewModel : OnboardingViewModel?
 
@@ -16,37 +16,41 @@ class OnboardingViewController: UIPageViewController, UIPageViewControllerDataSo
     {
         super.viewDidLoad()
 
-        dataSource = self
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(OnboardingViewController.handleSwipes(_:)))
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(OnboardingViewController.handleSwipes(_:)))
+
+        leftSwipe.direction = .Left
+        rightSwipe.direction = .Right
+
+        view.addGestureRecognizer(leftSwipe)
+        view.addGestureRecognizer(rightSwipe)
 
         setupContent()
     }
 
-    // MARK: UIPageViewControllerDataSource
-    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController?
+    func handleSwipes(sender:UISwipeGestureRecognizer)
     {
-        let viewModel = previous()
-        return viewModel != nil ? createViewControllerFromViewModel(viewModel!) : nil
+        if (sender.direction.rawValue == 1)
+        {
+            let viewModel = previous()
+            if(viewModel != nil)
+            {
+                presentViewControllerFromViewModel(createViewControllerFromViewModel(viewModel!), direction: UIPageViewControllerNavigationDirection.Reverse)
+            }
+        }
+        else if (sender.direction.rawValue == 2)
+        {
+            let viewModel = next()
+            if(viewModel != nil)
+            {
+                presentViewControllerFromViewModel(createViewControllerFromViewModel(viewModel!), direction: UIPageViewControllerNavigationDirection.Forward)
+            }
+        }
     }
 
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController?
+    func presentViewControllerFromViewModel(viewController: UIViewController, direction: UIPageViewControllerNavigationDirection)
     {
-        let viewModel = next()
-        return viewModel != nil ? createViewControllerFromViewModel(viewModel!) : nil
-    }
-
-    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int
-    {
-        return self.viewModel!.pages.count
-    }
-
-    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int
-    {
-        return self.viewModel!.currentIndex
-    }
-
-    func presentViewControllerFromViewModel(viewController: UIViewController)
-    {
-        self.setViewControllers([viewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
+        self.setViewControllers([viewController], direction: direction, animated: true, completion: nil)
     }
 
     func createViewControllerFromViewModel(viewModel: OnboardingContentViewModel) -> UIViewController
@@ -65,9 +69,11 @@ class OnboardingViewController: UIPageViewController, UIPageViewControllerDataSo
     {
         self.viewModel = OnboardingViewModel()
 
-        let firstViewModel = self.viewModel!.setupOnboardingContent()
+        self.viewModel!.setupOnboardingContent()
 
-        presentViewControllerFromViewModel(createViewControllerFromViewModel(firstViewModel!))
+        let firstViewModel = self.viewModel?.currentViewModel
+
+        presentViewControllerFromViewModel(createViewControllerFromViewModel(firstViewModel!), direction: UIPageViewControllerNavigationDirection.Forward)
     }
 
     //This should probably be removed later with VM
@@ -89,7 +95,7 @@ class OnboardingViewController: UIPageViewController, UIPageViewControllerDataSo
         {
             let viewController = createViewControllerFromViewModel(viewModel!)
 
-            presentViewControllerFromViewModel(viewController)
+            presentViewControllerFromViewModel(viewController, direction: UIPageViewControllerNavigationDirection.Forward)
         }
     }
 
