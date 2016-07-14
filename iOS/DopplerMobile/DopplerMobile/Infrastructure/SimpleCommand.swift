@@ -9,11 +9,6 @@
 public class SimpleCommand : Command
 {
     public var delegate: CommandDelegate?
-    {
-        set { self.delegate = newValue }
-        get { return self.delegate }
-    }
-    
     private var canExecuteMethod: () -> Bool
     private var executeMethod: () -> ()
     private var _canExecute: Bool

@@ -10,52 +10,45 @@ import Foundation
 
 public class LoginViewModel
 {
-    public var username: String?
-    public var password: String?
-    
+    public var username: String = "" {
+        didSet
+        {
+            loginCommand.raiseCanExecuteChanged()
+        }
+    }
+    public var password: String = "" {
+        didSet
+        {
+            loginCommand.raiseCanExecuteChanged()
+        }
+    }
     public var loginCommand: Command!
+    private var loginService: LoginService
+    private var loginDelegate: LoginViewController?
     
-    var loginService: LoginService
-    
-    weak var delegate: LoginViewModelDelegate?
-    
-    init(loginService: LoginService)
+    init(loginDelegate: LoginViewController?)
     {
-        self.loginService = loginService
-        self.username = nil
-        self.password = nil
+        self.loginDelegate = loginDelegate
+        self.loginService = LoginService()
         self.loginCommand = SimpleCommand(execute: loginCommandExecute , canExecute: loginCommandCanExecute)
     }
     
     //MARK: Commands
-    
     private func loginCommandExecute()
     {
-        let loginSucceded = loginService.Login(self.username!, password: self.password!)
-        if loginSucceded
+        //TODO: rename delegate and change the LoginViewModelDelegate protocol.
+        if loginService.login(self.username, password: self.password)
         {
-            delegate?.loginSucceded()
+            self.loginDelegate?.loginSucceded()
         }
         else
         {
-            delegate?.loginFailed()
+            self.loginDelegate?.loginFailed()
         }
     }
     
     private func loginCommandCanExecute()-> Bool
     {
-        if (self.username == "" || self.username == nil)
-        {
-            delegate?.usernameValidationFailed()
-            return false
-        }
-        
-        if (self.password == "" || self.password == nil)
-        {
-            delegate?.passwordValidationFailed()
-            return false
-        }
-        
-        return true
+        return  !self.username.isEmpty && !self.password.isEmpty
     }
 }

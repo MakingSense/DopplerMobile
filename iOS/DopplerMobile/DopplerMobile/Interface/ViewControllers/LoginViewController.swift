@@ -13,31 +13,30 @@ class LoginViewController: UIViewController, LoginViewModelDelegate
     //MARK: Properties
     
     private var loginViewModel: LoginViewModel!
-
+    
     @IBOutlet weak var txtUsername: UITextField!
-
+    
     @IBOutlet weak var txtPassword: UITextField!
     
     @IBOutlet weak var lblUsernameLine: UILabel!
-  
+    
     @IBOutlet weak var lblPasswordLine: UILabel!
     
     @IBOutlet weak var lblErrorMessage: UILabel!
     
-    @IBOutlet weak var btnLogin: UIButton!
-    
+    @IBOutlet weak var btnLogin: MSButton!
     
     //MARK: Login View's Actions
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        loginViewModel = LoginViewModel(loginService: LoginService())
-        loginViewModel.delegate = self
+        loginViewModel = LoginViewModel(loginDelegate: self)
+        btnLogin.command = loginViewModel.loginCommand
     }
     
     //MARK: Delegate's Actions
-    
+    //TODO: Remove some delegate actions.
     func usernameValidationFailed()
     {
         lblUsernameLine.backgroundColor = UIColor.redColor()
@@ -58,29 +57,16 @@ class LoginViewController: UIViewController, LoginViewModelDelegate
     
     func loginFailed() {
         //TODO: DM-52 service implementation fail scenarios
-        btnLogin.enabled = true
         lblErrorMessage.text = "An error ocurred. Please, try again later"
     }
     
-    //MARK: Login Button's Actions
-  
-    @IBAction func Login(sender: UIButton)
-    {
-        sender.enabled = false
-        loginViewModel.username = txtUsername.text!
-        loginViewModel.password = txtPassword.text!
-        if loginViewModel.loginCommand.canExecute()
-        {
-            loginViewModel.loginCommand.execute()
-        }
-    }
     
     //MARK: Username Input's Actions
     
     @IBAction func txtUsernameEditingChanged(sender: UITextField)
     {
+        loginViewModel.username = sender.text!
         lblUsernameLine.backgroundColor = UIColor.lightGrayColor()
-        btnLogin.enabled = true
         lblErrorMessage.text = ""
     }
     
@@ -88,8 +74,8 @@ class LoginViewController: UIViewController, LoginViewModelDelegate
     
     @IBAction func txtPasswordEditingChanged(sender: UITextField)
     {
+        loginViewModel.password = sender.text!
         lblPasswordLine.backgroundColor = UIColor.lightGrayColor()
-        btnLogin.enabled = true
         lblErrorMessage.text = ""
     }
     
