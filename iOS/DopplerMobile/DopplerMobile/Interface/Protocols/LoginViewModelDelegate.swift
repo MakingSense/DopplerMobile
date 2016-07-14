@@ -8,6 +8,7 @@
 
 import Foundation
 
+//TODO: Modify this protocol. 
 protocol LoginViewModelDelegate: class
 {
     func usernameValidationFailed()
