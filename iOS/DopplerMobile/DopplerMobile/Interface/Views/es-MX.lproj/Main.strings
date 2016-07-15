@@ -1,0 +1,21 @@
+
+/* Class = "UIButton"; normalTitle = "LOGIN"; ObjectID = "AAc-ZA-1Hr"; */
+"AAc-ZA-1Hr.normalTitle" = "LOGIN";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "IQv-sV-WwB"; */
+"IQv-sV-WwB.normalTitle" = "SIGUIENTE";
+
+/* Class = "UILabel"; text = "USERNAME"; ObjectID = "WW9-7y-fyP"; */
+"WW9-7y-fyP.text" = "USUARIO";
+
+/* Class = "UIButton"; normalTitle = "FORGOT YOUR PASSWORD?"; ObjectID = "Xgd-t9-dYZ"; */
+"Xgd-t9-dYZ.normalTitle" = "TE OLVIDASTE TU CONTRASEÑA?";
+
+/* Class = "UIButton"; normalTitle = "SKIP"; ObjectID = "oxZ-WW-LCx"; */
+"oxZ-WW-LCx.normalTitle" = "OMITIR";
+
+/* Class = "UILabel"; text = "Lorem Ipsum"; ObjectID = "sZ0-EC-rjb"; */
+"sZ0-EC-rjb.text" = "Lorem Ipsum";
+
+/* Class = "UILabel"; text = "PASSWORD"; ObjectID = "uwB-SC-h2a"; */
+"uwB-SC-h2a.text" = "CONTRASEÑA";

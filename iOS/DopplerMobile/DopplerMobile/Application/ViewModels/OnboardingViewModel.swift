@@ -50,10 +50,12 @@ public class OnboardingViewModel
     }
     
     //TODO: Remove this later, only for testing.
-    private func addTestContent()
-    {
-        let arrayOfStrings : [String] = ["One", "Two", "Three"];
-        
+    func addTestContent()
+    {        
+        let arrayOfStrings : [String] = ["ONBOARDING_TEST_ONE".localized,
+                                         "ONBOARDING_TEST_TWO".localized,
+                                         "ONBOARDING_TEST_THREE".localized]
+
         for string in arrayOfStrings
         {
             let newContent = OnboardingContentViewModel(content: string)
