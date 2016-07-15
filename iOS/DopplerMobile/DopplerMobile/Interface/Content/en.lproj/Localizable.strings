@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  DopplerMobile
+
+  Created by Mugu on 7/15/16.
+  Copyright © 2016 Making Sense. All rights reserved.
+*/
+
+"ONBOARDING_TEST_ONE" = "One";
+"ONBOARDING_TEST_TWO" = "Two";
+"ONBOARDING_TEST_THREE" = "Three";
