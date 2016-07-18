@@ -16,36 +16,38 @@ class OnboardingViewController: UIPageViewController, OnboardingContentViewContr
     {
         super.viewDidLoad()
 
-        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(OnboardingViewController.handleSwipes(_:)))
-        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(OnboardingViewController.handleSwipes(_:)))
+        let directions: [UISwipeGestureRecognizerDirection] = [.Left, .Right]
+        for direction in directions
+        {
+            let gesture = UISwipeGestureRecognizer(target: self, action: #selector(OnboardingViewController.handleSwipes(_:)))
+            gesture.direction = direction
+            view.addGestureRecognizer(gesture)
+        }
 
-        leftSwipe.direction = .Left
-        rightSwipe.direction = .Right
-
-        view.addGestureRecognizer(leftSwipe)
-        view.addGestureRecognizer(rightSwipe)
-
-        setupContent()
+        setupViewModel()
     }
 
     func handleSwipes(sender:UISwipeGestureRecognizer)
     {
-        if (sender.direction.rawValue == 1)
+        var direction : UIPageViewControllerNavigationDirection?
+        var viewModel : OnboardingContentViewModel?
+
+        switch sender.direction.rawValue
         {
-            let viewModel = previous()
-            if(viewModel != nil)
-            {
-                presentViewControllerFromViewModel(createViewControllerFromViewModel(viewModel!), direction: UIPageViewControllerNavigationDirection.Reverse)
-            }
+        case 1:
+            viewModel = self.viewModel!.previous()
+            direction = UIPageViewControllerNavigationDirection.Reverse
+        case 2:
+            viewModel = self.viewModel!.next()
+            direction = UIPageViewControllerNavigationDirection.Forward
+        default: () //Do nothing!
         }
-        else if (sender.direction.rawValue == 2)
+
+        if(viewModel != nil)
         {
-            let viewModel = next()
-            if(viewModel != nil)
-            {
-                presentViewControllerFromViewModel(createViewControllerFromViewModel(viewModel!), direction: UIPageViewControllerNavigationDirection.Forward)
-            }
+            presentViewControllerFromViewModel(createViewControllerFromViewModel(viewModel!), direction: direction!)
         }
+
     }
 
     func presentViewControllerFromViewModel(viewController: UIViewController, direction: UIPageViewControllerNavigationDirection)
@@ -57,40 +59,26 @@ class OnboardingViewController: UIPageViewController, OnboardingContentViewContr
     {
         let viewController:OnboardingContentViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("OnboardingContentViewController") as! OnboardingContentViewController
 
-        viewController.setupViewModel(viewModel)
+        viewController.viewModel = viewModel
 
         viewController.delegate = self
         
         return viewController
     }
 
-
-    func setupContent()
+    func setupViewModel()
     {
         self.viewModel = OnboardingViewModel()
-
-        self.viewModel!.setupOnboardingContent()
 
         let firstViewModel = self.viewModel?.currentViewModel
 
         presentViewControllerFromViewModel(createViewControllerFromViewModel(firstViewModel!), direction: UIPageViewControllerNavigationDirection.Forward)
     }
 
-    //This should probably be removed later with VM
-    func next() -> OnboardingContentViewModel?
-    {
-        return self.viewModel!.next()
-    }
-
-    func previous() -> OnboardingContentViewModel?
-    {
-        return self.viewModel!.previous()
-    }
-
     // MARK: OnboardingContentViewControllerDelegate
     func nextTouched()
     {
-        let viewModel = next()
+        let viewModel = self.viewModel?.next()
         if(viewModel != nil)
         {
             let viewController = createViewControllerFromViewModel(viewModel!)

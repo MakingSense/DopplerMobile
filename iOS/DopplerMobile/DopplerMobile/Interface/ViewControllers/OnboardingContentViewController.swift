@@ -19,34 +19,14 @@ class OnboardingContentViewController: UIViewController
 {
     @IBOutlet weak var txtContent: UILabel!
 
-    var index: Int = 0
-    var hasLazyLoading: Bool?
-    var lazyContent: String?
-    var lazyIndex: Int?
     var viewModel : OnboardingContentViewModel?
+
     weak var delegate: OnboardingContentViewControllerDelegate?
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
         txtContent.text = self.viewModel!.content
-    }
-
-    init(viewModel: OnboardingContentViewModel)
-    {
-        self.viewModel = viewModel
-
-        super.init(nibName: nil, bundle: nil)
-    }
-
-    required init?(coder aDecoder: NSCoder)
-    {
-        super.init(coder: aDecoder)
-    }
-
-    func setupViewModel(viewModel: OnboardingContentViewModel)
-    {
-        self.viewModel = viewModel
     }
 
     @IBAction func SkipButtonTouched(sender: UIButton)

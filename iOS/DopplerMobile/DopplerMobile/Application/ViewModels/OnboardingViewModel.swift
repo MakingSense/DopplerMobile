@@ -14,9 +14,9 @@ class OnboardingViewModel
     var currentViewModel : OnboardingContentViewModel?
     var currentNode : LinkedListNode<OnboardingContentViewModel>?
 
-    func setupOnboardingContent()
+    init()
     {
-        //TODO: Get actual content from a localization solution.
+        //TODO: proper initialization
         addTestContent()
     }
 
@@ -57,7 +57,7 @@ class OnboardingViewModel
     }
 
     //TODO: Remove this later, only for testing.
-    func addTestContent()
+    private func addTestContent()
     {
         let arrayOfStrings : [String] = ["One", "Two", "Three"];
 
