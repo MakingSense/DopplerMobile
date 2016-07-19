@@ -10,10 +10,11 @@ import Foundation
 
 public class OnboardingContentViewModel
 {
-    var content : String = ""
+    var content : String = ""    
     
-    func setup(content: String)
+    init(content: String)
     {
         self.content = content
     }
+    
 }

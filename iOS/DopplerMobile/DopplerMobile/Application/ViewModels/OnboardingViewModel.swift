@@ -10,7 +10,6 @@ import Foundation
 
 public class OnboardingViewModel
 {
-    //As content is an array of strings I tried to use a plural name but "contents" just plain sucks. I left content.
     var pages : [OnboardingContentViewModel] = []
     var currentIndex : Int = 0
     
@@ -57,8 +56,7 @@ public class OnboardingViewModel
         
         for string in arrayOfStrings
         {
-            let newContent = OnboardingContentViewModel()
-            newContent.setup(string)
+            let newContent = OnboardingContentViewModel(content: string)
             self.pages.append(newContent)
         }
     }
