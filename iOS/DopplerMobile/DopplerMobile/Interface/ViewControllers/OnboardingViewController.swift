@@ -19,7 +19,8 @@ class OnboardingViewController: UIPageViewController, OnboardingContentViewContr
         let directions: [UISwipeGestureRecognizerDirection] = [.Left, .Right]
         for direction in directions
         {
-            let gesture = UISwipeGestureRecognizer(target: self, action: #selector(OnboardingViewController.handleSwipes(_:)))
+            //TODO: Replace with #selector(OnboardingViewController.handleSwipes(_:)))
+            let gesture = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))//#selector(OnboardingViewController.handleSwipes(_:)))
             gesture.direction = direction
             view.addGestureRecognizer(gesture)
         }
@@ -70,8 +71,8 @@ class OnboardingViewController: UIPageViewController, OnboardingContentViewContr
     {
         self.viewModel = OnboardingViewModel()
 
-        let firstViewModel = self.viewModel?.currentViewModel
-
+        let firstViewModel = self.viewModel?.pages[(self.viewModel?.currentIndex)!]
+        
         presentViewControllerFromViewModel(createViewControllerFromViewModel(firstViewModel!), direction: UIPageViewControllerNavigationDirection.Forward)
     }
 
