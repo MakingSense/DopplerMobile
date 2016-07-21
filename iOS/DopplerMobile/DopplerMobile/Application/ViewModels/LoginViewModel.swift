@@ -36,14 +36,10 @@ public class LoginViewModel
     //MARK: Commands
     private func loginCommandExecute()
     {
-        //TODO: rename delegate and change the LoginViewModelDelegate protocol.
         if loginService.login(self.username, password: self.password)
         {
-            self.loginDelegate?.loginSucceded()
-        }
-        else
-        {
-            self.loginDelegate?.loginFailed()
+            //TODO: implement a generic way to navigate between view model
+            loginDelegate?.showViewModel(SegueIdentifier.LoggedInScreenSegue)
         }
     }
     

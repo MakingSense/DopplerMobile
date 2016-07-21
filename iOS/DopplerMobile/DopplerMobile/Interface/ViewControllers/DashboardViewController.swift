@@ -11,12 +11,10 @@ import UIKit
 class DashboardViewController: UIViewController, UITableViewDelegate
 {
     // MARK: Properties
-    
     @IBOutlet weak var tblSentCampaigns: UITableView!
     var dataSource : SentCampaignsViewDataSource?
     
     // MARK: Actions
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dataSource = SentCampaignsViewDataSource()

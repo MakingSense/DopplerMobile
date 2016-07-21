@@ -20,23 +20,24 @@
 		249ECB701D3E795800F18E74 /* SentCampaignsViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249ECB6F1D3E795800F18E74 /* SentCampaignsViewDataSource.swift */; };
 		24F0FB6F1D1B2D5C00360346 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F0FB6E1D1B2D5C00360346 /* User.swift */; };
 		24F0FB731D1C109E00360346 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F0FB721D1C109E00360346 /* LoginViewModel.swift */; };
-		24FD44A31D22EBCB003E35A4 /* LoginViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD44A21D22EBCB003E35A4 /* LoginViewModelDelegate.swift */; };
+		24FD44A31D22EBCB003E35A4 /* NavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD44A21D22EBCB003E35A4 /* NavigationDelegate.swift */; };
 		24FD44A91D244E12003E35A4 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD44A81D244E12003E35A4 /* Command.swift */; };
 		24FD44B01D245DC3003E35A4 /* SimpleCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD44AF1D245DC3003E35A4 /* SimpleCommand.swift */; };
-		2BC6EF4F1D370A88009F5A0B /* ScheduledCampaignsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC6EF4E1D370A88009F5A0B /* ScheduledCampaignsViewController.swift */; };
-		2BC6EF511D370B5F009F5A0B /* CampaignsReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC6EF501D370B5F009F5A0B /* CampaignsReportViewController.swift */; };
-		2BC6EF531D370B7A009F5A0B /* CampaignsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC6EF521D370B7A009F5A0B /* CampaignsListViewController.swift */; };
-		9C48461C1D3FBB81003032D5 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0339E71D3EBB45006EDBD1 /* StringExtension.swift */; };
-		9C48461D1D3FBBC0003032D5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F0339E01D3EBAE1006EDBD1 /* Localizable.strings */; };
-		9C5AA8A01D3963F5002021CC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C5AA8A21D3963F5002021CC /* Localizable.strings */; };
 		2B703F1B1D3D304E00A19E36 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B703F1A1D3D304E00A19E36 /* String.swift */; };
 		2B703F1D1D3D51D900A19E36 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B703F1C1D3D51D900A19E36 /* Optional.swift */; };
 		2B703F1F1D3D521E00A19E36 /* StringType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B703F1E1D3D521E00A19E36 /* StringType.swift */; };
+		2BC6EF4F1D370A88009F5A0B /* ScheduledCampaignsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC6EF4E1D370A88009F5A0B /* ScheduledCampaignsViewController.swift */; };
+		2BC6EF531D370B7A009F5A0B /* CampaignsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC6EF521D370B7A009F5A0B /* CampaignsListViewController.swift */; };
+		2BD83BAB1D41590C00A5C527 /* OnboardingContentViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD83BAA1D41590C00A5C527 /* OnboardingContentViewControllerDelegate.swift */; };
+		2BD83BB01D42762200A5C527 /* SegueIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD83BAF1D42762200A5C527 /* SegueIdentifier.swift */; };
+		9C48461C1D3FBB81003032D5 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0339E71D3EBB45006EDBD1 /* StringExtension.swift */; };
+		9C48461D1D3FBBC0003032D5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F0339E01D3EBAE1006EDBD1 /* Localizable.strings */; };
+		9C5AA8A01D3963F5002021CC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C5AA8A21D3963F5002021CC /* Localizable.strings */; };
 		9CB9DEFA1D1B1E1100DAED48 /* OnboardingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB9DEF91D1B1E1100DAED48 /* OnboardingContentViewController.swift */; };
 		9CB9DEFC1D1C150100DAED48 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB9DEFB1D1C150100DAED48 /* OnboardingViewController.swift */; };
-		A8EF46D91D26C218000882A3 /* MSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EF46D81D26C218000882A3 /* MSButton.swift */; };
 		9CD2FC6A1D2445E800D4C9F8 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2FC691D2445E800D4C9F8 /* LoginService.swift */; };
 		9CE68F311D217C9C00428471 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE68F301D217C9C00428471 /* OnboardingViewModel.swift */; };
+		A8EF46D91D26C218000882A3 /* MSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EF46D81D26C218000882A3 /* MSButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,22 +71,23 @@
 		249ECB6F1D3E795800F18E74 /* SentCampaignsViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentCampaignsViewDataSource.swift; sourceTree = "<group>"; };
 		24F0FB6E1D1B2D5C00360346 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		24F0FB721D1C109E00360346 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		24FD44A21D22EBCB003E35A4 /* LoginViewModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModelDelegate.swift; sourceTree = "<group>"; };
+		24FD44A21D22EBCB003E35A4 /* NavigationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationDelegate.swift; sourceTree = "<group>"; };
 		24FD44A81D244E12003E35A4 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		24FD44AF1D245DC3003E35A4 /* SimpleCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCommand.swift; sourceTree = "<group>"; };
-		2BC6EF4E1D370A88009F5A0B /* ScheduledCampaignsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledCampaignsViewController.swift; sourceTree = "<group>"; };
-		2BC6EF501D370B5F009F5A0B /* CampaignsReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignsReportViewController.swift; sourceTree = "<group>"; };
-		2BC6EF521D370B7A009F5A0B /* CampaignsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignsListViewController.swift; sourceTree = "<group>"; };
-		9C5AA89B1D395F4E002021CC /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		9C5AA89C1D395F4E002021CC /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Main.strings"; sourceTree = "<group>"; };
 		2B703F1A1D3D304E00A19E36 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		2B703F1C1D3D51D900A19E36 /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		2B703F1E1D3D521E00A19E36 /* StringType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringType.swift; sourceTree = "<group>"; };
+		2BC6EF4E1D370A88009F5A0B /* ScheduledCampaignsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledCampaignsViewController.swift; sourceTree = "<group>"; };
+		2BC6EF521D370B7A009F5A0B /* CampaignsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignsListViewController.swift; sourceTree = "<group>"; };
+		2BD83BAA1D41590C00A5C527 /* OnboardingContentViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewControllerDelegate.swift; sourceTree = "<group>"; };
+		2BD83BAF1D42762200A5C527 /* SegueIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueIdentifier.swift; sourceTree = "<group>"; };
+		9C5AA89B1D395F4E002021CC /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		9C5AA89C1D395F4E002021CC /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Main.strings"; sourceTree = "<group>"; };
 		9CB9DEF91D1B1E1100DAED48 /* OnboardingContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewController.swift; sourceTree = "<group>"; };
 		9CB9DEFB1D1C150100DAED48 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
-		A8EF46D81D26C218000882A3 /* MSButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSButton.swift; sourceTree = "<group>"; };
 		9CD2FC691D2445E800D4C9F8 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		9CE68F301D217C9C00428471 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		A8EF46D81D26C218000882A3 /* MSButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 		241198671D1B134100330D87 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				2BD83BAE1D42741C00A5C527 /* Enums */,
 				1F0339E61D3EBB2A006EDBD1 /* Extensions */,
 				1F0339DF1D3EBAE1006EDBD1 /* Content */,
 				241198691D1B134100330D87 /* ViewModels */,
@@ -150,7 +153,6 @@
 			children = (
 				24F0FB721D1C109E00360346 /* LoginViewModel.swift */,
 				2439F3181D343BBC00949C5D /* CampaignViewModel.swift */,
-				2411987E1D1B162E00330D87 /* File */,
 				9CE68F301D217C9C00428471 /* OnboardingViewModel.swift */,
 				1FDB0BDA1D23038B007544C3 /* OnboardingContentViewModel.swift */,
 			);
@@ -209,7 +211,6 @@
 				9CB9DEF91D1B1E1100DAED48 /* OnboardingContentViewController.swift */,
 				9CB9DEFB1D1C150100DAED48 /* OnboardingViewController.swift */,
 				2BC6EF4E1D370A88009F5A0B /* ScheduledCampaignsViewController.swift */,
-				2BC6EF501D370B5F009F5A0B /* CampaignsReportViewController.swift */,
 				2BC6EF521D370B7A009F5A0B /* CampaignsListViewController.swift */,
 				249ECB6D1D3D56B300F18E74 /* DashboardViewController.swift */,
 				249ECB6F1D3E795800F18E74 /* SentCampaignsViewDataSource.swift */,
@@ -259,7 +260,8 @@
 		24F0FB741D1D6C1800360346 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				24FD44A21D22EBCB003E35A4 /* LoginViewModelDelegate.swift */,
+				24FD44A21D22EBCB003E35A4 /* NavigationDelegate.swift */,
+				2BD83BAA1D41590C00A5C527 /* OnboardingContentViewControllerDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -272,6 +274,14 @@
 				2B703F1E1D3D521E00A19E36 /* StringType.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		2BD83BAE1D42741C00A5C527 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				2BD83BAF1D42762200A5C527 /* SegueIdentifier.swift */,
+			);
+			name = Enums;
 			sourceTree = "<group>";
 		};
 		A8EF46D71D26C1DC000882A3 /* MSComponents */ = {
@@ -388,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BD83BAB1D41590C00A5C527 /* OnboardingContentViewControllerDelegate.swift in Sources */,
 				24F0FB731D1C109E00360346 /* LoginViewModel.swift in Sources */,
 				2B703F1B1D3D304E00A19E36 /* String.swift in Sources */,
 				2411987A1D1B134100330D87 /* LoginViewController.swift in Sources */,
@@ -395,7 +406,7 @@
 				9CE68F311D217C9C00428471 /* OnboardingViewModel.swift in Sources */,
 				1FDB0BDB1D23038B007544C3 /* OnboardingContentViewModel.swift in Sources */,
 				241198781D1B134100330D87 /* AppDelegate.swift in Sources */,
-				24FD44A31D22EBCB003E35A4 /* LoginViewModelDelegate.swift in Sources */,
+				24FD44A31D22EBCB003E35A4 /* NavigationDelegate.swift in Sources */,
 				2439F31B1D352BD500949C5D /* SentCampaignsTableViewCell.swift in Sources */,
 				24FD44A91D244E12003E35A4 /* Command.swift in Sources */,
 				249ECB6E1D3D56B300F18E74 /* DashboardViewController.swift in Sources */,
@@ -404,13 +415,13 @@
 				24F0FB6F1D1B2D5C00360346 /* User.swift in Sources */,
 				9C48461C1D3FBB81003032D5 /* StringExtension.swift in Sources */,
 				2B703F1F1D3D521E00A19E36 /* StringType.swift in Sources */,
+				2BD83BB01D42762200A5C527 /* SegueIdentifier.swift in Sources */,
 				9CB9DEFC1D1C150100DAED48 /* OnboardingViewController.swift in Sources */,
 				2B703F1D1D3D51D900A19E36 /* Optional.swift in Sources */,
 				A8EF46D91D26C218000882A3 /* MSButton.swift in Sources */,
 				2BC6EF531D370B7A009F5A0B /* CampaignsListViewController.swift in Sources */,
 				2439F3191D343BBC00949C5D /* CampaignViewModel.swift in Sources */,
 				249ECB701D3E795800F18E74 /* SentCampaignsViewDataSource.swift in Sources */,
-				2BC6EF511D370B5F009F5A0B /* CampaignsReportViewController.swift in Sources */,
 				2BC6EF4F1D370A88009F5A0B /* ScheduledCampaignsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

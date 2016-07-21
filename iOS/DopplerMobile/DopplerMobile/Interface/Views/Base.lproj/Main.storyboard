@@ -97,13 +97,14 @@
                             <constraint firstItem="SWP-wK-qaM" firstAttribute="trailing" secondItem="hoL-Ns-Rpi" secondAttribute="trailing" id="veY-ZF-5Lf"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="REPORTES" image="Metrics-Summary-Disabled" selectedImage="Metrics-Summary" id="XnX-gz-hx5"/>
                     <connections>
-                        <outlet property="tblSentCampaigns" destination="Op6-Sa-Gpz" id="ZHc-ea-oKU"/>
+                        <outlet property="tblSentCampaigns" destination="Op6-Sa-Gpz" id="oaL-L4-9sh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7mX-PM-PVK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1557" y="277"/>
+            <point key="canvasLocation" x="2307" y="397"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="vOH-MH-uPs">
@@ -260,7 +261,7 @@
                         <outlet property="lblUsernameLine" destination="CL5-OU-IvG" id="2Le-d5-2D2"/>
                         <outlet property="txtPassword" destination="9Ot-CN-jog" id="UWT-eh-xwB"/>
                         <outlet property="txtUsername" destination="G9Y-8X-f5v" id="byY-Qb-ABY"/>
-                        <segue destination="lKc-qX-XHr" kind="show" identifier="loggedInSegue" id="3Ft-ew-gb8"/>
+                        <segue destination="lKc-qX-XHr" kind="show" identifier="loggedInScreenSegue" id="3Ft-ew-gb8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HJO-Su-x4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -400,10 +401,14 @@
         <!--Onboarding View Controller-->
         <scene sceneID="7Sf-Ve-a3p">
             <objects>
-                <pageViewController storyboardIdentifier="OnboardingViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="lKc-qX-XHr" customClass="OnboardingViewController" customModule="DopplerMobile" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="OnboardingViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="lKc-qX-XHr" customClass="OnboardingViewController" customModule="DopplerMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="Hll-nm-Y3T" kind="show" identifier="dashboardScreenSegue" id="DNg-Vu-SCv"/>
+                    </connections>
+                </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fur-un-9v4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1534" y="450"/>
+            <point key="canvasLocation" x="1522" y="460"/>
         </scene>
         <!--View Controller Screen Two-->
         <scene sceneID="3YO-NS-nUy">
@@ -420,7 +425,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="View Two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mt9-UP-USb">
                                 <rect key="frame" x="20" y="28" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -447,7 +452,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="View Three" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaW-0P-e81">
                                 <rect key="frame" x="20" y="28" width="92" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -459,33 +464,6 @@
             </objects>
             <point key="canvasLocation" x="2300" y="1845"/>
         </scene>
-        <!--View Controller Screen One-->
-        <scene sceneID="9d5-ch-NL4">
-            <objects>
-                <viewController title="View Controller Screen One" id="OiR-45-r1m" customClass="CampaignsReportViewController" customModule="DopplerMobile" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="BKK-vB-qGw"/>
-                        <viewControllerLayoutGuide type="bottom" id="tOx-ZC-fUX"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="9Uk-0d-As8">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="View One" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSI-bx-352">
-                                <rect key="frame" x="20" y="28" width="76" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" tag="1" title="REPORTES" image="Metrics-Summary-Disabled" selectedImage="Metrics-Summary" id="hQt-Zn-i6w"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yWl-gp-Tfe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2300" y="450"/>
-        </scene>
         <!--Dashboard Tab Menu View Controller-->
         <scene sceneID="YAE-lA-bv8">
             <objects>
@@ -496,14 +474,14 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="OiR-45-r1m" kind="relationship" relationship="viewControllers" id="HQF-MF-WsQ"/>
-                        <segue destination="fLh-5y-0jE" kind="relationship" relationship="viewControllers" id="E0P-nB-Pba"/>
-                        <segue destination="fNm-3A-UAG" kind="relationship" relationship="viewControllers" id="7kD-Wi-kaM"/>
+                        <segue destination="V02-l6-IUc" kind="relationship" relationship="viewControllers" id="LKw-PE-EVt"/>
+                        <segue destination="fLh-5y-0jE" kind="relationship" relationship="viewControllers" id="Wo3-gr-Lh7"/>
+                        <segue destination="fNm-3A-UAG" kind="relationship" relationship="viewControllers" id="dgE-Gd-2TV"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wS6-aI-SiW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1534" y="1132"/>
+            <point key="canvasLocation" x="1534" y="1222"/>
         </scene>
     </scenes>
     <resources>
