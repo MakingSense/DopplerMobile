@@ -8,19 +8,10 @@
 
 import UIKit
 
-//TODO: This should be a separated file later.
-protocol OnboardingContentViewControllerDelegate: class
-{
-    func nextTouched()
-    func skipTouched()
-}
-
 class OnboardingContentViewController: UIViewController
 {
     @IBOutlet weak var txtContent: UILabel!
-
     var viewModel : OnboardingContentViewModel?
-
     weak var delegate: OnboardingContentViewControllerDelegate?
 
     override func viewDidLoad()

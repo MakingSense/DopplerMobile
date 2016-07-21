@@ -20,7 +20,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dataSource = SentCampaignsViewDataSource()
-        self.dataSource!.loadTest()
+        self.dataSource?.loadTest()
         tblSentCampaigns.dataSource = self.dataSource
         tblSentCampaigns.delegate = self
     }

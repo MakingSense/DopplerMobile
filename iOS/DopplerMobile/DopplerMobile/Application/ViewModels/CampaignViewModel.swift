@@ -10,8 +10,16 @@ import Foundation
 
 public class CampaignViewModel
 {
-    public var name : String = ""
-    public var sentDate: String = ""
-    public var amountSentSubscribers: String = ""
-    public var openedPercentage: String = ""
+    public var name : String
+    public var sentDate: String
+    public var amountSentSubscribers: String
+    public var openedPercentage: String
+    
+    init(name: String, sentDate: String, amountSentSubscribers: String, openedPercentage: String)
+    {
+        self.name = name
+        self.sentDate = sentDate
+        self.amountSentSubscribers = amountSentSubscribers
+        self.openedPercentage = openedPercentage
+    }
 }

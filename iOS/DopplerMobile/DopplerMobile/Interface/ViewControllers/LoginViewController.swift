@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, LoginViewModelDelegate
+class LoginViewController: UIViewController
 {
     //MARK: Properties
     
@@ -34,32 +34,6 @@ class LoginViewController: UIViewController, LoginViewModelDelegate
         loginViewModel = LoginViewModel(loginDelegate: self)
         btnLogin.command = loginViewModel.loginCommand
     }
-    
-    //MARK: Delegate's Actions
-    //TODO: Remove some delegate actions.
-    func usernameValidationFailed()
-    {
-        lblUsernameLine.backgroundColor = UIColor.redColor()
-        lblErrorMessage.text = "Username required"
-    }
-    
-    func passwordValidationFailed()
-    {
-        lblPasswordLine.backgroundColor = UIColor.redColor()
-        lblErrorMessage.text = "Password required"
-    }
-    
-    func loginSucceded()
-    {
-        lblErrorMessage.text = ""
-        performSegueWithIdentifier("loggedInSegue", sender:self)
-    }
-    
-    func loginFailed() {
-        //TODO: DM-52 service implementation fail scenarios
-        lblErrorMessage.text = "An error ocurred. Please, try again later"
-    }
-    
     
     //MARK: Username Input's Actions
     

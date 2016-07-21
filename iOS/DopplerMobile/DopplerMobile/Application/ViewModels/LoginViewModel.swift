@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class LoginViewModel
+public class LoginViewModel: NavigationDelegate
 {
     public var username: String = "" {
         didSet
@@ -36,19 +36,20 @@ public class LoginViewModel
     //MARK: Commands
     private func loginCommandExecute()
     {
-        //TODO: rename delegate and change the LoginViewModelDelegate protocol.
         if loginService.login(self.username, password: self.password)
         {
-            self.loginDelegate?.loginSucceded()
-        }
-        else
-        {
-            self.loginDelegate?.loginFailed()
+            //TODO: implement a generic way to navigate between view model
+            ShowViewModel("loggedInSegue")
         }
     }
     
     private func loginCommandCanExecute()-> Bool
     {
         return  !self.username.isEmpty && !self.password.isEmpty
+    }
+    
+    //TODO: implement a generic way to navigate between view model
+    func ShowViewModel(identifier: String) {
+        loginDelegate?.performSegueWithIdentifier(identifier, sender: loginDelegate!)
     }
 }

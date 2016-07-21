@@ -69,8 +69,7 @@ class OnboardingViewController: UIPageViewController, OnboardingContentViewContr
 
     func setupViewModel()
     {
-        self.viewModel = OnboardingViewModel()
-
+        self.viewModel = OnboardingViewModel(onboardingDelegate: self)
         let firstViewModel = self.viewModel?.pages[(self.viewModel?.currentIndex)!]
         
         presentViewControllerFromViewModel(createViewControllerFromViewModel(firstViewModel!), direction: UIPageViewControllerNavigationDirection.Forward)
@@ -90,7 +89,6 @@ class OnboardingViewController: UIPageViewController, OnboardingContentViewContr
 
     func skipTouched()
     {
-        //TODO: Add later logic to skip the onboarding process.
+        self.viewModel?.skip()
     }
-    
 }
