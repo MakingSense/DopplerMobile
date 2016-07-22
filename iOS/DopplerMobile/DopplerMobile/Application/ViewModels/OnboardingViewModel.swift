@@ -12,13 +12,13 @@ public class OnboardingViewModel
 {
     var pages : [OnboardingContentViewModel] = []
     var currentIndex : Int = 0
-    private var onboardingDelegate: OnboardingViewController?
+    private var navigationDelegate: NavigationDelegate?
     
-    init(onboardingDelegate: OnboardingViewController?)
+    init(navigationDelegate: NavigationDelegate?)
     {
         //TODO: Get actual content from a localization solution.
         addTestContent()
-        self.onboardingDelegate = onboardingDelegate
+        self.navigationDelegate = navigationDelegate
         self.currentIndex = 0
     }
     
@@ -27,7 +27,7 @@ public class OnboardingViewModel
         //TODO: Check the final logic.
         if(pages.count - 1 <= self.currentIndex)
         {
-            onboardingDelegate?.showViewModel(SegueIdentifier.DashboardScreenSegue)
+            navigationDelegate?.showViewModel(SegueIdentifier.DashboardScreenSegue)
             return nil
         }
         
@@ -48,7 +48,7 @@ public class OnboardingViewModel
     
     func skip()
     {
-        onboardingDelegate?.showViewModel(SegueIdentifier.DashboardScreenSegue)
+        navigationDelegate?.showViewModel(SegueIdentifier.DashboardScreenSegue)
     }
     
     //TODO: Remove this later, only for testing.
