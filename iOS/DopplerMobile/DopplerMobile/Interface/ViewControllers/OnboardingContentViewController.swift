@@ -10,6 +10,8 @@ import UIKit
 
 class OnboardingContentViewController: UIViewController
 {
+    static let identifier = "OnboardingContentViewController"
+    
     //MARK: Properties
     @IBOutlet weak var txtContent: UILabel!
     var viewModel : OnboardingContentViewModel?
