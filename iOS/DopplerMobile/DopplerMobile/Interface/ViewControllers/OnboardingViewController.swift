@@ -18,8 +18,7 @@ class OnboardingViewController: UIPageViewController, OnboardingContentViewContr
         let directions: [UISwipeGestureRecognizerDirection] = [.Left, .Right]
         for direction in directions
         {
-            //TODO: Replace with #selector(OnboardingViewController.handleSwipes(_:)))
-            let gesture = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))//#selector(OnboardingViewController.handleSwipes(_:)))
+            let gesture = UISwipeGestureRecognizer(target: self, action: #selector(OnboardingViewController.handleSwipes(_:)))
             gesture.direction = direction
             view.addGestureRecognizer(gesture)
         }
@@ -31,15 +30,15 @@ class OnboardingViewController: UIPageViewController, OnboardingContentViewContr
         var direction : UIPageViewControllerNavigationDirection?
         var viewModel : OnboardingContentViewModel?
         
-        switch sender.direction.rawValue
+        switch sender.direction
         {
-        case 1:
-            viewModel = self.viewModel!.previous()
-            direction = UIPageViewControllerNavigationDirection.Reverse
-        case 2:
-            viewModel = self.viewModel!.next()
-            direction = UIPageViewControllerNavigationDirection.Forward
-        default: () //Do nothing!
+            case UISwipeGestureRecognizerDirection.Right:
+                viewModel = self.viewModel!.previous()
+                direction = UIPageViewControllerNavigationDirection.Reverse
+            case UISwipeGestureRecognizerDirection.Left:
+                viewModel = self.viewModel!.next()
+                direction = UIPageViewControllerNavigationDirection.Forward
+            default: () //Do nothing!
         }
         
         if(viewModel != nil)
@@ -63,7 +62,7 @@ class OnboardingViewController: UIPageViewController, OnboardingContentViewContr
     
     func setupViewModel()
     {
-        self.viewModel = OnboardingViewModel(onboardingDelegate: self)
+        self.viewModel = OnboardingViewModel(navigationDelegate: self)
         let firstViewModel = self.viewModel?.pages[(self.viewModel?.currentIndex)!]
         presentViewControllerFromViewModel(createViewControllerFromViewModel(firstViewModel!), direction: UIPageViewControllerNavigationDirection.Forward)
     }

@@ -10,27 +10,26 @@ import Foundation
 
 public class LoginViewModel
 {
-    public var username: String = "" {
-        didSet
-        {
-            loginCommand.raiseCanExecuteChanged()
-        }
-    }
-    public var password: String = "" {
-        didSet
-        {
-            loginCommand.raiseCanExecuteChanged()
-        }
-    }
-    public var loginCommand: Command!
-    private var loginService: LoginService
-    private var loginDelegate: LoginViewController?
-    
-    init(loginDelegate: LoginViewController?)
+    public var username: String = ""
     {
-        self.loginDelegate = loginDelegate
-        self.loginService = LoginService()
-        self.loginCommand = SimpleCommand(execute: loginCommandExecute , canExecute: loginCommandCanExecute)
+        didSet { loginCommand.raiseCanExecuteChanged() }
+    }
+    
+    public var password: String = ""
+    {
+        didSet { loginCommand.raiseCanExecuteChanged() }
+    }
+    
+    public var loginCommand: Command!
+    
+    private var loginService: LoginService
+    private var navigationDelegate: NavigationDelegate?
+    
+    init(loginService: LoginService, nagivationDelegate: NavigationDelegate)
+    {
+        self.navigationDelegate = nagivationDelegate
+        self.loginService = loginService
+        self.loginCommand = SimpleCommand(execute: loginCommandExecute, canExecute: loginCommandCanExecute)
     }
     
     //MARK: Commands
@@ -39,12 +38,12 @@ public class LoginViewModel
         if loginService.login(self.username, password: self.password)
         {
             //TODO: implement a generic way to navigate between view model
-            loginDelegate?.showViewModel(SegueIdentifier.LoggedInScreenSegue)
+            navigationDelegate?.showViewModel(SegueIdentifier.LoggedInScreenSegue)
         }
     }
     
-    private func loginCommandCanExecute()-> Bool
+    private func loginCommandCanExecute() -> Bool
     {
-        return  !self.username.isEmpty && !self.password.isEmpty
+        return !self.username.isEmpty && !self.password.isEmpty
     }
 }

@@ -10,7 +10,7 @@ import Foundation
 
 class LoginService
 {
-    func login(username: String, password: String)->Bool
+    func login(username: String, password: String) -> Bool
     {
         //TODO: will be implemented on DM-52
         return true
