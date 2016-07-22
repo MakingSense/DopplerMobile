@@ -12,18 +12,21 @@ class LoginViewController: UIViewController, NavigationDelegate
 {
     //MARK: Properties
     private var loginViewModel: LoginViewModel!
+    
     @IBOutlet weak var txtUsername: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
+    
     @IBOutlet weak var lblUsernameLine: UILabel!
     @IBOutlet weak var lblPasswordLine: UILabel!
     @IBOutlet weak var lblErrorMessage: UILabel!
+    
     @IBOutlet weak var btnLogin: MSButton!
     
     // MARK: Actions
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        loginViewModel = LoginViewModel(loginDelegate: self)
+        loginViewModel = LoginViewModel(loginService: LoginService(), nagivationDelegate: self)
         btnLogin.command = loginViewModel.loginCommand
     }
     
