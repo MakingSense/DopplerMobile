@@ -261,7 +261,7 @@
                         <outlet property="lblUsernameLine" destination="CL5-OU-IvG" id="2Le-d5-2D2"/>
                         <outlet property="txtPassword" destination="9Ot-CN-jog" id="UWT-eh-xwB"/>
                         <outlet property="txtUsername" destination="G9Y-8X-f5v" id="byY-Qb-ABY"/>
-                        <segue destination="lKc-qX-XHr" kind="show" identifier="loggedInSegue" id="3Ft-ew-gb8"/>
+                        <segue destination="lKc-qX-XHr" kind="show" identifier="loggedInScreenSegue" id="3Ft-ew-gb8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HJO-Su-x4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -403,7 +403,7 @@
             <objects>
                 <pageViewController storyboardIdentifier="OnboardingViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="lKc-qX-XHr" customClass="OnboardingViewController" customModule="DopplerMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
-                        <segue destination="Hll-nm-Y3T" kind="show" identifier="dashboardSegue" id="DNg-Vu-SCv"/>
+                        <segue destination="Hll-nm-Y3T" kind="show" identifier="dashboardScreenSegue" id="DNg-Vu-SCv"/>
                     </connections>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fur-un-9v4" userLabel="First Responder" sceneMemberID="firstResponder"/>

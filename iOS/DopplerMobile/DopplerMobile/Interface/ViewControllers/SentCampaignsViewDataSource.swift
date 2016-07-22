@@ -20,7 +20,6 @@ class SentCampaignsViewDataSource: NSObject, UITableViewDataSource
         let test1 = CampaignViewModel(name: "test 1", sentDate: "11/12/2012", amountSentSubscribers: "20", openedPercentage: "30")
         let test2 = CampaignViewModel(name: "test 2", sentDate: "12/12/2012", amountSentSubscribers: "10", openedPercentage: "4")
         let test3 = CampaignViewModel(name: "test 3", sentDate: "13/12/2012", amountSentSubscribers: "25", openedPercentage: "70")
-        
         items = [test1, test2, test3]
     }
     

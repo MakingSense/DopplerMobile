@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class OnboardingViewModel: NavigationDelegate
+public class OnboardingViewModel
 {
     var pages : [OnboardingContentViewModel] = []
     var currentIndex : Int = 0
@@ -27,7 +27,7 @@ public class OnboardingViewModel: NavigationDelegate
         //TODO: Check the final logic.
         if(pages.count - 1 <= self.currentIndex)
         {
-            ShowViewModel("dashboardSegue")
+            onboardingDelegate?.showViewModel(SegueIdentifier.DashboardScreenSegue)
             return nil
         }
         
@@ -48,7 +48,7 @@ public class OnboardingViewModel: NavigationDelegate
     
     func skip()
     {
-        ShowViewModel("dashboardSegue")
+        onboardingDelegate?.showViewModel(SegueIdentifier.DashboardScreenSegue)
     }
     
     //TODO: Remove this later, only for testing.
@@ -63,10 +63,5 @@ public class OnboardingViewModel: NavigationDelegate
             let newContent = OnboardingContentViewModel(content: string)
             self.pages.append(newContent)
         }
-    }
-    
-    //TODO: implement a generic way to navigate between view model
-    func ShowViewModel(identifier: String) {
-        onboardingDelegate?.performSegueWithIdentifier(identifier, sender: onboardingDelegate!)
     }
 }

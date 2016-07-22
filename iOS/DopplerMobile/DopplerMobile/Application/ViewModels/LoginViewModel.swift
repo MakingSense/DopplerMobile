@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class LoginViewModel: NavigationDelegate
+public class LoginViewModel
 {
     public var username: String = "" {
         didSet
@@ -39,17 +39,12 @@ public class LoginViewModel: NavigationDelegate
         if loginService.login(self.username, password: self.password)
         {
             //TODO: implement a generic way to navigate between view model
-            ShowViewModel("loggedInSegue")
+            loginDelegate?.showViewModel(SegueIdentifier.LoggedInScreenSegue)
         }
     }
     
     private func loginCommandCanExecute()-> Bool
     {
         return  !self.username.isEmpty && !self.password.isEmpty
-    }
-    
-    //TODO: implement a generic way to navigate between view model
-    func ShowViewModel(identifier: String) {
-        loginDelegate?.performSegueWithIdentifier(identifier, sender: loginDelegate!)
     }
 }

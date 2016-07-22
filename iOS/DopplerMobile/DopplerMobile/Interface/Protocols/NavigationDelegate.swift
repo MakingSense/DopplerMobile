@@ -11,5 +11,5 @@ import Foundation
 protocol NavigationDelegate: class
 {
     //TODO: implement a generic way to navigate between view model
-    func ShowViewModel(identifier: String)
+    func showViewModel(identifier: SegueIdentifier)
 }

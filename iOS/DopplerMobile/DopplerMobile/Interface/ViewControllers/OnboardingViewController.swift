@@ -8,14 +8,13 @@
 
 import UIKit
 
-class OnboardingViewController: UIPageViewController, OnboardingContentViewControllerDelegate
+class OnboardingViewController: UIPageViewController, OnboardingContentViewControllerDelegate, NavigationDelegate
 {
     var viewModel : OnboardingViewModel?
-
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
         let directions: [UISwipeGestureRecognizerDirection] = [.Left, .Right]
         for direction in directions
         {
@@ -24,15 +23,14 @@ class OnboardingViewController: UIPageViewController, OnboardingContentViewContr
             gesture.direction = direction
             view.addGestureRecognizer(gesture)
         }
-
         setupViewModel()
     }
-
+    
     func handleSwipes(sender:UISwipeGestureRecognizer)
     {
         var direction : UIPageViewControllerNavigationDirection?
         var viewModel : OnboardingContentViewModel?
-
+        
         switch sender.direction.rawValue
         {
         case 1:
@@ -43,38 +41,33 @@ class OnboardingViewController: UIPageViewController, OnboardingContentViewContr
             direction = UIPageViewControllerNavigationDirection.Forward
         default: () //Do nothing!
         }
-
+        
         if(viewModel != nil)
         {
             presentViewControllerFromViewModel(createViewControllerFromViewModel(viewModel!), direction: direction!)
         }
-
     }
-
+    
     func presentViewControllerFromViewModel(viewController: UIViewController, direction: UIPageViewControllerNavigationDirection)
     {
         self.setViewControllers([viewController], direction: direction, animated: true, completion: nil)
     }
-
+    
     func createViewControllerFromViewModel(viewModel: OnboardingContentViewModel) -> UIViewController
     {
         let viewController:OnboardingContentViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("OnboardingContentViewController") as! OnboardingContentViewController
-
         viewController.viewModel = viewModel
-
         viewController.delegate = self
-        
         return viewController
     }
-
+    
     func setupViewModel()
     {
         self.viewModel = OnboardingViewModel(onboardingDelegate: self)
         let firstViewModel = self.viewModel?.pages[(self.viewModel?.currentIndex)!]
-        
         presentViewControllerFromViewModel(createViewControllerFromViewModel(firstViewModel!), direction: UIPageViewControllerNavigationDirection.Forward)
     }
-
+    
     // MARK: OnboardingContentViewControllerDelegate
     func nextTouched()
     {
@@ -82,13 +75,18 @@ class OnboardingViewController: UIPageViewController, OnboardingContentViewContr
         if(viewModel != nil)
         {
             let viewController = createViewControllerFromViewModel(viewModel!)
-
             presentViewControllerFromViewModel(viewController, direction: UIPageViewControllerNavigationDirection.Forward)
         }
     }
-
+    
     func skipTouched()
     {
         self.viewModel?.skip()
+    }
+    
+    //TODO: implement a generic way to navigate between view model
+    func showViewModel(identifier: SegueIdentifier)
+    {
+        performSegueWithIdentifier(identifier.rawValue, sender: self)
     }
 }

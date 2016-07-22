@@ -11,14 +11,12 @@ import UIKit
 class SentCampaignsTableViewCell : UITableViewCell
 {
     // MARK: Properties
-
     @IBOutlet weak var lblCampaignName: UILabel!
     @IBOutlet weak var lblSentDate: UILabel!
     @IBOutlet weak var lblStatistics: UILabel!    
     static let identifier = "SentCampaignsCell"
     
     // MARK: Actions
-    
     func setValues(campaignViewModel: CampaignViewModel)
     {
         self.lblCampaignName.text = campaignViewModel.name
