@@ -8,7 +8,8 @@
 
 import Foundation
 
-enum SegueIdentifier: String {
-    case LoggedInScreenSegue = "loggedInScreenSegue"
-    case DashboardScreenSegue = "dashboardScreenSegue"
+class SegueIdentifier
+{
+    static let LoggedInScreenSegue = "loggedInScreenSegue"
+    static let DashboardScreenSegue = "dashboardScreenSegue"
 }

@@ -23,6 +23,7 @@
 		24FD44A31D22EBCB003E35A4 /* NavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD44A21D22EBCB003E35A4 /* NavigationDelegate.swift */; };
 		24FD44A91D244E12003E35A4 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD44A81D244E12003E35A4 /* Command.swift */; };
 		24FD44B01D245DC3003E35A4 /* SimpleCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD44AF1D245DC3003E35A4 /* SimpleCommand.swift */; };
+		297A13D90F2810CF909BED53 /* Pods_DopplerMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748E46A767442CC91A005982 /* Pods_DopplerMobile.framework */; };
 		2B703F1B1D3D304E00A19E36 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B703F1A1D3D304E00A19E36 /* String.swift */; };
 		2B703F1D1D3D51D900A19E36 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B703F1C1D3D51D900A19E36 /* Optional.swift */; };
 		2B703F1F1D3D521E00A19E36 /* StringType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B703F1E1D3D521E00A19E36 /* StringType.swift */; };
@@ -30,6 +31,7 @@
 		2BC6EF531D370B7A009F5A0B /* CampaignsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC6EF521D370B7A009F5A0B /* CampaignsListViewController.swift */; };
 		2BD83BAB1D41590C00A5C527 /* OnboardingContentViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD83BAA1D41590C00A5C527 /* OnboardingContentViewControllerDelegate.swift */; };
 		2BD83BB01D42762200A5C527 /* SegueIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD83BAF1D42762200A5C527 /* SegueIdentifier.swift */; };
+		3708CC0C3FD3293E217A3B9B /* Pods_DopplerMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B0FBF5681B5C222EDA6143 /* Pods_DopplerMobileTests.framework */; };
 		9C48461C1D3FBB81003032D5 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0339E71D3EBB45006EDBD1 /* StringExtension.swift */; };
 		9C48461D1D3FBBC0003032D5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F0339E01D3EBAE1006EDBD1 /* Localizable.strings */; };
 		9C5AA8A01D3963F5002021CC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C5AA8A21D3963F5002021CC /* Localizable.strings */; };
@@ -38,6 +40,8 @@
 		9CD2FC6A1D2445E800D4C9F8 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2FC691D2445E800D4C9F8 /* LoginService.swift */; };
 		A8EF46D91D26C218000882A3 /* MSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EF46D81D26C218000882A3 /* MSButton.swift */; };
 		C22695701D4297D000059959 /* OnboardingViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C226956F1D4297D000059959 /* OnboardingViewDataSource.swift */; };
+		C2D30C341D4534BB005AF831 /* ApplicationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D30C331D4534BB005AF831 /* ApplicationAssembly.swift */; };
+		C2D30C361D45474C005AF831 /* NavigationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D30C351D45474C005AF831 /* NavigationHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +85,10 @@
 		2BC6EF521D370B7A009F5A0B /* CampaignsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignsListViewController.swift; sourceTree = "<group>"; };
 		2BD83BAA1D41590C00A5C527 /* OnboardingContentViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewControllerDelegate.swift; sourceTree = "<group>"; };
 		2BD83BAF1D42762200A5C527 /* SegueIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueIdentifier.swift; sourceTree = "<group>"; };
+		2F70CBF14D8E49CCEDAD966B /* Pods-DopplerMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DopplerMobileTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DopplerMobileTests/Pods-DopplerMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
+		47384DAC5EC7AB9677FC0F64 /* Pods-DopplerMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DopplerMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DopplerMobile/Pods-DopplerMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		748E46A767442CC91A005982 /* Pods_DopplerMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DopplerMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		798741349FE2E77ED8E0EF9F /* Pods-DopplerMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DopplerMobileTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DopplerMobileTests/Pods-DopplerMobileTests.release.xcconfig"; sourceTree = "<group>"; };
 		9C5AA89B1D395F4E002021CC /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		9C5AA89C1D395F4E002021CC /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Main.strings"; sourceTree = "<group>"; };
 		9CB9DEF91D1B1E1100DAED48 /* OnboardingContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +96,10 @@
 		9CD2FC691D2445E800D4C9F8 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		A8EF46D81D26C218000882A3 /* MSButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSButton.swift; sourceTree = "<group>"; };
 		C226956F1D4297D000059959 /* OnboardingViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewDataSource.swift; sourceTree = "<group>"; };
+		C2D30C331D4534BB005AF831 /* ApplicationAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationAssembly.swift; sourceTree = "<group>"; };
+		C2D30C351D45474C005AF831 /* NavigationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationHandler.swift; sourceTree = "<group>"; };
+		CF2B80B91CDE5E970FFBCFD5 /* Pods-DopplerMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DopplerMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-DopplerMobile/Pods-DopplerMobile.release.xcconfig"; sourceTree = "<group>"; };
+		D0B0FBF5681B5C222EDA6143 /* Pods_DopplerMobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DopplerMobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				297A13D90F2810CF909BED53 /* Pods_DopplerMobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3708CC0C3FD3293E217A3B9B /* Pods_DopplerMobileTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +158,8 @@
 				1F0339E61D3EBB2A006EDBD1 /* Extensions */,
 				1F0339DF1D3EBAE1006EDBD1 /* Content */,
 				241198691D1B134100330D87 /* ViewModels */,
+				C2D30C331D4534BB005AF831 /* ApplicationAssembly.swift */,
+				C2D30C351D45474C005AF831 /* NavigationHandler.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -236,6 +252,8 @@
 				A8EF46D71D26C1DC000882A3 /* MSComponents */,
 				242514731C7E45CD00785AE6 /* DopplerMobileTests */,
 				2425145D1C7E45CD00785AE6 /* Products */,
+				52A5A1D7D2142EF7338BA730 /* Pods */,
+				A4BBC9571946AE1B470104B1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -284,6 +302,26 @@
 			name = Enums;
 			sourceTree = "<group>";
 		};
+		52A5A1D7D2142EF7338BA730 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				47384DAC5EC7AB9677FC0F64 /* Pods-DopplerMobile.debug.xcconfig */,
+				CF2B80B91CDE5E970FFBCFD5 /* Pods-DopplerMobile.release.xcconfig */,
+				2F70CBF14D8E49CCEDAD966B /* Pods-DopplerMobileTests.debug.xcconfig */,
+				798741349FE2E77ED8E0EF9F /* Pods-DopplerMobileTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A4BBC9571946AE1B470104B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				748E46A767442CC91A005982 /* Pods_DopplerMobile.framework */,
+				D0B0FBF5681B5C222EDA6143 /* Pods_DopplerMobileTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A8EF46D71D26C1DC000882A3 /* MSComponents */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,9 +338,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 242514791C7E45CD00785AE6 /* Build configuration list for PBXNativeTarget "DopplerMobile" */;
 			buildPhases = (
+				2E2DCE0BD033A55E8DDC62AA /* [CP] Check Pods Manifest.lock */,
 				242514581C7E45CD00785AE6 /* Sources */,
 				242514591C7E45CD00785AE6 /* Frameworks */,
 				2425145A1C7E45CD00785AE6 /* Resources */,
+				F35A96C2726A32CC07A6D746 /* [CP] Embed Pods Frameworks */,
+				07B5308EFDA989C3B215D7B2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -317,9 +358,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2425147C1C7E45CD00785AE6 /* Build configuration list for PBXNativeTarget "DopplerMobileTests" */;
 			buildPhases = (
+				816B295976E6E728BC9C2023 /* [CP] Check Pods Manifest.lock */,
 				2425146C1C7E45CD00785AE6 /* Sources */,
 				2425146D1C7E45CD00785AE6 /* Frameworks */,
 				2425146E1C7E45CD00785AE6 /* Resources */,
+				7AA2B1629406B3E356652417 /* [CP] Embed Pods Frameworks */,
+				D7123761F2CA975471E546EB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -393,6 +437,99 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		07B5308EFDA989C3B215D7B2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DopplerMobile/Pods-DopplerMobile-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2E2DCE0BD033A55E8DDC62AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7AA2B1629406B3E356652417 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DopplerMobileTests/Pods-DopplerMobileTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		816B295976E6E728BC9C2023 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D7123761F2CA975471E546EB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DopplerMobileTests/Pods-DopplerMobileTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F35A96C2726A32CC07A6D746 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DopplerMobile/Pods-DopplerMobile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		242514581C7E45CD00785AE6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -412,6 +549,7 @@
 				249ECB6E1D3D56B300F18E74 /* DashboardViewController.swift in Sources */,
 				24FD44B01D245DC3003E35A4 /* SimpleCommand.swift in Sources */,
 				9CD2FC6A1D2445E800D4C9F8 /* LoginService.swift in Sources */,
+				C2D30C341D4534BB005AF831 /* ApplicationAssembly.swift in Sources */,
 				24F0FB6F1D1B2D5C00360346 /* User.swift in Sources */,
 				9C48461C1D3FBB81003032D5 /* StringExtension.swift in Sources */,
 				2B703F1F1D3D521E00A19E36 /* StringType.swift in Sources */,
@@ -421,6 +559,7 @@
 				A8EF46D91D26C218000882A3 /* MSButton.swift in Sources */,
 				2BC6EF531D370B7A009F5A0B /* CampaignsListViewController.swift in Sources */,
 				2439F3191D343BBC00949C5D /* CampaignViewModel.swift in Sources */,
+				C2D30C361D45474C005AF831 /* NavigationHandler.swift in Sources */,
 				249ECB701D3E795800F18E74 /* SentCampaignsViewDataSource.swift in Sources */,
 				2BC6EF4F1D370A88009F5A0B /* ScheduledCampaignsViewController.swift in Sources */,
 			);
@@ -568,6 +707,7 @@
 		};
 		2425147A1C7E45CD00785AE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47384DAC5EC7AB9677FC0F64 /* Pods-DopplerMobile.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -581,6 +721,7 @@
 		};
 		2425147B1C7E45CD00785AE6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF2B80B91CDE5E970FFBCFD5 /* Pods-DopplerMobile.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -594,6 +735,7 @@
 		};
 		2425147D1C7E45CD00785AE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F70CBF14D8E49CCEDAD966B /* Pods-DopplerMobileTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = DopplerMobileTests/Info.plist;
@@ -606,6 +748,7 @@
 		};
 		2425147E1C7E45CD00785AE6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 798741349FE2E77ED8E0EF9F /* Pods-DopplerMobileTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = DopplerMobileTests/Info.plist;
