@@ -67,7 +67,7 @@ class OnboardingViewDataSource : NSObject, UIPageViewControllerDataSource, Onboa
     
     private func exitOnboarding()
     {
-        self.pager.performSegueWithIdentifier(SegueIdentifier.DashboardScreenSegue.rawValue, sender : self)
+        self.pager.performSegueWithIdentifier(SegueIdentifier.DashboardScreenSegue, sender : self)
     }
     
     

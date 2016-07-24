@@ -8,25 +8,26 @@
 
 import Foundation
 
-public class LoginViewModel
+class LoginViewModel : NSObject
 {
-    public var username: String = ""
+    var username: String = ""
     {
         didSet { loginCommand.raiseCanExecuteChanged() }
     }
     
-    public var password: String = ""
+    var password: String = ""
     {
         didSet { loginCommand.raiseCanExecuteChanged() }
     }
     
-    public var loginCommand: Command!
+    var loginCommand: Command!
     
-    private var loginService: LoginService
+    private var loginService: LoginService!
     private var navigationDelegate: NavigationDelegate?
     
-    init(loginService: LoginService, nagivationDelegate: NavigationDelegate)
+    dynamic init(loginService: LoginService, nagivationDelegate: NavigationDelegate)
     {
+        super.init()
         self.navigationDelegate = nagivationDelegate
         self.loginService = loginService
         self.loginCommand = SimpleCommand(execute: loginCommandExecute, canExecute: loginCommandCanExecute)

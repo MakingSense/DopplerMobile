@@ -8,7 +8,7 @@
 
 import Foundation
 
-class LoginService
+public class LoginService : NSObject
 {
     func login(username: String, password: String) -> Bool
     {
