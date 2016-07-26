@@ -74,6 +74,7 @@
 		24FD44A21D22EBCB003E35A4 /* NavigationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationDelegate.swift; sourceTree = "<group>"; };
 		24FD44A81D244E12003E35A4 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		24FD44AF1D245DC3003E35A4 /* SimpleCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCommand.swift; sourceTree = "<group>"; };
+		2B0EFD5C1D4855E600D5E42F /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Main.strings"; sourceTree = "<group>"; };
 		2B703F1A1D3D304E00A19E36 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		2B703F1C1D3D51D900A19E36 /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		2B703F1E1D3D521E00A19E36 /* StringType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringType.swift; sourceTree = "<group>"; };
@@ -82,7 +83,6 @@
 		2BD83BAA1D41590C00A5C527 /* OnboardingContentViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewControllerDelegate.swift; sourceTree = "<group>"; };
 		2BD83BAF1D42762200A5C527 /* SegueIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueIdentifier.swift; sourceTree = "<group>"; };
 		9C5AA89B1D395F4E002021CC /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		9C5AA89C1D395F4E002021CC /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Main.strings"; sourceTree = "<group>"; };
 		9CB9DEF91D1B1E1100DAED48 /* OnboardingContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewController.swift; sourceTree = "<group>"; };
 		9CB9DEFB1D1C150100DAED48 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		9CD2FC691D2445E800D4C9F8 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
@@ -467,7 +467,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				241198771D1B134100330D87 /* Base */,
-				9C5AA89C1D395F4E002021CC /* es-MX */,
+				2B0EFD5C1D4855E600D5E42F /* es-MX */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

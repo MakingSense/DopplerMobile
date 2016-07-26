@@ -97,7 +97,7 @@
                             <constraint firstItem="SWP-wK-qaM" firstAttribute="trailing" secondItem="hoL-Ns-Rpi" secondAttribute="trailing" id="veY-ZF-5Lf"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="REPORTES" image="Metrics-Summary-Disabled" selectedImage="Metrics-Summary" id="XnX-gz-hx5"/>
+                    <tabBarItem key="tabBarItem" title="METRICS" image="Metrics-Summary-Disabled" selectedImage="Metrics-Summary" id="XnX-gz-hx5"/>
                     <connections>
                         <outlet property="tblSentCampaigns" destination="Op6-Sa-Gpz" id="oaL-L4-9sh"/>
                     </connections>
@@ -431,7 +431,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.73755286818217303" green="1" blue="0.68151802439236164" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="2" title="PROGRAMADAS" image="Scheduled-Disabled" selectedImage="Scheduled" id="Sat-Kp-Ag1"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="SCHEDULED" image="Scheduled-Disabled" selectedImage="Scheduled" id="Sat-Kp-Ag1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ECG-BY-W5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -458,7 +458,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.49073063216930679" green="0.74199344029685066" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="3" title="LISTAS" image="Lists-Disabled" selectedImage="Lists" id="F20-0z-zvo"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="LISTS" image="Lists-Disabled" selectedImage="Lists" id="F20-0z-zvo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aqO-E9-4h7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
