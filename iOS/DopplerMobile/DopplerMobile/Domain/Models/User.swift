@@ -12,6 +12,7 @@ class User
 {
     var username: String
     var token: String
+    //TODO: Add tokenExpirationDate
     
     init(username: String, token: String)
     {
