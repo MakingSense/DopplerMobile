@@ -12,6 +12,7 @@ class LoginService
 {
     let defaults = NSUserDefaults.standardUserDefaults()
     var token = ""
+    // Real account information in production environment.
     let API_Key = "F9B113EA00971EC0468FAB1278571522"
     let validUserName = "nreal+freetest1@makingsense.com"
     let validPassword = "1qaz2wsx"
