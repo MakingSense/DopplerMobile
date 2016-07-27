@@ -6,7 +6,6 @@
 //  Copyright © 2016 Making Sense. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class OnboardingViewDataSource : NSObject, UIPageViewControllerDataSource, OnboardingContentViewControllerDelegate

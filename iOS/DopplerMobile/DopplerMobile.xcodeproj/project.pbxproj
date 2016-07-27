@@ -23,6 +23,7 @@
 		24FD44A31D22EBCB003E35A4 /* NavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD44A21D22EBCB003E35A4 /* NavigationDelegate.swift */; };
 		24FD44A91D244E12003E35A4 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD44A81D244E12003E35A4 /* Command.swift */; };
 		24FD44B01D245DC3003E35A4 /* SimpleCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD44AF1D245DC3003E35A4 /* SimpleCommand.swift */; };
+		2B68BE5A1D4FD3FC0086C4D3 /* UserDefaultKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B68BE591D4FD3FC0086C4D3 /* UserDefaultKey.swift */; };
 		2B703F1B1D3D304E00A19E36 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B703F1A1D3D304E00A19E36 /* String.swift */; };
 		2B703F1D1D3D51D900A19E36 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B703F1C1D3D51D900A19E36 /* Optional.swift */; };
 		2B703F1F1D3D521E00A19E36 /* StringType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B703F1E1D3D521E00A19E36 /* StringType.swift */; };
@@ -75,6 +76,7 @@
 		24FD44A81D244E12003E35A4 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		24FD44AF1D245DC3003E35A4 /* SimpleCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCommand.swift; sourceTree = "<group>"; };
 		2B0EFD5C1D4855E600D5E42F /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Main.strings"; sourceTree = "<group>"; };
+		2B68BE591D4FD3FC0086C4D3 /* UserDefaultKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultKey.swift; sourceTree = "<group>"; };
 		2B703F1A1D3D304E00A19E36 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		2B703F1C1D3D51D900A19E36 /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		2B703F1E1D3D521E00A19E36 /* StringType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringType.swift; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				2BD83BAF1D42762200A5C527 /* SegueIdentifier.swift */,
+				2B68BE591D4FD3FC0086C4D3 /* UserDefaultKey.swift */,
 			);
 			name = Enums;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				9CD2FC6A1D2445E800D4C9F8 /* LoginService.swift in Sources */,
 				24F0FB6F1D1B2D5C00360346 /* User.swift in Sources */,
 				9C48461C1D3FBB81003032D5 /* StringExtension.swift in Sources */,
+				2B68BE5A1D4FD3FC0086C4D3 /* UserDefaultKey.swift in Sources */,
 				2B703F1F1D3D521E00A19E36 /* StringType.swift in Sources */,
 				2BD83BB01D42762200A5C527 /* SegueIdentifier.swift in Sources */,
 				9CB9DEFC1D1C150100DAED48 /* OnboardingViewController.swift in Sources */,

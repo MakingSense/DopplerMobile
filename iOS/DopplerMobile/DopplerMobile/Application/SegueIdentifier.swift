@@ -9,6 +9,8 @@
 import Foundation
 
 enum SegueIdentifier: String {
+    case MainScreenSegue = "mainScreenSegue"
+    case LoginScreenSegue = "loginScreenSegue"
     case LoggedInScreenSegue = "loggedInScreenSegue"
     case DashboardScreenSegue = "dashboardScreenSegue"
 }

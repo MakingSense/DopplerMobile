@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LXw-vR-mTg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9XZ-c1-IVL">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -10,7 +10,7 @@
         <!--Dashboard View Controller-->
         <scene sceneID="wxb-AS-yQk">
             <objects>
-                <viewController id="V02-l6-IUc" userLabel="Dashboard View Controller" customClass="DashboardViewController" customModule="DopplerMobile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DashboardViewController" id="V02-l6-IUc" userLabel="Dashboard View Controller" customClass="DashboardViewController" customModule="DopplerMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9O0-tn-Kwq"/>
                         <viewControllerLayoutGuide type="bottom" id="4io-xk-DO5"/>
@@ -106,10 +106,27 @@
             </objects>
             <point key="canvasLocation" x="2307" y="397"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9f4-mP-Urc">
+            <objects>
+                <navigationController id="9XZ-c1-IVL" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lL9-65-bWY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="LXw-vR-mTg" kind="show" identifier="loginScreenSegue" id="1SC-cA-DU8"/>
+                        <segue destination="Hll-nm-Y3T" kind="show" identifier="mainScreenSegue" id="QcN-zB-XLY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="18p-KQ-gKL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1294" y="-397"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="vOH-MH-uPs">
             <objects>
-                <viewController id="LXw-vR-mTg" userLabel="Login View Controller" customClass="LoginViewController" customModule="DopplerMobile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="LXw-vR-mTg" userLabel="Login View Controller" customClass="LoginViewController" customModule="DopplerMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HWw-CU-G4f"/>
                         <viewControllerLayoutGuide type="bottom" id="ddI-zB-hdv"/>
@@ -266,7 +283,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HJO-Su-x4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="301" y="460"/>
+            <point key="canvasLocation" x="1509" y="376"/>
         </scene>
         <!--Onboarding Content View Controller-->
         <scene sceneID="W1g-He-Wup">
@@ -396,7 +413,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BdD-O6-ZwH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="807" y="1182"/>
+            <point key="canvasLocation" x="823" y="754"/>
         </scene>
         <!--Onboarding View Controller-->
         <scene sceneID="7Sf-Ve-a3p">
@@ -408,7 +425,7 @@
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fur-un-9v4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1522" y="460"/>
+            <point key="canvasLocation" x="1509" y="1100"/>
         </scene>
         <!--View Controller Screen Two-->
         <scene sceneID="3YO-NS-nUy">
@@ -481,7 +498,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wS6-aI-SiW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1534" y="1222"/>
+            <point key="canvasLocation" x="2294" y="-370"/>
         </scene>
     </scenes>
     <resources>
@@ -494,5 +511,8 @@
         <image name="Scheduled" width="22" height="25"/>
         <image name="Scheduled-Disabled" width="22" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="QcN-zB-XLY"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
