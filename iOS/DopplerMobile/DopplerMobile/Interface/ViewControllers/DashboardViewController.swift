@@ -12,13 +12,14 @@ class DashboardViewController: UIViewController, UITableViewDelegate
 {
     // MARK: Properties
     @IBOutlet weak var tblSentCampaigns: UITableView!
+    private var dashboardViewModel: DashboardViewModel!
     var dataSource : SentCampaignsViewDataSource?
     
     // MARK: Actions
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.dataSource = SentCampaignsViewDataSource()
-        self.dataSource!.loadTest()
+        dashboardViewModel = DashboardViewModel(sentCampaignsService: SentCampaignsService())
+        self.dataSource = SentCampaignsViewDataSource(viewModel: dashboardViewModel)
         tblSentCampaigns.dataSource = self.dataSource
         tblSentCampaigns.delegate = self
     }

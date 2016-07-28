@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OnboardingViewDataSource : NSObject, UIPageViewControllerDataSource, OnboardingContentViewControllerDelegate
+class OnboardingViewDataSource : NSObject, UIPageViewControllerDataSource, OnboardingContentViewControllerDelegate, NavigationDelegate
 {
     private var models : [OnboardingContentViewModel]
     private var views : [UIViewController]
@@ -19,8 +19,8 @@ class OnboardingViewDataSource : NSObject, UIPageViewControllerDataSource, Onboa
     {
         self.pager = pager
         self.models = [OnboardingContentViewModel(content: "ONBOARDING_TEST_ONE".localized),
-                      OnboardingContentViewModel(content: "ONBOARDING_TEST_TWO".localized),
-                      OnboardingContentViewModel(content: "ONBOARDING_TEST_THREE".localized)]
+                       OnboardingContentViewModel(content: "ONBOARDING_TEST_TWO".localized),
+                       OnboardingContentViewModel(content: "ONBOARDING_TEST_THREE".localized)]
         
         self.views = []
     }
@@ -42,7 +42,7 @@ class OnboardingViewDataSource : NSObject, UIPageViewControllerDataSource, Onboa
         self.currentIndex = views.indexOf(viewController)!
         return currentIndex == self.models.count - 1 ? nil : getViewControllerFromViewModel(self.models[currentIndex + 1])
     }
-   
+    
     // MARK: OnboardingContentViewControllerDelegate
     func nextTouched()
     {
@@ -53,22 +53,19 @@ class OnboardingViewDataSource : NSObject, UIPageViewControllerDataSource, Onboa
         }
         else
         {
-            exitOnboarding()
+            showViewModel(SegueIdentifier.DashboardScreenSegue)
         }
     }
     
     func skipTouched()
     {
-        exitOnboarding()
+        showViewModel(SegueIdentifier.DashboardScreenSegue)
     }
     
-    // MARK: Private methods
-    
-    private func exitOnboarding()
-    {
+    //TODO: Is it the best place to call the callbacks? just to be consistent.
+    func showViewModel(identifier: SegueIdentifier) {
         self.pager.performSegueWithIdentifier(SegueIdentifier.DashboardScreenSegue.rawValue, sender : self)
     }
-    
     
     private func getViewControllerFromViewModel(viewModel: OnboardingContentViewModel) -> UIViewController
     {

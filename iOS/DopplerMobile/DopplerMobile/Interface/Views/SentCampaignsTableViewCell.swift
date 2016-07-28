@@ -13,14 +13,14 @@ class SentCampaignsTableViewCell : UITableViewCell
     // MARK: Properties
     @IBOutlet weak var lblCampaignName: UILabel!
     @IBOutlet weak var lblSentDate: UILabel!
-    @IBOutlet weak var lblStatistics: UILabel!    
+    @IBOutlet weak var lblStatistics: UILabel!
     static let identifier = "SentCampaignsCell"
     
     // MARK: Actions
-    func setValues(campaignViewModel: CampaignViewModel)
+    func configure(campaignViewModel: SentCampaignsViewModel)
     {
         self.lblCampaignName.text = campaignViewModel.name
         self.lblSentDate.text = campaignViewModel.sentDate
-        self.lblStatistics.text =  "\(campaignViewModel.openedPercentage)% OPENED"
+        self.lblStatistics.text =  "\(campaignViewModel.openedPercentage!)% \("SENT_CAMPAIGNS_OPENED_TEXT".localized)"
     }
 }

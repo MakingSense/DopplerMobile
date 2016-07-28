@@ -17,4 +17,12 @@ extension String : StringType
             return self.characters.count
         }
     }
+    
+    func toNSDateWithFormat(format: String) -> NSDate?
+    {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = format
+        let date = dateFormatter.dateFromString(self)
+        return date
+    }
 }

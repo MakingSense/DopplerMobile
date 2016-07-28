@@ -16,6 +16,7 @@ class User
     
     init(username: String, token: String)
     {
+        //TODO: Complete this model.
         self.username = username
         self.token = token
     }

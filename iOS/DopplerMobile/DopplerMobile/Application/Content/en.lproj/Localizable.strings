@@ -6,6 +6,10 @@
   Copyright © 2016 Making Sense. All rights reserved.
 */
 
+//ONBOARDING SECTION
 "ONBOARDING_TEST_ONE" = "One";
 "ONBOARDING_TEST_TWO" = "Two";
 "ONBOARDING_TEST_THREE" = "Three";
+
+//SENT_CAMPAIGNS SECTION
+"SENT_CAMPAIGNS_OPENED_TEXT" = "OPENED";
