@@ -9,5 +9,5 @@
 import Foundation
 
 enum UserDefaultKey: String {
-    case UserLoggedIn
+    case isUserLoggedIn
 }

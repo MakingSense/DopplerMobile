@@ -30,5 +30,7 @@ class SentCampaignReport
         self.totalRecipients = 100
         self.successFullDeliveries = 44
         self.uniqueOpens = 22
+        self.totalUnopened = 12
+        self.totalClicks = 30
     }
 }

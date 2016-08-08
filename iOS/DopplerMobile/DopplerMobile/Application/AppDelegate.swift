@@ -12,10 +12,11 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        let conditionVariable = NSUserDefaults.standardUserDefaults().boolForKey(UserDefaultKey.UserLoggedIn.rawValue)
+        let conditionVariable = NSUserDefaults.standardUserDefaults().boolForKey(UserDefaultKey.isUserLoggedIn.rawValue)
         let navigationController = window!.rootViewController! as! UINavigationController
         navigationController.performSegueWithIdentifier(conditionVariable ? SegueIdentifier.MainScreenSegue.rawValue : SegueIdentifier.LoginScreenSegue.rawValue, sender: self)
-        navigationController.setNavigationBarHidden(true, animated: false)
+        navigationController.setNavigationBarHidden(!conditionVariable, animated: false)
+        navigationController.navigationBar.tintColor = UIColor.blackColor()
         return true
     }
 

@@ -19,7 +19,7 @@ class LoginService
     
     func login(username: String, password: String) -> Bool
     {
-        NSUserDefaults.standardUserDefaults().setObject(true, forKey: UserDefaultKey.UserLoggedIn.rawValue)
+        NSUserDefaults.standardUserDefaults().setObject(true, forKey: UserDefaultKey.isUserLoggedIn.rawValue)
 		//TODO: Refactor this section when AlamoFire Rest Client has been implemented.
         //TODO: DM-48 Implement generic REST client
         //Temporal Implementation. REMOVE THIS CODE!!!.
