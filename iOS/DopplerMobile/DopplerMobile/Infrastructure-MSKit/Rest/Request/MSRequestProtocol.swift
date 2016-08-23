@@ -6,17 +6,17 @@
 //  Copyright © 2016 Making Sense. All rights reserved.
 //
 
-import AFNetworking
+import Alamofire
 
 protocol MSRequestProtocol
 {
-    
-    func getHTTPMethod() -> String
+    func getHTTPMethod() -> Alamofire.Method
     func getMethodRequestId() -> Int
-    func getParameterEncoding() -> AFHTTPClientParameterEncoding
+    func getParameterEncoding() -> Alamofire.ParameterEncoding
     func getRelativePath() -> String
-    func GetParams() -> [NSObject: AnyObject]?
-    func getSuccessCallback() -> ((AFHTTPRequestOperation!, AnyObject!) -> Void)
-    func getErrorCallback() -> ((AFHTTPRequestOperation!, NSError!) -> Void)
-    static func Create(parameters: Dictionary<String, AnyObject>, successCallback: SuccessRequestCallback, errorCallback: ErrorRequestCallback) -> MSRequestProtocol
+    func getParams() -> [String: AnyObject]?
+    func getHeaders() -> [String: String]?
+    func getSuccessCallback(response: AnyObject!) //-> ((Alamofire.Manager!, AnyObject!) -> Void)
+    func getErrorCallback(error: NSError!) //-> ((Alamofire.Manager!, NSError!) -> Void)
+    static func Create(parameters: Dictionary<String, AnyObject>, headers: Dictionary<String, String>,  successCallback: SuccessRequestCallback, errorCallback: ErrorRequestCallback) -> MSRequestProtocol
 }

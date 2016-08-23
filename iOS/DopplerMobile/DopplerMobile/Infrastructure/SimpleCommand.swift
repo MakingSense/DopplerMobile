@@ -32,7 +32,8 @@ public class SimpleCommand : Command
     
     public func canExecute() -> Bool
     {
-        return self._canExecute
+        //TODO: Modify this line in the integration.
+        return self.canExecuteMethod()
     }
     
     public func execute()

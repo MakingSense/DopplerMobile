@@ -11,19 +11,19 @@ import ObjectMapper
 
 class MSEntityBase: NSManagedObject
 {
-//    class func createWithEntity(entity: MSEntityBase)
-//    {
-//        //NEEDS TO BE REWRITER
-//    }
+    //    class func createWithEntity(entity: MSEntityBase)
+    //    {
+    //        //NEEDS TO BE REWRITER
+    //    }
     
-//    func mapping(map: Map)
-//    {
-//        preconditionFailure("Should be overriden")
-//    }
-
-//    func getEntityName() -> String
-//    {
-//        //NEEDS TO BE REWRITER
-//        return ""
-//    }
+    //    func mapping(map: Map)
+    //    {
+    //        preconditionFailure("Should be overriden")
+    //    }
+    
+    //    func getEntityName() -> String
+    //    {
+    //        //NEEDS TO BE REWRITER
+    //        return ""
+    //    }
 }

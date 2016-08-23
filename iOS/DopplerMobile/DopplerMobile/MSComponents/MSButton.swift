@@ -19,7 +19,7 @@ public class MSButton: UIButton, CommandDelegate
             {
                 self.enabled = self.command!.canExecute()
                 self.command!.delegate = self
-            }            
+            }
         }
         get { return self.command }
     }
@@ -34,5 +34,5 @@ public class MSButton: UIButton, CommandDelegate
     {
         self.enabled = canExecute
     }
-
+    
 }

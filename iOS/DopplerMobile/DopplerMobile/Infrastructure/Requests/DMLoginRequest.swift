@@ -7,19 +7,20 @@
 //
 
 import Foundation
-import AFNetworking
+import Alamofire
 
 class DMLoginRequest: MSRequestProtocol
 {
     private static let relativeUrl = "tokens"
-    private static let HTTPMethod = "POST"
+    private static let HTTPMethod = Alamofire.Method.POST
     private static let grantType = "password"
     
     private var successCallback: SuccessRequestCallback!
     private var errorCallback: ErrorRequestCallback!
     private var parameters: Dictionary<String, AnyObject>!
+    private var headers: Dictionary<String, String>!
     
-    func getHTTPMethod() -> String
+    func getHTTPMethod() -> Alamofire.Method
     {
         return DMLoginRequest.HTTPMethod
     }
@@ -29,9 +30,9 @@ class DMLoginRequest: MSRequestProtocol
         return MSTMethodsRequest.Login.rawValue
     }
     
-    func getParameterEncoding() -> AFHTTPClientParameterEncoding
+    func getParameterEncoding() -> Alamofire.ParameterEncoding
     {
-        return AFJSONParameterEncoding
+        return Alamofire.ParameterEncoding.JSON
     }
     
     func getRelativePath() -> String
@@ -39,40 +40,46 @@ class DMLoginRequest: MSRequestProtocol
         return DMLoginRequest.relativeUrl
     }
     
-    func GetParams() -> [NSObject:AnyObject]?
+    func getParams() -> [String:AnyObject]?
     {
         return parameters
     }
     
-    func getSuccessCallback() -> ((AFHTTPRequestOperation!, AnyObject!) -> Void)
+    func getHeaders() -> [String : String]?
     {
-        return {
-            (requestOperation: AFHTTPRequestOperation!, response: AnyObject!) in
+        return headers
+    }
+    
+    func getSuccessCallback(response: AnyObject!) //-> ((Alamofire.Manager!, AnyObject!) -> Void)
+    {
+        //return {
+           // (requestOperation: Alamofire.Manager!, response: AnyObject!) in
             //TODO: do something 
             //COMMENT: save the token
             
             let message = MSResponseMessage(code: 200, label: "success")
             self.successCallback(response: response, requestOperation: message)
-        }
+        //}
     }
     
-    func getErrorCallback() -> ((AFHTTPRequestOperation!, NSError!) -> Void)
+    func getErrorCallback( error: NSError!) //-> ((Alamofire.Manager!, NSError!) -> Void)
     {
-        return {
-            (requestOperation: AFHTTPRequestOperation!, error: NSError!) in
+//        return {
+//            (requestOperation: Alamofire.Manager!, error: NSError!) in
             //TODO: do something
             let message = MSResponseMessage(code: error.code, label: error.domain)
             self.errorCallback(error: error, response: message)
-        }
+//        }
     }
     
-    static func Create(parameters: Dictionary<String, AnyObject>, successCallback: SuccessRequestCallback, errorCallback: ErrorRequestCallback) -> MSRequestProtocol
+    static func Create(parameters: Dictionary<String, AnyObject>,headers: Dictionary<String, String>, successCallback: SuccessRequestCallback, errorCallback: ErrorRequestCallback) -> MSRequestProtocol
     {
         let loginReq = DMLoginRequest()
         loginReq.successCallback = successCallback
         loginReq.errorCallback = errorCallback
         loginReq.parameters = parameters
         loginReq.parameters["grant_type"] = DMLoginRequest.grantType
+        loginReq.headers = headers
         return loginReq
     }
 }

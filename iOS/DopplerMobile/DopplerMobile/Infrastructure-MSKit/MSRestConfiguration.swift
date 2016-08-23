@@ -10,7 +10,6 @@ import Foundation
 
 class MSRestConfiguration
 {
-    
     private var requestConfigurationList: [MSRequestConfiguration]
     private var baseURL: String!
     

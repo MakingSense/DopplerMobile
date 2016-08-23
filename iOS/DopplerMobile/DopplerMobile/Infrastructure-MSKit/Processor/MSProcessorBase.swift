@@ -6,8 +6,8 @@
 //  Copyright © 2016 Making Sense. All rights reserved.
 //
 
-import DATAStack
-import Sync
+//import DATAStack
+//import Sync
 import SwiftyJSON
 
 class MSProcessorBase
@@ -73,5 +73,4 @@ class MSProcessorBase
     {
         preconditionFailure("Should be overriden")
     }
-    
 }

@@ -7,22 +7,21 @@
 //
 
 import Foundation
-import AFNetworking
+import Alamofire
 
 class MSRestClientManager
 {
-    
     let configuration: MSRestConfiguration
     //TODO: should be injected on constructor
     private static var instance: MSRestClientManager!
-    private var httpClient: AFHTTPClient!
+    private var httpClient: Alamofire.Manager!
     
     init(configuration: MSRestConfiguration)
     {
+        //TODO: Check the configuration param, because alamofire receive only a 
         self.configuration = configuration
-        self.httpClient = AFHTTPClient(baseURL: NSURL(string: configuration.getBaseUrl()))
-        self.httpClient.setDefaultHeader("Accept", value: "application/json")
-        self.httpClient.parameterEncoding = AFJSONParameterEncoding
+        let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
+        httpClient = Alamofire.Manager(configuration: configuration)
     }
     
     //TODO: Remove this and start using IoC with Swinject
@@ -42,10 +41,27 @@ class MSRestClientManager
     
     func addToRequestQueue(req: MSRequestProtocol)
     {
-        self.httpClient.parameterEncoding = req.getParameterEncoding()
-        let request = self.httpClient.requestWithMethod(req.getHTTPMethod(), path: req.getRelativePath(), parameters: req.GetParams())
-        let operation = self.httpClient.HTTPRequestOperationWithRequest(request, success: req.getSuccessCallback(),
-                                                                        failure: req.getErrorCallback())
-        self.httpClient.operationQueue.addOperation(operation)
+        //TODO: Make OperationQueue and inform the result.
+        Alamofire.request(Alamofire.Method.POST, configuration.getBaseUrl() + req.getRelativePath(), parameters: req.getParams(), encoding: req.getParameterEncoding(), headers: req.getHeaders())
+            .validate(contentType: ["application/json"])
+            .responseJSON { response in
+                switch response.result
+                {
+                case .Success:
+                    print("Validation Successful")
+                    //TODO: Call the callback
+                    req.getSuccessCallback(response.data)
+                    break
+                case .Failure(let error):
+                    print(error)
+                    //TODO:
+                    req.getErrorCallback(error)
+                    break
+                }
+        }
+        
+        //TODO: Remove this lines after call the correct callback.
+        // let operation = self.httpClient.HTTPRequestOperationWithRequest(request, success: req.getSuccessCallback(),                                                                  failure: req.getErrorCallback())
+        //self.httpClient.operationQueue.addOperation(operation)
     }
 }

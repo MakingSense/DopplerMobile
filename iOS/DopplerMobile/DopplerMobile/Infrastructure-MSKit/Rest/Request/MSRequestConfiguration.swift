@@ -8,7 +8,6 @@
 
 class MSRequestConfiguration
 {
-    
     let requestId : Int
     let entityClass : MSEntityBase.Type
     let processorClass : MSProcessorBase.Type
@@ -21,10 +20,10 @@ class MSRequestConfiguration
         self.processorClass = processorClass
         self.requestClass = requestClass
     }
-    
-    func getRequest(parameters: Dictionary<String, AnyObject>, successCallback: SuccessRequestCallback, errorCallback: ErrorRequestCallback) -> MSRequestProtocol
+
+    func getRequest(parameters: Dictionary<String, AnyObject>, headers: Dictionary<String, String>,  successCallback: SuccessRequestCallback, errorCallback: ErrorRequestCallback) -> MSRequestProtocol
     {
-        return self.requestClass.Create(parameters, successCallback: successCallback, errorCallback: errorCallback)
+        return self.requestClass.Create(parameters, headers: headers, successCallback: successCallback, errorCallback: errorCallback)
     }
     
     func getProcessor() -> MSProcessorBase

@@ -9,5 +9,4 @@
 import Foundation
 
 typealias SuccessRequestCallback = (response: AnyObject, requestOperation: MSResponseMessage) -> Void
-
 typealias ErrorRequestCallback = (error: NSError, response: MSResponseMessage) -> Void

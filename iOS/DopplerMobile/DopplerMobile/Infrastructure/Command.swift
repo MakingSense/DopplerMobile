@@ -15,11 +15,8 @@ public protocol CommandDelegate
 public protocol Command
 {
     var delegate: CommandDelegate? { get set }
-    
     func canExecute() -> Bool
-    
     func execute()
-    
     func raiseCanExecuteChanged()
 }
 

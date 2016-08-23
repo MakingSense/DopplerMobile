@@ -10,25 +10,35 @@ import Foundation
 
 class DMServiceHelper : DMServiceHelperProtocol
 {
-
-//    static let sharedInstance = DMServiceHelper()
-
+    //TODO: Remove hardcode information.
+    let validUserName = "nreal+freetest1@makingsense.com"
+    let validPassword = "1qaz2wsx"
+    
     //TODO: IMPORTANT: we need to remove this
     //initialize the service with this is the only way for turn on the notification
     private let service = MSRequestService()
-
+    
     func login(username: String, password: String, callback: (success:Bool, error:NSError?) -> Void)
     {
-        let params : [String:AnyObject] = [ "username" : username,
-                                            "password" : password
-                                          ]
+        //TODO: Remove hardcode information.
+        let params : [String:AnyObject] = [ "username" : validUserName,
+                                            "password" : validPassword
+        ]
+        //TODO: Check if we need the headers here.
+        let headers : [String:String] = [ "Accept" : "application/json"]
         
-        let req = MSRequestData(method: MSTMethodsRequest.Login.rawValue, parameters: params, callback: {
-            (success: Bool, error: NSError?) in
-            //TODO: we need to notify the resolution of the post
-            callback(success: success, error: error)
+        let req = MSRequestData(method: MSTMethodsRequest.Login.rawValue, parameters: params, headers: headers, callback:
+            {
+                (success: Bool, error: NSError?) in
+                //TODO: we need to notify the resolution of the post
+                callback(success: success, error: error)
         })
         
         NSNotificationCenter.defaultCenter().postNotificationName(MSRequestService.RequestServiceNotificationKey, object: req)
+    }
+    
+    func getCampains()
+    {
+        
     }
 }

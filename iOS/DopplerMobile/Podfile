@@ -2,11 +2,11 @@ platform :ios, "9.2"
 use_frameworks!
 
 target 'DopplerMobile' do
+pod 'Alamofire', '~> 3.4'
 pod 'RestKit'
-#pod 'Sync'
 pod 'ObjectMapper', '~> 1.3'
 pod 'SwiftyJSON'
-pod 'MagicalRecord'
+pod 'MagicalRecord', '~> 2.3'
 pod 'Swinject'
 end
 

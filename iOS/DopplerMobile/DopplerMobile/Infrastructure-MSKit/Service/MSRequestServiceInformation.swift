@@ -15,11 +15,13 @@ class MSRequestData
     private(set) var callback: MSRequestServiceCallback
     private(set) var method: Int
     private(set) var parameters: Dictionary<String, AnyObject>
+    private(set) var headers: Dictionary<String, String>
 
-    init(method: Int, parameters: Dictionary<String, AnyObject>, callback: MSRequestServiceCallback)
+    init(method: Int, parameters: Dictionary<String, AnyObject>, headers: Dictionary<String, String>, callback: MSRequestServiceCallback)
     {
         self.method = method
         self.parameters = parameters
+        self.headers = headers
         self.callback = callback
     }
 }

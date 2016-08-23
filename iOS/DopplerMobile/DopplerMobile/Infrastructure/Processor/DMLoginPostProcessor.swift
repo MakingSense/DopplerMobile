@@ -11,7 +11,7 @@ import SwiftyJSON
 
 class DMLoginPostProcessor: MSProcessorBase
 {
-    
+
     override class func Create() -> MSProcessorBase
     {
         return DMLoginPostProcessor()
@@ -34,7 +34,6 @@ class DMLoginPostProcessor: MSProcessorBase
     {
         return Mapper<DMLogin>().map(String(json))!
     }
-    
     
     override func getNotificationKey() -> String
     {

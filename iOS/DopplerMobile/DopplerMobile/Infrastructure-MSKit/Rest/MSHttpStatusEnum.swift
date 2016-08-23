@@ -1,15 +1,12 @@
 //
-//  MSRestConstants.swift
-//  MSRestKit
+//  MSHttpStatusEnum.swift
 //
 //  Created by Lucas Pelizza on 06/27/16.
 //  Copyright © 2016 Making Sense. All rights reserved.
 //
 
-public class MSRestConstants
+public enum MSHttpStatusEnum: Int
 {
-  enum HttpStatus: Int
-  {
     case OK_200                     = 200
     case CREATED_201                = 201
     case ACCEPTED_202               = 202
@@ -24,5 +21,4 @@ public class MSRestConstants
     case INTERNAL_SERVER_ERROR_500  = 500
     case SERVICE_UNAVAILABLE        = 503
     case UNKNOWN_ERROR              = 999999
-  }
 }

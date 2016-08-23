@@ -10,7 +10,6 @@ import Foundation
 
 class MSRequestService
 {
-    
     static let RequestServiceNotificationKey = "kServiceNotification"
     private var mainProcessor: MSMainProcessor!
     private var restConfiguration: MSRestConfiguration!
@@ -46,9 +45,10 @@ class MSRequestService
         let callback = reqServiceInfo!.callback
         let methodId = reqServiceInfo!.method
         let parameters = reqServiceInfo!.parameters
+        let headers = reqServiceInfo!.headers
         let requestId = generateRequestId()
         
-        self.mainProcessor!.queueRequest(restConfiguration.getRequestConfiguration(methodId), parameters: parameters, callback: makeProcessorCallback(callback), methodRequestId: methodId, requestId: requestId)
+        self.mainProcessor!.queueRequest(restConfiguration.getRequestConfiguration(methodId), parameters: parameters, headers: headers, callback: makeProcessorCallback(callback), methodRequestId: methodId, requestId: requestId)
     }
     
     private func makeProcessorCallback(callback: MSRequestServiceCallback) -> ProcessorCallback
