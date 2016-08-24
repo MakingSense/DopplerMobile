@@ -20,6 +20,7 @@ class DeliveryRateReportTableViewCell : UITableViewCell
     {
         var indicatorDescription = ""
         var indicatorValue = "--"
+        //TODO: Remove this swith, add a collection that contains this iformation.
         switch DeliveryRateIndicators(rawValue: inidcatorIndex)
         {
         case .Some(.totalRecipients):

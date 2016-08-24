@@ -15,4 +15,12 @@ extension NSDate
         dateFormatter.dateFormat = format
         return dateFormatter.stringFromDate(self)
     }
+    
+    func isGreaterThanDate(dateToCompare: NSDate) -> Bool {
+        var isGreater = false
+        if self.compare(dateToCompare) == NSComparisonResult.OrderedDescending {
+            isGreater = true
+        }
+        return isGreater
+    }
 }

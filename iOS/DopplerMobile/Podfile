@@ -2,7 +2,9 @@ platform :ios, "9.2"
 use_frameworks!
 
 target 'DopplerMobile' do
-
+pod 'Alamofire', '~> 3.4'
+pod 'SwiftyJSON'
+pod 'SwiftyUserDefaults'
 end
 
 target 'DopplerMobileTests' do

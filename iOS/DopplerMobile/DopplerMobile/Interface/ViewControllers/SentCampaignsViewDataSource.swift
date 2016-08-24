@@ -12,9 +12,8 @@ class SentCampaignsViewDataSource: NSObject, UITableViewDataSource
 {
     // MARK: Properties
     var items = [SentCampaignsViewModel]()
-    
-    init(viewModel: DashboardViewModel) {
-        items = viewModel.getSentCampaigns();
+    init(viewModel: DashboardViewModel, sentCampaigns: [SentCampaignsViewModel]) {
+        self.items = sentCampaigns;
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int

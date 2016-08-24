@@ -19,10 +19,11 @@ class DashboardViewController: UIViewController, UITableViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController!.setNavigationBarHidden(false, animated: false)
-        dashboardViewModel = DashboardViewModel(sentCampaignsService: SentCampaignsService())
-        self.dataSource = SentCampaignsViewDataSource(viewModel: dashboardViewModel)
-        tblSentCampaigns.dataSource = self.dataSource
-        tblSentCampaigns.delegate = self
+        self.dashboardViewModel = DashboardViewModel(sentCampaignsService: SentCampaignsService())
+        self.tblSentCampaigns.delegate = self
+
+        //TODO: remove this when reactive is implemented.
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(DashboardViewController.OnNotificationArrived(_:)), name:NotificationIdentifier.SentCampaignsNotification.rawValue, object: nil)
     }
     
     // MARK: - Segues
@@ -34,5 +35,29 @@ class DashboardViewController: UIViewController, UITableViewDelegate
             let reportViewController = segue.destinationViewController as! ReportViewController
             reportViewController.reportItem = campaignReport
         }
+    }
+    
+    //TODO: Check the best place to receive this notification.
+    @objc func OnNotificationArrived(notification: NSNotification){
+        if(notification.object != nil)
+        {
+            var sentCampaigns = [SentCampaignsViewModel]()
+            let campaigns = notification.object as! [SentCampaign]
+            for campaign in campaigns {
+                sentCampaigns.append(SentCampaignsViewModel(sentCampaign: campaign))
+            }
+            self.dataSource = SentCampaignsViewDataSource(viewModel: dashboardViewModel, sentCampaigns: sentCampaigns)
+            self.tblSentCampaigns.dataSource = self.dataSource
+        }
+        else
+        {
+            //TODO: Show error.
+        }
+    }
+    
+    //TODO: remove this when reactive is implemented.
+    deinit
+    {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
 }

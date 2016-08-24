@@ -30,20 +30,33 @@ public class LoginViewModel
         self.navigationDelegate = nagivationDelegate
         self.loginService = loginService
         self.loginCommand = SimpleCommand(execute: loginCommandExecute, canExecute: loginCommandCanExecute)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewModel.OnNotificationArrived(_:)), name:NotificationIdentifier.LoginNotification.rawValue, object: nil)
     }
     
     //MARK: Commands
     private func loginCommandExecute()
     {
-        if loginService.login(self.username, password: self.password)
-        {
-            //TODO: implement a generic way to navigate between view model
-            navigationDelegate?.showViewModel(SegueIdentifier.LoggedInScreenSegue)
-        }
+        loginService.login(self.username, password: self.password)
     }
     
     private func loginCommandCanExecute() -> Bool
     {
         return !self.username.isEmpty && !self.password.isEmpty
+    }
+    
+    @objc func OnNotificationArrived(notification: NSNotification){
+        if(notification.object == nil)
+        {
+            navigationDelegate?.showViewModel(SegueIdentifier.LoggedInScreenSegue)
+        }
+        else
+        {
+            //TODO: Show login error.
+        }
+    }
+    
+    deinit
+    {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
 }

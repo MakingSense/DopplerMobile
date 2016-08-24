@@ -7,17 +7,17 @@
 //
 
 import Foundation
+import SwiftyJSON
 
-class User
+class User: NSObject, MSResponseJSONObjectSerializable
 {
-    var username: String
-    var token: String
-    //TODO: Add tokenExpirationDate
+    var username: String?
+    var token: String?
+    var tokenExpirationDate: String?
     
-    init(username: String, token: String)
-    {
-        //TODO: Complete this model.
-        self.username = username
-        self.token = token
+    required init?(json: JSON) {
+        self.username = json["username"].string
+        self.token = json["access_token"].string
+        self.tokenExpirationDate = json["expiration_date"].string
     }
 }

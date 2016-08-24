@@ -12,26 +12,10 @@ public class DashboardViewModel
 {
     private var sentCampaignsService: SentCampaignsService
     private var navigationDelegate: NavigationDelegate?
-    private var sentCampaigns = [SentCampaignsViewModel]()
     
     init(sentCampaignsService: SentCampaignsService)
     {
         self.sentCampaignsService = sentCampaignsService
-        self.downloadSentCampaigns()
-    }
-    
-    private func downloadSentCampaigns()
-    {
-        //TODO: Remove this block, added for testing purpose.
-        var sentCampaign: SentCampaign?
-        for campaign in self.sentCampaignsService.getSentCampaigns() {
-            sentCampaign = SentCampaign(dictionary: campaign)
-            sentCampaigns.append(SentCampaignsViewModel(sentCampaign: sentCampaign!))
-        }
-    }
-    
-    func getSentCampaigns() -> [SentCampaignsViewModel]
-    {
-       return sentCampaigns
+        self.sentCampaignsService.downloadSentCampaigns()
     }
 }

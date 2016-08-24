@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import SwiftyJSON
 
-public class SentCampaign
+public class SentCampaign: MSResponseJSONObjectSerializable
 {
     var campaignId: Int?
     var recipientsRequired: Bool?
@@ -25,47 +26,27 @@ public class SentCampaign
     var link: [Link]?
     var sentCampaignReport: SentCampaignReport?
     
-    init()
-    {
-        self.name = "name"
-        self.fromName = "from name"
-        self.fromEmail = "from email"
-        self.subject = "subject"
-    }
-    
-    //TODO: Refactor initializer.
-    init(name: String, scheduledDate: NSDate, fromName: String, fromEmail: String, subject: String, sentCampaignReport: SentCampaignReport)
-    {
-        self.name = name
-        self.scheduledDate = scheduledDate
-        self.fromName = fromName
-        self.fromEmail = fromEmail
-        self.subject = subject
-        //TODO: Check when get sentCampaignReport Information
-        self.sentCampaignReport = sentCampaignReport
-    }
-    
-    required public init?(dictionary: NSDictionary)
-    {
-        //TODO: Remove magical strings.
-        campaignId = dictionary["campaignId"] as? Int
-        recipientsRequired = dictionary["recipientsRequired"] as? Bool
-        let dateString = dictionary["scheduledDate"] as? String
+    required public init?(json: JSON) {
+        self.campaignId = json["campaignId"].int
+        self.recipientsRequired = json["recipientsRequired"].bool
+        self.contentRequired = json["contentRequired"].bool
+        self.name = json["name"].string
+        self.fromName = json["fromName"].string
+        self.fromEmail = json["fromEmail"].string
+        self.subject = json["subject"].string
+        self.replyTo = json["replyTo"].string
+        //TODO: convert status to CampaignStatus.
+        //self.status = json["status"].int! as? CampaignStatus
+        let dateString = json["scheduledDate"].string
         if !(dateString.isNullOrEmpty)
         {
-            scheduledDate = dateString!.toNSDateWithFormat("yyyy-MM-dd'T'HH:mm:ssZ")
+            self.scheduledDate = dateString!.toNSDateWithFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZZZZ")
         }
-        contentRequired = dictionary["contentRequired"] as? Bool
-        name = dictionary["name"] as! String
-        fromName = dictionary["fromName"] as! String
-        fromEmail = dictionary["fromEmail"] as! String
-        subject = dictionary["subject"] as! String
-        replyTo = dictionary["replyTo"] as? String
-        status = dictionary["status"] as? CampaignStatus
         //TODO: Check when get sentCampaignReport Information
         sentCampaignReport = SentCampaignReport()
     }
     
+    //TODO: Validate if this method will be used in the app.
     public func dictionaryRepresentation() -> NSDictionary
     {
         //TODO: Remove magical strings.
@@ -87,12 +68,13 @@ public class SentCampaign
      - parameter array:  NSArray from JSON dictionary.
      - returns: Array of Campaigns Instances.
      */
+    //TODO: Validate if this method will be used in the app.
     public class func modelsFromDictionaryArray(array: NSArray) -> [SentCampaign]
     {
         var models:[SentCampaign] = []
         for item in array
         {
-            models.append(SentCampaign(dictionary: item as! NSDictionary)!)
+            models.append(SentCampaign(json: item as! JSON)!)
         }
         return models
     }

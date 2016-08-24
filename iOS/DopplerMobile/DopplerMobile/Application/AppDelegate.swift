@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import SwiftyUserDefaults
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        let conditionVariable = NSUserDefaults.standardUserDefaults().boolForKey(UserDefaultKey.isUserLoggedIn.rawValue)
+        let conditionVariable = !(Defaults[.tokenExpirationDate].isNullOrEmpty) && Defaults[.tokenExpirationDate]!.toNSDateWithFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZZZZ")!.isGreaterThanDate(NSDate())
         let navigationController = window!.rootViewController! as! UINavigationController
         navigationController.performSegueWithIdentifier(conditionVariable ? SegueIdentifier.MainScreenSegue.rawValue : SegueIdentifier.LoginScreenSegue.rawValue, sender: self)
         navigationController.setNavigationBarHidden(!conditionVariable, animated: false)

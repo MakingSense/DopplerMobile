@@ -16,5 +16,4 @@ public class OnboardingContentViewModel
     {
         self.content = content
     }
-    
 }
