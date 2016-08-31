@@ -1,20 +1,20 @@
 //
-//  SentCampaignsViewDataSource.swift
+//  SuscribersListsViewDataSource.swift
 //  DopplerMobile
 //
-//  Created by Julian Waimann on 7/19/16.
+//  Created by Mauro Maldini on 2/9/16.
 //  Copyright © 2016 Making Sense. All rights reserved.
 //
 
 import UIKit
 
-class SentCampaignsViewDataSource: NSObject, UITableViewDataSource
+class SuscribersListsViewDataSource: NSObject, UITableViewDataSource
 {
     // MARK: Properties
-    var items = [SentCampaignViewModel]()
-    init(viewModel: DashboardViewModel, sentCampaigns: [SentCampaignViewModel])
+    var items = [SuscribersListViewModel]()
+    init(viewModel: ListViewModel, suscribersLists: [SuscribersListViewModel])
     {
-        self.items = sentCampaigns;
+        self.items = suscribersLists;
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -24,7 +24,7 @@ class SentCampaignsViewDataSource: NSObject, UITableViewDataSource
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier(SentCampaignsTableViewCell.identifier)! as! SentCampaignsTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(SuscribersListsTableViewCell.identifier)! as! SuscribersListsTableViewCell
         cell.configure(self.items[indexPath.row])
         return cell
     }

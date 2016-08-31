@@ -14,4 +14,19 @@ enum CampaignStatus: Int
     case scheduled
     case shipping
     case shipped
+    
+    var name: String
+    {
+        switch self
+        {
+        case .draft:
+            return "draft"
+        case .scheduled:
+            return "scheduled"
+        case .shipping:
+            return "shipping"
+        case .shipped:
+            return "shipped"
+        }
+    }
 }

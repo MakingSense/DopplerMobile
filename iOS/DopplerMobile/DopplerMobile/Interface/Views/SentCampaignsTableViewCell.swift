@@ -11,16 +11,16 @@ import UIKit
 class SentCampaignsTableViewCell : UITableViewCell
 {
     // MARK: Properties
-    @IBOutlet weak var lblCampaignName: UILabel!
-    @IBOutlet weak var lblSentDate: UILabel!
-    @IBOutlet weak var lblStatistics: UILabel!
+    @IBOutlet private weak var lblCampaignName: UILabel!
+    @IBOutlet private weak var lblSentDate: UILabel!
+    @IBOutlet private weak var lblStatistics: UILabel!
     static let identifier = "SentCampaignsCell"
     
     // MARK: Actions
-    func configure(campaignViewModel: SentCampaignsViewModel)
+    func configure(campaignViewModel: SentCampaignViewModel)
     {
         self.lblCampaignName.text = campaignViewModel.name
-        self.lblSentDate.text = campaignViewModel.sentDate
+        self.lblSentDate.text = campaignViewModel.sentDate?.toStringWithFormat(DateFormatEnum.yyyy_MM_dd.pattern)
         self.lblStatistics.text =  "\(campaignViewModel.openedPercentage!)% \("SENT_CAMPAIGNS_OPENED_TEXT".localized)"
     }
 }

@@ -11,9 +11,10 @@ import UIKit
 class DeliveryRateReportDataSource: NSObject, UITableViewDataSource
 {
     // MARK: Properties
-    var viewModel: SentCampaignsViewModel
+    var viewModel: SentCampaignViewModel
     
-    init(viewModel: SentCampaignsViewModel) {
+    init(viewModel: SentCampaignViewModel)
+    {
         self.viewModel = viewModel;
     }
     

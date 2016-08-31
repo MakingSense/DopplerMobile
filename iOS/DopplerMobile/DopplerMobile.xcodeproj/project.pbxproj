@@ -14,15 +14,23 @@
 		2411987C1D1B134100330D87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 241198741D1B134100330D87 /* LaunchScreen.storyboard */; };
 		2411987D1D1B134100330D87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 241198761D1B134100330D87 /* Main.storyboard */; };
 		242514751C7E45CD00785AE6 /* DopplerMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242514741C7E45CD00785AE6 /* DopplerMobileTests.swift */; };
-		2439F3191D343BBC00949C5D /* SentCampaignsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2439F3181D343BBC00949C5D /* SentCampaignsViewModel.swift */; };
+		2439F3191D343BBC00949C5D /* SentCampaignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2439F3181D343BBC00949C5D /* SentCampaignViewModel.swift */; };
 		2439F31B1D352BD500949C5D /* SentCampaignsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2439F31A1D352BD500949C5D /* SentCampaignsTableViewCell.swift */; };
-		249ECB6E1D3D56B300F18E74 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249ECB6D1D3D56B300F18E74 /* DashboardViewController.swift */; };
+		249ECB6E1D3D56B300F18E74 /* SentCampaignsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249ECB6D1D3D56B300F18E74 /* SentCampaignsViewController.swift */; };
 		249ECB701D3E795800F18E74 /* SentCampaignsViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249ECB6F1D3E795800F18E74 /* SentCampaignsViewDataSource.swift */; };
 		24F0FB6F1D1B2D5C00360346 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F0FB6E1D1B2D5C00360346 /* User.swift */; };
 		24F0FB731D1C109E00360346 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F0FB721D1C109E00360346 /* LoginViewModel.swift */; };
 		24FD44A31D22EBCB003E35A4 /* NavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD44A21D22EBCB003E35A4 /* NavigationDelegate.swift */; };
 		24FD44A91D244E12003E35A4 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD44A81D244E12003E35A4 /* Command.swift */; };
 		24FD44B01D245DC3003E35A4 /* SimpleCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD44AF1D245DC3003E35A4 /* SimpleCommand.swift */; };
+		2B057FD41D7A21170021F748 /* SuscribersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B057FD31D7A21170021F748 /* SuscribersService.swift */; };
+		2B057FD61D7A281F0021F748 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B057FD51D7A281F0021F748 /* List.swift */; };
+		2B057FD81D7A297E0021F748 /* ListStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B057FD71D7A297E0021F748 /* ListStatus.swift */; };
+		2B057FDA1D7A2F410021F748 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B057FD91D7A2F410021F748 /* ListViewModel.swift */; };
+		2B057FDC1D7A31300021F748 /* SuscribersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B057FDB1D7A31300021F748 /* SuscribersListViewModel.swift */; };
+		2B0EC0381D7FDB7A008BF638 /* CampaignPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EC0371D7FDB7A008BF638 /* CampaignPreviewViewController.swift */; };
+		2B0EC03A1D7FE71A008BF638 /* CampaignPreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EC0391D7FE71A008BF638 /* CampaignPreviewViewModel.swift */; };
+		2B46863B1D81EAB600B03D4F /* DateFormatEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B46863A1D81EAB600B03D4F /* DateFormatEnum.swift */; };
 		2B4C32131D70A1180076DF3B /* NotificationIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C32121D70A1180076DF3B /* NotificationIdentifier.swift */; };
 		2B4C32151D70ABD50076DF3B /* DMApiManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C32141D70ABD50076DF3B /* DMApiManagerProtocol.swift */; };
 		2B4DCA0F1D6FBB150078D51B /* MSHttpStatusEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4DCA0E1D6FBB150078D51B /* MSHttpStatusEnum.swift */; };
@@ -30,17 +38,20 @@
 		2B703F1D1D3D51D900A19E36 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B703F1C1D3D51D900A19E36 /* Optional.swift */; };
 		2B703F1F1D3D521E00A19E36 /* StringType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B703F1E1D3D521E00A19E36 /* StringType.swift */; };
 		2B70F7A11D5947B800B18525 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B70F7A01D5947B800B18525 /* ReportViewController.swift */; };
-		2B7EF6451D4B229E008D4CDD /* SentCampaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EF6431D4B229E008D4CDD /* SentCampaign.swift */; };
+		2B7EF6451D4B229E008D4CDD /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EF6431D4B229E008D4CDD /* Campaign.swift */; };
 		2B7EF64A1D4B23DB008D4CDD /* SentCampaignReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EF6491D4B23DB008D4CDD /* SentCampaignReport.swift */; };
 		2B7EF64C1D4B289C008D4CDD /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EF64B1D4B289C008D4CDD /* Link.swift */; };
 		2B7EF64E1D4B2A4D008D4CDD /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EF64D1D4B2A4D008D4CDD /* DashboardViewModel.swift */; };
-		2B7EF6501D4B2AE6008D4CDD /* SentCampaignsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EF64F1D4B2AE6008D4CDD /* SentCampaignsService.swift */; };
+		2B7EF6501D4B2AE6008D4CDD /* CampaignsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EF64F1D4B2AE6008D4CDD /* CampaignsService.swift */; };
 		2B7EF6521D4C5643008D4CDD /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EF6511D4C5643008D4CDD /* NSDate.swift */; };
 		2B7EF6541D4C6425008D4CDD /* CampaignStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EF6531D4C6425008D4CDD /* CampaignStatus.swift */; };
 		2B8AD6691D6F5213007FFD05 /* DMApplicationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8AD6681D6F5213007FFD05 /* DMApplicationRouter.swift */; };
 		2BA171BF1D74A9E300FBDE66 /* DefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA171BE1D74A9E300FBDE66 /* DefaultsKeys.swift */; };
 		2BC6EF4F1D370A88009F5A0B /* ScheduledCampaignsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC6EF4E1D370A88009F5A0B /* ScheduledCampaignsViewController.swift */; };
 		2BC6EF531D370B7A009F5A0B /* CampaignsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC6EF521D370B7A009F5A0B /* CampaignsListViewController.swift */; };
+		2BD182371D78AA1A00EE10E0 /* ScheduledCampaignsViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD182361D78AA1A00EE10E0 /* ScheduledCampaignsViewDataSource.swift */; };
+		2BD182391D78AC1900EE10E0 /* ScheduledCampaignsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD182381D78AC1900EE10E0 /* ScheduledCampaignsTableViewCell.swift */; };
+		2BD1823F1D78D03F00EE10E0 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD1823E1D78D03F00EE10E0 /* DashboardViewController.swift */; };
 		2BD4FD9A1D636DFB00E7E13C /* DeliveryRateReportDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4FD991D636DFB00E7E13C /* DeliveryRateReportDataSource.swift */; };
 		2BD4FD9C1D636EBA00E7E13C /* DeliveryRateReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4FD9B1D636EBA00E7E13C /* DeliveryRateReportTableViewCell.swift */; };
 		2BD4FD9E1D63755100E7E13C /* DeliveryRateIndicators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4FD9D1D63755100E7E13C /* DeliveryRateIndicators.swift */; };
@@ -50,6 +61,9 @@
 		2BF307481D6E2B740062DF3C /* MSAlamofireRequest+JSONSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF307471D6E2B740062DF3C /* MSAlamofireRequest+JSONSerializable.swift */; };
 		2BF3074A1D6E2BCB0062DF3C /* MSSerializationErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF307491D6E2BCB0062DF3C /* MSSerializationErrorCode.swift */; };
 		2BF3074E1D6E305C0062DF3C /* DMApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF3074D1D6E305C0062DF3C /* DMApiManager.swift */; };
+		2BF875191D7A135F009AA744 /* SuscribersListsViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF875181D7A135F009AA744 /* SuscribersListsViewDataSource.swift */; };
+		2BF8751B1D7A13AD009AA744 /* SuscribersListsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF8751A1D7A13AD009AA744 /* SuscribersListsTableViewCell.swift */; };
+		2BF8751D1D7A1475009AA744 /* SuscribersListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF8751C1D7A1475009AA744 /* SuscribersListsViewController.swift */; };
 		8E8E0BBA725E2DE6920565ED /* Pods_DopplerMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22BD6683C59FA5BC17AC2004 /* Pods_DopplerMobileTests.framework */; };
 		9C48461C1D3FBB81003032D5 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0339E71D3EBB45006EDBD1 /* StringExtension.swift */; };
 		9C48461D1D3FBBC0003032D5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F0339E01D3EBAE1006EDBD1 /* Localizable.strings */; };
@@ -88,16 +102,24 @@
 		242514701C7E45CD00785AE6 /* DopplerMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DopplerMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		242514741C7E45CD00785AE6 /* DopplerMobileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DopplerMobileTests.swift; sourceTree = "<group>"; };
 		242514761C7E45CD00785AE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2439F3181D343BBC00949C5D /* SentCampaignsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentCampaignsViewModel.swift; sourceTree = "<group>"; };
-		2439F31A1D352BD500949C5D /* SentCampaignsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SentCampaignsTableViewCell.swift; path = ../Views/SentCampaignsTableViewCell.swift; sourceTree = "<group>"; };
-		249ECB6D1D3D56B300F18E74 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
-		249ECB6F1D3E795800F18E74 /* SentCampaignsViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentCampaignsViewDataSource.swift; sourceTree = "<group>"; };
+		2439F3181D343BBC00949C5D /* SentCampaignViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentCampaignViewModel.swift; sourceTree = "<group>"; };
+		2439F31A1D352BD500949C5D /* SentCampaignsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SentCampaignsTableViewCell.swift; path = Views/SentCampaignsTableViewCell.swift; sourceTree = "<group>"; };
+		249ECB6D1D3D56B300F18E74 /* SentCampaignsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentCampaignsViewController.swift; sourceTree = "<group>"; };
+		249ECB6F1D3E795800F18E74 /* SentCampaignsViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SentCampaignsViewDataSource.swift; path = ViewControllers/SentCampaignsViewDataSource.swift; sourceTree = "<group>"; };
 		24F0FB6E1D1B2D5C00360346 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		24F0FB721D1C109E00360346 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		24FD44A21D22EBCB003E35A4 /* NavigationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationDelegate.swift; sourceTree = "<group>"; };
 		24FD44A81D244E12003E35A4 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		24FD44AF1D245DC3003E35A4 /* SimpleCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCommand.swift; sourceTree = "<group>"; };
-		2B0EFD5C1D4855E600D5E42F /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Main.strings"; sourceTree = "<group>"; };
+		2B057FD31D7A21170021F748 /* SuscribersService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuscribersService.swift; sourceTree = "<group>"; };
+		2B057FD51D7A281F0021F748 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		2B057FD71D7A297E0021F748 /* ListStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListStatus.swift; sourceTree = "<group>"; };
+		2B057FD91D7A2F410021F748 /* ListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		2B057FDB1D7A31300021F748 /* SuscribersListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuscribersListViewModel.swift; sourceTree = "<group>"; };
+		2B0EC0371D7FDB7A008BF638 /* CampaignPreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignPreviewViewController.swift; sourceTree = "<group>"; };
+		2B0EC0391D7FE71A008BF638 /* CampaignPreviewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignPreviewViewModel.swift; sourceTree = "<group>"; };
+		2B3E498A1D7F1821005EC418 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Main.strings"; sourceTree = "<group>"; };
+		2B46863A1D81EAB600B03D4F /* DateFormatEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatEnum.swift; sourceTree = "<group>"; };
 		2B4C32121D70A1180076DF3B /* NotificationIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationIdentifier.swift; sourceTree = "<group>"; };
 		2B4C32141D70ABD50076DF3B /* DMApiManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DMApiManagerProtocol.swift; path = ../Infrastructure/DMApiManagerProtocol.swift; sourceTree = "<group>"; };
 		2B4DCA0E1D6FBB150078D51B /* MSHttpStatusEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSHttpStatusEnum.swift; sourceTree = "<group>"; };
@@ -105,19 +127,22 @@
 		2B703F1C1D3D51D900A19E36 /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		2B703F1E1D3D521E00A19E36 /* StringType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringType.swift; sourceTree = "<group>"; };
 		2B70F7A01D5947B800B18525 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
-		2B7EF6431D4B229E008D4CDD /* SentCampaign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentCampaign.swift; sourceTree = "<group>"; };
+		2B7EF6431D4B229E008D4CDD /* Campaign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
 		2B7EF6491D4B23DB008D4CDD /* SentCampaignReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentCampaignReport.swift; sourceTree = "<group>"; };
 		2B7EF64B1D4B289C008D4CDD /* Link.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		2B7EF64D1D4B2A4D008D4CDD /* DashboardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
-		2B7EF64F1D4B2AE6008D4CDD /* SentCampaignsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentCampaignsService.swift; sourceTree = "<group>"; };
+		2B7EF64F1D4B2AE6008D4CDD /* CampaignsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignsService.swift; sourceTree = "<group>"; };
 		2B7EF6511D4C5643008D4CDD /* NSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDate.swift; sourceTree = "<group>"; };
 		2B7EF6531D4C6425008D4CDD /* CampaignStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignStatus.swift; sourceTree = "<group>"; };
 		2B8AD6681D6F5213007FFD05 /* DMApplicationRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DMApplicationRouter.swift; path = ../Infrastructure/DMApplicationRouter.swift; sourceTree = "<group>"; };
 		2BA171BE1D74A9E300FBDE66 /* DefaultsKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultsKeys.swift; sourceTree = "<group>"; };
 		2BC6EF4E1D370A88009F5A0B /* ScheduledCampaignsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledCampaignsViewController.swift; sourceTree = "<group>"; };
 		2BC6EF521D370B7A009F5A0B /* CampaignsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignsListViewController.swift; sourceTree = "<group>"; };
-		2BD4FD991D636DFB00E7E13C /* DeliveryRateReportDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryRateReportDataSource.swift; sourceTree = "<group>"; };
-		2BD4FD9B1D636EBA00E7E13C /* DeliveryRateReportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryRateReportTableViewCell.swift; sourceTree = "<group>"; };
+		2BD182361D78AA1A00EE10E0 /* ScheduledCampaignsViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScheduledCampaignsViewDataSource.swift; path = ViewControllers/ScheduledCampaignsViewDataSource.swift; sourceTree = "<group>"; };
+		2BD182381D78AC1900EE10E0 /* ScheduledCampaignsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScheduledCampaignsTableViewCell.swift; path = ViewControllers/ScheduledCampaignsTableViewCell.swift; sourceTree = "<group>"; };
+		2BD1823E1D78D03F00EE10E0 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		2BD4FD991D636DFB00E7E13C /* DeliveryRateReportDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeliveryRateReportDataSource.swift; path = ViewControllers/DeliveryRateReportDataSource.swift; sourceTree = "<group>"; };
+		2BD4FD9B1D636EBA00E7E13C /* DeliveryRateReportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeliveryRateReportTableViewCell.swift; path = ViewControllers/DeliveryRateReportTableViewCell.swift; sourceTree = "<group>"; };
 		2BD4FD9D1D63755100E7E13C /* DeliveryRateIndicators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryRateIndicators.swift; sourceTree = "<group>"; };
 		2BD83BAA1D41590C00A5C527 /* OnboardingContentViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewControllerDelegate.swift; sourceTree = "<group>"; };
 		2BD83BAF1D42762200A5C527 /* SegueIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueIdentifier.swift; sourceTree = "<group>"; };
@@ -125,6 +150,9 @@
 		2BF307471D6E2B740062DF3C /* MSAlamofireRequest+JSONSerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MSAlamofireRequest+JSONSerializable.swift"; sourceTree = "<group>"; };
 		2BF307491D6E2BCB0062DF3C /* MSSerializationErrorCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSSerializationErrorCode.swift; sourceTree = "<group>"; };
 		2BF3074D1D6E305C0062DF3C /* DMApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DMApiManager.swift; path = ../Infrastructure/DMApiManager.swift; sourceTree = "<group>"; };
+		2BF875181D7A135F009AA744 /* SuscribersListsViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuscribersListsViewDataSource.swift; sourceTree = "<group>"; };
+		2BF8751A1D7A13AD009AA744 /* SuscribersListsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuscribersListsTableViewCell.swift; sourceTree = "<group>"; };
+		2BF8751C1D7A1475009AA744 /* SuscribersListsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuscribersListsViewController.swift; sourceTree = "<group>"; };
 		53491CD01247828DC971FAE1 /* Pods-DopplerMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DopplerMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DopplerMobile/Pods-DopplerMobile.debug.xcconfig"; sourceTree = "<group>"; };
 		7D6B49FAF9348221A232A5F9 /* Pods-DopplerMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DopplerMobileTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DopplerMobileTests/Pods-DopplerMobileTests.release.xcconfig"; sourceTree = "<group>"; };
 		7E32302789483FCD3F9F1E58 /* Pods-DopplerMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DopplerMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-DopplerMobile/Pods-DopplerMobile.release.xcconfig"; sourceTree = "<group>"; };
@@ -133,7 +161,7 @@
 		9CB9DEFB1D1C150100DAED48 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		9CD2FC691D2445E800D4C9F8 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		A8EF46D81D26C218000882A3 /* MSButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSButton.swift; sourceTree = "<group>"; };
-		C226956F1D4297D000059959 /* OnboardingViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewDataSource.swift; sourceTree = "<group>"; };
+		C226956F1D4297D000059959 /* OnboardingViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnboardingViewDataSource.swift; path = ViewControllers/OnboardingViewDataSource.swift; sourceTree = "<group>"; };
 		CCD7B1E75E4FFE4A0E4C5B22 /* Pods-DopplerMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DopplerMobileTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DopplerMobileTests/Pods-DopplerMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D9DAF82C08264644E6850DB9 /* Pods_DopplerMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DopplerMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -214,8 +242,11 @@
 			children = (
 				24F0FB721D1C109E00360346 /* LoginViewModel.swift */,
 				2B7EF64D1D4B2A4D008D4CDD /* DashboardViewModel.swift */,
-				2439F3181D343BBC00949C5D /* SentCampaignsViewModel.swift */,
+				2439F3181D343BBC00949C5D /* SentCampaignViewModel.swift */,
 				1FDB0BDA1D23038B007544C3 /* OnboardingContentViewModel.swift */,
+				2B057FD91D7A2F410021F748 /* ListViewModel.swift */,
+				2B057FDB1D7A31300021F748 /* SuscribersListViewModel.swift */,
+				2B0EC0391D7FE71A008BF638 /* CampaignPreviewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -233,9 +264,10 @@
 			isa = PBXGroup;
 			children = (
 				2B7EF64B1D4B289C008D4CDD /* Link.swift */,
-				2B7EF6431D4B229E008D4CDD /* SentCampaign.swift */,
+				2B7EF6431D4B229E008D4CDD /* Campaign.swift */,
 				2B7EF6491D4B23DB008D4CDD /* SentCampaignReport.swift */,
 				24F0FB6E1D1B2D5C00360346 /* User.swift */,
+				2B057FD51D7A281F0021F748 /* List.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -244,7 +276,8 @@
 			isa = PBXGroup;
 			children = (
 				9CD2FC691D2445E800D4C9F8 /* LoginService.swift */,
-				2B7EF64F1D4B2AE6008D4CDD /* SentCampaignsService.swift */,
+				2B7EF64F1D4B2AE6008D4CDD /* CampaignsService.swift */,
+				2B057FD31D7A21170021F748 /* SuscribersService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -265,6 +298,7 @@
 			children = (
 				24F0FB741D1D6C1800360346 /* Protocols */,
 				241198701D1B134100330D87 /* ViewControllers */,
+				2BD182401D78D33E00EE10E0 /* DataSources */,
 				241198721D1B134100330D87 /* Views */,
 			);
 			path = Interface;
@@ -276,15 +310,13 @@
 				241198711D1B134100330D87 /* LoginViewController.swift */,
 				9CB9DEF91D1B1E1100DAED48 /* OnboardingContentViewController.swift */,
 				9CB9DEFB1D1C150100DAED48 /* OnboardingViewController.swift */,
-				2BC6EF4E1D370A88009F5A0B /* ScheduledCampaignsViewController.swift */,
 				2BC6EF521D370B7A009F5A0B /* CampaignsListViewController.swift */,
-				249ECB6D1D3D56B300F18E74 /* DashboardViewController.swift */,
-				249ECB6F1D3E795800F18E74 /* SentCampaignsViewDataSource.swift */,
-				2439F31A1D352BD500949C5D /* SentCampaignsTableViewCell.swift */,
-				C226956F1D4297D000059959 /* OnboardingViewDataSource.swift */,
+				2BD1823E1D78D03F00EE10E0 /* DashboardViewController.swift */,
+				249ECB6D1D3D56B300F18E74 /* SentCampaignsViewController.swift */,
+				2BC6EF4E1D370A88009F5A0B /* ScheduledCampaignsViewController.swift */,
+				2BF8751C1D7A1475009AA744 /* SuscribersListsViewController.swift */,
 				2B70F7A01D5947B800B18525 /* ReportViewController.swift */,
-				2BD4FD991D636DFB00E7E13C /* DeliveryRateReportDataSource.swift */,
-				2BD4FD9B1D636EBA00E7E13C /* DeliveryRateReportTableViewCell.swift */,
+				2B0EC0371D7FDB7A008BF638 /* CampaignPreviewViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -367,6 +399,22 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		2BD182401D78D33E00EE10E0 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				C226956F1D4297D000059959 /* OnboardingViewDataSource.swift */,
+				2BD4FD991D636DFB00E7E13C /* DeliveryRateReportDataSource.swift */,
+				2BD4FD9B1D636EBA00E7E13C /* DeliveryRateReportTableViewCell.swift */,
+				249ECB6F1D3E795800F18E74 /* SentCampaignsViewDataSource.swift */,
+				2439F31A1D352BD500949C5D /* SentCampaignsTableViewCell.swift */,
+				2BD182361D78AA1A00EE10E0 /* ScheduledCampaignsViewDataSource.swift */,
+				2BD182381D78AC1900EE10E0 /* ScheduledCampaignsTableViewCell.swift */,
+				2BF875181D7A135F009AA744 /* SuscribersListsViewDataSource.swift */,
+				2BF8751A1D7A13AD009AA744 /* SuscribersListsTableViewCell.swift */,
+			);
+			name = DataSources;
+			sourceTree = "<group>";
+		};
 		2BD83BAE1D42741C00A5C527 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,6 +422,8 @@
 				2B7EF6531D4C6425008D4CDD /* CampaignStatus.swift */,
 				2BD4FD9D1D63755100E7E13C /* DeliveryRateIndicators.swift */,
 				2B4C32121D70A1180076DF3B /* NotificationIdentifier.swift */,
+				2B057FD71D7A297E0021F748 /* ListStatus.swift */,
+				2B46863A1D81EAB600B03D4F /* DateFormatEnum.swift */,
 			);
 			name = Enums;
 			sourceTree = "<group>";
@@ -616,12 +666,14 @@
 				2BD83BAB1D41590C00A5C527 /* OnboardingContentViewControllerDelegate.swift in Sources */,
 				24F0FB731D1C109E00360346 /* LoginViewModel.swift in Sources */,
 				2B703F1B1D3D304E00A19E36 /* String.swift in Sources */,
+				2BD182391D78AC1900EE10E0 /* ScheduledCampaignsTableViewCell.swift in Sources */,
 				2411987A1D1B134100330D87 /* LoginViewController.swift in Sources */,
 				2B8AD6691D6F5213007FFD05 /* DMApplicationRouter.swift in Sources */,
 				9CB9DEFA1D1B1E1100DAED48 /* OnboardingContentViewController.swift in Sources */,
 				2B4C32151D70ABD50076DF3B /* DMApiManagerProtocol.swift in Sources */,
 				1FDB0BDB1D23038B007544C3 /* OnboardingContentViewModel.swift in Sources */,
 				241198781D1B134100330D87 /* AppDelegate.swift in Sources */,
+				2B0EC0381D7FDB7A008BF638 /* CampaignPreviewViewController.swift in Sources */,
 				C22695701D4297D000059959 /* OnboardingViewDataSource.swift in Sources */,
 				2B4C32131D70A1180076DF3B /* NotificationIdentifier.swift in Sources */,
 				2B7EF64A1D4B23DB008D4CDD /* SentCampaignReport.swift in Sources */,
@@ -630,8 +682,11 @@
 				2BD4FD9C1D636EBA00E7E13C /* DeliveryRateReportTableViewCell.swift in Sources */,
 				24FD44A91D244E12003E35A4 /* Command.swift in Sources */,
 				2BF3074A1D6E2BCB0062DF3C /* MSSerializationErrorCode.swift in Sources */,
-				249ECB6E1D3D56B300F18E74 /* DashboardViewController.swift in Sources */,
-				2B7EF6501D4B2AE6008D4CDD /* SentCampaignsService.swift in Sources */,
+				249ECB6E1D3D56B300F18E74 /* SentCampaignsViewController.swift in Sources */,
+				2B7EF6501D4B2AE6008D4CDD /* CampaignsService.swift in Sources */,
+				2B057FDA1D7A2F410021F748 /* ListViewModel.swift in Sources */,
+				2BD182371D78AA1A00EE10E0 /* ScheduledCampaignsViewDataSource.swift in Sources */,
+				2B0EC03A1D7FE71A008BF638 /* CampaignPreviewViewModel.swift in Sources */,
 				24FD44B01D245DC3003E35A4 /* SimpleCommand.swift in Sources */,
 				2B7EF64E1D4B2A4D008D4CDD /* DashboardViewModel.swift in Sources */,
 				9CD2FC6A1D2445E800D4C9F8 /* LoginService.swift in Sources */,
@@ -639,11 +694,15 @@
 				2B7EF64C1D4B289C008D4CDD /* Link.swift in Sources */,
 				24F0FB6F1D1B2D5C00360346 /* User.swift in Sources */,
 				2B7EF6541D4C6425008D4CDD /* CampaignStatus.swift in Sources */,
+				2B057FDC1D7A31300021F748 /* SuscribersListViewModel.swift in Sources */,
 				9C48461C1D3FBB81003032D5 /* StringExtension.swift in Sources */,
+				2BF875191D7A135F009AA744 /* SuscribersListsViewDataSource.swift in Sources */,
 				2B703F1F1D3D521E00A19E36 /* StringType.swift in Sources */,
 				2B7EF6521D4C5643008D4CDD /* NSDate.swift in Sources */,
+				2BD1823F1D78D03F00EE10E0 /* DashboardViewController.swift in Sources */,
 				2BF307441D6E26B20062DF3C /* MSResponseJSONObjectSerializable.swift in Sources */,
 				2B70F7A11D5947B800B18525 /* ReportViewController.swift in Sources */,
+				2B057FD61D7A281F0021F748 /* List.swift in Sources */,
 				2BF307481D6E2B740062DF3C /* MSAlamofireRequest+JSONSerializable.swift in Sources */,
 				2BD83BB01D42762200A5C527 /* SegueIdentifier.swift in Sources */,
 				9CB9DEFC1D1C150100DAED48 /* OnboardingViewController.swift in Sources */,
@@ -652,11 +711,16 @@
 				A8EF46D91D26C218000882A3 /* MSButton.swift in Sources */,
 				2BC6EF531D370B7A009F5A0B /* CampaignsListViewController.swift in Sources */,
 				2BA171BF1D74A9E300FBDE66 /* DefaultsKeys.swift in Sources */,
-				2439F3191D343BBC00949C5D /* SentCampaignsViewModel.swift in Sources */,
-				2B7EF6451D4B229E008D4CDD /* SentCampaign.swift in Sources */,
+				2439F3191D343BBC00949C5D /* SentCampaignViewModel.swift in Sources */,
+				2B057FD81D7A297E0021F748 /* ListStatus.swift in Sources */,
+				2B7EF6451D4B229E008D4CDD /* Campaign.swift in Sources */,
+				2B46863B1D81EAB600B03D4F /* DateFormatEnum.swift in Sources */,
 				249ECB701D3E795800F18E74 /* SentCampaignsViewDataSource.swift in Sources */,
 				2BC6EF4F1D370A88009F5A0B /* ScheduledCampaignsViewController.swift in Sources */,
+				2BF8751D1D7A1475009AA744 /* SuscribersListsViewController.swift in Sources */,
+				2B057FD41D7A21170021F748 /* SuscribersService.swift in Sources */,
 				2BF3074E1D6E305C0062DF3C /* DMApiManager.swift in Sources */,
+				2BF8751B1D7A13AD009AA744 /* SuscribersListsTableViewCell.swift in Sources */,
 				2B4DCA0F1D6FBB150078D51B /* MSHttpStatusEnum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -702,7 +766,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				241198771D1B134100330D87 /* Base */,
-				2B0EFD5C1D4855E600D5E42F /* es-MX */,
+				2B3E498A1D7F1821005EC418 /* es-MX */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

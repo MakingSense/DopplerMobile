@@ -11,17 +11,17 @@ import UIKit
 class ReportViewController: UIViewController, UITableViewDelegate
 {
     // MARK: Properties
-    @IBOutlet weak var lblCampaignSubject: UILabel!
-    @IBOutlet weak var lblCampaignName: UILabel!
-    @IBOutlet weak var lblCampaignSuscribers: UILabel!
-    @IBOutlet weak var lblCampaignSentDate: UILabel!
-    @IBOutlet weak var lblOpenPercentage: UILabel!
-    @IBOutlet weak var lblUnopenPercentage: UILabel!
-    @IBOutlet weak var lblBouncesPercentage: UILabel!
-    @IBOutlet weak var lblRatePercentage: UILabel!
-    @IBOutlet weak var tblIndicators: UITableView!
+    @IBOutlet private weak var lblCampaignSubject: UILabel!
+    @IBOutlet private weak var lblCampaignName: UILabel!
+    @IBOutlet private weak var lblCampaignSuscribers: UILabel!
+    @IBOutlet private weak var lblCampaignSentDate: UILabel!
+    @IBOutlet private weak var lblOpenPercentage: UILabel!
+    @IBOutlet private weak var lblUnopenPercentage: UILabel!
+    @IBOutlet private weak var lblBouncesPercentage: UILabel!
+    @IBOutlet private weak var lblRatePercentage: UILabel!
+    @IBOutlet private weak var tblIndicators: UITableView!
     
-    var reportItem: SentCampaignsViewModel?
+    var reportItem: SentCampaignViewModel?
     {
         didSet { self.configureView() }
     }
@@ -44,12 +44,19 @@ class ReportViewController: UIViewController, UITableViewDelegate
         {
             campaignName.text = reportItem!.name
             lblCampaignSuscribers.text = String(reportItem!.amountSentSubscribers!)
-            lblCampaignSentDate.text = String(reportItem!.sentDate!)
-            lblCampaignSubject.text = String(reportItem!.subject!)
+            lblCampaignSentDate.text = reportItem!.sentDate?.toStringWithFormat(DateFormatEnum.yyyy_MM_dd.pattern)
+            lblCampaignSubject.text = reportItem!.subject!
             lblBouncesPercentage.text = "\(reportItem!.bouncesPercentage!)%"
             lblUnopenPercentage.text = "\(reportItem!.unopenedPercentage!)%"
             lblOpenPercentage.text = "\(reportItem!.openedPercentage!)%"
             lblRatePercentage.text = "\(reportItem!.ratePercentage!)%"
         }
+    }
+    
+    // MARK: - Segues
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+            let campaignPreviewViewController = segue.destinationViewController as! CampaignPreviewViewController
+            campaignPreviewViewController.campaignId = reportItem!.campaignId
     }
 }

@@ -10,12 +10,14 @@ import Foundation
 
 public class DashboardViewModel
 {
-    private var sentCampaignsService: SentCampaignsService
+    private var campaignsService: CampaignsService
     private var navigationDelegate: NavigationDelegate?
     
-    init(sentCampaignsService: SentCampaignsService)
+    init(campaignsService: CampaignsService)
     {
-        self.sentCampaignsService = sentCampaignsService
-        self.sentCampaignsService.downloadSentCampaigns()
+        self.campaignsService = campaignsService
+        self.campaignsService.downloadCampaigns(CampaignStatus.shipped, notification: NotificationIdentifier.SentCampaignsNotification.rawValue)
+        //TODO: I am using "draft" value, because there is not any campaign with scheduled state for this user.
+        self.campaignsService.downloadCampaigns(CampaignStatus.draft, notification: NotificationIdentifier.ScheduledCampaignsNotification.rawValue)
     }
 }

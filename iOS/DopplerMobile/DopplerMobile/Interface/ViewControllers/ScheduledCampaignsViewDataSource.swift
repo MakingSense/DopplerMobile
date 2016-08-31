@@ -1,20 +1,20 @@
 //
-//  SentCampaignsViewDataSource.swift
+//  ScheduledCampaignsViewDataSource.swift
 //  DopplerMobile
 //
-//  Created by Julian Waimann on 7/19/16.
+//  Created by Mauro Maldini on 1/9/16.
 //  Copyright © 2016 Making Sense. All rights reserved.
 //
 
 import UIKit
 
-class SentCampaignsViewDataSource: NSObject, UITableViewDataSource
+class ScheduledCampaignsViewDataSource: NSObject, UITableViewDataSource
 {
     // MARK: Properties
     var items = [SentCampaignViewModel]()
-    init(viewModel: DashboardViewModel, sentCampaigns: [SentCampaignViewModel])
+    init(viewModel: DashboardViewModel, scheduledCampaigns: [SentCampaignViewModel])
     {
-        self.items = sentCampaigns;
+        self.items = scheduledCampaigns;
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -24,7 +24,7 @@ class SentCampaignsViewDataSource: NSObject, UITableViewDataSource
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier(SentCampaignsTableViewCell.identifier)! as! SentCampaignsTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(ScheduledCampaignsTableViewCell.identifier)! as! ScheduledCampaignsTableViewCell
         cell.configure(self.items[indexPath.row])
         return cell
     }

@@ -15,7 +15,8 @@ class DMApiManager: DMApiManagerProtocol
     static let sharedInstance = DMApiManager()
     
     //Login User Call.
-    func loginUser(username: String, password: String, completionHandler: (Result<User, NSError>) -> Void) {
+    func loginUser(username: String, password: String, completionHandler: (Result<User, NSError>) -> Void)
+    {
         //TODO: Remove this hardcoded information. Real account information in production environment.
         let parameters : [String: AnyObject] = [
             "grant_type": "password",
@@ -23,19 +24,47 @@ class DMApiManager: DMApiManagerProtocol
             "password": "1qaz2wsx"]
         
         Alamofire.request(DMApplicationRouter.GetToken(parameters))
-            .responseObject { (response: Response<User, NSError>) in
+            .responseObject
+            { (response: Response<User, NSError>) in
                 completionHandler(response.result)
-        }
+            }
     }
     
     //Get Last Sent Campaigns Call.
-    func getLastSentCampaigns(completionHandler: (Result<[SentCampaign], NSError>) -> Void) {
+    func getCampaigns(status: CampaignStatus, completionHandler: (Result<[Campaign], NSError>) -> Void)
+    {
         let parameters : [String: AnyObject] = [
-            "api_key": Defaults[.accessToken]!]
-        
-        Alamofire.request(DMApplicationRouter.GetLastSentCampaigns(Defaults[.username]!, parameters))
-            .responseArray { (response: Response<[SentCampaign], NSError>) in
+            "state": status.name]
+        Alamofire.request(DMApplicationRouter.GetCampaigns(Defaults[.username]!, parameters))
+            .responseArray
+            { (response: Response<[Campaign], NSError>) in
                 completionHandler(response.result)
-        }
+            }
+    }
+    
+    //Get Campaign Preview Call.
+    func getCampaignPreview(campaignId: Int, completionHandler: (NSURL?, NSError?) -> Void)
+    {
+        Alamofire.request(DMApplicationRouter.GetCampaignPreview(Defaults[.username]!, campaignId))
+            .response
+            { (request, response, data, error) in
+                guard let response = response else
+                {
+                    completionHandler(nil, nil)
+                    return
+                }
+                let URL = response.URL
+                completionHandler(URL, nil)
+            }
+    }
+    
+    //Get Suscribers Lists Call.
+    func getSuscribersLists(completionHandler: (Result<[List], NSError>) -> Void)
+    {
+        Alamofire.request(DMApplicationRouter.GetSuscribersLists(Defaults[.username]!))
+            .responseArray
+            {(response: Response<[List], NSError>) in
+                completionHandler(response.result)
+            }
     }
 }

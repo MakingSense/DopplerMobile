@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-public class SentCampaign: MSResponseJSONObjectSerializable
+public class Campaign: MSResponseJSONObjectSerializable
 {
     var campaignId: Int?
     var recipientsRequired: Bool?
@@ -40,7 +40,7 @@ public class SentCampaign: MSResponseJSONObjectSerializable
         let dateString = json["scheduledDate"].string
         if !(dateString.isNullOrEmpty)
         {
-            self.scheduledDate = dateString!.toNSDateWithFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZZZZ")
+            self.scheduledDate = dateString!.toNSDateWithFormat(DateFormatEnum.yyyy_MM_ddTHH_mm_ss_SSSZ.pattern)
         }
         //TODO: Check when get sentCampaignReport Information
         sentCampaignReport = SentCampaignReport()
@@ -69,12 +69,12 @@ public class SentCampaign: MSResponseJSONObjectSerializable
      - returns: Array of Campaigns Instances.
      */
     //TODO: Validate if this method will be used in the app.
-    public class func modelsFromDictionaryArray(array: NSArray) -> [SentCampaign]
+    public class func modelsFromDictionaryArray(array: NSArray) -> [Campaign]
     {
-        var models:[SentCampaign] = []
+        var models:[Campaign] = []
         for item in array
         {
-            models.append(SentCampaign(json: item as! JSON)!)
+            models.append(Campaign(json: item as! JSON)!)
         }
         return models
     }

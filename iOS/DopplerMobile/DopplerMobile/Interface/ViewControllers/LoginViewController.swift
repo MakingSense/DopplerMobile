@@ -12,15 +12,12 @@ class LoginViewController: UIViewController, NavigationDelegate
 {
     //MARK: Properties
     private var loginViewModel: LoginViewModel!
-    
-    @IBOutlet weak var txtUsername: UITextField!
-    @IBOutlet weak var txtPassword: UITextField!
-    
-    @IBOutlet weak var lblUsernameLine: UILabel!
-    @IBOutlet weak var lblPasswordLine: UILabel!
-    @IBOutlet weak var lblErrorMessage: UILabel!
-    
-    @IBOutlet weak var btnLogin: MSButton!
+    @IBOutlet private weak var txtUsername: UITextField!
+    @IBOutlet private weak var txtPassword: UITextField!
+    @IBOutlet private weak var lblUsernameLine: UILabel!
+    @IBOutlet private weak var lblPasswordLine: UILabel!
+    @IBOutlet private weak var lblErrorMessage: UILabel!
+    @IBOutlet private weak var btnLogin: MSButton!
     
     // MARK: Actions
     override func viewDidLoad()
