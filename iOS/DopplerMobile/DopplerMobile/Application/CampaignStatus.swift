@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum CampaignStatus: Int
+enum CampaignStatus: String
 {
     case draft
     case scheduled

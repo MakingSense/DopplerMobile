@@ -10,7 +10,7 @@
         <!--Dashboard View Controller-->
         <scene sceneID="wxb-AS-yQk">
             <objects>
-                <viewController storyboardIdentifier="DashboardViewController" id="V02-l6-IUc" userLabel="Dashboard View Controller" customClass="DashboardViewController" customModule="DopplerMobile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DashboardViewController" id="V02-l6-IUc" userLabel="Dashboard View Controller" customClass="SentCampaignsViewController" customModule="DopplerMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9O0-tn-Kwq"/>
                         <viewControllerLayoutGuide type="bottom" id="4io-xk-DO5"/>
@@ -485,28 +485,28 @@
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="397"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SentCampaignsCell" id="wIf-pQ-Rat" userLabel="SentCampaignsCell" customClass="SentCampaignsTableViewCell" customModule="DopplerMobile" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ScheduledCampaignsCell" id="wIf-pQ-Rat" userLabel="SentCampaignsCell" customClass="ScheduledCampaignsTableViewCell" customModule="DopplerMobile" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="600" height="60"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wIf-pQ-Rat" id="K5m-43-lFA">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YA1-AY-SKY" userLabel="StatisticsLabel">
-                                                            <rect key="frame" x="8" y="45" width="109" height="15"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljS-wm-dyF" userLabel="DateLabel">
                                                             <rect key="frame" x="8" y="26" width="114" height="15"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campaign Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WnY-hR-vum" userLabel="CampaignNameLabel">
-                                                            <rect key="frame" x="8" y="4" width="120" height="18"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Campaign Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WnY-hR-vum" userLabel="CampaignNameLabel">
+                                                            <rect key="frame" x="8" y="0.0" width="120" height="18"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YA1-AY-SKY" userLabel="StatisticsLabel">
+                                                            <rect key="frame" x="8" y="44" width="109" height="15"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -525,9 +525,10 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
-                                                    <outlet property="lblCampaignName" destination="WnY-hR-vum" id="26D-uZ-pev"/>
-                                                    <outlet property="lblSentDate" destination="ljS-wm-dyF" id="t0K-Ez-8AO"/>
-                                                    <outlet property="lblStatistics" destination="YA1-AY-SKY" id="N8g-M1-8Wd"/>
+                                                    <outlet property="lblCampaignDate" destination="ljS-wm-dyF" id="0CP-3m-LFj"/>
+                                                    <outlet property="lblCampaignName" destination="WnY-hR-vum" id="te5-RO-aEz"/>
+                                                    <outlet property="lblCampaignStatistics" destination="YA1-AY-SKY" id="D0k-vm-SSz"/>
+                                                    <segue destination="3UV-Vb-N4F" kind="show" id="zzM-jE-Jve"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -570,10 +571,31 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" tag="2" title="SCHEDULED" image="Scheduled-Disabled" selectedImage="Scheduled" id="Sat-Kp-Ag1"/>
+                    <connections>
+                        <outlet property="tblScheduledCampaigns" destination="dpY-kg-T6G" id="Sc1-MG-tZ9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ECG-BY-W5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2300" y="1132"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZQR-TB-Mq2">
+            <objects>
+                <viewController id="3UV-Vb-N4F" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qcl-IL-wtt"/>
+                        <viewControllerLayoutGuide type="bottom" id="FDG-rq-8aV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="erP-mW-uk5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wWx-uj-vht" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3112" y="1132"/>
         </scene>
         <!--Report View Controller-->
         <scene sceneID="8UY-fZ-yir">

@@ -16,14 +16,14 @@ enum DMApplicationRouter: URLRequestConvertible {
     
     static let baseUrlString = String(dict!.objectForKey("BaseUrlString")!)
     case GetToken([String: AnyObject]) // POST https://restapi.fromdoppler.com/tokens
-    case GetLastSentCampaigns(String, [String: AnyObject]) //GET https://restapi.fromdoppler.com/accounts/(userName)/campaigns?api_key=(token)
+    case GetCampaigns(String, [String: AnyObject]) //GET https://restapi.fromdoppler.com/accounts/(userName)/campaigns?api_key=(token)
     
     var URLRequest: NSMutableURLRequest {
         var method: Alamofire.Method {
             switch self {
             case .GetToken:
                 return .POST
-            case .GetLastSentCampaigns:
+            case .GetCampaigns:
                 return .GET
             }
         }
@@ -32,7 +32,7 @@ enum DMApplicationRouter: URLRequestConvertible {
             switch self {
             case .GetToken:
                 return Alamofire.ParameterEncoding.JSON
-            case .GetLastSentCampaigns:
+            case .GetCampaigns:
                 return Alamofire.ParameterEncoding.URLEncodedInURL
             }
         }
@@ -43,7 +43,7 @@ enum DMApplicationRouter: URLRequestConvertible {
             switch self {
             case .GetToken:
                 relativePath = "tokens"
-            case .GetLastSentCampaigns(let username, _):
+            case .GetCampaigns(let username, _):
                 relativePath = "accounts/\(username)/campaigns"
             }
             
@@ -58,7 +58,7 @@ enum DMApplicationRouter: URLRequestConvertible {
             switch self {
             case .GetToken(let params):
                 return params
-            case .GetLastSentCampaigns(_, let params):
+            case .GetCampaigns(_, let params):
                 return params
             }
         }()

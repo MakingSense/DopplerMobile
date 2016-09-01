@@ -12,5 +12,5 @@ import Alamofire
 protocol DMApiManagerProtocol: class
 {
     func loginUser(username: String, password: String, completionHandler:(Result<User, NSError>) -> Void)
-    func getLastSentCampaigns(completionHandler: (Result<[SentCampaign], NSError>) -> Void)
+    func getCampaigns(status: String, completionHandler: (Result<[Campaign], NSError>) -> Void)
 }

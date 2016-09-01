@@ -29,13 +29,13 @@ public class SentCampaignsViewModel
     public private(set) var lastClickDate: String
     public private(set) var totalUnsubscribers: String
     
-    init(sentCampaign: SentCampaign)
+    init(campaign: Campaign)
     {
-        self.name = sentCampaign.name
-        self.subject = sentCampaign.subject
-        if(sentCampaign.scheduledDate != nil)
+        self.name = campaign.name
+        self.subject = campaign.subject
+        if(campaign.scheduledDate != nil)
         {
-            self.sentDate = sentCampaign.scheduledDate?.toStringWithFormat("yyyy-MM-dd")
+            self.sentDate = campaign.scheduledDate?.toStringWithFormat("yyyy-MM-dd")
         }
         else
         {
@@ -43,24 +43,24 @@ public class SentCampaignsViewModel
         }
         
         //TODO: check the way to calculate amountSentSubscribers, openedPercentage, bouncesPercentage and ratePercentage.
-        self.amountSentSubscribers = sentCampaign.sentCampaignReport?.totalRecipients
-        if sentCampaign.sentCampaignReport?.successFullDeliveries != 0
+        self.amountSentSubscribers = campaign.sentCampaignReport?.totalRecipients
+        if campaign.sentCampaignReport?.successFullDeliveries != 0
         {
-            self.openedPercentage = (((sentCampaign.sentCampaignReport!.uniqueOpens)! * 100) / (sentCampaign.sentCampaignReport?.successFullDeliveries)!)
-            self.unopenedPercentage = (((sentCampaign.sentCampaignReport!.totalUnopened)! * 100) / (sentCampaign.sentCampaignReport?.successFullDeliveries)!)
+            self.openedPercentage = (((campaign.sentCampaignReport!.uniqueOpens)! * 100) / (campaign.sentCampaignReport?.successFullDeliveries)!)
+            self.unopenedPercentage = (((campaign.sentCampaignReport!.totalUnopened)! * 100) / (campaign.sentCampaignReport?.successFullDeliveries)!)
             self.bouncesPercentage = (100 - self.openedPercentage! - self.unopenedPercentage!)
-            self.ratePercentage = (((sentCampaign.sentCampaignReport!.totalClicks)! * 100) / (sentCampaign.sentCampaignReport?.successFullDeliveries)!)
+            self.ratePercentage = (((campaign.sentCampaignReport!.totalClicks)! * 100) / (campaign.sentCampaignReport?.successFullDeliveries)!)
         }
 
-        self.totalRecipients = sentCampaign.sentCampaignReport?.totalRecipients == nil ? "--" : String(sentCampaign.sentCampaignReport!.totalRecipients!)
-        self.successFullDeliveries = sentCampaign.sentCampaignReport?.successFullDeliveries == nil ? "--" : String(sentCampaign.sentCampaignReport!.successFullDeliveries!)
-        self.timesForwarded = sentCampaign.sentCampaignReport?.timesForwarded == nil ? "--" : String(sentCampaign.sentCampaignReport!.timesForwarded!)
-        self.totalTimesOpened = sentCampaign.sentCampaignReport?.totalTimesOpened == nil ? "--" : String(sentCampaign.sentCampaignReport!.totalTimesOpened!)
-        self.lastOpenDate = sentCampaign.sentCampaignReport?.lastOpenDate == nil ? "--" : (sentCampaign.sentCampaignReport!.lastOpenDate?.toStringWithFormat("yyyy-MM-dd"))!
-        self.uniqueClicks = sentCampaign.sentCampaignReport?.uniqueClicks == nil ? "--" : String(sentCampaign.sentCampaignReport!.uniqueClicks!)
-        self.uniqueOpens = sentCampaign.sentCampaignReport?.uniqueOpens == nil ? "--" : String(sentCampaign.sentCampaignReport!.uniqueOpens!)
-        self.totalClicks = sentCampaign.sentCampaignReport?.totalClicks == nil ? "--" : String(sentCampaign.sentCampaignReport!.totalClicks!)
-        self.totalUnsubscribers = sentCampaign.sentCampaignReport?.totalUnsubscribers == nil ? "--" : String(sentCampaign.sentCampaignReport!.totalUnsubscribers!)
-        self.lastClickDate = sentCampaign.sentCampaignReport?.lastClickDate == nil ? "--" : (sentCampaign.sentCampaignReport!.lastClickDate?.toStringWithFormat("yyyy-MM-dd"))!
+        self.totalRecipients = campaign.sentCampaignReport?.totalRecipients == nil ? "--" : String(campaign.sentCampaignReport!.totalRecipients!)
+        self.successFullDeliveries = campaign.sentCampaignReport?.successFullDeliveries == nil ? "--" : String(campaign.sentCampaignReport!.successFullDeliveries!)
+        self.timesForwarded = campaign.sentCampaignReport?.timesForwarded == nil ? "--" : String(campaign.sentCampaignReport!.timesForwarded!)
+        self.totalTimesOpened = campaign.sentCampaignReport?.totalTimesOpened == nil ? "--" : String(campaign.sentCampaignReport!.totalTimesOpened!)
+        self.lastOpenDate = campaign.sentCampaignReport?.lastOpenDate == nil ? "--" : (campaign.sentCampaignReport!.lastOpenDate?.toStringWithFormat("yyyy-MM-dd"))!
+        self.uniqueClicks = campaign.sentCampaignReport?.uniqueClicks == nil ? "--" : String(campaign.sentCampaignReport!.uniqueClicks!)
+        self.uniqueOpens = campaign.sentCampaignReport?.uniqueOpens == nil ? "--" : String(campaign.sentCampaignReport!.uniqueOpens!)
+        self.totalClicks = campaign.sentCampaignReport?.totalClicks == nil ? "--" : String(campaign.sentCampaignReport!.totalClicks!)
+        self.totalUnsubscribers = campaign.sentCampaignReport?.totalUnsubscribers == nil ? "--" : String(campaign.sentCampaignReport!.totalUnsubscribers!)
+        self.lastClickDate = campaign.sentCampaignReport?.lastClickDate == nil ? "--" : (campaign.sentCampaignReport!.lastClickDate?.toStringWithFormat("yyyy-MM-dd"))!
     }
 }

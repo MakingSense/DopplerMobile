@@ -29,12 +29,13 @@ class DMApiManager: DMApiManagerProtocol
     }
     
     //Get Last Sent Campaigns Call.
-    func getLastSentCampaigns(completionHandler: (Result<[SentCampaign], NSError>) -> Void) {
+    func getCampaigns(status: String, completionHandler: (Result<[Campaign], NSError>) -> Void) {
         let parameters : [String: AnyObject] = [
-            "api_key": Defaults[.accessToken]!]
+            "api_key": Defaults[.accessToken]!,
+            "state": status]
         
-        Alamofire.request(DMApplicationRouter.GetLastSentCampaigns(Defaults[.username]!, parameters))
-            .responseArray { (response: Response<[SentCampaign], NSError>) in
+        Alamofire.request(DMApplicationRouter.GetCampaigns(Defaults[.username]!, parameters))
+            .responseArray { (response: Response<[Campaign], NSError>) in
                 completionHandler(response.result)
         }
     }
