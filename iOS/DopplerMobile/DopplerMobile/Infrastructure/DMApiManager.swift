@@ -39,4 +39,15 @@ class DMApiManager: DMApiManagerProtocol
                 completionHandler(response.result)
         }
     }
+    
+    //Get Suscribers Lists Call.
+    func getSuscribersLists(completionHandler: (Result<[List], NSError>) -> Void) {
+        let parameters : [String: AnyObject] = [
+            "api_key": Defaults[.accessToken]!]
+        
+        Alamofire.request(DMApplicationRouter.GetSuscribersLists(Defaults[.username]!, parameters))
+            .responseArray { (response: Response<[List], NSError>) in
+                completionHandler(response.result)
+        }
+    }
 }

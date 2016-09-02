@@ -481,11 +481,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ds4-fY-BvQ" userLabel="List View">
                                 <rect key="frame" x="0.0" y="154" width="600" height="397"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dpY-kg-T6G" userLabel="SentCampaignsTable">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dpY-kg-T6G" userLabel="ScheduledCampaignsTable">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="397"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ScheduledCampaignsCell" id="wIf-pQ-Rat" userLabel="SentCampaignsCell" customClass="ScheduledCampaignsTableViewCell" customModule="DopplerMobile" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ScheduledCampaignsCell" id="wIf-pQ-Rat" customClass="ScheduledCampaignsTableViewCell" customModule="DopplerMobile" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="600" height="60"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wIf-pQ-Rat" id="K5m-43-lFA">
@@ -596,6 +596,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wWx-uj-vht" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3112" y="1132"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bY1-46-wS1">
+            <objects>
+                <viewController id="YtY-JI-Ofb" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PAo-ez-EjB"/>
+                        <viewControllerLayoutGuide type="bottom" id="4T2-5m-bpx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lpR-MS-NL8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Im9-Ct-zJr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3104" y="1838"/>
         </scene>
         <!--Report View Controller-->
         <scene sceneID="8UY-fZ-yir">
@@ -1102,7 +1120,7 @@
         <!--Lists View Controller Screen-->
         <scene sceneID="d21-Wb-XFM">
             <objects>
-                <viewController title="Lists View Controller Screen" id="fNm-3A-UAG" customClass="CampaignsListViewController" customModule="DopplerMobile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Lists View Controller Screen" id="fNm-3A-UAG" customClass="SuscribersListsViewController" customModule="DopplerMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ugz-pj-DhX"/>
                         <viewControllerLayoutGuide type="bottom" id="vXs-1G-Wvq"/>
@@ -1133,30 +1151,30 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ea-xV-Akr" userLabel="List View">
                                 <rect key="frame" x="0.0" y="154" width="600" height="397"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="viH-4u-nTI" userLabel="SentCampaignsTable">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="viH-4u-nTI" userLabel="SuscribersListTable">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="397"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SentCampaignsCell" id="EL6-AT-mFL" userLabel="SentCampaignsCell" customClass="SentCampaignsTableViewCell" customModule="DopplerMobile" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SuscribersListsCell" id="EL6-AT-mFL" userLabel="SuscribersListCell" customClass="SuscribersListsTableViewCell" customModule="DopplerMobile" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="600" height="60"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EL6-AT-mFL" id="JXY-gE-b92">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgY-7g-DQf" userLabel="StatisticsLabel">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgY-7g-DQf" userLabel="StatisticsLabel">
                                                             <rect key="frame" x="8" y="45" width="109" height="15"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXj-63-XJB" userLabel="DateLabel">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXj-63-XJB" userLabel="DateLabel">
                                                             <rect key="frame" x="8" y="26" width="114" height="15"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campaign Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSf-iV-1Id" userLabel="CampaignNameLabel">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="List Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSf-iV-1Id" userLabel="SuscribersListNameLabel">
                                                             <rect key="frame" x="8" y="4" width="120" height="18"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1177,9 +1195,10 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
-                                                    <outlet property="lblCampaignName" destination="fSf-iV-1Id" id="9j4-Id-M27"/>
-                                                    <outlet property="lblSentDate" destination="ZXj-63-XJB" id="QOL-it-cmU"/>
-                                                    <outlet property="lblStatistics" destination="jgY-7g-DQf" id="TrI-bb-Lax"/>
+                                                    <outlet property="lblSuscribersListDate" destination="ZXj-63-XJB" id="fhI-v5-e5N"/>
+                                                    <outlet property="lblSuscribersListName" destination="fSf-iV-1Id" id="ybL-DQ-BGg"/>
+                                                    <outlet property="lblSuscribersListStatistics" destination="jgY-7g-DQf" id="oLo-E9-d3a"/>
+                                                    <segue destination="YtY-JI-Ofb" kind="show" id="eJZ-To-qfW"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -1209,6 +1228,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="3" title="LISTS" image="Lists-Disabled" selectedImage="Lists" id="F20-0z-zvo"/>
+                    <connections>
+                        <outlet property="tblSuscribersLists" destination="viH-4u-nTI" id="YFB-JC-HPN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aqO-E9-4h7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
