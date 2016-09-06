@@ -498,14 +498,14 @@
                                                             <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Campaign Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WnY-hR-vum" userLabel="CampaignNameLabel">
-                                                            <rect key="frame" x="8" y="0.0" width="120" height="18"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campaign Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WnY-hR-vum" userLabel="CampaignNameLabel">
+                                                            <rect key="frame" x="8" y="4" width="120" height="18"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YA1-AY-SKY" userLabel="StatisticsLabel">
-                                                            <rect key="frame" x="8" y="44" width="109" height="15"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YA1-AY-SKY" userLabel="StatisticsLabel">
+                                                            <rect key="frame" x="8" y="45" width="109" height="15"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -1162,34 +1162,34 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgY-7g-DQf" userLabel="StatisticsLabel">
-                                                            <rect key="frame" x="8" y="45" width="109" height="15"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXj-63-XJB" userLabel="DateLabel">
-                                                            <rect key="frame" x="8" y="26" width="114" height="15"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXj-63-XJB" userLabel="DateLabel">
+                                                            <rect key="frame" x="8" y="26" width="570" height="15"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="List Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSf-iV-1Id" userLabel="SuscribersListNameLabel">
-                                                            <rect key="frame" x="8" y="4" width="120" height="18"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSf-iV-1Id" userLabel="SuscribersListNameLabel">
+                                                            <rect key="frame" x="8" y="4" width="570" height="18"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgY-7g-DQf" userLabel="StatisticsLabel">
+                                                            <rect key="frame" x="8" y="45" width="600" height="15"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="ZXj-63-XJB" firstAttribute="top" secondItem="fSf-iV-1Id" secondAttribute="bottom" constant="4" id="1v2-Nh-3Ae"/>
-                                                        <constraint firstItem="ZXj-63-XJB" firstAttribute="width" secondItem="fSf-iV-1Id" secondAttribute="width" multiplier="0.95" id="62D-rD-Sxh"/>
                                                         <constraint firstItem="fSf-iV-1Id" firstAttribute="leading" secondItem="JXY-gE-b92" secondAttribute="leadingMargin" id="Fnl-p1-LU6"/>
+                                                        <constraint firstItem="jgY-7g-DQf" firstAttribute="width" secondItem="JXY-gE-b92" secondAttribute="width" id="TJ6-eu-Z4Q"/>
                                                         <constraint firstItem="fSf-iV-1Id" firstAttribute="width" secondItem="JXY-gE-b92" secondAttribute="width" multiplier="0.95" id="Tjc-qb-0Hw"/>
+                                                        <constraint firstItem="ZXj-63-XJB" firstAttribute="width" secondItem="JXY-gE-b92" secondAttribute="width" multiplier="0.95" id="abV-qY-9ZH"/>
                                                         <constraint firstItem="ZXj-63-XJB" firstAttribute="leading" secondItem="JXY-gE-b92" secondAttribute="leadingMargin" id="brz-ep-IK2"/>
                                                         <constraint firstItem="fSf-iV-1Id" firstAttribute="top" secondItem="JXY-gE-b92" secondAttribute="topMargin" constant="-4" id="fOb-Z8-GNM"/>
                                                         <constraint firstItem="jgY-7g-DQf" firstAttribute="width" secondItem="JXY-gE-b92" secondAttribute="width" id="gca-H2-fLn"/>
-                                                        <constraint firstItem="jgY-7g-DQf" firstAttribute="width" secondItem="ZXj-63-XJB" secondAttribute="width" multiplier="0.95" id="pAq-Cm-DQO"/>
                                                         <constraint firstItem="jgY-7g-DQf" firstAttribute="top" secondItem="ZXj-63-XJB" secondAttribute="bottom" constant="4" id="wdD-NW-WDe"/>
                                                         <constraint firstAttribute="leadingMargin" secondItem="jgY-7g-DQf" secondAttribute="leading" id="yVc-kE-hAq"/>
                                                     </constraints>
