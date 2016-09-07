@@ -16,10 +16,11 @@ let dict = NSDictionary(contentsOfFile: path!)
 enum DMApplicationRouter: URLRequestConvertible {
     
     static let baseUrlString = String(dict!.objectForKey("BaseUrlString")!)
-    case GetToken([String: AnyObject]) // POST https://restapi.fromdoppler.com/tokens
-    case GetCampaigns(String, [String: AnyObject]) //GET https://restapi.fromdoppler.com/accounts/(userName)/campaigns?api_key=(token)
-    case GetCampaignPreview(String, Int) //GET https://restapi.fromdoppler.com/accounts/(userName)/campaigns/(campaignId)/preview?api_key=(token)
-    case GetSuscribersLists(String) //GET https://restapi.fromdoppler.com/accounts/(userName)/lists?api_key=(token)
+    case GetToken([String: AnyObject]) //POST baseUrl/tokens
+    case GetCampaigns(String, [String: AnyObject]) //GET baseUrl/accounts/{accountName}/campaigns
+    case GetCampaignPreview(String, Int) //GET baseUrl/accounts/{accountName}/campaigns/{campaignId}/preview
+    case GetSuscribersLists(String) //GET baseUrl/accounts/{accountName}/lists
+    case GetSuscribers(String, Int) //GET baseUrl/accounts/{accountName}/lists/{listId}/subscribers
     
     var URLRequest: NSMutableURLRequest
     {
@@ -29,7 +30,7 @@ enum DMApplicationRouter: URLRequestConvertible {
             {
             case .GetToken:
                 return .POST
-            case .GetCampaigns, .GetCampaignPreview, .GetSuscribersLists:
+            case .GetCampaigns, .GetCampaignPreview, .GetSuscribersLists, .GetSuscribers:
                 return .GET
             }
         }
@@ -40,7 +41,7 @@ enum DMApplicationRouter: URLRequestConvertible {
             {
             case .GetToken:
                 return Alamofire.ParameterEncoding.JSON
-            case .GetCampaigns, .GetSuscribersLists, GetCampaignPreview:
+            case .GetCampaigns, .GetSuscribersLists, .GetCampaignPreview, .GetSuscribers:
                 return Alamofire.ParameterEncoding.URLEncodedInURL
             }
         }
@@ -59,6 +60,8 @@ enum DMApplicationRouter: URLRequestConvertible {
                     relativePath = "accounts/\(username)/campaigns/\(campaignId)/preview"
                 case .GetSuscribersLists(let username):
                     relativePath = "accounts/\(username)/lists"
+                case .GetSuscribers(let username, let listId):
+                    relativePath = "accounts/\(username)/lists/\(listId)/subscribers"
                 }
                 
                 var URL = NSURL(string: DMApplicationRouter.baseUrlString)!
@@ -77,7 +80,7 @@ enum DMApplicationRouter: URLRequestConvertible {
                     return params
                 case .GetCampaigns(_, let params):
                     return params
-                case .GetSuscribersLists, .GetCampaignPreview:
+                case .GetSuscribersLists, .GetCampaignPreview, .GetSuscribers:
                     return nil
                 }
         }()

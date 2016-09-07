@@ -21,7 +21,7 @@ class ReportViewController: UIViewController, UITableViewDelegate
     @IBOutlet private weak var lblRatePercentage: UILabel!
     @IBOutlet private weak var tblIndicators: UITableView!
     
-    var reportItem: SentCampaignViewModel?
+    var reportItem: CampaignViewModel?
     {
         didSet { self.configureView() }
     }

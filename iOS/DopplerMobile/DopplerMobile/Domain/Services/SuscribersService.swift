@@ -22,11 +22,31 @@ public class SuscribersService
                 }
                 guard let campaigns = result.value else
                 {
-                    NSNotificationCenter.defaultCenter().postNotificationName(notification, object: "Error getting campaigns data.")
+                    NSNotificationCenter.defaultCenter().postNotificationName(notification, object: "Error getting suscribers lists data.")
                     return
                 }
                 NSNotificationCenter.defaultCenter().postNotificationName(notification, object: campaigns)
         }
         DMApiManager.sharedInstance.getSuscribersLists(completionHandler)
     }
+    
+    func downloadSuscribers(listId: Int, notification: String)
+    {
+        let completionHandler: (Result<[Suscriber], NSError>) -> Void =
+            { result in
+                guard result.error == nil else
+                {
+                    NSNotificationCenter.defaultCenter().postNotificationName(notification, object: String(result.error))
+                    return
+                }
+                guard let campaigns = result.value else
+                {
+                    NSNotificationCenter.defaultCenter().postNotificationName(notification, object: "Error getting suscribers data.")
+                    return
+                }
+                NSNotificationCenter.defaultCenter().postNotificationName(notification, object: campaigns)
+        }
+        DMApiManager.sharedInstance.getSuscribers(listId, completionHandler: completionHandler)
+    }
+
 }

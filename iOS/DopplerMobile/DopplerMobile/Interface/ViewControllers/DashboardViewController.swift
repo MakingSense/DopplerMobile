@@ -16,6 +16,6 @@ class DashboardViewController: UIViewController, UITableViewDelegate
     // MARK: Actions
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.dashboardViewModel = DashboardViewModel(campaignsService: CampaignsService())
+        navigationController!.setNavigationBarHidden(false, animated: false)
     }
 }

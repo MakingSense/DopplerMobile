@@ -16,7 +16,7 @@ class DeliveryRateReportTableViewCell : UITableViewCell
     static let identifier = "DeliveryRateReportCell"
     
     // MARK: Actions
-    func configure(campaignViewModel: SentCampaignViewModel, inidcatorIndex: Int)
+    func configure(campaignViewModel: CampaignViewModel, inidcatorIndex: Int)
     {
         var indicatorDescription = ""
         var indicatorValue = "--"

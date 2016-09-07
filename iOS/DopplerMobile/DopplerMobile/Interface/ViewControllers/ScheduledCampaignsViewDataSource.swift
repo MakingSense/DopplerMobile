@@ -11,11 +11,7 @@ import UIKit
 class ScheduledCampaignsViewDataSource: NSObject, UITableViewDataSource
 {
     // MARK: Properties
-    var items = [SentCampaignViewModel]()
-    init(viewModel: DashboardViewModel, scheduledCampaigns: [SentCampaignViewModel])
-    {
-        self.items = scheduledCampaigns;
-    }
+    var items = [CampaignViewModel]()
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {

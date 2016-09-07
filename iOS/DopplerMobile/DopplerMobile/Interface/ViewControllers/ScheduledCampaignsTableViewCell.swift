@@ -17,7 +17,7 @@ class ScheduledCampaignsTableViewCell : UITableViewCell
     static let identifier = "ScheduledCampaignsCell"
     
     // MARK: Actions
-    func configure(campaignViewModel: SentCampaignViewModel)
+    func configure(campaignViewModel: CampaignViewModel)
     {
         self.lblCampaignName.text = campaignViewModel.name
         self.lblCampaignDate.text = campaignViewModel.sentDate?.toStringWithFormat(DateFormatEnum.yyyy_MM_dd.pattern)

@@ -16,6 +16,7 @@ class CampaignPreviewViewController: UIViewController
     var campaignId: Int?
     
     override func viewWillAppear(animated: Bool) {
+        self.navigationController!.toolbarHidden = false;
         self.navigationItem.title = "PREVIEW_TEXT".localized
         self.campaignPreviewViewModel = CampaignPreviewViewModel(campaignsService: CampaignsService(), campaignId: campaignId!)
         //TODO: remove this when reactive is implemented.
@@ -31,7 +32,7 @@ class CampaignPreviewViewController: UIViewController
             let url = NSURL (string: "http://vp.dplract.com/00dc56c471939cca");
             let requestObj = NSURLRequest(URL: url!);
             //TODO: For demo purposes comment the following line:
-//            let requestObj = NSURLRequest(URL: notification.object! as! NSURL);
+            //let requestObj = NSURLRequest(URL: notification.object! as! NSURL);
             wvCampaignPreview.loadRequest(requestObj);
         }
         else
@@ -43,5 +44,18 @@ class CampaignPreviewViewController: UIViewController
     //TODO: remove this when reactive is implemented.
     override func viewWillDisappear(animated: Bool) {
         NSNotificationCenter.defaultCenter().removeObserver(self)
+        self.navigationController!.toolbarHidden = true;
+    }
+    
+    @IBAction func sharePreview(sender: AnyObject)
+    {
+        //TODO: Analize what information we want to share.
+        let message = "Preview URL."
+        if let link = NSURL(string: "http://vp.dplract.com/00dc56c471939cca")
+        {
+            let objectsToShare = [message,link]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            self.presentViewController(activityVC, animated: true, completion: nil)
+        }
     }
 }

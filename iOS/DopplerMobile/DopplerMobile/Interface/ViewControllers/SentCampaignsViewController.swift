@@ -8,19 +8,21 @@
 
 import UIKit
 
-class SentCampaignsViewController: DashboardViewController
+class SentCampaignsViewController: UIViewController, UITableViewDelegate, DataSourceContentDelegate
 {
     // MARK: Properties
     @IBOutlet private weak var tblSentCampaigns: UITableView!
     var dataSource : SentCampaignsViewDataSource?
+    var sentCampaignViewModel: SentCampaignViewModel!
     
     // MARK: Actions
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController!.setNavigationBarHidden(false, animated: false)
         self.tblSentCampaigns.delegate = self
-        
-        //TODO: remove this when reactive is implemented.
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(SentCampaignsViewController.OnNotificationArrived(_:)), name:NotificationIdentifier.SentCampaignsNotification.rawValue, object: nil)
+        self.sentCampaignViewModel = SentCampaignViewModel(campaignsService: CampaignsService(), contentDelegate: self)
+        self.dataSource = SentCampaignsViewDataSource()
+        self.tblSentCampaigns.dataSource = self.dataSource
     }
     
     // MARK: - Segues
@@ -34,28 +36,8 @@ class SentCampaignsViewController: DashboardViewController
         }
     }
     
-    //TODO: Check the best place to receive this notification.
-    @objc func OnNotificationArrived(notification: NSNotification)
-    {
-        if(notification.object != nil)
-        {
-            var sentCampaigns = [SentCampaignViewModel]()
-            let campaigns = notification.object as! [Campaign]
-            for campaign in campaigns {
-                sentCampaigns.append(SentCampaignViewModel(campaign: campaign))
-            }
-            self.dataSource = SentCampaignsViewDataSource(viewModel: dashboardViewModel, sentCampaigns: sentCampaigns)
-            self.tblSentCampaigns.dataSource = self.dataSource
-        }
-        else
-        {
-            //TODO: Show error.
-        }
-    }
-    
-    //TODO: remove this when reactive is implemented.
-    deinit
-    {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+    func updateContent(content: AnyObject) {
+        dataSource?.items = content as! [CampaignViewModel]
+        tblSentCampaigns.reloadData()
     }
 }

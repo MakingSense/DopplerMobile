@@ -17,7 +17,7 @@ class SentCampaignsTableViewCell : UITableViewCell
     static let identifier = "SentCampaignsCell"
     
     // MARK: Actions
-    func configure(campaignViewModel: SentCampaignViewModel)
+    func configure(campaignViewModel: CampaignViewModel)
     {
         self.lblCampaignName.text = campaignViewModel.name
         self.lblSentDate.text = campaignViewModel.sentDate?.toStringWithFormat(DateFormatEnum.yyyy_MM_dd.pattern)

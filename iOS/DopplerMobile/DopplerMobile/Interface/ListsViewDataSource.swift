@@ -1,5 +1,5 @@
 //
-//  SuscribersListsViewDataSource.swift
+//  ListsViewDataSource.swift
 //  DopplerMobile
 //
 //  Created by Mauro Maldini on 2/9/16.
@@ -8,14 +8,10 @@
 
 import UIKit
 
-class SuscribersListsViewDataSource: NSObject, UITableViewDataSource
+class ListsViewDataSource: NSObject, UITableViewDataSource
 {
     // MARK: Properties
-    var items = [SuscribersListViewModel]()
-    init(viewModel: ListViewModel, suscribersLists: [SuscribersListViewModel])
-    {
-        self.items = suscribersLists;
-    }
+    var items = [ListDetailViewModel]()
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -24,7 +20,7 @@ class SuscribersListsViewDataSource: NSObject, UITableViewDataSource
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier(SuscribersListsTableViewCell.identifier)! as! SuscribersListsTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(ListsTableViewCell.identifier)! as! ListsTableViewCell
         cell.configure(self.items[indexPath.row])
         return cell
     }
