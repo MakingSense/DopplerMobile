@@ -695,14 +695,6 @@
                                                     </mask>
                                                 </variation>
                                             </view>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6gy-fp-av4">
-                                                <rect key="frame" x="0.0" y="111" width="600" height="29"/>
-                                                <segments>
-                                                    <segment title="Primera Sección"/>
-                                                    <segment title="Segunda Sección"/>
-                                                    <segment title="Tercera Sección"/>
-                                                </segments>
-                                            </segmentedControl>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lau-dT-Qj2" userLabel="Information View">
                                                 <rect key="frame" x="0.0" y="142" width="600" height="52"/>
                                                 <subviews>
@@ -1048,6 +1040,14 @@
                                                     </mask>
                                                 </variation>
                                             </view>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6gy-fp-av4">
+                                                <rect key="frame" x="0.0" y="111" width="600" height="29"/>
+                                                <segments>
+                                                    <segment title="Primera Sección"/>
+                                                    <segment title="Segunda Sección"/>
+                                                    <segment title="Tercera Sección"/>
+                                                </segments>
+                                            </segmentedControl>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -1099,6 +1099,15 @@
                             <constraint firstAttribute="trailing" secondItem="ATB-6X-ZR1" secondAttribute="trailing" id="neg-Qr-1Rr"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="dqm-EN-GmF">
+                        <barButtonItem key="rightBarButtonItem" title="Preview" id="R75-w8-PdL">
+                            <connections>
+                                <segue destination="G9J-1M-xwW" kind="show" id="n76-hU-0Zd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1000"/>
                     <connections>
@@ -1116,6 +1125,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Ks-wT-UyU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3112" y="242"/>
+        </scene>
+        <!--Campaign Preview View Controller-->
+        <scene sceneID="B5i-3L-GcU">
+            <objects>
+                <viewController id="G9J-1M-xwW" customClass="CampaignPreviewViewController" customModule="DopplerMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MuZ-PL-Sxn"/>
+                        <viewControllerLayoutGuide type="bottom" id="fkT-tY-K5V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vV8-vQ-V41">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gWb-qp-AcG">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gWb-qp-AcG" firstAttribute="height" secondItem="vV8-vQ-V41" secondAttribute="height" id="AXo-rM-PQ8"/>
+                            <constraint firstItem="gWb-qp-AcG" firstAttribute="centerY" secondItem="vV8-vQ-V41" secondAttribute="centerY" id="Mmn-1r-u62"/>
+                            <constraint firstItem="gWb-qp-AcG" firstAttribute="width" secondItem="vV8-vQ-V41" secondAttribute="width" id="geK-mM-MwQ"/>
+                            <constraint firstItem="gWb-qp-AcG" firstAttribute="centerX" secondItem="vV8-vQ-V41" secondAttribute="centerX" id="mOR-0j-Q8V"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="wvCampaignPreview" destination="gWb-qp-AcG" id="kD6-G9-SgH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HQa-z1-J1r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3864" y="-183"/>
         </scene>
         <!--Lists View Controller Screen-->
         <scene sceneID="d21-Wb-XFM">

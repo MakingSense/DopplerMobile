@@ -28,6 +28,8 @@
 		2B057FD81D7A297E0021F748 /* ListStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B057FD71D7A297E0021F748 /* ListStatus.swift */; };
 		2B057FDA1D7A2F410021F748 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B057FD91D7A2F410021F748 /* ListViewModel.swift */; };
 		2B057FDC1D7A31300021F748 /* SuscribersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B057FDB1D7A31300021F748 /* SuscribersListViewModel.swift */; };
+		2B0EC0381D7FDB7A008BF638 /* CampaignPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EC0371D7FDB7A008BF638 /* CampaignPreviewViewController.swift */; };
+		2B0EC03A1D7FE71A008BF638 /* CampaignPreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EC0391D7FE71A008BF638 /* CampaignPreviewViewModel.swift */; };
 		2B4C32131D70A1180076DF3B /* NotificationIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C32121D70A1180076DF3B /* NotificationIdentifier.swift */; };
 		2B4C32151D70ABD50076DF3B /* DMApiManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C32141D70ABD50076DF3B /* DMApiManagerProtocol.swift */; };
 		2B4DCA0F1D6FBB150078D51B /* MSHttpStatusEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4DCA0E1D6FBB150078D51B /* MSHttpStatusEnum.swift */; };
@@ -113,6 +115,8 @@
 		2B057FD71D7A297E0021F748 /* ListStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListStatus.swift; sourceTree = "<group>"; };
 		2B057FD91D7A2F410021F748 /* ListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		2B057FDB1D7A31300021F748 /* SuscribersListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuscribersListViewModel.swift; sourceTree = "<group>"; };
+		2B0EC0371D7FDB7A008BF638 /* CampaignPreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignPreviewViewController.swift; sourceTree = "<group>"; };
+		2B0EC0391D7FE71A008BF638 /* CampaignPreviewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignPreviewViewModel.swift; sourceTree = "<group>"; };
 		2B3E498A1D7F1821005EC418 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Main.strings"; sourceTree = "<group>"; };
 		2B4C32121D70A1180076DF3B /* NotificationIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationIdentifier.swift; sourceTree = "<group>"; };
 		2B4C32141D70ABD50076DF3B /* DMApiManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DMApiManagerProtocol.swift; path = ../Infrastructure/DMApiManagerProtocol.swift; sourceTree = "<group>"; };
@@ -240,6 +244,7 @@
 				1FDB0BDA1D23038B007544C3 /* OnboardingContentViewModel.swift */,
 				2B057FD91D7A2F410021F748 /* ListViewModel.swift */,
 				2B057FDB1D7A31300021F748 /* SuscribersListViewModel.swift */,
+				2B0EC0391D7FE71A008BF638 /* CampaignPreviewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 				2BC6EF4E1D370A88009F5A0B /* ScheduledCampaignsViewController.swift */,
 				2BF8751C1D7A1475009AA744 /* SuscribersListsViewController.swift */,
 				2B70F7A01D5947B800B18525 /* ReportViewController.swift */,
+				2B0EC0371D7FDB7A008BF638 /* CampaignPreviewViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -664,6 +670,7 @@
 				2B4C32151D70ABD50076DF3B /* DMApiManagerProtocol.swift in Sources */,
 				1FDB0BDB1D23038B007544C3 /* OnboardingContentViewModel.swift in Sources */,
 				241198781D1B134100330D87 /* AppDelegate.swift in Sources */,
+				2B0EC0381D7FDB7A008BF638 /* CampaignPreviewViewController.swift in Sources */,
 				C22695701D4297D000059959 /* OnboardingViewDataSource.swift in Sources */,
 				2B4C32131D70A1180076DF3B /* NotificationIdentifier.swift in Sources */,
 				2B7EF64A1D4B23DB008D4CDD /* SentCampaignReport.swift in Sources */,
@@ -676,6 +683,7 @@
 				2B7EF6501D4B2AE6008D4CDD /* CampaignsService.swift in Sources */,
 				2B057FDA1D7A2F410021F748 /* ListViewModel.swift in Sources */,
 				2BD182371D78AA1A00EE10E0 /* ScheduledCampaignsViewDataSource.swift in Sources */,
+				2B0EC03A1D7FE71A008BF638 /* CampaignPreviewViewModel.swift in Sources */,
 				24FD44B01D245DC3003E35A4 /* SimpleCommand.swift in Sources */,
 				2B7EF64E1D4B2A4D008D4CDD /* DashboardViewModel.swift in Sources */,
 				9CD2FC6A1D2445E800D4C9F8 /* LoginService.swift in Sources */,

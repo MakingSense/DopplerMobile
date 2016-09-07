@@ -11,6 +11,7 @@ import Foundation
 public class SentCampaignsViewModel
 {
     public private(set) var name : String
+    public private(set) var campaignId: String?
     public private(set) var sentDate: String?
     public private(set) var amountSentSubscribers: Int?
     public private(set) var openedPercentage: Int?
@@ -32,6 +33,7 @@ public class SentCampaignsViewModel
     init(campaign: Campaign)
     {
         self.name = campaign.name
+        self.campaignId = String(campaign.campaignId!)
         self.subject = campaign.subject
         if(campaign.scheduledDate != nil)
         {

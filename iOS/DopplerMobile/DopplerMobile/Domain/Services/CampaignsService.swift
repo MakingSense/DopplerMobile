@@ -30,22 +30,22 @@ public class CampaignsService
         DMApiManager.sharedInstance.getCampaigns(status, completionHandler: completionHandler)
     }
     
-    func downloadSuscribersLists(notification: String)
+    func downloadCampaignPreview(campaignId: String, notification: String)
     {
-        let completionHandler: (Result<[List], NSError>) -> Void =
+        let completionHandler: (NSURL?, NSError?) -> Void =
             { result in
-                guard result.error == nil else
+                guard result.1 == nil else
                 {
-                    NSNotificationCenter.defaultCenter().postNotificationName(notification, object: String(result.error))
+                    NSNotificationCenter.defaultCenter().postNotificationName(notification, object: String(result.1))
                     return
                 }
-                guard let campaigns = result.value else
+                guard let preview = result.0 else
                 {
-                    NSNotificationCenter.defaultCenter().postNotificationName(notification, object: "Error getting campaigns data.")
+                    NSNotificationCenter.defaultCenter().postNotificationName(notification, object: "Error getting campaign preview data.")
                     return
                 }
-                NSNotificationCenter.defaultCenter().postNotificationName(notification, object: campaigns)
+                NSNotificationCenter.defaultCenter().postNotificationName(notification, object: preview)
         }
-        DMApiManager.sharedInstance.getSuscribersLists(completionHandler)
+        DMApiManager.sharedInstance.getCampaignPreview(campaignId, completionHandler: completionHandler)
     }
 }

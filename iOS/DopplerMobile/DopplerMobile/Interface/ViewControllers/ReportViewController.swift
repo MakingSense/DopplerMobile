@@ -52,4 +52,11 @@ class ReportViewController: UIViewController, UITableViewDelegate
             lblRatePercentage.text = "\(reportItem!.ratePercentage!)%"
         }
     }
+    
+    // MARK: - Segues
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+            let campaignPreviewViewController = segue.destinationViewController as! CampaignPreviewViewController
+            campaignPreviewViewController.campaignId = reportItem!.campaignId
+    }
 }
