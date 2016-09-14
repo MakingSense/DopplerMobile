@@ -33,6 +33,7 @@
 		2B458AE01D88487100BD5A08 /* DataSourceContentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B458ADF1D88487100BD5A08 /* DataSourceContentDelegate.swift */; };
 		2B458AE21D88530E00BD5A08 /* ScheduledCampaignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B458AE11D88530E00BD5A08 /* ScheduledCampaignViewModel.swift */; };
 		2B458AE41D88561600BD5A08 /* CampaignListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B458AE31D88561600BD5A08 /* CampaignListViewModel.swift */; };
+		2B458AE81D8884E300BD5A08 /* TableViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B458AE71D8884E300BD5A08 /* TableViewCellProtocol.swift */; };
 		2B46862D1D81A98000B03D4F /* SuscribersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B46862C1D81A98000B03D4F /* SuscribersViewController.swift */; };
 		2B46862F1D81AC1D00B03D4F /* SuscribersViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B46862E1D81AC1D00B03D4F /* SuscribersViewDataSource.swift */; };
 		2B4686311D81ACC000B03D4F /* SuscribersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4686301D81ACC000B03D4F /* SuscribersTableViewCell.swift */; };
@@ -45,6 +46,7 @@
 		2B46863F1D8284A600B03D4F /* ListsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B46863E1D8284A600B03D4F /* ListsTableViewCell.swift */; };
 		2B4C32131D70A1180076DF3B /* NotificationIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C32121D70A1180076DF3B /* NotificationIdentifier.swift */; };
 		2B4C32151D70ABD50076DF3B /* DMApiManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C32141D70ABD50076DF3B /* DMApiManagerProtocol.swift */; };
+		2B4D4B8C1D89D97D0089E6DC /* GenericArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4D4B8B1D89D97D0089E6DC /* GenericArrayDataSource.swift */; };
 		2B4DCA0F1D6FBB150078D51B /* MSHttpStatusEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4DCA0E1D6FBB150078D51B /* MSHttpStatusEnum.swift */; };
 		2B703F1B1D3D304E00A19E36 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B703F1A1D3D304E00A19E36 /* String.swift */; };
 		2B703F1D1D3D51D900A19E36 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B703F1C1D3D51D900A19E36 /* Optional.swift */; };
@@ -132,6 +134,7 @@
 		2B458ADF1D88487100BD5A08 /* DataSourceContentDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceContentDelegate.swift; sourceTree = "<group>"; };
 		2B458AE11D88530E00BD5A08 /* ScheduledCampaignViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledCampaignViewModel.swift; sourceTree = "<group>"; };
 		2B458AE31D88561600BD5A08 /* CampaignListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignListViewModel.swift; sourceTree = "<group>"; };
+		2B458AE71D8884E300BD5A08 /* TableViewCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellProtocol.swift; sourceTree = "<group>"; };
 		2B46862C1D81A98000B03D4F /* SuscribersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuscribersViewController.swift; sourceTree = "<group>"; };
 		2B46862E1D81AC1D00B03D4F /* SuscribersViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuscribersViewDataSource.swift; sourceTree = "<group>"; };
 		2B4686301D81ACC000B03D4F /* SuscribersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuscribersTableViewCell.swift; sourceTree = "<group>"; };
@@ -144,6 +147,7 @@
 		2B46863E1D8284A600B03D4F /* ListsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListsTableViewCell.swift; sourceTree = "<group>"; };
 		2B4C32121D70A1180076DF3B /* NotificationIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationIdentifier.swift; sourceTree = "<group>"; };
 		2B4C32141D70ABD50076DF3B /* DMApiManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DMApiManagerProtocol.swift; path = ../Infrastructure/DMApiManagerProtocol.swift; sourceTree = "<group>"; };
+		2B4D4B8B1D89D97D0089E6DC /* GenericArrayDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericArrayDataSource.swift; sourceTree = "<group>"; };
 		2B4DCA0E1D6FBB150078D51B /* MSHttpStatusEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSHttpStatusEnum.swift; sourceTree = "<group>"; };
 		2B703F1A1D3D304E00A19E36 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		2B703F1C1D3D51D900A19E36 /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
@@ -393,6 +397,7 @@
 				24FD44A21D22EBCB003E35A4 /* NavigationDelegate.swift */,
 				2BD83BAA1D41590C00A5C527 /* OnboardingContentViewControllerDelegate.swift */,
 				2B458ADF1D88487100BD5A08 /* DataSourceContentDelegate.swift */,
+				2B458AE71D8884E300BD5A08 /* TableViewCellProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -429,6 +434,7 @@
 		2BD182401D78D33E00EE10E0 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
+				2B4D4B8B1D89D97D0089E6DC /* GenericArrayDataSource.swift */,
 				C226956F1D4297D000059959 /* OnboardingViewDataSource.swift */,
 				2BD4FD991D636DFB00E7E13C /* DeliveryRateReportDataSource.swift */,
 				2BD4FD9B1D636EBA00E7E13C /* DeliveryRateReportTableViewCell.swift */,
@@ -703,6 +709,7 @@
 				9CB9DEFA1D1B1E1100DAED48 /* OnboardingContentViewController.swift in Sources */,
 				2B4C32151D70ABD50076DF3B /* DMApiManagerProtocol.swift in Sources */,
 				1FDB0BDB1D23038B007544C3 /* OnboardingContentViewModel.swift in Sources */,
+				2B4D4B8C1D89D97D0089E6DC /* GenericArrayDataSource.swift in Sources */,
 				241198781D1B134100330D87 /* AppDelegate.swift in Sources */,
 				2B4686371D81B97B00B03D4F /* Field.swift in Sources */,
 				2B4686391D81C6D200B03D4F /* FieldType.swift in Sources */,
@@ -717,6 +724,7 @@
 				2B46862F1D81AC1D00B03D4F /* SuscribersViewDataSource.swift in Sources */,
 				24FD44A91D244E12003E35A4 /* Command.swift in Sources */,
 				2BF3074A1D6E2BCB0062DF3C /* MSSerializationErrorCode.swift in Sources */,
+				2B458AE81D8884E300BD5A08 /* TableViewCellProtocol.swift in Sources */,
 				249ECB6E1D3D56B300F18E74 /* SentCampaignsViewController.swift in Sources */,
 				2B7EF6501D4B2AE6008D4CDD /* CampaignsService.swift in Sources */,
 				2B057FDA1D7A2F410021F748 /* ListViewModel.swift in Sources */,

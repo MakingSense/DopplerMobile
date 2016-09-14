@@ -8,10 +8,15 @@
 
 import UIKit
 
-class SentCampaignsViewDataSource: NSObject, UITableViewDataSource
+class SentCampaignsViewDataSource<ItemType>: NSObject, UITableViewDataSource
 {
     // MARK: Properties
-    var items = [CampaignViewModel]()
+    var items = [ItemType]()
+    private var cellReuseIdentifier: String
+    
+    init(cellReuseIdentifier: String) {
+        self.cellReuseIdentifier = cellReuseIdentifier
+    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -20,8 +25,8 @@ class SentCampaignsViewDataSource: NSObject, UITableViewDataSource
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier(SentCampaignsTableViewCell.identifier)! as! SentCampaignsTableViewCell
-        cell.configure(self.items[indexPath.row])
-        return cell
+        let cell = tableView.dequeueReusableCellWithIdentifier(self.cellReuseIdentifier)! as! TableViewCellProtocol
+        cell.configure(self.items[indexPath.row] as! AnyObject)
+        return cell as! UITableViewCell
     }
 }
