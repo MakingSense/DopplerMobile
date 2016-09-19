@@ -1,0 +1,36 @@
+
+/* Class = "UIBarButtonItem"; title = "Preview"; ObjectID = "0fy-pL-JgS"; */
+"0fy-pL-JgS.title" = "Preview";
+
+/* Class = "UITabBarItem"; title = "METRICS"; ObjectID = "2sA-Qa-ZIi"; */
+"2sA-Qa-ZIi.title" = "MÉTRICAS";
+
+/* Class = "UITextView"; text = "Here you can analize the activity and result of your campaign."; ObjectID = "9Pm-p0-0q5"; */
+"9Pm-p0-0q5.text" = "Aquí puedes analizar la actividad y resultados de tus campañas.";
+
+/* Class = "UILabel"; text = "--"; ObjectID = "B7Z-JN-M1u"; */
+"B7Z-JN-M1u.text" = "--";
+
+/* Class = "UILabel"; text = "UNOPEN"; ObjectID = "D16-qd-YEu"; */
+"D16-qd-YEu.text" = "SIN ABRIR";
+
+/* Class = "UILabel"; text = "LATEST SENT CAMPAIGNS"; ObjectID = "MmG-iu-qL8"; */
+"MmG-iu-qL8.text" = "ÚLTIMAS CAMPAÑAS ENVIADAS";
+
+/* Class = "UILabel"; text = "OPEN"; ObjectID = "UXt-Z5-Suo"; */
+"UXt-Z5-Suo.text" = "ABIERTAS";
+
+/* Class = "UILabel"; text = "CLICK TROUGH RATE"; ObjectID = "dVp-7h-OlH"; */
+"dVp-7h-OlH.text" = "TASA DE CLICS";
+
+/* Class = "UISegmentedControl"; h8o-N3-VIw.segmentTitles[0] = "Primera Sección"; ObjectID = "h8o-N3-VIw"; */
+"h8o-N3-VIw.segmentTitles[0]" = "Primera Sección";
+
+/* Class = "UISegmentedControl"; h8o-N3-VIw.segmentTitles[1] = "Segunda Sección"; ObjectID = "h8o-N3-VIw"; */
+"h8o-N3-VIw.segmentTitles[1]" = "Segunda Sección";
+
+/* Class = "UISegmentedControl"; h8o-N3-VIw.segmentTitles[2] = "Tercera Sección"; ObjectID = "h8o-N3-VIw"; */
+"h8o-N3-VIw.segmentTitles[2]" = "Tercera Sección";
+
+/* Class = "UILabel"; text = "BOUNCES"; ObjectID = "uPA-Ng-l58"; */
+"uPA-Ng-l58.text" = "REBOTE";

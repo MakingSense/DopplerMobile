@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "USERNAME"; ObjectID = "N3E-l5-sXv"; */
+"N3E-l5-sXv.text" = "USERNAME";
+
+/* Class = "UIButton"; normalTitle = "OMITIR"; ObjectID = "TKl-E4-dNg"; */
+"TKl-E4-dNg.normalTitle" = "OMITIR";
+
+/* Class = "UIButton"; normalTitle = "LOGIN"; ObjectID = "Xzk-sR-d7x"; */
+"Xzk-sR-d7x.normalTitle" = "LOGIN";
+
+/* Class = "UIButton"; normalTitle = "SIGUIENTE"; ObjectID = "ptx-iI-Tu6"; */
+"ptx-iI-Tu6.normalTitle" = "SIGUIENTE";
+
+/* Class = "UIButton"; normalTitle = "OLVIDÓ SU CONTRASEÑA?"; ObjectID = "tHn-34-7nc"; */
+"tHn-34-7nc.normalTitle" = "OLVIDÓ SU CONTRASEÑA?";
+
+/* Class = "UILabel"; text = "PASSWORD"; ObjectID = "z74-sJ-whF"; */
+"z74-sJ-whF.text" = "PASSWORD";

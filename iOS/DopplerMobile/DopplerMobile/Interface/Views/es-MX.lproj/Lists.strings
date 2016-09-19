@@ -1,0 +1,18 @@
+
+/* Class = "UITabBarItem"; title = "LISTS"; ObjectID = "01m-7G-VgG"; */
+"01m-7G-VgG.title" = "LISTAS";
+
+/* Class = "UIViewController"; title = "Lists View Controller Screen"; ObjectID = "2gJ-zi-Un8"; */
+"2gJ-zi-Un8.title" = "Lists View Controller Screen";
+
+/* Class = "UILabel"; text = "YOUR LISTS"; ObjectID = "CjK-yc-dq8"; */
+"CjK-yc-dq8.text" = "TUS LISTADOS";
+
+/* Class = "UILabel"; text = "YOUR LISTS"; ObjectID = "izB-yB-hGd"; */
+"izB-yB-hGd.text" = "TUS LISTADOS";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "sMx-g2-gtM"; */
+"sMx-g2-gtM.text" = "Email";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "wuo-9Y-KCs"; */
+"wuo-9Y-KCs.text" = "Nombre";

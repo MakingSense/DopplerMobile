@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Scheduled View Controller Scene-->
+        <scene sceneID="XOW-Cc-4F2">
+            <objects>
+                <viewController storyboardIdentifier="ScheduledViewController" title="Scheduled View Controller Scene" id="37k-9q-fD8" customClass="ScheduledCampaignsViewController" customModule="DopplerMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lBd-Jr-vTs"/>
+                        <viewControllerLayoutGuide type="bottom" id="keR-6k-QxO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Q6n-I1-DwT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VxF-MO-2Ck" userLabel="Header View">
+                                <rect key="frame" x="0.0" y="64" width="600" height="90"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCHEDULED CAMPAIGNS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FM8-bK-BVO">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.94693848010000004" blue="0.57988518290000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="FM8-bK-BVO" firstAttribute="centerX" secondItem="VxF-MO-2Ck" secondAttribute="centerX" id="3SA-FF-hKG"/>
+                                    <constraint firstItem="FM8-bK-BVO" firstAttribute="height" secondItem="VxF-MO-2Ck" secondAttribute="height" id="K0G-6q-wt9"/>
+                                    <constraint firstItem="FM8-bK-BVO" firstAttribute="width" secondItem="VxF-MO-2Ck" secondAttribute="width" id="dt1-wQ-hqw"/>
+                                    <constraint firstAttribute="height" constant="90" id="eQA-k8-Df2"/>
+                                    <constraint firstItem="FM8-bK-BVO" firstAttribute="centerY" secondItem="VxF-MO-2Ck" secondAttribute="centerY" id="kLP-ja-Xuq"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NCf-sw-5YP" userLabel="List View">
+                                <rect key="frame" x="0.0" y="154" width="600" height="397"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BJ1-eE-zVJ" userLabel="ScheduledCampaignsTable">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="397"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ScheduledCampaignsCell" id="bZj-tg-3qS" customClass="ScheduledCampaignsTableViewCell" customModule="DopplerMobile" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="600" height="60"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bZj-tg-3qS" id="mRU-Dn-wJB">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZd-CN-VEo" userLabel="DateLabel">
+                                                            <rect key="frame" x="8" y="8" width="0.0" height="0.0"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHF-wy-1uS" userLabel="CampaignNameLabel">
+                                                            <rect key="frame" x="8" y="4" width="0.0" height="0.0"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGK-2T-ZfB" userLabel="StatisticsLabel">
+                                                            <rect key="frame" x="8" y="12" width="0.0" height="0.0"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="PHF-wy-1uS" firstAttribute="width" secondItem="mRU-Dn-wJB" secondAttribute="width" multiplier="0.95" id="949-re-PsI"/>
+                                                        <constraint firstItem="NZd-CN-VEo" firstAttribute="top" secondItem="PHF-wy-1uS" secondAttribute="bottom" constant="4" id="BUi-fx-lWd"/>
+                                                        <constraint firstItem="RGK-2T-ZfB" firstAttribute="width" secondItem="mRU-Dn-wJB" secondAttribute="width" id="ECm-Pa-j6m"/>
+                                                        <constraint firstItem="PHF-wy-1uS" firstAttribute="leading" secondItem="mRU-Dn-wJB" secondAttribute="leadingMargin" id="KWf-Ke-R6f"/>
+                                                        <constraint firstItem="RGK-2T-ZfB" firstAttribute="width" secondItem="NZd-CN-VEo" secondAttribute="width" multiplier="0.95" id="Kkl-3s-Bum"/>
+                                                        <constraint firstItem="PHF-wy-1uS" firstAttribute="top" secondItem="mRU-Dn-wJB" secondAttribute="topMargin" constant="-4" id="L0K-Zh-67j"/>
+                                                        <constraint firstItem="RGK-2T-ZfB" firstAttribute="top" secondItem="NZd-CN-VEo" secondAttribute="bottom" constant="4" id="OMa-uN-8WD"/>
+                                                        <constraint firstItem="NZd-CN-VEo" firstAttribute="leading" secondItem="mRU-Dn-wJB" secondAttribute="leadingMargin" id="TEK-gf-Pny"/>
+                                                        <constraint firstItem="NZd-CN-VEo" firstAttribute="width" secondItem="PHF-wy-1uS" secondAttribute="width" multiplier="0.95" id="isd-Sp-p5o"/>
+                                                        <constraint firstAttribute="leadingMargin" secondItem="RGK-2T-ZfB" secondAttribute="leading" id="nuS-R2-F7V"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="lblCampaignDate" destination="NZd-CN-VEo" id="6hk-iJ-RVl"/>
+                                                    <outlet property="lblCampaignName" destination="PHF-wy-1uS" id="J1U-Cs-KJu"/>
+                                                    <outlet property="lblCampaignStatistics" destination="RGK-2T-ZfB" id="wHy-6o-LTF"/>
+                                                    <segue destination="TFh-dM-0bR" kind="show" id="sUe-pH-ieK"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="BJ1-eE-zVJ" firstAttribute="leading" secondItem="NCf-sw-5YP" secondAttribute="leading" id="Bn7-w1-Qhs"/>
+                                    <constraint firstItem="BJ1-eE-zVJ" firstAttribute="centerX" secondItem="NCf-sw-5YP" secondAttribute="centerX" id="CkL-Mk-X9K"/>
+                                    <constraint firstItem="BJ1-eE-zVJ" firstAttribute="height" secondItem="NCf-sw-5YP" secondAttribute="height" id="Hkc-Rp-HA2"/>
+                                    <constraint firstItem="BJ1-eE-zVJ" firstAttribute="width" secondItem="NCf-sw-5YP" secondAttribute="width" id="Htt-FH-bHe"/>
+                                    <constraint firstItem="BJ1-eE-zVJ" firstAttribute="top" secondItem="NCf-sw-5YP" secondAttribute="top" id="gWz-Gc-eXE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="keR-6k-QxO" firstAttribute="top" secondItem="NCf-sw-5YP" secondAttribute="bottom" id="AE9-lZ-lgV"/>
+                            <constraint firstItem="VxF-MO-2Ck" firstAttribute="centerX" secondItem="Q6n-I1-DwT" secondAttribute="centerX" id="IUc-5I-Cll"/>
+                            <constraint firstItem="VxF-MO-2Ck" firstAttribute="leading" secondItem="Q6n-I1-DwT" secondAttribute="leadingMargin" id="KwS-Tm-a0F"/>
+                            <constraint firstItem="NCf-sw-5YP" firstAttribute="top" secondItem="VxF-MO-2Ck" secondAttribute="bottom" id="SxW-qx-tHj"/>
+                            <constraint firstItem="NCf-sw-5YP" firstAttribute="centerX" secondItem="Q6n-I1-DwT" secondAttribute="centerX" id="UPu-R9-SNX"/>
+                            <constraint firstItem="VxF-MO-2Ck" firstAttribute="top" secondItem="lBd-Jr-vTs" secondAttribute="bottom" id="Z9L-zI-bkn"/>
+                            <constraint firstItem="NCf-sw-5YP" firstAttribute="top" secondItem="VxF-MO-2Ck" secondAttribute="bottom" id="d6i-Dk-tMB"/>
+                            <constraint firstItem="VxF-MO-2Ck" firstAttribute="width" secondItem="Q6n-I1-DwT" secondAttribute="width" id="d8N-Qz-1u0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VxF-MO-2Ck" secondAttribute="trailing" id="hpn-8Y-y7D"/>
+                            <constraint firstItem="VxF-MO-2Ck" firstAttribute="centerY" secondItem="Q6n-I1-DwT" secondAttribute="centerY" id="lVF-FQ-rL8"/>
+                            <constraint firstItem="NCf-sw-5YP" firstAttribute="width" secondItem="Q6n-I1-DwT" secondAttribute="width" id="q8Y-Hd-NJr"/>
+                            <constraint firstItem="VxF-MO-2Ck" firstAttribute="top" secondItem="lBd-Jr-vTs" secondAttribute="bottom" id="uNg-Iv-6A5"/>
+                            <constraint firstItem="VxF-MO-2Ck" firstAttribute="top" secondItem="lBd-Jr-vTs" secondAttribute="bottom" id="wxh-AO-rG7"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="hpn-8Y-y7D"/>
+                                <exclude reference="wxh-AO-rG7"/>
+                                <exclude reference="KwS-Tm-a0F"/>
+                                <exclude reference="Z9L-zI-bkn"/>
+                                <exclude reference="lVF-FQ-rL8"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="2" title="SCHEDULED" image="Scheduled-Disabled" selectedImage="Scheduled" id="Cf7-rD-t0l"/>
+                    <connections>
+                        <outlet property="tblScheduledCampaigns" destination="BJ1-eE-zVJ" id="FdM-gB-gPG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l3p-z1-ml9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="524" y="-592"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="yyr-cn-Ifk">
+            <objects>
+                <viewController id="TFh-dM-0bR" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Z8-48-D7q"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZHr-iw-XRL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="l2B-BU-i0I">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VPE-eQ-2Dp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1256" y="-592"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Scheduled" width="22" height="25"/>
+        <image name="Scheduled-Disabled" width="22" height="25"/>
+    </resources>
+</document>

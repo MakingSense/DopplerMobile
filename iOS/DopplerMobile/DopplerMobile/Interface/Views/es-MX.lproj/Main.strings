@@ -1,75 +1,15 @@
 
-/* Class = "UISegmentedControl"; 6gy-fp-av4.segmentTitles[0] = "Primera Sección"; ObjectID = "6gy-fp-av4"; */
-"6gy-fp-av4.segmentTitles[0]" = "Primera Sección";
-
-/* Class = "UISegmentedControl"; 6gy-fp-av4.segmentTitles[1] = "Segunda Sección"; ObjectID = "6gy-fp-av4"; */
-"6gy-fp-av4.segmentTitles[1]" = "Segunda Sección";
-
-/* Class = "UISegmentedControl"; 6gy-fp-av4.segmentTitles[2] = "Tercera Sección"; ObjectID = "6gy-fp-av4"; */
-"6gy-fp-av4.segmentTitles[2]" = "Tercera Sección";
-
-/* Class = "UIButton"; normalTitle = "LOGIN"; ObjectID = "AAc-ZA-1Hr"; */
-"AAc-ZA-1Hr.normalTitle" = "LOGIN";
-
-/* Class = "UILabel"; text = "SCHEDULED CAMPAIGNS"; ObjectID = "AiK-fb-1IL"; */
-"AiK-fb-1IL.text" = "CAMPAÑAS PROGRAMADAS";
-
-/* Class = "UITabBarItem"; title = "LISTS"; ObjectID = "F20-0z-zvo"; */
-"F20-0z-zvo.title" = "LISTAS";
-
 /* Class = "UITabBarController"; title = "DOPPLER"; ObjectID = "Hll-nm-Y3T"; */
 "Hll-nm-Y3T.title" = "DOPPLER";
 
-/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "IQv-sV-WwB"; */
-"IQv-sV-WwB.normalTitle" = "SIGUIENTE";
+/* Class = "UITabBarItem"; title = "METRICS"; ObjectID = "cO0-ta-HSb"; */
+"cO0-ta-HSb.title" = "REPORTES";
 
-/* Class = "UILabel"; text = "--"; ObjectID = "KqD-nx-U2o"; */
-"KqD-nx-U2o.text" = "--";
+/* Class = "UITabBarItem"; title = "SCHEDULED"; ObjectID = "d7r-gY-GdO"; */
+"d7r-gY-GdO.title" = "PROGRAMADAS";
 
-/* Class = "UILabel"; text = "YOUR LISTS"; ObjectID = "NUs-IR-YEV"; */
-"NUs-IR-YEV.text" = "TUS LISTADOS";
+/* Class = "UITabBarItem"; title = "LISTS"; ObjectID = "nQo-34-8Vb"; */
+"nQo-34-8Vb.title" = "LISTADOS";
 
-/* Class = "UILabel"; text = "CLICK TROUGH RATE"; ObjectID = "Nso-CG-kZk"; */
-"Nso-CG-kZk.text" = "TASA DE CLICS";
-
-/* Class = "UILabel"; text = "LATEST SENT CAMPAIGNS"; ObjectID = "SWP-wK-qaM"; */
-"SWP-wK-qaM.text" = "ÚLTIMAS CAMPAÑAS ENVIADAS";
-
-/* Class = "UITabBarItem"; title = "SCHEDULED"; ObjectID = "Sat-Kp-Ag1"; */
-"Sat-Kp-Ag1.title" = "PROGRAMADAS";
-
-/* Class = "UILabel"; text = "UNOPEN"; ObjectID = "V3v-Ad-Bzx"; */
-"V3v-Ad-Bzx.text" = "SIN ABRIR";
-
-/* Class = "UILabel"; text = "USERNAME"; ObjectID = "WW9-7y-fyP"; */
-"WW9-7y-fyP.text" = "USERNAME";
-
-/* Class = "UIButton"; normalTitle = "FORGOT YOUR PASSWORD?"; ObjectID = "Xgd-t9-dYZ"; */
-"Xgd-t9-dYZ.normalTitle" = "OLVIDÓ SU CONTRASEÑA?";
-
-/* Class = "UITabBarItem"; title = "METRICS"; ObjectID = "XnX-gz-hx5"; */
-"XnX-gz-hx5.title" = "MÉTRICAS";
-
-/* Class = "UITextView"; text = "Here you can analize the activity and result of your campaign."; ObjectID = "cUV-Xf-Mj0"; */
-"cUV-Xf-Mj0.text" = "Aquí puedes analizar la actividad y resultados de tus campañas.";
-
-/* Class = "UIViewController"; title = "Scheduled View Controller Scene"; ObjectID = "fLh-5y-0jE"; */
-"fLh-5y-0jE.title" = "Scheduled View Controller Scene";
-
-/* Class = "UIViewController"; title = "Lists View Controller Screen"; ObjectID = "fNm-3A-UAG"; */
-"fNm-3A-UAG.title" = "Lists View Controller Screen";
-
-/* Class = "UILabel"; text = "OPEN"; ObjectID = "fZN-ND-YsA"; */
-"fZN-ND-YsA.text" = "ABIERTAS";
-
-/* Class = "UILabel"; text = "BOUNCES"; ObjectID = "l86-SB-hyK"; */
-"l86-SB-hyK.text" = "REBOTE";
-
-/* Class = "UIButton"; normalTitle = "SKIP"; ObjectID = "oxZ-WW-LCx"; */
-"oxZ-WW-LCx.normalTitle" = "SALTAR";
-
-/* Class = "UILabel"; text = "Lorem Ipsum"; ObjectID = "sZ0-EC-rjb"; */
-"sZ0-EC-rjb.text" = "Lorem Ipsum";
-
-/* Class = "UILabel"; text = "PASSWORD"; ObjectID = "uwB-SC-h2a"; */
-"uwB-SC-h2a.text" = "PASSWORD";
+/* Class = "UITabBarItem"; title = "ACCOUNT"; ObjectID = "svN-eY-gfg"; */
+"svN-eY-gfg.title" = "CUENTA";

@@ -76,7 +76,7 @@ class OnboardingViewDataSource : NSObject, UIPageViewControllerDataSource, Onboa
             return result.first!
         }
         
-        let viewController:OnboardingContentViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier(OnboardingContentViewController.identifier) as! OnboardingContentViewController
+        let viewController:OnboardingContentViewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewControllerWithIdentifier(OnboardingContentViewController.identifier) as! OnboardingContentViewController
         viewController.viewModel = viewModel
         viewController.delegate = self
         views.append(viewController)
