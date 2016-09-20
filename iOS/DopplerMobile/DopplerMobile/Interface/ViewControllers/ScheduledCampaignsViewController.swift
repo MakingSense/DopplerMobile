@@ -26,6 +26,17 @@ class ScheduledCampaignsViewController: UIViewController, UITableViewDelegate, D
         self.scheduledCampaignViewModel = ScheduledCampaignViewModel(campaignsService: CampaignsService(), contentDelegate: self)
     }
     
+    // MARK: - Segues
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if let selectedCellIndex = self.tblScheduledCampaigns.indexPathForSelectedRow
+        {
+            let campaignItem = self.dataSource!.items[selectedCellIndex.row]
+            let basicInformationViewController = segue.destinationViewController as! BasicInformationViewController
+            basicInformationViewController.campaignItem = campaignItem
+        }
+    }
+    
     func updateContent(content: AnyObject) {
         dataSource?.items = content as! [CampaignViewModel]
         tblScheduledCampaigns.reloadData()

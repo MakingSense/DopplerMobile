@@ -19,8 +19,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Yi-hF-mh5" userLabel="Header View">
-                                <rect key="frame" x="0.0" y="64" width="600" height="90"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Yi-hF-mh5" userLabel="Header View">
+                                <rect key="frame" x="0.0" y="20" width="600" height="90"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LATEST SENT CAMPAIGNS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MmG-iu-qL8">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
@@ -38,11 +38,11 @@
                                     <constraint firstItem="MmG-iu-qL8" firstAttribute="centerY" secondItem="9Yi-hF-mh5" secondAttribute="centerY" id="tub-f9-XO9"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zcO-GH-ig5" userLabel="List View">
-                                <rect key="frame" x="0.0" y="154" width="600" height="397"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zcO-GH-ig5" userLabel="List View">
+                                <rect key="frame" x="0.0" y="110" width="600" height="490"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kSw-vE-nZx" userLabel="SentCampaignsTable">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="397"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kSw-vE-nZx" userLabel="SentCampaignsTable">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="490"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SentCampaignsCell" id="vuY-ik-hxB" userLabel="SentCampaignsCell" customClass="SentCampaignsTableViewCell" customModule="DopplerMobile" customModuleProvider="target">
@@ -141,8 +141,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AAa-oW-csj">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AAa-oW-csj">
+                                <rect key="frame" x="0.0" y="-44" width="600" height="1044"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ImO-wV-9pz">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="1064"/>
@@ -615,7 +615,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="uNP-xT-Wu0">
-                        <barButtonItem key="rightBarButtonItem" title="Preview" id="0fy-pL-JgS">
+                        <barButtonItem key="rightBarButtonItem" image="Preview" id="0fy-pL-JgS">
                             <connections>
                                 <segue destination="FXG-Jo-aeV" kind="show" id="ZQr-SI-1HU"/>
                             </connections>
@@ -643,7 +643,7 @@
         <!--Campaign Preview View Controller-->
         <scene sceneID="PnT-RA-w2M">
             <objects>
-                <viewController id="FXG-Jo-aeV" customClass="CampaignPreviewViewController" customModule="DopplerMobile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CampaignPreviewViewController" id="FXG-Jo-aeV" customClass="CampaignPreviewViewController" customModule="DopplerMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8do-BU-OmG"/>
                         <viewControllerLayoutGuide type="bottom" id="ZwD-JK-nug"/>
@@ -685,5 +685,6 @@
     <resources>
         <image name="Metrics-Summary" width="20" height="25"/>
         <image name="Metrics-Summary-Disabled" width="20" height="25"/>
+        <image name="Preview" width="25" height="18"/>
     </resources>
 </document>

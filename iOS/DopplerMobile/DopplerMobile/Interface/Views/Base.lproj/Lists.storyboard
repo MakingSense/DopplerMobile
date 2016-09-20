@@ -19,14 +19,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LVd-QX-v4R">
-                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LVd-QX-v4R">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="Qjh-st-Oj6"/>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fSe-3I-5B9" userLabel="Header View">
-                                <rect key="frame" x="0.0" y="64" width="600" height="90"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fSe-3I-5B9" userLabel="Header View">
+                                <rect key="frame" x="0.0" y="20" width="600" height="90"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR LISTS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izB-yB-hGd">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
@@ -44,11 +44,11 @@
                                     <constraint firstItem="izB-yB-hGd" firstAttribute="height" secondItem="fSe-3I-5B9" secondAttribute="height" id="sCZ-F7-QrQ"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mPX-P1-FYb" userLabel="List View">
-                                <rect key="frame" x="0.0" y="154" width="600" height="397"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mPX-P1-FYb" userLabel="List View">
+                                <rect key="frame" x="0.0" y="110" width="600" height="490"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="web-8z-hi4" userLabel="ListsTable">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="397"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="web-8z-hi4" userLabel="ListsTable">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="490"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListsCell" id="wtE-DW-DVY" userLabel="ListCell" customClass="ListsTableViewCell" customModule="DopplerMobile" customModuleProvider="target">
@@ -147,8 +147,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="voO-q3-m1e" userLabel="Header View">
-                                <rect key="frame" x="0.0" y="64" width="600" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="voO-q3-m1e" userLabel="Header View">
+                                <rect key="frame" x="0.0" y="20" width="600" height="50"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cP4-8b-G1A" userLabel="Container">
                                         <rect key="frame" x="30" y="8" width="540" height="35"/>
@@ -187,11 +187,11 @@
                                     <constraint firstItem="cP4-8b-G1A" firstAttribute="centerY" secondItem="voO-q3-m1e" secondAttribute="centerY" id="hBO-iP-Knl"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W8O-0t-dAq" userLabel="List View">
-                                <rect key="frame" x="0.0" y="114" width="600" height="437"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8O-0t-dAq" userLabel="List View">
+                                <rect key="frame" x="0.0" y="70" width="600" height="530"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rfd-HN-U1R" userLabel="SuscribersListTable">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="437"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rfd-HN-U1R" userLabel="SuscribersListTable">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="530"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SuscribersCell" id="etI-YU-JXX" userLabel="SuscribersListCell" customClass="SuscribersTableViewCell" customModule="DopplerMobile" customModuleProvider="target">

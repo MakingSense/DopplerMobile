@@ -32,7 +32,7 @@ class ReportViewController: UIViewController, UITableViewDelegate
     {
         super.viewDidLoad()
         self.navigationItem.title = "REPORTS_TEXT".localized
-        self.dataSource = DeliveryRateReportDataSource(viewModel: reportItem!)
+        self.dataSource = DeliveryRateReportDataSource(items: reportItem?.deliveryRateIndicators!)
         tblIndicators.dataSource = self.dataSource
         tblIndicators.delegate = self
         self.configureView()

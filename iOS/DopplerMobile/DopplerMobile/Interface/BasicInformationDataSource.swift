@@ -1,14 +1,14 @@
 //
-//  DeliveryRateReportDataSource.swift
+//  BasicInformationDataSource.swift
 //  DopplerMobile
 //
-//  Created by Mauro Maldini on 16/8/16.
+//  Created by Mauro Maldini on 20/9/16.
 //  Copyright © 2016 Making Sense. All rights reserved.
 //
 
 import UIKit
 
-class DeliveryRateReportDataSource: NSObject, UITableViewDataSource
+class BasicInformationDataSource: NSObject, UITableViewDataSource
 {
     // MARK: Properties
     var items: [ListItem]?
@@ -24,7 +24,7 @@ class DeliveryRateReportDataSource: NSObject, UITableViewDataSource
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier(DeliveryRateReportTableViewCell.identifier)! as! DeliveryRateReportTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(BasicInformationTableViewCell.identifier)! as! BasicInformationTableViewCell
         cell.configure(items?[indexPath.row])
         return cell
     }
