@@ -8,17 +8,15 @@
 
 import UIKit
 
-class GenericArrayDataSource<CellType: UIView, ItemType>: NSObject, UITableViewDataSource, UICollectionViewDataSource
+class GenericArrayDataSource<CellType: TableViewCellProtocol, ItemType>: NSObject, UITableViewDataSource, UICollectionViewDataSource
 {
     var items: [ItemType]
     var cellReuseIdentifier: String
-    var configureClosure: (CellType, ItemType) -> Void
     
-    init(items: [ItemType], cellReuseIdentifier: String, configureClosure: (CellType, ItemType) -> Void)
+    init(items: [ItemType], cellReuseIdentifier: String)
     {
         self.items = items
         self.cellReuseIdentifier = cellReuseIdentifier
-        self.configureClosure = configureClosure
         super.init()
     }
     
@@ -30,7 +28,7 @@ class GenericArrayDataSource<CellType: UIView, ItemType>: NSObject, UITableViewD
     func configureCell(cell: CellType, atIndexPath indexPath:NSIndexPath)
     {
         let item = itemAtIndexPath(indexPath)
-        self.configureClosure(cell, item)
+        cell.configure(item)
     }
     
     // MARK: UITableViewDataSource
