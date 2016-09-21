@@ -14,9 +14,6 @@ class LoginViewController: UIViewController, NavigationDelegate
     fileprivate var loginViewModel: LoginViewModel!
     @IBOutlet fileprivate weak var txtUsername: UITextField!
     @IBOutlet fileprivate weak var txtPassword: UITextField!
-    @IBOutlet fileprivate weak var lblUsernameLine: UILabel!
-    @IBOutlet fileprivate weak var lblPasswordLine: UILabel!
-    @IBOutlet fileprivate weak var lblErrorMessage: UILabel!
     @IBOutlet fileprivate weak var btnLogin: MSButton!
     
     // MARK: Actions
@@ -31,16 +28,12 @@ class LoginViewController: UIViewController, NavigationDelegate
     @IBAction func txtUsernameEditingChanged(_ sender: UITextField)
     {
         loginViewModel.username = sender.text!
-        lblUsernameLine.backgroundColor = UIColor.lightGray
-        lblErrorMessage.text = ""
     }
     
     //MARK: Password Input's Actions
     @IBAction func txtPasswordEditingChanged(_ sender: UITextField)
     {
         loginViewModel.password = sender.text!
-        lblPasswordLine.backgroundColor = UIColor.lightGray
-        lblErrorMessage.text = ""
     }
     
     //MARK: Forgot Password Button's Actions

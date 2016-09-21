@@ -10,10 +10,14 @@ import Foundation
 
 open class OnboardingContentViewModel
 {
-    var content : String = ""    
+    var title : String = ""
+    var subtitle : String = ""
+    var imageName : String = ""
     
-    init(content: String)
+    init(title: String, subtitle: String, imageName: String)
     {
-        self.content = content
+        self.title = title
+        self.subtitle = subtitle
+        self.imageName = imageName
     }
 }

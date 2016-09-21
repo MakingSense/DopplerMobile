@@ -18,9 +18,9 @@ class OnboardingViewDataSource : NSObject, UIPageViewControllerDataSource, Onboa
     init(pager : UIPageViewController)
     {
         self.pager = pager
-        self.models = [OnboardingContentViewModel(content: "ONBOARDING_TEST_ONE".localized),
-                       OnboardingContentViewModel(content: "ONBOARDING_TEST_TWO".localized),
-                       OnboardingContentViewModel(content: "ONBOARDING_TEST_THREE".localized)]
+        self.models = [OnboardingContentViewModel(title: "ONBOARDING_ONE_TITLE".localized, subtitle: "ONBOARDING_ONE_SUBTITLE".localized, imageName: "Onboarding-1"),
+                       OnboardingContentViewModel(title: "ONBOARDING_TWO_TITLE".localized, subtitle: "ONBOARDING_TWO_SUBTITLE".localized, imageName: "Onboarding-2"),
+                       OnboardingContentViewModel(title: "ONBOARDING_THREE_TITLE".localized, subtitle: "ONBOARDING_THREE_SUBTITLE".localized, imageName: "Onboarding-3")]
         
         self.views = []
     }
@@ -70,7 +70,7 @@ class OnboardingViewDataSource : NSObject, UIPageViewControllerDataSource, Onboa
     fileprivate func getViewControllerFromViewModel(_ viewModel: OnboardingContentViewModel) -> UIViewController
     {
         //TODO: Change content here for something more meaningful
-        let result = views.filter { ($0 as! OnboardingContentViewController).viewModel?.content == viewModel.content }
+        let result = views.filter { ($0 as! OnboardingContentViewController).viewModel?.title == viewModel.title }
         if result.first != nil
         {
             return result.first!
@@ -80,6 +80,7 @@ class OnboardingViewDataSource : NSObject, UIPageViewControllerDataSource, Onboa
         viewController.viewModel = viewModel
         viewController.delegate = self
         views.append(viewController)
+        
         return viewController
     }
 }

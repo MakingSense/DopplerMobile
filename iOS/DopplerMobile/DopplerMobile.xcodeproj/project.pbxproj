@@ -82,6 +82,17 @@
 		2BF3074E1D6E305C0062DF3C /* DMApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF3074D1D6E305C0062DF3C /* DMApiManager.swift */; };
 		2BF875191D7A135F009AA744 /* ListsViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF875181D7A135F009AA744 /* ListsViewDataSource.swift */; };
 		2BF8751D1D7A1475009AA744 /* ListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF8751C1D7A1475009AA744 /* ListsViewController.swift */; };
+		75FE333D1D993DDD0005EA66 /* ProximaNova-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75FE33321D993DDD0005EA66 /* ProximaNova-Black.otf */; };
+		75FE333E1D993DDD0005EA66 /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75FE33331D993DDD0005EA66 /* ProximaNova-Bold.otf */; };
+		75FE333F1D993DDD0005EA66 /* ProximaNova-BoldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75FE33341D993DDD0005EA66 /* ProximaNova-BoldIt.otf */; };
+		75FE33401D993DDD0005EA66 /* ProximaNova-Extrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75FE33351D993DDD0005EA66 /* ProximaNova-Extrabold.otf */; };
+		75FE33411D993DDD0005EA66 /* ProximaNova-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75FE33361D993DDD0005EA66 /* ProximaNova-Light.otf */; };
+		75FE33421D993DDD0005EA66 /* ProximaNova-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75FE33371D993DDD0005EA66 /* ProximaNova-LightItalic.otf */; };
+		75FE33431D993DDD0005EA66 /* ProximaNova-RegItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75FE33381D993DDD0005EA66 /* ProximaNova-RegItalic.otf */; };
+		75FE33441D993DDD0005EA66 /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75FE33391D993DDD0005EA66 /* ProximaNova-Regular.otf */; };
+		75FE33451D993DDD0005EA66 /* ProximaNova-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75FE333A1D993DDD0005EA66 /* ProximaNova-RegularItalic.otf */; };
+		75FE33461D993DDD0005EA66 /* ProximaNova-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75FE333B1D993DDD0005EA66 /* ProximaNova-Semibold.otf */; };
+		75FE33471D993DDD0005EA66 /* ProximaNova-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75FE333C1D993DDD0005EA66 /* ProximaNova-SemiboldItalic.otf */; };
 		8E8E0BBA725E2DE6920565ED /* Pods_DopplerMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22BD6683C59FA5BC17AC2004 /* Pods_DopplerMobileTests.framework */; };
 		9C48461C1D3FBB81003032D5 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0339E71D3EBB45006EDBD1 /* StringExtension.swift */; };
 		9C48461D1D3FBBC0003032D5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F0339E01D3EBAE1006EDBD1 /* Localizable.strings */; };
@@ -195,6 +206,17 @@
 		2BF875181D7A135F009AA744 /* ListsViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListsViewDataSource.swift; sourceTree = "<group>"; };
 		2BF8751C1D7A1475009AA744 /* ListsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListsViewController.swift; sourceTree = "<group>"; };
 		53491CD01247828DC971FAE1 /* Pods-DopplerMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DopplerMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DopplerMobile/Pods-DopplerMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		75FE33321D993DDD0005EA66 /* ProximaNova-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Black.otf"; path = "Resources/Fonts/ProximaNova-Black.otf"; sourceTree = "<group>"; };
+		75FE33331D993DDD0005EA66 /* ProximaNova-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Bold.otf"; path = "Resources/Fonts/ProximaNova-Bold.otf"; sourceTree = "<group>"; };
+		75FE33341D993DDD0005EA66 /* ProximaNova-BoldIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-BoldIt.otf"; path = "Resources/Fonts/ProximaNova-BoldIt.otf"; sourceTree = "<group>"; };
+		75FE33351D993DDD0005EA66 /* ProximaNova-Extrabold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Extrabold.otf"; path = "Resources/Fonts/ProximaNova-Extrabold.otf"; sourceTree = "<group>"; };
+		75FE33361D993DDD0005EA66 /* ProximaNova-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Light.otf"; path = "Resources/Fonts/ProximaNova-Light.otf"; sourceTree = "<group>"; };
+		75FE33371D993DDD0005EA66 /* ProximaNova-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-LightItalic.otf"; path = "Resources/Fonts/ProximaNova-LightItalic.otf"; sourceTree = "<group>"; };
+		75FE33381D993DDD0005EA66 /* ProximaNova-RegItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-RegItalic.otf"; path = "Resources/Fonts/ProximaNova-RegItalic.otf"; sourceTree = "<group>"; };
+		75FE33391D993DDD0005EA66 /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Regular.otf"; path = "Resources/Fonts/ProximaNova-Regular.otf"; sourceTree = "<group>"; };
+		75FE333A1D993DDD0005EA66 /* ProximaNova-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-RegularItalic.otf"; path = "Resources/Fonts/ProximaNova-RegularItalic.otf"; sourceTree = "<group>"; };
+		75FE333B1D993DDD0005EA66 /* ProximaNova-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Semibold.otf"; path = "Resources/Fonts/ProximaNova-Semibold.otf"; sourceTree = "<group>"; };
+		75FE333C1D993DDD0005EA66 /* ProximaNova-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-SemiboldItalic.otf"; path = "Resources/Fonts/ProximaNova-SemiboldItalic.otf"; sourceTree = "<group>"; };
 		7D6B49FAF9348221A232A5F9 /* Pods-DopplerMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DopplerMobileTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DopplerMobileTests/Pods-DopplerMobileTests.release.xcconfig"; sourceTree = "<group>"; };
 		7E32302789483FCD3F9F1E58 /* Pods-DopplerMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DopplerMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-DopplerMobile/Pods-DopplerMobile.release.xcconfig"; sourceTree = "<group>"; };
 		9C5AA89B1D395F4E002021CC /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -253,6 +275,33 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		1F5E74B71D944E200061BBA7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1F5E74B81D944E270061BBA7 /* Fonts */,
+				1F0339DF1D3EBAE1006EDBD1 /* Content */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1F5E74B81D944E270061BBA7 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				75FE33321D993DDD0005EA66 /* ProximaNova-Black.otf */,
+				75FE33331D993DDD0005EA66 /* ProximaNova-Bold.otf */,
+				75FE33341D993DDD0005EA66 /* ProximaNova-BoldIt.otf */,
+				75FE33351D993DDD0005EA66 /* ProximaNova-Extrabold.otf */,
+				75FE33361D993DDD0005EA66 /* ProximaNova-Light.otf */,
+				75FE33371D993DDD0005EA66 /* ProximaNova-LightItalic.otf */,
+				75FE33381D993DDD0005EA66 /* ProximaNova-RegItalic.otf */,
+				75FE33391D993DDD0005EA66 /* ProximaNova-Regular.otf */,
+				75FE333A1D993DDD0005EA66 /* ProximaNova-RegularItalic.otf */,
+				75FE333B1D993DDD0005EA66 /* ProximaNova-Semibold.otf */,
+				75FE333C1D993DDD0005EA66 /* ProximaNova-SemiboldItalic.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		241198661D1B134100330D87 /* DopplerMobile */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,10 +318,10 @@
 		241198671D1B134100330D87 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				1F5E74B71D944E200061BBA7 /* Resources */,
 				2B4C32161D70AD110076DF3B /* RestLayer */,
 				2BD83BAE1D42741C00A5C527 /* Enums */,
 				1F0339E61D3EBB2A006EDBD1 /* Extensions */,
-				1F0339DF1D3EBAE1006EDBD1 /* Content */,
 				241198691D1B134100330D87 /* ViewModels */,
 			);
 			path = Application;
@@ -610,13 +659,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C5AA8A01D3963F5002021CC /* Localizable.strings in Resources */,
+				75FE33431D993DDD0005EA66 /* ProximaNova-RegItalic.otf in Resources */,
+				75FE33421D993DDD0005EA66 /* ProximaNova-LightItalic.otf in Resources */,
 				9C48461D1D3FBBC0003032D5 /* Localizable.strings in Resources */,
+				75FE33411D993DDD0005EA66 /* ProximaNova-Light.otf in Resources */,
 				2B7CBD3F1D906ECE00B55CD2 /* Account.storyboard in Resources */,
+				75FE33401D993DDD0005EA66 /* ProximaNova-Extrabold.otf in Resources */,
+				75FE333D1D993DDD0005EA66 /* ProximaNova-Black.otf in Resources */,
 				2B7CBD261D906B1200B55CD2 /* Login.storyboard in Resources */,
 				2411987C1D1B134100330D87 /* LaunchScreen.storyboard in Resources */,
+				75FE33451D993DDD0005EA66 /* ProximaNova-RegularItalic.otf in Resources */,
 				2B7CBD351D906D9A00B55CD2 /* Scheduled.storyboard in Resources */,
 				2B7CBD301D906C6400B55CD2 /* Reports.storyboard in Resources */,
 				2B7CBD3A1D906E4E00B55CD2 /* Lists.storyboard in Resources */,
+				75FE33461D993DDD0005EA66 /* ProximaNova-Semibold.otf in Resources */,
+				75FE333F1D993DDD0005EA66 /* ProximaNova-BoldIt.otf in Resources */,
+				75FE33471D993DDD0005EA66 /* ProximaNova-SemiboldItalic.otf in Resources */,
+				75FE333E1D993DDD0005EA66 /* ProximaNova-Bold.otf in Resources */,
+				75FE33441D993DDD0005EA66 /* ProximaNova-Regular.otf in Resources */,
 				2411987B1D1B134100330D87 /* Assets.xcassets in Resources */,
 				2411987D1D1B134100330D87 /* Main.storyboard in Resources */,
 			);

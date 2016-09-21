@@ -10,6 +10,13 @@
 "ONBOARDING_TEST_ONE" = "One";
 "ONBOARDING_TEST_TWO" = "Two";
 "ONBOARDING_TEST_THREE" = "Three";
+"ONBOARDING_ONE_TITLE" = "Hi, {username}";
+"ONBOARDING_ONE_SUBTITLE" = "We made Doppler App to save your time! You’ll be able to manage your campaigns using your phone.";
+"ONBOARDING_TWO_TITLE" = "Plan your campaign";
+"ONBOARDING_TWO_SUBTITLE" = "You’ll find all the necessary tools to keep the track of your campaign... Find out where they are.";
+"ONBOARDING_THREE_TITLE" = "You have the tools!";
+"ONBOARDING_THREE_SUBTITLE" = "";
+
 
 //SENT_CAMPAIGNS SECTION
 "SENT_CAMPAIGNS_OPENED_TEXT" = "OPENED";

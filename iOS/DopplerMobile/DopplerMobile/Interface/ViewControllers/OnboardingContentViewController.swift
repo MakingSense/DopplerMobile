@@ -14,6 +14,10 @@ class OnboardingContentViewController: UIViewController
     
     //MARK: Properties
     @IBOutlet fileprivate weak var txtContent: UILabel!
+    @IBOutlet weak var imgContent: UIImageView!
+    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var lblSubTitle: UILabel!
+    
     var viewModel : OnboardingContentViewModel?
     weak var delegate: OnboardingContentViewControllerDelegate?
     
@@ -21,7 +25,9 @@ class OnboardingContentViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        txtContent.text = self.viewModel!.content
+        lblTitle.text = self.viewModel!.title
+        lblSubTitle.text = self.viewModel?.subtitle
+        imgContent.image = getImageFromName(name: self.viewModel!.imageName)
     }
     
     @IBAction func SkipButtonTouched(_ sender: UIButton)
@@ -32,5 +38,10 @@ class OnboardingContentViewController: UIViewController
     @IBAction func NextButtonTouched(_ sender: UIButton)
     {
         delegate?.nextTouched()
+    }
+    
+    func getImageFromName(name: String) -> UIImage
+    {
+        return UIImage.init(named: name)!
     }
 }
