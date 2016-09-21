@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-public class Field: MSResponseJSONObjectSerializable{
+open class Field: MSResponseJSONObjectSerializable{
     var name : String!
     var value : String!
     var predefined : Bool!

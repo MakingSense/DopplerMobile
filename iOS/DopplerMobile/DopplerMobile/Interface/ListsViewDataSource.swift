@@ -13,15 +13,15 @@ class ListsViewDataSource: NSObject, UITableViewDataSource
     // MARK: Properties
     var items = [ListDetailViewModel]()
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return self.items.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier(ListsTableViewCell.identifier)! as! ListsTableViewCell
-        cell.configure(self.items[indexPath.row])
+        let cell = tableView.dequeueReusableCell(withIdentifier: ListsTableViewCell.identifier)! as! ListsTableViewCell
+        cell.configure(self.items[(indexPath as NSIndexPath).row])
         return cell
     }
 }

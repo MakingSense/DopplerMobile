@@ -11,7 +11,7 @@ import UIKit
 class ListsViewController: UIViewController, UITableViewDelegate, DataSourceContentDelegate
 {
     // MARK: Properties
-    @IBOutlet private weak var tblLists: UITableView!
+    @IBOutlet fileprivate weak var tblLists: UITableView!
     var dataSource : ListsViewDataSource?
     var listViewModel: ListViewModel!
     
@@ -25,17 +25,17 @@ class ListsViewController: UIViewController, UITableViewDelegate, DataSourceCont
     }
     
     // MARK: - Segues
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if let selectedCellIndex = self.tblLists.indexPathForSelectedRow
         {
-            let suscribersList = self.dataSource!.items[selectedCellIndex.row]
-            let suscribersViewController = segue.destinationViewController as! SuscribersViewController
+            let suscribersList = self.dataSource!.items[(selectedCellIndex as NSIndexPath).row]
+            let suscribersViewController = segue.destination as! SuscribersViewController
             suscribersViewController.listItem = suscribersList
         }
     }
     
-    func updateContent(content: AnyObject) {
+    func updateContent(_ content: AnyObject) {
         dataSource?.items = content as! [ListDetailViewModel]
         tblLists.reloadData()
     }

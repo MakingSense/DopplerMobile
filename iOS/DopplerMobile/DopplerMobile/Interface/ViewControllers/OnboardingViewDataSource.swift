@@ -10,10 +10,10 @@ import UIKit
 
 class OnboardingViewDataSource : NSObject, UIPageViewControllerDataSource, OnboardingContentViewControllerDelegate, NavigationDelegate
 {
-    private var models : [OnboardingContentViewModel]
-    private var views : [UIViewController]
-    private var currentIndex : Int = 0
-    private var pager : UIPageViewController
+    fileprivate var models : [OnboardingContentViewModel]
+    fileprivate var views : [UIViewController]
+    fileprivate var currentIndex : Int = 0
+    fileprivate var pager : UIPageViewController
     
     init(pager : UIPageViewController)
     {
@@ -31,24 +31,24 @@ class OnboardingViewDataSource : NSObject, UIPageViewControllerDataSource, Onboa
     }
     
     // MARK: UIPageViewControllerDataSource
-    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController?
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController?
     {
-        self.currentIndex = views.indexOf(viewController)!
+        self.currentIndex = views.index(of: viewController)!
         return currentIndex == 0 ? nil : getViewControllerFromViewModel(self.models[currentIndex - 1])
     }
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController?
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController?
     {
-        self.currentIndex = views.indexOf(viewController)!
+        self.currentIndex = views.index(of: viewController)!
         return currentIndex == self.models.count - 1 ? nil : getViewControllerFromViewModel(self.models[currentIndex + 1])
     }
     
     // MARK: OnboardingContentViewControllerDelegate
     func nextTouched()
     {
-        if let next = pageViewController(pager,viewControllerAfterViewController: self.views[currentIndex])
+        if let next = pageViewController(pager,viewControllerAfter: self.views[currentIndex])
         {
-            self.pager.setViewControllers([next], direction: .Forward, animated: true, completion: nil)
+            self.pager.setViewControllers([next], direction: .forward, animated: true, completion: nil)
             self.currentIndex += 1
         }
         else
@@ -63,11 +63,11 @@ class OnboardingViewDataSource : NSObject, UIPageViewControllerDataSource, Onboa
     }
     
     //TODO: Is it the best place to call the callbacks? just to be consistent.
-    func showViewModel(identifier: SegueIdentifier) {
-        self.pager.performSegueWithIdentifier(SegueIdentifier.DashboardScreenSegue.rawValue, sender : self)
+    func showViewModel(_ identifier: SegueIdentifier) {
+        self.pager.performSegue(withIdentifier: SegueIdentifier.DashboardScreenSegue.rawValue, sender : self)
     }
     
-    private func getViewControllerFromViewModel(viewModel: OnboardingContentViewModel) -> UIViewController
+    fileprivate func getViewControllerFromViewModel(_ viewModel: OnboardingContentViewModel) -> UIViewController
     {
         //TODO: Change content here for something more meaningful
         let result = views.filter { ($0 as! OnboardingContentViewController).viewModel?.content == viewModel.content }
@@ -76,7 +76,7 @@ class OnboardingViewDataSource : NSObject, UIPageViewControllerDataSource, Onboa
             return result.first!
         }
         
-        let viewController:OnboardingContentViewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewControllerWithIdentifier(OnboardingContentViewController.identifier) as! OnboardingContentViewController
+        let viewController:OnboardingContentViewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: OnboardingContentViewController.identifier) as! OnboardingContentViewController
         viewController.viewModel = viewModel
         viewController.delegate = self
         views.append(viewController)

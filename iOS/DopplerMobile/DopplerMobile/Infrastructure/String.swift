@@ -18,11 +18,11 @@ extension String : StringType
         }
     }
     
-    func toNSDateWithFormat(format: String) -> NSDate?
+    func toNSDateWithFormat(_ format: String) -> Date?
     {
-        let dateFormatter = NSDateFormatter()
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format
-        let date = dateFormatter.dateFromString(self)
+        let date = dateFormatter.date(from: self)
         return date
     }
 }

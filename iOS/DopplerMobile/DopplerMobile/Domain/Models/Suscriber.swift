@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-public class Suscriber: MSResponseJSONObjectSerializable
+open class Suscriber: MSResponseJSONObjectSerializable
 {
     var email: String!
     var fields: [Field]?
@@ -24,7 +24,7 @@ public class Suscriber: MSResponseJSONObjectSerializable
     //Fields data
     var name: String?
     var lastname: String?
-    var birthDate: NSDate?
+    var birthDate: Date?
     var country: String?
     var gender: String?
     
@@ -41,7 +41,7 @@ public class Suscriber: MSResponseJSONObjectSerializable
         }
     }
     
-    private func getInformationFromFields()
+    fileprivate func getInformationFromFields()
     {
         if(fields != nil)
         {

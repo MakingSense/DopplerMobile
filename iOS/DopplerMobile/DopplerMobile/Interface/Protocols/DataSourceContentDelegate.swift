@@ -10,5 +10,5 @@ import Foundation
 
 protocol DataSourceContentDelegate: class
 {
-    func updateContent(content: AnyObject)
+    func updateContent(_ content: AnyObject)
 }

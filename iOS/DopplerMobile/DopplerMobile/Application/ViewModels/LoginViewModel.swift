@@ -8,43 +8,43 @@
 
 import Foundation
 
-public class LoginViewModel
+open class LoginViewModel
 {
-    public var username: String = ""
+    open var username: String = ""
     {
         didSet { loginCommand.raiseCanExecuteChanged() }
     }
     
-    public var password: String = ""
+    open var password: String = ""
     {
         didSet { loginCommand.raiseCanExecuteChanged() }
     }
     
-    public var loginCommand: Command!
+    open var loginCommand: Command!
     
-    private var loginService: LoginService
-    private var navigationDelegate: NavigationDelegate?
+    fileprivate var loginService: LoginService
+    fileprivate var navigationDelegate: NavigationDelegate?
     
     init(loginService: LoginService, nagivationDelegate: NavigationDelegate)
     {
         self.navigationDelegate = nagivationDelegate
         self.loginService = loginService
         self.loginCommand = SimpleCommand(execute: loginCommandExecute, canExecute: loginCommandCanExecute)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewModel.OnNotificationArrived(_:)), name:NotificationIdentifier.LoginNotification.rawValue, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewModel.OnNotificationArrived(_:)), name:NSNotification.Name(rawValue: NotificationIdentifier.LoginNotification.rawValue), object: nil)
     }
     
     //MARK: Commands
-    private func loginCommandExecute()
+    fileprivate func loginCommandExecute()
     {
         loginService.login(self.username, password: self.password)
     }
     
-    private func loginCommandCanExecute() -> Bool
+    fileprivate func loginCommandCanExecute() -> Bool
     {
         return !self.username.isEmpty && !self.password.isEmpty
     }
     
-    @objc func OnNotificationArrived(notification: NSNotification){
+    @objc func OnNotificationArrived(_ notification: Notification){
         if(notification.object == nil)
         {
             navigationDelegate?.showViewModel(SegueIdentifier.LoggedInScreenSegue)
@@ -57,6 +57,6 @@ public class LoginViewModel
     
     deinit
     {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
 }

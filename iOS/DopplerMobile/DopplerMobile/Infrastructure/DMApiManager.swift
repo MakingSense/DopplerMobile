@@ -15,66 +15,65 @@ class DMApiManager: DMApiManagerProtocol
     static let sharedInstance = DMApiManager()
     
     //Login User Call.
-    func loginUser(username: String, password: String, completionHandler: (Result<User, NSError>) -> Void)
+    func loginUser(_ username: String, password: String, completionHandler: @escaping (Result<User>) -> Void)
     {
         //TODO: Remove this hardcoded information. Real account information in production environment.
-        let parameters : [String: AnyObject] = [
+        let parameters : Parameters = [
             "grant_type": "password",
             "username" : "nreal+freetest1@makingsense.com",
             "password": "1qaz2wsx"]
         
-        Alamofire.request(DMApplicationRouter.GetToken(parameters))
+        Alamofire.request(DMApplicationRouter.getToken(parameters: parameters))
             .responseObject
-            { (response: Response<User, NSError>) in
+            { (response: DataResponse<User>) in
                 completionHandler(response.result)
-            }
+        }
     }
     
     //Get Last Sent Campaigns Call.
-    func getCampaigns(status: CampaignStatus, completionHandler: (Result<[Campaign], NSError>) -> Void)
+    func getCampaigns(_ status: CampaignStatus, completionHandler: @escaping (Result<[Campaign]>) -> Void)
     {
-        let parameters : [String: AnyObject] = [
+        let parameters : Parameters = [
             "state": status.name]
-        Alamofire.request(DMApplicationRouter.GetCampaigns(Defaults[.username]!, parameters))
+        Alamofire.request(DMApplicationRouter.getCampaigns(username: Defaults[.username]!, parameters: parameters))
             .responseArray
-            { (response: Response<[Campaign], NSError>) in
+            { (response: DataResponse<[Campaign]>) in
                 completionHandler(response.result)
-            }
+        }
     }
     
     //Get Campaign Preview Call.
-    func getCampaignPreview(campaignId: Int, completionHandler: (NSURL?, NSError?) -> Void)
+    func getCampaignPreview(_ campaignId: Int, completionHandler: @escaping (URL?) -> Void)
     {
-        Alamofire.request(DMApplicationRouter.GetCampaignPreview(Defaults[.username]!, campaignId))
-            .response
-            { (request, response, data, error) in
-                guard let response = response else
+        Alamofire.request(DMApplicationRouter.getCampaignPreview(username: Defaults[.username]!, campaignId: campaignId))
+            .response { response in // method defaults to `.post`
+                guard response.error == nil else
                 {
-                    completionHandler(nil, nil)
+                    completionHandler(nil)
                     return
                 }
-                let URL = response.URL
-                completionHandler(URL, nil)
-            }
+                let URL = response.response?.url
+                completionHandler(URL)
+        }
     }
     
     //Get Suscribers Lists Call.
-    func getSuscribersLists(completionHandler: (Result<[List], NSError>) -> Void)
+    func getSuscribersLists(_ completionHandler: @escaping (Result<[List]>) -> Void)
     {
-        Alamofire.request(DMApplicationRouter.GetSuscribersLists(Defaults[.username]!))
+        Alamofire.request(DMApplicationRouter.getSuscribersLists(username: Defaults[.username]!))
             .responseArray
-            {(response: Response<[List], NSError>) in
+            {(response: DataResponse<[List]>) in
                 completionHandler(response.result)
-            }
+        }
     }
     
     //Get Suscribers Call.
-    func getSuscribers(listId: Int, completionHandler: (Result<[Suscriber], NSError>) -> Void)
+    func getSuscribers(_ listId: Int, completionHandler: @escaping (Result<[Suscriber]>) -> Void)
     {
-        Alamofire.request(DMApplicationRouter.GetSuscribers(Defaults[.username]!, listId))
+        Alamofire.request(DMApplicationRouter.getSuscribers(username: Defaults[.username]!, listId: listId))
             .responseArray
-            {(response: Response<[Suscriber], NSError>) in
+            {(response: DataResponse<[Suscriber]>) in
                 completionHandler(response.result)
-            }
+        }
     }
 }

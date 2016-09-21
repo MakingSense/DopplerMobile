@@ -11,6 +11,9 @@ import Alamofire
 
 protocol DMApiManagerProtocol: class
 {
-    func loginUser(username: String, password: String, completionHandler:(Result<User, NSError>) -> Void)
-    func getCampaigns(status: CampaignStatus, completionHandler: (Result<[Campaign], NSError>) -> Void)
+    func loginUser(_ username: String, password: String, completionHandler: @escaping (Result<User>) -> Void)
+    func getCampaigns(_ status: CampaignStatus, completionHandler: @escaping (Result<[Campaign]>) -> Void)
+    func getCampaignPreview(_ campaignId: Int, completionHandler: @escaping (URL?) -> Void)
+    func getSuscribersLists(_ completionHandler: @escaping (Result<[List]>) -> Void)
+    func getSuscribers(_ listId: Int, completionHandler: @escaping (Result<[Suscriber]>) -> Void)
 }

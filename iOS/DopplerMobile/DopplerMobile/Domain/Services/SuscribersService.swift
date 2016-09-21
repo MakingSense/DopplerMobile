@@ -9,42 +9,42 @@
 import Foundation
 import Alamofire
 
-public class SuscribersService
+open class SuscribersService
 {
-    func downloadSuscribersLists(notification: String)
+    func downloadSuscribersLists(_ notification: String)
     {
-        let completionHandler: (Result<[List], NSError>) -> Void =
+        let completionHandler: (Result<[List]>) -> Void =
             { result in
                 guard result.error == nil else
                 {
-                    NSNotificationCenter.defaultCenter().postNotificationName(notification, object: String(result.error))
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: notification), object: String(describing: result.error))
                     return
                 }
                 guard let campaigns = result.value else
                 {
-                    NSNotificationCenter.defaultCenter().postNotificationName(notification, object: "Error getting suscribers lists data.")
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: notification), object: "Error getting suscribers lists data.")
                     return
                 }
-                NSNotificationCenter.defaultCenter().postNotificationName(notification, object: campaigns)
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: notification), object: campaigns)
         }
         DMApiManager.sharedInstance.getSuscribersLists(completionHandler)
     }
     
-    func downloadSuscribers(listId: Int, notification: String)
+    func downloadSuscribers(_ listId: Int, notification: String)
     {
-        let completionHandler: (Result<[Suscriber], NSError>) -> Void =
+        let completionHandler: (Result<[Suscriber]>) -> Void =
             { result in
                 guard result.error == nil else
                 {
-                    NSNotificationCenter.defaultCenter().postNotificationName(notification, object: String(result.error))
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: notification), object: String(describing: result.error))
                     return
                 }
                 guard let campaigns = result.value else
                 {
-                    NSNotificationCenter.defaultCenter().postNotificationName(notification, object: "Error getting suscribers data.")
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: notification), object: "Error getting suscribers data.")
                     return
                 }
-                NSNotificationCenter.defaultCenter().postNotificationName(notification, object: campaigns)
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: notification), object: campaigns)
         }
         DMApiManager.sharedInstance.getSuscribers(listId, completionHandler: completionHandler)
     }

@@ -76,9 +76,9 @@
 		2BD83BB01D42762200A5C527 /* SegueIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD83BAF1D42762200A5C527 /* SegueIdentifier.swift */; };
 		2BDD10E31D918A6500E5ABF7 /* BasicInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDD10E21D918A6500E5ABF7 /* BasicInformationViewController.swift */; };
 		2BDD10E51D918B7800E5ABF7 /* BasicInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDD10E41D918B7800E5ABF7 /* BasicInformationTableViewCell.swift */; };
+		2BEB2A651D9348DC009F87F9 /* MSSerializationErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB2A641D9348DC009F87F9 /* MSSerializationErrorCode.swift */; };
 		2BF307441D6E26B20062DF3C /* MSResponseJSONObjectSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF307431D6E26B20062DF3C /* MSResponseJSONObjectSerializable.swift */; };
 		2BF307481D6E2B740062DF3C /* MSAlamofireRequest+JSONSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF307471D6E2B740062DF3C /* MSAlamofireRequest+JSONSerializable.swift */; };
-		2BF3074A1D6E2BCB0062DF3C /* MSSerializationErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF307491D6E2BCB0062DF3C /* MSSerializationErrorCode.swift */; };
 		2BF3074E1D6E305C0062DF3C /* DMApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF3074D1D6E305C0062DF3C /* DMApiManager.swift */; };
 		2BF875191D7A135F009AA744 /* ListsViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF875181D7A135F009AA744 /* ListsViewDataSource.swift */; };
 		2BF8751D1D7A1475009AA744 /* ListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF8751C1D7A1475009AA744 /* ListsViewController.swift */; };
@@ -188,9 +188,9 @@
 		2BD83BAF1D42762200A5C527 /* SegueIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueIdentifier.swift; sourceTree = "<group>"; };
 		2BDD10E21D918A6500E5ABF7 /* BasicInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicInformationViewController.swift; sourceTree = "<group>"; };
 		2BDD10E41D918B7800E5ABF7 /* BasicInformationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicInformationTableViewCell.swift; sourceTree = "<group>"; };
+		2BEB2A641D9348DC009F87F9 /* MSSerializationErrorCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MSSerializationErrorCode.swift; path = ../Application/MSSerializationErrorCode.swift; sourceTree = "<group>"; };
 		2BF307431D6E26B20062DF3C /* MSResponseJSONObjectSerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSResponseJSONObjectSerializable.swift; sourceTree = "<group>"; };
 		2BF307471D6E2B740062DF3C /* MSAlamofireRequest+JSONSerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MSAlamofireRequest+JSONSerializable.swift"; sourceTree = "<group>"; };
-		2BF307491D6E2BCB0062DF3C /* MSSerializationErrorCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSSerializationErrorCode.swift; sourceTree = "<group>"; };
 		2BF3074D1D6E305C0062DF3C /* DMApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DMApiManager.swift; path = ../Infrastructure/DMApiManager.swift; sourceTree = "<group>"; };
 		2BF875181D7A135F009AA744 /* ListsViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListsViewDataSource.swift; sourceTree = "<group>"; };
 		2BF8751C1D7A1475009AA744 /* ListsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListsViewController.swift; sourceTree = "<group>"; };
@@ -490,9 +490,9 @@
 		2BF307421D6E26990062DF3C /* RestLayer */ = {
 			isa = PBXGroup;
 			children = (
+				2BEB2A641D9348DC009F87F9 /* MSSerializationErrorCode.swift */,
 				2BF307431D6E26B20062DF3C /* MSResponseJSONObjectSerializable.swift */,
 				2BF307471D6E2B740062DF3C /* MSAlamofireRequest+JSONSerializable.swift */,
-				2BF307491D6E2BCB0062DF3C /* MSSerializationErrorCode.swift */,
 				2B4DCA0E1D6FBB150078D51B /* MSHttpStatusEnum.swift */,
 			);
 			name = RestLayer;
@@ -575,9 +575,11 @@
 					2425145B1C7E45CD00785AE6 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = KPBE96QS22;
+						LastSwiftMigration = 0800;
 					};
 					2425146F1C7E45CD00785AE6 = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 						TestTargetID = 2425145B1C7E45CD00785AE6;
 					};
 				};
@@ -736,6 +738,7 @@
 				2411987A1D1B134100330D87 /* LoginViewController.swift in Sources */,
 				2B8AD6691D6F5213007FFD05 /* DMApplicationRouter.swift in Sources */,
 				9CB9DEFA1D1B1E1100DAED48 /* OnboardingContentViewController.swift in Sources */,
+				2BEB2A651D9348DC009F87F9 /* MSSerializationErrorCode.swift in Sources */,
 				2B4C32151D70ABD50076DF3B /* DMApiManagerProtocol.swift in Sources */,
 				1FDB0BDB1D23038B007544C3 /* OnboardingContentViewModel.swift in Sources */,
 				241198781D1B134100330D87 /* AppDelegate.swift in Sources */,
@@ -752,7 +755,6 @@
 				2BD4FD9C1D636EBA00E7E13C /* DeliveryRateReportTableViewCell.swift in Sources */,
 				2B46862F1D81AC1D00B03D4F /* SuscribersViewDataSource.swift in Sources */,
 				24FD44A91D244E12003E35A4 /* Command.swift in Sources */,
-				2BF3074A1D6E2BCB0062DF3C /* MSSerializationErrorCode.swift in Sources */,
 				249ECB6E1D3D56B300F18E74 /* SentCampaignsViewController.swift in Sources */,
 				2B7EF6501D4B2AE6008D4CDD /* CampaignsService.swift in Sources */,
 				2B057FDA1D7A2F410021F748 /* ListViewModel.swift in Sources */,
@@ -998,6 +1000,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.makingsense.DopplerMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1012,6 +1015,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.makingsense.DopplerMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1024,6 +1028,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.makingsense.DopplerMobileTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DopplerMobile.app/DopplerMobile";
 			};
 			name = Debug;
@@ -1037,6 +1042,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.makingsense.DopplerMobileTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DopplerMobile.app/DopplerMobile";
 			};
 			name = Release;

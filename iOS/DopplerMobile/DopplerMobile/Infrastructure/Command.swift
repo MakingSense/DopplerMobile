@@ -9,7 +9,7 @@ import Foundation
 
 public protocol CommandDelegate
 {
-    func canExecuteChanged(canExecute: Bool)
+    func canExecuteChanged(_ canExecute: Bool)
 }
 
 public protocol Command

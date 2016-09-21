@@ -8,11 +8,11 @@
 
 import Foundation
 
-public class SuscriberViewModel
+open class SuscriberViewModel
 {
-    public private(set) var email : String
-    public private(set) var name: String?
-    public private(set) var lastname: String?
+    open fileprivate(set) var email : String
+    open fileprivate(set) var name: String?
+    open fileprivate(set) var lastname: String?
     
     init(suscriber: Suscriber)
     {

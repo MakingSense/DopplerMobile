@@ -16,7 +16,7 @@ class BasicInformationTableViewCell : UITableViewCell
     static let identifier = "BasicInformationCell"
     
     // MARK: Actions
-    func configure(item: ListItem?)
+    func configure(_ item: ListItem?)
     {
         self.lblFieldName.text = item?.name
         self.lblFieldValue.text = item?.value!

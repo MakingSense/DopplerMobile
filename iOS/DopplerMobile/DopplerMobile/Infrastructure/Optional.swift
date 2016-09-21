@@ -12,6 +12,6 @@ extension Optional where Wrapped: StringType
 {
     var isNullOrEmpty: Bool
     {
-        return self?.isEmpty ?? true; false
+        return self?.isEmpty ?? true;
     }
 }

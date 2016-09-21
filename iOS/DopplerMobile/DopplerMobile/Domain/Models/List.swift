@@ -9,14 +9,14 @@
 import Foundation
 import SwiftyJSON
 
-public class List: MSResponseJSONObjectSerializable
+open class List: MSResponseJSONObjectSerializable
 {
     var listId : Int?
     var name : String!
     var currentStatus : String?
     var subscribersCount : Int?
-    var creationDate : NSDate?
-    var deletedDate : NSDate?
+    var creationDate : Date?
+    var deletedDate : Date?
     var hasScheduledCampaigns : Bool?
     var hasFormsAssociated : Bool?
     var hasSegmentsAssociated : Bool?

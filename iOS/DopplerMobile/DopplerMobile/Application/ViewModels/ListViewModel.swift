@@ -8,20 +8,20 @@
 
 import Foundation
 
-public class ListViewModel
+open class ListViewModel
 {
-    private var suscribersService: SuscribersService
-    private var contentDelegate: DataSourceContentDelegate?
+    fileprivate var suscribersService: SuscribersService
+    fileprivate var contentDelegate: DataSourceContentDelegate?
     
     init(suscribersService: SuscribersService, contentDelegate: DataSourceContentDelegate)
     {
         self.contentDelegate = contentDelegate
         self.suscribersService = suscribersService
         self.suscribersService.downloadSuscribersLists(NotificationIdentifier.ListsNotification.rawValue)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ListViewModel.OnNotificationArrived(_:)), name:NotificationIdentifier.ListsNotification.rawValue, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ListViewModel.OnNotificationArrived(_:)), name:NSNotification.Name(rawValue: NotificationIdentifier.ListsNotification.rawValue), object: nil)
     }
     
-    @objc func OnNotificationArrived(notification: NSNotification){
+    @objc func OnNotificationArrived(_ notification: Notification){
         if(notification.object != nil)
         {
             var listsDetail = [ListDetailViewModel]()
@@ -29,7 +29,7 @@ public class ListViewModel
             for list in lists {
                 listsDetail.append(ListDetailViewModel(list: list))
             }
-            contentDelegate?.updateContent(listsDetail)
+            contentDelegate?.updateContent(listsDetail as AnyObject)
         }
         else
         {
@@ -39,6 +39,6 @@ public class ListViewModel
     
     deinit
     {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
 }

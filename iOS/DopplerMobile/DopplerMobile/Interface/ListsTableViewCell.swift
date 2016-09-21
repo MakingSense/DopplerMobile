@@ -9,13 +9,13 @@ import UIKit
 
 class ListsTableViewCell : UITableViewCell
 {
-    @IBOutlet private weak var lblSuscribersCount: UILabel!
-    @IBOutlet private weak var lblListCreationDate: UILabel!
-    @IBOutlet private weak var lblListName: UILabel!
+    @IBOutlet fileprivate weak var lblSuscribersCount: UILabel!
+    @IBOutlet fileprivate weak var lblListCreationDate: UILabel!
+    @IBOutlet fileprivate weak var lblListName: UILabel!
     static let identifier = "ListsCell"
     
     // MARK: Actions
-    func configure(listDetailViewModel: ListDetailViewModel)
+    func configure(_ listDetailViewModel: ListDetailViewModel)
     {
         self.lblListName.text = listDetailViewModel.name
         self.lblListCreationDate.text = listDetailViewModel.creationDate?.toStringWithFormat(DateFormatEnum.yyyy_MM_dd.pattern)

@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class MSButton: UIButton, CommandDelegate
+open class MSButton: UIButton, CommandDelegate
 {
     var command : Command?
         {
@@ -16,20 +16,20 @@ public class MSButton: UIButton, CommandDelegate
         {
             if (self.command != nil)
             {
-                self.enabled = self.command!.canExecute()
+                self.isEnabled = self.command!.canExecute()
                 self.command!.delegate = self
             }
         }
     }
     
-    override public func touchesBegan(touches: Set<UITouch>?, withEvent event: UIEvent?)
+    override open func touchesBegan(_ touches: Set<UITouch>?, with event: UIEvent?)
     {
         self.command!.execute()
-        super.touchesBegan(touches!, withEvent:event)
+        super.touchesBegan(touches!, with:event)
     }
     
-    public func canExecuteChanged(canExecute: Bool)
+    open func canExecuteChanged(_ canExecute: Bool)
     {
-        self.enabled = canExecute
+        self.isEnabled = canExecute
     }
 }

@@ -10,13 +10,13 @@ import UIKit
 
 class OnboardingViewController: UIPageViewController
 {
-    private var onboardingDataSource : OnboardingViewDataSource?
+    fileprivate var onboardingDataSource : OnboardingViewDataSource?
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
         self.onboardingDataSource = OnboardingViewDataSource(pager: self)
         self.dataSource = self.onboardingDataSource
-        setViewControllers([self.onboardingDataSource!.initialViewController()], direction: .Forward, animated: true, completion: nil)
+        setViewControllers([self.onboardingDataSource!.initialViewController()], direction: .forward, animated: true, completion: nil)
     }
 }

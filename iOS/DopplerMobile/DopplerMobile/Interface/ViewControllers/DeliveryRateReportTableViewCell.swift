@@ -11,12 +11,12 @@ import UIKit
 class DeliveryRateReportTableViewCell : UITableViewCell
 {
     // MARK: Properties
-    @IBOutlet private weak var lblCounterName: UILabel!
-    @IBOutlet private weak var lblCounterValue: UILabel!
+    @IBOutlet fileprivate weak var lblCounterName: UILabel!
+    @IBOutlet fileprivate weak var lblCounterValue: UILabel!
     static let identifier = "DeliveryRateReportCell"
     
     // MARK: Actions
-    func configure(item: ListItem?)
+    func configure(_ item: ListItem?)
     {
         self.lblCounterName.text = item?.name
         self.lblCounterValue.text = item?.value!

@@ -9,11 +9,11 @@
 import Foundation
 import SwiftyJSON
 
-public class Campaign: MSResponseJSONObjectSerializable
+open class Campaign: MSResponseJSONObjectSerializable
 {
     var campaignId: Int?
     var recipientsRequired: Bool?
-    var scheduledDate: NSDate?
+    var scheduledDate: Date?
     var contentRequired: Bool?
     var name: String!
     var fromName: String!
@@ -47,7 +47,7 @@ public class Campaign: MSResponseJSONObjectSerializable
     }
     
     //TODO: Validate if this method will be used in the app.
-    public func dictionaryRepresentation() -> NSDictionary
+    open func dictionaryRepresentation() -> NSDictionary
     {
         //TODO: Remove magical strings.
         let dictionary = NSMutableDictionary()
@@ -69,7 +69,7 @@ public class Campaign: MSResponseJSONObjectSerializable
      - returns: Array of Campaigns Instances.
      */
     //TODO: Validate if this method will be used in the app.
-    public class func modelsFromDictionaryArray(array: NSArray) -> [Campaign]
+    open class func modelsFromDictionaryArray(_ array: NSArray) -> [Campaign]
     {
         var models:[Campaign] = []
         for item in array

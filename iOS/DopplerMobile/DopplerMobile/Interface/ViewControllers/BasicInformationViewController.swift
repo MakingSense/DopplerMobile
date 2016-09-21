@@ -25,7 +25,7 @@ class BasicInformationViewController: UIViewController, UITableViewDelegate
         self.navigationItem.title = "SCHEDULED_CAMPAIGNS_TEXT".localized
     }
     
-    override func viewWillAppear(animated: Bool)
+    override func viewWillAppear(_ animated: Bool)
     {
         self.dataSource = BasicInformationDataSource(items: campaignItem?.campaignBasicInformation!)
         self.tblBasicInformation.dataSource = self.dataSource
@@ -36,9 +36,9 @@ class BasicInformationViewController: UIViewController, UITableViewDelegate
     }
     
     // MARK: - Segues
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        let campaignPreviewViewController = segue.destinationViewController as! CampaignPreviewViewController
+        let campaignPreviewViewController = segue.destination as! CampaignPreviewViewController
         campaignPreviewViewController.campaignId = campaignItem!.campaignId
     }
 }

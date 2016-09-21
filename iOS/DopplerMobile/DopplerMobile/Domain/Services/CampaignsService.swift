@@ -9,42 +9,42 @@
 import Foundation
 import Alamofire
 
-public class CampaignsService
+open class CampaignsService
 {
-    func downloadCampaigns(status: CampaignStatus, notification: String)
+    func downloadCampaigns(_ status: CampaignStatus, notification: String)
     {
-        let completionHandler: (Result<[Campaign], NSError>) -> Void =
+        let completionHandler: (Result<[Campaign]>) -> Void =
             { result in
                 guard result.error == nil else
                 {
-                    NSNotificationCenter.defaultCenter().postNotificationName(notification, object: String(result.error))
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: notification), object: String(describing: result.error))
                     return
                 }
                 guard let campaigns = result.value else
                 {
-                    NSNotificationCenter.defaultCenter().postNotificationName(notification, object: "Error getting campaigns data.")
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: notification), object: "Error getting campaigns data.")
                     return
                 }
-                NSNotificationCenter.defaultCenter().postNotificationName(notification, object: campaigns)
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: notification), object: campaigns)
         }
         DMApiManager.sharedInstance.getCampaigns(status, completionHandler: completionHandler)
     }
     
-    func downloadCampaignPreview(campaignId: Int, notification: String)
+    func downloadCampaignPreview(_ campaignId: Int, notification: String)
     {
-        let completionHandler: (NSURL?, NSError?) -> Void =
+        let completionHandler: (URL?) -> Void =
             { result in
-                guard result.1 == nil else
+                guard result != nil else
                 {
-                    NSNotificationCenter.defaultCenter().postNotificationName(notification, object: String(result.1))
+                    NotificationCenter.default.post(name: Notification.Name(rawValue: notification), object: String(describing: "Error getting campaign preview data."))
                     return
                 }
-                guard let preview = result.0 else
+                guard let preview = result else
                 {
-                    NSNotificationCenter.defaultCenter().postNotificationName(notification, object: "Error getting campaign preview data.")
+                    NotificationCenter.default.post(name: Notification.Name(rawValue: notification), object: "Error getting campaign preview data.")
                     return
                 }
-                NSNotificationCenter.defaultCenter().postNotificationName(notification, object: preview)
+                NotificationCenter.default.post(name: Notification.Name(rawValue: notification), object: preview)
         }
         DMApiManager.sharedInstance.getCampaignPreview(campaignId, completionHandler: completionHandler)
     }

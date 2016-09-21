@@ -16,7 +16,7 @@ class SuscribersTableViewCell : UITableViewCell
     static let identifier = "SuscribersCell"
     
     // MARK: Actions
-    func configure(suscriberViewModel: SuscriberViewModel)
+    func configure(_ suscriberViewModel: SuscriberViewModel)
     {
         self.lblSuscriberEmail.text = suscriberViewModel.email
         self.lblSuscriberName.text = "\(suscriberViewModel.name!) \(suscriberViewModel.lastname!)"

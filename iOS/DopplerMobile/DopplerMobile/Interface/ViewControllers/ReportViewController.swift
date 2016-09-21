@@ -11,15 +11,15 @@ import UIKit
 class ReportViewController: UIViewController, UITableViewDelegate
 {
     // MARK: Properties
-    @IBOutlet private weak var lblCampaignSubject: UILabel!
-    @IBOutlet private weak var lblCampaignName: UILabel!
-    @IBOutlet private weak var lblCampaignSuscribers: UILabel!
-    @IBOutlet private weak var lblCampaignSentDate: UILabel!
-    @IBOutlet private weak var lblOpenPercentage: UILabel!
-    @IBOutlet private weak var lblUnopenPercentage: UILabel!
-    @IBOutlet private weak var lblBouncesPercentage: UILabel!
-    @IBOutlet private weak var lblRatePercentage: UILabel!
-    @IBOutlet private weak var tblIndicators: UITableView!
+    @IBOutlet fileprivate weak var lblCampaignSubject: UILabel!
+    @IBOutlet fileprivate weak var lblCampaignName: UILabel!
+    @IBOutlet fileprivate weak var lblCampaignSuscribers: UILabel!
+    @IBOutlet fileprivate weak var lblCampaignSentDate: UILabel!
+    @IBOutlet fileprivate weak var lblOpenPercentage: UILabel!
+    @IBOutlet fileprivate weak var lblUnopenPercentage: UILabel!
+    @IBOutlet fileprivate weak var lblBouncesPercentage: UILabel!
+    @IBOutlet fileprivate weak var lblRatePercentage: UILabel!
+    @IBOutlet fileprivate weak var tblIndicators: UITableView!
     
     var reportItem: CampaignViewModel?
     {
@@ -54,9 +54,9 @@ class ReportViewController: UIViewController, UITableViewDelegate
     }
     
     // MARK: - Segues
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-            let campaignPreviewViewController = segue.destinationViewController as! CampaignPreviewViewController
+            let campaignPreviewViewController = segue.destination as! CampaignPreviewViewController
             campaignPreviewViewController.campaignId = reportItem!.campaignId
     }
 }

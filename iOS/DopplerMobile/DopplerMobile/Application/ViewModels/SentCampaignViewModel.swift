@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class SentCampaignViewModel: CampaignListViewModel
+open class SentCampaignViewModel: CampaignListViewModel
 {
     init(campaignsService: CampaignsService, contentDelegate: DataSourceContentDelegate)
     {
@@ -16,11 +16,11 @@ public class SentCampaignViewModel: CampaignListViewModel
         self.campaignsService = campaignsService
         self.contentDelegate = contentDelegate
         self.campaignsService.downloadCampaigns(CampaignStatus.shipped, notification: NotificationIdentifier.SentCampaignsNotification.rawValue)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(CampaignListViewModel.OnNotificationArrived(_:)), name:NotificationIdentifier.SentCampaignsNotification.rawValue, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(CampaignListViewModel.OnNotificationArrived(_:)), name:NSNotification.Name(rawValue: NotificationIdentifier.SentCampaignsNotification.rawValue), object: nil)
     }
     
     deinit
     {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
 }

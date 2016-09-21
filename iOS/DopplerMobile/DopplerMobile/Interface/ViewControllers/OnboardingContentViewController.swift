@@ -13,7 +13,7 @@ class OnboardingContentViewController: UIViewController
     static let identifier = "OnboardingContentViewController"
     
     //MARK: Properties
-    @IBOutlet private weak var txtContent: UILabel!
+    @IBOutlet fileprivate weak var txtContent: UILabel!
     var viewModel : OnboardingContentViewModel?
     weak var delegate: OnboardingContentViewControllerDelegate?
     
@@ -24,12 +24,12 @@ class OnboardingContentViewController: UIViewController
         txtContent.text = self.viewModel!.content
     }
     
-    @IBAction func SkipButtonTouched(sender: UIButton)
+    @IBAction func SkipButtonTouched(_ sender: UIButton)
     {
         delegate?.skipTouched()
     }
     
-    @IBAction func NextButtonTouched(sender: UIButton)
+    @IBAction func NextButtonTouched(_ sender: UIButton)
     {
         delegate?.nextTouched()
     }

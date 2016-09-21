@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class OnboardingContentViewModel
+open class OnboardingContentViewModel
 {
     var content : String = ""    
     

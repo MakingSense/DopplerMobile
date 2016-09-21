@@ -10,96 +10,80 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-extension Alamofire.Request
+extension Alamofire.DataRequest
 {
-    public func responseObject<T: MSResponseJSONObjectSerializable>(completionHandler:
-        Response<T, NSError> -> Void) -> Self
+    public func responseObject<T: MSResponseJSONObjectSerializable>(_ completionHandler:
+        @escaping (DataResponse<T>) -> Void) -> Self
     {
-        let serializer = ResponseSerializer<T, NSError>
+        let serializer = DataResponseSerializer<T>
             { request, response, data, error in
                 guard error == nil else
                 {
-                    return .Failure(error!)
+                    return .failure(MSSerializationErrorCode.jsonSerialization(error: error!))
                 }
-                guard let responseData = data else
+                guard data != nil else
                 {
-                    let failureReason = "Object can't be serialized because input data is nil."
-                    let userInfo = [NSLocalizedFailureReasonErrorKey: failureReason]
-                    let error = NSError(domain: MSSerializationErrorCode.Domain, code: MSSerializationErrorCode.Code.JSONSerializationFailed.rawValue, userInfo: userInfo)
-                    return .Failure(error)
+                    return .failure(MSSerializationErrorCode.jsonSerialization(error: "Object can't be serialized because input data is nil." as! Error))
                 }
                 
-                let JSONResponseSerializer = Request.JSONResponseSerializer(options: .AllowFragments)
-                let result = JSONResponseSerializer.serializeResponse(request, response,
-                    responseData, error)
-                switch result
-                {
-                case .Failure(let error):
-                    return .Failure(error)
-                case .Success(let value):
-                    let json = SwiftyJSON.JSON(value)
-                    // check for "message" errors in the JSON
-                    if let errorMessage = json["title"].string
-                    {
-                        let userInfo = [NSLocalizedFailureReasonErrorKey: errorMessage]
-                        let error = NSError(domain: MSSerializationErrorCode.Domain, code: MSSerializationErrorCode.Code.JSONSerializationFailed.rawValue, userInfo: userInfo)
-                        return .Failure(error)
-                    }
-                    guard let object = T(json: json) else
-                    {
-                        let failureReason = "JSON can't be serialized into response object: \(value)"
-                        let userInfo = [NSLocalizedFailureReasonErrorKey: failureReason]
-                        let error = NSError(domain: MSSerializationErrorCode.Domain, code: MSSerializationErrorCode.Code.JSONSerializationFailed.rawValue, userInfo: userInfo)
-                        return .Failure(error)
-                    }
-                    return .Success(object)
+                let jsonResponseSerializer = DataRequest.jsonResponseSerializer(options: .allowFragments)
+                let result = jsonResponseSerializer.serializeResponse(request, response, data, error)
+                
+                guard case let .success(value) = result else {
+                    return .failure(MSSerializationErrorCode.jsonSerialization(error: result.error!))
                 }
+                
+                let json = SwiftyJSON.JSON(value)
+                // check for "message" errors in the JSON
+                if let errorMessage = json["title"].string
+                {
+                    return .failure(MSSerializationErrorCode.jsonSerialization(error: errorMessage as! Error))
+                }
+                guard let object = T(json: json) else
+                {
+                    return .failure(MSSerializationErrorCode.jsonSerialization(error: "JSON can't be serialized into response object: \(value)" as! Error))
+                }
+                return .success(object)
         }
         return response(responseSerializer: serializer, completionHandler: completionHandler)
     }
     
+    
     public func responseArray<T: MSResponseJSONObjectSerializable>(
-        completionHandler: Response<[T], NSError> -> Void) -> Self
+        _ completionHandler: @escaping (DataResponse<[T]>) -> Void) -> Self
     {
-        let serializer = ResponseSerializer<[T], NSError>
+        let serializer = DataResponseSerializer<[T]>
             { request, response, data, error in
                 guard error == nil else
                 {
-                    return .Failure(error!)
+                    return .failure(MSSerializationErrorCode.jsonSerialization(error: error!))
                 }
-                guard let responseData = data else
+                guard data != nil else
                 {
-                    let failureReason = "Array can't be be serialized because input data is nil."
-                    let userInfo = [NSLocalizedFailureReasonErrorKey: failureReason]
-                    let error = NSError(domain: MSSerializationErrorCode.Domain, code: MSSerializationErrorCode.Code.JSONSerializationFailed.rawValue, userInfo: userInfo)
-                    return .Failure(error)
+                    return .failure(MSSerializationErrorCode.jsonSerialization(error: "Object can't be serialized because input data is nil." as! Error))
                 }
-                let JSONResponseSerializer = Request.JSONResponseSerializer(options: .AllowFragments)
-                let result = JSONResponseSerializer.serializeResponse(request, response,
-                    responseData, error)
-                switch result
+                
+                let jsonResponseSerializer = DataRequest.jsonResponseSerializer(options: .allowFragments)
+                let result = jsonResponseSerializer.serializeResponse(request, response, data, error)
+                
+                guard case let .success(value) = result else {
+                    return .failure(MSSerializationErrorCode.jsonSerialization(error: result.error!))
+                }
+                
+                let json = SwiftyJSON.JSON(value)
+                if let errorMessage = json["title"].string
                 {
-                case .Failure(let error):
-                    return .Failure(error)
-                case .Success(let value):
-                    let json = SwiftyJSON.JSON(value)
-                    // check for "message" errors in the JSON
-                    if let errorMessage = json["title"].string
-                    {
-                        let userInfo = [NSLocalizedFailureReasonErrorKey: errorMessage]
-                        let error = NSError(domain: MSSerializationErrorCode.Domain, code: MSSerializationErrorCode.Code.JSONSerializationFailed.rawValue, userInfo: userInfo)
-                        return .Failure(error)
-                    }
-                    var objects: [T] = []
-                    for (_, item) in json["items"]
-                    {
-                        if let object = T(json: item)
-                        {
-                            objects.append(object)
-                        }
-                    }
-                    return .Success(objects)
+                    return .failure(MSSerializationErrorCode.jsonSerialization(error: errorMessage as! Error))
                 }
+                var objects: [T] = []
+                for (_, item) in json["items"]
+                {
+                    if let object = T(json: item)
+                    {
+                        objects.append(object)
+                    }
+                }
+                return .success(objects)
         }
         return response(responseSerializer: serializer, completionHandler: completionHandler)
     }

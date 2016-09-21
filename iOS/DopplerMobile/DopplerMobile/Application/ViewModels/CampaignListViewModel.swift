@@ -8,12 +8,12 @@
 
 import Foundation
 
-public class CampaignListViewModel
+open class CampaignListViewModel
 {
     var contentDelegate: DataSourceContentDelegate?
     var campaignsService: CampaignsService!
     
-    @objc func OnNotificationArrived(notification: NSNotification)
+    @objc func OnNotificationArrived(_ notification: Notification)
     {
         if(notification.object != nil)
         {
@@ -22,7 +22,7 @@ public class CampaignListViewModel
             for campaign in campaigns {
                 sentCampaigns.append(CampaignViewModel(campaign: campaign))
             }
-            contentDelegate?.updateContent(sentCampaigns)
+            contentDelegate?.updateContent(sentCampaigns as AnyObject)
         }
         else
         {

@@ -26,7 +26,7 @@ class SuscribersViewController: UIViewController, UITableViewDelegate, DataSourc
         self.navigationItem.title = "LISTS_TEXT".localized
     }
     
-    override func viewWillAppear(animated: Bool)
+    override func viewWillAppear(_ animated: Bool)
     {
         self.suscribersListViewModel = SuscribersListViewModel(suscribersService: SuscribersService(), contentDelegate: self, listId: (listItem?.listId!)!)
         self.dataSource = SuscribersViewDataSource()
@@ -35,7 +35,7 @@ class SuscribersViewController: UIViewController, UITableViewDelegate, DataSourc
         self.lblListSuscribersCount.text = String((listItem?.subscribersCount)!)
     }
     
-    func updateContent(content: AnyObject) {
+    func updateContent(_ content: AnyObject) {
         dataSource?.items = content as! [SuscriberViewModel]
         tblSuscribers.reloadData()
     }

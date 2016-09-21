@@ -8,22 +8,22 @@
 
 import Foundation
 
-public class CampaignViewModel
+open class CampaignViewModel
 {
-    public private(set) var name : String
-    public private(set) var campaignId: Int?
-    public private(set) var sentDate: NSDate?
-    public private(set) var amountSentSubscribers: Int?
-    public private(set) var openedPercentage: Int?
-    public private(set) var unopenedPercentage: Int?
-    public private(set) var bouncesPercentage: Int?
-    public private(set) var ratePercentage: Int?
-    public private(set) var subject: String!
-    public private(set) var fromEmail: String!
-    public private(set) var fromName: String!
-    public private(set) var preheader: String?
-    public private(set) var deliveryRateIndicators: [ListItem]?
-    public private(set) var campaignBasicInformation: [ListItem]?
+    open fileprivate(set) var name : String
+    open fileprivate(set) var campaignId: Int?
+    open fileprivate(set) var sentDate: Date?
+    open fileprivate(set) var amountSentSubscribers: Int?
+    open fileprivate(set) var openedPercentage: Int?
+    open fileprivate(set) var unopenedPercentage: Int?
+    open fileprivate(set) var bouncesPercentage: Int?
+    open fileprivate(set) var ratePercentage: Int?
+    open fileprivate(set) var subject: String!
+    open fileprivate(set) var fromEmail: String!
+    open fileprivate(set) var fromName: String!
+    open fileprivate(set) var preheader: String?
+    open fileprivate(set) var deliveryRateIndicators: [ListItem]?
+    open fileprivate(set) var campaignBasicInformation: [ListItem]?
     
     init(campaign: Campaign)
     {
@@ -36,7 +36,7 @@ public class CampaignViewModel
         
         if(campaign.scheduledDate != nil)
         {
-            self.sentDate = campaign.scheduledDate
+            self.sentDate = campaign.scheduledDate as Date?
         }
         
         //TODO: check the way to calculate amountSentSubscribers, openedPercentage, bouncesPercentage and ratePercentage.

@@ -8,17 +8,17 @@
 
 import UIKit
 
-extension NSDate
+extension Date
 {
-    func toStringWithFormat(format: String) -> String {
-        let dateFormatter = NSDateFormatter()
+    func toStringWithFormat(_ format: String) -> String {
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format
-        return dateFormatter.stringFromDate(self)
+        return dateFormatter.string(from: self)
     }
     
-    func isGreaterThanDate(dateToCompare: NSDate) -> Bool {
+    func isGreaterThanDate(_ dateToCompare: Date) -> Bool {
         var isGreater = false
-        if self.compare(dateToCompare) == NSComparisonResult.OrderedDescending {
+        if self.compare(dateToCompare) == ComparisonResult.orderedDescending {
             isGreater = true
         }
         return isGreater

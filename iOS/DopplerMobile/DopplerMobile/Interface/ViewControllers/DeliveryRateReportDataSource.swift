@@ -17,15 +17,15 @@ class DeliveryRateReportDataSource: NSObject, UITableViewDataSource
         self.items = items;
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return (items?.count)!
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier(DeliveryRateReportTableViewCell.identifier)! as! DeliveryRateReportTableViewCell
-        cell.configure(items?[indexPath.row])
+        let cell = tableView.dequeueReusableCell(withIdentifier: DeliveryRateReportTableViewCell.identifier)! as! DeliveryRateReportTableViewCell
+        cell.configure(items?[(indexPath as NSIndexPath).row])
         return cell
     }
 }

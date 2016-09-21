@@ -6,36 +6,36 @@
 //  Copyright © 2016 Making Sense. All rights reserved.
 //
 
-public class SimpleCommand : Command
+open class SimpleCommand : Command
 {
-    public var delegate: CommandDelegate?
-    private var canExecuteMethod: () -> Bool
-    private var executeMethod: () -> ()
-    private var _canExecute: Bool
+    open var delegate: CommandDelegate?
+    fileprivate var canExecuteMethod: () -> Bool
+    fileprivate var executeMethod: () -> ()
+    fileprivate var _canExecute: Bool
     
-    init(execute: () -> (), canExecute: () -> Bool)
+    init(execute: @escaping () -> (), canExecute: @escaping () -> Bool)
     {
         self.executeMethod = execute;
         self.canExecuteMethod = canExecute;
         self._canExecute = self.canExecuteMethod()
     }
     
-    convenience init(execute: () -> ())
+    convenience init(execute: @escaping () -> ())
     {
         self.init(execute: execute, canExecute: { return true })
     }
     
-    public func canExecute() -> Bool
+    open func canExecute() -> Bool
     {
         return self._canExecute
     }
     
-    public func execute()
+    open func execute()
     {
         self.executeMethod()
     }
     
-    public func raiseCanExecuteChanged()
+    open func raiseCanExecuteChanged()
     {
         let canExecuteOld = self._canExecute
         self._canExecute = self.canExecuteMethod()

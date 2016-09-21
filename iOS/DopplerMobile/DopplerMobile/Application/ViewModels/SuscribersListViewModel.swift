@@ -8,20 +8,20 @@
 
 import Foundation
 
-public class SuscribersListViewModel
+open class SuscribersListViewModel
 {
-    private var suscribersService: SuscribersService
-    private var contentDelegate: DataSourceContentDelegate?
+    fileprivate var suscribersService: SuscribersService
+    fileprivate var contentDelegate: DataSourceContentDelegate?
     
     init(suscribersService: SuscribersService, contentDelegate: DataSourceContentDelegate, listId: Int)
     {
         self.contentDelegate = contentDelegate
         self.suscribersService = suscribersService
         self.suscribersService.downloadSuscribers(listId, notification: NotificationIdentifier.SuscribersNotification.rawValue)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(SuscribersListViewModel.OnNotificationArrived(_:)), name:NotificationIdentifier.SuscribersNotification.rawValue, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(SuscribersListViewModel.OnNotificationArrived(_:)), name:NSNotification.Name(rawValue: NotificationIdentifier.SuscribersNotification.rawValue), object: nil)
     }
     
-    @objc func OnNotificationArrived(notification: NSNotification)
+    @objc func OnNotificationArrived(_ notification: Notification)
     {
         if(notification.object != nil)
         {
@@ -30,7 +30,7 @@ public class SuscribersListViewModel
             for list in lists {
                 suscribers.append(SuscriberViewModel(suscriber: list))
             }
-            contentDelegate?.updateContent(suscribers)
+            contentDelegate?.updateContent(suscribers as AnyObject)
         }
         else
         {
@@ -40,7 +40,7 @@ public class SuscribersListViewModel
     
     deinit
     {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
     
 }

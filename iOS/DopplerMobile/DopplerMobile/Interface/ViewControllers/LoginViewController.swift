@@ -11,13 +11,13 @@ import UIKit
 class LoginViewController: UIViewController, NavigationDelegate
 {
     //MARK: Properties
-    private var loginViewModel: LoginViewModel!
-    @IBOutlet private weak var txtUsername: UITextField!
-    @IBOutlet private weak var txtPassword: UITextField!
-    @IBOutlet private weak var lblUsernameLine: UILabel!
-    @IBOutlet private weak var lblPasswordLine: UILabel!
-    @IBOutlet private weak var lblErrorMessage: UILabel!
-    @IBOutlet private weak var btnLogin: MSButton!
+    fileprivate var loginViewModel: LoginViewModel!
+    @IBOutlet fileprivate weak var txtUsername: UITextField!
+    @IBOutlet fileprivate weak var txtPassword: UITextField!
+    @IBOutlet fileprivate weak var lblUsernameLine: UILabel!
+    @IBOutlet fileprivate weak var lblPasswordLine: UILabel!
+    @IBOutlet fileprivate weak var lblErrorMessage: UILabel!
+    @IBOutlet fileprivate weak var btnLogin: MSButton!
     
     // MARK: Actions
     override func viewDidLoad()
@@ -28,32 +28,32 @@ class LoginViewController: UIViewController, NavigationDelegate
     }
     
     //MARK: Username Input's Actions
-    @IBAction func txtUsernameEditingChanged(sender: UITextField)
+    @IBAction func txtUsernameEditingChanged(_ sender: UITextField)
     {
         loginViewModel.username = sender.text!
-        lblUsernameLine.backgroundColor = UIColor.lightGrayColor()
+        lblUsernameLine.backgroundColor = UIColor.lightGray
         lblErrorMessage.text = ""
     }
     
     //MARK: Password Input's Actions
-    @IBAction func txtPasswordEditingChanged(sender: UITextField)
+    @IBAction func txtPasswordEditingChanged(_ sender: UITextField)
     {
         loginViewModel.password = sender.text!
-        lblPasswordLine.backgroundColor = UIColor.lightGrayColor()
+        lblPasswordLine.backgroundColor = UIColor.lightGray
         lblErrorMessage.text = ""
     }
     
     //MARK: Forgot Password Button's Actions
-    @IBAction func ForgotPassword(sender: UIButton)
+    @IBAction func ForgotPassword(_ sender: UIButton)
     {
         //TODO: pending implementation
-        UIApplication.sharedApplication().openURL(NSURL(string:"https://app2.fromdoppler.com/")!)
+        UIApplication.shared.openURL(URL(string:"https://app2.fromdoppler.com/")!)
     }
     
     //TODO: implement a generic way to navigate between view model
-    func showViewModel(identifier: SegueIdentifier)
+    func showViewModel(_ identifier: SegueIdentifier)
     {
-        performSegueWithIdentifier(identifier.rawValue, sender: self)
+        performSegue(withIdentifier: identifier.rawValue, sender: self)
     }
 }
 

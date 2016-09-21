@@ -8,18 +8,18 @@
 
 import Foundation
 
-public class ListDetailViewModel
+open class ListDetailViewModel
 {
-    public private(set) var listId : Int?
-    public private(set) var name : String!
-    public private(set) var creationDate: NSDate?
-    public private(set) var subscribersCount: Int!
+    open fileprivate(set) var listId : Int?
+    open fileprivate(set) var name : String!
+    open fileprivate(set) var creationDate: Date?
+    open fileprivate(set) var subscribersCount: Int!
     
     init(list: List)
     {
         self.name = list.name
         self.listId = list.listId
-        self.creationDate = list.creationDate
+        self.creationDate = list.creationDate as Date?
         self.subscribersCount = list.subscribersCount!
     }
 }

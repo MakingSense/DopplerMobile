@@ -14,14 +14,14 @@ class SentCampaignReport
     var successFullDeliveries: Int?
     var timesForwarded: Int?
     var totalTimesOpened: Int?
-    var lastOpenDate: NSDate?
+    var lastOpenDate: Date?
     var uniqueClicks: Int?
     var uniqueOpens: Int?
     var totalUnopened: Int?
     var totalHardBounces: Int?
     var totalSoftBounces: Int?
     var totalClicks: Int?
-    var lastClickDate: NSDate?
+    var lastClickDate: Date?
     var totalUnsubscribers: Int?
     
     init()

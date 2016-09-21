@@ -11,7 +11,7 @@ import UIKit
 class ScheduledCampaignsViewController: UIViewController, UITableViewDelegate, DataSourceContentDelegate
 {    
     // MARK: Properties
-    @IBOutlet private weak var tblScheduledCampaigns: UITableView!
+    @IBOutlet fileprivate weak var tblScheduledCampaigns: UITableView!
     var dataSource : ScheduledCampaignsViewDataSource?
     var scheduledCampaignViewModel: ScheduledCampaignViewModel!
     
@@ -27,17 +27,17 @@ class ScheduledCampaignsViewController: UIViewController, UITableViewDelegate, D
     }
     
     // MARK: - Segues
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if let selectedCellIndex = self.tblScheduledCampaigns.indexPathForSelectedRow
         {
-            let campaignItem = self.dataSource!.items[selectedCellIndex.row]
-            let basicInformationViewController = segue.destinationViewController as! BasicInformationViewController
+            let campaignItem = self.dataSource!.items[(selectedCellIndex as NSIndexPath).row]
+            let basicInformationViewController = segue.destination as! BasicInformationViewController
             basicInformationViewController.campaignItem = campaignItem
         }
     }
     
-    func updateContent(content: AnyObject) {
+    func updateContent(_ content: AnyObject) {
         dataSource?.items = content as! [CampaignViewModel]
         tblScheduledCampaigns.reloadData()
     }

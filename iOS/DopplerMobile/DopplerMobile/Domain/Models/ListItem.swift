@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class ListItem{
+open class ListItem{
     var name : String!
     var value : String?
     

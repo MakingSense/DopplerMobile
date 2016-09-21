@@ -11,36 +11,36 @@ import SwiftyUserDefaults
 
 class CampaignPreviewViewController: UIViewController, DataSourceContentDelegate
 {
-    @IBOutlet private weak var wvCampaignPreview: UIWebView!
+    @IBOutlet fileprivate weak var wvCampaignPreview: UIWebView!
     var campaignPreviewViewModel: CampaignPreviewViewModel!
     var campaignId: Int?
     
-    override func viewWillAppear(animated: Bool) {
-        self.navigationController!.toolbarHidden = false;
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController!.isToolbarHidden = false;
         self.navigationItem.title = "PREVIEW_TEXT".localized
         self.campaignPreviewViewModel = CampaignPreviewViewModel(campaignsService: CampaignsService(), contentDelegate: self, campaignId: campaignId!)
     }
     
     //TODO: remove this when reactive is implemented.
-    override func viewWillDisappear(animated: Bool) {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
-        self.navigationController!.toolbarHidden = true;
+    override func viewWillDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self)
+        self.navigationController!.isToolbarHidden = true;
     }
     
-    @IBAction func sharePreview(sender: AnyObject)
+    @IBAction func sharePreview(_ sender: AnyObject)
     {
         //TODO: Analize what information we want to share.
         let message = "Preview URL."
-        if let link = NSURL(string: "http://vp.dplract.com/00dc56c471939cca")
+        if let link = URL(string: "http://vp.dplract.com/00dc56c471939cca")
         {
-            let objectsToShare = [message,link]
+            let objectsToShare = [message,link] as [Any]
             let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
-            self.presentViewController(activityVC, animated: true, completion: nil)
+            self.present(activityVC, animated: true, completion: nil)
         }
     }
     
-    func updateContent(content: AnyObject) {
-        let requestObj = NSURLRequest(URL: content as! NSURL);
+    func updateContent(_ content: AnyObject) {
+        let requestObj = URLRequest(url: content as! URL);
         wvCampaignPreview.loadRequest(requestObj);
     }
 }
