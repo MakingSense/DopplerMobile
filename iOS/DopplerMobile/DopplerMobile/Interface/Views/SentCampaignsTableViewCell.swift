@@ -13,14 +13,29 @@ class SentCampaignsTableViewCell : UITableViewCell
     // MARK: Properties
     @IBOutlet fileprivate weak var lblCampaignName: UILabel!
     @IBOutlet fileprivate weak var lblSentDate: UILabel!
-    @IBOutlet fileprivate weak var lblStatistics: UILabel!
+    @IBOutlet weak var lblOpenPercentage: UILabel!
+    @IBOutlet weak var lblUnopenPercentage: UILabel!
+    @IBOutlet weak var lblBouncePercentage: UILabel!
+    
     static let identifier = "SentCampaignsCell"
     
     // MARK: Actions
     func configure(_ campaignViewModel: CampaignViewModel)
     {
         self.lblCampaignName.text = campaignViewModel.name
-        self.lblSentDate.text = campaignViewModel.sentDate?.toStringWithFormat(DateFormatEnum.yyyy_MM_dd.pattern)
-        self.lblStatistics.text =  "\(campaignViewModel.openedPercentage!)% \("SENT_CAMPAIGNS_OPENED_TEXT".localized)"
+        
+        let boldContent = " \(campaignViewModel.amountSentSubscribers!) \("REPORTS_SUBSCRIBERS".localized)"
+        let date = "\(campaignViewModel.sentDate!.toStringWithFormat(DateFormatEnum.yyyy_MM_dd.pattern)) \("REPORTS_TO".localized)"
+        
+        //TODO: Remove this, use Font Enum.
+        let fontName = "ProximaNova-Bold"
+        
+        let formattedString = NSMutableAttributedString()
+        formattedString.normal(text: date).bold(text: boldContent, fontName: fontName, fontSize: 14.0)
+        
+        self.lblSentDate.attributedText = formattedString
+        self.lblOpenPercentage.text =  "\(campaignViewModel.openedPercentage!)%"
+        self.lblUnopenPercentage.text = "\(campaignViewModel.unopenedPercentage!)%"
+        self.lblBouncePercentage.text = "\(campaignViewModel.bouncesPercentage!)%"
     }
 }

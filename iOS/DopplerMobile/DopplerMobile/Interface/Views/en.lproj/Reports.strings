@@ -15,13 +15,13 @@
 "D16-qd-YEu.text" = "UNOPEN";
 
 /* Class = "UILabel"; text = "UNOPEN"; ObjectID = "Kb5-LB-a6c"; */
-"Kb5-LB-a6c.text" = "NO ABIERTOS";
+"Kb5-LB-a6c.text" = "UNOPEN";
 
 /* Class = "UILabel"; text = "•"; ObjectID = "LHi-Hc-wf8"; */
 "LHi-Hc-wf8.text" = "•";
 
 /* Class = "UILabel"; text = "REPORTS"; ObjectID = "MmG-iu-qL8"; */
-"MmG-iu-qL8.text" = "REPORTES";
+"MmG-iu-qL8.text" = "REPORTS";
 
 /* Class = "UILabel"; text = "qweqwe"; ObjectID = "PK7-hl-5a8"; */
 "PK7-hl-5a8.text" = "qweqwe";
@@ -39,7 +39,7 @@
 "UXt-Z5-Suo.text" = "OPEN";
 
 /* Class = "UILabel"; text = "BOUNCE"; ObjectID = "Ylw-Pu-6HX"; */
-"Ylw-Pu-6HX.text" = "REBOTES";
+"Ylw-Pu-6HX.text" = "BOUNCE";
 
 /* Class = "UILabel"; text = "CLICK TROUGH RATE"; ObjectID = "dVp-7h-OlH"; */
 "dVp-7h-OlH.text" = "CLICK TROUGH RATE";
@@ -54,7 +54,7 @@
 "h8o-N3-VIw.segmentTitles[2]" = "Tercera Sección";
 
 /* Class = "UILabel"; text = "OPEN_LABEL_STATS"; ObjectID = "lvH-cE-vtR"; */
-"lvH-cE-vtR.text" = "APERTURAS";
+"lvH-cE-vtR.text" = "OPEN";
 
 /* Class = "UILabel"; text = "BOUNCES"; ObjectID = "uPA-Ng-l58"; */
 "uPA-Ng-l58.text" = "BOUNCES";

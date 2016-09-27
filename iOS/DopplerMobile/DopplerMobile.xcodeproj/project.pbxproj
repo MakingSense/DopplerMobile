@@ -87,6 +87,7 @@
 		2BF3074E1D6E305C0062DF3C /* DMApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF3074D1D6E305C0062DF3C /* DMApiManager.swift */; };
 		2BF875191D7A135F009AA744 /* ListsViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF875181D7A135F009AA744 /* ListsViewDataSource.swift */; };
 		2BF8751D1D7A1475009AA744 /* ListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF8751C1D7A1475009AA744 /* ListsViewController.swift */; };
+		752C34D31D9E93BD00159441 /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752C34D21D9E93BD00159441 /* NSMutableAttributedString.swift */; };
 		75FE333D1D993DDD0005EA66 /* ProximaNova-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75FE33321D993DDD0005EA66 /* ProximaNova-Black.otf */; };
 		75FE333E1D993DDD0005EA66 /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75FE33331D993DDD0005EA66 /* ProximaNova-Bold.otf */; };
 		75FE333F1D993DDD0005EA66 /* ProximaNova-BoldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75FE33341D993DDD0005EA66 /* ProximaNova-BoldIt.otf */; };
@@ -181,7 +182,8 @@
 		2B7CBD271D906B1200B55CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		2B7CBD2F1D906C2600B55CD2 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Login.strings"; sourceTree = "<group>"; };
 		2B7CBD331D906C6700B55CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Reports.storyboard; sourceTree = "<group>"; };
-		2B7CBD341D906C7E00B55CD2 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Reports.strings"; sourceTree = "<group>"; };
+		2B7CBD361D906D9A00B55CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Scheduled.storyboard; sourceTree = "<group>"; };
+		2B7CBD391D906D9C00B55CD2 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Scheduled.strings"; sourceTree = "<group>"; };
 		2B7CBD3B1D906E4E00B55CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Lists.storyboard; sourceTree = "<group>"; };
 		2B7CBD3E1D906E5000B55CD2 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Lists.strings"; sourceTree = "<group>"; };
 		2B7CBD401D906ECE00B55CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Account.storyboard; sourceTree = "<group>"; };
@@ -219,6 +221,8 @@
 		2BF875181D7A135F009AA744 /* ListsViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListsViewDataSource.swift; sourceTree = "<group>"; };
 		2BF8751C1D7A1475009AA744 /* ListsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListsViewController.swift; sourceTree = "<group>"; };
 		53491CD01247828DC971FAE1 /* Pods-DopplerMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DopplerMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DopplerMobile/Pods-DopplerMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		752C34D21D9E93BD00159441 /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
+		752C34DB1D9E9B7B00159441 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Reports.strings"; sourceTree = "<group>"; };
 		75FE33321D993DDD0005EA66 /* ProximaNova-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Black.otf"; path = "Resources/Fonts/ProximaNova-Black.otf"; sourceTree = "<group>"; };
 		75FE33331D993DDD0005EA66 /* ProximaNova-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Bold.otf"; path = "Resources/Fonts/ProximaNova-Bold.otf"; sourceTree = "<group>"; };
 		75FE33341D993DDD0005EA66 /* ProximaNova-BoldIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-BoldIt.otf"; path = "Resources/Fonts/ProximaNova-BoldIt.otf"; sourceTree = "<group>"; };
@@ -522,6 +526,7 @@
 				2B703F1C1D3D51D900A19E36 /* Optional.swift */,
 				2B703F1E1D3D521E00A19E36 /* StringType.swift */,
 				2B7EF6511D4C5643008D4CDD /* NSDate.swift */,
+				752C34D21D9E93BD00159441 /* NSMutableAttributedString.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -893,6 +898,7 @@
 				2B46862D1D81A98000B03D4F /* SuscribersViewController.swift in Sources */,
 				2BF3074E1D6E305C0062DF3C /* DMApiManager.swift in Sources */,
 				2B4DCA0F1D6FBB150078D51B /* MSHttpStatusEnum.swift in Sources */,
+				752C34D31D9E93BD00159441 /* NSMutableAttributedString.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -964,7 +970,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				2B7CBD331D906C6700B55CD2 /* Base */,
-				2B7CBD341D906C7E00B55CD2 /* es-MX */,
+				752C34DB1D9E9B7B00159441 /* es-MX */,
 			);
 			name = Reports.storyboard;
 			sourceTree = "<group>";

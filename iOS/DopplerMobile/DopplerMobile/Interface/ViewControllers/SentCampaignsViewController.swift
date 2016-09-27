@@ -16,7 +16,8 @@ class SentCampaignsViewController: UIViewController, UITableViewDelegate, DataSo
     var sentCampaignViewModel: SentCampaignViewModel!
     
     // MARK: Actions
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         self.navigationController!.setNavigationBarHidden(false, animated: false)
         self.tblSentCampaigns.delegate = self
@@ -36,7 +37,8 @@ class SentCampaignsViewController: UIViewController, UITableViewDelegate, DataSo
         }
     }
     
-    func updateContent(_ content: AnyObject) {
+    func updateContent(_ content: AnyObject)
+    {
         dataSource?.items = content as! [CampaignViewModel]
         tblSentCampaigns.reloadData()
     }
