@@ -30,6 +30,8 @@
 		2B057FDC1D7A31300021F748 /* ListDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B057FDB1D7A31300021F748 /* ListDetailViewModel.swift */; };
 		2B0EC0381D7FDB7A008BF638 /* CampaignPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EC0371D7FDB7A008BF638 /* CampaignPreviewViewController.swift */; };
 		2B0EC03A1D7FE71A008BF638 /* CampaignPreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EC0391D7FE71A008BF638 /* CampaignPreviewViewModel.swift */; };
+		2B1331071D9AE1630027D562 /* ScheduledCampaignsSegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1331061D9AE1630027D562 /* ScheduledCampaignsSegmentViewController.swift */; };
+		2B13310C1D9AF52B0027D562 /* Scheduled.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B13310A1D9AF52B0027D562 /* Scheduled.storyboard */; };
 		2B458AE01D88487100BD5A08 /* DataSourceContentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B458ADF1D88487100BD5A08 /* DataSourceContentDelegate.swift */; };
 		2B458AE21D88530E00BD5A08 /* ScheduledCampaignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B458AE11D88530E00BD5A08 /* ScheduledCampaignViewModel.swift */; };
 		2B458AE41D88561600BD5A08 /* CampaignListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B458AE31D88561600BD5A08 /* CampaignListViewModel.swift */; };
@@ -52,7 +54,6 @@
 		2B70F7A11D5947B800B18525 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B70F7A01D5947B800B18525 /* ReportViewController.swift */; };
 		2B7CBD261D906B1200B55CD2 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B7CBD281D906B1200B55CD2 /* Login.storyboard */; };
 		2B7CBD301D906C6400B55CD2 /* Reports.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B7CBD321D906C6400B55CD2 /* Reports.storyboard */; };
-		2B7CBD351D906D9A00B55CD2 /* Scheduled.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B7CBD371D906D9A00B55CD2 /* Scheduled.storyboard */; };
 		2B7CBD3A1D906E4E00B55CD2 /* Lists.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B7CBD3C1D906E4E00B55CD2 /* Lists.storyboard */; };
 		2B7CBD3F1D906ECE00B55CD2 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B7CBD411D906ECE00B55CD2 /* Account.storyboard */; };
 		2B7EF6451D4B229E008D4CDD /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EF6431D4B229E008D4CDD /* Campaign.swift */; };
@@ -62,6 +63,10 @@
 		2B7EF6501D4B2AE6008D4CDD /* CampaignsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EF64F1D4B2AE6008D4CDD /* CampaignsService.swift */; };
 		2B7EF6521D4C5643008D4CDD /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EF6511D4C5643008D4CDD /* NSDate.swift */; };
 		2B7EF6541D4C6425008D4CDD /* CampaignStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EF6531D4C6425008D4CDD /* CampaignStatus.swift */; };
+		2B8212D61D9C050200AB1794 /* RecipientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8212D51D9C050200AB1794 /* RecipientsViewController.swift */; };
+		2B8212D81D9C054800AB1794 /* SendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8212D71D9C054800AB1794 /* SendingViewController.swift */; };
+		2B8212DA1D9C471200AB1794 /* StoryboardName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8212D91D9C471200AB1794 /* StoryboardName.swift */; };
+		2B8212DC1D9C4AD300AB1794 /* ScheduledCampaignsMenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8212DB1D9C4AD300AB1794 /* ScheduledCampaignsMenuOption.swift */; };
 		2B8AD6691D6F5213007FFD05 /* DMApplicationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8AD6681D6F5213007FFD05 /* DMApplicationRouter.swift */; };
 		2BA171BF1D74A9E300FBDE66 /* DefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA171BE1D74A9E300FBDE66 /* DefaultsKeys.swift */; };
 		2BA4FDB91D91D64D00743552 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA4FDB81D91D64D00743552 /* ListItem.swift */; };
@@ -150,6 +155,9 @@
 		2B057FDB1D7A31300021F748 /* ListDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDetailViewModel.swift; sourceTree = "<group>"; };
 		2B0EC0371D7FDB7A008BF638 /* CampaignPreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignPreviewViewController.swift; sourceTree = "<group>"; };
 		2B0EC0391D7FE71A008BF638 /* CampaignPreviewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignPreviewViewModel.swift; sourceTree = "<group>"; };
+		2B1331061D9AE1630027D562 /* ScheduledCampaignsSegmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledCampaignsSegmentViewController.swift; sourceTree = "<group>"; };
+		2B13310B1D9AF52B0027D562 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Scheduled.storyboard; sourceTree = "<group>"; };
+		2B13310E1D9AF59E0027D562 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Scheduled.strings"; sourceTree = "<group>"; };
 		2B458ADF1D88487100BD5A08 /* DataSourceContentDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceContentDelegate.swift; sourceTree = "<group>"; };
 		2B458AE11D88530E00BD5A08 /* ScheduledCampaignViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledCampaignViewModel.swift; sourceTree = "<group>"; };
 		2B458AE31D88561600BD5A08 /* CampaignListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignListViewModel.swift; sourceTree = "<group>"; };
@@ -174,8 +182,6 @@
 		2B7CBD2F1D906C2600B55CD2 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Login.strings"; sourceTree = "<group>"; };
 		2B7CBD331D906C6700B55CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Reports.storyboard; sourceTree = "<group>"; };
 		2B7CBD341D906C7E00B55CD2 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Reports.strings"; sourceTree = "<group>"; };
-		2B7CBD361D906D9A00B55CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Scheduled.storyboard; sourceTree = "<group>"; };
-		2B7CBD391D906D9C00B55CD2 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Scheduled.strings"; sourceTree = "<group>"; };
 		2B7CBD3B1D906E4E00B55CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Lists.storyboard; sourceTree = "<group>"; };
 		2B7CBD3E1D906E5000B55CD2 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Lists.strings"; sourceTree = "<group>"; };
 		2B7CBD401D906ECE00B55CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Account.storyboard; sourceTree = "<group>"; };
@@ -188,6 +194,10 @@
 		2B7EF64F1D4B2AE6008D4CDD /* CampaignsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignsService.swift; sourceTree = "<group>"; };
 		2B7EF6511D4C5643008D4CDD /* NSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDate.swift; sourceTree = "<group>"; };
 		2B7EF6531D4C6425008D4CDD /* CampaignStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignStatus.swift; sourceTree = "<group>"; };
+		2B8212D51D9C050200AB1794 /* RecipientsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipientsViewController.swift; sourceTree = "<group>"; };
+		2B8212D71D9C054800AB1794 /* SendingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendingViewController.swift; sourceTree = "<group>"; };
+		2B8212D91D9C471200AB1794 /* StoryboardName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardName.swift; sourceTree = "<group>"; };
+		2B8212DB1D9C4AD300AB1794 /* ScheduledCampaignsMenuOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledCampaignsMenuOption.swift; sourceTree = "<group>"; };
 		2B8AD6681D6F5213007FFD05 /* DMApplicationRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DMApplicationRouter.swift; path = ../Infrastructure/DMApplicationRouter.swift; sourceTree = "<group>"; };
 		2BA171BE1D74A9E300FBDE66 /* DefaultsKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultsKeys.swift; sourceTree = "<group>"; };
 		2BA4FDB81D91D64D00743552 /* ListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
@@ -419,11 +429,15 @@
 				2BC6EF521D370B7A009F5A0B /* CampaignsListViewController.swift */,
 				249ECB6D1D3D56B300F18E74 /* SentCampaignsViewController.swift */,
 				2BC6EF4E1D370A88009F5A0B /* ScheduledCampaignsViewController.swift */,
+				2B1331061D9AE1630027D562 /* ScheduledCampaignsSegmentViewController.swift */,
+				2B8212DB1D9C4AD300AB1794 /* ScheduledCampaignsMenuOption.swift */,
 				2BF8751C1D7A1475009AA744 /* ListsViewController.swift */,
 				2B46862C1D81A98000B03D4F /* SuscribersViewController.swift */,
 				2B70F7A01D5947B800B18525 /* ReportViewController.swift */,
 				2B0EC0371D7FDB7A008BF638 /* CampaignPreviewViewController.swift */,
 				2BDD10E21D918A6500E5ABF7 /* BasicInformationViewController.swift */,
+				2B8212D51D9C050200AB1794 /* RecipientsViewController.swift */,
+				2B8212D71D9C054800AB1794 /* SendingViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -436,7 +450,7 @@
 				241198761D1B134100330D87 /* Main.storyboard */,
 				2B7CBD281D906B1200B55CD2 /* Login.storyboard */,
 				2B7CBD321D906C6400B55CD2 /* Reports.storyboard */,
-				2B7CBD371D906D9A00B55CD2 /* Scheduled.storyboard */,
+				2B13310A1D9AF52B0027D562 /* Scheduled.storyboard */,
 				2B7CBD3C1D906E4E00B55CD2 /* Lists.storyboard */,
 				2B7CBD411D906ECE00B55CD2 /* Account.storyboard */,
 			);
@@ -541,6 +555,7 @@
 				2B057FD71D7A297E0021F748 /* ListStatus.swift */,
 				2B46863A1D81EAB600B03D4F /* DateFormatEnum.swift */,
 				2B4686381D81C6D200B03D4F /* FieldType.swift */,
+				2B8212D91D9C471200AB1794 /* StoryboardName.swift */,
 			);
 			name = Enums;
 			sourceTree = "<group>";
@@ -667,6 +682,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B13310C1D9AF52B0027D562 /* Scheduled.storyboard in Resources */,
 				9C5AA8A01D3963F5002021CC /* Localizable.strings in Resources */,
 				75FE33431D993DDD0005EA66 /* ProximaNova-RegItalic.otf in Resources */,
 				75FE33421D993DDD0005EA66 /* ProximaNova-LightItalic.otf in Resources */,
@@ -678,7 +694,6 @@
 				2B7CBD261D906B1200B55CD2 /* Login.storyboard in Resources */,
 				2411987C1D1B134100330D87 /* LaunchScreen.storyboard in Resources */,
 				75FE33451D993DDD0005EA66 /* ProximaNova-RegularItalic.otf in Resources */,
-				2B7CBD351D906D9A00B55CD2 /* Scheduled.storyboard in Resources */,
 				2B7CBD301D906C6400B55CD2 /* Reports.storyboard in Resources */,
 				2B7CBD3A1D906E4E00B55CD2 /* Lists.storyboard in Resources */,
 				75FE33461D993DDD0005EA66 /* ProximaNova-Semibold.otf in Resources */,
@@ -810,17 +825,21 @@
 				9CB9DEFA1D1B1E1100DAED48 /* OnboardingContentViewController.swift in Sources */,
 				2BEB2A651D9348DC009F87F9 /* MSSerializationErrorCode.swift in Sources */,
 				2B4C32151D70ABD50076DF3B /* DMApiManagerProtocol.swift in Sources */,
+				2B8212D61D9C050200AB1794 /* RecipientsViewController.swift in Sources */,
 				1FDB0BDB1D23038B007544C3 /* OnboardingContentViewModel.swift in Sources */,
 				241198781D1B134100330D87 /* AppDelegate.swift in Sources */,
 				2BA4FDB91D91D64D00743552 /* ListItem.swift in Sources */,
 				2B4686371D81B97B00B03D4F /* Field.swift in Sources */,
 				2B4686391D81C6D200B03D4F /* FieldType.swift in Sources */,
 				2B458AE41D88561600BD5A08 /* CampaignListViewModel.swift in Sources */,
+				2B1331071D9AE1630027D562 /* ScheduledCampaignsSegmentViewController.swift in Sources */,
 				2B0EC0381D7FDB7A008BF638 /* CampaignPreviewViewController.swift in Sources */,
 				C243CBC61D9AF739004A1FF8 /* ApplicationAssembly.swift in Sources */,
 				C22695701D4297D000059959 /* OnboardingViewDataSource.swift in Sources */,
+				2B8212DA1D9C471200AB1794 /* StoryboardName.swift in Sources */,
 				2B4C32131D70A1180076DF3B /* NotificationIdentifier.swift in Sources */,
 				2B7EF64A1D4B23DB008D4CDD /* SentCampaignReport.swift in Sources */,
+				2B8212D81D9C054800AB1794 /* SendingViewController.swift in Sources */,
 				24FD44A31D22EBCB003E35A4 /* NavigationDelegate.swift in Sources */,
 				2439F31B1D352BD500949C5D /* SentCampaignsTableViewCell.swift in Sources */,
 				C243CBC81D9AFD32004A1FF8 /* NavigationHandler.swift in Sources */,
@@ -852,6 +871,7 @@
 				2B70F7A11D5947B800B18525 /* ReportViewController.swift in Sources */,
 				2B057FD61D7A281F0021F748 /* List.swift in Sources */,
 				2BF307481D6E2B740062DF3C /* MSAlamofireRequest+JSONSerializable.swift in Sources */,
+				2B8212DC1D9C4AD300AB1794 /* ScheduledCampaignsMenuOption.swift in Sources */,
 				2BD83BB01D42762200A5C527 /* SegueIdentifier.swift in Sources */,
 				9CB9DEFC1D1C150100DAED48 /* OnboardingViewController.swift in Sources */,
 				2B703F1D1D3D51D900A19E36 /* Optional.swift in Sources */,
@@ -922,6 +942,15 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
+		2B13310A1D9AF52B0027D562 /* Scheduled.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B13310B1D9AF52B0027D562 /* Base */,
+				2B13310E1D9AF59E0027D562 /* es-MX */,
+			);
+			name = Scheduled.storyboard;
+			sourceTree = "<group>";
+		};
 		2B7CBD281D906B1200B55CD2 /* Login.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -938,15 +967,6 @@
 				2B7CBD341D906C7E00B55CD2 /* es-MX */,
 			);
 			name = Reports.storyboard;
-			sourceTree = "<group>";
-		};
-		2B7CBD371D906D9A00B55CD2 /* Scheduled.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2B7CBD361D906D9A00B55CD2 /* Base */,
-				2B7CBD391D906D9C00B55CD2 /* es-MX */,
-			);
-			name = Scheduled.storyboard;
 			sourceTree = "<group>";
 		};
 		2B7CBD3C1D906E4E00B55CD2 /* Lists.storyboard */ = {

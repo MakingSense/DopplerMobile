@@ -193,9 +193,9 @@
                                                 <variation key="default">
                                                     <mask key="constraints">
                                                         <exclude reference="GfW-Nz-j0W"/>
+                                                        <exclude reference="lCa-Y7-MOE"/>
                                                         <exclude reference="OZr-E7-Ddx"/>
                                                         <exclude reference="Tfb-60-PZm"/>
-                                                        <exclude reference="lCa-Y7-MOE"/>
                                                     </mask>
                                                 </variation>
                                             </view>

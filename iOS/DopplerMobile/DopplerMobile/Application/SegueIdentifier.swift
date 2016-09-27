@@ -14,4 +14,5 @@ class SegueIdentifier
     static let LoginScreenSegue = "loginScreenSegue"
     static let LoggedInScreenSegue = "loggedInScreenSegue"
     static let DashboardScreenSegue = "dashboardScreenSegue"
+    static let CampaignPreviewSegue = "campaignPreviewSegue"
 }

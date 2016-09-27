@@ -32,8 +32,8 @@ class ScheduledCampaignsViewController: UIViewController, UITableViewDelegate, D
         if let selectedCellIndex = self.tblScheduledCampaigns.indexPathForSelectedRow
         {
             let campaignItem = self.dataSource!.items[(selectedCellIndex as NSIndexPath).row]
-            let basicInformationViewController = segue.destination as! BasicInformationViewController
-            basicInformationViewController.campaignItem = campaignItem
+            let scheduledSegmentViewController = segue.destination as! ScheduledCampaignsSegmentViewController
+            scheduledSegmentViewController.campaignItem = campaignItem
         }
     }
     

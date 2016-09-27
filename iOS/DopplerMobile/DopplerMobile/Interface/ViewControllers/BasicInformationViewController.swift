@@ -8,37 +8,30 @@
 
 import UIKit
 
-class BasicInformationViewController: UIViewController, UITableViewDelegate
+class BasicInformationViewController: UIViewController, UITableViewDelegate, DataSourceContentDelegate
 {
     // MARK: Properties
-    @IBOutlet weak var tblBasicInformation: UITableView!
-    @IBOutlet weak var lblCampaignName: UILabel!
-    @IBOutlet weak var lblCampaignType: UILabel!
     var dataSource : BasicInformationDataSource?
     var campaignItem: CampaignViewModel?
+    @IBOutlet weak var tblBasicInformation: UITableView!
     
-    // MARK: Actions
-    override func viewDidLoad()
+    class func instantiateFromStoryboard() -> BasicInformationViewController
     {
-        super.viewDidLoad()
-        self.tblBasicInformation.delegate = self
-        self.navigationItem.title = "SCHEDULED_CAMPAIGNS_TEXT".localized
+        let storyboard = UIStoryboard(name: StoryboardName.Scheduled, bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: String(describing: self)) as! BasicInformationViewController
     }
     
     override func viewWillAppear(_ animated: Bool)
     {
         self.dataSource = BasicInformationDataSource(items: campaignItem?.campaignBasicInformation!)
+        self.navigationItem.title = "SCHEDULED_CAMPAIGNS_TEXT".localized
         self.tblBasicInformation.dataSource = self.dataSource
         self.tblBasicInformation.delegate = self
-        self.lblCampaignName.text = campaignItem?.name
-        //TODO: remove magical string. replace by campaign type.
-        self.lblCampaignType.text = "Classic Campaign"
     }
     
-    // MARK: - Segues
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        let campaignPreviewViewController = segue.destination as! CampaignPreviewViewController
-        campaignPreviewViewController.campaignId = campaignItem!.campaignId
+    func updateContent(_ content: AnyObject) {
+        let campaignViewModel = content as! CampaignViewModel
+        self.dataSource?.items = campaignViewModel.campaignBasicInformation
+        tblBasicInformation.reloadData()
     }
 }

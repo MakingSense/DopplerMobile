@@ -10,5 +10,6 @@ import Foundation
 
 protocol DataSourceContentDelegate: class
 {
+    //TODO: Research about using generics on this protocol definition so we have more control of types being used and compilation-time checks. Something like DataSourceContentDelegate<T>
     func updateContent(_ content: AnyObject)
 }
