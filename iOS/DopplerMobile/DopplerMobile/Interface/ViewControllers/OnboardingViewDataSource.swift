@@ -63,8 +63,9 @@ class OnboardingViewDataSource : NSObject, UIPageViewControllerDataSource, Onboa
     }
     
     //TODO: Is it the best place to call the callbacks? just to be consistent.
-    func showViewModel(_ identifier: SegueIdentifier) {
-        self.pager.performSegue(withIdentifier: SegueIdentifier.DashboardScreenSegue.rawValue, sender : self)
+    func showViewModel(_ identifier: String)
+    {
+        self.pager.performSegue(withIdentifier: SegueIdentifier.DashboardScreenSegue, sender : self)
     }
     
     fileprivate func getViewControllerFromViewModel(_ viewModel: OnboardingContentViewModel) -> UIViewController

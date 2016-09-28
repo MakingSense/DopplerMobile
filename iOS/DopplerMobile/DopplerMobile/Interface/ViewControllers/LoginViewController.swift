@@ -11,7 +11,7 @@ import UIKit
 class LoginViewController: UIViewController, NavigationDelegate
 {
     //MARK: Properties
-    fileprivate var loginViewModel: LoginViewModel!
+    var loginViewModel: LoginViewModel!
     @IBOutlet fileprivate weak var txtUsername: UITextField!
     @IBOutlet fileprivate weak var txtPassword: UITextField!
     @IBOutlet fileprivate weak var btnLogin: MSButton!
@@ -20,7 +20,6 @@ class LoginViewController: UIViewController, NavigationDelegate
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        loginViewModel = LoginViewModel(loginService: LoginService(), nagivationDelegate: self)
         btnLogin.command = loginViewModel.loginCommand
     }
     
@@ -44,9 +43,9 @@ class LoginViewController: UIViewController, NavigationDelegate
     }
     
     //TODO: implement a generic way to navigate between view model
-    func showViewModel(_ identifier: SegueIdentifier)
+    func showViewModel(_ identifier: String)
     {
-        performSegue(withIdentifier: identifier.rawValue, sender: self)
+        performSegue(withIdentifier: identifier, sender: self)
     }
 }
 

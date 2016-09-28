@@ -8,7 +8,7 @@
 
 import Foundation
 
-open class LoginViewModel
+open class LoginViewModel : NSObject
 {
     open var username: String = ""
     {
@@ -22,11 +22,12 @@ open class LoginViewModel
     
     open var loginCommand: Command!
     
-    fileprivate var loginService: LoginService
+    fileprivate var loginService: LoginService!
     fileprivate var navigationDelegate: NavigationDelegate?
     
-    init(loginService: LoginService, nagivationDelegate: NavigationDelegate)
+    dynamic init(loginService: LoginService, nagivationDelegate: NavigationDelegate)
     {
+        super.init()
         self.navigationDelegate = nagivationDelegate
         self.loginService = loginService
         self.loginCommand = SimpleCommand(execute: loginCommandExecute, canExecute: loginCommandCanExecute)
@@ -44,7 +45,8 @@ open class LoginViewModel
         return !self.username.isEmpty && !self.password.isEmpty
     }
     
-    @objc func OnNotificationArrived(_ notification: Notification){
+    @objc func OnNotificationArrived(_ notification: Notification)
+    {
         if(notification.object == nil)
         {
             navigationDelegate?.showViewModel(SegueIdentifier.LoggedInScreenSegue)

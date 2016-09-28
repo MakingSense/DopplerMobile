@@ -6,6 +6,7 @@ target 'DopplerMobile' do
     pod 'Alamofire', '~> 4.0'
     pod 'SwiftyJSON', git: 'https://github.com/BaiduHiDeviOS/SwiftyJSON.git', branch: 'swift3'
     pod 'SwiftyUserDefaults', '~> 3.0.0'
+    pod 'Typhoon'
 end
 
 target 'DopplerMobileTests' do

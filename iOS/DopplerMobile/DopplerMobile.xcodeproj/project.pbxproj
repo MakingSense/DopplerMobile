@@ -103,6 +103,9 @@
 		A8EF46D91D26C218000882A3 /* MSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EF46D81D26C218000882A3 /* MSButton.swift */; };
 		BDD26FF49488694CDB0ECADD /* Pods_DopplerMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DAF82C08264644E6850DB9 /* Pods_DopplerMobile.framework */; };
 		C22695701D4297D000059959 /* OnboardingViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C226956F1D4297D000059959 /* OnboardingViewDataSource.swift */; };
+		C243CBC61D9AF739004A1FF8 /* ApplicationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C243CBC51D9AF739004A1FF8 /* ApplicationAssembly.swift */; };
+		C243CBC81D9AFD32004A1FF8 /* NavigationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C243CBC71D9AFD32004A1FF8 /* NavigationHandler.swift */; };
+		C243CBCA1D9B36ED004A1FF8 /* DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C243CBC91D9B36ED004A1FF8 /* DI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -225,6 +228,9 @@
 		9CD2FC691D2445E800D4C9F8 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		A8EF46D81D26C218000882A3 /* MSButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSButton.swift; sourceTree = "<group>"; };
 		C226956F1D4297D000059959 /* OnboardingViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnboardingViewDataSource.swift; path = ViewControllers/OnboardingViewDataSource.swift; sourceTree = "<group>"; };
+		C243CBC51D9AF739004A1FF8 /* ApplicationAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationAssembly.swift; sourceTree = "<group>"; };
+		C243CBC71D9AFD32004A1FF8 /* NavigationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationHandler.swift; sourceTree = "<group>"; };
+		C243CBC91D9B36ED004A1FF8 /* DI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DI.swift; sourceTree = "<group>"; };
 		CCD7B1E75E4FFE4A0E4C5B22 /* Pods-DopplerMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DopplerMobileTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DopplerMobileTests/Pods-DopplerMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D9DAF82C08264644E6850DB9 /* Pods_DopplerMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DopplerMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -323,6 +329,9 @@
 				2BD83BAE1D42741C00A5C527 /* Enums */,
 				1F0339E61D3EBB2A006EDBD1 /* Extensions */,
 				241198691D1B134100330D87 /* ViewModels */,
+				C243CBC51D9AF739004A1FF8 /* ApplicationAssembly.swift */,
+				C243CBC71D9AFD32004A1FF8 /* NavigationHandler.swift */,
+				C243CBC91D9B36ED004A1FF8 /* DI.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -797,6 +806,7 @@
 				2BD182391D78AC1900EE10E0 /* ScheduledCampaignsTableViewCell.swift in Sources */,
 				2411987A1D1B134100330D87 /* LoginViewController.swift in Sources */,
 				2B8AD6691D6F5213007FFD05 /* DMApplicationRouter.swift in Sources */,
+				C243CBCA1D9B36ED004A1FF8 /* DI.swift in Sources */,
 				9CB9DEFA1D1B1E1100DAED48 /* OnboardingContentViewController.swift in Sources */,
 				2BEB2A651D9348DC009F87F9 /* MSSerializationErrorCode.swift in Sources */,
 				2B4C32151D70ABD50076DF3B /* DMApiManagerProtocol.swift in Sources */,
@@ -807,11 +817,13 @@
 				2B4686391D81C6D200B03D4F /* FieldType.swift in Sources */,
 				2B458AE41D88561600BD5A08 /* CampaignListViewModel.swift in Sources */,
 				2B0EC0381D7FDB7A008BF638 /* CampaignPreviewViewController.swift in Sources */,
+				C243CBC61D9AF739004A1FF8 /* ApplicationAssembly.swift in Sources */,
 				C22695701D4297D000059959 /* OnboardingViewDataSource.swift in Sources */,
 				2B4C32131D70A1180076DF3B /* NotificationIdentifier.swift in Sources */,
 				2B7EF64A1D4B23DB008D4CDD /* SentCampaignReport.swift in Sources */,
 				24FD44A31D22EBCB003E35A4 /* NavigationDelegate.swift in Sources */,
 				2439F31B1D352BD500949C5D /* SentCampaignsTableViewCell.swift in Sources */,
+				C243CBC81D9AFD32004A1FF8 /* NavigationHandler.swift in Sources */,
 				2BD4FD9C1D636EBA00E7E13C /* DeliveryRateReportTableViewCell.swift in Sources */,
 				2B46862F1D81AC1D00B03D4F /* SuscribersViewDataSource.swift in Sources */,
 				24FD44A91D244E12003E35A4 /* Command.swift in Sources */,

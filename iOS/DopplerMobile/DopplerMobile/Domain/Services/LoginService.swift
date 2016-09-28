@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyUserDefaults
 
-class LoginService
+class LoginService : NSObject
 {
     let defaults = UserDefaults.standard
     func login(_ username: String, password: String)

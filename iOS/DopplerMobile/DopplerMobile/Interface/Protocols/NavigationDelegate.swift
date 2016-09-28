@@ -8,8 +8,8 @@
 
 import Foundation
 
-protocol NavigationDelegate: class
+@objc protocol NavigationDelegate: class
 {
     //TODO: implement a generic way to navigate between view model
-    func showViewModel(_ identifier: SegueIdentifier)
+    func showViewModel(_ identifier: String)
 }
