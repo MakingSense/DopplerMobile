@@ -23,8 +23,8 @@ class BasicInformationViewController: UIViewController, UITableViewDelegate, Dat
     
     override func viewWillAppear(_ animated: Bool)
     {
-        self.dataSource = BasicInformationDataSource(items: campaignItem?.campaignBasicInformation!)
         self.navigationItem.title = "SCHEDULED_CAMPAIGNS_TEXT".localized
+        self.dataSource = BasicInformationDataSource(items: campaignItem?.campaignBasicInformation!)
         self.tblBasicInformation.dataSource = self.dataSource
         self.tblBasicInformation.delegate = self
     }

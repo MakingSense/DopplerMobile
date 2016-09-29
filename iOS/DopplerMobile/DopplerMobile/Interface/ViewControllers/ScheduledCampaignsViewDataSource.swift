@@ -21,7 +21,7 @@ class ScheduledCampaignsViewDataSource: NSObject, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: ScheduledCampaignsTableViewCell.identifier)! as! ScheduledCampaignsTableViewCell
-        cell.configure(self.items[(indexPath as NSIndexPath).row])
+        cell.configure(self.items[(indexPath as NSIndexPath).row], index: (indexPath as NSIndexPath).row)
         return cell
     }
 }

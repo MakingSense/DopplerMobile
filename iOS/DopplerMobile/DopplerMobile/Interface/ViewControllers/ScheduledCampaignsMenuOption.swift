@@ -39,7 +39,7 @@ struct ScheduledCampaignsMenuOption: PagingMenuControllerCustomizable
         //TODO: Add final color and change text color.
         var focusMode: MenuFocusMode
         {
-            return .underline(height: 3, color: UIColor.green, horizontalPadding: 10, verticalPadding: 0)
+            return .underline(height: 3, color: UIColor(netHex: DMColors.green.rawValue), horizontalPadding: 0, verticalPadding: 0)
         }
         var itemsOptions: [MenuItemViewCustomizable]
         {
@@ -51,21 +51,33 @@ struct ScheduledCampaignsMenuOption: PagingMenuControllerCustomizable
     {
         var displayMode: MenuItemDisplayMode
         {
-            return .text(title: MenuItemText(text: "SCHEDULED_CAMPAIGN_BASIC_INFO_SECTION".localized))
+            return .text(title: MenuItemText(text: "SCHEDULED_CAMPAIGN_BASIC_INFO_SECTION".localized,
+                                             color: UIColor(netHex: DMColors.grey.rawValue),
+                                             selectedColor: UIColor(netHex: DMColors.green.rawValue),
+                                             font: UIFont (name: DMFonts.ProximaNovaRegular, size: 14)!,
+                                             selectedFont: UIFont (name: DMFonts.ProximaNovaRegular, size: 14)!))
         }
     }
     fileprivate struct MenuItem2: MenuItemViewCustomizable
     {
         var displayMode: MenuItemDisplayMode
         {
-            return .text(title: MenuItemText(text: "SCHEDULED_CAMPAIGN_RECIPIENTS".localized))
+            return .text(title: MenuItemText(text: "SCHEDULED_CAMPAIGN_RECIPIENTS".localized,
+                                             color: UIColor(netHex: DMColors.grey.rawValue),
+                                             selectedColor: UIColor(netHex: DMColors.green.rawValue),
+                                             font: UIFont (name: DMFonts.ProximaNovaRegular, size: 14)!,
+                                             selectedFont: UIFont (name: DMFonts.ProximaNovaRegular, size: 14)!))
         }
     }
     fileprivate struct MenuItem3: MenuItemViewCustomizable
     {
         var displayMode: MenuItemDisplayMode
         {
-            return .text(title: MenuItemText(text: "SCHEDULED_CAMPAIGN_SENDING".localized))
+            return .text(title: MenuItemText(text: "SCHEDULED_CAMPAIGN_SENDING".localized,
+                                             color: UIColor(netHex: DMColors.grey.rawValue),
+                                             selectedColor: UIColor(netHex: DMColors.green.rawValue),
+                                             font: UIFont (name: DMFonts.ProximaNovaRegular, size: 14)!,
+                                             selectedFont: UIFont (name: DMFonts.ProximaNovaRegular, size: 14)!))
         }
     }
 }

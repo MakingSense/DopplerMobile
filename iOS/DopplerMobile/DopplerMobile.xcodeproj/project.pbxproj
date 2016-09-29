@@ -32,6 +32,9 @@
 		2B0EC03A1D7FE71A008BF638 /* CampaignPreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EC0391D7FE71A008BF638 /* CampaignPreviewViewModel.swift */; };
 		2B1331071D9AE1630027D562 /* ScheduledCampaignsSegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1331061D9AE1630027D562 /* ScheduledCampaignsSegmentViewController.swift */; };
 		2B13310C1D9AF52B0027D562 /* Scheduled.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B13310A1D9AF52B0027D562 /* Scheduled.storyboard */; };
+		2B38602A1D9D632F00739B72 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3860291D9D632F00739B72 /* UIColor.swift */; };
+		2B38602C1D9D6FC900739B72 /* DMColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B38602B1D9D6FC900739B72 /* DMColors.swift */; };
+		2B38602E1D9D838D00739B72 /* DMFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B38602D1D9D838D00739B72 /* DMFonts.swift */; };
 		2B458AE01D88487100BD5A08 /* DataSourceContentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B458ADF1D88487100BD5A08 /* DataSourceContentDelegate.swift */; };
 		2B458AE21D88530E00BD5A08 /* ScheduledCampaignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B458AE11D88530E00BD5A08 /* ScheduledCampaignViewModel.swift */; };
 		2B458AE41D88561600BD5A08 /* CampaignListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B458AE31D88561600BD5A08 /* CampaignListViewModel.swift */; };
@@ -159,6 +162,9 @@
 		2B1331061D9AE1630027D562 /* ScheduledCampaignsSegmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledCampaignsSegmentViewController.swift; sourceTree = "<group>"; };
 		2B13310B1D9AF52B0027D562 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Scheduled.storyboard; sourceTree = "<group>"; };
 		2B13310E1D9AF59E0027D562 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Scheduled.strings"; sourceTree = "<group>"; };
+		2B3860291D9D632F00739B72 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		2B38602B1D9D6FC900739B72 /* DMColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMColors.swift; sourceTree = "<group>"; };
+		2B38602D1D9D838D00739B72 /* DMFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMFonts.swift; sourceTree = "<group>"; };
 		2B458ADF1D88487100BD5A08 /* DataSourceContentDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceContentDelegate.swift; sourceTree = "<group>"; };
 		2B458AE11D88530E00BD5A08 /* ScheduledCampaignViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledCampaignViewModel.swift; sourceTree = "<group>"; };
 		2B458AE31D88561600BD5A08 /* CampaignListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignListViewModel.swift; sourceTree = "<group>"; };
@@ -527,6 +533,7 @@
 				2B703F1E1D3D521E00A19E36 /* StringType.swift */,
 				2B7EF6511D4C5643008D4CDD /* NSDate.swift */,
 				752C34D21D9E93BD00159441 /* NSMutableAttributedString.swift */,
+				2B3860291D9D632F00739B72 /* UIColor.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -561,6 +568,8 @@
 				2B46863A1D81EAB600B03D4F /* DateFormatEnum.swift */,
 				2B4686381D81C6D200B03D4F /* FieldType.swift */,
 				2B8212D91D9C471200AB1794 /* StoryboardName.swift */,
+				2B38602B1D9D6FC900739B72 /* DMColors.swift */,
+				2B38602D1D9D838D00739B72 /* DMFonts.swift */,
 			);
 			name = Enums;
 			sourceTree = "<group>";
@@ -840,6 +849,7 @@
 				2B1331071D9AE1630027D562 /* ScheduledCampaignsSegmentViewController.swift in Sources */,
 				2B0EC0381D7FDB7A008BF638 /* CampaignPreviewViewController.swift in Sources */,
 				C243CBC61D9AF739004A1FF8 /* ApplicationAssembly.swift in Sources */,
+				2B38602A1D9D632F00739B72 /* UIColor.swift in Sources */,
 				C22695701D4297D000059959 /* OnboardingViewDataSource.swift in Sources */,
 				2B8212DA1D9C471200AB1794 /* StoryboardName.swift in Sources */,
 				2B4C32131D70A1180076DF3B /* NotificationIdentifier.swift in Sources */,
@@ -873,6 +883,7 @@
 				2B7EF6521D4C5643008D4CDD /* NSDate.swift in Sources */,
 				2B46863F1D8284A600B03D4F /* ListsTableViewCell.swift in Sources */,
 				2BF307441D6E26B20062DF3C /* MSResponseJSONObjectSerializable.swift in Sources */,
+				2B38602E1D9D838D00739B72 /* DMFonts.swift in Sources */,
 				2B70F7A11D5947B800B18525 /* ReportViewController.swift in Sources */,
 				2B057FD61D7A281F0021F748 /* List.swift in Sources */,
 				2BF307481D6E2B740062DF3C /* MSAlamofireRequest+JSONSerializable.swift in Sources */,
@@ -882,6 +893,7 @@
 				2B703F1D1D3D51D900A19E36 /* Optional.swift in Sources */,
 				A8EF46D91D26C218000882A3 /* MSButton.swift in Sources */,
 				2B4686331D81B28100B03D4F /* SuscribersListViewModel.swift in Sources */,
+				2B38602C1D9D6FC900739B72 /* DMColors.swift in Sources */,
 				2BC6EF531D370B7A009F5A0B /* CampaignsListViewController.swift in Sources */,
 				2BA171BF1D74A9E300FBDE66 /* DefaultsKeys.swift in Sources */,
 				2439F3191D343BBC00949C5D /* CampaignViewModel.swift in Sources */,
