@@ -21,7 +21,7 @@ class ListsViewDataSource: NSObject, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: ListsTableViewCell.identifier)! as! ListsTableViewCell
-        cell.configure(self.items[(indexPath as NSIndexPath).row])
+        cell.configure(self.items[indexPath.row])
         return cell
     }
 }

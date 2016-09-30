@@ -25,7 +25,7 @@ class BasicInformationDataSource: NSObject, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: BasicInformationTableViewCell.identifier)! as! BasicInformationTableViewCell
-        cell.configure(items?[(indexPath as NSIndexPath).row])
+        cell.configure(items?[indexPath.row])
         return cell
     }
 }

@@ -52,4 +52,7 @@
 
 //REPORTS
 "REPORTS_TO" = "to";
+"REPORTS_SUBSCRIBER" = "Subscriber";
 "REPORTS_SUBSCRIBERS" = "Subscribers";
+"REPORTS_LIST" = "List";
+"REPORTS_LISTS" = "Lists";

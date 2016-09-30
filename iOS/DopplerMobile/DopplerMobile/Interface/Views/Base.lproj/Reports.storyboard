@@ -52,10 +52,10 @@
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SentCampaignsCell" id="vuY-ik-hxB" userLabel="SentCampaignsCell" customClass="SentCampaignsTableViewCell" customModule="DopplerMobile" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="28" width="375" height="115"/>
+                                                        <rect key="frame" x="0.0" y="28" width="1000" height="115"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vuY-ik-hxB" id="obG-qf-1Qr" userLabel="Cell">
-                                                            <frame key="frameInset" width="375" height="114"/>
+                                                            <frame key="frameInset" width="1000" height="114"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tUb-c9-ZZg" userLabel="LeftContent">
@@ -217,7 +217,7 @@
                                                                                 <constraint firstAttribute="height" constant="20" id="Ccz-ay-8WN"/>
                                                                                 <constraint firstAttribute="width" constant="12" id="LMV-iW-3yu"/>
                                                                             </constraints>
-                                                                            <state key="normal" image="Reports-Arrow"/>
+                                                                            <state key="normal" image="Arrow"/>
                                                                         </button>
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -802,9 +802,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Arrow" width="12" height="20"/>
         <image name="Metrics-Summary" width="20" height="25"/>
         <image name="Metrics-Summary-Disabled" width="20" height="25"/>
         <image name="Preview" width="25" height="18"/>
-        <image name="Reports-Arrow" width="12" height="20"/>
     </resources>
 </document>
