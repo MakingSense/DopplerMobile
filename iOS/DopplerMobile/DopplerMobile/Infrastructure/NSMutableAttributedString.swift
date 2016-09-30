@@ -11,19 +11,19 @@ import UIKit
 
 extension NSMutableAttributedString
 {
-    func bold(text:String, fontName: String, fontSize: CGFloat) -> NSMutableAttributedString
+    func append(text:String) -> NSMutableAttributedString
     {
-        let attrs:[String:AnyObject] = [NSFontAttributeName : UIFont(name: fontName, size: CGFloat(fontSize))!]
-        let boldString = NSMutableAttributedString(string:"\(text)", attributes:attrs)
-        self.append(boldString)
+        let normal =  NSAttributedString(string: text)
+        self.append(normal)
         
         return self
     }
     
-    func normal(text:String) -> NSMutableAttributedString
+    func append(text:String, font: UIFont) -> NSMutableAttributedString
     {
-        let normal =  NSAttributedString(string: text)
-        self.append(normal)
+        let attributes:[String:AnyObject] = [NSFontAttributeName : font]
+        let attributedString = NSMutableAttributedString(string:text, attributes:attributes)
+        self.append(attributedString)
         
         return self
     }

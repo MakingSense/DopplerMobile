@@ -27,11 +27,8 @@ class SentCampaignsTableViewCell : UITableViewCell
         let boldContent = " \(campaignViewModel.amountSentSubscribers!) \("REPORTS_SUBSCRIBERS".localized)"
         let date = "\(campaignViewModel.sentDate!.toStringWithFormat(DateFormatEnum.yyyy_MM_dd.pattern)) \("REPORTS_TO".localized)"
         
-        //TODO: Remove this, use Font Enum.
-        let fontName = "ProximaNova-Bold"
-        
         let formattedString = NSMutableAttributedString()
-        formattedString.normal(text: date).bold(text: boldContent, fontName: fontName, fontSize: 14.0)
+        formattedString.append(text: date).append(text: boldContent, font: UIFont.boldOf(size: 14.0))
         
         self.lblSentDate.attributedText = formattedString
         self.lblOpenPercentage.text =  "\(campaignViewModel.openedPercentage!)%"

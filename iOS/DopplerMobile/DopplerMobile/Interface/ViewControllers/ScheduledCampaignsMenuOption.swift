@@ -54,8 +54,8 @@ struct ScheduledCampaignsMenuOption: PagingMenuControllerCustomizable
             return .text(title: MenuItemText(text: "SCHEDULED_CAMPAIGN_BASIC_INFO_SECTION".localized,
                                              color: UIColor(netHex: DMColors.grey.rawValue),
                                              selectedColor: UIColor(netHex: DMColors.green.rawValue),
-                                             font: UIFont (name: DMFonts.ProximaNovaRegular, size: 14)!,
-                                             selectedFont: UIFont (name: DMFonts.ProximaNovaRegular, size: 14)!))
+                                             font: UIFont.regularOf(size: 14.0),
+                                             selectedFont: UIFont.regularOf(size: 14.0)))
         }
     }
     fileprivate struct MenuItem2: MenuItemViewCustomizable
@@ -65,8 +65,8 @@ struct ScheduledCampaignsMenuOption: PagingMenuControllerCustomizable
             return .text(title: MenuItemText(text: "SCHEDULED_CAMPAIGN_RECIPIENTS".localized,
                                              color: UIColor(netHex: DMColors.grey.rawValue),
                                              selectedColor: UIColor(netHex: DMColors.green.rawValue),
-                                             font: UIFont (name: DMFonts.ProximaNovaRegular, size: 14)!,
-                                             selectedFont: UIFont (name: DMFonts.ProximaNovaRegular, size: 14)!))
+                                             font: UIFont.regularOf(size: 14.0),
+                                             selectedFont: UIFont.regularOf(size: 14.0)))
         }
     }
     fileprivate struct MenuItem3: MenuItemViewCustomizable
@@ -76,8 +76,8 @@ struct ScheduledCampaignsMenuOption: PagingMenuControllerCustomizable
             return .text(title: MenuItemText(text: "SCHEDULED_CAMPAIGN_SENDING".localized,
                                              color: UIColor(netHex: DMColors.grey.rawValue),
                                              selectedColor: UIColor(netHex: DMColors.green.rawValue),
-                                             font: UIFont (name: DMFonts.ProximaNovaRegular, size: 14)!,
-                                             selectedFont: UIFont (name: DMFonts.ProximaNovaRegular, size: 14)!))
+                                             font: UIFont.regularOf(size: 14.0),
+                                             selectedFont: UIFont.regularOf(size: 14.0)))
         }
     }
 }

@@ -34,7 +34,6 @@
 		2B13310C1D9AF52B0027D562 /* Scheduled.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B13310A1D9AF52B0027D562 /* Scheduled.storyboard */; };
 		2B38602A1D9D632F00739B72 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3860291D9D632F00739B72 /* UIColor.swift */; };
 		2B38602C1D9D6FC900739B72 /* DMColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B38602B1D9D6FC900739B72 /* DMColors.swift */; };
-		2B38602E1D9D838D00739B72 /* DMFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B38602D1D9D838D00739B72 /* DMFonts.swift */; };
 		2B458AE01D88487100BD5A08 /* DataSourceContentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B458ADF1D88487100BD5A08 /* DataSourceContentDelegate.swift */; };
 		2B458AE21D88530E00BD5A08 /* ScheduledCampaignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B458AE11D88530E00BD5A08 /* ScheduledCampaignViewModel.swift */; };
 		2B458AE41D88561600BD5A08 /* CampaignListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B458AE31D88561600BD5A08 /* CampaignListViewModel.swift */; };
@@ -90,6 +89,7 @@
 		2BF3074E1D6E305C0062DF3C /* DMApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF3074D1D6E305C0062DF3C /* DMApiManager.swift */; };
 		2BF875191D7A135F009AA744 /* ListsViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF875181D7A135F009AA744 /* ListsViewDataSource.swift */; };
 		2BF8751D1D7A1475009AA744 /* ListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF8751C1D7A1475009AA744 /* ListsViewController.swift */; };
+		750CE2331D9EF07B008665C7 /* UIFont+DMFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750CE2321D9EF07B008665C7 /* UIFont+DMFonts.swift */; };
 		752C34D31D9E93BD00159441 /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752C34D21D9E93BD00159441 /* NSMutableAttributedString.swift */; };
 		75FE333D1D993DDD0005EA66 /* ProximaNova-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75FE33321D993DDD0005EA66 /* ProximaNova-Black.otf */; };
 		75FE333E1D993DDD0005EA66 /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75FE33331D993DDD0005EA66 /* ProximaNova-Bold.otf */; };
@@ -164,7 +164,6 @@
 		2B13310E1D9AF59E0027D562 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Scheduled.strings"; sourceTree = "<group>"; };
 		2B3860291D9D632F00739B72 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		2B38602B1D9D6FC900739B72 /* DMColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMColors.swift; sourceTree = "<group>"; };
-		2B38602D1D9D838D00739B72 /* DMFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMFonts.swift; sourceTree = "<group>"; };
 		2B458ADF1D88487100BD5A08 /* DataSourceContentDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceContentDelegate.swift; sourceTree = "<group>"; };
 		2B458AE11D88530E00BD5A08 /* ScheduledCampaignViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledCampaignViewModel.swift; sourceTree = "<group>"; };
 		2B458AE31D88561600BD5A08 /* CampaignListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignListViewModel.swift; sourceTree = "<group>"; };
@@ -188,8 +187,6 @@
 		2B7CBD271D906B1200B55CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		2B7CBD2F1D906C2600B55CD2 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Login.strings"; sourceTree = "<group>"; };
 		2B7CBD331D906C6700B55CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Reports.storyboard; sourceTree = "<group>"; };
-		2B7CBD361D906D9A00B55CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Scheduled.storyboard; sourceTree = "<group>"; };
-		2B7CBD391D906D9C00B55CD2 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Scheduled.strings"; sourceTree = "<group>"; };
 		2B7CBD3B1D906E4E00B55CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Lists.storyboard; sourceTree = "<group>"; };
 		2B7CBD3E1D906E5000B55CD2 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Lists.strings"; sourceTree = "<group>"; };
 		2B7CBD401D906ECE00B55CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Account.storyboard; sourceTree = "<group>"; };
@@ -227,6 +224,7 @@
 		2BF875181D7A135F009AA744 /* ListsViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListsViewDataSource.swift; sourceTree = "<group>"; };
 		2BF8751C1D7A1475009AA744 /* ListsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListsViewController.swift; sourceTree = "<group>"; };
 		53491CD01247828DC971FAE1 /* Pods-DopplerMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DopplerMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DopplerMobile/Pods-DopplerMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		750CE2321D9EF07B008665C7 /* UIFont+DMFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+DMFonts.swift"; path = "Extensions/UIFont+DMFonts.swift"; sourceTree = "<group>"; };
 		752C34D21D9E93BD00159441 /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
 		752C34DB1D9E9B7B00159441 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Reports.strings"; sourceTree = "<group>"; };
 		75FE33321D993DDD0005EA66 /* ProximaNova-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Black.otf"; path = "Resources/Fonts/ProximaNova-Black.otf"; sourceTree = "<group>"; };
@@ -297,6 +295,7 @@
 			children = (
 				1F0339E71D3EBB45006EDBD1 /* StringExtension.swift */,
 				2BA171BE1D74A9E300FBDE66 /* DefaultsKeys.swift */,
+				750CE2321D9EF07B008665C7 /* UIFont+DMFonts.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -569,7 +568,6 @@
 				2B4686381D81C6D200B03D4F /* FieldType.swift */,
 				2B8212D91D9C471200AB1794 /* StoryboardName.swift */,
 				2B38602B1D9D6FC900739B72 /* DMColors.swift */,
-				2B38602D1D9D838D00739B72 /* DMFonts.swift */,
 			);
 			name = Enums;
 			sourceTree = "<group>";
@@ -883,7 +881,6 @@
 				2B7EF6521D4C5643008D4CDD /* NSDate.swift in Sources */,
 				2B46863F1D8284A600B03D4F /* ListsTableViewCell.swift in Sources */,
 				2BF307441D6E26B20062DF3C /* MSResponseJSONObjectSerializable.swift in Sources */,
-				2B38602E1D9D838D00739B72 /* DMFonts.swift in Sources */,
 				2B70F7A11D5947B800B18525 /* ReportViewController.swift in Sources */,
 				2B057FD61D7A281F0021F748 /* List.swift in Sources */,
 				2BF307481D6E2B740062DF3C /* MSAlamofireRequest+JSONSerializable.swift in Sources */,
@@ -904,6 +901,7 @@
 				2B46863B1D81EAB600B03D4F /* DateFormatEnum.swift in Sources */,
 				2B4686351D81B88E00B03D4F /* Suscriber.swift in Sources */,
 				249ECB701D3E795800F18E74 /* SentCampaignsViewDataSource.swift in Sources */,
+				750CE2331D9EF07B008665C7 /* UIFont+DMFonts.swift in Sources */,
 				2BC6EF4F1D370A88009F5A0B /* ScheduledCampaignsViewController.swift in Sources */,
 				2BF8751D1D7A1475009AA744 /* ListsViewController.swift in Sources */,
 				2B057FD41D7A21170021F748 /* SuscribersService.swift in Sources */,
