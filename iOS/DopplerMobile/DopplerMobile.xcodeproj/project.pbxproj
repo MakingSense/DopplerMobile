@@ -53,6 +53,7 @@
 		2B703F1D1D3D51D900A19E36 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B703F1C1D3D51D900A19E36 /* Optional.swift */; };
 		2B703F1F1D3D521E00A19E36 /* StringType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B703F1E1D3D521E00A19E36 /* StringType.swift */; };
 		2B70F7A11D5947B800B18525 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B70F7A01D5947B800B18525 /* ReportViewController.swift */; };
+		2B7B73431D9EE40D00A593BD /* TableViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B73421D9EE40D00A593BD /* TableViewCellProtocol.swift */; };
 		2B7CBD261D906B1200B55CD2 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B7CBD281D906B1200B55CD2 /* Login.storyboard */; };
 		2B7CBD301D906C6400B55CD2 /* Reports.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B7CBD321D906C6400B55CD2 /* Reports.storyboard */; };
 		2B7CBD3A1D906E4E00B55CD2 /* Lists.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B7CBD3C1D906E4E00B55CD2 /* Lists.storyboard */; };
@@ -144,7 +145,7 @@
 		242514741C7E45CD00785AE6 /* DopplerMobileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DopplerMobileTests.swift; sourceTree = "<group>"; };
 		242514761C7E45CD00785AE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2439F3181D343BBC00949C5D /* CampaignViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignViewModel.swift; sourceTree = "<group>"; };
-		2439F31A1D352BD500949C5D /* SentCampaignsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SentCampaignsTableViewCell.swift; path = Views/SentCampaignsTableViewCell.swift; sourceTree = "<group>"; };
+		2439F31A1D352BD500949C5D /* SentCampaignsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SentCampaignsTableViewCell.swift; path = ../Views/SentCampaignsTableViewCell.swift; sourceTree = "<group>"; };
 		249ECB6D1D3D56B300F18E74 /* SentCampaignsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentCampaignsViewController.swift; sourceTree = "<group>"; };
 		249ECB6F1D3E795800F18E74 /* SentCampaignsViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SentCampaignsViewDataSource.swift; path = ViewControllers/SentCampaignsViewDataSource.swift; sourceTree = "<group>"; };
 		24F0FB6E1D1B2D5C00360346 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -168,14 +169,14 @@
 		2B458AE31D88561600BD5A08 /* CampaignListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignListViewModel.swift; sourceTree = "<group>"; };
 		2B46862C1D81A98000B03D4F /* SuscribersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuscribersViewController.swift; sourceTree = "<group>"; };
 		2B46862E1D81AC1D00B03D4F /* SuscribersViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuscribersViewDataSource.swift; sourceTree = "<group>"; };
-		2B4686301D81ACC000B03D4F /* SuscribersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuscribersTableViewCell.swift; sourceTree = "<group>"; };
+		2B4686301D81ACC000B03D4F /* SuscribersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SuscribersTableViewCell.swift; path = ../SuscribersTableViewCell.swift; sourceTree = "<group>"; };
 		2B4686321D81B28100B03D4F /* SuscribersListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuscribersListViewModel.swift; sourceTree = "<group>"; };
 		2B4686341D81B88E00B03D4F /* Suscriber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Suscriber.swift; sourceTree = "<group>"; };
 		2B4686361D81B97B00B03D4F /* Field.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
 		2B4686381D81C6D200B03D4F /* FieldType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldType.swift; sourceTree = "<group>"; };
 		2B46863A1D81EAB600B03D4F /* DateFormatEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatEnum.swift; sourceTree = "<group>"; };
 		2B46863C1D827A6700B03D4F /* SuscriberViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuscriberViewModel.swift; sourceTree = "<group>"; };
-		2B46863E1D8284A600B03D4F /* ListsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListsTableViewCell.swift; sourceTree = "<group>"; };
+		2B46863E1D8284A600B03D4F /* ListsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListsTableViewCell.swift; path = ../ListsTableViewCell.swift; sourceTree = "<group>"; };
 		2B4C32121D70A1180076DF3B /* NotificationIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationIdentifier.swift; sourceTree = "<group>"; };
 		2B4C32141D70ABD50076DF3B /* DMApiManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DMApiManagerProtocol.swift; path = ../Infrastructure/DMApiManagerProtocol.swift; sourceTree = "<group>"; };
 		2B4DCA0E1D6FBB150078D51B /* MSHttpStatusEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSHttpStatusEnum.swift; sourceTree = "<group>"; };
@@ -183,6 +184,7 @@
 		2B703F1C1D3D51D900A19E36 /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		2B703F1E1D3D521E00A19E36 /* StringType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringType.swift; sourceTree = "<group>"; };
 		2B70F7A01D5947B800B18525 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		2B7B73421D9EE40D00A593BD /* TableViewCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellProtocol.swift; sourceTree = "<group>"; };
 		2B7CBD271D906B1200B55CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		2B7CBD2F1D906C2600B55CD2 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Login.strings"; sourceTree = "<group>"; };
 		2B7CBD331D906C6700B55CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Reports.storyboard; sourceTree = "<group>"; };
@@ -210,13 +212,13 @@
 		2BC6EF4E1D370A88009F5A0B /* ScheduledCampaignsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledCampaignsViewController.swift; sourceTree = "<group>"; };
 		2BC6EF521D370B7A009F5A0B /* CampaignsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignsListViewController.swift; sourceTree = "<group>"; };
 		2BD182361D78AA1A00EE10E0 /* ScheduledCampaignsViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScheduledCampaignsViewDataSource.swift; path = ViewControllers/ScheduledCampaignsViewDataSource.swift; sourceTree = "<group>"; };
-		2BD182381D78AC1900EE10E0 /* ScheduledCampaignsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScheduledCampaignsTableViewCell.swift; path = ViewControllers/ScheduledCampaignsTableViewCell.swift; sourceTree = "<group>"; };
+		2BD182381D78AC1900EE10E0 /* ScheduledCampaignsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledCampaignsTableViewCell.swift; sourceTree = "<group>"; };
 		2BD4FD991D636DFB00E7E13C /* DeliveryRateReportDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeliveryRateReportDataSource.swift; path = ViewControllers/DeliveryRateReportDataSource.swift; sourceTree = "<group>"; };
-		2BD4FD9B1D636EBA00E7E13C /* DeliveryRateReportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeliveryRateReportTableViewCell.swift; path = ViewControllers/DeliveryRateReportTableViewCell.swift; sourceTree = "<group>"; };
+		2BD4FD9B1D636EBA00E7E13C /* DeliveryRateReportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryRateReportTableViewCell.swift; sourceTree = "<group>"; };
 		2BD83BAA1D41590C00A5C527 /* OnboardingContentViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewControllerDelegate.swift; sourceTree = "<group>"; };
 		2BD83BAF1D42762200A5C527 /* SegueIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueIdentifier.swift; sourceTree = "<group>"; };
 		2BDD10E21D918A6500E5ABF7 /* BasicInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicInformationViewController.swift; sourceTree = "<group>"; };
-		2BDD10E41D918B7800E5ABF7 /* BasicInformationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicInformationTableViewCell.swift; sourceTree = "<group>"; };
+		2BDD10E41D918B7800E5ABF7 /* BasicInformationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasicInformationTableViewCell.swift; path = ../BasicInformationTableViewCell.swift; sourceTree = "<group>"; };
 		2BEB2A641D9348DC009F87F9 /* MSSerializationErrorCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MSSerializationErrorCode.swift; path = ../Application/MSSerializationErrorCode.swift; sourceTree = "<group>"; };
 		2BF307431D6E26B20062DF3C /* MSResponseJSONObjectSerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSResponseJSONObjectSerializable.swift; sourceTree = "<group>"; };
 		2BF307471D6E2B740062DF3C /* MSAlamofireRequest+JSONSerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MSAlamofireRequest+JSONSerializable.swift"; sourceTree = "<group>"; };
@@ -433,21 +435,11 @@
 		241198701D1B134100330D87 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				241198711D1B134100330D87 /* LoginViewController.swift */,
-				9CB9DEF91D1B1E1100DAED48 /* OnboardingContentViewController.swift */,
-				9CB9DEFB1D1C150100DAED48 /* OnboardingViewController.swift */,
-				2BC6EF521D370B7A009F5A0B /* CampaignsListViewController.swift */,
-				249ECB6D1D3D56B300F18E74 /* SentCampaignsViewController.swift */,
-				2BC6EF4E1D370A88009F5A0B /* ScheduledCampaignsViewController.swift */,
-				2B1331061D9AE1630027D562 /* ScheduledCampaignsSegmentViewController.swift */,
-				2B8212DB1D9C4AD300AB1794 /* ScheduledCampaignsMenuOption.swift */,
-				2BF8751C1D7A1475009AA744 /* ListsViewController.swift */,
-				2B46862C1D81A98000B03D4F /* SuscribersViewController.swift */,
-				2B70F7A01D5947B800B18525 /* ReportViewController.swift */,
-				2B0EC0371D7FDB7A008BF638 /* CampaignPreviewViewController.swift */,
-				2BDD10E21D918A6500E5ABF7 /* BasicInformationViewController.swift */,
-				2B8212D51D9C050200AB1794 /* RecipientsViewController.swift */,
-				2B8212D71D9C054800AB1794 /* SendingViewController.swift */,
+				2B7B733F1D9EDDF800A593BD /* LoginSection */,
+				2B7B733E1D9EDDEB00A593BD /* AccountSection */,
+				2B7B733D1D9EDDC900A593BD /* ListsSection */,
+				2B7B733C1D9EDDBF00A593BD /* ReportsSection */,
+				2B7B733B1D9EDDB300A593BD /* ScheduledSection */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -503,6 +495,7 @@
 				24FD44A21D22EBCB003E35A4 /* NavigationDelegate.swift */,
 				2BD83BAA1D41590C00A5C527 /* OnboardingContentViewControllerDelegate.swift */,
 				2B458ADF1D88487100BD5A08 /* DataSourceContentDelegate.swift */,
+				2B7B73421D9EE40D00A593BD /* TableViewCellProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -538,21 +531,71 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		2B7B733B1D9EDDB300A593BD /* ScheduledSection */ = {
+			isa = PBXGroup;
+			children = (
+				2BC6EF4E1D370A88009F5A0B /* ScheduledCampaignsViewController.swift */,
+				2B1331061D9AE1630027D562 /* ScheduledCampaignsSegmentViewController.swift */,
+				2B8212DB1D9C4AD300AB1794 /* ScheduledCampaignsMenuOption.swift */,
+			);
+			name = ScheduledSection;
+			sourceTree = "<group>";
+		};
+		2B7B733C1D9EDDBF00A593BD /* ReportsSection */ = {
+			isa = PBXGroup;
+			children = (
+				2B8212D51D9C050200AB1794 /* RecipientsViewController.swift */,
+				2B8212D71D9C054800AB1794 /* SendingViewController.swift */,
+				2BDD10E21D918A6500E5ABF7 /* BasicInformationViewController.swift */,
+				2BDD10E41D918B7800E5ABF7 /* BasicInformationTableViewCell.swift */,
+				2B0EC0371D7FDB7A008BF638 /* CampaignPreviewViewController.swift */,
+				2B70F7A01D5947B800B18525 /* ReportViewController.swift */,
+				2BD4FD9B1D636EBA00E7E13C /* DeliveryRateReportTableViewCell.swift */,
+				2BC6EF521D370B7A009F5A0B /* CampaignsListViewController.swift */,
+				249ECB6D1D3D56B300F18E74 /* SentCampaignsViewController.swift */,
+				2439F31A1D352BD500949C5D /* SentCampaignsTableViewCell.swift */,
+				2BD182381D78AC1900EE10E0 /* ScheduledCampaignsTableViewCell.swift */,
+			);
+			name = ReportsSection;
+			sourceTree = "<group>";
+		};
+		2B7B733D1D9EDDC900A593BD /* ListsSection */ = {
+			isa = PBXGroup;
+			children = (
+				2B46862C1D81A98000B03D4F /* SuscribersViewController.swift */,
+				2B4686301D81ACC000B03D4F /* SuscribersTableViewCell.swift */,
+				2BF8751C1D7A1475009AA744 /* ListsViewController.swift */,
+				2B46863E1D8284A600B03D4F /* ListsTableViewCell.swift */,
+			);
+			name = ListsSection;
+			sourceTree = "<group>";
+		};
+		2B7B733E1D9EDDEB00A593BD /* AccountSection */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = AccountSection;
+			sourceTree = "<group>";
+		};
+		2B7B733F1D9EDDF800A593BD /* LoginSection */ = {
+			isa = PBXGroup;
+			children = (
+				241198711D1B134100330D87 /* LoginViewController.swift */,
+				9CB9DEF91D1B1E1100DAED48 /* OnboardingContentViewController.swift */,
+				9CB9DEFB1D1C150100DAED48 /* OnboardingViewController.swift */,
+			);
+			name = LoginSection;
+			sourceTree = "<group>";
+		};
 		2BD182401D78D33E00EE10E0 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
 				C226956F1D4297D000059959 /* OnboardingViewDataSource.swift */,
 				2BD4FD991D636DFB00E7E13C /* DeliveryRateReportDataSource.swift */,
-				2BD4FD9B1D636EBA00E7E13C /* DeliveryRateReportTableViewCell.swift */,
 				249ECB6F1D3E795800F18E74 /* SentCampaignsViewDataSource.swift */,
-				2439F31A1D352BD500949C5D /* SentCampaignsTableViewCell.swift */,
 				2BD182361D78AA1A00EE10E0 /* ScheduledCampaignsViewDataSource.swift */,
-				2BD182381D78AC1900EE10E0 /* ScheduledCampaignsTableViewCell.swift */,
 				2BF875181D7A135F009AA744 /* ListsViewDataSource.swift */,
-				2B46863E1D8284A600B03D4F /* ListsTableViewCell.swift */,
 				2B46862E1D81AC1D00B03D4F /* SuscribersViewDataSource.swift */,
-				2B4686301D81ACC000B03D4F /* SuscribersTableViewCell.swift */,
-				2BDD10E41D918B7800E5ABF7 /* BasicInformationTableViewCell.swift */,
 				2BA4FDBA1D91E12B00743552 /* BasicInformationDataSource.swift */,
 			);
 			name = DataSources;
@@ -870,6 +913,7 @@
 				9CD2FC6A1D2445E800D4C9F8 /* LoginService.swift in Sources */,
 				2BD4FD9A1D636DFB00E7E13C /* DeliveryRateReportDataSource.swift in Sources */,
 				2B46863D1D827A6700B03D4F /* SuscriberViewModel.swift in Sources */,
+				2B7B73431D9EE40D00A593BD /* TableViewCellProtocol.swift in Sources */,
 				2B7EF64C1D4B289C008D4CDD /* Link.swift in Sources */,
 				24F0FB6F1D1B2D5C00360346 /* User.swift in Sources */,
 				2B7EF6541D4C6425008D4CDD /* CampaignStatus.swift in Sources */,
