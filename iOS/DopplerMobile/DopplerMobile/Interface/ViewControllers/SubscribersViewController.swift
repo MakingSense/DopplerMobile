@@ -39,4 +39,14 @@ class SubscribersViewController: UIViewController, UITableViewDelegate, DataSour
         dataSource?.items = content as! [SubscriberViewModel]
         tblSuscribers.reloadData()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if let selectedCellIndex = self.tblSuscribers.indexPathForSelectedRow
+        {
+            let subscriber = self.dataSource?.items[(selectedCellIndex as NSIndexPath).row]
+            let subcribersInformationViewController = segue.destination as! SubscriberInformationViewController            
+            subcribersInformationViewController.item = subscriber
+        }
+    }
 }

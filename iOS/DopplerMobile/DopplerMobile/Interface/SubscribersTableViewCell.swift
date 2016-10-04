@@ -11,14 +11,15 @@ import UIKit
 class SubscribersTableViewCell : UITableViewCell
 {
     // MARK: Properties
-    @IBOutlet weak var lblSuscriberEmail: UILabel!
-    @IBOutlet weak var lblSuscriberName: UILabel!
+    
+    @IBOutlet weak var lblSubscriberEmail: UILabel!
+    @IBOutlet weak var lblSubscriberName: UILabel!
     static let identifier = "SuscribersCell"
     
     // MARK: Actions
     func configure(_ suscriberViewModel: SubscriberViewModel)
     {
-        self.lblSuscriberEmail.text = suscriberViewModel.email
-        self.lblSuscriberName.text = "\(suscriberViewModel.name!) \(suscriberViewModel.lastname!)"
+        self.lblSubscriberEmail.text = suscriberViewModel.email
+        self.lblSubscriberName.text = "\(suscriberViewModel.name ?? "-") \(suscriberViewModel.lastname ?? "-")"
     }
 }

@@ -56,3 +56,13 @@
 "REPORTS_SUBSCRIBERS" = "Subscribers";
 "REPORTS_LIST" = "List";
 "REPORTS_LISTS" = "Lists";
+
+//FIELDS
+"FIELDS_FIRSTNAME" = "First Name";
+"FIELDS_LASTNAME" =  "Last Name";
+"FIELDS_BIRTHDATE" = "Birth Date";
+"FIELDS_GENDER" =  "Gender";
+"FIELDS_COUNTRY" = "Country";
+
+//LISTS
+"LISTS_SUBSCRIBER_TYPE" = "Subscriber";

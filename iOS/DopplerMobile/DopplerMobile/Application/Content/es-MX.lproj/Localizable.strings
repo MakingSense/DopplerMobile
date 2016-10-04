@@ -57,3 +57,13 @@
 "REPORTS_SUBSCRIBERS" = "Suscriptores";
 "REPORTS_LIST" = "Lista";
 "REPORTS_LISTS" = "Listas";
+
+//FIELDS
+"FIELDS_FIRSTNAME" = "Nombre";
+"FIELDS_LASTNAME" =  "Apellido";
+"FIELDS_BIRTHDATE" = "Fecha de Nacimiento";
+"FIELDS_GENDER" =  "Sexo";
+"FIELDS_COUNTRY" = "Pais";
+
+//LISTS
+"LISTS_SUBSCRIBER_TYPE" = "Suscriptor";

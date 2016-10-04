@@ -33,45 +33,82 @@ open class Subscriber: MSResponseJSONObjectSerializable
         self.email = json["email"].string
         if (json["fields"].array) != nil
         {
-            self.fields = [Field]()
-            for field in json["fields"].array! {
-                fields?.append(Field(json: field)!)
+            self.fields = initFieldArrayWithDefaults()
+            for field in json["fields"].array!
+            {
+                processAndAppendFields(field: Field(json: field)!)
             }
-            getInformationFromFields()
         }
     }
     
-    fileprivate func getInformationFromFields()
+    fileprivate func processAndAppendFields(field: Field)
     {
-        if(fields != nil)
+        switch field.type!
         {
-            for field in fields!
+        case .string:
+            if(field.name == "FIRSTNAME")
             {
-                switch field.type!
-                {
-                case .string:
-                    if(field.name == "FIRSTNAME")
-                    {
-                        name = field.value!
-                    }
-                    else if(field.name == "LASTNAME")
-                    {
-                        lastname = field.value!
-                    }
-                    break
-                case .date:
-                    birthDate = field.value.toNSDateWithFormat(DateFormatEnum.yyyy_MM_ddTHH_mm_ss_SSSZ.pattern)
-                    break
-                case .gender:
-                    gender = field.value
-                    break
-                case .country:
-                    country = field.value
-                    break
-                case .boolean, .number, .email:
-                    break
-                }
+                name = field.value!
+                field.name = "FIELDS_FIRSTNAME".localized
+                fields?[0] = field
             }
+            else if(field.name == "LASTNAME")
+            {
+                lastname = field.value!
+                field.name = "FIELDS_LASTNAME".localized
+                fields?[1] = field
+            }
+            else
+            {
+                fields?.append(field)
+            }
+            break
+        case .date:
+            let date = field.value.toNSDateWithFormat(DateFormatEnum.yyyy_MM_ddTHH_mm_ss_SSSZ.pattern)
+            if(field.name == "BIRTHDATE")
+            {
+                birthDate = date
+                field.name = "FIELDS_BIRTHDATE".localized
+                fields?[2] = field
+            }
+            else
+            {
+                fields?.append(field)
+            }
+            break
+        case .gender:
+            if(field.name == "GENDER")
+            {
+                gender = field.value
+                field.name = "FIELDS_GENDER".localized
+                fields?[4] = field
+            }
+            else
+            {
+                fields?.append(field)
+            }
+            break
+        case .country:
+            if(field.name == "COUNTRY")
+            {
+                country = field.value
+                field.name = "FIELDS_COUNTRY".localized
+            }
+            fields?.append(field)
+            break
+        case .boolean, .number, .email:
+            fields?.append(field)
+            break
         }
+    }
+    
+    func initFieldArrayWithDefaults() -> [Field]
+    {
+        let firstName = Field(name: "FIELDS_FIRSTNAME".localized, value: "--", predefined: true, isPrivate: false, readonly: true, type: FieldType.string)
+        let lastName = Field(name: "FIELDS_LASTNAME".localized, value: "--", predefined: true, isPrivate: false, readonly: true, type: FieldType.string)
+        let birthdate = Field(name: "FIELDS_BIRTHDATE".localized, value: "--", predefined: true, isPrivate: false, readonly: true, type: FieldType.date)
+        let gender = Field(name: "FIELDS_GENDER".localized, value: "--", predefined: true, isPrivate: false, readonly: true, type: FieldType.gender)
+        
+        return [firstName, lastName, birthdate, gender]
     }
 }
