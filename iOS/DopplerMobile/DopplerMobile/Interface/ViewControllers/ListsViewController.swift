@@ -29,9 +29,9 @@ class ListsViewController: UIViewController, UITableViewDelegate, DataSourceCont
     {
         if let selectedCellIndex = self.tblLists.indexPathForSelectedRow
         {
-            let suscribersList = self.dataSource!.items[(selectedCellIndex as NSIndexPath).row]
-            let suscribersViewController = segue.destination as! SuscribersViewController
-            suscribersViewController.listItem = suscribersList
+            let subscribersList = self.dataSource!.items[(selectedCellIndex as NSIndexPath).row]
+            let subscribersViewController = segue.destination as! SubscribersViewController
+            subscribersViewController.listItem = subscribersList
         }
     }
     

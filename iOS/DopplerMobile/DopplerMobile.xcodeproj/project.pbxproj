@@ -36,19 +36,21 @@
 		2B458AE01D88487100BD5A08 /* DataSourceContentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B458ADF1D88487100BD5A08 /* DataSourceContentDelegate.swift */; };
 		2B458AE21D88530E00BD5A08 /* ScheduledCampaignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B458AE11D88530E00BD5A08 /* ScheduledCampaignViewModel.swift */; };
 		2B458AE41D88561600BD5A08 /* CampaignListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B458AE31D88561600BD5A08 /* CampaignListViewModel.swift */; };
-		2B46862D1D81A98000B03D4F /* SuscribersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B46862C1D81A98000B03D4F /* SuscribersViewController.swift */; };
-		2B46862F1D81AC1D00B03D4F /* SuscribersViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B46862E1D81AC1D00B03D4F /* SuscribersViewDataSource.swift */; };
-		2B4686311D81ACC000B03D4F /* SuscribersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4686301D81ACC000B03D4F /* SuscribersTableViewCell.swift */; };
-		2B4686331D81B28100B03D4F /* SuscribersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4686321D81B28100B03D4F /* SuscribersListViewModel.swift */; };
-		2B4686351D81B88E00B03D4F /* Suscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4686341D81B88E00B03D4F /* Suscriber.swift */; };
+		2B46862D1D81A98000B03D4F /* SubscribersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B46862C1D81A98000B03D4F /* SubscribersViewController.swift */; };
+		2B46862F1D81AC1D00B03D4F /* SubscribersViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B46862E1D81AC1D00B03D4F /* SubscribersViewDataSource.swift */; };
+		2B4686311D81ACC000B03D4F /* SubscribersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4686301D81ACC000B03D4F /* SubscribersTableViewCell.swift */; };
+		2B4686331D81B28100B03D4F /* SubscribersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4686321D81B28100B03D4F /* SubscribersListViewModel.swift */; };
+		2B4686351D81B88E00B03D4F /* Subscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4686341D81B88E00B03D4F /* Subscriber.swift */; };
 		2B4686371D81B97B00B03D4F /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4686361D81B97B00B03D4F /* Field.swift */; };
 		2B4686391D81C6D200B03D4F /* FieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4686381D81C6D200B03D4F /* FieldType.swift */; };
 		2B46863B1D81EAB600B03D4F /* DateFormatEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B46863A1D81EAB600B03D4F /* DateFormatEnum.swift */; };
-		2B46863D1D827A6700B03D4F /* SuscriberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B46863C1D827A6700B03D4F /* SuscriberViewModel.swift */; };
+		2B46863D1D827A6700B03D4F /* SubscriberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B46863C1D827A6700B03D4F /* SubscriberViewModel.swift */; };
 		2B46863F1D8284A600B03D4F /* ListsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B46863E1D8284A600B03D4F /* ListsTableViewCell.swift */; };
 		2B4C32131D70A1180076DF3B /* NotificationIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C32121D70A1180076DF3B /* NotificationIdentifier.swift */; };
 		2B4C32151D70ABD50076DF3B /* DMApiManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C32141D70ABD50076DF3B /* DMApiManagerProtocol.swift */; };
 		2B4DCA0F1D6FBB150078D51B /* MSHttpStatusEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4DCA0E1D6FBB150078D51B /* MSHttpStatusEnum.swift */; };
+		2B6F0C3A1DA42888006541E2 /* RecipientsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6F0C391DA42888006541E2 /* RecipientsDataSource.swift */; };
+		2B6F0C3C1DA428D4006541E2 /* RecipientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6F0C3B1DA428D4006541E2 /* RecipientsTableViewCell.swift */; };
 		2B703F1B1D3D304E00A19E36 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B703F1A1D3D304E00A19E36 /* String.swift */; };
 		2B703F1D1D3D51D900A19E36 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B703F1C1D3D51D900A19E36 /* Optional.swift */; };
 		2B703F1F1D3D521E00A19E36 /* StringType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B703F1E1D3D521E00A19E36 /* StringType.swift */; };
@@ -84,6 +86,8 @@
 		2BD83BB01D42762200A5C527 /* SegueIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD83BAF1D42762200A5C527 /* SegueIdentifier.swift */; };
 		2BDD10E31D918A6500E5ABF7 /* BasicInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDD10E21D918A6500E5ABF7 /* BasicInformationViewController.swift */; };
 		2BDD10E51D918B7800E5ABF7 /* BasicInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDD10E41D918B7800E5ABF7 /* BasicInformationTableViewCell.swift */; };
+		2BDE5DF11DA57974006AE5E5 /* CampaignRecipient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDE5DF01DA57974006AE5E5 /* CampaignRecipient.swift */; };
+		2BDE5DF31DA59413006AE5E5 /* RecipientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDE5DF21DA59413006AE5E5 /* RecipientsViewModel.swift */; };
 		2BEB2A651D9348DC009F87F9 /* MSSerializationErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB2A641D9348DC009F87F9 /* MSSerializationErrorCode.swift */; };
 		2BF307441D6E26B20062DF3C /* MSResponseJSONObjectSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF307431D6E26B20062DF3C /* MSResponseJSONObjectSerializable.swift */; };
 		2BF307481D6E2B740062DF3C /* MSAlamofireRequest+JSONSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF307471D6E2B740062DF3C /* MSAlamofireRequest+JSONSerializable.swift */; };
@@ -153,6 +157,7 @@
 		24FD44A21D22EBCB003E35A4 /* NavigationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationDelegate.swift; sourceTree = "<group>"; };
 		24FD44A81D244E12003E35A4 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		24FD44AF1D245DC3003E35A4 /* SimpleCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCommand.swift; sourceTree = "<group>"; };
+		2B053BFB1DA5AC67005DDBAC /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Scheduled.strings"; sourceTree = "<group>"; };
 		2B057FD31D7A21170021F748 /* SuscribersService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuscribersService.swift; sourceTree = "<group>"; };
 		2B057FD51D7A281F0021F748 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		2B057FD71D7A297E0021F748 /* ListStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListStatus.swift; sourceTree = "<group>"; };
@@ -162,24 +167,25 @@
 		2B0EC0391D7FE71A008BF638 /* CampaignPreviewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignPreviewViewModel.swift; sourceTree = "<group>"; };
 		2B1331061D9AE1630027D562 /* ScheduledCampaignsSegmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledCampaignsSegmentViewController.swift; sourceTree = "<group>"; };
 		2B13310B1D9AF52B0027D562 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Scheduled.storyboard; sourceTree = "<group>"; };
-		2B13310E1D9AF59E0027D562 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Scheduled.strings"; sourceTree = "<group>"; };
 		2B3860291D9D632F00739B72 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		2B458ADF1D88487100BD5A08 /* DataSourceContentDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceContentDelegate.swift; sourceTree = "<group>"; };
 		2B458AE11D88530E00BD5A08 /* ScheduledCampaignViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledCampaignViewModel.swift; sourceTree = "<group>"; };
 		2B458AE31D88561600BD5A08 /* CampaignListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignListViewModel.swift; sourceTree = "<group>"; };
-		2B46862C1D81A98000B03D4F /* SuscribersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuscribersViewController.swift; sourceTree = "<group>"; };
-		2B46862E1D81AC1D00B03D4F /* SuscribersViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuscribersViewDataSource.swift; sourceTree = "<group>"; };
-		2B4686301D81ACC000B03D4F /* SuscribersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SuscribersTableViewCell.swift; path = ../SuscribersTableViewCell.swift; sourceTree = "<group>"; };
-		2B4686321D81B28100B03D4F /* SuscribersListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuscribersListViewModel.swift; sourceTree = "<group>"; };
-		2B4686341D81B88E00B03D4F /* Suscriber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Suscriber.swift; sourceTree = "<group>"; };
+		2B46862C1D81A98000B03D4F /* SubscribersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscribersViewController.swift; sourceTree = "<group>"; };
+		2B46862E1D81AC1D00B03D4F /* SubscribersViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscribersViewDataSource.swift; sourceTree = "<group>"; };
+		2B4686301D81ACC000B03D4F /* SubscribersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscribersTableViewCell.swift; path = ../SubscribersTableViewCell.swift; sourceTree = "<group>"; };
+		2B4686321D81B28100B03D4F /* SubscribersListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscribersListViewModel.swift; sourceTree = "<group>"; };
+		2B4686341D81B88E00B03D4F /* Subscriber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscriber.swift; sourceTree = "<group>"; };
 		2B4686361D81B97B00B03D4F /* Field.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
 		2B4686381D81C6D200B03D4F /* FieldType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldType.swift; sourceTree = "<group>"; };
 		2B46863A1D81EAB600B03D4F /* DateFormatEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatEnum.swift; sourceTree = "<group>"; };
-		2B46863C1D827A6700B03D4F /* SuscriberViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuscriberViewModel.swift; sourceTree = "<group>"; };
+		2B46863C1D827A6700B03D4F /* SubscriberViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriberViewModel.swift; sourceTree = "<group>"; };
 		2B46863E1D8284A600B03D4F /* ListsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListsTableViewCell.swift; path = ../ListsTableViewCell.swift; sourceTree = "<group>"; };
 		2B4C32121D70A1180076DF3B /* NotificationIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationIdentifier.swift; sourceTree = "<group>"; };
 		2B4C32141D70ABD50076DF3B /* DMApiManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DMApiManagerProtocol.swift; path = ../Infrastructure/DMApiManagerProtocol.swift; sourceTree = "<group>"; };
 		2B4DCA0E1D6FBB150078D51B /* MSHttpStatusEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSHttpStatusEnum.swift; sourceTree = "<group>"; };
+		2B6F0C391DA42888006541E2 /* RecipientsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipientsDataSource.swift; sourceTree = "<group>"; };
+		2B6F0C3B1DA428D4006541E2 /* RecipientsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipientsTableViewCell.swift; sourceTree = "<group>"; };
 		2B703F1A1D3D304E00A19E36 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		2B703F1C1D3D51D900A19E36 /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		2B703F1E1D3D521E00A19E36 /* StringType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringType.swift; sourceTree = "<group>"; };
@@ -219,6 +225,8 @@
 		2BD83BAF1D42762200A5C527 /* SegueIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueIdentifier.swift; sourceTree = "<group>"; };
 		2BDD10E21D918A6500E5ABF7 /* BasicInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicInformationViewController.swift; sourceTree = "<group>"; };
 		2BDD10E41D918B7800E5ABF7 /* BasicInformationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasicInformationTableViewCell.swift; path = ../BasicInformationTableViewCell.swift; sourceTree = "<group>"; };
+		2BDE5DF01DA57974006AE5E5 /* CampaignRecipient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignRecipient.swift; sourceTree = "<group>"; };
+		2BDE5DF21DA59413006AE5E5 /* RecipientsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipientsViewModel.swift; sourceTree = "<group>"; };
 		2BEB2A641D9348DC009F87F9 /* MSSerializationErrorCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MSSerializationErrorCode.swift; path = ../Application/MSSerializationErrorCode.swift; sourceTree = "<group>"; };
 		2BF307431D6E26B20062DF3C /* MSResponseJSONObjectSerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSResponseJSONObjectSerializable.swift; sourceTree = "<group>"; };
 		2BF307471D6E2B740062DF3C /* MSAlamofireRequest+JSONSerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MSAlamofireRequest+JSONSerializable.swift"; sourceTree = "<group>"; };
@@ -369,9 +377,10 @@
 				1FDB0BDA1D23038B007544C3 /* OnboardingContentViewModel.swift */,
 				2B057FD91D7A2F410021F748 /* ListViewModel.swift */,
 				2B057FDB1D7A31300021F748 /* ListDetailViewModel.swift */,
-				2B4686321D81B28100B03D4F /* SuscribersListViewModel.swift */,
-				2B46863C1D827A6700B03D4F /* SuscriberViewModel.swift */,
+				2B4686321D81B28100B03D4F /* SubscribersListViewModel.swift */,
+				2B46863C1D827A6700B03D4F /* SubscriberViewModel.swift */,
 				2B0EC0391D7FE71A008BF638 /* CampaignPreviewViewModel.swift */,
+				2BDE5DF21DA59413006AE5E5 /* RecipientsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -391,9 +400,10 @@
 				2B7EF64B1D4B289C008D4CDD /* Link.swift */,
 				2B7EF6431D4B229E008D4CDD /* Campaign.swift */,
 				2B7EF6491D4B23DB008D4CDD /* SentCampaignReport.swift */,
+				2BDE5DF01DA57974006AE5E5 /* CampaignRecipient.swift */,
 				24F0FB6E1D1B2D5C00360346 /* User.swift */,
 				2B057FD51D7A281F0021F748 /* List.swift */,
-				2B4686341D81B88E00B03D4F /* Suscriber.swift */,
+				2B4686341D81B88E00B03D4F /* Subscriber.swift */,
 				2B4686361D81B97B00B03D4F /* Field.swift */,
 				2BA4FDB81D91D64D00743552 /* ListItem.swift */,
 			);
@@ -534,7 +544,12 @@
 		2B7B733B1D9EDDB300A593BD /* ScheduledSection */ = {
 			isa = PBXGroup;
 			children = (
+				2BDD10E21D918A6500E5ABF7 /* BasicInformationViewController.swift */,
+				2BDD10E41D918B7800E5ABF7 /* BasicInformationTableViewCell.swift */,
+				2B8212D51D9C050200AB1794 /* RecipientsViewController.swift */,
+				2B6F0C3B1DA428D4006541E2 /* RecipientsTableViewCell.swift */,
 				2BC6EF4E1D370A88009F5A0B /* ScheduledCampaignsViewController.swift */,
+				2BD182381D78AC1900EE10E0 /* ScheduledCampaignsTableViewCell.swift */,
 				2B1331061D9AE1630027D562 /* ScheduledCampaignsSegmentViewController.swift */,
 				2B8212DB1D9C4AD300AB1794 /* ScheduledCampaignsMenuOption.swift */,
 			);
@@ -544,17 +559,13 @@
 		2B7B733C1D9EDDBF00A593BD /* ReportsSection */ = {
 			isa = PBXGroup;
 			children = (
-				2B8212D51D9C050200AB1794 /* RecipientsViewController.swift */,
 				2B8212D71D9C054800AB1794 /* SendingViewController.swift */,
-				2BDD10E21D918A6500E5ABF7 /* BasicInformationViewController.swift */,
-				2BDD10E41D918B7800E5ABF7 /* BasicInformationTableViewCell.swift */,
 				2B0EC0371D7FDB7A008BF638 /* CampaignPreviewViewController.swift */,
 				2B70F7A01D5947B800B18525 /* ReportViewController.swift */,
 				2BD4FD9B1D636EBA00E7E13C /* DeliveryRateReportTableViewCell.swift */,
 				2BC6EF521D370B7A009F5A0B /* CampaignsListViewController.swift */,
 				249ECB6D1D3D56B300F18E74 /* SentCampaignsViewController.swift */,
 				2439F31A1D352BD500949C5D /* SentCampaignsTableViewCell.swift */,
-				2BD182381D78AC1900EE10E0 /* ScheduledCampaignsTableViewCell.swift */,
 			);
 			name = ReportsSection;
 			sourceTree = "<group>";
@@ -562,8 +573,8 @@
 		2B7B733D1D9EDDC900A593BD /* ListsSection */ = {
 			isa = PBXGroup;
 			children = (
-				2B46862C1D81A98000B03D4F /* SuscribersViewController.swift */,
-				2B4686301D81ACC000B03D4F /* SuscribersTableViewCell.swift */,
+				2B46862C1D81A98000B03D4F /* SubscribersViewController.swift */,
+				2B4686301D81ACC000B03D4F /* SubscribersTableViewCell.swift */,
 				2BF8751C1D7A1475009AA744 /* ListsViewController.swift */,
 				2B46863E1D8284A600B03D4F /* ListsTableViewCell.swift */,
 			);
@@ -595,8 +606,9 @@
 				249ECB6F1D3E795800F18E74 /* SentCampaignsViewDataSource.swift */,
 				2BD182361D78AA1A00EE10E0 /* ScheduledCampaignsViewDataSource.swift */,
 				2BF875181D7A135F009AA744 /* ListsViewDataSource.swift */,
-				2B46862E1D81AC1D00B03D4F /* SuscribersViewDataSource.swift */,
+				2B46862E1D81AC1D00B03D4F /* SubscribersViewDataSource.swift */,
 				2BA4FDBA1D91E12B00743552 /* BasicInformationDataSource.swift */,
+				2B6F0C391DA42888006541E2 /* RecipientsDataSource.swift */,
 			);
 			name = DataSources;
 			sourceTree = "<group>";
@@ -883,9 +895,11 @@
 				2B4C32151D70ABD50076DF3B /* DMApiManagerProtocol.swift in Sources */,
 				2B8212D61D9C050200AB1794 /* RecipientsViewController.swift in Sources */,
 				1FDB0BDB1D23038B007544C3 /* OnboardingContentViewModel.swift in Sources */,
+				2BDE5DF31DA59413006AE5E5 /* RecipientsViewModel.swift in Sources */,
 				241198781D1B134100330D87 /* AppDelegate.swift in Sources */,
 				2BA4FDB91D91D64D00743552 /* ListItem.swift in Sources */,
 				2B4686371D81B97B00B03D4F /* Field.swift in Sources */,
+				2B6F0C3A1DA42888006541E2 /* RecipientsDataSource.swift in Sources */,
 				2B4686391D81C6D200B03D4F /* FieldType.swift in Sources */,
 				2B458AE41D88561600BD5A08 /* CampaignListViewModel.swift in Sources */,
 				2B1331071D9AE1630027D562 /* ScheduledCampaignsSegmentViewController.swift in Sources */,
@@ -901,7 +915,7 @@
 				2439F31B1D352BD500949C5D /* SentCampaignsTableViewCell.swift in Sources */,
 				C243CBC81D9AFD32004A1FF8 /* NavigationHandler.swift in Sources */,
 				2BD4FD9C1D636EBA00E7E13C /* DeliveryRateReportTableViewCell.swift in Sources */,
-				2B46862F1D81AC1D00B03D4F /* SuscribersViewDataSource.swift in Sources */,
+				2B46862F1D81AC1D00B03D4F /* SubscribersViewDataSource.swift in Sources */,
 				24FD44A91D244E12003E35A4 /* Command.swift in Sources */,
 				249ECB6E1D3D56B300F18E74 /* SentCampaignsViewController.swift in Sources */,
 				2B7EF6501D4B2AE6008D4CDD /* CampaignsService.swift in Sources */,
@@ -912,7 +926,7 @@
 				2B7EF64E1D4B2A4D008D4CDD /* SentCampaignViewModel.swift in Sources */,
 				9CD2FC6A1D2445E800D4C9F8 /* LoginService.swift in Sources */,
 				2BD4FD9A1D636DFB00E7E13C /* DeliveryRateReportDataSource.swift in Sources */,
-				2B46863D1D827A6700B03D4F /* SuscriberViewModel.swift in Sources */,
+				2B46863D1D827A6700B03D4F /* SubscriberViewModel.swift in Sources */,
 				2B7B73431D9EE40D00A593BD /* TableViewCellProtocol.swift in Sources */,
 				2B7EF64C1D4B289C008D4CDD /* Link.swift in Sources */,
 				24F0FB6F1D1B2D5C00360346 /* User.swift in Sources */,
@@ -920,6 +934,7 @@
 				2B057FDC1D7A31300021F748 /* ListDetailViewModel.swift in Sources */,
 				2BDD10E51D918B7800E5ABF7 /* BasicInformationTableViewCell.swift in Sources */,
 				9C48461C1D3FBB81003032D5 /* StringExtension.swift in Sources */,
+				2BDE5DF11DA57974006AE5E5 /* CampaignRecipient.swift in Sources */,
 				2BF875191D7A135F009AA744 /* ListsViewDataSource.swift in Sources */,
 				2B703F1F1D3D521E00A19E36 /* StringType.swift in Sources */,
 				2BA4FDBB1D91E12B00743552 /* BasicInformationDataSource.swift in Sources */,
@@ -934,22 +949,23 @@
 				9CB9DEFC1D1C150100DAED48 /* OnboardingViewController.swift in Sources */,
 				2B703F1D1D3D51D900A19E36 /* Optional.swift in Sources */,
 				A8EF46D91D26C218000882A3 /* MSButton.swift in Sources */,
-				2B4686331D81B28100B03D4F /* SuscribersListViewModel.swift in Sources */,
+				2B6F0C3C1DA428D4006541E2 /* RecipientsTableViewCell.swift in Sources */,
+				2B4686331D81B28100B03D4F /* SubscribersListViewModel.swift in Sources */,
 				2BC6EF531D370B7A009F5A0B /* CampaignsListViewController.swift in Sources */,
 				2BA171BF1D74A9E300FBDE66 /* DefaultsKeys.swift in Sources */,
 				2439F3191D343BBC00949C5D /* CampaignViewModel.swift in Sources */,
 				2B458AE01D88487100BD5A08 /* DataSourceContentDelegate.swift in Sources */,
-				2B4686311D81ACC000B03D4F /* SuscribersTableViewCell.swift in Sources */,
+				2B4686311D81ACC000B03D4F /* SubscribersTableViewCell.swift in Sources */,
 				2B057FD81D7A297E0021F748 /* ListStatus.swift in Sources */,
 				2B7EF6451D4B229E008D4CDD /* Campaign.swift in Sources */,
 				2B46863B1D81EAB600B03D4F /* DateFormatEnum.swift in Sources */,
-				2B4686351D81B88E00B03D4F /* Suscriber.swift in Sources */,
+				2B4686351D81B88E00B03D4F /* Subscriber.swift in Sources */,
 				249ECB701D3E795800F18E74 /* SentCampaignsViewDataSource.swift in Sources */,
 				750CE2331D9EF07B008665C7 /* UIFont+DMFonts.swift in Sources */,
 				2BC6EF4F1D370A88009F5A0B /* ScheduledCampaignsViewController.swift in Sources */,
 				2BF8751D1D7A1475009AA744 /* ListsViewController.swift in Sources */,
 				2B057FD41D7A21170021F748 /* SuscribersService.swift in Sources */,
-				2B46862D1D81A98000B03D4F /* SuscribersViewController.swift in Sources */,
+				2B46862D1D81A98000B03D4F /* SubscribersViewController.swift in Sources */,
 				2BF3074E1D6E305C0062DF3C /* DMApiManager.swift in Sources */,
 				2B4DCA0F1D6FBB150078D51B /* MSHttpStatusEnum.swift in Sources */,
 				752C34D31D9E93BD00159441 /* NSMutableAttributedString.swift in Sources */,
@@ -1006,7 +1022,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				2B13310B1D9AF52B0027D562 /* Base */,
-				2B13310E1D9AF59E0027D562 /* es-MX */,
+				2B053BFB1DA5AC67005DDBAC /* es-MX */,
 			);
 			name = Scheduled.storyboard;
 			sourceTree = "<group>";

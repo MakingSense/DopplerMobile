@@ -8,13 +8,13 @@
 
 import Foundation
 
-open class SuscriberViewModel
+open class SubscriberViewModel
 {
     open fileprivate(set) var email : String
     open fileprivate(set) var name: String?
     open fileprivate(set) var lastname: String?
     
-    init(suscriber: Suscriber)
+    init(suscriber: Subscriber)
     {
         self.email = suscriber.email
         self.name =  suscriber.name

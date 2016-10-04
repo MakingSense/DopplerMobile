@@ -10,13 +10,7 @@ import UIKit
 
 extension UIColor
 {
-    class func segment() -> UIColor
-    {
-        return UIColor(hexString: "838370")
-    }
-    
-    class func segmentAccent() -> UIColor
-    {
-        return UIColor(hexString: "33AD73")
-    }
+    class func primary() -> UIColor { return UIColor(hexString: "838370") }
+    class func primaryDark() -> UIColor { return UIColor(hexString: "302100") }
+    class func accent() -> UIColor { return UIColor(hexString: "33AD73") }
 }

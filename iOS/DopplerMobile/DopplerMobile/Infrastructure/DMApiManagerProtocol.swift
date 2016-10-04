@@ -15,5 +15,6 @@ protocol DMApiManagerProtocol: class
     func getCampaigns(_ status: CampaignStatus, completionHandler: @escaping (Result<[Campaign]>) -> Void)
     func getCampaignPreview(_ campaignId: Int, completionHandler: @escaping (URL?) -> Void)
     func getSuscribersLists(_ completionHandler: @escaping (Result<[List]>) -> Void)
-    func getSuscribers(_ listId: Int, completionHandler: @escaping (Result<[Suscriber]>) -> Void)
+    func getSuscribers(_ listId: Int, completionHandler: @escaping (Result<[Subscriber]>) -> Void)
+    func getCampaignRecipients(_ campaignId: Int, completionHandler: @escaping (Result<[CampaignRecipient]>) -> Void)
 }

@@ -12,8 +12,7 @@ import PagingMenuController
 struct ScheduledCampaignsMenuOption: PagingMenuControllerCustomizable
 {
     fileprivate var campaignItem: CampaignViewModel?
-    
-    init(item: CampaignViewModel?)
+    init(item: CampaignViewModel?, viewModel: ScheduledCampaignViewModel)
     {
         self.campaignItem = item
     }
@@ -27,7 +26,9 @@ struct ScheduledCampaignsMenuOption: PagingMenuControllerCustomizable
     {
         let basicInformationViewController = BasicInformationViewController.instantiateFromStoryboard()
         basicInformationViewController.campaignItem = campaignItem
-        return [basicInformationViewController, RecipientsViewController(), SendingViewController()]
+        let recipientsViewController = RecipientsViewController.instantiateFromStoryboard()
+        recipientsViewController.campaignItem = campaignItem
+        return [basicInformationViewController, recipientsViewController, SendingViewController()]
     }
     
     fileprivate struct MenuOptions: MenuViewCustomizable
@@ -38,7 +39,7 @@ struct ScheduledCampaignsMenuOption: PagingMenuControllerCustomizable
         }
         var focusMode: MenuFocusMode
         {
-            return .underline(height: 3, color: UIColor.segmentAccent(), horizontalPadding: 0, verticalPadding: 0)
+            return .underline(height: 3, color: UIColor.accent(), horizontalPadding: 0, verticalPadding: 0)
         }
         var itemsOptions: [MenuItemViewCustomizable]
         {
@@ -51,8 +52,8 @@ struct ScheduledCampaignsMenuOption: PagingMenuControllerCustomizable
         var displayMode: MenuItemDisplayMode
         {
             return .text(title: MenuItemText(text: "SCHEDULED_CAMPAIGN_BASIC_INFO_SECTION".localized,
-                                             color: UIColor.segment(),
-                                             selectedColor: UIColor.segmentAccent(),
+                                             color: UIColor.primary(),
+                                             selectedColor: UIColor.accent(),
                                              font: UIFont.regularOf(size: 14.0),
                                              selectedFont: UIFont.regularOf(size: 14.0)))
         }
@@ -62,8 +63,8 @@ struct ScheduledCampaignsMenuOption: PagingMenuControllerCustomizable
         var displayMode: MenuItemDisplayMode
         {
             return .text(title: MenuItemText(text: "SCHEDULED_CAMPAIGN_RECIPIENTS".localized,
-                                             color: UIColor.segment(),
-                                             selectedColor: UIColor.segmentAccent(),
+                                             color: UIColor.primary(),
+                                             selectedColor: UIColor.accent(),
                                              font: UIFont.regularOf(size: 14.0),
                                              selectedFont: UIFont.regularOf(size: 14.0)))
         }
@@ -73,8 +74,8 @@ struct ScheduledCampaignsMenuOption: PagingMenuControllerCustomizable
         var displayMode: MenuItemDisplayMode
         {
             return .text(title: MenuItemText(text: "SCHEDULED_CAMPAIGN_SENDING".localized,
-                                             color: UIColor.segment(),
-                                             selectedColor: UIColor.segmentAccent(),
+                                             color: UIColor.primary(),
+                                             selectedColor: UIColor.accent(),
                                              font: UIFont.regularOf(size: 14.0),
                                              selectedFont: UIFont.regularOf(size: 14.0)))
         }

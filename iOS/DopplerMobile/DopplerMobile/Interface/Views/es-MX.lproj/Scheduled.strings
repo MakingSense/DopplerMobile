@@ -2,8 +2,14 @@
 /* Class = "UIViewController"; title = "Scheduled View Controller Scene"; ObjectID = "37k-9q-fD8"; */
 "37k-9q-fD8.title" = "Scheduled View Controller Scene";
 
-/* Class = "UITabBarItem"; title = "SCHEDULED"; ObjectID = "Cf7-rD-t0l"; */
-"Cf7-rD-t0l.title" = "PROGRAMADAS";
+/* Class = "UILabel"; text = "SUBSCRIBERS"; ObjectID = "9bs-94-kI5"; */
+"9bs-94-kI5.text" = "SUSCRIPTORES";
 
-/* Class = "UILabel"; text = "SCHEDULED CAMPAIGNS"; ObjectID = "FM8-bK-BVO"; */
+/* Class = "UITabBarItem"; title = "SCHEDULED"; ObjectID = "Cf7-rD-t0l"; */
+"Cf7-rD-t0l.title" = "CAMPAÑAS PROGRAMADAS";
+
+/* Class = "UILabel"; text = "SCHEDULED"; ObjectID = "FM8-bK-BVO"; */
 "FM8-bK-BVO.text" = "CAMPAÑAS PROGRAMADAS";
+
+/* Class = "UILabel"; text = "LISTS"; ObjectID = "HiR-Bp-LK6"; */
+"HiR-Bp-LK6.text" = "LISTAS";

@@ -13,6 +13,7 @@ enum NotificationIdentifier: String {
     case SentCampaignsNotification
     case ScheduledCampaignsNotification
     case ListsNotification
-    case SuscribersNotification
+    case SubscribersNotification
     case CampaignPreviewNotification
+    case CampaignRecipientsNotification
 }

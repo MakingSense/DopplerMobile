@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-open class Suscriber: MSResponseJSONObjectSerializable
+open class Subscriber: MSResponseJSONObjectSerializable
 {
     var email: String!
     var fields: [Field]?

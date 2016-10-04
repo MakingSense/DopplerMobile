@@ -19,9 +19,11 @@ enum DMApplicationRouter: URLRequestConvertible
     static let baseUrlString = String(describing: dict!.object(forKey: "BaseUrlString")!)
     case getToken(parameters: Parameters) //POST baseUrl/tokens
     case getCampaigns(username: String, parameters: Parameters) //GET baseUrl/accounts/{accountName}/campaigns
+    case getCampaignRecipients(username: String, campaignId: Int) //GET baseUrl/accounts/{accountName}/campaigns/{campaignId}/recipients
     case getCampaignPreview(username: String, campaignId: Int) //GET baseUrl/accounts/{accountName}/campaigns/{campaignId}/preview
     case getSuscribersLists(username: String) //GET baseUrl/accounts/{accountName}/lists
     case getSuscribers(username: String, listId: Int) //GET baseUrl/accounts/{accountName}/lists/{listId}/subscribers
+
     
     var method: Alamofire.HTTPMethod
     {
@@ -29,7 +31,7 @@ enum DMApplicationRouter: URLRequestConvertible
         {
         case .getToken:
             return .post
-        case .getCampaigns, .getCampaignPreview, .getSuscribersLists, .getSuscribers:
+        case .getCampaigns, .getCampaignPreview, .getSuscribersLists, .getSuscribers, .getCampaignRecipients:
             return .get
         }
     }
@@ -48,6 +50,8 @@ enum DMApplicationRouter: URLRequestConvertible
             return "/accounts/\(username)/lists"
         case .getSuscribers(let username, let listId):
             return "/accounts/\(username)/lists/\(listId)/subscribers"
+        case .getCampaignRecipients(let username, let campaignId):
+            return "/accounts/\(username)/campaigns/\(campaignId)/recipients"
         }
     }
     

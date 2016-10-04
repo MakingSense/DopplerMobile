@@ -12,6 +12,7 @@ import PagingMenuController
 class ScheduledCampaignsSegmentViewController: UIViewController
 {
     var campaignItem: CampaignViewModel?
+    var scheduledCampaignViewModel: ScheduledCampaignViewModel?
     @IBOutlet weak var lblCampaignType: UILabel!
     @IBOutlet weak var lblCampaignName: UILabel!
     
@@ -20,7 +21,7 @@ class ScheduledCampaignsSegmentViewController: UIViewController
         var options: PagingMenuControllerCustomizable
         {
             let options: PagingMenuControllerCustomizable
-            options = ScheduledCampaignsMenuOption(item: campaignItem)
+            options = ScheduledCampaignsMenuOption(item: campaignItem, viewModel: scheduledCampaignViewModel!)
             return options
         }
         let pagingMenuController = self.childViewControllers.first as! PagingMenuController

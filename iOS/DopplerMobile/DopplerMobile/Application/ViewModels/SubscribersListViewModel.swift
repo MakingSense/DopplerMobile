@@ -8,7 +8,7 @@
 
 import Foundation
 
-open class SuscribersListViewModel
+open class SubscribersListViewModel
 {
     fileprivate var suscribersService: SuscribersService
     fileprivate var contentDelegate: DataSourceContentDelegate?
@@ -17,18 +17,18 @@ open class SuscribersListViewModel
     {
         self.contentDelegate = contentDelegate
         self.suscribersService = suscribersService
-        self.suscribersService.downloadSuscribers(listId, notification: NotificationIdentifier.SuscribersNotification.rawValue)
-        NotificationCenter.default.addObserver(self, selector: #selector(SuscribersListViewModel.OnNotificationArrived(_:)), name:NSNotification.Name(rawValue: NotificationIdentifier.SuscribersNotification.rawValue), object: nil)
+        self.suscribersService.downloadSuscribers(listId, notification: NotificationIdentifier.SubscribersNotification.rawValue)
+        NotificationCenter.default.addObserver(self, selector: #selector(SubscribersListViewModel.OnNotificationArrived(_:)), name:NSNotification.Name(rawValue: NotificationIdentifier.SubscribersNotification.rawValue), object: nil)
     }
     
     @objc func OnNotificationArrived(_ notification: Notification)
     {
         if(notification.object != nil)
         {
-            var suscribers = [SuscriberViewModel]()
-            let lists = notification.object as! [Suscriber]
+            var suscribers = [SubscriberViewModel]()
+            let lists = notification.object as! [Subscriber]
             for list in lists {
-                suscribers.append(SuscriberViewModel(suscriber: list))
+                suscribers.append(SubscriberViewModel(suscriber: list))
             }
             contentDelegate?.updateContent(suscribers as AnyObject)
         }

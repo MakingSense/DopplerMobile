@@ -8,14 +8,14 @@
 
 import UIKit
 
-class SuscribersViewController: UIViewController, UITableViewDelegate, DataSourceContentDelegate
+class SubscribersViewController: UIViewController, UITableViewDelegate, DataSourceContentDelegate
 {
     // MARK: Properties
     @IBOutlet weak var lblListSuscribersCount: UILabel!
     @IBOutlet weak var lblListTitle: UILabel!
     @IBOutlet weak var tblSuscribers: UITableView!
-    var dataSource : SuscribersViewDataSource?
-    var suscribersListViewModel: SuscribersListViewModel!
+    var dataSource : SubscribersViewDataSource?
+    var suscribersListViewModel: SubscribersListViewModel!
     var listItem: ListDetailViewModel?
     
     // MARK: Actions
@@ -28,15 +28,15 @@ class SuscribersViewController: UIViewController, UITableViewDelegate, DataSourc
     
     override func viewWillAppear(_ animated: Bool)
     {
-        self.suscribersListViewModel = SuscribersListViewModel(suscribersService: SuscribersService(), contentDelegate: self, listId: (listItem?.listId!)!)
-        self.dataSource = SuscribersViewDataSource()
+        self.suscribersListViewModel = SubscribersListViewModel(suscribersService: SuscribersService(), contentDelegate: self, listId: (listItem?.listId!)!)
+        self.dataSource = SubscribersViewDataSource()
         self.tblSuscribers.dataSource = self.dataSource
         self.lblListTitle.text = listItem?.name
         self.lblListSuscribersCount.text = String((listItem?.subscribersCount)!)
     }
     
     func updateContent(_ content: AnyObject) {
-        dataSource?.items = content as! [SuscriberViewModel]
+        dataSource?.items = content as! [SubscriberViewModel]
         tblSuscribers.reloadData()
     }
 }

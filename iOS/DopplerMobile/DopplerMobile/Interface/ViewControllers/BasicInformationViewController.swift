@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BasicInformationViewController: UIViewController, UITableViewDelegate, DataSourceContentDelegate
+class BasicInformationViewController: UIViewController, UITableViewDelegate
 {
     // MARK: Properties
     var dataSource : BasicInformationDataSource?
@@ -26,12 +26,8 @@ class BasicInformationViewController: UIViewController, UITableViewDelegate, Dat
         self.navigationItem.title = "SCHEDULED_CAMPAIGNS_TEXT".localized
         self.dataSource = BasicInformationDataSource(items: campaignItem?.campaignBasicInformation!)
         self.tblBasicInformation.dataSource = self.dataSource
+        self.dataSource?.items = campaignItem?.campaignBasicInformation
+        self.tblBasicInformation.reloadData()
         self.tblBasicInformation.delegate = self
-    }
-    
-    func updateContent(_ content: AnyObject) {
-        let campaignViewModel = content as! CampaignViewModel
-        self.dataSource?.items = campaignViewModel.campaignBasicInformation
-        tblBasicInformation.reloadData()
     }
 }

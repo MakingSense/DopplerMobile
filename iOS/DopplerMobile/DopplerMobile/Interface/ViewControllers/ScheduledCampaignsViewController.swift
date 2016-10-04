@@ -23,7 +23,6 @@ class ScheduledCampaignsViewController: UIViewController, UITableViewDelegate, D
         self.scheduledCampaignViewModel = ScheduledCampaignViewModel(campaignsService: CampaignsService(), contentDelegate: self)
         self.dataSource = ScheduledCampaignsViewDataSource()
         self.tblScheduledCampaigns.dataSource = self.dataSource
-        self.scheduledCampaignViewModel = ScheduledCampaignViewModel(campaignsService: CampaignsService(), contentDelegate: self)
     }
     
     // MARK: - Segues
@@ -34,6 +33,7 @@ class ScheduledCampaignsViewController: UIViewController, UITableViewDelegate, D
             let campaignItem = self.dataSource!.items[(selectedCellIndex as NSIndexPath).row]
             let scheduledSegmentViewController = segue.destination as! ScheduledCampaignsSegmentViewController
             scheduledSegmentViewController.campaignItem = campaignItem
+            scheduledSegmentViewController.scheduledCampaignViewModel = scheduledCampaignViewModel
         }
     }
     

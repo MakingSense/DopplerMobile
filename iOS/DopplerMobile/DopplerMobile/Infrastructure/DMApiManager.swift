@@ -68,11 +68,21 @@ class DMApiManager: DMApiManagerProtocol
     }
     
     //Get Suscribers Call.
-    func getSuscribers(_ listId: Int, completionHandler: @escaping (Result<[Suscriber]>) -> Void)
+    func getSuscribers(_ listId: Int, completionHandler: @escaping (Result<[Subscriber]>) -> Void)
     {
         Alamofire.request(DMApplicationRouter.getSuscribers(username: Defaults[.username]!, listId: listId))
             .responseArray
-            {(response: DataResponse<[Suscriber]>) in
+            {(response: DataResponse<[Subscriber]>) in
+                completionHandler(response.result)
+        }
+    }
+    
+    //Get Campaign Recipients.
+    func getCampaignRecipients(_ campaignId: Int, completionHandler: @escaping (Result<[CampaignRecipient]>) -> Void)
+    {
+        Alamofire.request(DMApplicationRouter.getCampaignRecipients(username: Defaults[.username]!, campaignId: campaignId))
+            .responseArray
+            {(response: DataResponse<[CampaignRecipient]>) in
                 completionHandler(response.result)
         }
     }

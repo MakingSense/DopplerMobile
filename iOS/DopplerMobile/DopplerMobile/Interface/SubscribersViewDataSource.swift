@@ -8,10 +8,10 @@
 
 import UIKit
 
-class SuscribersViewDataSource: NSObject, UITableViewDataSource
+class SubscribersViewDataSource: NSObject, UITableViewDataSource
 {
     // MARK: Properties
-    var items = [SuscriberViewModel]()
+    var items = [SubscriberViewModel]()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -20,7 +20,7 @@ class SuscribersViewDataSource: NSObject, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: SuscribersTableViewCell.identifier)! as! SuscribersTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: SubscribersTableViewCell.identifier)! as! SubscribersTableViewCell
         cell.configure(self.items[indexPath.row])
         return cell
     }
