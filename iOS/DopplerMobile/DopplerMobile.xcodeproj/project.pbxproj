@@ -35,6 +35,9 @@
 		2B0EC03A1D7FE71A008BF638 /* CampaignPreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EC0391D7FE71A008BF638 /* CampaignPreviewViewModel.swift */; };
 		2B1331071D9AE1630027D562 /* ScheduledCampaignsSegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1331061D9AE1630027D562 /* ScheduledCampaignsSegmentViewController.swift */; };
 		2B13310C1D9AF52B0027D562 /* Scheduled.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B13310A1D9AF52B0027D562 /* Scheduled.storyboard */; };
+		2B1DDC921DA8303A00F5632E /* ReportSegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1DDC911DA8303A00F5632E /* ReportSegmentViewController.swift */; };
+		2B1DDC961DA830B100F5632E /* ReportMenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1DDC951DA830B100F5632E /* ReportMenuOption.swift */; };
+		2B1DDC981DA8352900F5632E /* ReportEmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1DDC971DA8352900F5632E /* ReportEmptyViewController.swift */; };
 		2B38602A1D9D632F00739B72 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3860291D9D632F00739B72 /* UIColor.swift */; };
 		2B458AE01D88487100BD5A08 /* DataSourceContentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B458ADF1D88487100BD5A08 /* DataSourceContentDelegate.swift */; };
 		2B458AE21D88530E00BD5A08 /* ScheduledCampaignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B458AE11D88530E00BD5A08 /* ScheduledCampaignViewModel.swift */; };
@@ -80,9 +83,10 @@
 		2BA4FDB91D91D64D00743552 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA4FDB81D91D64D00743552 /* ListItem.swift */; };
 		2BA4FDBB1D91E12B00743552 /* BasicInformationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA4FDBA1D91E12B00743552 /* BasicInformationDataSource.swift */; };
 		2BC6EF4F1D370A88009F5A0B /* ScheduledCampaignsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC6EF4E1D370A88009F5A0B /* ScheduledCampaignsViewController.swift */; };
-		2BC6EF531D370B7A009F5A0B /* CampaignsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC6EF521D370B7A009F5A0B /* CampaignsListViewController.swift */; };
 		2BD182371D78AA1A00EE10E0 /* ScheduledCampaignsViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD182361D78AA1A00EE10E0 /* ScheduledCampaignsViewDataSource.swift */; };
 		2BD182391D78AC1900EE10E0 /* ScheduledCampaignsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD182381D78AC1900EE10E0 /* ScheduledCampaignsTableViewCell.swift */; };
+		2BD1FC2B1DA76F6200A582B1 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD1FC261DA76F3F00A582B1 /* Charts.framework */; };
+		2BD1FC2C1DA76F6200A582B1 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD1FC261DA76F3F00A582B1 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2BD4FD9A1D636DFB00E7E13C /* DeliveryRateReportDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4FD991D636DFB00E7E13C /* DeliveryRateReportDataSource.swift */; };
 		2BD4FD9C1D636EBA00E7E13C /* DeliveryRateReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4FD9B1D636EBA00E7E13C /* DeliveryRateReportTableViewCell.swift */; };
 		2BD83BAB1D41590C00A5C527 /* OnboardingContentViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD83BAA1D41590C00A5C527 /* OnboardingContentViewControllerDelegate.swift */; };
@@ -133,7 +137,49 @@
 			remoteGlobalIDString = 2425145B1C7E45CD00785AE6;
 			remoteInfo = DopplerMobile;
 		};
+		2BD1FC251DA76F3F00A582B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BD1FC1F1DA76F3F00A582B1 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F241D8110E600722320;
+			remoteInfo = Charts;
+		};
+		2BD1FC271DA76F3F00A582B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BD1FC1F1DA76F3F00A582B1 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06B120D51D811E6200D14B02;
+			remoteInfo = ChartsRealm;
+		};
+		2BD1FC291DA76F3F00A582B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BD1FC1F1DA76F3F00A582B1 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F2E1D8110E600722320;
+			remoteInfo = ChartsTests;
+		};
+		2BD1FC2D1DA76F6300A582B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BD1FC1F1DA76F3F00A582B1 /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 06165F231D8110E600722320;
+			remoteInfo = Charts;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2BD1FC2F1DA76F6300A582B1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2BD1FC2C1DA76F6200A582B1 /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1F0339E11D3EBAE1006EDBD1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -173,6 +219,9 @@
 		2B0EC0391D7FE71A008BF638 /* CampaignPreviewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignPreviewViewModel.swift; sourceTree = "<group>"; };
 		2B1331061D9AE1630027D562 /* ScheduledCampaignsSegmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledCampaignsSegmentViewController.swift; sourceTree = "<group>"; };
 		2B13310B1D9AF52B0027D562 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Scheduled.storyboard; sourceTree = "<group>"; };
+		2B1DDC911DA8303A00F5632E /* ReportSegmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportSegmentViewController.swift; sourceTree = "<group>"; };
+		2B1DDC951DA830B100F5632E /* ReportMenuOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportMenuOption.swift; sourceTree = "<group>"; };
+		2B1DDC971DA8352900F5632E /* ReportEmptyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportEmptyViewController.swift; sourceTree = "<group>"; };
 		2B3860291D9D632F00739B72 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		2B458ADF1D88487100BD5A08 /* DataSourceContentDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceContentDelegate.swift; sourceTree = "<group>"; };
 		2B458AE11D88530E00BD5A08 /* ScheduledCampaignViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledCampaignViewModel.swift; sourceTree = "<group>"; };
@@ -222,9 +271,9 @@
 		2BA4FDB81D91D64D00743552 /* ListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		2BA4FDBA1D91E12B00743552 /* BasicInformationDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicInformationDataSource.swift; sourceTree = "<group>"; };
 		2BC6EF4E1D370A88009F5A0B /* ScheduledCampaignsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledCampaignsViewController.swift; sourceTree = "<group>"; };
-		2BC6EF521D370B7A009F5A0B /* CampaignsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignsListViewController.swift; sourceTree = "<group>"; };
 		2BD182361D78AA1A00EE10E0 /* ScheduledCampaignsViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScheduledCampaignsViewDataSource.swift; path = ViewControllers/ScheduledCampaignsViewDataSource.swift; sourceTree = "<group>"; };
 		2BD182381D78AC1900EE10E0 /* ScheduledCampaignsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledCampaignsTableViewCell.swift; sourceTree = "<group>"; };
+		2BD1FC1F1DA76F3F00A582B1 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = ../../../../Charts/Charts.xcodeproj; sourceTree = "<group>"; };
 		2BD4FD991D636DFB00E7E13C /* DeliveryRateReportDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeliveryRateReportDataSource.swift; path = ViewControllers/DeliveryRateReportDataSource.swift; sourceTree = "<group>"; };
 		2BD4FD9B1D636EBA00E7E13C /* DeliveryRateReportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryRateReportTableViewCell.swift; sourceTree = "<group>"; };
 		2BD83BAA1D41590C00A5C527 /* OnboardingContentViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewControllerDelegate.swift; sourceTree = "<group>"; };
@@ -275,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDD26FF49488694CDB0ECADD /* Pods_DopplerMobile.framework in Frameworks */,
+				2BD1FC2B1DA76F6200A582B1 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +528,7 @@
 		242514531C7E45CD00785AE6 = {
 			isa = PBXGroup;
 			children = (
+				2BD1FC1F1DA76F3F00A582B1 /* Charts.xcodeproj */,
 				241198661D1B134100330D87 /* DopplerMobile */,
 				A8EF46D71D26C1DC000882A3 /* MSComponents */,
 				242514731C7E45CD00785AE6 /* DopplerMobileTests */,
@@ -558,6 +609,7 @@
 				2BD182381D78AC1900EE10E0 /* ScheduledCampaignsTableViewCell.swift */,
 				2B1331061D9AE1630027D562 /* ScheduledCampaignsSegmentViewController.swift */,
 				2B8212DB1D9C4AD300AB1794 /* ScheduledCampaignsMenuOption.swift */,
+				2B8212D71D9C054800AB1794 /* SendingViewController.swift */,
 			);
 			name = ScheduledSection;
 			sourceTree = "<group>";
@@ -565,11 +617,12 @@
 		2B7B733C1D9EDDBF00A593BD /* ReportsSection */ = {
 			isa = PBXGroup;
 			children = (
-				2B8212D71D9C054800AB1794 /* SendingViewController.swift */,
 				2B0EC0371D7FDB7A008BF638 /* CampaignPreviewViewController.swift */,
 				2B70F7A01D5947B800B18525 /* ReportViewController.swift */,
+				2B1DDC911DA8303A00F5632E /* ReportSegmentViewController.swift */,
+				2B1DDC951DA830B100F5632E /* ReportMenuOption.swift */,
+				2B1DDC971DA8352900F5632E /* ReportEmptyViewController.swift */,
 				2BD4FD9B1D636EBA00E7E13C /* DeliveryRateReportTableViewCell.swift */,
-				2BC6EF521D370B7A009F5A0B /* CampaignsListViewController.swift */,
 				249ECB6D1D3D56B300F18E74 /* SentCampaignsViewController.swift */,
 				2439F31A1D352BD500949C5D /* SentCampaignsTableViewCell.swift */,
 			);
@@ -620,6 +673,16 @@
 				1FA09C611DA6CB530088E22E /* SubscriberInformationDataSource.swift */,
 			);
 			name = DataSources;
+			sourceTree = "<group>";
+		};
+		2BD1FC201DA76F3F00A582B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BD1FC261DA76F3F00A582B1 /* Charts.framework */,
+				2BD1FC281DA76F3F00A582B1 /* ChartsRealm.framework */,
+				2BD1FC2A1DA76F3F00A582B1 /* ChartsTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		2BD83BAE1D42741C00A5C527 /* Enums */ = {
@@ -680,10 +743,12 @@
 				2425145A1C7E45CD00785AE6 /* Resources */,
 				196B6BD73C9437D9AB986AD8 /* [CP] Embed Pods Frameworks */,
 				85270376637C73906E97EC22 /* [CP] Copy Pods Resources */,
+				2BD1FC2F1DA76F6300A582B1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2BD1FC2E1DA76F6300A582B1 /* PBXTargetDependency */,
 			);
 			name = DopplerMobile;
 			productName = DopplerMobile;
@@ -745,6 +810,12 @@
 			mainGroup = 242514531C7E45CD00785AE6;
 			productRefGroup = 2425145D1C7E45CD00785AE6 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2BD1FC201DA76F3F00A582B1 /* Products */;
+					ProjectRef = 2BD1FC1F1DA76F3F00A582B1 /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2425145B1C7E45CD00785AE6 /* DopplerMobile */,
@@ -752,6 +823,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		2BD1FC261DA76F3F00A582B1 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 2BD1FC251DA76F3F00A582B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2BD1FC281DA76F3F00A582B1 /* ChartsRealm.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ChartsRealm.framework;
+			remoteRef = 2BD1FC271DA76F3F00A582B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2BD1FC2A1DA76F3F00A582B1 /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = 2BD1FC291DA76F3F00A582B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2425145A1C7E45CD00785AE6 /* Resources */ = {
@@ -889,7 +984,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B1DDC921DA8303A00F5632E /* ReportSegmentViewController.swift in Sources */,
 				2BD83BAB1D41590C00A5C527 /* OnboardingContentViewControllerDelegate.swift in Sources */,
+				2B1DDC961DA830B100F5632E /* ReportMenuOption.swift in Sources */,
 				24F0FB731D1C109E00360346 /* LoginViewModel.swift in Sources */,
 				2BDD10E31D918A6500E5ABF7 /* BasicInformationViewController.swift in Sources */,
 				2B703F1B1D3D304E00A19E36 /* String.swift in Sources */,
@@ -958,12 +1055,12 @@
 				2BF307481D6E2B740062DF3C /* MSAlamofireRequest+JSONSerializable.swift in Sources */,
 				2B8212DC1D9C4AD300AB1794 /* ScheduledCampaignsMenuOption.swift in Sources */,
 				2BD83BB01D42762200A5C527 /* SegueIdentifier.swift in Sources */,
+				2B1DDC981DA8352900F5632E /* ReportEmptyViewController.swift in Sources */,
 				9CB9DEFC1D1C150100DAED48 /* OnboardingViewController.swift in Sources */,
 				2B703F1D1D3D51D900A19E36 /* Optional.swift in Sources */,
 				A8EF46D91D26C218000882A3 /* MSButton.swift in Sources */,
 				2B6F0C3C1DA428D4006541E2 /* RecipientsTableViewCell.swift in Sources */,
 				2B4686331D81B28100B03D4F /* SubscribersListViewModel.swift in Sources */,
-				2BC6EF531D370B7A009F5A0B /* CampaignsListViewController.swift in Sources */,
 				2BA171BF1D74A9E300FBDE66 /* DefaultsKeys.swift in Sources */,
 				2439F3191D343BBC00949C5D /* CampaignViewModel.swift in Sources */,
 				2B458AE01D88487100BD5A08 /* DataSourceContentDelegate.swift in Sources */,
@@ -999,6 +1096,11 @@
 			isa = PBXTargetDependency;
 			target = 2425145B1C7E45CD00785AE6 /* DopplerMobile */;
 			targetProxy = 242514711C7E45CD00785AE6 /* PBXContainerItemProxy */;
+		};
+		2BD1FC2E1DA76F6300A582B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = 2BD1FC2D1DA76F6300A582B1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

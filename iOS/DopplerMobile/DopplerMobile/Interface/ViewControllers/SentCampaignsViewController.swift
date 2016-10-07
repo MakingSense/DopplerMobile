@@ -31,9 +31,9 @@ class SentCampaignsViewController: UIViewController, UITableViewDelegate, DataSo
     {
         if let selectedCellIndex = self.tblSentCampaigns.indexPathForSelectedRow
         {
-            let campaignReport = self.dataSource!.items[(selectedCellIndex as NSIndexPath).row]
-            let reportViewController = segue.destination as! ReportViewController
-            reportViewController.reportItem = campaignReport
+            let campaignItem = self.dataSource!.items[(selectedCellIndex as NSIndexPath).row]
+            let reportViewController = segue.destination as! ReportSegmentViewController
+            reportViewController.campaignItem = campaignItem
         }
     }
     

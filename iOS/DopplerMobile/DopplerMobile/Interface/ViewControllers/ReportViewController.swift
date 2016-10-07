@@ -7,56 +7,65 @@
 //
 
 import UIKit
+import Charts
 
 class ReportViewController: UIViewController, UITableViewDelegate
 {
     // MARK: Properties
-    @IBOutlet fileprivate weak var lblCampaignSubject: UILabel!
-    @IBOutlet fileprivate weak var lblCampaignName: UILabel!
-    @IBOutlet fileprivate weak var lblCampaignSuscribers: UILabel!
-    @IBOutlet fileprivate weak var lblCampaignSentDate: UILabel!
+    @IBOutlet weak var pieChart: PieChartView!
     @IBOutlet fileprivate weak var lblOpenPercentage: UILabel!
     @IBOutlet fileprivate weak var lblUnopenPercentage: UILabel!
     @IBOutlet fileprivate weak var lblBouncesPercentage: UILabel!
     @IBOutlet fileprivate weak var lblRatePercentage: UILabel!
     @IBOutlet fileprivate weak var tblIndicators: UITableView!
-    
     var reportItem: CampaignViewModel?
-    {
-        didSet { self.configureView() }
-    }
     var dataSource : DeliveryRateReportDataSource?
+    
+    class func instantiateFromStoryboard() -> ReportViewController
+    {
+        let storyboard = UIStoryboard(name: StoryboardName.Reports, bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: String(describing: self)) as! ReportViewController
+    }
     
     // MARK: Actions
     override func viewDidLoad()
     {
         super.viewDidLoad()
         self.navigationItem.title = "REPORTS_TEXT".localized
+        self.tblIndicators.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         self.dataSource = DeliveryRateReportDataSource(items: reportItem?.deliveryRateIndicators!)
-        tblIndicators.dataSource = self.dataSource
-        tblIndicators.delegate = self
+        self.tblIndicators.dataSource = self.dataSource
         self.configureView()
     }
     
     func configureView()
     {
-        if let campaignName = self.lblCampaignName
-        {
-            campaignName.text = reportItem!.name
-            lblCampaignSuscribers.text = String(reportItem!.amountSentSubscribers!)
-            lblCampaignSentDate.text = reportItem!.sentDate?.toStringWithFormat(DateFormatEnum.yyyy_MM_dd.pattern)
-            lblCampaignSubject.text = reportItem!.subject!
-            lblBouncesPercentage.text = "\(reportItem!.bouncesPercentage!)%"
-            lblUnopenPercentage.text = "\(reportItem!.unopenedPercentage!)%"
-            lblOpenPercentage.text = "\(reportItem!.openedPercentage!)%"
-            lblRatePercentage.text = "\(reportItem!.ratePercentage!)%"
-        }
+        self.lblBouncesPercentage.text = "\(reportItem!.bouncesPercentage!)%"
+        self.lblUnopenPercentage.text = "\(reportItem!.unopenedPercentage!)%"
+        self.lblOpenPercentage.text = "\(reportItem!.openedPercentage!)%"
+        self.lblRatePercentage.text = "\(reportItem!.ratePercentage!)%"
+        let values = [Double(reportItem!.openedPercentage!), Double(reportItem!.unopenedPercentage!), Double(reportItem!.bouncesPercentage!)]
+        setPieChart(values: values)
     }
     
-    // MARK: - Segues
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    func setPieChart(values: [Double])
     {
-            let campaignPreviewViewController = segue.destination as! CampaignPreviewViewController
-            campaignPreviewViewController.campaignId = reportItem!.campaignId
+        var dataEntries: [ChartDataEntry] = []
+        for i in 0..<values.count
+        {
+            let dataEntry = ChartDataEntry(x: Double(i), y: values[i])
+            dataEntries.append(dataEntry)
+        }
+        let pieChartDataSet = PieChartDataSet(values: dataEntries, label: "")
+        let pieChartData = PieChartData(dataSet: pieChartDataSet)
+        pieChart.data = pieChartData
+        pieChart.legend.enabled = false
+        pieChart.drawEntryLabelsEnabled = false
+        pieChart.chartDescription?.enabled = false
+        pieChartDataSet.drawValuesEnabled = false
+        pieChartDataSet.colors = [UIColor.green(), UIColor.primary(), UIColor.red()]
     }
 }
