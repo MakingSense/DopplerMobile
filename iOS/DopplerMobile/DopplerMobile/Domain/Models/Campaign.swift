@@ -42,8 +42,6 @@ open class Campaign: MSResponseJSONObjectSerializable
         {
             self.scheduledDate = dateString!.toNSDateWithFormat(DateFormatEnum.yyyy_MM_ddTHH_mm_ss_SSSZ.pattern)
         }
-        //TODO: Check when get sentCampaignReport Information
-        sentCampaignReport = SentCampaignReport()
     }
     
     //TODO: Validate if this method will be used in the app.

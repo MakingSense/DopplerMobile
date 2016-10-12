@@ -43,11 +43,11 @@ class ReportViewController: UIViewController, UITableViewDelegate
     
     func configureView()
     {
-        self.lblBouncesPercentage.text = "\(reportItem!.bouncesPercentage!)%"
-        self.lblUnopenPercentage.text = "\(reportItem!.unopenedPercentage!)%"
-        self.lblOpenPercentage.text = "\(reportItem!.openedPercentage!)%"
-        self.lblRatePercentage.text = "\(reportItem!.ratePercentage!)%"
-        let values = [Double(reportItem!.openedPercentage!), Double(reportItem!.unopenedPercentage!), Double(reportItem!.bouncesPercentage!)]
+        self.lblBouncesPercentage.text =  reportItem?.bouncesPercentage == nil ? "0%" : "\((reportItem?.bouncesPercentage!)!)%"
+        self.lblUnopenPercentage.text =  reportItem?.unopenedPercentage == nil ? "0%" : "\((reportItem?.unopenedPercentage!)!)%"
+        self.lblOpenPercentage.text =  reportItem?.openedPercentage == nil ? "0%" : "\((reportItem?.openedPercentage!)!)%"
+        self.lblRatePercentage.text = reportItem?.ratePercentage == nil ? "0%" : "\((reportItem?.ratePercentage!)!)%"
+        let values = [Double(reportItem?.openedPercentage == nil ? 0 : (reportItem?.openedPercentage!)!), Double(reportItem?.unopenedPercentage == nil ? 0 : (reportItem?.unopenedPercentage!)!), Double(reportItem?.bouncesPercentage == nil ? 0 : (reportItem?.bouncesPercentage!)!)]
         setPieChart(values: values)
     }
     

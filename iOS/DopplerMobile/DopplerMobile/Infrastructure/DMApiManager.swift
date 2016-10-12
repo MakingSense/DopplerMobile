@@ -86,4 +86,13 @@ class DMApiManager: DMApiManagerProtocol
                 completionHandler(response.result)
         }
     }
+    
+    //Get Campaign Report
+    func getCampaignReport(_ campaignId: Int, completionHandler: @escaping (Result<SentCampaignReport>) -> Void)    {
+        Alamofire.request(DMApplicationRouter.getCampaignReports(username: Defaults[.username]!, campaignId: campaignId))
+            .responseObject
+            { (response: DataResponse<SentCampaignReport>) in
+                completionHandler(response.result)
+        }
+    }
 }

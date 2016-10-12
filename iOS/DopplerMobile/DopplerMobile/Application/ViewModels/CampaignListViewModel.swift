@@ -10,6 +10,7 @@ import Foundation
 
 open class CampaignListViewModel
 {
+    //TODO: Validate whether this class is really needed now.
     var contentDelegate: DataSourceContentDelegate?
     var campaignsService: CampaignsService!
     

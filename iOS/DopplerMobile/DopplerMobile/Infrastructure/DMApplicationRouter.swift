@@ -20,6 +20,7 @@ enum DMApplicationRouter: URLRequestConvertible
     case getToken(parameters: Parameters) //POST baseUrl/tokens
     case getCampaigns(username: String, parameters: Parameters) //GET baseUrl/accounts/{accountName}/campaigns
     case getCampaignRecipients(username: String, campaignId: Int) //GET baseUrl/accounts/{accountName}/campaigns/{campaignId}/recipients
+    case getCampaignReports(username: String, campaignId: Int) //GET baseUrl/accounts/{accountName}/campaigns/{campaignId}/results-summary
     case getCampaignPreview(username: String, campaignId: Int) //GET baseUrl/accounts/{accountName}/campaigns/{campaignId}/preview
     case getSuscribersLists(username: String) //GET baseUrl/accounts/{accountName}/lists
     case getSuscribers(username: String, listId: Int) //GET baseUrl/accounts/{accountName}/lists/{listId}/subscribers
@@ -31,7 +32,7 @@ enum DMApplicationRouter: URLRequestConvertible
         {
         case .getToken:
             return .post
-        case .getCampaigns, .getCampaignPreview, .getSuscribersLists, .getSuscribers, .getCampaignRecipients:
+        case .getCampaigns, .getCampaignPreview, .getSuscribersLists, .getSuscribers, .getCampaignRecipients, .getCampaignReports:
             return .get
         }
     }
@@ -52,6 +53,8 @@ enum DMApplicationRouter: URLRequestConvertible
             return "/accounts/\(username)/lists/\(listId)/subscribers"
         case .getCampaignRecipients(let username, let campaignId):
             return "/accounts/\(username)/campaigns/\(campaignId)/recipients"
+        case .getCampaignReports(let username, let campaignId):
+            return "/accounts/\(username)/campaigns/\(campaignId)/results-summary"
         }
     }
     

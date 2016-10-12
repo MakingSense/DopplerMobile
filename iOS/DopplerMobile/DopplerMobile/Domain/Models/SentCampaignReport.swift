@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import SwiftyJSON
 
-class SentCampaignReport
+class SentCampaignReport: MSResponseJSONObjectSerializable
 {
     var totalRecipients: Int?
     var successFullDeliveries: Int?
@@ -24,13 +25,27 @@ class SentCampaignReport
     var lastClickDate: Date?
     var totalUnsubscribers: Int?
     
-    init()
-    {
-        //TODO: Create the final init method.
-        self.totalRecipients = 100
-        self.successFullDeliveries = 44
-        self.uniqueOpens = 22
-        self.totalUnopened = 12
-        self.totalClicks = 30
+    required public init?(json: JSON) {
+        self.totalRecipients = json["totalRecipients"].int
+        self.successFullDeliveries = json["successFullDeliveries"].int
+        self.uniqueOpens = json["uniqueOpens"].int
+        self.totalUnopened = json["totalUnopened"].int
+        self.totalClicks = json["totalClicks"].int
+        self.timesForwarded = json["timesForwarded"].int
+        self.totalTimesOpened = json["totalTimesOpened"].int
+        self.uniqueClicks = json["uniqueClicks"].int
+        self.totalHardBounces = json["totalHardBounces"].int
+        self.totalSoftBounces = json["totalSoftBounces"].int
+        self.totalUnsubscribers = json["totalUnsubscribers"].int
+        var dateString = json["lastOpenDate"].string
+        if !(dateString.isNullOrEmpty)
+        {
+            self.lastOpenDate = dateString!.toNSDateWithFormat(DateFormatEnum.yyyy_MM_ddTHH_mm_ss_SSSZ.pattern)
+        }
+        dateString = json["lastClickDate"].string
+        if !(dateString.isNullOrEmpty)
+        {
+            self.lastClickDate = dateString!.toNSDateWithFormat(DateFormatEnum.yyyy_MM_ddTHH_mm_ss_SSSZ.pattern)
+        }
     }
 }

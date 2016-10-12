@@ -31,8 +31,8 @@ class SentCampaignsTableViewCell : UITableViewCell
         formattedString.append(text: date).append(text: boldContent, font: UIFont.boldOf(size: 14.0))
         
         self.lblSentDate.attributedText = formattedString
-        self.lblOpenPercentage.text =  "\(campaignViewModel.openedPercentage!)%"
-        self.lblUnopenPercentage.text = "\(campaignViewModel.unopenedPercentage!)%"
-        self.lblBouncePercentage.text = "\(campaignViewModel.bouncesPercentage!)%"
+        self.lblOpenPercentage.text =  campaignViewModel.openedPercentage == nil ? "0%" : "\(campaignViewModel.openedPercentage!)%"
+        self.lblUnopenPercentage.text =  campaignViewModel.unopenedPercentage == nil ? "0%" : "\(campaignViewModel.unopenedPercentage!)%"
+        self.lblBouncePercentage.text =  campaignViewModel.bouncesPercentage == nil ? "0%" : "\(campaignViewModel.bouncesPercentage!)%"
     }
 }
