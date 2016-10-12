@@ -250,7 +250,6 @@
 		2B7CBD2F1D906C2600B55CD2 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Login.strings"; sourceTree = "<group>"; };
 		2B7CBD331D906C6700B55CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Reports.storyboard; sourceTree = "<group>"; };
 		2B7CBD3B1D906E4E00B55CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Lists.storyboard; sourceTree = "<group>"; };
-		2B7CBD3E1D906E5000B55CD2 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Lists.strings"; sourceTree = "<group>"; };
 		2B7CBD401D906ECE00B55CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Account.storyboard; sourceTree = "<group>"; };
 		2B7CBD431D906ED100B55CD2 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Account.strings"; sourceTree = "<group>"; };
 		2B7CBD451D906F1500B55CD2 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -292,6 +291,7 @@
 		750CE2321D9EF07B008665C7 /* UIFont+DMFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+DMFonts.swift"; path = "Extensions/UIFont+DMFonts.swift"; sourceTree = "<group>"; };
 		752C34D21D9E93BD00159441 /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
 		752C34DB1D9E9B7B00159441 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Reports.strings"; sourceTree = "<group>"; };
+		755820BD1DAE79EB00F6CB84 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Lists.strings"; sourceTree = "<group>"; };
 		75FE33321D993DDD0005EA66 /* ProximaNova-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Black.otf"; path = "Resources/Fonts/ProximaNova-Black.otf"; sourceTree = "<group>"; };
 		75FE33331D993DDD0005EA66 /* ProximaNova-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Bold.otf"; path = "Resources/Fonts/ProximaNova-Bold.otf"; sourceTree = "<group>"; };
 		75FE33341D993DDD0005EA66 /* ProximaNova-BoldIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-BoldIt.otf"; path = "Resources/Fonts/ProximaNova-BoldIt.otf"; sourceTree = "<group>"; };
@@ -1163,7 +1163,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				2B7CBD3B1D906E4E00B55CD2 /* Base */,
-				2B7CBD3E1D906E5000B55CD2 /* es-MX */,
+				755820BD1DAE79EB00F6CB84 /* es-MX */,
 			);
 			name = Lists.storyboard;
 			sourceTree = "<group>";

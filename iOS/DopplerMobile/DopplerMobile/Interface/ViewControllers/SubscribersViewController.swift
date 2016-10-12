@@ -32,7 +32,7 @@ class SubscribersViewController: UIViewController, UITableViewDelegate, DataSour
         self.dataSource = SubscribersViewDataSource()
         self.tblSuscribers.dataSource = self.dataSource
         self.lblListTitle.text = listItem?.name
-        self.lblListSuscribersCount.text = String((listItem?.subscribersCount)!)
+        self.lblListSuscribersCount.text = "\(listItem!.subscribersCount!) \((listItem?.subscribersCount)! == 1 ? "REPORTS_SUBSCRIBER".localized : "REPORTS_SUBSCRIBERS".localized)"
     }
     
     func updateContent(_ content: AnyObject) {

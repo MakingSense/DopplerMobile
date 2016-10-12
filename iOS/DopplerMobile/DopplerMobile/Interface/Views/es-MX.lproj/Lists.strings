@@ -5,14 +5,38 @@
 /* Class = "UIViewController"; title = "Lists View Controller Screen"; ObjectID = "2gJ-zi-Un8"; */
 "2gJ-zi-Un8.title" = "Lists View Controller Screen";
 
+/* Class = "UILabel"; text = "Label"; ObjectID = "7Uk-Vx-yCV"; */
+"7Uk-Vx-yCV.text" = "Label";
+
 /* Class = "UILabel"; text = "YOUR LISTS"; ObjectID = "CjK-yc-dq8"; */
-"CjK-yc-dq8.text" = "TUS LISTADOS";
+"CjK-yc-dq8.text" = "TUS LISTAS";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Pjv-7R-ABA"; */
+"Pjv-7R-ABA.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "Qjh-st-Oj6"; */
+"Qjh-st-Oj6.title" = "Title";
+
+/* Class = "UILabel"; text = "johndoe@gmail.com"; ObjectID = "WKZ-yN-CgO"; */
+"WKZ-yN-CgO.text" = "johndoe@gmail.com";
+
+/* Class = "UITextField"; text = "Search Subscribers"; ObjectID = "h55-Xd-qXi"; */
+"h55-Xd-qXi.text" = "Buscar Suscriptores";
+
+/* Class = "UILabel"; text = "Suscriber"; ObjectID = "iyv-gF-DKp"; */
+"iyv-gF-DKp.text" = "Suscriptor";
 
 /* Class = "UILabel"; text = "YOUR LISTS"; ObjectID = "izB-yB-hGd"; */
-"izB-yB-hGd.text" = "TUS LISTADOS";
+"izB-yB-hGd.text" = "TUS LISTAS";
+
+/* Class = "UILabel"; text = "24 Suscribers"; ObjectID = "kia-Qh-uKF"; */
+"kia-Qh-uKF.text" = "24 Suscribers";
 
 /* Class = "UILabel"; text = "Email"; ObjectID = "sMx-g2-gtM"; */
 "sMx-g2-gtM.text" = "Email";
 
+/* Class = "UIButton"; normalTitle = "Edit Subscriber's Info"; ObjectID = "t4h-va-RVn"; */
+"t4h-va-RVn.normalTitle" = "Editar Suscriptor";
+
 /* Class = "UILabel"; text = "Name"; ObjectID = "wuo-9Y-KCs"; */
-"wuo-9Y-KCs.text" = "Nombre";
+"wuo-9Y-KCs.text" = "Name";
