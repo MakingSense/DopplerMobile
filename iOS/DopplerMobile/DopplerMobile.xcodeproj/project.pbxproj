@@ -744,6 +744,8 @@
 				196B6BD73C9437D9AB986AD8 /* [CP] Embed Pods Frameworks */,
 				85270376637C73906E97EC22 /* [CP] Copy Pods Resources */,
 				2BD1FC2F1DA76F6300A582B1 /* Embed Frameworks */,
+				2BE39D491DB52E290077305D /* ShellScript */,
+				2BE39D4C1DB52E720077305D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -788,7 +790,7 @@
 				TargetAttributes = {
 					2425145B1C7E45CD00785AE6 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = KPBE96QS22;
+						DevelopmentTeam = ZM528P4L33;
 						LastSwiftMigration = 0800;
 					};
 					2425146F1C7E45CD00785AE6 = {
@@ -916,6 +918,32 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DopplerMobile/Pods-DopplerMobile-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		2BE39D491DB52E290077305D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/Fabric/run 30b8d06e19d61b61a1323a6f2fcbdeacb210f9c0 e84a71168b65feec63472faf830cf3113815637f31b65268ea01269e208262bf";
+		};
+		2BE39D4C1DB52E720077305D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/Fabric/run 30b8d06e19d61b61a1323a6f2fcbdeacb210f9c0 e84a71168b65feec63472faf830cf3113815637f31b65268ea01269e208262bf";
 		};
 		414DB4A544B8A218188B2E91 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1285,6 +1313,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = ZM528P4L33;
 				INFOPLIST_FILE = DopplerMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.makingsense.DopplerMobile;
@@ -1301,6 +1330,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = ZM528P4L33;
 				INFOPLIST_FILE = DopplerMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.makingsense.DopplerMobile;

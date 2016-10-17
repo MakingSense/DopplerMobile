@@ -8,11 +8,15 @@
 
 import UIKit
 import SwiftyUserDefaults
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        //TODO: Add final application icon.
+        Fabric.with([Crashlytics.self])
         let conditionVariable = !(Defaults[.tokenExpirationDate].isNullOrEmpty) && Defaults[.tokenExpirationDate]!.toNSDateWithFormat(DateFormatEnum.yyyy_MM_ddTHH_mm_ss_SSSZ.pattern)!.isGreaterThanDate(Date())
         let navigationController = window!.rootViewController! as! UINavigationController
         navigationController.performSegue(withIdentifier: conditionVariable ? SegueIdentifier.MainScreenSegue : SegueIdentifier.LoginScreenSegue, sender: self)

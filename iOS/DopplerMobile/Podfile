@@ -8,6 +8,8 @@ target 'DopplerMobile' do
     pod 'SwiftyJSON', git: 'https://github.com/BaiduHiDeviOS/SwiftyJSON.git', branch: 'swift3'
     pod 'SwiftyUserDefaults', '~> 3.0.0'
     pod 'Typhoon'
+    pod 'Fabric'
+    pod 'Crashlytics'
 end
 
 target 'DopplerMobileTests' do
