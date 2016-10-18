@@ -12,7 +12,8 @@ import Charts
 class ReportViewController: UIViewController, UITableViewDelegate
 {
     // MARK: Properties
-    @IBOutlet weak var pieChart: PieChartView!
+//    @IBOutlet weak var pieChart: PieChartView!
+    @IBOutlet weak var pieChartView: PieChartView!
     @IBOutlet fileprivate weak var lblOpenPercentage: UILabel!
     @IBOutlet fileprivate weak var lblUnopenPercentage: UILabel!
     @IBOutlet fileprivate weak var lblBouncesPercentage: UILabel!
@@ -61,10 +62,10 @@ class ReportViewController: UIViewController, UITableViewDelegate
         }
         let pieChartDataSet = PieChartDataSet(values: dataEntries, label: "")
         let pieChartData = PieChartData(dataSet: pieChartDataSet)
-        pieChart.data = pieChartData
-        pieChart.legend.enabled = false
-        pieChart.drawEntryLabelsEnabled = false
-        pieChart.chartDescription?.enabled = false
+        pieChartView.data = pieChartData
+        pieChartView.legend.enabled = false
+        pieChartView.drawEntryLabelsEnabled = false
+        pieChartView.chartDescription?.enabled = false
         pieChartDataSet.drawValuesEnabled = false
         pieChartDataSet.colors = [UIColor.green(), UIColor.primary(), UIColor.red()]
     }

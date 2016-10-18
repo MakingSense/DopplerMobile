@@ -39,8 +39,8 @@ open class CampaignViewModel
             self.sentDate = campaign.scheduledDate as Date?
         }
         
-        //TODO: check the way to calculate amountSentSubscribers, openedPercentage, bouncesPercentage and ratePercentage.
-        self.amountSentSubscribers = campaign.sentCampaignReport?.totalRecipients
+        self.amountSentSubscribers = campaign.sentCampaignReport?.totalRecipients == nil ? 0 : campaign.sentCampaignReport!.totalRecipients
+        
         if campaign.sentCampaignReport != nil && campaign.sentCampaignReport?.successFullDeliveries != 0
         {
             self.openedPercentage = (((campaign.sentCampaignReport!.uniqueOpens)! * 100) / (campaign.sentCampaignReport?.successFullDeliveries)!)
