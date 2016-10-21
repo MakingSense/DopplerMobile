@@ -16,6 +16,7 @@
 "ONBOARDING_TWO_SUBTITLE" = "Encontraras todas las herramientas necesarias para mantener el rastro de tus campañas... Encontrar donde estan.";
 "ONBOARDING_THREE_TITLE" = "¡Ya tienes las herramientas!";
 "ONBOARDING_THREE_SUBTITLE" = "";
+"ONBOARDING_START_NOW_BUTTON" = "¡EMPIEZA AHORA!";
 
 //SENT_CAMPAIGNS SECTION
 "SENT_CAMPAIGNS_OPENED_TEXT" = "ABIERTOS";

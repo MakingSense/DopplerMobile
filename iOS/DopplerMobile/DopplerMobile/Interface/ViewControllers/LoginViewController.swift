@@ -21,6 +21,13 @@ class LoginViewController: UIViewController, NavigationDelegate
     {
         super.viewDidLoad()
         btnLogin.command = loginViewModel.loginCommand
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
+    
+    override func viewWillDisappear(_ animated: Bool)
+    {
+        super.viewWillDisappear(animated)
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
     }
     
     //MARK: Username Input's Actions

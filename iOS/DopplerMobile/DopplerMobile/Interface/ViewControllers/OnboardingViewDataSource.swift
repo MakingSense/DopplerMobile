@@ -7,7 +7,9 @@
 //
 
 import UIKit
+import SwiftyUserDefaults
 
+//TODO: This class should be refactored later. It shouldn't be returning content by itself but receiving it from the ViewModel (also all the process made to the content should be done there...)
 class OnboardingViewDataSource : NSObject, UIPageViewControllerDataSource, OnboardingContentViewControllerDelegate, NavigationDelegate
 {
     fileprivate var models : [OnboardingContentViewModel]
@@ -18,9 +20,9 @@ class OnboardingViewDataSource : NSObject, UIPageViewControllerDataSource, Onboa
     init(pager : UIPageViewController)
     {
         self.pager = pager
-        self.models = [OnboardingContentViewModel(title: "ONBOARDING_ONE_TITLE".localized, subtitle: "ONBOARDING_ONE_SUBTITLE".localized, imageName: "Onboarding-1"),
-                       OnboardingContentViewModel(title: "ONBOARDING_TWO_TITLE".localized, subtitle: "ONBOARDING_TWO_SUBTITLE".localized, imageName: "Onboarding-2"),
-                       OnboardingContentViewModel(title: "ONBOARDING_THREE_TITLE".localized, subtitle: "ONBOARDING_THREE_SUBTITLE".localized, imageName: "Onboarding-3")]
+        self.models = [OnboardingContentViewModel(title: "ONBOARDING_ONE_TITLE".localized.replacingOccurrences(of: "{username}", with: Defaults[.username]!), subtitle: "ONBOARDING_ONE_SUBTITLE".localized, imageName: "Onboarding-1", index: 0),
+                       OnboardingContentViewModel(title: "ONBOARDING_TWO_TITLE".localized, subtitle: "ONBOARDING_TWO_SUBTITLE".localized, imageName: "Onboarding-2", index: 1),
+                       OnboardingContentViewModel(title: "ONBOARDING_THREE_TITLE".localized, subtitle: "ONBOARDING_THREE_SUBTITLE".localized, imageName: "Onboarding-3", index: 2)]
         
         self.views = []
     }

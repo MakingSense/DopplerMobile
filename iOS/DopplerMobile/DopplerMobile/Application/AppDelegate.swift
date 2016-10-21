@@ -12,9 +12,12 @@ import Fabric
 import Crashlytics
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate
+{
     var window: UIWindow?
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
+    {
         //TODO: Add final application icon.
         Fabric.with([Crashlytics.self])
         let conditionVariable = !(Defaults[.tokenExpirationDate].isNullOrEmpty) && Defaults[.tokenExpirationDate]!.toNSDateWithFormat(DateFormatEnum.yyyy_MM_ddTHH_mm_ss_SSSZ.pattern)!.isGreaterThanDate(Date())
@@ -22,6 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationController.performSegue(withIdentifier: conditionVariable ? SegueIdentifier.MainScreenSegue : SegueIdentifier.LoginScreenSegue, sender: self)
         navigationController.setNavigationBarHidden(!conditionVariable, animated: false)
         navigationController.navigationBar.tintColor = UIColor.black
+        
+        UIApplication.shared.statusBarStyle = .default
+        
         return true
     }
 

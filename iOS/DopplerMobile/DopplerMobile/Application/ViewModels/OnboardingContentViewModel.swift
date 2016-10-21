@@ -13,11 +13,13 @@ open class OnboardingContentViewModel
     var title : String = ""
     var subtitle : String = ""
     var imageName : String = ""
+    var index : Int
     
-    init(title: String, subtitle: String, imageName: String)
+    init(title: String, subtitle: String, imageName: String, index: Int)
     {
         self.title = title
         self.subtitle = subtitle
         self.imageName = imageName
+        self.index = index
     }
 }

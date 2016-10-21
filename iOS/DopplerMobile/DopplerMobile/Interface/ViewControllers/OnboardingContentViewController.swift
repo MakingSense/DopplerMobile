@@ -17,6 +17,9 @@ class OnboardingContentViewController: UIViewController
     @IBOutlet weak var imgContent: UIImageView!
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblSubTitle: UILabel!
+    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var skipButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     
     var viewModel : OnboardingContentViewModel?
     weak var delegate: OnboardingContentViewControllerDelegate?
@@ -28,6 +31,15 @@ class OnboardingContentViewController: UIViewController
         lblTitle.text = self.viewModel!.title
         lblSubTitle.text = self.viewModel?.subtitle
         imgContent.image = getImageFromName(name: self.viewModel!.imageName)
+        pageControl.currentPage = self.viewModel!.index //TODO: Refactor Onboarding to proper implement MVVM Pattern.
+        
+        //TODO: As mentioned above, this needs to be taken in account when refactored to take in account this case.
+        
+        if(self.viewModel!.index == 2)
+        {
+            skipButton.isHidden = true
+            nextButton.setTitle("ONBOARDING_START_NOW_BUTTON".localized, for: UIControlState.normal)
+        }
     }
     
     @IBAction func SkipButtonTouched(_ sender: UIButton)

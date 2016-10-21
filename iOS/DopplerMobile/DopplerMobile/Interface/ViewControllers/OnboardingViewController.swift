@@ -17,6 +17,7 @@ class OnboardingViewController: UIPageViewController
         super.viewDidLoad()
         self.onboardingDataSource = OnboardingViewDataSource(pager: self)
         self.dataSource = self.onboardingDataSource
-        setViewControllers([self.onboardingDataSource!.initialViewController()], direction: .forward, animated: true, completion: nil)
+        setViewControllers([self.onboardingDataSource!.initialViewController()], direction: .forward, animated: true, completion: nil)        
+        self.automaticallyAdjustsScrollViewInsets = false
     }
 }
