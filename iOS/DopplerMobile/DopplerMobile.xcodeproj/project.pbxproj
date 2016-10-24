@@ -54,7 +54,6 @@
 		2B4C32131D70A1180076DF3B /* NotificationIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C32121D70A1180076DF3B /* NotificationIdentifier.swift */; };
 		2B4C32151D70ABD50076DF3B /* DMApiManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C32141D70ABD50076DF3B /* DMApiManagerProtocol.swift */; };
 		2B4DCA0F1D6FBB150078D51B /* MSHttpStatusEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4DCA0E1D6FBB150078D51B /* MSHttpStatusEnum.swift */; };
-		2B6F0C3A1DA42888006541E2 /* RecipientsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6F0C391DA42888006541E2 /* RecipientsDataSource.swift */; };
 		2B6F0C3C1DA428D4006541E2 /* RecipientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6F0C3B1DA428D4006541E2 /* RecipientsTableViewCell.swift */; };
 		2B703F1B1D3D304E00A19E36 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B703F1A1D3D304E00A19E36 /* String.swift */; };
 		2B703F1D1D3D51D900A19E36 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B703F1C1D3D51D900A19E36 /* Optional.swift */; };
@@ -80,7 +79,6 @@
 		2B9FD29B1DA3F9CE00F80FAC /* UIColor+DMColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9FD29A1DA3F9CE00F80FAC /* UIColor+DMColors.swift */; };
 		2BA171BF1D74A9E300FBDE66 /* DefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA171BE1D74A9E300FBDE66 /* DefaultsKeys.swift */; };
 		2BA4FDB91D91D64D00743552 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA4FDB81D91D64D00743552 /* ListItem.swift */; };
-		2BA4FDBB1D91E12B00743552 /* BasicInformationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA4FDBA1D91E12B00743552 /* BasicInformationDataSource.swift */; };
 		2BC6EF4F1D370A88009F5A0B /* ScheduledCampaignsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC6EF4E1D370A88009F5A0B /* ScheduledCampaignsViewController.swift */; };
 		2BD182391D78AC1900EE10E0 /* ScheduledCampaignsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD182381D78AC1900EE10E0 /* ScheduledCampaignsTableViewCell.swift */; };
 		2BD4FD9C1D636EBA00E7E13C /* DeliveryRateReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4FD9B1D636EBA00E7E13C /* DeliveryRateReportTableViewCell.swift */; };
@@ -233,7 +231,6 @@
 		2B4C32121D70A1180076DF3B /* NotificationIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationIdentifier.swift; sourceTree = "<group>"; };
 		2B4C32141D70ABD50076DF3B /* DMApiManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DMApiManagerProtocol.swift; path = ../Infrastructure/DMApiManagerProtocol.swift; sourceTree = "<group>"; };
 		2B4DCA0E1D6FBB150078D51B /* MSHttpStatusEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSHttpStatusEnum.swift; sourceTree = "<group>"; };
-		2B6F0C391DA42888006541E2 /* RecipientsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipientsDataSource.swift; sourceTree = "<group>"; };
 		2B6F0C3B1DA428D4006541E2 /* RecipientsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipientsTableViewCell.swift; sourceTree = "<group>"; };
 		2B703F1A1D3D304E00A19E36 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		2B703F1C1D3D51D900A19E36 /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
@@ -262,7 +259,6 @@
 		2B9FD29A1DA3F9CE00F80FAC /* UIColor+DMColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+DMColors.swift"; sourceTree = "<group>"; };
 		2BA171BE1D74A9E300FBDE66 /* DefaultsKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultsKeys.swift; sourceTree = "<group>"; };
 		2BA4FDB81D91D64D00743552 /* ListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
-		2BA4FDBA1D91E12B00743552 /* BasicInformationDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicInformationDataSource.swift; sourceTree = "<group>"; };
 		2BC6EF4E1D370A88009F5A0B /* ScheduledCampaignsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledCampaignsViewController.swift; sourceTree = "<group>"; };
 		2BD182381D78AC1900EE10E0 /* ScheduledCampaignsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledCampaignsTableViewCell.swift; sourceTree = "<group>"; };
 		2BD4FD9B1D636EBA00E7E13C /* DeliveryRateReportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryRateReportTableViewCell.swift; sourceTree = "<group>"; };
@@ -666,8 +662,6 @@
 			isa = PBXGroup;
 			children = (
 				C226956F1D4297D000059959 /* OnboardingViewDataSource.swift */,
-				2BA4FDBA1D91E12B00743552 /* BasicInformationDataSource.swift */,
-				2B6F0C391DA42888006541E2 /* RecipientsDataSource.swift */,
 				2BFBC0881DBE665000796DA5 /* GenericArrayDataSource.swift */,
 			);
 			name = DataSources;
@@ -1031,7 +1025,6 @@
 				241198781D1B134100330D87 /* AppDelegate.swift in Sources */,
 				2BA4FDB91D91D64D00743552 /* ListItem.swift in Sources */,
 				2B4686371D81B97B00B03D4F /* Field.swift in Sources */,
-				2B6F0C3A1DA42888006541E2 /* RecipientsDataSource.swift in Sources */,
 				2B4686391D81C6D200B03D4F /* FieldType.swift in Sources */,
 				2B458AE41D88561600BD5A08 /* CampaignListViewModel.swift in Sources */,
 				2B1331071D9AE1630027D562 /* ScheduledCampaignsSegmentViewController.swift in Sources */,
@@ -1065,7 +1058,6 @@
 				9C48461C1D3FBB81003032D5 /* StringExtension.swift in Sources */,
 				2BDE5DF11DA57974006AE5E5 /* CampaignRecipient.swift in Sources */,
 				2B703F1F1D3D521E00A19E36 /* StringType.swift in Sources */,
-				2BA4FDBB1D91E12B00743552 /* BasicInformationDataSource.swift in Sources */,
 				2B7EF6521D4C5643008D4CDD /* NSDate.swift in Sources */,
 				2B46863F1D8284A600B03D4F /* ListsTableViewCell.swift in Sources */,
 				2BF307441D6E26B20062DF3C /* MSResponseJSONObjectSerializable.swift in Sources */,

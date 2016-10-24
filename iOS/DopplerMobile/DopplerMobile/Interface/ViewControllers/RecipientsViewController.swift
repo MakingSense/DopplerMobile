@@ -11,9 +11,10 @@ import UIKit
 class RecipientsViewController: UIViewController, UITableViewDelegate, DataSourceContentDelegate
 {
     // MARK: Properties
-    var dataSource : RecipientsDataSource?
+    var dataSource: GenericArrayDataSource<RecipientsTableViewCell, CampaignRecipient>?
     var campaignItem: CampaignViewModel?
     var recipientsViewModel: RecipientsViewModel!
+    var items: [CampaignRecipient] = []
     
     @IBOutlet weak var tblRecipients: UITableView!
     
@@ -25,7 +26,7 @@ class RecipientsViewController: UIViewController, UITableViewDelegate, DataSourc
     
     override func viewDidLoad() {
         self.navigationItem.title = "SCHEDULED_CAMPAIGNS_TEXT".localized
-        self.dataSource = RecipientsDataSource()
+        self.dataSource = GenericArrayDataSource<RecipientsTableViewCell, CampaignRecipient>(items: self.items, cellReuseIdentifier: RecipientsTableViewCell.identifier)
         self.tblRecipients.dataSource = self.dataSource
         self.tblRecipients.delegate = self
     }
