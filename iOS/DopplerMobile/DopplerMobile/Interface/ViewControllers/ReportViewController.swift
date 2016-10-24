@@ -20,7 +20,7 @@ class ReportViewController: UIViewController, UITableViewDelegate
     @IBOutlet fileprivate weak var lblRatePercentage: UILabel!
     @IBOutlet fileprivate weak var tblIndicators: UITableView!
     var reportItem: CampaignViewModel?
-    var dataSource : DeliveryRateReportDataSource?
+    var dataSource : GenericArrayDataSource<DeliveryRateReportTableViewCell, ListItem>?
     
     class func instantiateFromStoryboard() -> ReportViewController
     {
@@ -37,7 +37,7 @@ class ReportViewController: UIViewController, UITableViewDelegate
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.dataSource = DeliveryRateReportDataSource(items: reportItem?.deliveryRateIndicators!)
+        self.dataSource = GenericArrayDataSource<DeliveryRateReportTableViewCell, ListItem>(items: (reportItem?.deliveryRateIndicators!)!, cellReuseIdentifier: DeliveryRateReportTableViewCell.identifier)
         self.tblIndicators.dataSource = self.dataSource
         self.configureView()
     }
