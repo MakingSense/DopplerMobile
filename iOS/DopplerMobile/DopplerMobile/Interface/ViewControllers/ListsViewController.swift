@@ -12,15 +12,16 @@ class ListsViewController: UIViewController, UITableViewDelegate, DataSourceCont
 {
     // MARK: Properties
     @IBOutlet fileprivate weak var tblLists: UITableView!
-    var dataSource : ListsViewDataSource?
+    var dataSource : GenericArrayDataSource<ListsTableViewCell, ListDetailViewModel>?
     var listViewModel: ListViewModel!
+    var items: [ListDetailViewModel] = []
     
     // MARK: Actions
     override func viewDidLoad() {
         super.viewDidLoad()
         self.listViewModel = ListViewModel(suscribersService: SuscribersService(), contentDelegate: self)
         self.tblLists.delegate = self
-        self.dataSource = ListsViewDataSource()
+        self.dataSource = GenericArrayDataSource<ListsTableViewCell, ListDetailViewModel>(items: self.items, cellReuseIdentifier: ListsTableViewCell.identifier)
         self.tblLists.dataSource = self.dataSource
     }
     
