@@ -20,7 +20,6 @@
 		2439F3191D343BBC00949C5D /* CampaignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2439F3181D343BBC00949C5D /* CampaignViewModel.swift */; };
 		2439F31B1D352BD500949C5D /* SentCampaignsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2439F31A1D352BD500949C5D /* SentCampaignsTableViewCell.swift */; };
 		249ECB6E1D3D56B300F18E74 /* SentCampaignsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249ECB6D1D3D56B300F18E74 /* SentCampaignsViewController.swift */; };
-		249ECB701D3E795800F18E74 /* SentCampaignsViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249ECB6F1D3E795800F18E74 /* SentCampaignsViewDataSource.swift */; };
 		24F0FB6F1D1B2D5C00360346 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F0FB6E1D1B2D5C00360346 /* User.swift */; };
 		24F0FB731D1C109E00360346 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F0FB721D1C109E00360346 /* LoginViewModel.swift */; };
 		24FD44A31D22EBCB003E35A4 /* NavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD44A21D22EBCB003E35A4 /* NavigationDelegate.swift */; };
@@ -101,6 +100,7 @@
 		2BF3074E1D6E305C0062DF3C /* DMApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF3074D1D6E305C0062DF3C /* DMApiManager.swift */; };
 		2BF875191D7A135F009AA744 /* ListsViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF875181D7A135F009AA744 /* ListsViewDataSource.swift */; };
 		2BF8751D1D7A1475009AA744 /* ListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF8751C1D7A1475009AA744 /* ListsViewController.swift */; };
+		2BFBC0891DBE665000796DA5 /* GenericArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFBC0881DBE665000796DA5 /* GenericArrayDataSource.swift */; };
 		750CE2331D9EF07B008665C7 /* UIFont+DMFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750CE2321D9EF07B008665C7 /* UIFont+DMFonts.swift */; };
 		752C34D31D9E93BD00159441 /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752C34D21D9E93BD00159441 /* NSMutableAttributedString.swift */; };
 		757DF90D1DBA4F0E00C1EB01 /* DMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757DF90C1DBA4F0E00C1EB01 /* DMTextField.swift */; };
@@ -204,7 +204,6 @@
 		2439F3181D343BBC00949C5D /* CampaignViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignViewModel.swift; sourceTree = "<group>"; };
 		2439F31A1D352BD500949C5D /* SentCampaignsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SentCampaignsTableViewCell.swift; path = ../Views/SentCampaignsTableViewCell.swift; sourceTree = "<group>"; };
 		249ECB6D1D3D56B300F18E74 /* SentCampaignsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentCampaignsViewController.swift; sourceTree = "<group>"; };
-		249ECB6F1D3E795800F18E74 /* SentCampaignsViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SentCampaignsViewDataSource.swift; path = ViewControllers/SentCampaignsViewDataSource.swift; sourceTree = "<group>"; };
 		24F0FB6E1D1B2D5C00360346 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		24F0FB721D1C109E00360346 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		24FD44A21D22EBCB003E35A4 /* NavigationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationDelegate.swift; sourceTree = "<group>"; };
@@ -288,6 +287,7 @@
 		2BF3074D1D6E305C0062DF3C /* DMApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DMApiManager.swift; path = ../Infrastructure/DMApiManager.swift; sourceTree = "<group>"; };
 		2BF875181D7A135F009AA744 /* ListsViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListsViewDataSource.swift; sourceTree = "<group>"; };
 		2BF8751C1D7A1475009AA744 /* ListsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListsViewController.swift; sourceTree = "<group>"; };
+		2BFBC0881DBE665000796DA5 /* GenericArrayDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericArrayDataSource.swift; sourceTree = "<group>"; };
 		53491CD01247828DC971FAE1 /* Pods-DopplerMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DopplerMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DopplerMobile/Pods-DopplerMobile.debug.xcconfig"; sourceTree = "<group>"; };
 		750CE2321D9EF07B008665C7 /* UIFont+DMFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+DMFonts.swift"; path = "Extensions/UIFont+DMFonts.swift"; sourceTree = "<group>"; };
 		752C34D21D9E93BD00159441 /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
@@ -677,13 +677,13 @@
 			children = (
 				C226956F1D4297D000059959 /* OnboardingViewDataSource.swift */,
 				2BD4FD991D636DFB00E7E13C /* DeliveryRateReportDataSource.swift */,
-				249ECB6F1D3E795800F18E74 /* SentCampaignsViewDataSource.swift */,
 				2BD182361D78AA1A00EE10E0 /* ScheduledCampaignsViewDataSource.swift */,
 				2BF875181D7A135F009AA744 /* ListsViewDataSource.swift */,
 				2B46862E1D81AC1D00B03D4F /* SubscribersViewDataSource.swift */,
 				2BA4FDBA1D91E12B00743552 /* BasicInformationDataSource.swift */,
 				2B6F0C391DA42888006541E2 /* RecipientsDataSource.swift */,
 				1FA09C611DA6CB530088E22E /* SubscriberInformationDataSource.swift */,
+				2BFBC0881DBE665000796DA5 /* GenericArrayDataSource.swift */,
 			);
 			name = DataSources;
 			sourceTree = "<group>";
@@ -1107,8 +1107,8 @@
 				2B057FD81D7A297E0021F748 /* ListStatus.swift in Sources */,
 				2B7EF6451D4B229E008D4CDD /* Campaign.swift in Sources */,
 				2B46863B1D81EAB600B03D4F /* DateFormatEnum.swift in Sources */,
+				2BFBC0891DBE665000796DA5 /* GenericArrayDataSource.swift in Sources */,
 				2B4686351D81B88E00B03D4F /* Subscriber.swift in Sources */,
-				249ECB701D3E795800F18E74 /* SentCampaignsViewDataSource.swift in Sources */,
 				750CE2331D9EF07B008665C7 /* UIFont+DMFonts.swift in Sources */,
 				2BC6EF4F1D370A88009F5A0B /* ScheduledCampaignsViewController.swift in Sources */,
 				2BF8751D1D7A1475009AA744 /* ListsViewController.swift in Sources */,

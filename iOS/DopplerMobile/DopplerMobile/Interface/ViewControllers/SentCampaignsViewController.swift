@@ -12,8 +12,9 @@ class SentCampaignsViewController: UIViewController, UITableViewDelegate, DataSo
 {
     // MARK: Properties
     @IBOutlet fileprivate weak var tblSentCampaigns: UITableView!
-    var dataSource : SentCampaignsViewDataSource?
+    var dataSource : GenericArrayDataSource<SentCampaignsTableViewCell, CampaignViewModel>?
     var sentCampaignViewModel: SentCampaignViewModel!
+    var items: [CampaignViewModel] = []
     
     // MARK: Actions
     override func viewDidLoad()
@@ -22,7 +23,7 @@ class SentCampaignsViewController: UIViewController, UITableViewDelegate, DataSo
         self.navigationController!.setNavigationBarHidden(false, animated: false)
         self.tblSentCampaigns.delegate = self
         self.sentCampaignViewModel = SentCampaignViewModel(campaignsService: CampaignsService(), contentDelegate: self)
-        self.dataSource = SentCampaignsViewDataSource()
+        self.dataSource = GenericArrayDataSource<SentCampaignsTableViewCell, CampaignViewModel>(items: self.items, cellReuseIdentifier: SentCampaignsTableViewCell.identifier)
         self.tblSentCampaigns.dataSource = self.dataSource
     }
     
