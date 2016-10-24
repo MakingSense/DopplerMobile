@@ -12,8 +12,9 @@ class ScheduledCampaignsViewController: UIViewController, UITableViewDelegate, D
 {    
     // MARK: Properties
     @IBOutlet fileprivate weak var tblScheduledCampaigns: UITableView!
-    var dataSource : ScheduledCampaignsViewDataSource?
+    var dataSource: GenericArrayDataSource<ScheduledCampaignsTableViewCell, CampaignViewModel>?
     var scheduledCampaignViewModel: ScheduledCampaignViewModel!
+    var items: [CampaignViewModel] = []
     
     // MARK: Actions
     override func viewDidLoad() {
@@ -21,7 +22,7 @@ class ScheduledCampaignsViewController: UIViewController, UITableViewDelegate, D
         self.navigationController!.setNavigationBarHidden(false, animated: false)
         self.tblScheduledCampaigns.delegate = self
         self.scheduledCampaignViewModel = ScheduledCampaignViewModel(campaignsService: CampaignsService(), contentDelegate: self)
-        self.dataSource = ScheduledCampaignsViewDataSource()
+        self.dataSource = GenericArrayDataSource<ScheduledCampaignsTableViewCell, CampaignViewModel>(items: self.items, cellReuseIdentifier: ScheduledCampaignsTableViewCell.identifier)
         self.tblScheduledCampaigns.dataSource = self.dataSource
     }
     

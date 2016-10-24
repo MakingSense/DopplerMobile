@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ScheduledCampaignsTableViewCell : UITableViewCell
+class ScheduledCampaignsTableViewCell : UITableViewCell, TableViewCellProtocol
 {
     // MARK: Properties
     @IBOutlet fileprivate weak var lblCampaignName: UILabel!
@@ -18,8 +18,8 @@ class ScheduledCampaignsTableViewCell : UITableViewCell
     static let identifier = "ScheduledCampaignsCell"
     
     // MARK: Actions
-    func configure(_ campaignViewModel: CampaignViewModel)
-    {
+    func configure<T>(viewModel: T) {
+        let campaignViewModel = viewModel as! CampaignViewModel
         self.lblCampaignName.text = campaignViewModel.name
         self.lblCampaignDate.text = campaignViewModel.sentDate?.toStringWithFormat(DateFormatEnum.yyyy_MM_dd.pattern)
         //TODO: get and show the right information.

@@ -84,7 +84,6 @@
 		2BA4FDB91D91D64D00743552 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA4FDB81D91D64D00743552 /* ListItem.swift */; };
 		2BA4FDBB1D91E12B00743552 /* BasicInformationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA4FDBA1D91E12B00743552 /* BasicInformationDataSource.swift */; };
 		2BC6EF4F1D370A88009F5A0B /* ScheduledCampaignsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC6EF4E1D370A88009F5A0B /* ScheduledCampaignsViewController.swift */; };
-		2BD182371D78AA1A00EE10E0 /* ScheduledCampaignsViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD182361D78AA1A00EE10E0 /* ScheduledCampaignsViewDataSource.swift */; };
 		2BD182391D78AC1900EE10E0 /* ScheduledCampaignsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD182381D78AC1900EE10E0 /* ScheduledCampaignsTableViewCell.swift */; };
 		2BD4FD9A1D636DFB00E7E13C /* DeliveryRateReportDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4FD991D636DFB00E7E13C /* DeliveryRateReportDataSource.swift */; };
 		2BD4FD9C1D636EBA00E7E13C /* DeliveryRateReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4FD9B1D636EBA00E7E13C /* DeliveryRateReportTableViewCell.swift */; };
@@ -271,7 +270,6 @@
 		2BA4FDB81D91D64D00743552 /* ListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		2BA4FDBA1D91E12B00743552 /* BasicInformationDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicInformationDataSource.swift; sourceTree = "<group>"; };
 		2BC6EF4E1D370A88009F5A0B /* ScheduledCampaignsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledCampaignsViewController.swift; sourceTree = "<group>"; };
-		2BD182361D78AA1A00EE10E0 /* ScheduledCampaignsViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScheduledCampaignsViewDataSource.swift; path = ViewControllers/ScheduledCampaignsViewDataSource.swift; sourceTree = "<group>"; };
 		2BD182381D78AC1900EE10E0 /* ScheduledCampaignsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledCampaignsTableViewCell.swift; sourceTree = "<group>"; };
 		2BD4FD991D636DFB00E7E13C /* DeliveryRateReportDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeliveryRateReportDataSource.swift; path = ViewControllers/DeliveryRateReportDataSource.swift; sourceTree = "<group>"; };
 		2BD4FD9B1D636EBA00E7E13C /* DeliveryRateReportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryRateReportTableViewCell.swift; sourceTree = "<group>"; };
@@ -677,7 +675,6 @@
 			children = (
 				C226956F1D4297D000059959 /* OnboardingViewDataSource.swift */,
 				2BD4FD991D636DFB00E7E13C /* DeliveryRateReportDataSource.swift */,
-				2BD182361D78AA1A00EE10E0 /* ScheduledCampaignsViewDataSource.swift */,
 				2BF875181D7A135F009AA744 /* ListsViewDataSource.swift */,
 				2B46862E1D81AC1D00B03D4F /* SubscribersViewDataSource.swift */,
 				2BA4FDBA1D91E12B00743552 /* BasicInformationDataSource.swift */,
@@ -1067,7 +1064,6 @@
 				249ECB6E1D3D56B300F18E74 /* SentCampaignsViewController.swift in Sources */,
 				2B7EF6501D4B2AE6008D4CDD /* CampaignsService.swift in Sources */,
 				2B057FDA1D7A2F410021F748 /* ListViewModel.swift in Sources */,
-				2BD182371D78AA1A00EE10E0 /* ScheduledCampaignsViewDataSource.swift in Sources */,
 				2B0EC03A1D7FE71A008BF638 /* CampaignPreviewViewModel.swift in Sources */,
 				24FD44B01D245DC3003E35A4 /* SimpleCommand.swift in Sources */,
 				2B7EF64E1D4B2A4D008D4CDD /* SentCampaignViewModel.swift in Sources */,
