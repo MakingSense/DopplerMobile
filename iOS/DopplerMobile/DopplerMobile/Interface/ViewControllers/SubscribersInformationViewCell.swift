@@ -9,14 +9,15 @@
 import Foundation
 import UIKit
 
-class SubscribersInformationViewCell : UITableViewCell
+class SubscribersInformationViewCell : UITableViewCell, TableViewCellProtocol
 {
     @IBOutlet weak var lblFieldName: UILabel!
     @IBOutlet weak var lblFieldValue: UILabel!
     static let identifier = "SubscriberInformationCell"
     
-    func configure(item: ListItem?)
+    func configure<T>(viewModel: T)
     {
+        let item = viewModel as? ListItem
         self.lblFieldName.text = item?.name
         self.lblFieldValue.text = item?.value!
     }

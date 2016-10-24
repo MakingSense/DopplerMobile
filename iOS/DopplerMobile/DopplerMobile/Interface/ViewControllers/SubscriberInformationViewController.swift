@@ -15,9 +15,9 @@ class SubscriberInformationViewController: UIViewController, UITableViewDelegate
     @IBOutlet weak var tblFieldsList: UITableView!
     @IBOutlet weak var lblSubscriberEmail: UILabel!
     @IBOutlet weak var lblSubscriberType: UILabel!
-    var dataSource: SubscriberInformationDataSource?
+    var dataSource : GenericArrayDataSource<SubscribersInformationViewCell, ListItem>?
     var item: SubscriberViewModel?
-
+    
     // MARK: Actions
     override func viewDidLoad()
     {
@@ -27,7 +27,7 @@ class SubscriberInformationViewController: UIViewController, UITableViewDelegate
     
     override func viewWillAppear(_ animated: Bool)
     {
-        self.dataSource = SubscriberInformationDataSource(items: self.item?.subscriberInformation)
+        self.dataSource = GenericArrayDataSource<SubscribersInformationViewCell, ListItem>(items: (self.item?.subscriberInformation)!, cellReuseIdentifier: SubscribersInformationViewCell.identifier)
         self.tblFieldsList.dataSource = self.dataSource
         lblSubscriberEmail.text = self.item?.email
         lblSubscriberType.text = "LISTS_SUBSCRIBER_TYPE".localized
