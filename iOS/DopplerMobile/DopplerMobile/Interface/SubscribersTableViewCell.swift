@@ -8,17 +8,18 @@
 
 import UIKit
 
-class SubscribersTableViewCell : UITableViewCell
+class SubscribersTableViewCell : UITableViewCell, TableViewCellProtocol
 {
     // MARK: Properties
-    
     @IBOutlet weak var lblSubscriberEmail: UILabel!
     @IBOutlet weak var lblSubscriberName: UILabel!
     static let identifier = "SuscribersCell"
     
     // MARK: Actions
-    func configure(_ suscriberViewModel: SubscriberViewModel)
+    
+    func configure<T>(viewModel: T)
     {
+        let suscriberViewModel = viewModel as! SubscriberViewModel
         self.lblSubscriberEmail.text = suscriberViewModel.email
         self.lblSubscriberName.text = "\(suscriberViewModel.name ?? "-") \(suscriberViewModel.lastname ?? "-")"
     }

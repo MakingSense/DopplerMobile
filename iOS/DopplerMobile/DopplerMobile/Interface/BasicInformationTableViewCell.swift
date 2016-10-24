@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BasicInformationTableViewCell : UITableViewCell
+class BasicInformationTableViewCell : UITableViewCell, TableViewCellProtocol
 {
     // MARK: Properties
     @IBOutlet weak var lblFieldName: UILabel!
@@ -16,8 +16,9 @@ class BasicInformationTableViewCell : UITableViewCell
     static let identifier = "BasicInformationCell"
     
     // MARK: Actions
-    func configure(_ item: ListItem?)
+    func configure<T>(viewModel: T)
     {
+        let item = viewModel as? ListItem
         self.lblFieldName.text = item?.name
         self.lblFieldValue.text = item?.value!
     }

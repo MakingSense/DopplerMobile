@@ -7,7 +7,7 @@
 //
 import UIKit
 
-class ListsTableViewCell : UITableViewCell
+class ListsTableViewCell : UITableViewCell, TableViewCellProtocol
 {
     @IBOutlet fileprivate weak var lblSubscribersCount: UILabel!
     @IBOutlet fileprivate weak var lblListCreationDate: UILabel!
@@ -15,8 +15,8 @@ class ListsTableViewCell : UITableViewCell
     static let identifier = "ListsCell"
     
     // MARK: Actions
-    func configure(_ listDetailViewModel: ListDetailViewModel)
-    {
+    func configure<T>(viewModel: T) {
+        let listDetailViewModel = viewModel as! ListDetailViewModel
         self.lblListName.text = listDetailViewModel.name
         self.lblListCreationDate.text = "\("LISTS_SUBSCRIBER_CREATED_ON".localized)  \((listDetailViewModel.creationDate?.toStringWithFormat(DateFormatEnum.yyyy_MM_dd.pattern))!)"
         self.lblSubscribersCount.text = "\(listDetailViewModel.subscribersCount!) \(listDetailViewModel.subscribersCount! == 1 ? "\("REPORTS_SUBSCRIBER".localized)" : "\("REPORTS_SUBSCRIBERS".localized)")"

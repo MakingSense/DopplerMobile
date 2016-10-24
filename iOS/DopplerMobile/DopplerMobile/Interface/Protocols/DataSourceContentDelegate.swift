@@ -6,10 +6,11 @@
 //  Copyright © 2016 Making Sense. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol DataSourceContentDelegate: class
 {
     //TODO: Research about using generics on this protocol definition so we have more control of types being used and compilation-time checks. Something like DataSourceContentDelegate<T>
     func updateContent(_ content: AnyObject)
+    func handleRefresh(_ refreshControl: UIRefreshControl)
 }

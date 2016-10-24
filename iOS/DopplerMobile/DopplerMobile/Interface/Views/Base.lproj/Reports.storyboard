@@ -274,10 +274,10 @@
                             <constraint firstItem="tSL-1m-yLQ" firstAttribute="top" secondItem="9Yi-hF-mh5" secondAttribute="bottom" id="JS0-nB-6aC"/>
                             <constraint firstItem="9Yi-hF-mh5" firstAttribute="centerX" secondItem="kLz-cF-BK7" secondAttribute="centerX" id="JYz-4p-CAX"/>
                             <constraint firstItem="9Yi-hF-mh5" firstAttribute="width" secondItem="kLz-cF-BK7" secondAttribute="width" id="KGx-hX-QSa"/>
-                            <constraint firstItem="tSL-1m-yLQ" firstAttribute="height" secondItem="kLz-cF-BK7" secondAttribute="height" id="WXh-dH-NHg"/>
                             <constraint firstItem="9Yi-hF-mh5" firstAttribute="top" secondItem="SBp-nA-6hz" secondAttribute="bottom" id="dM8-Du-svY"/>
                             <constraint firstItem="tSL-1m-yLQ" firstAttribute="width" secondItem="kLz-cF-BK7" secondAttribute="width" id="gTZ-IQ-ACm"/>
                             <constraint firstItem="tSL-1m-yLQ" firstAttribute="centerX" secondItem="kLz-cF-BK7" secondAttribute="centerX" id="haR-Hy-MH3"/>
+                            <constraint firstItem="fFA-Qk-HPJ" firstAttribute="top" secondItem="tSL-1m-yLQ" secondAttribute="bottom" id="rxZ-X6-EDr"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="METRICS" image="Metrics-Summary-Disabled" selectedImage="Metrics-Summary" id="2sA-Qa-ZIi"/>

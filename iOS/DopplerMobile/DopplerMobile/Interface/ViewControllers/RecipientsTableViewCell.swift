@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RecipientsTableViewCell : UITableViewCell
+class RecipientsTableViewCell : UITableViewCell, TableViewCellProtocol
 {
     // MARK: Properties
     @IBOutlet weak var lblFieldName: UILabel!
@@ -16,8 +16,9 @@ class RecipientsTableViewCell : UITableViewCell
     static let identifier = "RecipientsCell"
     
     // MARK: Actions
-    func configure(_ item: CampaignRecipient?)
+    func configure<T>(viewModel: T)
     {
+        let item = viewModel as? CampaignRecipient
         self.lblFieldName.text = item?.name
         self.lblFieldValue.text = "\((item?.subscribersCount!)!)"
     }
