@@ -8,7 +8,8 @@
 import UIKit
 
 fileprivate var ActivityIndicatorViewAssociativeKey = "ActivityIndicatorViewAssociativeKey"
-public extension UIView {
+public extension UIView
+{
     var activityIndicatorView: UIActivityIndicatorView
         {
         get {
