@@ -16,6 +16,11 @@ class RecipientsViewModel
         self.contentDelegate = contentDelegate
         self.subscribersService = suscribersService
         NotificationCenter.default.addObserver(self, selector: #selector(ScheduledCampaignViewModel.OnNotificationArrived(_:)), name:NSNotification.Name(rawValue: NotificationIdentifier.CampaignRecipientsNotification.rawValue), object: nil)
+        self.refreshList(campaignId: campaignId)
+    }
+    
+    func refreshList(campaignId: Int)
+    {
         self.subscribersService.downloadCampaignRecipients(campaignId, notification: NotificationIdentifier.CampaignRecipientsNotification.rawValue)
     }
     

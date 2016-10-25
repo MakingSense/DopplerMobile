@@ -53,6 +53,8 @@
 		2B46863F1D8284A600B03D4F /* ListsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B46863E1D8284A600B03D4F /* ListsTableViewCell.swift */; };
 		2B4C32131D70A1180076DF3B /* NotificationIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C32121D70A1180076DF3B /* NotificationIdentifier.swift */; };
 		2B4C32151D70ABD50076DF3B /* DMApiManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C32141D70ABD50076DF3B /* DMApiManagerProtocol.swift */; };
+		2B4D5D181DBF102C00D06159 /* UIView+DMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4D5D171DBF102C00D06159 /* UIView+DMView.swift */; };
+		2B4D5D1C1DBF10A400D06159 /* NSObject+DMObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4D5D1B1DBF10A400D06159 /* NSObject+DMObject.swift */; };
 		2B4DCA0F1D6FBB150078D51B /* MSHttpStatusEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4DCA0E1D6FBB150078D51B /* MSHttpStatusEnum.swift */; };
 		2B6F0C3C1DA428D4006541E2 /* RecipientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6F0C3B1DA428D4006541E2 /* RecipientsTableViewCell.swift */; };
 		2B703F1B1D3D304E00A19E36 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B703F1A1D3D304E00A19E36 /* String.swift */; };
@@ -230,6 +232,8 @@
 		2B46863E1D8284A600B03D4F /* ListsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListsTableViewCell.swift; path = ../ListsTableViewCell.swift; sourceTree = "<group>"; };
 		2B4C32121D70A1180076DF3B /* NotificationIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationIdentifier.swift; sourceTree = "<group>"; };
 		2B4C32141D70ABD50076DF3B /* DMApiManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DMApiManagerProtocol.swift; path = ../Infrastructure/DMApiManagerProtocol.swift; sourceTree = "<group>"; };
+		2B4D5D171DBF102C00D06159 /* UIView+DMView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+DMView.swift"; sourceTree = "<group>"; };
+		2B4D5D1B1DBF10A400D06159 /* NSObject+DMObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+DMObject.swift"; sourceTree = "<group>"; };
 		2B4DCA0E1D6FBB150078D51B /* MSHttpStatusEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSHttpStatusEnum.swift; sourceTree = "<group>"; };
 		2B6F0C3B1DA428D4006541E2 /* RecipientsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipientsTableViewCell.swift; sourceTree = "<group>"; };
 		2B703F1A1D3D304E00A19E36 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -351,6 +355,8 @@
 				2BA171BE1D74A9E300FBDE66 /* DefaultsKeys.swift */,
 				750CE2321D9EF07B008665C7 /* UIFont+DMFonts.swift */,
 				2B9FD29A1DA3F9CE00F80FAC /* UIColor+DMColors.swift */,
+				2B4D5D171DBF102C00D06159 /* UIView+DMView.swift */,
+				2B4D5D1B1DBF10A400D06159 /* NSObject+DMObject.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -1007,7 +1013,9 @@
 				2B1DDC961DA830B100F5632E /* ReportMenuOption.swift in Sources */,
 				24F0FB731D1C109E00360346 /* LoginViewModel.swift in Sources */,
 				2BDD10E31D918A6500E5ABF7 /* BasicInformationViewController.swift in Sources */,
+				2B4D5D1C1DBF10A400D06159 /* NSObject+DMObject.swift in Sources */,
 				2B703F1B1D3D304E00A19E36 /* String.swift in Sources */,
+				2B4D5D181DBF102C00D06159 /* UIView+DMView.swift in Sources */,
 				2B458AE21D88530E00BD5A08 /* ScheduledCampaignViewModel.swift in Sources */,
 				1F9C62AA1DA69CE700B95C77 /* SubscriberInformationViewController.swift in Sources */,
 				2BD182391D78AC1900EE10E0 /* ScheduledCampaignsTableViewCell.swift in Sources */,

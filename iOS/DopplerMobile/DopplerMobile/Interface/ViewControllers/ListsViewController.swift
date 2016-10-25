@@ -16,13 +16,22 @@ class ListsViewController: UIViewController, UITableViewDelegate, DataSourceCont
     var listViewModel: ListViewModel!
     var items: [ListDetailViewModel] = []
     
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(SentCampaignsViewController.handleRefresh(_:)), for: UIControlEvents.valueChanged)
+        return refreshControl
+    }()
+    
     // MARK: Actions
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tblLists.addSubview(self.refreshControl)
         self.listViewModel = ListViewModel(suscribersService: SuscribersService(), contentDelegate: self)
         self.tblLists.delegate = self
         self.dataSource = GenericArrayDataSource<ListsTableViewCell, ListDetailViewModel>(items: self.items, cellReuseIdentifier: ListsTableViewCell.identifier)
         self.tblLists.dataSource = self.dataSource
+        self.tblLists.backgroundView = self.tblLists.activityIndicatorView
+        self.tblLists.activityIndicatorView.startAnimating()
     }
     
     // MARK: - Segues
@@ -36,8 +45,19 @@ class ListsViewController: UIViewController, UITableViewDelegate, DataSourceCont
         }
     }
     
+    
+    func handleRefresh(_ refreshControl: UIRefreshControl)
+    {
+        self.listViewModel.refreshList()
+    }
+    
     func updateContent(_ content: AnyObject) {
         dataSource?.items = content as! [ListDetailViewModel]
         tblLists.reloadData()
+        refreshControl.endRefreshing()
+        if(self.tblLists.activityIndicatorView.isAnimating)
+        {
+            self.tblLists.activityIndicatorView.stopAnimating()
+        }
     }
 }

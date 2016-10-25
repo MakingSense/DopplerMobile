@@ -16,8 +16,13 @@ open class ScheduledCampaignViewModel: CampaignListViewModel
         self.contentDelegate = contentDelegate
         self.campaignsService = campaignsService
         //TODO: I am using "draft" value, because there is not any campaign with scheduled state for this user.
-        self.campaignsService.downloadCampaigns(CampaignStatus.draft, notification: NotificationIdentifier.ScheduledCampaignsNotification.rawValue)
+        self.refreshList()
         NotificationCenter.default.addObserver(self, selector: #selector(CampaignListViewModel.OnNotificationArrived(_:)), name:NSNotification.Name(rawValue: NotificationIdentifier.ScheduledCampaignsNotification.rawValue), object: nil)
+    }
+    
+    func refreshList()
+    {
+        self.campaignsService.downloadCampaigns(CampaignStatus.draft, notification: NotificationIdentifier.ScheduledCampaignsNotification.rawValue)
     }
     
     deinit

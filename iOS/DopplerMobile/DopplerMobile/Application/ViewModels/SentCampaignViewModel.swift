@@ -21,9 +21,14 @@ open class SentCampaignViewModel
     {
         self.campaignsService = campaignsService
         self.contentDelegate = contentDelegate
-        self.campaignsService.downloadCampaigns(CampaignStatus.shipped, notification: NotificationIdentifier.SentCampaignsNotification.rawValue)
+        self.refreshList()
         NotificationCenter.default.addObserver(self, selector: #selector(SentCampaignViewModel.OnNotificationArrived(_:)), name:NSNotification.Name(rawValue: NotificationIdentifier.SentCampaignsNotification.rawValue), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(SentCampaignViewModel.OnNotificationArrived(_:)), name:NSNotification.Name(rawValue: NotificationIdentifier.CampaignReportNotification.rawValue), object: nil)
+    }
+    
+    func refreshList()
+    {
+        self.campaignsService.downloadCampaigns(CampaignStatus.shipped, notification: NotificationIdentifier.SentCampaignsNotification.rawValue)
     }
     
     @objc func OnNotificationArrived(_ notification: Notification)
