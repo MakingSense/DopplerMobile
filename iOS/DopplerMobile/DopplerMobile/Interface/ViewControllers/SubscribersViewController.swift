@@ -61,7 +61,8 @@ class SubscribersViewController: UIViewController, UITableViewDelegate, DataSour
         self.suscribersListViewModel.refreshList(listId: (listItem?.listId!)!)
     }
     
-    func updateContent(_ content: AnyObject) {
+    func updateContent(_ content: AnyObject)
+    {
         dataSource?.items = content as! [SubscriberViewModel]
         tblSuscribers.reloadData()
         refreshControl.endRefreshing()
