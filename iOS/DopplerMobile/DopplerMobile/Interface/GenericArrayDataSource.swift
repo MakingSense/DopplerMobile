@@ -9,8 +9,17 @@ import UIKit
 
 class GenericArrayDataSource<CellType: TableViewCellProtocol, ItemType>: NSObject, UITableViewDataSource
 {
+    private var cellReuseIdentifier: String
+    private let ITEMS_PER_PAGE = 20
+    private var paginationDelegate: DataSourcePaginationDelegate?
     var items: [ItemType]
-    var cellReuseIdentifier: String
+    var currentPage = 1
+    
+    convenience init(items: [ItemType], cellReuseIdentifier: String, paginationDelegate: DataSourcePaginationDelegate)
+    {
+        self.init(items: items, cellReuseIdentifier: cellReuseIdentifier)
+        self.paginationDelegate = paginationDelegate
+    }
     
     init(items: [ItemType], cellReuseIdentifier: String)
     {
@@ -26,6 +35,12 @@ class GenericArrayDataSource<CellType: TableViewCellProtocol, ItemType>: NSObjec
     
     func configureCell(cell: CellType, atIndexPath indexPath:NSIndexPath)
     {
+        if((self.paginationDelegate != nil) && indexPath.row == self.items.count - 1 && (self.items.count % ITEMS_PER_PAGE == 0))
+        {
+            self.currentPage = self.currentPage + 1
+            self.paginationDelegate?.getNextPage(self.currentPage)
+        }
+        
         let item = itemAtIndexPath(indexPath: indexPath)
         cell.configure(viewModel: item)
     }

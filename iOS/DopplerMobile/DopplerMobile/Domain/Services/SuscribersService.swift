@@ -11,7 +11,7 @@ import Alamofire
 
 open class SuscribersService
 {
-    func downloadSuscribersLists(_ notification: String)
+    func downloadSuscribersLists(page: Int, notification: String)
     {
         let completionHandler: (Result<[List]>) -> Void =
             { result in
@@ -27,7 +27,7 @@ open class SuscribersService
                 }
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: notification), object: campaigns)
         }
-        DMApiManager.sharedInstance.getSuscribersLists(completionHandler)
+        DMApiManager.sharedInstance.getSuscribersLists(page: page, completionHandler: completionHandler)
     }
     
     func downloadSuscribers(_ listId: Int, notification: String)

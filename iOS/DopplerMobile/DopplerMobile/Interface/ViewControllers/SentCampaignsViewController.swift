@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SentCampaignsViewController: UIViewController, UITableViewDelegate, DataSourceContentDelegate
+class SentCampaignsViewController: UIViewController, UITableViewDelegate, DataSourceContentDelegate, DataSourcePaginationDelegate
 {
     // MARK: Properties
     @IBOutlet fileprivate weak var tblSentCampaigns: UITableView!
@@ -16,15 +16,24 @@ class SentCampaignsViewController: UIViewController, UITableViewDelegate, DataSo
     var sentCampaignViewModel: SentCampaignViewModel!
     var items: [CampaignViewModel] = []
     
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(SentCampaignsViewController.handleRefresh(_:)), for: UIControlEvents.valueChanged)
+        return refreshControl
+    }()
+    
     // MARK: Actions
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        self.tblSentCampaigns.addSubview(self.refreshControl)
         self.navigationController!.setNavigationBarHidden(false, animated: false)
         self.tblSentCampaigns.delegate = self
         self.sentCampaignViewModel = SentCampaignViewModel(campaignsService: CampaignsService(), contentDelegate: self)
-        self.dataSource = GenericArrayDataSource<SentCampaignsTableViewCell, CampaignViewModel>(items: self.items, cellReuseIdentifier: SentCampaignsTableViewCell.identifier)
+        self.dataSource = GenericArrayDataSource<SentCampaignsTableViewCell, CampaignViewModel>(items: self.items, cellReuseIdentifier: SentCampaignsTableViewCell.identifier, paginationDelegate: self)
         self.tblSentCampaigns.dataSource = self.dataSource
+        self.tblSentCampaigns.backgroundView = self.tblSentCampaigns.activityIndicatorView
+        self.tblSentCampaigns.activityIndicatorView.startAnimating()
     }
     
     // MARK: - Segues
@@ -38,9 +47,33 @@ class SentCampaignsViewController: UIViewController, UITableViewDelegate, DataSo
         }
     }
     
+    func handleRefresh(_ refreshControl: UIRefreshControl)
+    {
+        self.dataSource?.currentPage = 1
+        self.sentCampaignViewModel.downloadData(page: (self.dataSource?.currentPage)!)
+    }
+    
+    func getNextPage(_ page: Int)
+    {
+        self.tblSentCampaigns.activityIndicatorView.startAnimating()
+        self.sentCampaignViewModel.downloadData(page: page)
+    }
+    
     func updateContent(_ content: AnyObject)
     {
-        dataSource?.items = content as! [CampaignViewModel]
-        tblSentCampaigns.reloadData()
+        if ((self.dataSource?.currentPage)! == 1)
+        {
+            self.dataSource?.items = content as! [CampaignViewModel]
+            refreshControl.endRefreshing()
+        }
+        else
+        {
+            self.dataSource?.items.append(contentsOf: content as! [CampaignViewModel])
+        }
+        self.tblSentCampaigns.reloadData()
+        if(self.tblSentCampaigns.activityIndicatorView.isAnimating)
+        {
+            self.tblSentCampaigns.activityIndicatorView.stopAnimating()
+        }
     }
 }

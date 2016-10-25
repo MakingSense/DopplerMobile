@@ -34,7 +34,7 @@ open class CampaignPreviewViewModel
         }
         else
         {
-            //TODO: Show error.
+            //TODO: Show error message.
         }
     }
 }

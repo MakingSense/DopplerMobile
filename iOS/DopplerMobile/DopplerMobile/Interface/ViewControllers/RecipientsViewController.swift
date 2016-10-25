@@ -24,7 +24,14 @@ class RecipientsViewController: UIViewController, UITableViewDelegate, DataSourc
         return storyboard.instantiateViewController(withIdentifier: String(describing: self)) as! RecipientsViewController
     }
     
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(SentCampaignsViewController.handleRefresh(_:)), for: UIControlEvents.valueChanged)
+        return refreshControl
+    }()
+    
     override func viewDidLoad() {
+        self.tblRecipients.addSubview(self.refreshControl)
         self.navigationItem.title = "SCHEDULED_CAMPAIGNS_TEXT".localized
         self.dataSource = GenericArrayDataSource<RecipientsTableViewCell, CampaignRecipient>(items: self.items, cellReuseIdentifier: RecipientsTableViewCell.identifier)
         self.tblRecipients.dataSource = self.dataSource
@@ -36,8 +43,14 @@ class RecipientsViewController: UIViewController, UITableViewDelegate, DataSourc
         self.recipientsViewModel = RecipientsViewModel(suscribersService: SuscribersService(), contentDelegate: self, campaignId: (campaignItem?.campaignId)!)
     }
     
+    func handleRefresh(_ refreshControl: UIRefreshControl)
+    {
+        self.recipientsViewModel.refreshList(campaignId: (campaignItem?.campaignId)!)
+    }
+    
     func updateContent(_ content: AnyObject) {
         dataSource?.items = content as! [CampaignRecipient]
         tblRecipients.reloadData()
+        refreshControl.endRefreshing()
     }
 }

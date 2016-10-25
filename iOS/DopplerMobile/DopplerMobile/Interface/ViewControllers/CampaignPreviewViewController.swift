@@ -39,6 +39,11 @@ class CampaignPreviewViewController: UIViewController, DataSourceContentDelegate
         }
     }
     
+    //TODO: show loading progress.
+    func handleRefresh(_ refreshControl: UIRefreshControl)
+    {
+    }
+    
     func updateContent(_ content: AnyObject) {
         let requestObj = URLRequest(url: content as! URL);
         wvCampaignPreview.loadRequest(requestObj);

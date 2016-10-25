@@ -17,8 +17,13 @@ open class ListViewModel
     {
         self.contentDelegate = contentDelegate
         self.suscribersService = suscribersService
-        self.suscribersService.downloadSuscribersLists(NotificationIdentifier.ListsNotification.rawValue)
+        self.downloadData(page: 1)
         NotificationCenter.default.addObserver(self, selector: #selector(ListViewModel.OnNotificationArrived(_:)), name:NSNotification.Name(rawValue: NotificationIdentifier.ListsNotification.rawValue), object: nil)
+    }
+    
+    func downloadData(page: Int)
+    {
+        self.suscribersService.downloadSuscribersLists(page: page, notification: NotificationIdentifier.ListsNotification.rawValue)
     }
     
     @objc func OnNotificationArrived(_ notification: Notification){

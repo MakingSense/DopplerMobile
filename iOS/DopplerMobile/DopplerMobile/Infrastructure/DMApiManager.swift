@@ -31,10 +31,11 @@ class DMApiManager: DMApiManagerProtocol
     }
     
     //Get Last Sent Campaigns Call.
-    func getCampaigns(_ status: CampaignStatus, completionHandler: @escaping (Result<[Campaign]>) -> Void)
+    func getCampaigns(_ status: CampaignStatus, pageNumber: Int, completionHandler: @escaping (Result<[Campaign]>) -> Void)
     {
         let parameters : Parameters = [
-            "state": status.name]
+            "state": status.name,
+            "page": pageNumber]
         Alamofire.request(DMApplicationRouter.getCampaigns(username: Defaults[.username]!, parameters: parameters))
             .responseArray
             { (response: DataResponse<[Campaign]>) in
@@ -58,9 +59,12 @@ class DMApiManager: DMApiManagerProtocol
     }
     
     //Get Suscribers Lists Call.
-    func getSuscribersLists(_ completionHandler: @escaping (Result<[List]>) -> Void)
+    func getSuscribersLists(page: Int, completionHandler: @escaping (Result<[List]>) -> Void)
     {
-        Alamofire.request(DMApplicationRouter.getSuscribersLists(username: Defaults[.username]!))
+        let parameters: Parameters = [
+            "page": page]
+        
+        Alamofire.request(DMApplicationRouter.getSuscribersLists(username: Defaults[.username]!, parameters: parameters))
             .responseArray
             {(response: DataResponse<[List]>) in
                 completionHandler(response.result)
