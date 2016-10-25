@@ -24,12 +24,8 @@ class BasicInformationViewController: UIViewController, UITableViewDelegate
     override func viewWillAppear(_ animated: Bool)
     {
         self.navigationItem.title = "SCHEDULED_CAMPAIGNS_TEXT".localized
-//        self.dataSource = BasicInformationDataSource(items: campaignItem?.campaignBasicInformation!)
-        
         self.dataSource = GenericArrayDataSource<BasicInformationTableViewCell, ListItem>(items: (campaignItem?.campaignBasicInformation!)!, cellReuseIdentifier: BasicInformationTableViewCell.identifier)
         self.tblBasicInformation.dataSource = self.dataSource
-//        self.dataSource?.items = campaignItem?.campaignBasicInformation
-        //self.tblBasicInformation.reloadData()
         self.tblBasicInformation.delegate = self
     }
 }
