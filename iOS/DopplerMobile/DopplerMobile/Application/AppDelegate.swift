@@ -28,6 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         
         UIApplication.shared.statusBarStyle = .default
         
+        let backImage = UIImage(named: "Back")
+        UINavigationBar.appearance().backIndicatorImage = backImage
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = backImage
+        
         return true
     }
 

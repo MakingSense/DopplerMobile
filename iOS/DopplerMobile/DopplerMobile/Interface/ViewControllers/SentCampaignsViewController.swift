@@ -19,7 +19,6 @@ class SentCampaignsViewController: UIViewController, UITableViewDelegate, DataSo
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        self.navigationController!.setNavigationBarHidden(false, animated: false)
         self.tblSentCampaigns.delegate = self
         self.sentCampaignViewModel = SentCampaignViewModel(campaignsService: CampaignsService(), contentDelegate: self)
         self.dataSource = SentCampaignsViewDataSource()

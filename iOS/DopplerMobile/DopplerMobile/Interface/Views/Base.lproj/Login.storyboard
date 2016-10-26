@@ -29,7 +29,7 @@
             <objects>
                 <pageViewController storyboardIdentifier="OnboardingViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="v0i-Ad-kMO" customClass="OnboardingViewController" customModule="DopplerMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
-                        <segue destination="gAy-6B-icv" kind="show" identifier="dashboardScreenSegue" id="5Yj-Bn-FUi"/>
+                        <segue destination="gAy-6B-icv" kind="presentation" identifier="dashboardScreenSegue" id="5Yj-Bn-FUi"/>
                     </connections>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEN-tA-mUW" userLabel="First Responder" sceneMemberID="firstResponder"/>
