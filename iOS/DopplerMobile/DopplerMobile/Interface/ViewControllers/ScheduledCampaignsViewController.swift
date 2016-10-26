@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ScheduledCampaignsViewController: UIViewController, UITableViewDelegate, DataSourceContentDelegate
+class ScheduledCampaignsViewController: UIViewController, UITableViewDelegate, DataSourceContentDelegate, DataSourcePaginationDelegate
 {    
     // MARK: Properties
     @IBOutlet fileprivate weak var tblScheduledCampaigns: UITableView!
@@ -29,7 +29,7 @@ class ScheduledCampaignsViewController: UIViewController, UITableViewDelegate, D
         self.navigationController!.setNavigationBarHidden(false, animated: false)
         self.tblScheduledCampaigns.delegate = self
         self.scheduledCampaignViewModel = ScheduledCampaignViewModel(campaignsService: CampaignsService(), contentDelegate: self)
-        self.dataSource = GenericArrayDataSource<ScheduledCampaignsTableViewCell, CampaignViewModel>(items: self.items, cellReuseIdentifier: ScheduledCampaignsTableViewCell.identifier)
+        self.dataSource = GenericArrayDataSource<ScheduledCampaignsTableViewCell, CampaignViewModel>(items: self.items, cellReuseIdentifier: ScheduledCampaignsTableViewCell.identifier, paginationDelegate: self)
         self.tblScheduledCampaigns.dataSource = self.dataSource
         self.tblScheduledCampaigns.backgroundView = self.tblScheduledCampaigns.activityIndicatorView
         self.tblScheduledCampaigns.activityIndicatorView.startAnimating()
@@ -49,14 +49,28 @@ class ScheduledCampaignsViewController: UIViewController, UITableViewDelegate, D
     
     func handleRefresh(_ refreshControl: UIRefreshControl)
     {
-        self.scheduledCampaignViewModel.refreshList()
+        self.dataSource?.currentPage = 1
+        self.scheduledCampaignViewModel.downloadData(pageNumber: (self.dataSource?.currentPage)!)
+    }
+    
+    func getNextPage(_ page: Int)
+    {
+        self.tblScheduledCampaigns.activityIndicatorView.startAnimating()
+        self.scheduledCampaignViewModel.downloadData(pageNumber: page)
     }
     
     func updateContent(_ content: AnyObject)
     {
-        self.dataSource?.items = content as! [CampaignViewModel]
+        if ((self.dataSource?.currentPage)! == 1)
+        {
+            self.dataSource?.items = content as! [CampaignViewModel]
+            refreshControl.endRefreshing()
+        }
+        else
+        {
+            self.dataSource?.items.append(contentsOf: content as! [CampaignViewModel])
+        }
         self.tblScheduledCampaigns.reloadData()
-        refreshControl.endRefreshing()
         if(self.tblScheduledCampaigns.activityIndicatorView.isAnimating)
         {
             self.tblScheduledCampaigns.activityIndicatorView.stopAnimating()

@@ -11,7 +11,7 @@ import Alamofire
 
 open class CampaignsService
 {
-    func downloadCampaigns(_ status: CampaignStatus, notification: String)
+    func downloadCampaigns(_ status: CampaignStatus, pageNumber: Int, notification: String)
     {
         let completionHandler: (Result<[Campaign]>) -> Void =
             { result in
@@ -27,7 +27,7 @@ open class CampaignsService
                 }
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: notification), object: campaigns)
         }
-        DMApiManager.sharedInstance.getCampaigns(status, completionHandler: completionHandler)
+        DMApiManager.sharedInstance.getCampaigns(status, pageNumber: pageNumber, completionHandler: completionHandler)
     }
     
     func downloadCampaignReport(_ campaignId: Int, notification: String)

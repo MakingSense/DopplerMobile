@@ -21,14 +21,14 @@ open class SentCampaignViewModel
     {
         self.campaignsService = campaignsService
         self.contentDelegate = contentDelegate
-        self.refreshList()
+        self.downloadData(page: 1)
         NotificationCenter.default.addObserver(self, selector: #selector(SentCampaignViewModel.OnNotificationArrived(_:)), name:NSNotification.Name(rawValue: NotificationIdentifier.SentCampaignsNotification.rawValue), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(SentCampaignViewModel.OnNotificationArrived(_:)), name:NSNotification.Name(rawValue: NotificationIdentifier.CampaignReportNotification.rawValue), object: nil)
     }
     
-    func refreshList()
+    func downloadData(page: Int)
     {
-        self.campaignsService.downloadCampaigns(CampaignStatus.shipped, notification: NotificationIdentifier.SentCampaignsNotification.rawValue)
+        self.campaignsService.downloadCampaigns(CampaignStatus.shipped, pageNumber: page, notification: NotificationIdentifier.SentCampaignsNotification.rawValue)
     }
     
     @objc func OnNotificationArrived(_ notification: Notification)
@@ -55,6 +55,8 @@ open class SentCampaignViewModel
                         sentCampaigns.append(CampaignViewModel(campaign: campaigns[index]))
                     }
                     contentDelegate?.updateContent(sentCampaigns as AnyObject)
+                    campaignsReports.removeAll()
+                    sentCampaigns.removeAll()
                 }
             }
         }

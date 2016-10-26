@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListsViewController: UIViewController, UITableViewDelegate, DataSourceContentDelegate
+class ListsViewController: UIViewController, UITableViewDelegate, DataSourceContentDelegate, DataSourcePaginationDelegate
 {
     // MARK: Properties
     @IBOutlet fileprivate weak var tblLists: UITableView!
@@ -28,7 +28,7 @@ class ListsViewController: UIViewController, UITableViewDelegate, DataSourceCont
         self.tblLists.addSubview(self.refreshControl)
         self.listViewModel = ListViewModel(suscribersService: SuscribersService(), contentDelegate: self)
         self.tblLists.delegate = self
-        self.dataSource = GenericArrayDataSource<ListsTableViewCell, ListDetailViewModel>(items: self.items, cellReuseIdentifier: ListsTableViewCell.identifier)
+        self.dataSource = GenericArrayDataSource<ListsTableViewCell, ListDetailViewModel>(items: self.items, cellReuseIdentifier: ListsTableViewCell.identifier, paginationDelegate: self)
         self.tblLists.dataSource = self.dataSource
         self.tblLists.backgroundView = self.tblLists.activityIndicatorView
         self.tblLists.activityIndicatorView.startAnimating()
@@ -45,16 +45,30 @@ class ListsViewController: UIViewController, UITableViewDelegate, DataSourceCont
         }
     }
     
-    
     func handleRefresh(_ refreshControl: UIRefreshControl)
     {
-        self.listViewModel.refreshList()
+        self.dataSource?.currentPage = 1
+        self.listViewModel.downloadData(page: (self.dataSource?.currentPage)!)
     }
     
-    func updateContent(_ content: AnyObject) {
-        dataSource?.items = content as! [ListDetailViewModel]
-        tblLists.reloadData()
-        refreshControl.endRefreshing()
+    func getNextPage(_ page: Int)
+    {
+        self.tblLists.activityIndicatorView.startAnimating()
+        self.listViewModel.downloadData(page: page)
+    }
+    
+    func updateContent(_ content: AnyObject)
+    {
+        if ((self.dataSource?.currentPage)! == 1)
+        {
+            self.dataSource?.items = content as! [ListDetailViewModel]
+            refreshControl.endRefreshing()
+        }
+        else
+        {
+            self.dataSource?.items.append(contentsOf: content as! [ListDetailViewModel])
+        }
+        self.tblLists.reloadData()
         if(self.tblLists.activityIndicatorView.isAnimating)
         {
             self.tblLists.activityIndicatorView.stopAnimating()

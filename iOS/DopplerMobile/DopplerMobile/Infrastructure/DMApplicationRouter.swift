@@ -22,7 +22,7 @@ enum DMApplicationRouter: URLRequestConvertible
     case getCampaignRecipients(username: String, campaignId: Int) //GET baseUrl/accounts/{accountName}/campaigns/{campaignId}/recipients
     case getCampaignReports(username: String, campaignId: Int) //GET baseUrl/accounts/{accountName}/campaigns/{campaignId}/results-summary
     case getCampaignPreview(username: String, campaignId: Int) //GET baseUrl/accounts/{accountName}/campaigns/{campaignId}/preview
-    case getSuscribersLists(username: String) //GET baseUrl/accounts/{accountName}/lists
+    case getSuscribersLists(username: String, parameters: Parameters) //GET baseUrl/accounts/{accountName}/lists
     case getSuscribers(username: String, listId: Int) //GET baseUrl/accounts/{accountName}/lists/{listId}/subscribers
 
     
@@ -47,7 +47,7 @@ enum DMApplicationRouter: URLRequestConvertible
             return "/accounts/\(username)/campaigns"
         case .getCampaignPreview(let username, let campaignId):
             return "/accounts/\(username)/campaigns/\(campaignId)/preview"
-        case .getSuscribersLists(let username):
+        case .getSuscribersLists(let username, _):
             return "/accounts/\(username)/lists"
         case .getSuscribers(let username, let listId):
             return "/accounts/\(username)/lists/\(listId)/subscribers"
@@ -74,6 +74,8 @@ enum DMApplicationRouter: URLRequestConvertible
         case .getToken(let parameters):
             urlRequest = try JSONEncoding.default.encode(urlRequest, with: parameters)
         case .getCampaigns(_, let parameters):
+            urlRequest = try URLEncoding.default.encode(urlRequest, with: parameters)
+        case .getSuscribersLists(_, let parameters):
             urlRequest = try URLEncoding.default.encode(urlRequest, with: parameters)
         default:
             break
