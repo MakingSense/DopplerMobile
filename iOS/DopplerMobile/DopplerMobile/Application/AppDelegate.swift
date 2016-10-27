@@ -30,7 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         
         let backImage = UIImage(named: "Back")
         UINavigationBar.appearance().backIndicatorImage = backImage
-        UINavigationBar.appearance().backIndicatorTransitionMaskImage = backImage
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = backImage        
+        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffsetMake(0, -60), for: UIBarMetrics.default)
         
         return true
     }
