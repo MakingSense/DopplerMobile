@@ -12,9 +12,11 @@ import PagingMenuController
 struct ScheduledCampaignsMenuOption: PagingMenuControllerCustomizable
 {
     fileprivate var campaignItem: CampaignViewModel?
+    fileprivate var campaignSendingItem: CampaignSendingMockUpViewModel?
     init(item: CampaignViewModel?, viewModel: ScheduledCampaignViewModel)
     {
         self.campaignItem = item
+        campaignSendingItem = CampaignSendingMockUpViewModel()
     }
     
     internal var componentType: ComponentType
@@ -28,7 +30,10 @@ struct ScheduledCampaignsMenuOption: PagingMenuControllerCustomizable
         basicInformationViewController.campaignItem = campaignItem
         let recipientsViewController = RecipientsViewController.instantiateFromStoryboard()
         recipientsViewController.campaignItem = campaignItem
-        return [basicInformationViewController, recipientsViewController, SendingViewController()]
+        let sendingTableViewController = SendingTableViewController.instantiateFromStoryboard()
+        sendingTableViewController.campaignItem = campaignSendingItem
+        
+        return [basicInformationViewController, recipientsViewController, sendingTableViewController]
     }
     
     fileprivate struct MenuOptions: MenuViewCustomizable
