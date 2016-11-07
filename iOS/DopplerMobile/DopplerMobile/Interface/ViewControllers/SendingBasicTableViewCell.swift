@@ -23,9 +23,47 @@ class SendingBasicTableViewCell: UITableViewCell
     }
     
     // MARK: Actions
-    func configure(_ item: SendingCampaignBasicViewModel?)
+    func configure(sendingItem: SendingCampaignBasicFieldViewModel?, campaignItem: CampaignViewModel)
     {
-        self.lblTitle.text = item?.title
-        self.lblValue.text = item?.value!
+        self.lblTitle.text = sendingItem!.title
+        
+        switch(sendingItem!.contentType as SendingCampaignContent)
+        {
+        case .date:
+            if((campaignItem.sentDate) != nil)
+            {
+                self.lblValue.text = (campaignItem.sentDate!.toStringWithFormat(DateFormatEnum.yyyy_MM_dd.pattern))
+            }
+            else
+            {
+                self.lblValue.text = "NO DATE"
+            }
+            break
+        case .hour:
+            if((campaignItem.sentDate) != nil)
+            {
+                self.lblValue.text = campaignItem.sentDate!.getTimeWithTimeZone(from: campaignItem.sentDate!)
+            }
+            else
+            {
+                self.lblValue.text = "NO DATE"
+            }
+            break
+        case .confirmationEmail:
+            self.lblValue.text = "NOT ON API" //TODO: This isn't exposed on Doppler API
+            break
+        case .resendSubject:
+            self.lblValue.text = "NOT ON API" //TODO: This isn't exposed on Doppler API
+            break
+        case .resendDate:
+            self.lblValue.text = "NOT ON API" //TODO: This isn't exposed on Doppler API
+            break
+        case .resendHour:
+            self.lblValue.text = "NOT ON API" //TODO: This isn't exposed on Doppler API
+            break
+        case .resendSendTo:
+            //TODO: This isn't exposed on Doppler API
+            break
+        }
     }
 }

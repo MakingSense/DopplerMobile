@@ -8,17 +8,17 @@
 
 import UIKit
 
-class SendingCampaignSendToViewModel: SendingCampaignViewModel
+class SendingCampaignSendToFieldViewModel: SendingCampaignFieldViewModel
 {
     var notOpen: Bool
     var softBounce: Bool
     var opened: Bool
     
-    init(title: String, notOpen: Bool, softBounce: Bool, opened: Bool)
+    init(title: String, notOpen: Bool, softBounce: Bool, opened: Bool, contentType: SendingCampaignContent)
     {
         self.notOpen = notOpen
         self.softBounce = softBounce
         self.opened = opened
-        super.init(title: title, type: SendingCampaignType.sendingTo)
+        super.init(title: title, type: SendingCampaignType.sendingTo, contentType: contentType)
     }
 }

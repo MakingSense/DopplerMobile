@@ -770,6 +770,7 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="cancelCampaignClicked:" destination="XNI-VJ-BqG" eventType="touchUpInside" id="hWg-yY-q0W"/>
+                                                        <action selector="showActionSheet:" destination="oe1-lS-7s0" eventType="touchUpInside" id="lOI-VH-ugc"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -782,7 +783,7 @@
                                                 <constraint firstItem="AEY-84-knV" firstAttribute="leading" secondItem="mVO-Md-5E5" secondAttribute="leading" id="baf-TA-rTO"/>
                                                 <constraint firstItem="wfk-ax-ECZ" firstAttribute="top" secondItem="AEY-84-knV" secondAttribute="bottom" constant="55" id="cdf-h7-CMe"/>
                                                 <constraint firstItem="anX-Ph-R1r" firstAttribute="top" secondItem="MAV-6L-OWu" secondAttribute="bottom" constant="22" id="m3g-pG-mjW"/>
-                                                <constraint firstItem="AEY-84-knV" firstAttribute="top" secondItem="mVO-Md-5E5" secondAttribute="top" id="m4j-oS-TOO"/>
+                                                <constraint firstItem="AEY-84-knV" firstAttribute="top" secondItem="mVO-Md-5E5" secondAttribute="top" constant="40" id="m4j-oS-TOO"/>
                                                 <constraint firstItem="MAV-6L-OWu" firstAttribute="top" secondItem="wfk-ax-ECZ" secondAttribute="bottom" constant="15" id="vgX-If-AY7"/>
                                             </constraints>
                                         </view>

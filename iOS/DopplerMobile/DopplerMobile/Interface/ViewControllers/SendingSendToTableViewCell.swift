@@ -21,9 +21,8 @@ class SendingSendToTableViewCell: UITableViewCell
         super.awakeFromNib()
         // Initialization code
     }
-
-    // MARK: Actions
-    func configure(_ item: SendingCampaignSendToViewModel?)
+    
+    func configure(_ item: SendingCampaignSendToFieldViewModel?)
     {
         if(item?.notOpen)!
         {

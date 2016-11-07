@@ -12,11 +12,13 @@ class SendingTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDe
 {
     // MARK: Properties
     var items: [ListItem]?
-    var sections: [Section<SendingCampaignViewModel>]
+    var sections: [Section<SendingCampaignFieldViewModel>]
+    var campaignViewModel: CampaignViewModel?
     
-    init(sections: [Section<SendingCampaignViewModel>]?)
+    init(sections: [Section<SendingCampaignFieldViewModel>]?, campaignViewModel: CampaignViewModel)
     {
         self.sections = sections!
+        self.campaignViewModel = campaignViewModel
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -24,17 +26,22 @@ class SendingTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDe
         let section = self.sections[indexPath.section]
         var cell : UITableViewCell
         
-        if(section.items?[indexPath.row].type == SendingCampaignType.basic)
+        switch((section.items?[indexPath.row].type)! as SendingCampaignType)
         {
+        case .basic:
             let basicCell = tableView.dequeueReusableCell(withIdentifier: SendingBasicTableViewCell.identifier)! as! SendingBasicTableViewCell
-            basicCell.configure(section.items?[indexPath.row] as! SendingCampaignBasicViewModel?)
+            basicCell.configure(sendingItem: section.items?[indexPath.row] as! SendingCampaignBasicFieldViewModel?, campaignItem: self.campaignViewModel!)
             cell = basicCell
-        }
-        else
-        {
+            break
+        case .sendingTo:
             let sendToCell = tableView.dequeueReusableCell(withIdentifier: SendingSendToTableViewCell.identifier)! as! SendingSendToTableViewCell
-            sendToCell.configure(section.items?[indexPath.row] as! SendingCampaignSendToViewModel?)
+            sendToCell.configure(section.items?[indexPath.row] as! SendingCampaignSendToFieldViewModel?)
             cell = sendToCell
+            break
+        case .footer:
+            let resendCell = tableView.dequeueReusableCell(withIdentifier: SendingFooterTableViewCell.identifier)! as! SendingFooterTableViewCell
+            cell = resendCell
+            break
         }
         
         return cell
@@ -43,14 +50,15 @@ class SendingTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
         let section = self.sections[indexPath.section]
-        if(section.items?[indexPath.row].type == SendingCampaignType.basic)
+        
+        switch((section.items?[indexPath.row].type)! as SendingCampaignType)
         {
-            
+        case .basic:
             return SendingBasicTableViewCell.height
-        }
-        else
-        {
+        case .sendingTo:
             return SendingSendToTableViewCell.height
+        case .footer:
+            return SendingFooterTableViewCell.height
         }
     }    
     
@@ -80,30 +88,8 @@ class SendingTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDe
         }
     }
     
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView?
-    {
-        let  footerCell = tableView.dequeueReusableCell(withIdentifier: "SendingFooterTableViewCell") as! SendingFooterTableViewCell
-        
-        return footerCell
-    }
-    
-    func tableView(_ tableView: UITableView,
-                   heightForFooterInSection section: Int) -> CGFloat
-    {
-        let section = self.sections[section]
-        if(section.name != "")
-        {
-            return SendingFooterTableViewCell.height
-        }
-        else
-        {
-            return 0
-        }
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return (self.sections[section].items?.count)!
     }
-
 }

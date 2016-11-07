@@ -11,7 +11,7 @@ import UIKit
 class SendingFooterTableViewCell: UITableViewCell
 {
     static let identifier = "SendingFooterTableViewCell"
-    static let height : CGFloat = 314
+    static let height : CGFloat = 344
 
     override func awakeFromNib()
     {

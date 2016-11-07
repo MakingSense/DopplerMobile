@@ -8,13 +8,13 @@
 
 import UIKit
 
-class SendingCampaignBasicViewModel: SendingCampaignViewModel
+class SendingCampaignBasicFieldViewModel: SendingCampaignFieldViewModel
 {
     var value: String?
     
-    init(title: String, value: String)
+    init(title: String, value: String, contentType: SendingCampaignContent)
     {
         self.value = value
-        super.init(title: title, type: SendingCampaignType.basic)
+        super.init(title: title, type: SendingCampaignType.basic, contentType: contentType)
     }
 }
