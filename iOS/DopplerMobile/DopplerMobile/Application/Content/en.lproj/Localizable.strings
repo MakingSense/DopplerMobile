@@ -66,11 +66,14 @@
 "REPORTS_LINK_TRACKING" = "LINK TRACKING";
 
 //FIELDS
+"FIELDS_EMAIL" = "Email";
 "FIELDS_FIRSTNAME" = "First Name";
 "FIELDS_LASTNAME" =  "Last Name";
 "FIELDS_BIRTHDATE" = "Birth Date";
 "FIELDS_GENDER" =  "Gender";
 "FIELDS_COUNTRY" = "Country";
+"FIELDS_GENDER_MALE" = "Male";
+"FIELDS_GENDER_FEMALE" = "Female";
 
 //LISTS
 "LISTS_SUBSCRIBER_TYPE" = "Subscriber";

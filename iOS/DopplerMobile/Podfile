@@ -10,6 +10,8 @@ target 'DopplerMobile' do
     pod 'Typhoon'
     pod 'Fabric'
     pod 'Crashlytics'
+    pod 'TextFieldEffects'
+    pod 'DLRadioButton', '~> 1.4'
 end
 
 target 'DopplerMobileTests' do
