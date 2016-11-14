@@ -12,7 +12,9 @@ class AddSubscriberTableViewController: UITableViewController
 {
     var fields: [SubscriberFieldViewModel]?
     var subscriberItem: AddSubscriberMockUpViewModel?
+    var viewModel: AddSubscriberViewModel?
     var dataSource: AddSubscriberTableViewDataSource?
+    var listId: Int?
 
     override func viewDidLoad()
     {
@@ -22,11 +24,13 @@ class AddSubscriberTableViewController: UITableViewController
     override func viewWillAppear(_ animated: Bool)
     {
         subscriberItem = AddSubscriberMockUpViewModel()
+        viewModel = AddSubscriberViewModel(listId: self.listId!)
         
-        dataSource = AddSubscriberTableViewDataSource(sections: subscriberItem?.sections)
+        dataSource = AddSubscriberTableViewDataSource(sections: viewModel?.sections)
         tableView.delegate = dataSource
         self.tableView.dataSource = dataSource
         setupNavigationItems()
+        self.fields = subscriberItem?.fields
     }
     
     func setupNavigationItems()
@@ -52,13 +56,17 @@ class AddSubscriberTableViewController: UITableViewController
     
     func cancel(button: UIButton)
     {
-        //TODO: Navite back.
+        navigationController?.popViewController(animated: true)
         print("Navigation: Cancel button touched.")
     }
     
     func done(button: UIButton)
     {
         //TODO: Validate then Submit.
+        self.viewModel?.submit()
         print("Navigation: Done button touched.")
     }
+    
+    
+    
 }

@@ -177,7 +177,7 @@
                     <navigationItem key="navigationItem" id="EZ2-0Y-EzI">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Hvm-gg-Jmu">
                             <connections>
-                                <segue destination="RLz-TP-I0F" kind="show" id="M3L-4Q-jKm"/>
+                                <segue destination="RLz-TP-I0F" kind="show" identifier="ShowAddSubscriber" id="M3L-4Q-jKm"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

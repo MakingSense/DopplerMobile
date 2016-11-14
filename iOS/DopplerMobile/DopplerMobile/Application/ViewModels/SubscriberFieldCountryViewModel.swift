@@ -14,7 +14,7 @@ class SubscriberFieldCountryViewModel: SubscriberFieldViewModel
     
     init(title: String)
     {
-        super.init(title: title, type: SubscriberFieldType.countryPicker)
+        super.init(title: title, contentType: SubscriberFieldContent.field, cellType: SubscriberCellType.countryPicker, dataType: SubscriberFieldType.country)
         setupCountries()
     }
     

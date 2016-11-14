@@ -99,4 +99,15 @@ class DMApiManager: DMApiManagerProtocol
                 completionHandler(response.result)
         }
     }
+    
+    func addSubscriber(listId: Int, subscriber: Dictionary<String, Any>, completionHandler: @escaping (Result<Subscriber>) -> Void)
+    {
+        let parameters : Parameters = subscriber
+        
+        Alamofire.request(DMApplicationRouter.addSubscriber(username: Defaults[.username]!, listId: listId, parameters: parameters))
+            .responseObject
+            { (response: DataResponse<Subscriber>) in
+                completionHandler(response.result)
+        }
+    }
 }

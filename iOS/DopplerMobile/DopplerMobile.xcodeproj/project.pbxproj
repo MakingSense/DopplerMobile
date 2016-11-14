@@ -126,6 +126,7 @@
 		8E8E0BBA725E2DE6920565ED /* Pods_DopplerMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22BD6683C59FA5BC17AC2004 /* Pods_DopplerMobileTests.framework */; };
 		9C1F13B01DCB7A3500D2FDC1 /* SendingHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1F13AF1DCB7A3500D2FDC1 /* SendingHeaderTableViewCell.swift */; };
 		9C1F13B41DCB82F400D2FDC1 /* SendingFooterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1F13B31DCB82F400D2FDC1 /* SendingFooterTableViewCell.swift */; };
+		9C339C1F1DDB72580093D1DF /* AddSubscriberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C339C1E1DDB72580093D1DF /* AddSubscriberViewModel.swift */; };
 		9C48461C1D3FBB81003032D5 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0339E71D3EBB45006EDBD1 /* StringExtension.swift */; };
 		9C48461D1D3FBBC0003032D5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F0339E01D3EBAE1006EDBD1 /* Localizable.strings */; };
 		9C5AA8A01D3963F5002021CC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C5AA8A21D3963F5002021CC /* Localizable.strings */; };
@@ -332,6 +333,7 @@
 		84089A0A1DC8D612002B52DF /* CampaignSendingMockUpViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignSendingMockUpViewModel.swift; sourceTree = "<group>"; };
 		9C1F13AF1DCB7A3500D2FDC1 /* SendingHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendingHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		9C1F13B31DCB82F400D2FDC1 /* SendingFooterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendingFooterTableViewCell.swift; sourceTree = "<group>"; };
+		9C339C1E1DDB72580093D1DF /* AddSubscriberViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSubscriberViewModel.swift; sourceTree = "<group>"; };
 		9C5AA89B1D395F4E002021CC /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		9C76854C1DD3A6D3005D2B2D /* DefaultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTableViewCell.swift; sourceTree = "<group>"; };
 		9C7685501DD3A6F2005D2B2D /* PickerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerTableViewCell.swift; sourceTree = "<group>"; };
@@ -460,8 +462,10 @@
 		241198691D1B134100330D87 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				9C339C221DDB794A0093D1DF /* Mockup */,
 				75C8CE991DD5053F00B5CB75 /* SubscriberFieldCountryViewModel.swift */,
 				9CBFA3AE1DD3CA1B0099D63C /* SubscriberFieldViewModel.swift */,
+				9C339C1E1DDB72580093D1DF /* AddSubscriberViewModel.swift */,
 				24F0FB721D1C109E00360346 /* LoginViewModel.swift */,
 				2B458AE31D88561600BD5A08 /* CampaignListViewModel.swift */,
 				2B7EF64D1D4B2A4D008D4CDD /* SentCampaignViewModel.swift */,
@@ -474,11 +478,9 @@
 				2B46863C1D827A6700B03D4F /* SubscriberViewModel.swift */,
 				2B0EC0391D7FE71A008BF638 /* CampaignPreviewViewModel.swift */,
 				2BDE5DF21DA59413006AE5E5 /* RecipientsViewModel.swift */,
-				84089A0A1DC8D612002B52DF /* CampaignSendingMockUpViewModel.swift */,
 				7547DD6E1DCA28C300E906EB /* SendingCampaignViewModel.swift */,
 				7547DD701DCA2AE700E906EB /* SendingCampaignBasicViewModel.swift */,
 				7547DD721DCA2F0900E906EB /* SendingCampaignSendToViewModel.swift */,
-				75C8CE971DD4F60200B5CB75 /* AddSubscriberMockUpViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -764,6 +766,15 @@
 				757DF90C1DBA4F0E00C1EB01 /* DMTextField.swift */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		9C339C221DDB794A0093D1DF /* Mockup */ = {
+			isa = PBXGroup;
+			children = (
+				75C8CE971DD4F60200B5CB75 /* AddSubscriberMockUpViewModel.swift */,
+				84089A0A1DC8D612002B52DF /* CampaignSendingMockUpViewModel.swift */,
+			);
+			name = Mockup;
 			sourceTree = "<group>";
 		};
 		A03B8217D9697879D617E487 /* Pods */ = {
@@ -1159,6 +1170,7 @@
 				2B6F0C3C1DA428D4006541E2 /* RecipientsTableViewCell.swift in Sources */,
 				2B4686331D81B28100B03D4F /* SubscribersListViewModel.swift in Sources */,
 				2BA171BF1D74A9E300FBDE66 /* DefaultsKeys.swift in Sources */,
+				9C339C1F1DDB72580093D1DF /* AddSubscriberViewModel.swift in Sources */,
 				2439F3191D343BBC00949C5D /* CampaignViewModel.swift in Sources */,
 				2B458AE01D88487100BD5A08 /* DataSourceContentDelegate.swift in Sources */,
 				2B4686311D81ACC000B03D4F /* SubscribersTableViewCell.swift in Sources */,

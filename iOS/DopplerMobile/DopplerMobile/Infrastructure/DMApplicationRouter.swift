@@ -24,13 +24,13 @@ enum DMApplicationRouter: URLRequestConvertible
     case getCampaignPreview(username: String, campaignId: Int) //GET baseUrl/accounts/{accountName}/campaigns/{campaignId}/preview
     case getSuscribersLists(username: String, parameters: Parameters) //GET baseUrl/accounts/{accountName}/lists
     case getSuscribers(username: String, listId: Int) //GET baseUrl/accounts/{accountName}/lists/{listId}/subscribers
-
+    case addSubscriber(username: String, listId: Int, parameters: Parameters) //POST baseUrl/accounts/{accountName}/lists/{listId}/subscribers
     
     var method: Alamofire.HTTPMethod
     {
         switch self
         {
-        case .getToken:
+        case .getToken, .addSubscriber:
             return .post
         case .getCampaigns, .getCampaignPreview, .getSuscribersLists, .getSuscribers, .getCampaignRecipients, .getCampaignReports:
             return .get
@@ -55,6 +55,8 @@ enum DMApplicationRouter: URLRequestConvertible
             return "/accounts/\(username)/campaigns/\(campaignId)/recipients"
         case .getCampaignReports(let username, let campaignId):
             return "/accounts/\(username)/campaigns/\(campaignId)/results-summary"
+        case .addSubscriber(let username, let listId, _):
+            return "/accounts/\(username)/lists/\(listId)/subscribers"
         }
     }
     
@@ -71,7 +73,7 @@ enum DMApplicationRouter: URLRequestConvertible
         
         switch self
         {
-        case .getToken(let parameters):
+        case .getToken(let parameters), .addSubscriber(_, _, let parameters):
             urlRequest = try JSONEncoding.default.encode(urlRequest, with: parameters)
         case .getCampaigns(_, let parameters):
             urlRequest = try URLEncoding.default.encode(urlRequest, with: parameters)

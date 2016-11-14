@@ -10,7 +10,6 @@ import UIKit
 
 class AddSubscriberTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDelegate
 {
-    var items: [SubscriberFieldViewModel]?
     var sections: [Section<SubscriberFieldViewModel>]
     
     init(sections: [Section<SubscriberFieldViewModel>]!)
@@ -29,17 +28,17 @@ class AddSubscriberTableViewDataSource: NSObject, UITableViewDataSource, UITable
     {
         let section = self.sections[indexPath.section]
         
-        if(section.items?[indexPath.row].type == SubscriberFieldType.base)
+        if(section.items?[indexPath.row].cellType == SubscriberCellType.base)
         {
             let basicCell = tableView.dequeueReusableCell(withIdentifier: DefaultTableViewCell.identifier)! as! DefaultTableViewCell
-            basicCell.configure(title: (section.items?[indexPath.row].title)!)
+            basicCell.configure(model: (section.items?[indexPath.row])!)
             
             return basicCell
         }
-        else if(section.items?[indexPath.row].type == SubscriberFieldType.gender)
+        else if(section.items?[indexPath.row].cellType == SubscriberCellType.gender)
         {
             let genderCell = tableView.dequeueReusableCell(withIdentifier: GenderTableViewCell.identifier)! as! GenderTableViewCell
-            genderCell.configure(title: (section.items?[indexPath.row].title)!)
+            genderCell.configure(model: (section.items?[indexPath.row])!)
             
             return genderCell
         }
@@ -56,7 +55,7 @@ class AddSubscriberTableViewDataSource: NSObject, UITableViewDataSource, UITable
     {
         let section = self.sections[indexPath.section]
         
-        if(section.items?[indexPath.row].type == SubscriberFieldType.base || section.items?[indexPath.row].type == SubscriberFieldType.datePicker || section.items?[indexPath.row].type == SubscriberFieldType.countryPicker)
+        if(section.items?[indexPath.row].cellType == SubscriberCellType.base || section.items?[indexPath.row].cellType == SubscriberCellType.datePicker || section.items?[indexPath.row].cellType == SubscriberCellType.countryPicker)
         {
             return DefaultTableViewCell.height
         }

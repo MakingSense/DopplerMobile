@@ -54,6 +54,11 @@ class SubscribersViewController: UIViewController, UITableViewDelegate, DataSour
             let subcribersInformationViewController = segue.destination as! SubscriberInformationViewController
             subcribersInformationViewController.item = subscriber
         }
+        else if(segue.identifier == "ShowAddSubscriber")
+        {
+            let addSubscriberTableViewController = segue.destination as! AddSubscriberTableViewController
+            addSubscriberTableViewController.listId = listItem?.listId
+        }
     }
     
     func handleRefresh(_ refreshControl: UIRefreshControl)
@@ -71,4 +76,6 @@ class SubscribersViewController: UIViewController, UITableViewDelegate, DataSour
             self.tblSuscribers.activityIndicatorView.stopAnimating()
         }
     }
+    
+    
 }
