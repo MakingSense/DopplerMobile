@@ -1,0 +1,63 @@
+PODS:
+  - Alamofire (4.4.0)
+  - Bond (5.4.7):
+    - Diff (~> 0.4)
+    - ReactiveKit (~> 3.5.1)
+  - Crashlytics (3.8.4):
+    - Fabric (~> 1.6.3)
+  - Diff (0.5.3)
+  - DLRadioButton (1.4.9)
+  - Fabric (1.6.11)
+  - PagingMenuController (2.2.0)
+  - ReactiveKit (3.5.3)
+  - SwiftyJSON (2.3.2)
+  - SwiftyUserDefaults (3.0.0)
+  - TextFieldEffects (1.3.2)
+  - Typhoon (4.0.2):
+    - Typhoon/DeallocNotifier (= 4.0.2)
+    - Typhoon/IntrospectionUtils (= 4.0.2)
+    - Typhoon/no-arc (= 4.0.2)
+  - Typhoon/DeallocNotifier (4.0.2)
+  - Typhoon/IntrospectionUtils (4.0.2)
+  - Typhoon/no-arc (4.0.2):
+    - Typhoon/IntrospectionUtils
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - Bond (~> 5.1)
+  - Crashlytics
+  - DLRadioButton (~> 1.4)
+  - Fabric
+  - PagingMenuController
+  - SwiftyJSON (from `https://github.com/BaiduHiDeviOS/SwiftyJSON.git`, branch `swift3`)
+  - SwiftyUserDefaults (~> 3.0.0)
+  - TextFieldEffects
+  - Typhoon
+
+EXTERNAL SOURCES:
+  SwiftyJSON:
+    :branch: swift3
+    :git: https://github.com/BaiduHiDeviOS/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  SwiftyJSON:
+    :commit: de5dc3b1b421805769590d331178551bbb0e5733
+    :git: https://github.com/BaiduHiDeviOS/SwiftyJSON.git
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  Bond: 1e26bccae0c82266c6217705fe32ae3ca543ed30
+  Crashlytics: 79e236942ca1e7fc641df1feb9a275360a78ab6a
+  Diff: befa1d19c32726b2b36ce915d98793e2fbde8dcc
+  DLRadioButton: 7bb8a6e3768b572469ace553391ab4d2af6f9c19
+  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
+  PagingMenuController: 6176618987bb170096664f2da097313e45ed9c31
+  ReactiveKit: 39a0723167d04107140cf540f04526deecd18891
+  SwiftyJSON: 6118fb49d7519c4d31a0c1f3d5af936e9047b556
+  SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
+  TextFieldEffects: 9e5cce561ea39c75b86e9d3637601727a67e8b23
+  Typhoon: 05db9d33d798b90c202bf3f754275c03efe93297
+
+PODFILE CHECKSUM: e683b308fda15898cfb56691ceac67de655c4123
+
+COCOAPODS: 1.2.0
