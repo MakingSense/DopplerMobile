@@ -29,8 +29,8 @@
 		2B057FD81D7A297E0021F748 /* ListStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B057FD71D7A297E0021F748 /* ListStatus.swift */; };
 		2B057FDA1D7A2F410021F748 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B057FD91D7A2F410021F748 /* ListViewModel.swift */; };
 		2B057FDC1D7A31300021F748 /* ListDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B057FDB1D7A31300021F748 /* ListDetailViewModel.swift */; };
-		2B0968271DAED404009F5809 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0968221DAED3E9009F5809 /* Charts.framework */; };
-		2B0968281DAED404009F5809 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0968221DAED3E9009F5809 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2B0968271DAED404009F5809 /* ReferenceProxy in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0968221DAED3E9009F5809 /* Charts.framework */; };
+		2B0968281DAED404009F5809 /* ReferenceProxy in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0968221DAED3E9009F5809 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2B0EC0381D7FDB7A008BF638 /* CampaignPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EC0371D7FDB7A008BF638 /* CampaignPreviewViewController.swift */; };
 		2B0EC03A1D7FE71A008BF638 /* CampaignPreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EC0391D7FE71A008BF638 /* CampaignPreviewViewModel.swift */; };
 		2B1331071D9AE1630027D562 /* ScheduledCampaignsSegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1331061D9AE1630027D562 /* ScheduledCampaignsSegmentViewController.swift */; };
@@ -191,7 +191,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2B0968281DAED404009F5809 /* Charts.framework in Embed Frameworks */,
+				2B0968281DAED404009F5809 /* ReferenceProxy in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,7 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDD26FF49488694CDB0ECADD /* Pods_DopplerMobile.framework in Frameworks */,
-				2B0968271DAED404009F5809 /* Charts.framework in Frameworks */,
+				2B0968271DAED404009F5809 /* ReferenceProxy in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -776,7 +776,7 @@
 			isa = PBXGroup;
 			children = (
 				75C8CE971DD4F60200B5CB75 /* AddSubscriberMockUpViewModel.swift */,
-				84089A0A1DC8D612002B52DF /* CampaignSendingMockUpViewModel.swift */,
+				84089A0A1DC8D612002B52DF /* CampaignSendingViewModel.swift */,
 			);
 			name = Mockup;
 			sourceTree = "<group>";
@@ -972,7 +972,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		196B6BD73C9437D9AB986AD8 /* [CP] Embed Pods Frameworks */ = {
@@ -1058,7 +1058,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		85270376637C73906E97EC22 /* [CP] Copy Pods Resources */ = {
