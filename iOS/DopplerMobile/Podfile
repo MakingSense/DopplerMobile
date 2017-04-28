@@ -4,15 +4,16 @@ use_frameworks!
 
 target 'DopplerMobile' do
     pod 'PagingMenuController'
-    pod 'Alamofire', '~> 4.0'
-    pod 'SwiftyJSON', git: 'https://github.com/BaiduHiDeviOS/SwiftyJSON.git', branch: 'swift3'
+    pod 'Alamofire', '4.4'
+    pod 'SwiftyJSON', '3.1.4'
     pod 'SwiftyUserDefaults', '~> 3.0.0'
     pod 'Typhoon'
     pod 'Fabric'
     pod 'Crashlytics'
     pod 'TextFieldEffects'
     pod 'DLRadioButton', '~> 1.4'
-    pod 'Bond', '~> 5.1'
+    pod 'Bond', '6.2.3'
+    pod 'Charts', '3.0.2'
 end
 
 target 'DopplerMobileTests' do

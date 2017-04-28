@@ -27,7 +27,7 @@ class DefaultTableViewCell: UITableViewCell
         self.model = model
         
         TextField.placeholder = self.model?.title
-        model.value.bidirectionalBind(to: TextField.bnd_text)
+        model.value.bidirectionalBind(to: TextField.reactive.text)
         
         /*if(model.title == "FIELDS_EMAIL".localized.uppercased())
         {

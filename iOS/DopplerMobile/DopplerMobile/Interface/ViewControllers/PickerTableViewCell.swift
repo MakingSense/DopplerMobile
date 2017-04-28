@@ -27,7 +27,7 @@ class PickerTableViewCell: UITableViewCell, UIPickerViewDelegate, UITextFieldDel
     func configure(model: SubscriberFieldViewModel)
     {
         txtFieldCountry.placeholder = model.title
-        model.value.bidirectionalBind(to: txtFieldCountry.bnd_text)
+        model.value.bidirectionalBind(to: txtFieldCountry.reactive.text)
         
         if(model.cellType == SubscriberCellType.countryPicker)
         {
