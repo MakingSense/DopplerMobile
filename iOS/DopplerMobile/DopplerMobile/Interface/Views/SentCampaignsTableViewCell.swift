@@ -30,5 +30,6 @@ class SentCampaignsTableViewCell : UITableViewCell, TableViewCellProtocol
         self.lblOpenPercentage.text =  campaignViewModel.openedPercentage == nil ? "0%" : "\(campaignViewModel.openedPercentage!)%"
         self.lblUnopenPercentage.text =  campaignViewModel.unopenedPercentage == nil ? "0%" : "\(campaignViewModel.unopenedPercentage!)%"
         self.lblBouncePercentage.text =  campaignViewModel.bouncesPercentage == nil ? "0%" : "\(campaignViewModel.bouncesPercentage!)%"
+        self.selectionStyle = .none
     }
 }

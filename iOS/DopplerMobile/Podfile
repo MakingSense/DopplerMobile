@@ -12,7 +12,7 @@ target 'DopplerMobile' do
     pod 'Crashlytics'
     pod 'TextFieldEffects'
     pod 'DLRadioButton', '~> 1.4'
-    pod 'Bond', '6.2.3'
+    pod 'Bond', '6.2.4'
     pod 'Charts', '3.0.2'
 end
 

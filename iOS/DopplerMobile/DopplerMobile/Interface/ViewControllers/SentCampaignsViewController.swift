@@ -26,6 +26,8 @@ class SentCampaignsViewController: UIViewController, UITableViewDelegate, DataSo
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        //TODO: we need to improve the title setter
+        self.navigationController!.navigationBar.topItem!.title = "SENT_CAMPAIGNS_TITLE".localized
         self.tblSentCampaigns.addSubview(self.refreshControl)
         self.navigationController!.setNavigationBarHidden(false, animated: false)
         self.tblSentCampaigns.delegate = self
