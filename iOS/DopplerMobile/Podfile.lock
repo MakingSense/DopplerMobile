@@ -11,8 +11,11 @@ PODS:
   - Diff (0.5.3)
   - DLRadioButton (1.4.9)
   - Fabric (1.6.11)
+  - IHKeyboardAvoiding (3.7)
+  - KRProgressHUD (2.2.2)
   - PagingMenuController (2.2.0)
   - ReactiveKit (3.5.3)
+  - SwiftVideoBackground (0.05)
   - SwiftyJSON (3.1.4)
   - SwiftyUserDefaults (3.0.0)
   - TextFieldEffects (1.3.2)
@@ -32,7 +35,10 @@ DEPENDENCIES:
   - Crashlytics
   - DLRadioButton (~> 1.4)
   - Fabric
+  - IHKeyboardAvoiding (= 3.7)
+  - KRProgressHUD (= 2.2.2)
   - PagingMenuController
+  - SwiftVideoBackground (= 0.05)
   - SwiftyJSON (= 3.1.4)
   - SwiftyUserDefaults (~> 3.0.0)
   - TextFieldEffects
@@ -46,13 +52,16 @@ SPEC CHECKSUMS:
   Diff: befa1d19c32726b2b36ce915d98793e2fbde8dcc
   DLRadioButton: 7bb8a6e3768b572469ace553391ab4d2af6f9c19
   Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
+  IHKeyboardAvoiding: 4c852fae85667469307678c65f14f5cac8a7be92
+  KRProgressHUD: ee25f70e274d1933b2ad0c8583a8552a349ce85d
   PagingMenuController: 6176618987bb170096664f2da097313e45ed9c31
   ReactiveKit: 39a0723167d04107140cf540f04526deecd18891
+  SwiftVideoBackground: d06410e66620949981aafb9b6f3cbba962d3a5cc
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
   TextFieldEffects: 9e5cce561ea39c75b86e9d3637601727a67e8b23
   Typhoon: 05db9d33d798b90c202bf3f754275c03efe93297
 
-PODFILE CHECKSUM: 327c13a24d77f4158b17beeeffb8ab1fa53dd61d
+PODFILE CHECKSUM: 2c1c3dd1c41bd6f33872b38e40cdb184ab48611b
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1

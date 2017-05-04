@@ -7,51 +7,92 @@
 //
 
 import UIKit
+import Bond
+import IHKeyboardAvoiding
+import SwiftVideoBackground
+import KRProgressHUD
 
-class LoginViewController: UIViewController, NavigationDelegate
-{
-    //MARK: Properties
-    var loginViewModel: LoginViewModel!
-    @IBOutlet fileprivate weak var txtUsername: UITextField!
-    @IBOutlet fileprivate weak var txtPassword: UITextField!
-    @IBOutlet fileprivate weak var btnLogin: MSButton!
+class LoginViewController: UIViewController, NavigationDelegate {
     
+    // MARK: Constants
+    private let keyboardAvoidingPadding = 10.0
+    
+    // MARK: UI Properties
+    @IBOutlet weak var vwVideoBackground: BackgroundVideo!
+    @IBOutlet weak var vwOverlayView: UIView!
+    @IBOutlet weak var vwTextfieldsContainer: UIView!
+    @IBOutlet weak var txtUsername: UITextField!
+    @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var btnLogin: UIButton!
+    @IBOutlet weak var btnForgotPassword: UIButton!
+
+    // MARK: Other properties
+    var viewModel: LoginViewModel!
+
     // MARK: Actions
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
-        btnLogin.command = loginViewModel.loginCommand
-        UIApplication.shared.statusBarStyle = .lightContent
+        setupUI()
+        bindViewModel()
     }
     
-    override func viewWillDisappear(_ animated: Bool)
-    {
-        super.viewWillDisappear(animated)
-        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
+    private func setupUI() {
+        // Keyboard avoiding
+        KeyboardAvoiding.setAvoidingView(vwOverlayView, withTriggerView: vwTextfieldsContainer)
+        KeyboardAvoiding.paddingForCurrentAvoidingView = CGFloat(keyboardAvoidingPadding)
+        
+        // Video background
+        vwVideoBackground.createBackgroundVideo(name: "LoginBackground", type: "mp4", alpha: 0.1)
     }
     
-    //MARK: Username Input's Actions
-    @IBAction func txtUsernameEditingChanged(_ sender: UITextField)
-    {
-        loginViewModel.username = sender.text!
+    private func bindViewModel() {
+        // txtUsername bindings
+        viewModel.username
+            .bidirectionalBind(to: txtUsername.reactive.text)
+            .dispose(in: reactive.bag)
+        
+        // txtPassword bindings
+        viewModel.password
+            .bidirectionalBind(to: txtPassword.reactive.text)
+            .dispose(in: reactive.bag)
+        
+        // btnLogin bindings
+        btnLogin.reactive.tap
+            .observe { [weak self] _ in
+                guard let strongSelf = self else {
+                    return
+                }
+                strongSelf.viewModel.login()
+            }.dispose(in: reactive.bag)
+        
+        viewModel.loginCanExecute.bind(to: btnLogin.reactive.isEnabled)
+        
+        // btnForgotPassword bindings
+        btnForgotPassword.reactive.tap
+            .observe { [weak self] _ in
+                guard let strongSelf = self else {
+                    return
+                }
+                strongSelf.viewModel.forgotPassword()
+            }.dispose(in: reactive.bag)
+        
+        // KRProgressHUD bindings
+        viewModel.isBusy
+            .observeNext { isBusy in
+                if isBusy {
+                    KRProgressHUD.show()
+                } else {
+                    KRProgressHUD.dismiss()
+                }
+            }.dispose(in: reactive.bag)
     }
     
-    //MARK: Password Input's Actions
-    @IBAction func txtPasswordEditingChanged(_ sender: UITextField)
-    {
-        loginViewModel.password = sender.text!
-    }
-    
-    //MARK: Forgot Password Button's Actions
-    @IBAction func ForgotPassword(_ sender: UIButton)
-    {
-        //TODO: pending implementation
-        UIApplication.shared.openURL(URL(string:"https://app2.fromdoppler.com/")!)
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     //TODO: implement a generic way to navigate between view model
-    func showViewModel(_ identifier: String)
-    {
+    func showViewModel(_ identifier: String) {
         performSegue(withIdentifier: identifier, sender: self)
     }
 }

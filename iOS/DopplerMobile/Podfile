@@ -1,5 +1,5 @@
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, "9.2"
+platform :ios, "10.0"
 use_frameworks!
 
 target 'DopplerMobile' do
@@ -14,6 +14,9 @@ target 'DopplerMobile' do
     pod 'DLRadioButton', '~> 1.4'
     pod 'Bond', '6.2.4'
     pod 'Charts', '3.0.2'
+    pod 'IHKeyboardAvoiding', '3.7'
+    pod 'SwiftVideoBackground', '0.05'
+    pod "KRProgressHUD", '2.2.2'
 end
 
 target 'DopplerMobileTests' do

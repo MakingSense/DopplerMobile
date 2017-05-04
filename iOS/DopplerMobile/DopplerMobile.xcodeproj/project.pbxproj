@@ -29,7 +29,6 @@
 		2B057FD81D7A297E0021F748 /* ListStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B057FD71D7A297E0021F748 /* ListStatus.swift */; };
 		2B057FDA1D7A2F410021F748 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B057FD91D7A2F410021F748 /* ListViewModel.swift */; };
 		2B057FDC1D7A31300021F748 /* ListDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B057FDB1D7A31300021F748 /* ListDetailViewModel.swift */; };
-		2B0968271DAED404009F5809 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
 		2B0968281DAED404009F5809 /* BuildFile in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2B0EC0381D7FDB7A008BF638 /* CampaignPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EC0371D7FDB7A008BF638 /* CampaignPreviewViewController.swift */; };
 		2B0EC03A1D7FE71A008BF638 /* CampaignPreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EC0391D7FE71A008BF638 /* CampaignPreviewViewModel.swift */; };
@@ -144,6 +143,7 @@
 		C243CBC61D9AF739004A1FF8 /* ApplicationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C243CBC51D9AF739004A1FF8 /* ApplicationAssembly.swift */; };
 		C243CBC81D9AFD32004A1FF8 /* NavigationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C243CBC71D9AFD32004A1FF8 /* NavigationHandler.swift */; };
 		C243CBCA1D9B36ED004A1FF8 /* DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C243CBC91D9B36ED004A1FF8 /* DI.swift */; };
+		D3CA7F831EBA693C009897CD /* LoginBackground.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D3CA7F821EBA5ABB009897CD /* LoginBackground.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -322,6 +322,7 @@
 		C243CBC71D9AFD32004A1FF8 /* NavigationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationHandler.swift; sourceTree = "<group>"; };
 		C243CBC91D9B36ED004A1FF8 /* DI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DI.swift; sourceTree = "<group>"; };
 		CC4C59B1AE3D84051B656FDA /* Pods-DopplerMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DopplerMobileTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DopplerMobileTests/Pods-DopplerMobileTests.release.xcconfig"; sourceTree = "<group>"; };
+		D3CA7F821EBA5ABB009897CD /* LoginBackground.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LoginBackground.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,7 +330,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B0968271DAED404009F5809 /* BuildFile in Frameworks */,
 				A3C4A5B9E54033B7C3D50A18 /* Pods_DopplerMobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,6 +370,7 @@
 		1F5E74B71D944E200061BBA7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D3CA7F811EBA5AA8009897CD /* Videos */,
 				1F5E74B81D944E270061BBA7 /* Fonts */,
 				1F0339DF1D3EBAE1006EDBD1 /* Content */,
 			);
@@ -726,8 +727,6 @@
 		9C339C221DDB794A0093D1DF /* Mockup */ = {
 			isa = PBXGroup;
 			children = (
-				75C8CE971DD4F60200B5CB75 /* AddSubscriberMockUpViewModel.swift */,
-				84089A0A1DC8D612002B52DF /* CampaignSendingViewModel.swift */,
 			);
 			name = Mockup;
 			sourceTree = "<group>";
@@ -752,6 +751,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D3CA7F811EBA5AA8009897CD /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				D3CA7F821EBA5ABB009897CD /* LoginBackground.mp4 */,
+			);
+			name = Videos;
+			sourceTree = "<group>";
+		};
 		EC51C1C3908FB4A9183664F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -773,7 +780,6 @@
 				242514591C7E45CD00785AE6 /* Frameworks */,
 				2425145A1C7E45CD00785AE6 /* Resources */,
 				2BD1FC2F1DA76F6300A582B1 /* Embed Frameworks */,
-				2BE39D491DB52E290077305D /* ShellScript */,
 				2BE39D4C1DB52E720077305D /* ShellScript */,
 				5A1F4A6B7AC15E913C3C365D /* [CP] Embed Pods Frameworks */,
 				3BF049A06606199885FE66B9 /* [CP] Copy Pods Resources */,
@@ -820,7 +826,7 @@
 				TargetAttributes = {
 					2425145B1C7E45CD00785AE6 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = ZM528P4L33;
+						DevelopmentTeam = PUJ6PNMS7U;
 						LastSwiftMigration = 0800;
 					};
 					2425146F1C7E45CD00785AE6 = {
@@ -862,6 +868,7 @@
 				9C48461D1D3FBBC0003032D5 /* Localizable.strings in Resources */,
 				75FE33411D993DDD0005EA66 /* ProximaNova-Light.otf in Resources */,
 				2B7CBD3F1D906ECE00B55CD2 /* Account.storyboard in Resources */,
+				D3CA7F831EBA693C009897CD /* LoginBackground.mp4 in Resources */,
 				75FE33401D993DDD0005EA66 /* ProximaNova-Extrabold.otf in Resources */,
 				75FE333D1D993DDD0005EA66 /* ProximaNova-Black.otf in Resources */,
 				2B7CBD261D906B1200B55CD2 /* Login.storyboard in Resources */,
@@ -903,19 +910,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DopplerMobileTests/Pods-DopplerMobileTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		2BE39D491DB52E290077305D /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "${PODS_ROOT}/Fabric/run 30b8d06e19d61b61a1323a6f2fcbdeacb210f9c0 e84a71168b65feec63472faf830cf3113815637f31b65268ea01269e208262bf";
 		};
 		2BE39D4C1DB52E720077305D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -987,7 +981,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		CDA1A839A24C279720108913 /* [CP] Check Pods Manifest.lock */ = {
@@ -1002,7 +996,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1325,13 +1319,15 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = ZM528P4L33;
+				DEVELOPMENT_TEAM = PUJ6PNMS7U;
 				INFOPLIST_FILE = DopplerMobile/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.makingsense.DopplerMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1342,13 +1338,15 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = ZM528P4L33;
+				DEVELOPMENT_TEAM = PUJ6PNMS7U;
 				INFOPLIST_FILE = DopplerMobile/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.makingsense.DopplerMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

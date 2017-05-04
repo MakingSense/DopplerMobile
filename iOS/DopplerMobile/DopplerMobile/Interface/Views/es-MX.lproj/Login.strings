@@ -1,6 +1,9 @@
 
 /* Class = "UILabel"; text = "USERNAME"; ObjectID = "N3E-l5-sXv"; */
-"N3E-l5-sXv.text" = "USERNAME";
+"N3E-l5-sXv.text" = "Usuario:";
+
+/* Class = "UILabel"; text = "Enjoy the benefits of Email Marketing"; ObjectID = "N3E-l5-sXv"; */
+"6SU-nV-42R.text" = "Email Marketing Simple y Efectivo";
 
 /* Class = "UIButton"; normalTitle = "OMITIR"; ObjectID = "TKl-E4-dNg"; */
 "TKl-E4-dNg.normalTitle" = "OMITIR";
@@ -12,7 +15,13 @@
 "ptx-iI-Tu6.normalTitle" = "SIGUIENTE";
 
 /* Class = "UIButton"; normalTitle = "OLVIDÓ SU CONTRASEÑA?"; ObjectID = "tHn-34-7nc"; */
-"tHn-34-7nc.normalTitle" = "OLVIDÓ SU CONTRASEÑA?";
+"3NJ-IK-C23.normalTitle" = "¿No recuerdas tu contraseña?";
 
 /* Class = "UILabel"; text = "PASSWORD"; ObjectID = "z74-sJ-whF"; */
-"z74-sJ-whF.text" = "CONTRASEÑA";
+"z74-sJ-whF.text" = "Contraseña:";
+
+/* Class = "UITextField"; placeholder = "¡Psst! Es tu Email"; ObjectID = "Ish-bT-C15"; */
+"Ish-bT-C15.placeholder" = "¡Psst! Es tu Email";
+
+/* Class = "UITextField"; placeholder = "Escribe tu clave secreta"; ObjectID = "C82-sx-Fps"; */
+"C82-sx-Fps.placeholder" = "Escribe tu clave secreta";

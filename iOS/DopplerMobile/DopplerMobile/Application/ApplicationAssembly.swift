@@ -22,10 +22,10 @@ public class ApplicationAssembly : TyphoonAssembly
     
     // MARK: ViewModels
     
-    public dynamic func loginViewModel() -> Any { return DI.lazySingleton(LoginViewModel.self, selector: #selector(LoginViewModel.init(loginService:nagivationDelegate:)), initParameters: [self.loginService(), self.navigationDelegate()])}
+    public dynamic func loginViewModel() -> Any { return DI.lazySingleton(LoginViewModel.self, selector: #selector(LoginViewModel.init(loginService:navigationDelegate:)), initParameters: [self.loginService(), self.navigationDelegate()])}
 
     // MARK: ViewControllers
     
-    public dynamic func loginViewController() -> Any { return DI.defaultWithProperties(LoginViewController.self, properties: ["loginViewModel" : self.loginViewModel()])}
+    public dynamic func loginViewController() -> Any { return DI.defaultWithProperties(LoginViewController.self, properties: ["viewModel" : self.loginViewModel()])}
 }
 

@@ -7,58 +7,60 @@
 //
 
 import Foundation
+import Bond
+import ReactiveKit
 
-open class LoginViewModel : NSObject
-{
-    open var username: String = ""
-    {
-        didSet { loginCommand.raiseCanExecuteChanged() }
+@objc class LoginViewModel: NSObject {
+    
+    private let loginService: LoginService!
+    private let navigationDelegate: NavigationDelegate!
+    
+    let username = Observable<String?>("")
+    let password = Observable<String?>("")
+    let isBusy = Observable<Bool>(false)
+    
+    var loginCanExecute: Signal<Bool, NoError> {
+        return combineLatest(username, password) { user, pass in
+            return !user!.isEmpty && !pass!.isEmpty
+        }
     }
     
-    open var password: String = ""
-    {
-        didSet { loginCommand.raiseCanExecuteChanged() }
-    }
-    
-    open var loginCommand: Command!
-    
-    fileprivate var loginService: LoginService!
-    fileprivate var navigationDelegate: NavigationDelegate?
-    
-    dynamic init(loginService: LoginService, nagivationDelegate: NavigationDelegate)
-    {
-        super.init()
-        self.navigationDelegate = nagivationDelegate
+    dynamic init(loginService: LoginService, navigationDelegate: NavigationDelegate) {
+        self.navigationDelegate = navigationDelegate
         self.loginService = loginService
-        self.loginCommand = SimpleCommand(execute: loginCommandExecute, canExecute: loginCommandCanExecute)
-        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewModel.OnNotificationArrived(_:)), name:NSNotification.Name(rawValue: NotificationIdentifier.LoginNotification.rawValue), object: nil)
+        super.init()
+        self.setupNotifications()
     }
     
-    //MARK: Commands
-    fileprivate func loginCommandExecute()
-    {
-        loginService.login(self.username, password: self.password)
+    private func setupNotifications() {
+        // MARK - Login finished notification
+        NotificationCenter
+            .default
+            .reactive
+            .notification(name: NSNotification.Name(rawValue: NotificationIdentifier.LoginNotification.rawValue))
+            .observeNext { [weak self] notification in
+                guard let strongSelf = self else {
+                    return
+                }
+                defer {
+                    strongSelf.isBusy.value = false
+                }
+                guard let errorMessage = notification.object else {
+                    strongSelf.navigationDelegate?.showViewModel(SegueIdentifier.LoggedInScreenSegue)
+                    return
+                }
+                // TODO: Implement a generic way to show pretty error messages
+                debugPrint(errorMessage)
+            }
+            .dispose(in: reactive.bag)
     }
     
-    fileprivate func loginCommandCanExecute() -> Bool
-    {
-        return !self.username.isEmpty && !self.password.isEmpty
+    func login() {
+        isBusy.value = true
+        loginService.login(self.username.value!, password: self.password.value!)
     }
     
-    @objc func OnNotificationArrived(_ notification: Notification)
-    {
-        if(notification.object == nil)
-        {
-            navigationDelegate?.showViewModel(SegueIdentifier.LoggedInScreenSegue)
-        }
-        else
-        {
-            //TODO: Show login error.
-        }
-    }
-    
-    deinit
-    {
-        NotificationCenter.default.removeObserver(self)
+    func forgotPassword() {
+        UIApplication.shared.open(URL(string:"https://app2.fromdoppler.com/")!, options: [:], completionHandler: nil)
     }
 }
