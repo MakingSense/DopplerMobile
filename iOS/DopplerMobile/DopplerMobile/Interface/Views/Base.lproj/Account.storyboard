@@ -1,11 +1,30 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="W2Y-bW-Ihf">
+            <objects>
+                <navigationController storyboardIdentifier="AccountNavigationController" id="upn-Wm-rcQ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="2qK-ty-gFR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="CtJ-2g-lRu" kind="relationship" relationship="rootViewController" id="QWd-oO-h6X"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xkj-uX-PwG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-783" y="-398"/>
+        </scene>
         <!--ACCOUNT-->
         <scene sceneID="tzq-IB-PVR">
             <objects>
@@ -15,11 +34,12 @@
                         <viewControllerLayoutGuide type="bottom" id="OHx-XP-rjF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="T5E-5k-PxF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="ACCOUNT" image="Account-Disabled" selectedImage="Account" id="fMz-KT-EOG"/>
+                    <navigationItem key="navigationItem" id="d5c-pz-FrH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qcM-wh-ntr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -27,7 +47,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Account" width="30" height="33"/>
-        <image name="Account-Disabled" width="30" height="33"/>
+        <image name="Account" width="22" height="25"/>
+        <image name="Account-Disabled" width="22" height="25"/>
     </resources>
 </document>

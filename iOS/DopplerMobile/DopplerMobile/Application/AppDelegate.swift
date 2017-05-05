@@ -23,7 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         let conditionVariable = !(Defaults[.tokenExpirationDate].isNullOrEmpty) && Defaults[.tokenExpirationDate]!.toNSDateWithFormat(DateFormatEnum.yyyy_MM_ddTHH_mm_ss_SSSZ.pattern)!.isGreaterThanDate(Date())
         let navigationController = window!.rootViewController! as! UINavigationController
         navigationController.performSegue(withIdentifier: conditionVariable ? SegueIdentifier.MainScreenSegue : SegueIdentifier.LoginScreenSegue, sender: self)
-        navigationController.setNavigationBarHidden(!conditionVariable, animated: false)
         navigationController.navigationBar.tintColor = UIColor.black
         
         UIApplication.shared.statusBarStyle = .default

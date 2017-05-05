@@ -7,19 +7,17 @@
 //
 
 import Foundation
+import Bond
 
-open class OnboardingContentViewModel
-{
-    var title : String = ""
-    var subtitle : String = ""
-    var imageName : String = ""
-    var index : Int
+class OnboardingContentViewModel {
     
-    init(title: String, subtitle: String, imageName: String, index: Int)
-    {
-        self.title = title
-        self.subtitle = subtitle
-        self.imageName = imageName
-        self.index = index
+    let title = Observable<String>("")
+    let subtitle = Observable<String>("")
+    let imageName = Observable<String>("")
+    
+    init(title: String, subtitle: String, imageName: String) {
+        self.title.value = title
+        self.subtitle.value = subtitle
+        self.imageName.value = imageName
     }
 }

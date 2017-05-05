@@ -7,17 +7,19 @@
 //
 
 import UIKit
+import SwiftyOnboard
 
-class OnboardingViewController: UIPageViewController
-{
-    fileprivate var onboardingDataSource : OnboardingViewDataSource?
-
-    override func viewDidLoad()
-    {
+class OnboardingViewController: UIViewController {
+    
+    private var dataSource: OnboardingViewDataSource!
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
-        self.onboardingDataSource = OnboardingViewDataSource(pager: self)
-        self.dataSource = self.onboardingDataSource
-        setViewControllers([self.onboardingDataSource!.initialViewController()], direction: .forward, animated: true, completion: nil)        
-        self.automaticallyAdjustsScrollViewInsets = false
+
+        let swiftyOnboard = SwiftyOnboard(frame: view.frame)
+        view.addSubview(swiftyOnboard)
+        
+        dataSource = OnboardingViewDataSource(self)
+        swiftyOnboard.dataSource = dataSource
     }
 }

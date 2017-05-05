@@ -8,82 +8,73 @@
 
 import UIKit
 import SwiftyUserDefaults
+import SwiftyOnboard
+import Bond
 
-//TODO: This class should be refactored later. It shouldn't be returning content by itself but receiving it from the ViewModel (also all the process made to the content should be done there...)
-class OnboardingViewDataSource : NSObject, UIPageViewControllerDataSource, OnboardingContentViewControllerDelegate, NavigationDelegate
-{
-    fileprivate var models : [OnboardingContentViewModel]
-    fileprivate var views : [UIViewController]
-    fileprivate var currentIndex : Int = 0
-    fileprivate var pager : UIPageViewController
+class OnboardingViewDataSource : NSObject, SwiftyOnboardDataSource, NavigationDelegate {
+
+    static let lastPage = 2
+    private let viewModels : [OnboardingContentViewModel]
     
-    init(pager : UIPageViewController)
-    {
-        self.pager = pager
-        self.models = [OnboardingContentViewModel(title: "ONBOARDING_ONE_TITLE".localized.replacingOccurrences(of: "{username}", with: Defaults[.username]!), subtitle: "ONBOARDING_ONE_SUBTITLE".localized, imageName: "Onboarding-1", index: 0),
-                       OnboardingContentViewModel(title: "ONBOARDING_TWO_TITLE".localized, subtitle: "ONBOARDING_TWO_SUBTITLE".localized, imageName: "Onboarding-2", index: 1),
-                       OnboardingContentViewModel(title: "ONBOARDING_THREE_TITLE".localized, subtitle: "ONBOARDING_THREE_SUBTITLE".localized, imageName: "Onboarding-3", index: 2)]
-        
-        self.views = []
+    private weak var parentViewController: UIViewController?
+    
+    init(_ parentViewController: UIViewController) {
+        self.viewModels = [OnboardingContentViewModel(title: "ONBOARDING_ONE_TITLE".localized.replacingOccurrences(of: "{username}", with: Defaults[.username]!), subtitle: "ONBOARDING_ONE_SUBTITLE".localized, imageName: "Onboarding-1"),
+                       OnboardingContentViewModel(title: "ONBOARDING_TWO_TITLE".localized, subtitle: "ONBOARDING_TWO_SUBTITLE".localized, imageName: "Onboarding-2"),
+                       OnboardingContentViewModel(title: "ONBOARDING_THREE_TITLE".localized, subtitle: "ONBOARDING_THREE_SUBTITLE".localized, imageName: "Onboarding-3")]
+        self.parentViewController = parentViewController
     }
     
-    func initialViewController() -> UIViewController
-    {
-        return getViewControllerFromViewModel(self.models[0])
+    func swiftyOnboardBackgroundColorFor(_ swiftyOnboard: SwiftyOnboard, atIndex index: Int) -> UIColor? {
+        return UIColor.white()
     }
     
-    // MARK: UIPageViewControllerDataSource
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController?
-    {
-        self.currentIndex = views.index(of: viewController)!
-        return currentIndex == 0 ? nil : getViewControllerFromViewModel(self.models[currentIndex - 1])
+    func swiftyOnboardNumberOfPages(_ swiftyOnboard: SwiftyOnboard) -> Int {
+        return viewModels.count
     }
     
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController?
-    {
-        self.currentIndex = views.index(of: viewController)!
-        return currentIndex == self.models.count - 1 ? nil : getViewControllerFromViewModel(self.models[currentIndex + 1])
+    func swiftyOnboardPageForIndex(_ swiftyOnboard: SwiftyOnboard, index: Int) -> SwiftyOnboardPage? {
+        return getViewFromViewModel(viewModels[index])
     }
     
-    // MARK: OnboardingContentViewControllerDelegate
-    func nextTouched()
-    {
-        if let next = pageViewController(pager,viewControllerAfter: self.views[currentIndex])
-        {
-            self.pager.setViewControllers([next], direction: .forward, animated: true, completion: nil)
-            self.currentIndex += 1
-        }
-        else
-        {
-            showViewModel(SegueIdentifier.DashboardScreenSegue)
-        }
+    func swiftyOnboardViewForOverlay(_ swiftyOnboard: SwiftyOnboard) -> SwiftyOnboardOverlay? {
+        let overlay = SwiftyOnboardOverlay()
+        overlay.skipButton.reactive.tap
+            .observeNext { [weak self] in
+                guard let strongSelf = self else {
+                    return
+                }
+                strongSelf.skipTouched()
+            }.dispose(in: reactive.bag)
+        overlay.continueButton.reactive.tap
+            .observeNext { [weak self] in
+                guard let strongSelf = self else {
+                    return
+                }
+                if swiftyOnboard.currentPage == strongSelf.viewModels.count - 1 {
+                    strongSelf.skipTouched()
+                } else {
+                    swiftyOnboard.goToPage(index: swiftyOnboard.currentPage + 1, animated: true)
+                }
+            }.dispose(in: reactive.bag)
+        return overlay
     }
     
-    func skipTouched()
-    {
+    private func skipTouched() {
         showViewModel(SegueIdentifier.DashboardScreenSegue)
     }
     
-    //TODO: Is it the best place to call the callbacks? just to be consistent.
-    func showViewModel(_ identifier: String)
-    {
-        self.pager.performSegue(withIdentifier: SegueIdentifier.DashboardScreenSegue, sender : self)
+    // TODO: Is it the best place to call the callbacks? just to be consistent.
+    func showViewModel(_ identifier: String) {
+        parentViewController?.performSegue(withIdentifier: identifier, sender : self)
     }
     
-    fileprivate func getViewControllerFromViewModel(_ viewModel: OnboardingContentViewModel) -> UIViewController
-    {
-        //TODO: Change content here for something more meaningful
-        let result = views.filter { ($0 as! OnboardingContentViewController).viewModel?.title == viewModel.title }
-        if result.first != nil
-        {
-            return result.first!
-        }
-        
-        let viewController:OnboardingContentViewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: OnboardingContentViewController.identifier) as! OnboardingContentViewController
-        viewController.viewModel = viewModel
-        viewController.delegate = self
-        views.append(viewController)
-        
-        return viewController
+    private func getViewFromViewModel(_ viewModel: OnboardingContentViewModel) -> SwiftyOnboardPage {
+        let page = SwiftyOnboardPage()
+        viewModel.title.bind(to: page.title)
+        viewModel.subtitle.bind(to: page.subTitle)
+        viewModel.imageName.map{ return UIImage.init(named: $0) }.bind(to: page.imageView)
+        return page
     }
+    
 }

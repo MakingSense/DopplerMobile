@@ -17,6 +17,7 @@ PODS:
   - ReactiveKit (3.5.3)
   - SwiftVideoBackground (0.05)
   - SwiftyJSON (3.1.4)
+  - SwiftyOnboard (1.3.3)
   - SwiftyUserDefaults (3.0.0)
   - TextFieldEffects (1.3.2)
   - Typhoon (4.0.2):
@@ -40,6 +41,7 @@ DEPENDENCIES:
   - PagingMenuController
   - SwiftVideoBackground (= 0.05)
   - SwiftyJSON (= 3.1.4)
+  - SwiftyOnboard (= 1.3.3)
   - SwiftyUserDefaults (~> 3.0.0)
   - TextFieldEffects
   - Typhoon
@@ -58,10 +60,11 @@ SPEC CHECKSUMS:
   ReactiveKit: 39a0723167d04107140cf540f04526deecd18891
   SwiftVideoBackground: d06410e66620949981aafb9b6f3cbba962d3a5cc
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  SwiftyOnboard: 349a04c16751c26d63c80ee394e3250b2d023816
   SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
   TextFieldEffects: 9e5cce561ea39c75b86e9d3637601727a67e8b23
   Typhoon: 05db9d33d798b90c202bf3f754275c03efe93297
 
-PODFILE CHECKSUM: 2c1c3dd1c41bd6f33872b38e40cdb184ab48611b
+PODFILE CHECKSUM: 10e88d28a31cac539cea1a509d274243eb0bfc67
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1

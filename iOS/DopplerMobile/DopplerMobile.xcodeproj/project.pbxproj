@@ -130,7 +130,6 @@
 		9C76854D1DD3A6D3005D2B2D /* DefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76854C1DD3A6D3005D2B2D /* DefaultTableViewCell.swift */; };
 		9C7685511DD3A6F2005D2B2D /* PickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7685501DD3A6F2005D2B2D /* PickerTableViewCell.swift */; };
 		9C7685531DD3A70C005D2B2D /* GenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7685521DD3A70B005D2B2D /* GenderTableViewCell.swift */; };
-		9CB9DEFA1D1B1E1100DAED48 /* OnboardingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB9DEF91D1B1E1100DAED48 /* OnboardingContentViewController.swift */; };
 		9CB9DEFC1D1C150100DAED48 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB9DEFB1D1C150100DAED48 /* OnboardingViewController.swift */; };
 		9CBFA3AF1DD3CA1B0099D63C /* SubscriberFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBFA3AE1DD3CA1B0099D63C /* SubscriberFieldViewModel.swift */; };
 		9CD2FC6A1D2445E800D4C9F8 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2FC691D2445E800D4C9F8 /* LoginService.swift */; };
@@ -142,6 +141,8 @@
 		C243CBC61D9AF739004A1FF8 /* ApplicationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C243CBC51D9AF739004A1FF8 /* ApplicationAssembly.swift */; };
 		C243CBC81D9AFD32004A1FF8 /* NavigationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C243CBC71D9AFD32004A1FF8 /* NavigationHandler.swift */; };
 		C243CBCA1D9B36ED004A1FF8 /* DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C243CBC91D9B36ED004A1FF8 /* DI.swift */; };
+		D3CA1D121EC2163800EB35D6 /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CA1D111EC2163700EB35D6 /* OnboardingPage.swift */; };
+		D3CA1D141EC3813900EB35D6 /* OnboardingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CA1D131EC3813100EB35D6 /* OnboardingOverlay.swift */; };
 		D3CA7F831EBA693C009897CD /* LoginBackground.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D3CA7F821EBA5ABB009897CD /* LoginBackground.mp4 */; };
 /* End PBXBuildFile section */
 
@@ -306,7 +307,6 @@
 		9C76854C1DD3A6D3005D2B2D /* DefaultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTableViewCell.swift; sourceTree = "<group>"; };
 		9C7685501DD3A6F2005D2B2D /* PickerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerTableViewCell.swift; sourceTree = "<group>"; };
 		9C7685521DD3A70B005D2B2D /* GenderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenderTableViewCell.swift; sourceTree = "<group>"; };
-		9CB9DEF91D1B1E1100DAED48 /* OnboardingContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewController.swift; sourceTree = "<group>"; };
 		9CB9DEFB1D1C150100DAED48 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		9CBFA3AE1DD3CA1B0099D63C /* SubscriberFieldViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscriberFieldViewModel.swift; path = ../../Interface/ViewControllers/SubscriberFieldViewModel.swift; sourceTree = "<group>"; };
 		9CD2FC691D2445E800D4C9F8 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
@@ -320,6 +320,8 @@
 		C243CBC71D9AFD32004A1FF8 /* NavigationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationHandler.swift; sourceTree = "<group>"; };
 		C243CBC91D9B36ED004A1FF8 /* DI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DI.swift; sourceTree = "<group>"; };
 		CC4C59B1AE3D84051B656FDA /* Pods-DopplerMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DopplerMobileTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DopplerMobileTests/Pods-DopplerMobileTests.release.xcconfig"; sourceTree = "<group>"; };
+		D3CA1D111EC2163700EB35D6 /* OnboardingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
+		D3CA1D131EC3813100EB35D6 /* OnboardingOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingOverlay.swift; sourceTree = "<group>"; };
 		D3CA7F821EBA5ABB009897CD /* LoginBackground.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LoginBackground.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -530,6 +532,8 @@
 				2B13310A1D9AF52B0027D562 /* Scheduled.storyboard */,
 				2B7CBD3C1D906E4E00B55CD2 /* Lists.storyboard */,
 				2B7CBD411D906ECE00B55CD2 /* Account.storyboard */,
+				D3CA1D111EC2163700EB35D6 /* OnboardingPage.swift */,
+				D3CA1D131EC3813100EB35D6 /* OnboardingOverlay.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -670,7 +674,6 @@
 			isa = PBXGroup;
 			children = (
 				241198711D1B134100330D87 /* LoginViewController.swift */,
-				9CB9DEF91D1B1E1100DAED48 /* OnboardingContentViewController.swift */,
 				9CB9DEFB1D1C150100DAED48 /* OnboardingViewController.swift */,
 			);
 			name = LoginSection;
@@ -979,7 +982,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		CDA1A839A24C279720108913 /* [CP] Check Pods Manifest.lock */ = {
@@ -994,7 +997,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1027,7 +1030,6 @@
 				C243CBCA1D9B36ED004A1FF8 /* DI.swift in Sources */,
 				1F9C62AC1DA69CFA00B95C77 /* SubscribersInformationViewCell.swift in Sources */,
 				9CEFD9FE1DD3678900A1E619 /* AddSubscriberTableViewController.swift in Sources */,
-				9CB9DEFA1D1B1E1100DAED48 /* OnboardingContentViewController.swift in Sources */,
 				2BEB2A651D9348DC009F87F9 /* MSSerializationErrorCode.swift in Sources */,
 				2B4C32151D70ABD50076DF3B /* DMApiManagerProtocol.swift in Sources */,
 				2B8212D61D9C050200AB1794 /* RecipientsViewController.swift in Sources */,
@@ -1052,6 +1054,7 @@
 				24FD44A31D22EBCB003E35A4 /* NavigationDelegate.swift in Sources */,
 				75C8CE941DD4B68C00B5CB75 /* AddSubscriberTableViewDataSource.swift in Sources */,
 				2439F31B1D352BD500949C5D /* SentCampaignsTableViewCell.swift in Sources */,
+				D3CA1D121EC2163800EB35D6 /* OnboardingPage.swift in Sources */,
 				C243CBC81D9AFD32004A1FF8 /* NavigationHandler.swift in Sources */,
 				2BD4FD9C1D636EBA00E7E13C /* DeliveryRateReportTableViewCell.swift in Sources */,
 				24FD44A91D244E12003E35A4 /* Command.swift in Sources */,
@@ -1105,6 +1108,7 @@
 				2BFBC0891DBE665000796DA5 /* GenericArrayDataSource.swift in Sources */,
 				2B4686351D81B88E00B03D4F /* Subscriber.swift in Sources */,
 				750CE2331D9EF07B008665C7 /* UIFont+DMFonts.swift in Sources */,
+				D3CA1D141EC3813900EB35D6 /* OnboardingOverlay.swift in Sources */,
 				2BC6EF4F1D370A88009F5A0B /* ScheduledCampaignsViewController.swift in Sources */,
 				2BF8751D1D7A1475009AA744 /* ListsViewController.swift in Sources */,
 				9C7685531DD3A70C005D2B2D /* GenderTableViewCell.swift in Sources */,

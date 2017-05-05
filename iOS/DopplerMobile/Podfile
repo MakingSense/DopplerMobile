@@ -17,6 +17,7 @@ target 'DopplerMobile' do
     pod 'IHKeyboardAvoiding', '3.7'
     pod 'SwiftVideoBackground', '0.05'
     pod "KRProgressHUD", '2.2.2'
+    pod 'SwiftyOnboard', '1.3.3'
 end
 
 target 'DopplerMobileTests' do

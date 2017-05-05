@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9XZ-c1-IVL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9XZ-c1-IVL">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="9f4-mP-Urc">
             <objects>
-                <navigationController id="9XZ-c1-IVL" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="lL9-65-bWY">
+                <navigationController navigationBarHidden="YES" id="9XZ-c1-IVL" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lL9-65-bWY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -34,40 +34,40 @@
             </objects>
             <point key="canvasLocation" x="77.5" y="-641"/>
         </scene>
-        <!--ScheduledViewController-->
+        <!--ScheduledNavigationController-->
         <scene sceneID="exs-gP-xw7">
             <objects>
-                <viewControllerPlaceholder storyboardName="Scheduled" referencedIdentifier="ScheduledViewController" id="CTA-jB-85d" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Scheduled" referencedIdentifier="ScheduledNavigationController" id="CTA-jB-85d" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="SCHEDULED" image="Scheduled-Disabled" selectedImage="Scheduled" id="d7r-gY-GdO"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cQK-T0-CDR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1442" y="-1263"/>
         </scene>
-        <!--ListViewController-->
+        <!--ListsNavigationController-->
         <scene sceneID="xbV-H7-LHU">
             <objects>
-                <viewControllerPlaceholder storyboardName="Lists" referencedIdentifier="ListViewController" id="8Wn-ym-kAB" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Lists" referencedIdentifier="ListsNavigationController" id="8Wn-ym-kAB" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="LISTS" image="Lists-Disabled" selectedImage="Lists" id="nQo-34-8Vb"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yKe-7C-Ai6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1407" y="-1045"/>
         </scene>
-        <!--AccountViewController-->
+        <!--AccountNavigationController-->
         <scene sceneID="nxk-39-bLC">
             <objects>
-                <viewControllerPlaceholder storyboardName="Account" referencedIdentifier="AccountViewController" id="905-te-Vca" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Account" referencedIdentifier="AccountNavigationController" id="905-te-Vca" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="xVe-dI-szJ"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K7B-gE-0RJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1429" y="-916"/>
         </scene>
-        <!--DashboardViewController-->
+        <!--DashboardNavigationController-->
         <scene sceneID="vu5-Vq-Zdw">
             <objects>
-                <viewControllerPlaceholder storyboardName="Reports" referencedIdentifier="DashboardViewController" id="z7o-op-rh0" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Reports" referencedIdentifier="DashboardNavigationController" id="z7o-op-rh0" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="METRICS" image="Metrics-Summary-Disabled" selectedImage="Metrics-Summary" id="cO0-ta-HSb"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JF4-Vo-mbh" userLabel="First Responder" sceneMemberID="firstResponder"/>
