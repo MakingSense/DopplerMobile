@@ -60,7 +60,6 @@
 		2B703F1B1D3D304E00A19E36 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B703F1A1D3D304E00A19E36 /* String.swift */; };
 		2B703F1D1D3D51D900A19E36 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B703F1C1D3D51D900A19E36 /* Optional.swift */; };
 		2B703F1F1D3D521E00A19E36 /* StringType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B703F1E1D3D521E00A19E36 /* StringType.swift */; };
-		2B70F7A11D5947B800B18525 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B70F7A01D5947B800B18525 /* ReportViewController.swift */; };
 		2B7B73431D9EE40D00A593BD /* TableViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B73421D9EE40D00A593BD /* TableViewCellProtocol.swift */; };
 		2B7CBD261D906B1200B55CD2 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B7CBD281D906B1200B55CD2 /* Login.storyboard */; };
 		2B7CBD301D906C6400B55CD2 /* Reports.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B7CBD321D906C6400B55CD2 /* Reports.storyboard */; };
@@ -137,6 +136,7 @@
 		9CBFA3AF1DD3CA1B0099D63C /* SubscriberFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBFA3AE1DD3CA1B0099D63C /* SubscriberFieldViewModel.swift */; };
 		9CD2FC6A1D2445E800D4C9F8 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2FC691D2445E800D4C9F8 /* LoginService.swift */; };
 		9CEFD9FE1DD3678900A1E619 /* AddSubscriberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEFD9FD1DD3678900A1E619 /* AddSubscriberTableViewController.swift */; };
+		A07A93251EBCEBC70073E1A5 /* DeliveryRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A93241EBCEBC70073E1A5 /* DeliveryRateViewController.swift */; };
 		A3C4A5B9E54033B7C3D50A18 /* Pods_DopplerMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9FB088DEE147D0D578049DD /* Pods_DopplerMobile.framework */; };
 		A8EF46D91D26C218000882A3 /* MSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EF46D81D26C218000882A3 /* MSButton.swift */; };
 		C22695701D4297D000059959 /* OnboardingViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C226956F1D4297D000059959 /* OnboardingViewDataSource.swift */; };
@@ -163,7 +163,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2B0968281DAED404009F5809 /* BuildFile in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,7 +231,6 @@
 		2B703F1A1D3D304E00A19E36 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		2B703F1C1D3D51D900A19E36 /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		2B703F1E1D3D521E00A19E36 /* StringType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringType.swift; sourceTree = "<group>"; };
-		2B70F7A01D5947B800B18525 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		2B7B73421D9EE40D00A593BD /* TableViewCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellProtocol.swift; sourceTree = "<group>"; };
 		2B7CBD271D906B1200B55CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		2B7CBD2F1D906C2600B55CD2 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Login.strings"; sourceTree = "<group>"; };
@@ -314,6 +312,7 @@
 		9CBFA3AE1DD3CA1B0099D63C /* SubscriberFieldViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscriberFieldViewModel.swift; path = ../../Interface/ViewControllers/SubscriberFieldViewModel.swift; sourceTree = "<group>"; };
 		9CD2FC691D2445E800D4C9F8 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		9CEFD9FD1DD3678900A1E619 /* AddSubscriberTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSubscriberTableViewController.swift; sourceTree = "<group>"; };
+		A07A93241EBCEBC70073E1A5 /* DeliveryRateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryRateViewController.swift; sourceTree = "<group>"; };
 		A51E0ED141EDEB130E889C6C /* Pods_DopplerMobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DopplerMobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8EF46D81D26C218000882A3 /* MSButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSButton.swift; sourceTree = "<group>"; };
 		B9FB088DEE147D0D578049DD /* Pods_DopplerMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DopplerMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -633,10 +632,10 @@
 			isa = PBXGroup;
 			children = (
 				2B0EC0371D7FDB7A008BF638 /* CampaignPreviewViewController.swift */,
-				2B70F7A01D5947B800B18525 /* ReportViewController.swift */,
 				2B1DDC911DA8303A00F5632E /* ReportSegmentViewController.swift */,
 				2B1DDC951DA830B100F5632E /* ReportMenuOption.swift */,
 				2B1DDC971DA8352900F5632E /* ReportEmptyViewController.swift */,
+				A07A93241EBCEBC70073E1A5 /* DeliveryRateViewController.swift */,
 				2BD4FD9B1D636EBA00E7E13C /* DeliveryRateReportTableViewCell.swift */,
 				249ECB6D1D3D56B300F18E74 /* SentCampaignsViewController.swift */,
 				2439F31A1D352BD500949C5D /* SentCampaignsTableViewCell.swift */,
@@ -1010,6 +1009,7 @@
 				2B1DDC921DA8303A00F5632E /* ReportSegmentViewController.swift in Sources */,
 				2BD83BAB1D41590C00A5C527 /* OnboardingContentViewControllerDelegate.swift in Sources */,
 				9C1F13B41DCB82F400D2FDC1 /* SendingFooterTableViewCell.swift in Sources */,
+				A07A93251EBCEBC70073E1A5 /* DeliveryRateViewController.swift in Sources */,
 				2B1DDC961DA830B100F5632E /* ReportMenuOption.swift in Sources */,
 				9C76854D1DD3A6D3005D2B2D /* DefaultTableViewCell.swift in Sources */,
 				75F42C591DC7C0D8000D87FA /* SendingSendToTableViewCell.swift in Sources */,
@@ -1078,7 +1078,6 @@
 				2B7EF6521D4C5643008D4CDD /* NSDate.swift in Sources */,
 				2B46863F1D8284A600B03D4F /* ListsTableViewCell.swift in Sources */,
 				2BF307441D6E26B20062DF3C /* MSResponseJSONObjectSerializable.swift in Sources */,
-				2B70F7A11D5947B800B18525 /* ReportViewController.swift in Sources */,
 				2B057FD61D7A281F0021F748 /* List.swift in Sources */,
 				75F42C571DC7C0C9000D87FA /* SendingBasicTableViewCell.swift in Sources */,
 				2BF307481D6E2B740062DF3C /* MSAlamofireRequest+JSONSerializable.swift in Sources */,

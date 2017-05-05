@@ -8,6 +8,7 @@
 
 import UIKit
 import PagingMenuController
+import Bond
 
 class ReportSegmentViewController: UIViewController
 {
@@ -16,26 +17,31 @@ class ReportSegmentViewController: UIViewController
     @IBOutlet weak var lblCampaignType: UILabel!
     @IBOutlet weak var lblCampaignName: UILabel!
     
-    override func viewWillAppear(_ animated: Bool)
-    {
-        var options: PagingMenuControllerCustomizable
-        {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        bindView()
+    }
+    
+    func bindView() {
+        campaignItem?.name.bind(to: lblCampaignName)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        var options: PagingMenuControllerCustomizable {
             let options: PagingMenuControllerCustomizable
             options = ReportMenuOption(item: campaignItem)
             return options
         }
         let pagingMenuController = self.childViewControllers.first as! PagingMenuController
         pagingMenuController.setup(options)
-        self.lblCampaignName.text = campaignItem?.name
+        
         //TODO: Remove magical string.
         self.lblCampaignType.text = "Classic Campaign"
     }
     
     // MARK: - Segues
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        if(segue.identifier == SegueIdentifier.CampaignPreviewSegue)
-        {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == SegueIdentifier.CampaignPreviewSegue {
             let campaignPreviewViewController = segue.destination as! CampaignPreviewViewController
             campaignPreviewViewController.campaignId = campaignItem!.campaignId
         }

@@ -21,11 +21,18 @@ class BasicInformationViewController: UIViewController, UITableViewDelegate
         return storyboard.instantiateViewController(withIdentifier: String(describing: self)) as! BasicInformationViewController
     }
     
-    override func viewWillAppear(_ animated: Bool)
-    {
+    override func viewDidLoad() {
+        super.viewDidLoad()
         self.navigationItem.title = "SCHEDULED_CAMPAIGNS_TEXT".localized
-        self.dataSource = GenericArrayDataSource<BasicInformationTableViewCell, ListItem>(items: (campaignItem?.campaignBasicInformation!)!, cellReuseIdentifier: BasicInformationTableViewCell.identifier)
-        self.tblBasicInformation.dataSource = self.dataSource
         self.tblBasicInformation.delegate = self
+        bindView()
+    }
+    
+    func bindView() {
+        campaignItem?.campaignBasicInformation.bind(to: tblBasicInformation) { basicInfo, indexPath, tableView in
+            let cell = tableView.dequeueReusableCell(withIdentifier: BasicInformationTableViewCell.identifier, for: indexPath) as! BasicInformationTableViewCell
+            cell.configure(viewModel: basicInfo[indexPath.row])
+            return cell
+        }
     }
 }

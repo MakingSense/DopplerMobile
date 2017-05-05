@@ -8,8 +8,7 @@
 
 import UIKit
 
-class SentCampaignsViewController: UIViewController, UITableViewDelegate, DataSourceContentDelegate, DataSourcePaginationDelegate
-{
+class SentCampaignsViewController: UIViewController, UITableViewDelegate, DataSourceContentDelegate, DataSourcePaginationDelegate {
     // MARK: Properties
     @IBOutlet fileprivate weak var tblSentCampaigns: UITableView!
     var dataSource : GenericArrayDataSource<SentCampaignsTableViewCell, CampaignViewModel>?
@@ -23,8 +22,7 @@ class SentCampaignsViewController: UIViewController, UITableViewDelegate, DataSo
     }()
     
     // MARK: Actions
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
         //TODO: we need to improve the title setter
         self.navigationController!.navigationBar.topItem!.title = "SENT_CAMPAIGNS_TITLE".localized
@@ -39,42 +37,33 @@ class SentCampaignsViewController: UIViewController, UITableViewDelegate, DataSo
     }
     
     // MARK: - Segues
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        if let selectedCellIndex = self.tblSentCampaigns.indexPathForSelectedRow
-        {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let selectedCellIndex = self.tblSentCampaigns.indexPathForSelectedRow {
             let campaignItem = self.dataSource!.items[(selectedCellIndex as NSIndexPath).row]
             let reportViewController = segue.destination as! ReportSegmentViewController
             reportViewController.campaignItem = campaignItem
         }
     }
     
-    func handleRefresh(_ refreshControl: UIRefreshControl)
-    {
+    func handleRefresh(_ refreshControl: UIRefreshControl) {
         self.dataSource?.currentPage = 1
         self.sentCampaignViewModel.downloadData(page: (self.dataSource?.currentPage)!)
     }
     
-    func getNextPage(_ page: Int)
-    {
+    func getNextPage(_ page: Int) {
         self.tblSentCampaigns.activityIndicatorView.startAnimating()
         self.sentCampaignViewModel.downloadData(page: page)
     }
     
-    func updateContent(_ content: AnyObject)
-    {
-        if ((self.dataSource?.currentPage)! == 1)
-        {
+    func updateContent(_ content: AnyObject) {
+        if (self.dataSource?.currentPage)! == 1 {
             self.dataSource?.items = content as! [CampaignViewModel]
             refreshControl.endRefreshing()
-        }
-        else
-        {
+        } else {
             self.dataSource?.items.append(contentsOf: content as! [CampaignViewModel])
         }
         self.tblSentCampaigns.reloadData()
-        if(self.tblSentCampaigns.activityIndicatorView.isAnimating)
-        {
+        if self.tblSentCampaigns.activityIndicatorView.isAnimating {
             self.tblSentCampaigns.activityIndicatorView.stopAnimating()
         }
     }

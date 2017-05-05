@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Bond
 
 class SentCampaignsTableViewCell : UITableViewCell, TableViewCellProtocol
 {
@@ -21,15 +22,15 @@ class SentCampaignsTableViewCell : UITableViewCell, TableViewCellProtocol
     // MARK: Actions
     func configure<T>(viewModel: T) {
         let campaignViewModel = viewModel as! CampaignViewModel
-        self.lblCampaignName.text = campaignViewModel.name
-        let boldContent = " \(campaignViewModel.amountSentSubscribers!) \("REPORTS_SUBSCRIBERS".localized)"
+        campaignViewModel.name.bind(to: lblCampaignName)
+        let boldContent = " \(String(describing: campaignViewModel.amountSentSubscribers.value)) \("REPORTS_SUBSCRIBERS".localized)"
         let date = "\(campaignViewModel.sentDate!.toStringWithFormat(DateFormatEnum.yyyy_MM_dd.pattern)) \("REPORTS_TO".localized)"
         let formattedString = NSMutableAttributedString()
         formattedString.append(text: date).append(text: boldContent, font: UIFont.boldOf(size: 14.0))
-        self.lblSentDate.attributedText = formattedString
-        self.lblOpenPercentage.text =  campaignViewModel.openedPercentage == nil ? "0%" : "\(campaignViewModel.openedPercentage!)%"
-        self.lblUnopenPercentage.text =  campaignViewModel.unopenedPercentage == nil ? "0%" : "\(campaignViewModel.unopenedPercentage!)%"
-        self.lblBouncePercentage.text =  campaignViewModel.bouncesPercentage == nil ? "0%" : "\(campaignViewModel.bouncesPercentage!)%"
-        self.selectionStyle = .none
+        lblSentDate.attributedText = formattedString
+        campaignViewModel.openedPercentage.map{value in "\(String(describing: value))%"}.bind(to: lblOpenPercentage)
+        campaignViewModel.unopenedPercentage.map{ value in "\(String(describing: value))%"}.bind(to:lblUnopenPercentage)
+        campaignViewModel.bouncesPercentage.map{value in "\(String(describing: value))%"}.bind(to:lblBouncePercentage)
+        selectionStyle = .none
     }
 }

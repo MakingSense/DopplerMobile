@@ -8,6 +8,7 @@
 
 import UIKit
 import PagingMenuController
+import Bond
 
 class ScheduledCampaignsSegmentViewController: UIViewController
 {
@@ -26,7 +27,7 @@ class ScheduledCampaignsSegmentViewController: UIViewController
         }
         let pagingMenuController = self.childViewControllers.first as! PagingMenuController
         pagingMenuController.setup(options)
-        self.lblCampaignName.text = campaignItem?.name
+        campaignItem?.name.bind(to: lblCampaignName)
         //TODO: Remove magical string.
         self.lblCampaignType.text = "Classic Campaign"
     }
