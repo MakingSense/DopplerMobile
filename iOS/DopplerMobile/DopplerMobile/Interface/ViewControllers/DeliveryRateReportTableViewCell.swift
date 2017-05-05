@@ -8,14 +8,15 @@
 
 import UIKit
 
-class DeliveryRateReportTableViewCell : UITableViewCell, TableViewCellProtocol
-{
-    // MARK: Properties
-    @IBOutlet fileprivate weak var lblCounterName: UILabel!
-    @IBOutlet fileprivate weak var lblCounterValue: UILabel!
+final class DeliveryRateReportTableViewCell : UITableViewCell, TableViewCellProtocol {
+    // MARK: Constants
     static let identifier = "DeliveryRateReportCell"
     
-        // MARK: Actions
+    // MARK: Properties
+    @IBOutlet private weak var lblCounterName: UILabel!
+    @IBOutlet private weak var lblCounterValue: UILabel!
+    
+    // MARK: Actions
     func configure<T>(viewModel: T) {
         let listItem = viewModel as? ListItem
         self.lblCounterName.text = listItem?.name

@@ -20,14 +20,15 @@ class ScheduledCampaignsTableViewCell : UITableViewCell, TableViewCellProtocol
     // MARK: Actions
     func configure<T>(viewModel: T) {
         let campaignViewModel = viewModel as! CampaignViewModel
-        self.lblCampaignName.text = campaignViewModel.name
-        self.lblCampaignDate.attributedText = prepare(date: campaignViewModel.sentDate, subscribersAmount: campaignViewModel.amountSentSubscribers!)
-        let lists = campaignViewModel.amountSentSubscribers!
-        let listsText = lists == 1 ? "\("REPORTS_LIST".localized)" : "\("REPORTS_LISTS".localized)"
-        self.lblCampaignStatistics.text = "\(lists) \(listsText)"
-        let subscribers = campaignViewModel.amountSentSubscribers!
-        let subscribersText = subscribers == 1 ? "\("REPORTS_SUBSCRIBER".localized)" : "\("REPORTS_SUBSCRIBERS".localized)"
-        self.lblStatisticsRight.text = "\(subscribers) \(subscribersText)"
+        
+        campaignViewModel.name.bind(to: lblCampaignName)
+        lblCampaignDate.attributedText = prepare(date: campaignViewModel.sentDate, subscribersAmount: campaignViewModel.amountSentSubscribers.value)
+        
+        campaignViewModel.amountSentSubscribers.map{value in
+            return value == 1 ? "\(String(describing: value)) \("REPORTS_LIST".localized)" : "\(String(describing: value)) \("REPORTS_LISTS".localized)"}.bind(to: lblCampaignStatistics)
+        campaignViewModel.amountSentSubscribers.map{value in
+                    return value == 1 ? "\(String(describing: value)) \("REPORTS_SUBSCRIBER".localized)" : "\(String(describing: value)) \("REPORTS_SUBSCRIBERS".localized)"
+        }.bind(to: lblStatisticsRight)
     }
     
     func prepare(date: Date?, subscribersAmount: Int) -> NSMutableAttributedString
