@@ -29,7 +29,6 @@
 		2B057FD81D7A297E0021F748 /* ListStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B057FD71D7A297E0021F748 /* ListStatus.swift */; };
 		2B057FDA1D7A2F410021F748 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B057FD91D7A2F410021F748 /* ListViewModel.swift */; };
 		2B057FDC1D7A31300021F748 /* ListDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B057FDB1D7A31300021F748 /* ListDetailViewModel.swift */; };
-		2B0968281DAED404009F5809 /* BuildFile in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2B0EC0381D7FDB7A008BF638 /* CampaignPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EC0371D7FDB7A008BF638 /* CampaignPreviewViewController.swift */; };
 		2B0EC03A1D7FE71A008BF638 /* CampaignPreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EC0391D7FE71A008BF638 /* CampaignPreviewViewModel.swift */; };
 		2B1331071D9AE1630027D562 /* ScheduledCampaignsSegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1331061D9AE1630027D562 /* ScheduledCampaignsSegmentViewController.swift */; };
@@ -980,7 +979,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		CDA1A839A24C279720108913 /* [CP] Check Pods Manifest.lock */ = {
@@ -995,7 +994,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
