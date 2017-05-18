@@ -121,20 +121,20 @@
                                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SuscribersCell" rowHeight="69" id="etI-YU-JXX" userLabel="SuscribersListCell" customClass="SubscribersTableViewCell" customModule="DopplerMobile" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="28" width="338" height="69"/>
+                                                        <rect key="frame" x="0.0" y="28" width="337.5" height="69"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="etI-YU-JXX" id="uEb-2q-G9C">
                                                             <rect key="frame" x="0.0" y="0.0" width="337.5" height="68.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMx-g2-gtM" userLabel="SubscriberEmailLabel">
-                                                                    <rect key="frame" x="8" y="20" width="337.5" height="16.5"/>
+                                                                    <rect key="frame" x="8" y="20" width="337.5" height="14"/>
                                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
                                                                     <color key="textColor" red="0.18823529411764706" green="0.12941176470588234" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wuo-9Y-KCs" userLabel="SubscriberNameLabel">
-                                                                    <rect key="frame" x="8" y="42.5" width="304" height="13"/>
+                                                                    <rect key="frame" x="8" y="40" width="304" height="11"/>
                                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="11"/>
                                                                     <color key="textColor" red="0.51372549019607838" green="0.51372549019607838" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -271,20 +271,20 @@
                                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SubscriberInformationCell" id="loA-xl-Bp9" customClass="SubscribersInformationViewCell" customModule="DopplerMobile" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="28" width="338" height="50"/>
+                                                        <rect key="frame" x="0.0" y="28" width="337.5" height="50"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="loA-xl-Bp9" id="S7z-eC-0Vq">
                                                             <rect key="frame" x="0.0" y="0.0" width="337.5" height="49.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pjv-7R-ABA" userLabel="Field">
-                                                                    <rect key="frame" x="8" y="17.5" width="34.5" height="16.5"/>
+                                                                    <rect key="frame" x="8" y="18" width="33.5" height="14"/>
                                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Uk-Vx-yCV" userLabel="FieldValue">
-                                                                    <rect key="frame" x="46.5" y="17.5" width="34.5" height="16.5"/>
+                                                                    <rect key="frame" x="45.5" y="18" width="33.5" height="14"/>
                                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
                                                                     <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -655,7 +655,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="375" height="115"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pgh-Ns-fn7" id="xVf-s3-mkm">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="114.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ZV-8h-Ogv" userLabel="LefContentView">

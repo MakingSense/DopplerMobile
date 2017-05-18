@@ -13,4 +13,7 @@ extension DefaultsKeys {
     static let username = DefaultsKey<String?>("username")
     static let accessToken = DefaultsKey<String?>("accessToken")
     static let tokenExpirationDate = DefaultsKey<String?>("expirationDate")
+    static let companyEmail = DefaultsKey<String?>("companyEmail")
+    static let companyName = DefaultsKey<String?>("companyName")
+    static let accountType = DefaultsKey<String?>("accountType")
 }

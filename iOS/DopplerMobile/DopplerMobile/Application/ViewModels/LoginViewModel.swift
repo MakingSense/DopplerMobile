@@ -12,7 +12,7 @@ import ReactiveKit
 
 @objc class LoginViewModel: NSObject {
     
-    private let loginService: LoginService!
+    private let authenticationService: AuthenticationService!
     private let navigationDelegate: NavigationDelegate!
     
     let username = Observable<String?>("")
@@ -25,9 +25,9 @@ import ReactiveKit
         }
     }
     
-    dynamic init(loginService: LoginService, navigationDelegate: NavigationDelegate) {
+    dynamic init(authenticationService: AuthenticationService, navigationDelegate: NavigationDelegate) {
         self.navigationDelegate = navigationDelegate
-        self.loginService = loginService
+        self.authenticationService = authenticationService
         super.init()
         self.setupNotifications()
     }
@@ -57,7 +57,7 @@ import ReactiveKit
     
     func login() {
         isBusy.value = true
-        loginService.login(self.username.value!, password: self.password.value!)
+        authenticationService.login(self.username.value!, password: self.password.value!)
     }
     
     func forgotPassword() {

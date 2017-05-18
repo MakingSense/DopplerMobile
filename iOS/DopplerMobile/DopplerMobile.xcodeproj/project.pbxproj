@@ -132,7 +132,7 @@
 		9C7685531DD3A70C005D2B2D /* GenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7685521DD3A70B005D2B2D /* GenderTableViewCell.swift */; };
 		9CB9DEFC1D1C150100DAED48 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB9DEFB1D1C150100DAED48 /* OnboardingViewController.swift */; };
 		9CBFA3AF1DD3CA1B0099D63C /* SubscriberFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBFA3AE1DD3CA1B0099D63C /* SubscriberFieldViewModel.swift */; };
-		9CD2FC6A1D2445E800D4C9F8 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2FC691D2445E800D4C9F8 /* LoginService.swift */; };
+		9CD2FC6A1D2445E800D4C9F8 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2FC691D2445E800D4C9F8 /* AuthenticationService.swift */; };
 		9CEFD9FE1DD3678900A1E619 /* AddSubscriberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEFD9FD1DD3678900A1E619 /* AddSubscriberTableViewController.swift */; };
 		A07A93251EBCEBC70073E1A5 /* DeliveryRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A93241EBCEBC70073E1A5 /* DeliveryRateViewController.swift */; };
 		A3C4A5B9E54033B7C3D50A18 /* Pods_DopplerMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9FB088DEE147D0D578049DD /* Pods_DopplerMobile.framework */; };
@@ -141,6 +141,9 @@
 		C243CBC61D9AF739004A1FF8 /* ApplicationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C243CBC51D9AF739004A1FF8 /* ApplicationAssembly.swift */; };
 		C243CBC81D9AFD32004A1FF8 /* NavigationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C243CBC71D9AFD32004A1FF8 /* NavigationHandler.swift */; };
 		C243CBCA1D9B36ED004A1FF8 /* DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C243CBC91D9B36ED004A1FF8 /* DI.swift */; };
+		D397EE8F1ECB6380000FEAA9 /* DMImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D397EE8E1ECB6380000FEAA9 /* DMImageView.swift */; };
+		D397EE911ECB8930000FEAA9 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D397EE901ECB892F000FEAA9 /* AccountViewController.swift */; };
+		D397EE931ECB89CD000FEAA9 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D397EE921ECB89CD000FEAA9 /* AccountViewModel.swift */; };
 		D3CA1D121EC2163800EB35D6 /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CA1D111EC2163700EB35D6 /* OnboardingPage.swift */; };
 		D3CA1D141EC3813900EB35D6 /* OnboardingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CA1D131EC3813100EB35D6 /* OnboardingOverlay.swift */; };
 		D3CA7F831EBA693C009897CD /* LoginBackground.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D3CA7F821EBA5ABB009897CD /* LoginBackground.mp4 */; };
@@ -309,7 +312,7 @@
 		9C7685521DD3A70B005D2B2D /* GenderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenderTableViewCell.swift; sourceTree = "<group>"; };
 		9CB9DEFB1D1C150100DAED48 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		9CBFA3AE1DD3CA1B0099D63C /* SubscriberFieldViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscriberFieldViewModel.swift; path = ../../Interface/ViewControllers/SubscriberFieldViewModel.swift; sourceTree = "<group>"; };
-		9CD2FC691D2445E800D4C9F8 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		9CD2FC691D2445E800D4C9F8 /* AuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		9CEFD9FD1DD3678900A1E619 /* AddSubscriberTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSubscriberTableViewController.swift; sourceTree = "<group>"; };
 		A07A93241EBCEBC70073E1A5 /* DeliveryRateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryRateViewController.swift; sourceTree = "<group>"; };
 		A51E0ED141EDEB130E889C6C /* Pods_DopplerMobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DopplerMobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -320,6 +323,9 @@
 		C243CBC71D9AFD32004A1FF8 /* NavigationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationHandler.swift; sourceTree = "<group>"; };
 		C243CBC91D9B36ED004A1FF8 /* DI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DI.swift; sourceTree = "<group>"; };
 		CC4C59B1AE3D84051B656FDA /* Pods-DopplerMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DopplerMobileTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DopplerMobileTests/Pods-DopplerMobileTests.release.xcconfig"; sourceTree = "<group>"; };
+		D397EE8E1ECB6380000FEAA9 /* DMImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMImageView.swift; sourceTree = "<group>"; };
+		D397EE901ECB892F000FEAA9 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		D397EE921ECB89CD000FEAA9 /* AccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		D3CA1D111EC2163700EB35D6 /* OnboardingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
 		D3CA1D131EC3813100EB35D6 /* OnboardingOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingOverlay.swift; sourceTree = "<group>"; };
 		D3CA7F821EBA5ABB009897CD /* LoginBackground.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LoginBackground.mp4; sourceTree = "<group>"; };
@@ -448,6 +454,7 @@
 				7547DD701DCA2AE700E906EB /* SendingCampaignBasicFieldViewModel.swift */,
 				7547DD721DCA2F0900E906EB /* SendingCampaignSendToFieldViewModel.swift */,
 				75C8CE971DD4F60200B5CB75 /* AddSubscriberMockUpViewModel.swift */,
+				D397EE921ECB89CD000FEAA9 /* AccountViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -480,7 +487,7 @@
 		2411986C1D1B134100330D87 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				9CD2FC691D2445E800D4C9F8 /* LoginService.swift */,
+				9CD2FC691D2445E800D4C9F8 /* AuthenticationService.swift */,
 				2B7EF64F1D4B2AE6008D4CDD /* CampaignsService.swift */,
 				2B057FD31D7A21170021F748 /* SuscribersService.swift */,
 			);
@@ -666,6 +673,7 @@
 		2B7B733E1D9EDDEB00A593BD /* AccountSection */ = {
 			isa = PBXGroup;
 			children = (
+				D397EE901ECB892F000FEAA9 /* AccountViewController.swift */,
 			);
 			name = AccountSection;
 			sourceTree = "<group>";
@@ -721,6 +729,7 @@
 			children = (
 				7547DD741DCA70F200E906EB /* Section.swift */,
 				757DF90C1DBA4F0E00C1EB01 /* DMTextField.swift */,
+				D397EE8E1ECB6380000FEAA9 /* DMImageView.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -1018,6 +1027,7 @@
 				24F0FB731D1C109E00360346 /* LoginViewModel.swift in Sources */,
 				2BDD10E31D918A6500E5ABF7 /* BasicInformationViewController.swift in Sources */,
 				2B4D5D1C1DBF10A400D06159 /* NSObject+DMObject.swift in Sources */,
+				D397EE931ECB89CD000FEAA9 /* AccountViewModel.swift in Sources */,
 				2B703F1B1D3D304E00A19E36 /* String.swift in Sources */,
 				2B4D5D181DBF102C00D06159 /* UIView+DMView.swift in Sources */,
 				2B458AE21D88530E00BD5A08 /* ScheduledCampaignViewModel.swift in Sources */,
@@ -1057,14 +1067,16 @@
 				D3CA1D121EC2163800EB35D6 /* OnboardingPage.swift in Sources */,
 				C243CBC81D9AFD32004A1FF8 /* NavigationHandler.swift in Sources */,
 				2BD4FD9C1D636EBA00E7E13C /* DeliveryRateReportTableViewCell.swift in Sources */,
+				D397EE911ECB8930000FEAA9 /* AccountViewController.swift in Sources */,
 				24FD44A91D244E12003E35A4 /* Command.swift in Sources */,
 				249ECB6E1D3D56B300F18E74 /* SentCampaignsViewController.swift in Sources */,
+				D397EE8F1ECB6380000FEAA9 /* DMImageView.swift in Sources */,
 				2B7EF6501D4B2AE6008D4CDD /* CampaignsService.swift in Sources */,
 				2B057FDA1D7A2F410021F748 /* ListViewModel.swift in Sources */,
 				2B0EC03A1D7FE71A008BF638 /* CampaignPreviewViewModel.swift in Sources */,
 				24FD44B01D245DC3003E35A4 /* SimpleCommand.swift in Sources */,
 				2B7EF64E1D4B2A4D008D4CDD /* SentCampaignViewModel.swift in Sources */,
-				9CD2FC6A1D2445E800D4C9F8 /* LoginService.swift in Sources */,
+				9CD2FC6A1D2445E800D4C9F8 /* AuthenticationService.swift in Sources */,
 				2B46863D1D827A6700B03D4F /* SubscriberViewModel.swift in Sources */,
 				9CBFA3AF1DD3CA1B0099D63C /* SubscriberFieldViewModel.swift in Sources */,
 				2B7B73431D9EE40D00A593BD /* TableViewCellProtocol.swift in Sources */,

@@ -12,6 +12,7 @@ PODS:
   - DLRadioButton (1.4.9)
   - Fabric (1.6.11)
   - IHKeyboardAvoiding (3.7)
+  - Kingfisher (3.9.1)
   - KRProgressHUD (2.2.2)
   - PagingMenuController (2.2.0)
   - ReactiveKit (3.5.3)
@@ -37,6 +38,7 @@ DEPENDENCIES:
   - DLRadioButton (~> 1.4)
   - Fabric
   - IHKeyboardAvoiding (= 3.7)
+  - Kingfisher (= 3.9.1)
   - KRProgressHUD (= 2.2.2)
   - PagingMenuController
   - SwiftVideoBackground (= 0.05)
@@ -55,6 +57,7 @@ SPEC CHECKSUMS:
   DLRadioButton: 7bb8a6e3768b572469ace553391ab4d2af6f9c19
   Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
   IHKeyboardAvoiding: 4c852fae85667469307678c65f14f5cac8a7be92
+  Kingfisher: 6729a0baaa458245bfb8cd5a1296c71c10d6eb6c
   KRProgressHUD: ee25f70e274d1933b2ad0c8583a8552a349ce85d
   PagingMenuController: 6176618987bb170096664f2da097313e45ed9c31
   ReactiveKit: 39a0723167d04107140cf540f04526deecd18891
@@ -65,6 +68,6 @@ SPEC CHECKSUMS:
   TextFieldEffects: 9e5cce561ea39c75b86e9d3637601727a67e8b23
   Typhoon: 05db9d33d798b90c202bf3f754275c03efe93297
 
-PODFILE CHECKSUM: 10e88d28a31cac539cea1a509d274243eb0bfc67
+PODFILE CHECKSUM: a85c1788dc227c3f671673a98934ffc34b1ae4f5
 
 COCOAPODS: 1.2.0
