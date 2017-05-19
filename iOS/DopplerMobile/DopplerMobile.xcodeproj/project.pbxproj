@@ -146,7 +146,6 @@
 		D397EE931ECB89CD000FEAA9 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D397EE921ECB89CD000FEAA9 /* AccountViewModel.swift */; };
 		D3CA1D121EC2163800EB35D6 /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CA1D111EC2163700EB35D6 /* OnboardingPage.swift */; };
 		D3CA1D141EC3813900EB35D6 /* OnboardingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CA1D131EC3813100EB35D6 /* OnboardingOverlay.swift */; };
-		D3CA7F831EBA693C009897CD /* LoginBackground.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D3CA7F821EBA5ABB009897CD /* LoginBackground.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -328,7 +327,6 @@
 		D397EE921ECB89CD000FEAA9 /* AccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		D3CA1D111EC2163700EB35D6 /* OnboardingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
 		D3CA1D131EC3813100EB35D6 /* OnboardingOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingOverlay.swift; sourceTree = "<group>"; };
-		D3CA7F821EBA5ABB009897CD /* LoginBackground.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LoginBackground.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -376,7 +374,6 @@
 		1F5E74B71D944E200061BBA7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D3CA7F811EBA5AA8009897CD /* Videos */,
 				1F5E74B81D944E270061BBA7 /* Fonts */,
 				1F0339DF1D3EBAE1006EDBD1 /* Content */,
 			);
@@ -761,14 +758,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		D3CA7F811EBA5AA8009897CD /* Videos */ = {
-			isa = PBXGroup;
-			children = (
-				D3CA7F821EBA5ABB009897CD /* LoginBackground.mp4 */,
-			);
-			name = Videos;
-			sourceTree = "<group>";
-		};
 		EC51C1C3908FB4A9183664F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -878,7 +867,6 @@
 				9C48461D1D3FBBC0003032D5 /* Localizable.strings in Resources */,
 				75FE33411D993DDD0005EA66 /* ProximaNova-Light.otf in Resources */,
 				2B7CBD3F1D906ECE00B55CD2 /* Account.storyboard in Resources */,
-				D3CA7F831EBA693C009897CD /* LoginBackground.mp4 in Resources */,
 				75FE33401D993DDD0005EA66 /* ProximaNova-Extrabold.otf in Resources */,
 				75FE333D1D993DDD0005EA66 /* ProximaNova-Black.otf in Resources */,
 				2B7CBD261D906B1200B55CD2 /* Login.storyboard in Resources */,

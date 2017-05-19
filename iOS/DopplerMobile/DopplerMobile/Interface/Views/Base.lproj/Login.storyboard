@@ -48,9 +48,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="YUF-qf-2fR" customClass="BackgroundVideo" customModule="SwiftVideoBackground">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tg3-pH-Ug5">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
@@ -345,12 +342,8 @@
                         <constraints>
                             <constraint firstItem="Tg3-pH-Ug5" firstAttribute="height" secondItem="jqN-Tw-CRh" secondAttribute="height" id="3JF-Mq-tmo"/>
                             <constraint firstAttribute="trailing" secondItem="Tg3-pH-Ug5" secondAttribute="trailing" id="4p9-UX-Ln7"/>
-                            <constraint firstItem="YUF-qf-2fR" firstAttribute="height" secondItem="jqN-Tw-CRh" secondAttribute="height" id="OCM-sX-MGm"/>
                             <constraint firstItem="Tg3-pH-Ug5" firstAttribute="top" secondItem="jqN-Tw-CRh" secondAttribute="top" id="WFk-yL-UzJ"/>
                             <constraint firstItem="Tg3-pH-Ug5" firstAttribute="leading" secondItem="jqN-Tw-CRh" secondAttribute="leading" id="XPH-c8-5js"/>
-                            <constraint firstItem="YUF-qf-2fR" firstAttribute="top" secondItem="jqN-Tw-CRh" secondAttribute="top" id="ZLt-aj-01C"/>
-                            <constraint firstItem="YUF-qf-2fR" firstAttribute="leading" secondItem="jqN-Tw-CRh" secondAttribute="leading" id="ezf-tf-rrL"/>
-                            <constraint firstAttribute="trailing" secondItem="YUF-qf-2fR" secondAttribute="trailing" id="mUX-Kq-M1j"/>
                         </constraints>
                     </view>
                     <userDefinedRuntimeAttributes>
@@ -363,7 +356,6 @@
                         <outlet property="txtUsername" destination="Ish-bT-C15" id="QFd-5c-ahN"/>
                         <outlet property="vwOverlayView" destination="Tg3-pH-Ug5" id="97A-ma-jpp"/>
                         <outlet property="vwTextfieldsContainer" destination="lEL-JT-iBg" id="rlM-0Q-Y0n"/>
-                        <outlet property="vwVideoBackground" destination="YUF-qf-2fR" id="E33-Pz-fEP"/>
                         <segue destination="v0i-Ad-kMO" kind="show" identifier="loggedInScreenSegue" id="CnZ-3U-Pbw"/>
                     </connections>
                 </viewController>

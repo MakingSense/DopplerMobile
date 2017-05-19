@@ -9,7 +9,6 @@
 import UIKit
 import Bond
 import IHKeyboardAvoiding
-import SwiftVideoBackground
 import KRProgressHUD
 
 class LoginViewController: UIViewController, NavigationDelegate {
@@ -18,7 +17,6 @@ class LoginViewController: UIViewController, NavigationDelegate {
     private let keyboardAvoidingPadding = 10.0
     
     // MARK: UI Properties
-    @IBOutlet weak var vwVideoBackground: BackgroundVideo!
     @IBOutlet weak var vwOverlayView: UIView!
     @IBOutlet weak var vwTextfieldsContainer: UIView!
     @IBOutlet weak var txtUsername: UITextField!
@@ -40,9 +38,6 @@ class LoginViewController: UIViewController, NavigationDelegate {
         // Keyboard avoiding
         KeyboardAvoiding.setAvoidingView(vwOverlayView, withTriggerView: vwTextfieldsContainer)
         KeyboardAvoiding.paddingForCurrentAvoidingView = CGFloat(keyboardAvoidingPadding)
-        
-        // Video background
-        vwVideoBackground.createBackgroundVideo(name: "LoginBackground", type: "mp4", alpha: 0.1)
     }
     
     private func bindViewModel() {
