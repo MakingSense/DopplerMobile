@@ -7,45 +7,70 @@
 //
 
 import UIKit
-import SwiftyUserDefaults
+import KRProgressHUD
+import Bond
 
-class CampaignPreviewViewController: UIViewController, DataSourceContentDelegate
-{
-    @IBOutlet fileprivate weak var wvCampaignPreview: UIWebView!
-    var campaignPreviewViewModel: CampaignPreviewViewModel!
+final class CampaignPreviewViewController: UIViewController {
+    
+    @IBOutlet private weak var wvCampaignPreview: UIWebView!
+    var viewModel: CampaignPreviewViewModel!
     var campaignId: Int?
     
+    @IBOutlet weak var btnShare: UIButton!
+    @IBOutlet weak var lblTitle: UILabel!
+    
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController!.isToolbarHidden = false;
-        self.navigationItem.title = "PREVIEW_TEXT".localized
-        self.campaignPreviewViewModel = CampaignPreviewViewModel(campaignsService: CampaignsService(), contentDelegate: self, campaignId: campaignId!)
+        navigationItem.title = "PREVIEW_TEXT".localized
+        viewModel = CampaignPreviewViewModel(campaignsService: CampaignsService(), campaignId: campaignId!)
+        bindingView()
+    }
+        
+    func bindingView() {
+        
+        viewModel.urlPreview.map{urlPreview in
+            guard let url = urlPreview else {
+                return ""
+            }
+            return "\(url)"
+            }.bind(to: lblTitle)
+        viewModel.urlPreview
+            .observeNext { [weak self] urlPreview in
+                guard let strongSelf = self else { return }
+                guard let urlToLoad = urlPreview else { return }
+                let requestObj = URLRequest(url: urlToLoad)
+                strongSelf.wvCampaignPreview.loadRequest(requestObj);
+            }.dispose(in: reactive.bag)
+        viewModel.isBusy
+            .observeNext { isBusy in
+                if isBusy {
+                    KRProgressHUD.show()
+                } else {
+                    KRProgressHUD.dismiss()
+                }
+            }.dispose(in: reactive.bag)
+        btnShare.reactive.tap
+            .observe { [weak self] _ in
+                guard let strongSelf = self else {
+                    return
+                }
+                strongSelf.viewModel.sharePreview()
+            }.dispose(in: reactive.bag)
+        
+        viewModel.activityShare
+            .observeNext { [weak self] activityShare in
+                guard let strongSelf = self, let activity = activityShare else {
+                    return
+                }
+                strongSelf.present(activity, animated: true, completion: nil)
+            }.dispose(in: reactive.bag)
+        
+        viewModel.shareCanExecute.bind(to: btnShare.reactive.isEnabled)
     }
     
-    //TODO: remove this when reactive is implemented.
-    override func viewWillDisappear(_ animated: Bool) {
-        NotificationCenter.default.removeObserver(self)
-        self.navigationController!.isToolbarHidden = true;
+    @IBAction func onClose(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func sharePreview(_ sender: AnyObject)
-    {
-        //TODO: Analize what information we want to share.
-        let message = "Preview URL."
-        if let link = URL(string: "http://vp.dplract.com/00dc56c471939cca")
-        {
-            let objectsToShare = [message,link] as [Any]
-            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
-            self.present(activityVC, animated: true, completion: nil)
-        }
-    }
     
-    //TODO: show loading progress.
-    func handleRefresh(_ refreshControl: UIRefreshControl)
-    {
-    }
-    
-    func updateContent(_ content: AnyObject) {
-        let requestObj = URLRequest(url: content as! URL);
-        wvCampaignPreview.loadRequest(requestObj);
-    }
 }

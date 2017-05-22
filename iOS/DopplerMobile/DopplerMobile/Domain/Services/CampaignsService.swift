@@ -54,17 +54,19 @@ open class CampaignsService
     {
         let completionHandler: (URL?) -> Void =
             { result in
-                guard result != nil else
-                {
-                    NotificationCenter.default.post(name: Notification.Name(rawValue: notification), object: String(describing: "Error getting campaign preview data."))
-                    return
-                }
-                guard let preview = result else
-                {
-                    NotificationCenter.default.post(name: Notification.Name(rawValue: notification), object: "Error getting campaign preview data.")
-                    return
-                }
-                NotificationCenter.default.post(name: Notification.Name(rawValue: notification), object: preview)
+//                guard result != nil else
+//                {
+//                    NotificationCenter.default.post(name: Notification.Name(rawValue: notification), object: String(describing: "Error getting campaign preview data."))
+//                    return
+//                }
+//                guard let preview = result else
+//                {
+//                    NotificationCenter.default.post(name: Notification.Name(rawValue: notification), object: "Error getting campaign preview data.")
+//                    return
+//                }
+                //TODO: For demo purposes use the following lines:
+                let url = URL (string: "http://vp.dplract.com/00dc56c471939cca");
+                NotificationCenter.default.post(name: Notification.Name(rawValue: notification), object:url)
         }
         DMApiManager.sharedInstance.getCampaignPreview(campaignId, completionHandler: completionHandler)
     }

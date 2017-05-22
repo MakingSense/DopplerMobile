@@ -7,34 +7,62 @@
 //
 
 import Foundation
+import Bond
+import ReactiveKit
 
-open class CampaignPreviewViewModel
-{
-    fileprivate var campaignsService: CampaignsService
-    var contentDelegate: DataSourceContentDelegate?
+@objc class CampaignPreviewViewModel: NSObject {
     
-    init(campaignsService: CampaignsService, contentDelegate: DataSourceContentDelegate?, campaignId: Int)
-    {
+    private let campaignsService: CampaignsService
+    let isBusy = Observable<Bool>(false)
+    let urlPreview = Observable<URL?>(nil)
+    let activityShare = Observable<UIActivityViewController?>(nil)
+    var shareCanExecute: Signal<Bool, NoError> {
+        return combineLatest(urlPreview, isBusy) { urlPreview, isBusy in
+            return urlPreview != nil && !isBusy
+        }
+    }
+    
+    init(campaignsService: CampaignsService, campaignId: Int) {
         self.campaignsService = campaignsService
-        self.contentDelegate = contentDelegate
+        isBusy.value = true
+        super.init()
         self.campaignsService.downloadCampaignPreview(campaignId, notification: NotificationIdentifier.CampaignPreviewNotification.rawValue)
-        NotificationCenter.default.addObserver(self, selector: #selector(CampaignPreviewViewModel.OnNotificationArrived(_:)), name:NSNotification.Name(rawValue: NotificationIdentifier.CampaignPreviewNotification.rawValue), object: nil)
+        self.setupNotifications()
+    }
+    
+    private func setupNotifications() {
+        NotificationCenter
+            .default
+            .reactive
+            .notification(name: NSNotification.Name(rawValue: NotificationIdentifier.CampaignPreviewNotification.rawValue))
+            .observeNext { [weak self] notification in
+                guard let strongSelf = self else {
+                    return
+                }
+                defer {
+                    strongSelf.isBusy.value = false
+                }
+                strongSelf.onNotificationArrived(notification)
+            }
+            .dispose(in: reactive.bag)
     }
     
     //TODO: Check the best place to receive this notification.
-    @objc func OnNotificationArrived(_ notification: Notification)
-    {
-        if(notification.object != nil)
-        {
-             //TODO: For demo purposes use the following lines:
-            let url = URL (string: "http://vp.dplract.com/00dc56c471939cca");
-            contentDelegate?.updateContent(url! as AnyObject)
-            //TODO: For demo purposes comment the following line:
-            //contentDelegate?.updateContent(notification.object! as! NSURL)
-        }
-        else
-        {
+    func onNotificationArrived(_ notification: Notification) {
+        isBusy.value = false
+        if let object = notification.object {
+            urlPreview.value = object as? URL
+        } else {
             //TODO: Show error message.
+        }
+    }
+    
+    func sharePreview() {
+        //TODO: Analize what information we want to share.
+        let message = "Preview URL."
+        if let link = urlPreview.value {
+            let objectsToShare = [message,link] as [Any]
+            activityShare.value =  UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
         }
     }
 }
