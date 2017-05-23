@@ -22,9 +22,10 @@ struct ReportMenuOption: PagingMenuControllerCustomizable
     }
     
     private var pagingControllers: [UIViewController] {
-        let reportViewController = DeliveryRateViewController.instantiateFromStoryboard(reportItem: campaignItem!)
-        let linkTracking = LinkTrackingCollectionViewController.instantiateFromStoryboard(viewModel: LinkTrackingCollectionViewModel())
-        return [reportViewController, ReportEmptyViewController(), linkTracking]
+        let deliveryRateViewController = DeliveryRateViewController.instantiateFromStoryboard(reportItem: campaignItem!)
+        let opensClicksViewController = OpensClicksViewController.instantiateFromStoryboard()
+        let linkTrackingViewController = LinkTrackingCollectionViewController.instantiateFromStoryboard(viewModel: LinkTrackingCollectionViewModel())
+        return [deliveryRateViewController, opensClicksViewController, linkTrackingViewController]
     }
     
     private struct MenuOptions: MenuViewCustomizable {
