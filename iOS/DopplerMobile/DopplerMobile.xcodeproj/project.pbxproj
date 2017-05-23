@@ -29,6 +29,7 @@
 		2B057FD81D7A297E0021F748 /* ListStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B057FD71D7A297E0021F748 /* ListStatus.swift */; };
 		2B057FDA1D7A2F410021F748 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B057FD91D7A2F410021F748 /* ListViewModel.swift */; };
 		2B057FDC1D7A31300021F748 /* ListDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B057FDB1D7A31300021F748 /* ListDetailViewModel.swift */; };
+		2B0968281DAED404009F5809 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2B0EC0381D7FDB7A008BF638 /* CampaignPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EC0371D7FDB7A008BF638 /* CampaignPreviewViewController.swift */; };
 		2B0EC03A1D7FE71A008BF638 /* CampaignPreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EC0391D7FE71A008BF638 /* CampaignPreviewViewModel.swift */; };
 		2B1331071D9AE1630027D562 /* ScheduledCampaignsSegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1331061D9AE1630027D562 /* ScheduledCampaignsSegmentViewController.swift */; };
@@ -59,6 +60,7 @@
 		2B703F1B1D3D304E00A19E36 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B703F1A1D3D304E00A19E36 /* String.swift */; };
 		2B703F1D1D3D51D900A19E36 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B703F1C1D3D51D900A19E36 /* Optional.swift */; };
 		2B703F1F1D3D521E00A19E36 /* StringType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B703F1E1D3D521E00A19E36 /* StringType.swift */; };
+		2B70F7A11D5947B800B18525 /* DeliveryRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B70F7A01D5947B800B18525 /* DeliveryRateViewController.swift */; };
 		2B7B73431D9EE40D00A593BD /* TableViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B73421D9EE40D00A593BD /* TableViewCellProtocol.swift */; };
 		2B7CBD261D906B1200B55CD2 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B7CBD281D906B1200B55CD2 /* Login.storyboard */; };
 		2B7CBD301D906C6400B55CD2 /* Reports.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B7CBD321D906C6400B55CD2 /* Reports.storyboard */; };
@@ -130,11 +132,16 @@
 		9C76854D1DD3A6D3005D2B2D /* DefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76854C1DD3A6D3005D2B2D /* DefaultTableViewCell.swift */; };
 		9C7685511DD3A6F2005D2B2D /* PickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7685501DD3A6F2005D2B2D /* PickerTableViewCell.swift */; };
 		9C7685531DD3A70C005D2B2D /* GenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7685521DD3A70B005D2B2D /* GenderTableViewCell.swift */; };
-		9CB9DEFC1D1C150100DAED48 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB9DEFB1D1C150100DAED48 /* OnboardingViewController.swift */; };
 		9CBFA3AF1DD3CA1B0099D63C /* SubscriberFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBFA3AE1DD3CA1B0099D63C /* SubscriberFieldViewModel.swift */; };
 		9CD2FC6A1D2445E800D4C9F8 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2FC691D2445E800D4C9F8 /* AuthenticationService.swift */; };
 		9CEFD9FE1DD3678900A1E619 /* AddSubscriberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEFD9FD1DD3678900A1E619 /* AddSubscriberTableViewController.swift */; };
-		A07A93251EBCEBC70073E1A5 /* DeliveryRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A93241EBCEBC70073E1A5 /* DeliveryRateViewController.swift */; };
+		A07A93151EBCD8300073E1A5 /* OpenAndClickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A93141EBCD8300073E1A5 /* OpenAndClickViewController.swift */; };
+		A07A93191EBCD9A80073E1A5 /* LinkTrackingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A93181EBCD9A80073E1A5 /* LinkTrackingCollectionViewController.swift */; };
+		A07A931B1EBCDD420073E1A5 /* LinkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A931A1EBCDD420073E1A5 /* LinkCollectionViewCell.swift */; };
+		A07A931D1EBCDF8B0073E1A5 /* LinksHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A931C1EBCDF8B0073E1A5 /* LinksHeaderCollectionReusableView.swift */; };
+		A07A93211EBCE3EE0073E1A5 /* LinkCollectionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A93201EBCE3EE0073E1A5 /* LinkCollectionCellViewModel.swift */; };
+		A07A93231EBCE42D0073E1A5 /* LinkTrackingCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A93221EBCE42D0073E1A5 /* LinkTrackingCollectionViewModel.swift */; };
+		A0AA708A1ECCD1ED00C818BE /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AA70891ECCD1ED00C818BE /* OnboardingViewController.swift */; };
 		A3C4A5B9E54033B7C3D50A18 /* Pods_DopplerMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9FB088DEE147D0D578049DD /* Pods_DopplerMobile.framework */; };
 		A8EF46D91D26C218000882A3 /* MSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EF46D81D26C218000882A3 /* MSButton.swift */; };
 		C22695701D4297D000059959 /* OnboardingViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C226956F1D4297D000059959 /* OnboardingViewDataSource.swift */; };
@@ -146,6 +153,7 @@
 		D397EE931ECB89CD000FEAA9 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D397EE921ECB89CD000FEAA9 /* AccountViewModel.swift */; };
 		D3CA1D121EC2163800EB35D6 /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CA1D111EC2163700EB35D6 /* OnboardingPage.swift */; };
 		D3CA1D141EC3813900EB35D6 /* OnboardingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CA1D131EC3813100EB35D6 /* OnboardingOverlay.swift */; };
+		D3CA7F831EBA693C009897CD /* LoginBackground.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D3CA7F821EBA5ABB009897CD /* LoginBackground.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +173,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				2B0968281DAED404009F5809 /* (null) in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,6 +242,7 @@
 		2B703F1A1D3D304E00A19E36 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		2B703F1C1D3D51D900A19E36 /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		2B703F1E1D3D521E00A19E36 /* StringType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringType.swift; sourceTree = "<group>"; };
+		2B70F7A01D5947B800B18525 /* DeliveryRateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryRateViewController.swift; sourceTree = "<group>"; };
 		2B7B73421D9EE40D00A593BD /* TableViewCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellProtocol.swift; sourceTree = "<group>"; };
 		2B7CBD271D906B1200B55CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		2B7CBD2F1D906C2600B55CD2 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Login.strings"; sourceTree = "<group>"; };
@@ -309,11 +319,16 @@
 		9C76854C1DD3A6D3005D2B2D /* DefaultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTableViewCell.swift; sourceTree = "<group>"; };
 		9C7685501DD3A6F2005D2B2D /* PickerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerTableViewCell.swift; sourceTree = "<group>"; };
 		9C7685521DD3A70B005D2B2D /* GenderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenderTableViewCell.swift; sourceTree = "<group>"; };
-		9CB9DEFB1D1C150100DAED48 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		9CBFA3AE1DD3CA1B0099D63C /* SubscriberFieldViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscriberFieldViewModel.swift; path = ../../Interface/ViewControllers/SubscriberFieldViewModel.swift; sourceTree = "<group>"; };
 		9CD2FC691D2445E800D4C9F8 /* AuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		9CEFD9FD1DD3678900A1E619 /* AddSubscriberTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSubscriberTableViewController.swift; sourceTree = "<group>"; };
-		A07A93241EBCEBC70073E1A5 /* DeliveryRateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryRateViewController.swift; sourceTree = "<group>"; };
+		A07A93141EBCD8300073E1A5 /* OpenAndClickViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenAndClickViewController.swift; sourceTree = "<group>"; };
+		A07A93181EBCD9A80073E1A5 /* LinkTrackingCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkTrackingCollectionViewController.swift; sourceTree = "<group>"; };
+		A07A931A1EBCDD420073E1A5 /* LinkCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkCollectionViewCell.swift; sourceTree = "<group>"; };
+		A07A931C1EBCDF8B0073E1A5 /* LinksHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinksHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		A07A93201EBCE3EE0073E1A5 /* LinkCollectionCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkCollectionCellViewModel.swift; sourceTree = "<group>"; };
+		A07A93221EBCE42D0073E1A5 /* LinkTrackingCollectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkTrackingCollectionViewModel.swift; sourceTree = "<group>"; };
+		A0AA70891ECCD1ED00C818BE /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		A51E0ED141EDEB130E889C6C /* Pods_DopplerMobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DopplerMobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8EF46D81D26C218000882A3 /* MSButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSButton.swift; sourceTree = "<group>"; };
 		B9FB088DEE147D0D578049DD /* Pods_DopplerMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DopplerMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -327,6 +342,7 @@
 		D397EE921ECB89CD000FEAA9 /* AccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		D3CA1D111EC2163700EB35D6 /* OnboardingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
 		D3CA1D131EC3813100EB35D6 /* OnboardingOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingOverlay.swift; sourceTree = "<group>"; };
+		D3CA7F821EBA5ABB009897CD /* LoginBackground.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LoginBackground.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -431,6 +447,8 @@
 			isa = PBXGroup;
 			children = (
 				9C339C221DDB794A0093D1DF /* Mockup */,
+				A07A93201EBCE3EE0073E1A5 /* LinkCollectionCellViewModel.swift */,
+				A07A93221EBCE42D0073E1A5 /* LinkTrackingCollectionViewModel.swift */,
 				75C8CE991DD5053F00B5CB75 /* SubscriberFieldCountryViewModel.swift */,
 				9CBFA3AE1DD3CA1B0099D63C /* SubscriberFieldViewModel.swift */,
 				9C339C1E1DDB72580093D1DF /* AddSubscriberViewModel.swift */,
@@ -536,8 +554,6 @@
 				2B13310A1D9AF52B0027D562 /* Scheduled.storyboard */,
 				2B7CBD3C1D906E4E00B55CD2 /* Lists.storyboard */,
 				2B7CBD411D906ECE00B55CD2 /* Account.storyboard */,
-				D3CA1D111EC2163700EB35D6 /* OnboardingPage.swift */,
-				D3CA1D131EC3813100EB35D6 /* OnboardingOverlay.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -638,14 +654,18 @@
 		2B7B733C1D9EDDBF00A593BD /* ReportsSection */ = {
 			isa = PBXGroup;
 			children = (
-				2B0EC0371D7FDB7A008BF638 /* CampaignPreviewViewController.swift */,
+				249ECB6D1D3D56B300F18E74 /* SentCampaignsViewController.swift */,
+				2439F31A1D352BD500949C5D /* SentCampaignsTableViewCell.swift */,
 				2B1DDC911DA8303A00F5632E /* ReportSegmentViewController.swift */,
 				2B1DDC951DA830B100F5632E /* ReportMenuOption.swift */,
 				2B1DDC971DA8352900F5632E /* ReportEmptyViewController.swift */,
-				A07A93241EBCEBC70073E1A5 /* DeliveryRateViewController.swift */,
+				A07A93181EBCD9A80073E1A5 /* LinkTrackingCollectionViewController.swift */,
+				A07A93141EBCD8300073E1A5 /* OpenAndClickViewController.swift */,
+				2B70F7A01D5947B800B18525 /* DeliveryRateViewController.swift */,
 				2BD4FD9B1D636EBA00E7E13C /* DeliveryRateReportTableViewCell.swift */,
-				249ECB6D1D3D56B300F18E74 /* SentCampaignsViewController.swift */,
-				2439F31A1D352BD500949C5D /* SentCampaignsTableViewCell.swift */,
+				2B0EC0371D7FDB7A008BF638 /* CampaignPreviewViewController.swift */,
+				A07A931A1EBCDD420073E1A5 /* LinkCollectionViewCell.swift */,
+				A07A931C1EBCDF8B0073E1A5 /* LinksHeaderCollectionReusableView.swift */,
 			);
 			name = ReportsSection;
 			sourceTree = "<group>";
@@ -678,8 +698,8 @@
 		2B7B733F1D9EDDF800A593BD /* LoginSection */ = {
 			isa = PBXGroup;
 			children = (
+				A0AA70891ECCD1ED00C818BE /* OnboardingViewController.swift */,
 				241198711D1B134100330D87 /* LoginViewController.swift */,
-				9CB9DEFB1D1C150100DAED48 /* OnboardingViewController.swift */,
 			);
 			name = LoginSection;
 			sourceTree = "<group>";
@@ -1007,8 +1027,8 @@
 				75C8CE9A1DD5053F00B5CB75 /* SubscriberFieldCountryViewModel.swift in Sources */,
 				2B1DDC921DA8303A00F5632E /* ReportSegmentViewController.swift in Sources */,
 				2BD83BAB1D41590C00A5C527 /* OnboardingContentViewControllerDelegate.swift in Sources */,
+				A07A93211EBCE3EE0073E1A5 /* LinkCollectionCellViewModel.swift in Sources */,
 				9C1F13B41DCB82F400D2FDC1 /* SendingFooterTableViewCell.swift in Sources */,
-				A07A93251EBCEBC70073E1A5 /* DeliveryRateViewController.swift in Sources */,
 				2B1DDC961DA830B100F5632E /* ReportMenuOption.swift in Sources */,
 				9C76854D1DD3A6D3005D2B2D /* DefaultTableViewCell.swift in Sources */,
 				75F42C591DC7C0D8000D87FA /* SendingSendToTableViewCell.swift in Sources */,
@@ -1045,6 +1065,8 @@
 				C22695701D4297D000059959 /* OnboardingViewDataSource.swift in Sources */,
 				2B8212DA1D9C471200AB1794 /* StoryboardName.swift in Sources */,
 				7547DD6F1DCA28C400E906EB /* SendingCampaignFieldViewModel.swift in Sources */,
+				A07A93231EBCE42D0073E1A5 /* LinkTrackingCollectionViewModel.swift in Sources */,
+				A07A931B1EBCDD420073E1A5 /* LinkCollectionViewCell.swift in Sources */,
 				2B4C32131D70A1180076DF3B /* NotificationIdentifier.swift in Sources */,
 				2B7EF64A1D4B23DB008D4CDD /* SentCampaignReport.swift in Sources */,
 				2B8212D81D9C054800AB1794 /* SendingTableViewController.swift in Sources */,
@@ -1052,7 +1074,6 @@
 				24FD44A31D22EBCB003E35A4 /* NavigationDelegate.swift in Sources */,
 				75C8CE941DD4B68C00B5CB75 /* AddSubscriberTableViewDataSource.swift in Sources */,
 				2439F31B1D352BD500949C5D /* SentCampaignsTableViewCell.swift in Sources */,
-				D3CA1D121EC2163800EB35D6 /* OnboardingPage.swift in Sources */,
 				C243CBC81D9AFD32004A1FF8 /* NavigationHandler.swift in Sources */,
 				2BD4FD9C1D636EBA00E7E13C /* DeliveryRateReportTableViewCell.swift in Sources */,
 				D397EE911ECB8930000FEAA9 /* AccountViewController.swift in Sources */,
@@ -1071,15 +1092,18 @@
 				2B7EF64C1D4B289C008D4CDD /* Link.swift in Sources */,
 				24F0FB6F1D1B2D5C00360346 /* User.swift in Sources */,
 				2B7EF6541D4C6425008D4CDD /* CampaignStatus.swift in Sources */,
+				A07A93191EBCD9A80073E1A5 /* LinkTrackingCollectionViewController.swift in Sources */,
 				2B6027781DBFC57F003B7C6A /* DataSourcePaginationDelegate.swift in Sources */,
 				2B057FDC1D7A31300021F748 /* ListDetailViewModel.swift in Sources */,
 				2BDD10E51D918B7800E5ABF7 /* BasicInformationTableViewCell.swift in Sources */,
 				9C48461C1D3FBB81003032D5 /* StringExtension.swift in Sources */,
 				2BDE5DF11DA57974006AE5E5 /* CampaignRecipient.swift in Sources */,
+				A0AA708A1ECCD1ED00C818BE /* OnboardingViewController.swift in Sources */,
 				2B703F1F1D3D521E00A19E36 /* StringType.swift in Sources */,
 				2B7EF6521D4C5643008D4CDD /* NSDate.swift in Sources */,
 				2B46863F1D8284A600B03D4F /* ListsTableViewCell.swift in Sources */,
 				2BF307441D6E26B20062DF3C /* MSResponseJSONObjectSerializable.swift in Sources */,
+				2B70F7A11D5947B800B18525 /* DeliveryRateViewController.swift in Sources */,
 				2B057FD61D7A281F0021F748 /* List.swift in Sources */,
 				75F42C571DC7C0C9000D87FA /* SendingBasicTableViewCell.swift in Sources */,
 				2BF307481D6E2B740062DF3C /* MSAlamofireRequest+JSONSerializable.swift in Sources */,
@@ -1092,15 +1116,16 @@
 				2BD83BB01D42762200A5C527 /* SegueIdentifier.swift in Sources */,
 				75C8CE981DD4F60200B5CB75 /* AddSubscriberMockUpViewModel.swift in Sources */,
 				2B1DDC981DA8352900F5632E /* ReportEmptyViewController.swift in Sources */,
-				9CB9DEFC1D1C150100DAED48 /* OnboardingViewController.swift in Sources */,
 				2B703F1D1D3D51D900A19E36 /* Optional.swift in Sources */,
 				A8EF46D91D26C218000882A3 /* MSButton.swift in Sources */,
 				2B6F0C3C1DA428D4006541E2 /* RecipientsTableViewCell.swift in Sources */,
 				2B4686331D81B28100B03D4F /* SubscribersListViewModel.swift in Sources */,
+				A07A93151EBCD8300073E1A5 /* OpenAndClickViewController.swift in Sources */,
 				2BA171BF1D74A9E300FBDE66 /* DefaultsKeys.swift in Sources */,
 				9C339C1F1DDB72580093D1DF /* AddSubscriberViewModel.swift in Sources */,
 				2439F3191D343BBC00949C5D /* CampaignViewModel.swift in Sources */,
 				2B458AE01D88487100BD5A08 /* DataSourceContentDelegate.swift in Sources */,
+				A07A931D1EBCDF8B0073E1A5 /* LinksHeaderCollectionReusableView.swift in Sources */,
 				2B4686311D81ACC000B03D4F /* SubscribersTableViewCell.swift in Sources */,
 				2B057FD81D7A297E0021F748 /* ListStatus.swift in Sources */,
 				2B7EF6451D4B229E008D4CDD /* Campaign.swift in Sources */,
@@ -1108,7 +1133,6 @@
 				2BFBC0891DBE665000796DA5 /* GenericArrayDataSource.swift in Sources */,
 				2B4686351D81B88E00B03D4F /* Subscriber.swift in Sources */,
 				750CE2331D9EF07B008665C7 /* UIFont+DMFonts.swift in Sources */,
-				D3CA1D141EC3813900EB35D6 /* OnboardingOverlay.swift in Sources */,
 				2BC6EF4F1D370A88009F5A0B /* ScheduledCampaignsViewController.swift in Sources */,
 				2BF8751D1D7A1475009AA744 /* ListsViewController.swift in Sources */,
 				9C7685531DD3A70C005D2B2D /* GenderTableViewCell.swift in Sources */,
@@ -1319,8 +1343,6 @@
 			baseConfigurationReference = 3168E4BE8C385F79A0C41018 /* Pods-DopplerMobile.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = PUJ6PNMS7U;
@@ -1340,8 +1362,6 @@
 			baseConfigurationReference = 193F4DD26F9BA25F5A9228FA /* Pods-DopplerMobile.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = PUJ6PNMS7U;

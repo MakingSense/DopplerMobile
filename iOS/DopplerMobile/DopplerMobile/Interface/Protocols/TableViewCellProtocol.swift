@@ -8,8 +8,7 @@
 
 import Foundation
 
-protocol TableViewCellProtocol: class
-{
+protocol TableViewCellProtocol: class {
     func configure<T>(viewModel: T)
 }
 

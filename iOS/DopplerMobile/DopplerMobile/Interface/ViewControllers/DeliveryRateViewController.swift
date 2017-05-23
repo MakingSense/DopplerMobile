@@ -2,7 +2,7 @@
 //  DeliveryRateViewController.swift
 //  DopplerMobile
 //
-//  Created by Mauro Maldini on 8/8/16.
+//  Created by Lucas Pelizza on 5/5/17.
 //  Copyright © 2016 Making Sense. All rights reserved.
 //
 

@@ -1,9 +1,9 @@
 
 /* Class = "UITabBarItem"; title = "METRICS"; ObjectID = "2sA-Qa-ZIi"; */
-"2sA-Qa-ZIi.title" = "METRICS";
+"2sA-Qa-ZIi.title" = "Metricas";
 
 /* Class = "UITextView"; text = "Here you can analize the activity and result of your campaign."; ObjectID = "9Pm-p0-0q5"; */
-"9Pm-p0-0q5.text" = "Here you can analize the activity and result of your campaign.";
+"9Pm-p0-0q5.text" = "Aquí puedes analizar actividad y resultados de tu campaña.";
 
 /* Class = "UILabel"; text = "99%"; ObjectID = "ArE-pn-QIB"; */
 "ArE-pn-QIB.text" = "99%";
@@ -12,7 +12,7 @@
 "B7Z-JN-M1u.text" = "--";
 
 /* Class = "UILabel"; text = "UNOPEN"; ObjectID = "D16-qd-YEu"; */
-"D16-qd-YEu.text" = "UNOPEN";
+"D16-qd-YEu.text" = "No Abiertos";
 
 /* Class = "UILabel"; text = "UNOPEN"; ObjectID = "Kb5-LB-a6c"; */
 "Kb5-LB-a6c.text" = "NO ABIERTOS";
@@ -36,13 +36,13 @@
 "Twc-jL-wAp.text" = "99%";
 
 /* Class = "UILabel"; text = "OPEN"; ObjectID = "UXt-Z5-Suo"; */
-"UXt-Z5-Suo.text" = "OPEN";
+"UXt-Z5-Suo.text" = "Abiertos";
 
 /* Class = "UILabel"; text = "BOUNCE"; ObjectID = "Ylw-Pu-6HX"; */
 "Ylw-Pu-6HX.text" = "REBOTES";
 
 /* Class = "UILabel"; text = "CLICK TROUGH RATE"; ObjectID = "dVp-7h-OlH"; */
-"dVp-7h-OlH.text" = "CLICK TROUGH RATE";
+"dVp-7h-OlH.text" = "Porcetanjes de Clicks";
 
 /* Class = "UISegmentedControl"; h8o-N3-VIw.segmentTitles[0] = "Primera Sección"; ObjectID = "h8o-N3-VIw"; */
 "h8o-N3-VIw.segmentTitles[0]" = "Primera Sección";
@@ -57,7 +57,7 @@
 "lvH-cE-vtR.text" = "APERTURAS";
 
 /* Class = "UILabel"; text = "BOUNCES"; ObjectID = "uPA-Ng-l58"; */
-"uPA-Ng-l58.text" = "BOUNCES";
+"uPA-Ng-l58.text" = "Rebotes";
 
 /* Class = "UILabel"; text = "•"; ObjectID = "wzW-la-Adk"; */
 "wzW-la-Adk.text" = "•";

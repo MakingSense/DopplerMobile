@@ -11,7 +11,8 @@ import PagingMenuController
 
 struct ReportMenuOption: PagingMenuControllerCustomizable
 {
-    private var campaignItem: CampaignViewModel?
+    private let campaignItem: CampaignViewModel?
+    
     init(item: CampaignViewModel?) {
         self.campaignItem = item
     }
@@ -21,8 +22,9 @@ struct ReportMenuOption: PagingMenuControllerCustomizable
     }
     
     private var pagingControllers: [UIViewController] {
-        let deliveryRateViewController = DeliveryRateViewController.instantiateFromStoryboard(reportItem: campaignItem!)
-        return [deliveryRateViewController, ReportEmptyViewController(), ReportEmptyViewController()]
+        let reportViewController = DeliveryRateViewController.instantiateFromStoryboard(reportItem: campaignItem!)
+        let linkTracking = LinkTrackingCollectionViewController.instantiateFromStoryboard(viewModel: LinkTrackingCollectionViewModel())
+        return [reportViewController, ReportEmptyViewController(), linkTracking]
     }
     
     private struct MenuOptions: MenuViewCustomizable {
@@ -58,7 +60,8 @@ struct ReportMenuOption: PagingMenuControllerCustomizable
     }
     
     private struct MenuItem3: MenuItemViewCustomizable {
-        var displayMode: MenuItemDisplayMode {
+        var displayMode: MenuItemDisplayMode
+        {
             return .text(title: MenuItemText(text: "REPORTS_LINK_TRACKING".localized,
                                              color: UIColor.primary(),
                                              selectedColor: UIColor.accent(),
