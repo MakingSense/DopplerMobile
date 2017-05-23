@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -16,6 +16,9 @@
         </array>
         <array key="ProximaNova-Regular.otf">
             <string>ProximaNova-Regular</string>
+        </array>
+        <array key="ProximaNova-Semibold.otf">
+            <string>ProximaNova-Semibold</string>
         </array>
     </customFonts>
     <scenes>
@@ -606,12 +609,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="lB0-Ns-ij3" kind="relationship" relationship="rootViewController" id="c0q-Rd-wEM"/>
+                        <segue destination="lB0-Ns-ij3" kind="relationship" relationship="rootViewController" id="d94-k7-KzX"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z2A-5z-y2K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-663" y="113"/>
+            <point key="canvasLocation" x="-820" y="113"/>
         </scene>
         <!--Lists View Controller Screen-->
         <scene sceneID="awZ-iV-s1C">
@@ -814,6 +817,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yk2-rr-VRE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="78" y="113"/>
+        </scene>
+        <!--LISTS-->
+        <scene sceneID="Ts8-UR-nhX">
+            <objects>
+                <viewController storyboardIdentifier="InProgressListViewController" id="GJs-pc-MXD" customClass="InProgressViewController" customModule="DopplerMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wRe-TC-Q6g"/>
+                        <viewControllerLayoutGuide type="bottom" id="75i-g5-DVI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GAp-Xl-m2T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nz4-Kz-NkU">
+                                <rect key="frame" x="0.0" y="133.5" width="375" height="400"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lists" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAa-V5-Y85">
+                                <rect key="frame" x="-0.5" y="36" width="375" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="OnT-pV-cxX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="27"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.67843137249999996" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry, We are working on it." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1h2-UO-Swu">
+                                <rect key="frame" x="0.0" y="92.5" width="375" height="21"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="21"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.67843137249999996" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98823529409999999" green="0.8980392157" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="1h2-UO-Swu" firstAttribute="centerX" secondItem="GAp-Xl-m2T" secondAttribute="centerX" id="8g4-53-WTd"/>
+                            <constraint firstItem="tAa-V5-Y85" firstAttribute="centerX" secondItem="GAp-Xl-m2T" secondAttribute="centerX" id="C8Z-3x-b4k"/>
+                            <constraint firstItem="Nz4-Kz-NkU" firstAttribute="centerY" secondItem="GAp-Xl-m2T" secondAttribute="centerY" id="CVo-vN-zPi"/>
+                            <constraint firstItem="tAa-V5-Y85" firstAttribute="width" secondItem="GAp-Xl-m2T" secondAttribute="width" id="DKj-As-vb7"/>
+                            <constraint firstItem="Nz4-Kz-NkU" firstAttribute="centerX" secondItem="GAp-Xl-m2T" secondAttribute="centerX" id="IDZ-dE-bJS"/>
+                            <constraint firstItem="1h2-UO-Swu" firstAttribute="width" secondItem="GAp-Xl-m2T" secondAttribute="width" id="isu-Ml-AMB"/>
+                            <constraint firstItem="Nz4-Kz-NkU" firstAttribute="width" secondItem="GAp-Xl-m2T" secondAttribute="width" id="ixp-un-cxI"/>
+                            <constraint firstItem="Nz4-Kz-NkU" firstAttribute="top" secondItem="1h2-UO-Swu" secondAttribute="bottom" constant="20" id="uGJ-Po-Ku8"/>
+                            <constraint firstItem="tAa-V5-Y85" firstAttribute="top" secondItem="wRe-TC-Q6g" secondAttribute="bottom" constant="16" id="ufZ-FX-oBn"/>
+                            <constraint firstItem="Nz4-Kz-NkU" firstAttribute="height" secondItem="GAp-Xl-m2T" secondAttribute="height" multiplier="0.6" id="y6D-f7-CGY"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="2" title="LISTS" image="Lists-Disabled" selectedImage="Lists" id="IwJ-u3-o7O"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="imgLoading" destination="Nz4-Kz-NkU" id="Ov8-pc-Doe"/>
+                        <outlet property="lblTitle" destination="1h2-UO-Swu" id="h0j-7l-D3c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bQa-Qu-quX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="78" y="770"/>
         </scene>
     </scenes>
     <resources>

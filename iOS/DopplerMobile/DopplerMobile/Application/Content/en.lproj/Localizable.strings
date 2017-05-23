@@ -93,3 +93,6 @@
 //LISTS
 "LISTS_SUBSCRIBER_TYPE" = "Subscriber";
 "LISTS_SUBSCRIBER_CREATED_ON" = "Created on";
+
+//GENERAL
+"IN_PROGRESS_TEXT" = "Coming soon!!";

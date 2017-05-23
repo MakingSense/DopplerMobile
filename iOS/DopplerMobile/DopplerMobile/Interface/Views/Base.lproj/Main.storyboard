@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9XZ-c1-IVL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9XZ-c1-IVL">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,7 @@
         <scene sceneID="9f4-mP-Urc">
             <objects>
                 <navigationController navigationBarHidden="YES" id="9XZ-c1-IVL" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lL9-65-bWY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="lL9-65-bWY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -34,35 +34,15 @@
             </objects>
             <point key="canvasLocation" x="77.5" y="-641"/>
         </scene>
-        <!--ScheduledNavigationController-->
-        <scene sceneID="exs-gP-xw7">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Scheduled" referencedIdentifier="ScheduledNavigationController" id="CTA-jB-85d" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="SCHEDULED" image="Scheduled-Disabled" selectedImage="Scheduled" id="d7r-gY-GdO"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cQK-T0-CDR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1442" y="-1263"/>
-        </scene>
-        <!--ListsNavigationController-->
-        <scene sceneID="xbV-H7-LHU">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Lists" referencedIdentifier="ListsNavigationController" id="8Wn-ym-kAB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="LISTS" image="Lists-Disabled" selectedImage="Lists" id="nQo-34-8Vb"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yKe-7C-Ai6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1407" y="-1045"/>
-        </scene>
         <!--AccountNavigationController-->
-        <scene sceneID="WSy-nF-EN0">
+        <scene sceneID="nxk-39-bLC">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="AccountNavigationController" storyboardName="Account" referencedIdentifier="AccountNavigationController" id="rHH-qi-5Yc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ACCOUNT" image="Account-Disabled" selectedImage="Account" id="zIN-4w-KKh"/>
+                <viewControllerPlaceholder storyboardName="Account" referencedIdentifier="AccountNavigationController" id="905-te-Vca" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="xVe-dI-szJ"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ha4-Mn-RaZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K7B-gE-0RJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1390" y="-914"/>
+            <point key="canvasLocation" x="1581" y="-1036"/>
         </scene>
         <!--DashboardNavigationController-->
         <scene sceneID="vu5-Vq-Zdw">
@@ -72,7 +52,27 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JF4-Vo-mbh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1442" y="-1429"/>
+            <point key="canvasLocation" x="1594" y="-1292"/>
+        </scene>
+        <!--InProgressScheduledViewController-->
+        <scene sceneID="en6-TQ-ylO">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Scheduled" referencedIdentifier="InProgressScheduledViewController" id="skw-4x-85A" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="den-1z-cvq" userLabel="Scheduled"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8RU-vf-ACN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1592" y="-1234"/>
+        </scene>
+        <!--InProgressListViewController-->
+        <scene sceneID="CbG-FI-5IM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Lists" referencedIdentifier="InProgressListViewController" id="fsa-dQ-123" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="ppd-ea-Aid" userLabel="Lists"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3jw-Tj-KyL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1565" y="-1122"/>
         </scene>
         <!--DOPPLER-->
         <scene sceneID="YAE-lA-bv8">
@@ -87,10 +87,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="z7o-op-rh0" kind="relationship" relationship="viewControllers" id="Lz1-KP-HYj"/>
-                        <segue destination="CTA-jB-85d" kind="relationship" relationship="viewControllers" id="i9P-U7-Vxp"/>
-                        <segue destination="8Wn-ym-kAB" kind="relationship" relationship="viewControllers" id="fWp-ts-GpM"/>
-                        <segue destination="rHH-qi-5Yc" kind="relationship" relationship="viewControllers" id="mRF-eN-GUu"/>
-                        <segue destination="73Q-dm-4Bj" kind="showDetail" identifier="logoutSegue" action="showViewController:sender:" id="QVn-xQ-rtn"/>
+                        <segue destination="skw-4x-85A" kind="relationship" relationship="viewControllers" id="ZsE-p5-DU4"/>
+                        <segue destination="fsa-dQ-123" kind="relationship" relationship="viewControllers" id="85u-fd-9f7"/>
+                        <segue destination="905-te-Vca" kind="relationship" relationship="viewControllers" id="699-zv-18a"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wS6-aI-SiW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -99,17 +98,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Account" width="22" height="25"/>
-        <image name="Account-Disabled" width="22" height="25"/>
-        <image name="Lists" width="17" height="21"/>
-        <image name="Lists-Disabled" width="20" height="25"/>
         <image name="Metrics-Summary" width="20" height="25"/>
         <image name="Metrics-Summary-Disabled" width="20" height="25"/>
-        <image name="Scheduled" width="22" height="25"/>
-        <image name="Scheduled-Disabled" width="22" height="25"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="QVn-xQ-rtn"/>
-    </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,6 +17,9 @@
         <array key="ProximaNova-Regular.otf">
             <string>ProximaNova-Regular</string>
         </array>
+        <array key="ProximaNova-Semibold.otf">
+            <string>ProximaNova-Semibold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Navigation Controller-->
@@ -28,7 +31,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="37k-9q-fD8" kind="relationship" relationship="rootViewController" id="JlE-Ts-GxI"/>
+                        <segue destination="37k-9q-fD8" kind="relationship" relationship="rootViewController" id="r1p-Zi-2Hm"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FpN-iu-its" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -901,6 +904,62 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eRO-Cc-qYb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--SCHEDULED-->
+        <scene sceneID="Yd6-Cj-ggt">
+            <objects>
+                <viewController storyboardIdentifier="InProgressScheduledViewController" id="smL-hb-bQS" customClass="InProgressViewController" customModule="DopplerMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jEO-Ic-Nj2"/>
+                        <viewControllerLayoutGuide type="bottom" id="P6v-YG-kmi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8ai-kL-7j3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry, We are working on it." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="My1-n0-rZv">
+                                <rect key="frame" x="0.0" y="92.5" width="375" height="21"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="21"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.67843137249999996" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="36N-kO-Xew">
+                                <rect key="frame" x="0.0" y="133.5" width="375" height="400"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scheduled" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXC-Se-g0F">
+                                <rect key="frame" x="0.0" y="36" width="375" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="nDN-3d-jub"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="27"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.67843137249999996" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98823529409999999" green="0.8980392157" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="36N-kO-Xew" firstAttribute="top" secondItem="My1-n0-rZv" secondAttribute="bottom" constant="20" id="7RI-gu-GSa"/>
+                            <constraint firstItem="36N-kO-Xew" firstAttribute="height" secondItem="8ai-kL-7j3" secondAttribute="height" multiplier="0.6" id="APb-ex-XJS"/>
+                            <constraint firstItem="36N-kO-Xew" firstAttribute="centerX" secondItem="8ai-kL-7j3" secondAttribute="centerX" id="GH2-wI-7Ih"/>
+                            <constraint firstItem="My1-n0-rZv" firstAttribute="width" secondItem="8ai-kL-7j3" secondAttribute="width" id="RMq-hY-bKa"/>
+                            <constraint firstItem="My1-n0-rZv" firstAttribute="centerX" secondItem="8ai-kL-7j3" secondAttribute="centerX" id="TQ8-nJ-Aff"/>
+                            <constraint firstItem="IXC-Se-g0F" firstAttribute="centerX" secondItem="8ai-kL-7j3" secondAttribute="centerX" id="V9r-ic-PH2"/>
+                            <constraint firstItem="IXC-Se-g0F" firstAttribute="width" secondItem="8ai-kL-7j3" secondAttribute="width" id="Xnl-DR-YNZ"/>
+                            <constraint firstItem="36N-kO-Xew" firstAttribute="width" secondItem="8ai-kL-7j3" secondAttribute="width" id="Z1a-Ip-jat"/>
+                            <constraint firstItem="IXC-Se-g0F" firstAttribute="top" secondItem="jEO-Ic-Nj2" secondAttribute="bottom" constant="16" id="gRn-Fs-EJK"/>
+                            <constraint firstItem="36N-kO-Xew" firstAttribute="centerY" secondItem="8ai-kL-7j3" secondAttribute="centerY" id="jis-q9-FyZ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="2" title="SCHEDULED" image="Scheduled-Disabled" selectedImage="Scheduled" id="5nF-Sc-zXc"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="imgLoading" destination="36N-kO-Xew" id="Bie-cf-6pg"/>
+                        <outlet property="lblTitle" destination="My1-n0-rZv" id="srI-dA-bu5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GtG-NQ-ee3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-714" y="276"/>
         </scene>
     </scenes>
     <resources>
