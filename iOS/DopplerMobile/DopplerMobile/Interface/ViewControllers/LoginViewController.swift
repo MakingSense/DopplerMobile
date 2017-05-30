@@ -62,15 +62,6 @@ class LoginViewController: UIViewController, NavigationDelegate {
         
         viewModel.loginCanExecute.bind(to: btnLogin.reactive.isEnabled)
         
-        // btnForgotPassword bindings
-        btnForgotPassword.reactive.tap
-            .observe { [weak self] _ in
-                guard let strongSelf = self else {
-                    return
-                }
-                strongSelf.viewModel.forgotPassword()
-            }.dispose(in: reactive.bag)
-        
         // KRProgressHUD bindings
         viewModel.isBusy
             .observeNext { isBusy in

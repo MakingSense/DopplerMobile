@@ -33,7 +33,7 @@ import ReactiveKit
     }
     
     private func setupNotifications() {
-        // MARK - Login finished notification
+        // MARK - Forgot Password finished notification
         NotificationCenter
             .default
             .reactive
@@ -46,7 +46,7 @@ import ReactiveKit
                     strongSelf.isBusy.value = false
                 }
                 guard let errorMessage = notification.object else {
-                    strongSelf.navigationDelegate?.showViewModel(SegueIdentifier.ForgotPasswordScreenSegue)
+                    strongSelf.navigationDelegate?.showViewModel(SegueIdentifier.LoginScreenSegue)
                     return
                 }
                 // TODO: Implement a generic way to show pretty error messages
@@ -55,7 +55,7 @@ import ReactiveKit
             .dispose(in: reactive.bag)
     }
     
-    //TODO: Implement this method.
+    //TODO: Implement this method to call the Endpoint to send the Email to recovery the password.
     func forgotPassword() {
         
     }
