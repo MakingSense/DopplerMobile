@@ -10,6 +10,7 @@ import Foundation
 
 enum NotificationIdentifier: String {
     case LoginNotification
+    case ForgotPasswordNotification
     case SentCampaignsNotification
     case ScheduledCampaignsNotification
     case ListsNotification
