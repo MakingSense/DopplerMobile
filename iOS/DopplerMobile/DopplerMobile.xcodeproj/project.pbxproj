@@ -121,6 +121,8 @@
 		75FE33471D993DDD0005EA66 /* ProximaNova-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75FE333C1D993DDD0005EA66 /* ProximaNova-SemiboldItalic.otf */; };
 		7A945A2B240AC9CC6573A217 /* Pods_DopplerMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A51E0ED141EDEB130E889C6C /* Pods_DopplerMobileTests.framework */; };
 		84089A0B1DC8D612002B52DF /* CampaignSendingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84089A0A1DC8D612002B52DF /* CampaignSendingViewModel.swift */; };
+		84AE82701EDD2C0500E96B59 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE826F1EDD2C0400E96B59 /* ForgotPasswordViewController.swift */; };
+		84AE82721EDD2CF300E96B59 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE82711EDD2CF300E96B59 /* ForgotPasswordViewModel.swift */; };
 		9C1F13B01DCB7A3500D2FDC1 /* SendingHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1F13AF1DCB7A3500D2FDC1 /* SendingHeaderTableViewCell.swift */; };
 		9C1F13B41DCB82F400D2FDC1 /* SendingFooterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1F13B31DCB82F400D2FDC1 /* SendingFooterTableViewCell.swift */; };
 		9C339C1F1DDB72580093D1DF /* AddSubscriberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C339C1E1DDB72580093D1DF /* AddSubscriberViewModel.swift */; };
@@ -302,6 +304,8 @@
 		75FE333B1D993DDD0005EA66 /* ProximaNova-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Semibold.otf"; path = "Resources/Fonts/ProximaNova-Semibold.otf"; sourceTree = "<group>"; };
 		75FE333C1D993DDD0005EA66 /* ProximaNova-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-SemiboldItalic.otf"; path = "Resources/Fonts/ProximaNova-SemiboldItalic.otf"; sourceTree = "<group>"; };
 		84089A0A1DC8D612002B52DF /* CampaignSendingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignSendingViewModel.swift; sourceTree = "<group>"; };
+		84AE826F1EDD2C0400E96B59 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		84AE82711EDD2CF300E96B59 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		9C1F13AF1DCB7A3500D2FDC1 /* SendingHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendingHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		9C1F13B31DCB82F400D2FDC1 /* SendingFooterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendingFooterTableViewCell.swift; sourceTree = "<group>"; };
 		9C339C1E1DDB72580093D1DF /* AddSubscriberViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSubscriberViewModel.swift; sourceTree = "<group>"; };
@@ -452,6 +456,7 @@
 				7547DD721DCA2F0900E906EB /* SendingCampaignSendToFieldViewModel.swift */,
 				75C8CE971DD4F60200B5CB75 /* AddSubscriberMockUpViewModel.swift */,
 				D397EE921ECB89CD000FEAA9 /* AccountViewModel.swift */,
+				84AE82711EDD2CF300E96B59 /* ForgotPasswordViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -680,6 +685,7 @@
 			children = (
 				241198711D1B134100330D87 /* LoginViewController.swift */,
 				9CB9DEFB1D1C150100DAED48 /* OnboardingViewController.swift */,
+				84AE826F1EDD2C0400E96B59 /* ForgotPasswordViewController.swift */,
 			);
 			name = LoginSection;
 			sourceTree = "<group>";
@@ -979,7 +985,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		CDA1A839A24C279720108913 /* [CP] Check Pods Manifest.lock */ = {
@@ -994,7 +1000,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1010,6 +1016,7 @@
 				9C1F13B41DCB82F400D2FDC1 /* SendingFooterTableViewCell.swift in Sources */,
 				A07A93251EBCEBC70073E1A5 /* DeliveryRateViewController.swift in Sources */,
 				2B1DDC961DA830B100F5632E /* ReportMenuOption.swift in Sources */,
+				84AE82721EDD2CF300E96B59 /* ForgotPasswordViewModel.swift in Sources */,
 				9C76854D1DD3A6D3005D2B2D /* DefaultTableViewCell.swift in Sources */,
 				75F42C591DC7C0D8000D87FA /* SendingSendToTableViewCell.swift in Sources */,
 				24F0FB731D1C109E00360346 /* LoginViewModel.swift in Sources */,
@@ -1060,6 +1067,7 @@
 				249ECB6E1D3D56B300F18E74 /* SentCampaignsViewController.swift in Sources */,
 				D397EE8F1ECB6380000FEAA9 /* DMImageView.swift in Sources */,
 				2B7EF6501D4B2AE6008D4CDD /* CampaignsService.swift in Sources */,
+				84AE82701EDD2C0500E96B59 /* ForgotPasswordViewController.swift in Sources */,
 				2B057FDA1D7A2F410021F748 /* ListViewModel.swift in Sources */,
 				2B0EC03A1D7FE71A008BF638 /* CampaignPreviewViewModel.swift in Sources */,
 				24FD44B01D245DC3003E35A4 /* SimpleCommand.swift in Sources */,
