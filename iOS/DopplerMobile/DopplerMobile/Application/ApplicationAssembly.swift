@@ -24,6 +24,8 @@ public class ApplicationAssembly : TyphoonAssembly
     
     public dynamic func loginViewModel() -> Any { return DI.lazySingleton(LoginViewModel.self, selector: #selector(LoginViewModel.init(authenticationService:navigationDelegate:)), initParameters: [self.authenticationService(), self.navigationDelegate()])}
     
+    public dynamic func forgotPasswordViewModel() -> Any { return DI.lazySingleton(ForgotPasswordViewModel.self, selector: #selector(ForgotPasswordViewModel.init(authenticationService:navigationDelegate:)), initParameters: [self.authenticationService(), self.navigationDelegate()])}
+    
     public dynamic func accountViewModel() -> Any { return DI.lazySingleton(AccountViewModel.self, selector: #selector(AccountViewModel.init(authenticationService:navigationDelegate:)), initParameters: [self.authenticationService(), self.navigationDelegate()])}
     
     public dynamic func opensClicksViewModel() -> Any { return DI.lazySingleton(OpensClicksViewModel.self)}
@@ -31,6 +33,8 @@ public class ApplicationAssembly : TyphoonAssembly
     // MARK: ViewControllers
     
     public dynamic func loginViewController() -> Any { return DI.defaultWithProperties(LoginViewController.self, properties: ["viewModel" : self.loginViewModel()])}
+    
+    public dynamic func forgotPasswordViewController() -> Any { return DI.defaultWithProperties(ForgotPasswordViewController.self, properties: ["viewModel" : self.forgotPasswordViewModel()])}
 
     public dynamic func accountViewController() -> Any { return DI.defaultWithProperties(AccountViewController.self, properties: ["viewModel" : self.accountViewModel()])}
 

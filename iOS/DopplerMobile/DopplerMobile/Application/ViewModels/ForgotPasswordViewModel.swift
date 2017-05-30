@@ -1,16 +1,16 @@
 //
-//  LoginViewModel.swift
+//  ForgotPasswordViewModel.swift
 //  DopplerMobile
 //
-//  Created by Julian Waimann on 6/22/16.
-//  Copyright © 2016 Making Sense. All rights reserved.
+//  Created by MMaldini on 30/5/17.
+//  Copyright © 2017 Making Sense. All rights reserved.
 //
 
 import Foundation
 import Bond
 import ReactiveKit
 
-@objc class LoginViewModel: NSObject {
+@objc class ForgotPasswordViewModel: NSObject {
     
     private let authenticationService: AuthenticationService!
     private let navigationDelegate: NavigationDelegate!
@@ -19,7 +19,7 @@ import ReactiveKit
     let password = Observable<String?>("")
     let isBusy = Observable<Bool>(false)
     
-    var loginCanExecute: Signal<Bool, NoError> {
+    var requestCanExecute: Signal<Bool, NoError> {
         return combineLatest(username, password) { user, pass in
             return !user!.isEmpty && !pass!.isEmpty
         }
@@ -33,11 +33,11 @@ import ReactiveKit
     }
     
     private func setupNotifications() {
-        // MARK - Login finished notification
+        // MARK - Forgot Password finished notification
         NotificationCenter
             .default
             .reactive
-            .notification(name: NSNotification.Name(rawValue: NotificationIdentifier.LoginNotification.rawValue))
+            .notification(name: NSNotification.Name(rawValue: NotificationIdentifier.ForgotPasswordNotification.rawValue))
             .observeNext { [weak self] notification in
                 guard let strongSelf = self else {
                     return
@@ -46,7 +46,7 @@ import ReactiveKit
                     strongSelf.isBusy.value = false
                 }
                 guard let errorMessage = notification.object else {
-                    strongSelf.navigationDelegate?.showViewModel(SegueIdentifier.LoggedInScreenSegue)
+                    strongSelf.navigationDelegate?.showViewModel(SegueIdentifier.LoginScreenSegue)
                     return
                 }
                 // TODO: Implement a generic way to show pretty error messages
@@ -55,12 +55,8 @@ import ReactiveKit
             .dispose(in: reactive.bag)
     }
     
-    func login() {
-        isBusy.value = true
-        authenticationService.login(self.username.value!, password: self.password.value!)
-    }
-    
+    //TODO: Implement this method to call the Endpoint to send the Email to recovery the password.
     func forgotPassword() {
-        authenticationService.forgotPassword(self.username.value!)
+        
     }
 }

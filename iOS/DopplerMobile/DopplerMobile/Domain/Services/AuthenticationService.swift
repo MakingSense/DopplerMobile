@@ -38,6 +38,22 @@ class AuthenticationService : NSObject {
         DMApiManager.sharedInstance.loginUser(username, password: password, completionHandler: completionHandler)
     }
     
+    func forgotPassword(_ username: String) {
+        let _: (Result<User>) -> Void =
+        { result in
+            guard result.error == nil else {
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: NotificationIdentifier.ForgotPasswordNotification.rawValue), object: String(describing: result.error))
+                return
+            }
+            guard let user = result.value else {
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: NotificationIdentifier.ForgotPasswordNotification.rawValue), object: "Error getting user data.")
+                return
+            }
+            Defaults[.username] = user.username
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: NotificationIdentifier.ForgotPasswordNotification.rawValue), object: nil)
+        }
+    }
+    
     func getUsername() -> String? {
         guard isUserLoggedIn() else {
             return nil

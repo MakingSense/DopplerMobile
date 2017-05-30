@@ -1,9 +1,9 @@
 //
-//  LoginViewController.swift
+//  ForgotPasswordViewController.swift
 //  DopplerMobile
 //
-//  Created by Julian Waimann on 2/24/16.
-//  Copyright © 2016 Making Sense. All rights reserved.
+//  Created by Admin on 30/5/17.
+//  Copyright © 2017 Making Sense. All rights reserved.
 //
 
 import UIKit
@@ -11,33 +11,23 @@ import Bond
 import IHKeyboardAvoiding
 import KRProgressHUD
 
-class LoginViewController: UIViewController, NavigationDelegate {
+class ForgotPasswordViewController: UIViewController, NavigationDelegate {
     
     // MARK: Constants
     private let keyboardAvoidingPadding = 10.0
     
     // MARK: UI Properties
-    @IBOutlet weak var vwOverlayView: UIView!
-    @IBOutlet weak var vwTextfieldsContainer: UIView!
-    @IBOutlet weak var txtUsername: UITextField!
-    @IBOutlet weak var txtPassword: UITextField!
-    @IBOutlet weak var btnLogin: UIButton!
-    @IBOutlet weak var btnForgotPassword: UIButton!
-
+    @IBOutlet weak var txtUsername: DMTextField!
+    @IBOutlet weak var btnRequest: UIButton!
+    @IBOutlet weak var btnCancel: UIButton!
+    
     // MARK: Other properties
-    var viewModel: LoginViewModel!
-
+    var viewModel: ForgotPasswordViewModel!
+    
     // MARK: Actions
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
         bindViewModel()
-    }
-    
-    private func setupUI() {
-        // Keyboard avoiding
-        KeyboardAvoiding.setAvoidingView(vwOverlayView, withTriggerView: vwTextfieldsContainer)
-        KeyboardAvoiding.paddingForCurrentAvoidingView = CGFloat(keyboardAvoidingPadding)
     }
     
     private func bindViewModel() {
@@ -46,21 +36,26 @@ class LoginViewController: UIViewController, NavigationDelegate {
             .bidirectionalBind(to: txtUsername.reactive.text)
             .dispose(in: reactive.bag)
         
-        // txtPassword bindings
-        viewModel.password
-            .bidirectionalBind(to: txtPassword.reactive.text)
-            .dispose(in: reactive.bag)
-        
         // btnLogin bindings
-        btnLogin.reactive.tap
+        btnRequest.reactive.tap
             .observe { [weak self] _ in
                 guard let strongSelf = self else {
                     return
                 }
-                strongSelf.viewModel.login()
+                strongSelf.viewModel.forgotPassword()
             }.dispose(in: reactive.bag)
         
-        viewModel.loginCanExecute.bind(to: btnLogin.reactive.isEnabled)
+        // btnCancel bindings
+        btnCancel.reactive.tap
+            .observe { [weak self] _ in
+                guard let strongSelf = self else {
+                    return
+                }
+                strongSelf.navigationController?.popViewController(animated: true)
+                strongSelf.dismiss(animated: true, completion: nil)
+            }.dispose(in: reactive.bag)
+        
+        viewModel.requestCanExecute.bind(to: btnRequest.reactive.isEnabled)
         
         // KRProgressHUD bindings
         viewModel.isBusy
@@ -82,4 +77,3 @@ class LoginViewController: UIViewController, NavigationDelegate {
         performSegue(withIdentifier: identifier, sender: self)
     }
 }
-
