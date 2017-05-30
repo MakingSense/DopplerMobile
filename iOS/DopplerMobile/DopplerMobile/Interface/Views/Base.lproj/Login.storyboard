@@ -52,10 +52,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xao-al-rWK" userLabel="Header">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                        <rect key="frame" x="0.0" y="44" width="414" height="140"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Doppler-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="fx5-Tj-U76" userLabel="Logo">
-                                                <rect key="frame" x="158" y="60" width="98" height="35"/>
+                                                <rect key="frame" x="158" y="80" width="98" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="DsL-UX-imr"/>
                                                     <constraint firstAttribute="width" constant="98" id="Vgb-aW-pDn"/>
@@ -64,6 +64,7 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="fx5-Tj-U76" firstAttribute="top" secondItem="xao-al-rWK" secondAttribute="top" constant="60" id="ZRK-Uz-R8L"/>
                                             <constraint firstItem="fx5-Tj-U76" firstAttribute="centerY" secondItem="xao-al-rWK" secondAttribute="centerY" multiplier="1.1" id="eg5-eo-ie1"/>
                                             <constraint firstItem="fx5-Tj-U76" firstAttribute="centerX" secondItem="xao-al-rWK" secondAttribute="centerX" id="vei-Ik-Eo0"/>
                                         </constraints>
@@ -280,7 +281,7 @@
                                                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                         </state>
                                                                         <connections>
-                                                                            <segue destination="KP3-Ek-06I" kind="show" identifier="forgotPasswordScreenSegue" id="lYI-kp-FTH"/>
+                                                                            <segue destination="WWv-UR-FM9" kind="show" identifier="forgotPasswordScreenSegue" id="lYI-kp-FTH"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -337,6 +338,7 @@
                                     <constraint firstItem="xao-al-rWK" firstAttribute="top" secondItem="Tg3-pH-Ug5" secondAttribute="top" id="SGm-jf-euB"/>
                                     <constraint firstItem="xao-al-rWK" firstAttribute="height" secondItem="Tg3-pH-Ug5" secondAttribute="height" multiplier="0.19" id="fmV-Ue-0L7"/>
                                     <constraint firstItem="xao-al-rWK" firstAttribute="leading" secondItem="Tg3-pH-Ug5" secondAttribute="leading" id="q7f-5C-s3q"/>
+                                    <constraint firstItem="xao-al-rWK" firstAttribute="top" secondItem="Tg3-pH-Ug5" secondAttribute="top" constant="44" id="sYK-Wm-cVi"/>
                                     <constraint firstItem="c3c-lU-xKh" firstAttribute="top" secondItem="xao-al-rWK" secondAttribute="bottom" id="zyt-Mj-XMe"/>
                                 </constraints>
                             </view>
@@ -372,7 +374,7 @@
                 <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="TabBarViewController" id="gAy-6B-icv" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bv6-jx-MHx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1353.5" y="379"/>
+            <point key="canvasLocation" x="2260.144927536232" y="378.26086956521743"/>
         </scene>
         <!--Forgot Password View Controller-->
         <scene sceneID="Ozn-Ln-oXf">
@@ -390,10 +392,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c7s-1l-OQm" userLabel="Header">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                        <rect key="frame" x="0.0" y="44" width="414" height="140"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Doppler-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="tAD-3t-5Zx" userLabel="Logo">
-                                                <rect key="frame" x="158" y="60" width="98" height="35"/>
+                                                <rect key="frame" x="158" y="80" width="98" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="98" id="Jwc-dc-Lvb"/>
                                                     <constraint firstAttribute="height" constant="35" id="U54-oB-gxU"/>
@@ -404,6 +406,7 @@
                                         <constraints>
                                             <constraint firstItem="tAD-3t-5Zx" firstAttribute="centerX" secondItem="c7s-1l-OQm" secondAttribute="centerX" id="2jB-og-xG0"/>
                                             <constraint firstItem="tAD-3t-5Zx" firstAttribute="centerY" secondItem="c7s-1l-OQm" secondAttribute="centerY" multiplier="1.1" id="2mK-s6-Rd2"/>
+                                            <constraint firstItem="tAD-3t-5Zx" firstAttribute="top" secondItem="c7s-1l-OQm" secondAttribute="top" constant="77" id="rZ5-K8-VTc"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C2r-x9-N8f" userLabel="Body">
@@ -433,6 +436,17 @@
                                                             <constraint firstAttribute="height" constant="67" id="xaA-mT-vA6"/>
                                                         </constraints>
                                                     </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfN-0U-fhG" userLabel="Subtitle02">
+                                                        <rect key="frame" x="27" y="45" width="360" height="44"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="44" id="VdP-La-qpD"/>
+                                                        </constraints>
+                                                        <string key="text">Don't worry! It happens. Enter your Email and we'll help you.
+</string>
+                                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V2A-q1-n31">
                                                         <rect key="frame" x="31" y="67" width="352" height="529"/>
                                                         <subviews>
@@ -554,17 +568,6 @@
                                                             <constraint firstItem="OGb-cG-BLa" firstAttribute="leading" secondItem="V2A-q1-n31" secondAttribute="leading" id="sfW-iQ-1b7"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfN-0U-fhG" userLabel="Subtitle02">
-                                                        <rect key="frame" x="27" y="45" width="360" height="44"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="44" id="VdP-La-qpD"/>
-                                                        </constraints>
-                                                        <string key="text">Don't worry! It happens. Enter your Email and we'll help you.
-</string>
-                                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -611,6 +614,15 @@
                             <constraint firstAttribute="trailing" secondItem="6w3-mu-khZ" secondAttribute="trailing" id="S4n-79-i7X"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="BAV-0p-bue">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Yhj-pa-XnJ">
+                            <connections>
+                                <segue destination="Op9-yj-Lhz" kind="presentation" id="NPz-ot-nKO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="keyPath" value="forgotPasswordViewController"/>
                     </userDefinedRuntimeAttributes>
@@ -621,7 +633,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQk-Ii-qpb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="589.85507246376812" y="569.83695652173913"/>
+            <point key="canvasLocation" x="1497.1014492753625" y="606.52173913043487"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VSk-A0-6l3">
+            <objects>
+                <navigationItem id="7z0-aW-cEy">
+                    <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="CyK-Ke-8hX"/>
+                </navigationItem>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MVf-lC-qOu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WWv-UR-FM9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mgf-kT-qmU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KP3-Ek-06I" kind="relationship" relationship="rootViewController" id="VQl-an-vuN"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="589.85507246376812" y="606.52173913043487"/>
         </scene>
     </scenes>
     <resources>
