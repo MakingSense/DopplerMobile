@@ -135,6 +135,11 @@
 		9CBFA3AF1DD3CA1B0099D63C /* SubscriberFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBFA3AE1DD3CA1B0099D63C /* SubscriberFieldViewModel.swift */; };
 		9CD2FC6A1D2445E800D4C9F8 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2FC691D2445E800D4C9F8 /* AuthenticationService.swift */; };
 		9CEFD9FE1DD3678900A1E619 /* AddSubscriberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEFD9FD1DD3678900A1E619 /* AddSubscriberTableViewController.swift */; };
+		A028DC041ED878DB00B590C0 /* InProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A028DC031ED878DB00B590C0 /* InProgressViewController.swift */; };
+		A028DC091ED879C200B590C0 /* inProgress.gif in Resources */ = {isa = PBXBuildFile; fileRef = A028DC081ED879C200B590C0 /* inProgress.gif */; };
+		A028DC0B1ED879E200B590C0 /* InProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A028DC0A1ED879E200B590C0 /* InProgressViewModel.swift */; };
+		A028DC0D1ED87BCB00B590C0 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = A028DC0C1ED87BCB00B590C0 /* UIImage+Gif.swift */; };
+		A028DC0F1ED87C8700B590C0 /* SpecialResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = A028DC0E1ED87C8700B590C0 /* SpecialResources.swift */; };
 		A07A93151EBCD8300073E1A5 /* OpenAndClickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A93141EBCD8300073E1A5 /* OpenAndClickViewController.swift */; };
 		A07A93191EBCD9A80073E1A5 /* LinkTrackingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A93181EBCD9A80073E1A5 /* LinkTrackingCollectionViewController.swift */; };
 		A07A931B1EBCDD420073E1A5 /* LinkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A931A1EBCDD420073E1A5 /* LinkCollectionViewCell.swift */; };
@@ -142,12 +147,6 @@
 		A07A93211EBCE3EE0073E1A5 /* LinkCollectionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A93201EBCE3EE0073E1A5 /* LinkCollectionCellViewModel.swift */; };
 		A07A93231EBCE42D0073E1A5 /* LinkTrackingCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A93221EBCE42D0073E1A5 /* LinkTrackingCollectionViewModel.swift */; };
 		A0AA708A1ECCD1ED00C818BE /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AA70891ECCD1ED00C818BE /* OnboardingViewController.swift */; };
-		A028DC041ED878DB00B590C0 /* InProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A028DC031ED878DB00B590C0 /* InProgressViewController.swift */; };
-		A028DC091ED879C200B590C0 /* inProgress.gif in Resources */ = {isa = PBXBuildFile; fileRef = A028DC081ED879C200B590C0 /* inProgress.gif */; };
-		A028DC0B1ED879E200B590C0 /* InProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A028DC0A1ED879E200B590C0 /* InProgressViewModel.swift */; };
-		A028DC0D1ED87BCB00B590C0 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = A028DC0C1ED87BCB00B590C0 /* UIImage+Gif.swift */; };
-		A028DC0F1ED87C8700B590C0 /* SpecialResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = A028DC0E1ED87C8700B590C0 /* SpecialResources.swift */; };
-		A07A93251EBCEBC70073E1A5 /* DeliveryRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A93241EBCEBC70073E1A5 /* DeliveryRateViewController.swift */; };
 		A3C4A5B9E54033B7C3D50A18 /* Pods_DopplerMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9FB088DEE147D0D578049DD /* Pods_DopplerMobile.framework */; };
 		A8EF46D91D26C218000882A3 /* MSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EF46D81D26C218000882A3 /* MSButton.swift */; };
 		C22695701D4297D000059959 /* OnboardingViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C226956F1D4297D000059959 /* OnboardingViewDataSource.swift */; };
@@ -157,9 +156,6 @@
 		D397EE8F1ECB6380000FEAA9 /* DMImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D397EE8E1ECB6380000FEAA9 /* DMImageView.swift */; };
 		D397EE911ECB8930000FEAA9 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D397EE901ECB892F000FEAA9 /* AccountViewController.swift */; };
 		D397EE931ECB89CD000FEAA9 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D397EE921ECB89CD000FEAA9 /* AccountViewModel.swift */; };
-		D3CA1D121EC2163800EB35D6 /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CA1D111EC2163700EB35D6 /* OnboardingPage.swift */; };
-		D3CA1D141EC3813900EB35D6 /* OnboardingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CA1D131EC3813100EB35D6 /* OnboardingOverlay.swift */; };
-		D3CA7F831EBA693C009897CD /* LoginBackground.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D3CA7F821EBA5ABB009897CD /* LoginBackground.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -328,6 +324,11 @@
 		9CBFA3AE1DD3CA1B0099D63C /* SubscriberFieldViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscriberFieldViewModel.swift; path = ../../Interface/ViewControllers/SubscriberFieldViewModel.swift; sourceTree = "<group>"; };
 		9CD2FC691D2445E800D4C9F8 /* AuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		9CEFD9FD1DD3678900A1E619 /* AddSubscriberTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSubscriberTableViewController.swift; sourceTree = "<group>"; };
+		A028DC031ED878DB00B590C0 /* InProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InProgressViewController.swift; sourceTree = "<group>"; };
+		A028DC081ED879C200B590C0 /* inProgress.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = inProgress.gif; sourceTree = "<group>"; };
+		A028DC0A1ED879E200B590C0 /* InProgressViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InProgressViewModel.swift; sourceTree = "<group>"; };
+		A028DC0C1ED87BCB00B590C0 /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
+		A028DC0E1ED87C8700B590C0 /* SpecialResources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialResources.swift; sourceTree = "<group>"; };
 		A07A93141EBCD8300073E1A5 /* OpenAndClickViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenAndClickViewController.swift; sourceTree = "<group>"; };
 		A07A93181EBCD9A80073E1A5 /* LinkTrackingCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkTrackingCollectionViewController.swift; sourceTree = "<group>"; };
 		A07A931A1EBCDD420073E1A5 /* LinkCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -335,12 +336,6 @@
 		A07A93201EBCE3EE0073E1A5 /* LinkCollectionCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkCollectionCellViewModel.swift; sourceTree = "<group>"; };
 		A07A93221EBCE42D0073E1A5 /* LinkTrackingCollectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkTrackingCollectionViewModel.swift; sourceTree = "<group>"; };
 		A0AA70891ECCD1ED00C818BE /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
-		A028DC031ED878DB00B590C0 /* InProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InProgressViewController.swift; sourceTree = "<group>"; };
-		A028DC081ED879C200B590C0 /* inProgress.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = inProgress.gif; sourceTree = "<group>"; };
-		A028DC0A1ED879E200B590C0 /* InProgressViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InProgressViewModel.swift; sourceTree = "<group>"; };
-		A028DC0C1ED87BCB00B590C0 /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
-		A028DC0E1ED87C8700B590C0 /* SpecialResources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialResources.swift; sourceTree = "<group>"; };
-		A07A93241EBCEBC70073E1A5 /* DeliveryRateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryRateViewController.swift; sourceTree = "<group>"; };
 		A51E0ED141EDEB130E889C6C /* Pods_DopplerMobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DopplerMobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8EF46D81D26C218000882A3 /* MSButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSButton.swift; sourceTree = "<group>"; };
 		B9FB088DEE147D0D578049DD /* Pods_DopplerMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DopplerMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -352,9 +347,6 @@
 		D397EE8E1ECB6380000FEAA9 /* DMImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMImageView.swift; sourceTree = "<group>"; };
 		D397EE901ECB892F000FEAA9 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		D397EE921ECB89CD000FEAA9 /* AccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
-		D3CA1D111EC2163700EB35D6 /* OnboardingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
-		D3CA1D131EC3813100EB35D6 /* OnboardingOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingOverlay.swift; sourceTree = "<group>"; };
-		D3CA7F821EBA5ABB009897CD /* LoginBackground.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LoginBackground.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -403,7 +395,6 @@
 			isa = PBXGroup;
 			children = (
 				A028DC071ED8799D00B590C0 /* Gifs */,
-				D3CA7F811EBA5AA8009897CD /* Videos */,
 				1F5E74B81D944E270061BBA7 /* Fonts */,
 				1F0339DF1D3EBAE1006EDBD1 /* Content */,
 			);
@@ -1034,7 +1025,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		CDA1A839A24C279720108913 /* [CP] Check Pods Manifest.lock */ = {
@@ -1049,7 +1040,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1382,6 +1373,7 @@
 			baseConfigurationReference = 3168E4BE8C385F79A0C41018 /* Pods-DopplerMobile.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = PUJ6PNMS7U;
@@ -1401,6 +1393,7 @@
 			baseConfigurationReference = 193F4DD26F9BA25F5A9228FA /* Pods-DopplerMobile.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = PUJ6PNMS7U;
