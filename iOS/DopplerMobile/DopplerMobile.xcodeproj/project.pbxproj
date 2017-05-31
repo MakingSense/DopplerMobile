@@ -161,6 +161,8 @@
 		D34A9F3E1EDF15A200073D6E /* FixedAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34A9F3D1EDF15A200073D6E /* FixedAxisValueFormatter.swift */; };
 		D34A9F401EDF162500073D6E /* ReportInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34A9F3F1EDF162500073D6E /* ReportInterval.swift */; };
 		D34A9F411EDF275D00073D6E /* OpensClicksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1DDC971DA8352900F5632E /* OpensClicksViewController.swift */; };
+		D34A9F441EDF3CF900073D6E /* OnboardingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34A9F421EDF3CF900073D6E /* OnboardingOverlay.swift */; };
+		D34A9F451EDF3CF900073D6E /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34A9F431EDF3CF900073D6E /* OnboardingPage.swift */; };
 		D37FBE471ED35CFC007D7F7B /* DateOpenClickTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37FBE461ED35CFC007D7F7B /* DateOpenClickTableViewCell.swift */; };
 		D37FBE491ED35EAF007D7F7B /* CountryOpenClickTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37FBE481ED35EAF007D7F7B /* CountryOpenClickTableViewCell.swift */; };
 		D37FBE4B1ED36353007D7F7B /* CampaignPeriodicReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37FBE4A1ED36353007D7F7B /* CampaignPeriodicReport.swift */; };
@@ -368,6 +370,8 @@
 		D34A9F3B1EDF159100073D6E /* DailyAxisValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyAxisValueFormatter.swift; sourceTree = "<group>"; };
 		D34A9F3D1EDF15A200073D6E /* FixedAxisValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixedAxisValueFormatter.swift; sourceTree = "<group>"; };
 		D34A9F3F1EDF162500073D6E /* ReportInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportInterval.swift; sourceTree = "<group>"; };
+		D34A9F421EDF3CF900073D6E /* OnboardingOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingOverlay.swift; sourceTree = "<group>"; };
+		D34A9F431EDF3CF900073D6E /* OnboardingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
 		D37FBE461ED35CFC007D7F7B /* DateOpenClickTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateOpenClickTableViewCell.swift; sourceTree = "<group>"; };
 		D37FBE481ED35EAF007D7F7B /* CountryOpenClickTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryOpenClickTableViewCell.swift; sourceTree = "<group>"; };
 		D37FBE4A1ED36353007D7F7B /* CampaignPeriodicReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignPeriodicReport.swift; sourceTree = "<group>"; };
@@ -595,6 +599,8 @@
 		241198721D1B134100330D87 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D34A9F421EDF3CF900073D6E /* OnboardingOverlay.swift */,
+				D34A9F431EDF3CF900073D6E /* OnboardingPage.swift */,
 				241198731D1B134100330D87 /* Assets.xcassets */,
 				241198741D1B134100330D87 /* LaunchScreen.storyboard */,
 				241198761D1B134100330D87 /* Main.storyboard */,
@@ -1136,6 +1142,7 @@
 				75F42C591DC7C0D8000D87FA /* SendingSendToTableViewCell.swift in Sources */,
 				A028DC0F1ED87C8700B590C0 /* SpecialResources.swift in Sources */,
 				D37FBE471ED35CFC007D7F7B /* DateOpenClickTableViewCell.swift in Sources */,
+				D34A9F451EDF3CF900073D6E /* OnboardingPage.swift in Sources */,
 				24F0FB731D1C109E00360346 /* LoginViewModel.swift in Sources */,
 				2BDD10E31D918A6500E5ABF7 /* BasicInformationViewController.swift in Sources */,
 				2B4D5D1C1DBF10A400D06159 /* NSObject+DMObject.swift in Sources */,
@@ -1229,6 +1236,7 @@
 				7547DD731DCA2F0900E906EB /* SendingCampaignSendToFieldViewModel.swift in Sources */,
 				7547DD751DCA70F200E906EB /* Section.swift in Sources */,
 				2BD83BB01D42762200A5C527 /* SegueIdentifier.swift in Sources */,
+				D34A9F441EDF3CF900073D6E /* OnboardingOverlay.swift in Sources */,
 				75C8CE981DD4F60200B5CB75 /* AddSubscriberMockUpViewModel.swift in Sources */,
 				2B703F1D1D3D51D900A19E36 /* Optional.swift in Sources */,
 				A8EF46D91D26C218000882A3 /* MSButton.swift in Sources */,
