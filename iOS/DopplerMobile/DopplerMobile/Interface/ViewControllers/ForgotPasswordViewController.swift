@@ -19,6 +19,7 @@ class ForgotPasswordViewController: UIViewController, NavigationDelegate {
     // MARK: UI Properties
     @IBOutlet weak var txtUsername: DMTextField!
     @IBOutlet weak var btnRequest: UIButton!
+    @IBOutlet weak var btnCancel: UIButton!
     
     // MARK: Other properties
     var viewModel: ForgotPasswordViewModel!
@@ -42,6 +43,16 @@ class ForgotPasswordViewController: UIViewController, NavigationDelegate {
                     return
                 }
                 strongSelf.viewModel.forgotPassword()
+            }.dispose(in: reactive.bag)
+        
+        // btnCancel bindings
+        btnCancel.reactive.tap
+            .observe { [weak self] _ in
+                guard let strongSelf = self else {
+                    return
+                }
+                strongSelf.navigationController?.popViewController(animated: true)
+                strongSelf.dismiss(animated: true, completion: nil)
             }.dispose(in: reactive.bag)
         
         viewModel.requestCanExecute.bind(to: btnRequest.reactive.isEnabled)
