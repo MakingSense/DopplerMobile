@@ -64,10 +64,10 @@
             </objects>
             <point key="canvasLocation" x="1592" y="-1234"/>
         </scene>
-        <!--InProgressListViewController-->
+        <!--ListsNavigationController-->
         <scene sceneID="CbG-FI-5IM">
             <objects>
-                <viewControllerPlaceholder storyboardName="Lists" referencedIdentifier="InProgressListViewController" id="fsa-dQ-123" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Lists" referencedIdentifier="ListsNavigationController" id="fsa-dQ-123" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="ppd-ea-Aid" userLabel="Lists"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3jw-Tj-KyL" userLabel="First Responder" sceneMemberID="firstResponder"/>
